@@ -1,0 +1,158 @@
+{
+  "chips": [
+    {
+      "alias": "stm32f103c8",
+      "chip": "gd32f103c8",
+      "mapping_sha256": "aa239cdd1cf2c2bf27a6cf97b722c0266f59910e970c033366935c6c66125be1"
+    }
+  ],
+  "include_test": true,
+  "index": {
+    "sha256": "136ec2208d31b5d0e8697a806e40d5647799c8c097ae283f28712079dc7b2e81",
+    "timestamp": "2026-08-12T04:05:17.3114066+00:00",
+    "url": "https://www.keil.com/pack/index.pidx"
+  },
+  "packs": [
+    {
+      "archive": ".Download/GigaDevice.GD32C10x_DFP.1.0.1.pack",
+      "archive_sha256": "87d4b170dde9bd3e4b2cc6078a3e13e5c6e0a286da402c1831d59b3792ccb888",
+      "name": "GD32C10x_DFP",
+      "pdsc": "GigaDevice/GD32C10x_DFP/1.0.1/GigaDevice.GD32C10x_DFP.pdsc",
+      "tree_sha256": "5be5212702b64e92e8320e9025a0e956b9a96906e6776af6ddc11207a449fd30",
+      "url": "https://gd32mcu.com/data/documents/pack/GigaDevice.GD32C10x_DFP.1.0.1.pack",
+      "vendor": "GigaDevice",
+      "version": "1.0.1"
+    },
+    {
+      "archive": ".Download/GigaDevice.GD32E10x_DFP.1.2.1.pack",
+      "archive_sha256": "013f8af90be584db343a64a2e3d650c89da762b4ecee31352322c88ae7af3952",
+      "name": "GD32E10x_DFP",
+      "pdsc": "GigaDevice/GD32E10x_DFP/1.2.1/GigaDevice.GD32E10x_DFP.pdsc",
+      "tree_sha256": "d3b065091fe4d1ed46502e1848e866d16168e518e911dc5ea3702cd275cae2f0",
+      "url": "https://gd32mcu.com/data/documents/pack/GigaDevice.GD32E10x_DFP.1.2.1.pack",
+      "vendor": "GigaDevice",
+      "version": "1.2.1"
+    },
+    {
+      "archive": ".Download/GigaDevice.GD32E23x_DFP.1.0.2.pack",
+      "archive_sha256": "95f6db1f0b0669ee910ea2d28ad8d340a80502b352b9d94ec0f561d56c574330",
+      "name": "GD32E23x_DFP",
+      "pdsc": "GigaDevice/GD32E23x_DFP/1.0.2/GigaDevice.GD32E23x_DFP.pdsc",
+      "tree_sha256": "e1ad71e1abce856a33b8d4eff91676fd6b2e39000e49dc5a87721780fee3eb51",
+      "url": "https://gd32mcu.com/data/documents/pack/GigaDevice.GD32E23x_DFP.1.0.2.pack",
+      "vendor": "GigaDevice",
+      "version": "1.0.2"
+    },
+    {
+      "archive": ".Download/GigaDevice.GD32E50x_DFP.1.3.2.pack",
+      "archive_sha256": "f3ded2cc12001054467fd957f48687091e6576d97b0c6f6296d1b4cdb29dc512",
+      "name": "GD32E50x_DFP",
+      "pdsc": "GigaDevice/GD32E50x_DFP/1.3.2/GigaDevice.GD32E50x_DFP.pdsc",
+      "tree_sha256": "d646a80f2f1101853db2cb3b63d688f9aa9e7eea0f8dffd2f2365de9d3f17b4f",
+      "url": "https://gd32mcu.com/data/documents/pack/GigaDevice.GD32E50x_DFP.1.3.2.pack",
+      "vendor": "GigaDevice",
+      "version": "1.3.2"
+    },
+    {
+      "archive": ".Download/GigaDevice.GD32F10x_DFP.2.0.3.pack",
+      "archive_sha256": "c10224e9bf59f1fbe0a2cf067d65a061eb51ed489e043b99e1c115617e664633",
+      "name": "GD32F10x_DFP",
+      "pdsc": "GigaDevice/GD32F10x_DFP/2.0.3/GigaDevice.GD32F10x_DFP.pdsc",
+      "tree_sha256": "00bc860af76465266842e5aa7a10a58304cf4e65fbd7ab036476f7fbdc6b6203",
+      "url": "https://gd32mcu.com/data/documents/pack/GigaDevice.GD32F10x_DFP.2.0.3.pack",
+      "vendor": "GigaDevice",
+      "version": "2.0.3"
+    },
+    {
+      "archive": ".Download/GigaDevice.GD32F1x0_DFP.3.2.1.pack",
+      "archive_sha256": "45c21938884bfa3ae23f3e01f2f71da0b87edf48aabbb5c1962eebf04d25e77a",
+      "name": "GD32F1x0_DFP",
+      "pdsc": "GigaDevice/GD32F1x0_DFP/3.2.1/GigaDevice.GD32F1x0_DFP.pdsc",
+      "tree_sha256": "2c272207bfb185ccf4483810cedadda84dd97f9fa9035e0c19143ea768b47d72",
+      "url": "https://gd32mcu.com/data/documents/pack/GigaDevice.GD32F1x0_DFP.3.2.1.pack",
+      "vendor": "GigaDevice",
+      "version": "3.2.1"
+    },
+    {
+      "archive": ".Download/GigaDevice.GD32F20x_DFP.2.2.3.pack",
+      "archive_sha256": "f9ed72f0840059bb566c95e9d6b942f02f637e10dda3f2b869bbe6c1468e3672",
+      "name": "GD32F20x_DFP",
+      "pdsc": "GigaDevice/GD32F20x_DFP/2.2.3/GigaDevice.GD32F20x_DFP.pdsc",
+      "tree_sha256": "86703a6fe2b397d070d002782318e5e7e04adc37a0d179bebf9657442618dee0",
+      "url": "https://gd32mcu.com/data/documents/pack/GigaDevice.GD32F20x_DFP.2.2.3.pack",
+      "vendor": "GigaDevice",
+      "version": "2.2.3"
+    },
+    {
+      "archive": ".Download/GigaDevice.GD32F30x_DFP.2.2.1.pack",
+      "archive_sha256": "640b4867d3c6e7e799c89cb78935ec1412021e00b210e5ed73d0a030ace7f9d5",
+      "name": "GD32F30x_DFP",
+      "pdsc": "GigaDevice/GD32F30x_DFP/2.2.1/GigaDevice.GD32F30x_DFP.pdsc",
+      "tree_sha256": "3adffa56be26c0ec495cd50dc12484065bafaaeab1b9c3149973d0375c7ff878",
+      "url": "https://gd32mcu.com/data/documents/pack/GigaDevice.GD32F30x_DFP.2.2.1.pack",
+      "vendor": "GigaDevice",
+      "version": "2.2.1"
+    },
+    {
+      "archive": ".Download/GigaDevice.GD32F3x0_DFP.3.0.2.pack",
+      "archive_sha256": "24346c31eeaa15a8cee5906678276d24793da0673c4663a698961ccb6baa3f20",
+      "name": "GD32F3x0_DFP",
+      "pdsc": "GigaDevice/GD32F3x0_DFP/3.0.2/GigaDevice.GD32F3x0_DFP.pdsc",
+      "tree_sha256": "b98dd63f15c85cb942bbaafa14d950cdf7a8f7c1e47317d46a83d4101f7d27cb",
+      "url": "https://gd32mcu.com/data/documents/pack/GigaDevice.GD32F3x0_DFP.3.0.2.pack",
+      "vendor": "GigaDevice",
+      "version": "3.0.2"
+    },
+    {
+      "archive": ".Download/GigaDevice.GD32F4xx_DFP.3.0.3.pack",
+      "archive_sha256": "f569a6acfdd04bdbb6eaa98a5ec575abe517c53f54a306dc41007c31d4ba52f0",
+      "name": "GD32F4xx_DFP",
+      "pdsc": "GigaDevice/GD32F4xx_DFP/3.0.3/GigaDevice.GD32F4xx_DFP.pdsc",
+      "tree_sha256": "b726e98e7863a039667fc8fbd2595bbe9b60f2519420a6262adf09d1638304b7",
+      "url": "https://gd32mcu.com/data/documents/pack/GigaDevice.GD32F4xx_DFP.3.0.3.pack",
+      "vendor": "GigaDevice",
+      "version": "3.0.3"
+    },
+    {
+      "archive": ".Download/GigaDevice.GD32L23x_DFP.1.0.3.pack",
+      "archive_sha256": "de8c3c3b2d037ebd5458f86644315108ff52cc93bb665c775deb42783364c8a7",
+      "name": "GD32L23x_DFP",
+      "pdsc": "GigaDevice/GD32L23x_DFP/1.0.3/GigaDevice.GD32L23x_DFP.pdsc",
+      "tree_sha256": "c6692ef408959642858f1aa3ee6e8766e125d4f73cb9cea275bb818bc0cb0440",
+      "url": "https://gd32mcu.com/data/documents/pack/GigaDevice.GD32L23x_DFP.1.0.3.pack",
+      "vendor": "GigaDevice",
+      "version": "1.0.3"
+    },
+    {
+      "archive": ".Download/GigaDevice.GD32W51x_DFP.1.0.3.pack",
+      "archive_sha256": "217510a14cab38d5b18fe75953a24e5cc0c49e2effb57b88b70bfa161e76ef77",
+      "name": "GD32W51x_DFP",
+      "pdsc": "GigaDevice/GD32W51x_DFP/1.0.3/GigaDevice.GD32W51x_DFP.pdsc",
+      "tree_sha256": "7d10cecf2702b8a2b3509554fe2a7671a66e25c54941a872c8c4329aebbc8078",
+      "url": "https://gd32mcu.com/data/documents/pack/GigaDevice.GD32W51x_DFP.1.0.3.pack",
+      "vendor": "GigaDevice",
+      "version": "1.0.3"
+    }
+  ],
+  "schema": 1,
+  "source_lock_sha256": "ea7028a3de53cfdc297d7389bbcc714b0a5097dad06a98b3194f64cd5845d898",
+  "target_db": {
+    "devices_sha256": "114e695810217c84943b9d61ab385e3fe10f850cc914f96aac280a509c650c88",
+    "metadata_sha256": "aa9b6fc936b1fd615c07fdcd9dddafe2a902b5a923ac50125decc4927693233f",
+    "revision": "947e8a96d462801e827ed76408c8d8457326f6a1",
+    "schema": 1,
+    "source_index_sha256": "136ec2208d31b5d0e8697a806e40d5647799c8c097ae283f28712079dc7b2e81",
+    "url": "https://github.com/itswenb/cmsis-rust-target-db"
+  },
+  "tools": {
+    "cmsis_toolbox": "2.14.1",
+    "cpackget": "2.2.1"
+  },
+  "upstream": {
+    "chiptool": "be1bff3e9e1b27b090e69bd9ac753c66fdcce678",
+    "embassy": "98d847be57f3ea022ce05fe9b95ab3639a1e0a93",
+    "stm32_data": "87c539515764df442bc50b6235bad891950ba3c4",
+    "stm32_data_generated": "12ec4cd38c7825c1ff8592de1bdefaae445bb3a6",
+    "stm32_metapac_version": "21.0.0"
+  }
+}
