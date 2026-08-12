@@ -1,0 +1,150 @@
+name: 同步生成的 metapac
+
+on:
+  workflow_dispatch:
+  schedule:
+    # 来源仓库每周三 05:17 UTC 更新；这里再留出两小时。
+    - cron: "17 7 * * 3"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-generated-metapac
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    env:
+      CMSIS_TOOLBOX_VERSION: "2.14.1"
+      CMSIS_TOOLBOX_SHA256: "c83735c0c1dfd95b2865e908c7adb8cd5d4fd7ec61da96990072d9e77b3e3e25"
+
+    steps:
+      - name: 检出生成仓库
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: 安装固定 Rust 工具链
+        run: |
+          rustup toolchain install nightly-2025-12-11 --profile minimal --target thumbv7m-none-eabi
+          rustup toolchain install 1.97.0 --profile minimal --target thumbv7m-none-eabi
+          rustup default nightly-2025-12-11
+
+      - name: 安装固定 CMSIS-Toolbox
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "${RUNNER_TEMP}/cmsis-toolbox"
+          curl --fail --location --silent --show-error \
+            --output "${RUNNER_TEMP}/cmsis-toolbox.tar.gz" \
+            "https://github.com/Open-CMSIS-Pack/cmsis-toolbox/releases/download/${CMSIS_TOOLBOX_VERSION}/cmsis-toolbox-linux-amd64.tar.gz"
+          printf '%s  %s\n' \
+            "${CMSIS_TOOLBOX_SHA256}" \
+            "${RUNNER_TEMP}/cmsis-toolbox.tar.gz" \
+            | sha256sum -c -
+          tar -xzf "${RUNNER_TEMP}/cmsis-toolbox.tar.gz" \
+            -C "${RUNNER_TEMP}/cmsis-toolbox" \
+            --strip-components=1
+          chmod -R +x "${RUNNER_TEMP}/cmsis-toolbox/bin"
+          echo "${RUNNER_TEMP}/cmsis-toolbox/bin" >> "$GITHUB_PATH"
+
+      - name: 检出来源与官方生成基线
+        shell: bash
+        run: |
+          set -euo pipefail
+          git clone --depth 1 \
+            https://github.com/itswenb/embassy-mcu-compat.git \
+            "${RUNNER_TEMP}/embassy-mcu-compat"
+          revision="$(sed -n 's/^stm32_data_generated = "\([0-9a-f]\{40\}\)"$/\1/p' "${RUNNER_TEMP}/embassy-mcu-compat/sources.lock.toml")"
+          [[ "${revision}" =~ ^[0-9a-f]{40}$ ]]
+          git init "${RUNNER_TEMP}/official-generated"
+          git -C "${RUNNER_TEMP}/official-generated" remote add origin \
+            https://github.com/embassy-rs/stm32-data-generated.git
+          git -C "${RUNNER_TEMP}/official-generated" fetch --depth 1 origin "${revision}"
+          git -C "${RUNNER_TEMP}/official-generated" checkout --detach FETCH_HEAD
+
+      - name: 还原固定来源缓存
+        shell: bash
+        working-directory: ${{ runner.temp }}/embassy-mcu-compat
+        run: |
+          set -euo pipefail
+          cargo run --locked --release -- sources update \
+            --cache-dir "${RUNNER_TEMP}/sources-cache"
+          git diff --exit-code -- sources.lock.toml
+          cargo run --locked --release -- audit \
+            --frozen \
+            --cache-dir "${RUNNER_TEMP}/sources-cache"
+
+      - name: 重新生成并验收
+        shell: bash
+        working-directory: ${{ runner.temp }}/embassy-mcu-compat
+        run: |
+          set -euo pipefail
+          cargo run --locked --release -- generate \
+            --official-generated "${RUNNER_TEMP}/official-generated" \
+            --output "${RUNNER_TEMP}/generated" \
+            --cache-dir "${RUNNER_TEMP}/sources-cache" \
+            --include-test
+          rustc --test --edition=2024 \
+            "${RUNNER_TEMP}/generated/build.rs" \
+            -o "${RUNNER_TEMP}/build-script-tests"
+          "${RUNNER_TEMP}/build-script-tests"
+
+      - name: 同步生成文件
+        shell: bash
+        run: |
+          set -euo pipefail
+          rsync -a --delete \
+            --exclude '.git/' \
+            --exclude '.github/' \
+            "${RUNNER_TEMP}/generated/" \
+            "${GITHUB_WORKSPACE}/"
+
+      - name: 编译原生与兼容路径
+        env:
+          CARGO_TARGET_DIR: ${{ runner.temp }}/generated-target
+        shell: bash
+        run: |
+          set -euo pipefail
+          test ! -e Cargo.lock
+          env -u EMBASSY_MCU_COMPAT_CHIP cargo check \
+            --target thumbv7m-none-eabi \
+            --features pac,metadata,stm32f103c8
+          EMBASSY_MCU_COMPAT_CHIP=gd32f103c8 cargo check \
+            --target thumbv7m-none-eabi \
+            --features pac,metadata,stm32f103c8
+          ln -s "${GITHUB_WORKSPACE}" "${RUNNER_TEMP}/embassy-mcu-compat-generated"
+          env -u EMBASSY_MCU_COMPAT_CHIP cargo +1.97.0 check \
+            --manifest-path "${RUNNER_TEMP}/embassy-mcu-compat/examples/stm32f103c8-native/Cargo.toml" \
+            --target thumbv7m-none-eabi
+          EMBASSY_MCU_COMPAT_CHIP=gd32f103c8 cargo +1.97.0 check \
+            --manifest-path "${RUNNER_TEMP}/embassy-mcu-compat/examples/gd32f103c8/Cargo.toml" \
+            --target thumbv7m-none-eabi
+          rm -f Cargo.lock
+
+      - name: 提交生成变化
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [[ -z "$(git status --porcelain)" ]]; then
+            echo "生成内容没有变化。"
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "生成：同步 MCU 兼容 metapac"
+
+          auth_header="$(printf 'x-access-token:%s' "${GITHUB_TOKEN}" | base64 -w 0)"
+          trap 'git config --local --unset-all http.https://github.com/.extraheader || true' EXIT
+          git config --local http.https://github.com/.extraheader "AUTHORIZATION: basic ${auth_header}"
+          unset auth_header
+          git push origin "HEAD:${{ github.event.repository.default_branch }}"
+          git config --local --unset-all http.https://github.com/.extraheader
+          trap - EXIT

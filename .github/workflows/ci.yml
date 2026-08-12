@@ -1,0 +1,40 @@
+name: 生成仓库持续集成
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: 检出仓库
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: 安装 Rust 与目标平台
+        run: |
+          rustup toolchain install 1.97.0 --profile minimal --target thumbv7m-none-eabi
+          rustup default 1.97.0
+
+      - name: 验证构建选择协议
+        run: |
+          rustc --test --edition=2024 build.rs -o "${RUNNER_TEMP}/build-script-tests"
+          "${RUNNER_TEMP}/build-script-tests"
+
+      - name: 编译原生 STM32 路径
+        run: |
+          env -u EMBASSY_MCU_COMPAT_CHIP cargo check \
+            --target thumbv7m-none-eabi \
+            --features pac,metadata,stm32f103c8
+
+      - name: 编译兼容 GD 路径
+        env:
+          EMBASSY_MCU_COMPAT_CHIP: gd32f103c8
+        run: |
+          cargo check \
+            --target thumbv7m-none-eabi \
+            --features pac,metadata,stm32f103c8
