@@ -40,12 +40,25 @@ jobs:
 
       - name: 编译兼容 GD 路径
         env:
-          EMBASSY_MCU_COMPAT_CHIP: gd32f103c8
+          EMBASSY_MCU_COMPAT_CHIP: gd32f303cb
         run: |
           cargo check \
             -p stm32-metapac \
+            --target thumbv7em-none-eabihf \
+            --features pac,metadata,stm32f303cb
+
+      - name: 拒绝从 Embassy 入口选择 RISC-V 型号
+        env:
+          EMBASSY_MCU_COMPAT_CHIP: gd32vf103c8
+        run: |
+          if cargo check \
+            -p stm32-metapac \
             --target thumbv7m-none-eabi \
-            --features pac,metadata,stm32f103c8
+            --features pac,metadata,stm32f103c8 \
+            2>riscv-error.log; then
+            exit 1
+          fi
+          grep -q "是 RISC-V 型号，不能通过 embassy-stm32 使用" riscv-error.log
 
       - name: 编译全量 PAC 代表目标
         run: |
