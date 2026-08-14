@@ -17,7 +17,13 @@ jobs:
 
       - name: 安装 Rust 与目标平台
         run: |
-          rustup toolchain install 1.97.0 --profile minimal --target thumbv7m-none-eabi
+          rustup toolchain install 1.97.0 --profile minimal \
+            --target thumbv7m-none-eabi \
+            --target thumbv7em-none-eabihf \
+            --target thumbv8m.base-none-eabi \
+            --target thumbv8m.main-none-eabihf \
+            --target riscv32imac-unknown-none-elf \
+            --target riscv32imafc-unknown-none-elf
           rustup default 1.97.0
 
       - name: 验证构建选择协议
@@ -28,6 +34,7 @@ jobs:
       - name: 编译原生 STM32 路径
         run: |
           env -u EMBASSY_MCU_COMPAT_CHIP cargo check \
+            -p stm32-metapac \
             --target thumbv7m-none-eabi \
             --features pac,metadata,stm32f103c8
 
@@ -36,5 +43,33 @@ jobs:
           EMBASSY_MCU_COMPAT_CHIP: gd32f103c8
         run: |
           cargo check \
+            -p stm32-metapac \
             --target thumbv7m-none-eabi \
             --features pac,metadata,stm32f103c8
+
+      - name: 编译全量 PAC 代表目标
+        run: |
+          cargo check \
+            -p mcu-metapac \
+            --target thumbv7m-none-eabi \
+            --features pac,metadata,gd32f103c8
+          cargo check \
+            -p mcu-metapac \
+            --target thumbv7em-none-eabihf \
+            --features pac,metadata,gd32a103cb
+          cargo check \
+            -p mcu-metapac \
+            --target thumbv8m.base-none-eabi \
+            --features pac,metadata,gd32c211ex
+          cargo check \
+            -p mcu-metapac \
+            --target thumbv8m.main-none-eabihf \
+            --features pac,metadata,gd32a503cb
+          cargo check \
+            -p mcu-metapac \
+            --target riscv32imac-unknown-none-elf \
+            --features pac,metadata,gd32vf103c8
+          cargo check \
+            -p mcu-metapac \
+            --target riscv32imafc-unknown-none-elf \
+            --features pac,metadata,gd32vw553hi

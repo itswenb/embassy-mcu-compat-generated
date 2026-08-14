@@ -2,9 +2,6 @@ name: 同步生成的 metapac
 
 on:
   workflow_dispatch:
-  schedule:
-    # 来源仓库每周三 05:17 UTC 更新；这里再留出两小时。
-    - cron: "17 7 * * 3"
 
 permissions:
   contents: write
@@ -16,10 +13,13 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
-    timeout-minutes: 120
+    timeout-minutes: 240
     env:
       CMSIS_TOOLBOX_VERSION: "2.14.1"
       CMSIS_TOOLBOX_SHA256: "c83735c0c1dfd95b2865e908c7adb8cd5d4fd7ec61da96990072d9e77b3e3e25"
+      GIGADEVICE_ACCEPT_SLA_GD0001: "1"
+      GIGADEVICE_ACCEPT_SLA_GD0003: "1"
+      GIGADEVICE_ACCEPT_SLA_GD0006: "1"
 
     steps:
       - name: 检出生成仓库
@@ -29,9 +29,25 @@ jobs:
 
       - name: 安装固定 Rust 工具链
         run: |
-          rustup toolchain install nightly-2025-12-11 --profile minimal --target thumbv7m-none-eabi
-          rustup toolchain install 1.97.0 --profile minimal --target thumbv7m-none-eabi
+          rustup toolchain install nightly-2025-12-11 --profile minimal \
+            --component rust-src --component rustfmt --component clippy \
+            --target thumbv6m-none-eabi \
+            --target thumbv7m-none-eabi \
+            --target thumbv7em-none-eabi \
+            --target thumbv7em-none-eabihf \
+            --target thumbv8m.base-none-eabi \
+            --target thumbv8m.main-none-eabihf \
+            --target riscv32imac-unknown-none-elf \
+            --target riscv32imafc-unknown-none-elf
+          rustup toolchain install 1.97.0 --profile minimal \
+            --target thumbv7m-none-eabi \
+            --target riscv32imafc-unknown-none-elf
           rustup default nightly-2025-12-11
+
+      - name: 安装来源处理工具
+        run: |
+          sudo apt-get update
+          sudo apt-get install --yes libarchive-tools libdigest-sha-perl poppler-utils
 
       - name: 安装固定 CMSIS-Toolbox
         shell: bash
@@ -66,15 +82,25 @@ jobs:
           git -C "${RUNNER_TEMP}/official-generated" fetch --depth 1 origin "${revision}"
           git -C "${RUNNER_TEMP}/official-generated" checkout --detach FETCH_HEAD
 
+      - name: 恢复项目内来源缓存
+        uses: actions/cache@27d5ce7f107fe9357f9df03efb73ab90386fccae # v5.0.5
+        with:
+          path: |
+            ${{ runner.temp }}/embassy-mcu-compat/.cache/research
+            ${{ runner.temp }}/embassy-mcu-compat/.cache/tools
+          key: gd32-generated-v1-${{ runner.os }}-${{ github.run_id }}
+          restore-keys: |
+            gd32-generated-v1-${{ runner.os }}-
+
       - name: 还原固定来源缓存
         shell: bash
         working-directory: ${{ runner.temp }}/embassy-mcu-compat
         run: |
           set -euo pipefail
-          cargo run --locked --release -- sources update \
+          cargo run --locked --release --bin mcu-compat-gen -- sources update \
             --cache-dir "${RUNNER_TEMP}/sources-cache"
           git diff --exit-code -- sources.lock.toml
-          cargo run --locked --release -- audit \
+          cargo run --locked --release --bin mcu-compat-gen -- audit \
             --frozen \
             --cache-dir "${RUNNER_TEMP}/sources-cache"
 
@@ -83,25 +109,38 @@ jobs:
         working-directory: ${{ runner.temp }}/embassy-mcu-compat
         run: |
           set -euo pipefail
-          cargo run --locked --release -- generate \
+          cargo run --locked --release --bin mcu-compat-gen -- generate \
             --official-generated "${RUNNER_TEMP}/official-generated" \
-            --output "${RUNNER_TEMP}/generated" \
+            --output "${RUNNER_TEMP}/patch-generated" \
             --cache-dir "${RUNNER_TEMP}/sources-cache" \
             --include-test
           rustc --test --edition=2024 \
-            "${RUNNER_TEMP}/generated/build.rs" \
+            "${RUNNER_TEMP}/patch-generated/build.rs" \
             -o "${RUNNER_TEMP}/build-script-tests"
           "${RUNNER_TEMP}/build-script-tests"
+
+      - name: 生成全部 GD32 原生 PAC
+        shell: bash
+        working-directory: ${{ runner.temp }}/embassy-mcu-compat
+        run: scripts/sync-gigadevice-sources.sh
+
+      - name: 合并兼容 patch 与全量原生 PAC
+        shell: bash
+        working-directory: ${{ runner.temp }}/embassy-mcu-compat
+        run: |
+          set -euo pipefail
+          python3 scripts/publish_mcu_metapac.py \
+            --patch "${RUNNER_TEMP}/patch-generated" \
+            --native .cache/generated/gigadevice-metapac-complete-v1 \
+            --output "${RUNNER_TEMP}/generated"
 
       - name: 同步生成文件
         shell: bash
         run: |
           set -euo pipefail
-          rsync -a --delete \
-            --exclude '.git/' \
-            --exclude '.github/' \
-            "${RUNNER_TEMP}/generated/" \
-            "${GITHUB_WORKSPACE}/"
+          "${RUNNER_TEMP}/embassy-mcu-compat/scripts/sync-generated-repository.sh" \
+            "${RUNNER_TEMP}/generated" \
+            "${GITHUB_WORKSPACE}"
 
       - name: 编译原生与兼容路径
         env:
@@ -111,11 +150,37 @@ jobs:
           set -euo pipefail
           test ! -e Cargo.lock
           env -u EMBASSY_MCU_COMPAT_CHIP cargo check \
+            -p stm32-metapac \
             --target thumbv7m-none-eabi \
             --features pac,metadata,stm32f103c8
           EMBASSY_MCU_COMPAT_CHIP=gd32f103c8 cargo check \
+            -p stm32-metapac \
             --target thumbv7m-none-eabi \
             --features pac,metadata,stm32f103c8
+          cargo check \
+            -p mcu-metapac \
+            --target thumbv7m-none-eabi \
+            --features pac,metadata,gd32f103c8
+          cargo check \
+            -p mcu-metapac \
+            --target thumbv7em-none-eabihf \
+            --features pac,metadata,gd32a103cb
+          cargo check \
+            -p mcu-metapac \
+            --target thumbv8m.base-none-eabi \
+            --features pac,metadata,gd32c211ex
+          cargo check \
+            -p mcu-metapac \
+            --target thumbv8m.main-none-eabihf \
+            --features pac,metadata,gd32a503cb
+          cargo check \
+            -p mcu-metapac \
+            --target riscv32imac-unknown-none-elf \
+            --features pac,metadata,gd32vf103c8
+          cargo check \
+            -p mcu-metapac \
+            --target riscv32imafc-unknown-none-elf \
+            --features pac,metadata,gd32vw553hi
           ln -s "${GITHUB_WORKSPACE}" "${RUNNER_TEMP}/embassy-mcu-compat-generated"
           env -u EMBASSY_MCU_COMPAT_CHIP cargo +1.97.0 check \
             --manifest-path "${RUNNER_TEMP}/embassy-mcu-compat/examples/stm32f103c8-native/Cargo.toml" \

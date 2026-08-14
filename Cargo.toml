@@ -1728,3 +1728,6 @@ stm32wle5cc = []
 stm32wle5j8 = []
 stm32wle5jb = []
 stm32wle5jc = []
+
+[workspace]
+members = ["mcu-metapac"]

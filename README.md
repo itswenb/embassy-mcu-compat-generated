@@ -42,3 +42,15 @@ This PAC aims to support all STM32 chip families:
 - STM32WB
 - STM32WBA
 - STM32WL
+
+## 原生 GD32 PAC
+
+本仓库还发布 workspace 包 [`mcu-metapac`](mcu-metapac/README.md)，当前包含 680
+个由真实厂商数据生成并通过编译门的 GD32 feature。依赖时选择一个真实型号：
+
+```toml
+[dependencies]
+mcu-metapac = { git = "https://github.com/itswenb/embassy-mcu-compat-generated", rev = "<固定提交>", features = ["gd32f103c8", "pac", "metadata"] }
+```
+
+这条原生 PAC 路径不等于所有型号已经通过 `embassy-stm32` 或实机验证。

@@ -1,0 +1,11 @@
+target
+.cache
+/examples/*/target/
+/examples/*/Cargo.lock
+.DS_Store
+Cargo.lock
+.claude
+.codex
+.vscode
+.tokensave
+docs

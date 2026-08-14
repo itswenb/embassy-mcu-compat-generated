@@ -1,0 +1,31 @@
+#![allow(clippy::missing_safety_doc)]
+                #![allow(clippy::identity_op)]
+                #![allow(clippy::unnecessary_cast)]
+                #![allow(clippy::erasing_op)]
+
+
+
+
+# [derive (Copy , Clone , Eq , PartialEq)]
+pub struct Gpion { ptr : * mut u8 } unsafe impl Send for Gpion { } unsafe impl Sync for Gpion { } impl Gpion { # [inline (always)]
+pub const unsafe fn from_ptr (ptr : * mut ()) -> Self { Self { ptr : ptr as _ , } } # [inline (always)]
+pub const fn as_ptr (& self) -> * mut () { self . ptr as _ } # [inline (always)]
+pub const fn gpio_funcsel (self) -> crate :: common :: Reg < regs :: GpioFuncsel , crate :: common :: RW > { unsafe { crate :: common :: Reg :: from_ptr (self . ptr . wrapping_add (0x60usize) as _) } } # [inline (always)]
+pub const fn gpio_hldctl (self) -> crate :: common :: Reg < regs :: GpioHldctl , crate :: common :: RW > { unsafe { crate :: common :: Reg :: from_ptr (self . ptr . wrapping_add (0x64usize) as _) } } } pub mod regs { # [repr (transparent)]
+# [derive (Copy , Clone , Eq , PartialEq)]
+pub struct GpioFuncsel (pub u32) ; impl GpioFuncsel { # [must_use]
+# [inline (always)]
+pub const fn gpio_funcsel_gpboot (& self) -> bool { let val = (self . 0 >> 0usize) & 0x01 ; val != 0 } # [inline (always)]
+pub const fn set_gpio_funcsel_gpboot (& mut self , val : bool) { self . 0 = (self . 0 & ! (0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize) ; } # [must_use]
+# [inline (always)]
+pub const fn gpio_funcsel_gptsel (& self) -> bool { let val = (self . 0 >> 1usize) & 0x01 ; val != 0 } # [inline (always)]
+pub const fn set_gpio_funcsel_gptsel (& mut self , val : bool) { self . 0 = (self . 0 & ! (0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize) ; } } impl Default for GpioFuncsel { # [inline (always)]
+fn default () -> GpioFuncsel { GpioFuncsel (0) } } impl core :: fmt :: Debug for GpioFuncsel { fn fmt (& self , f : & mut core :: fmt :: Formatter) -> core :: fmt :: Result { f . debug_struct ("GpioFuncsel") . field ("gpio_funcsel_gpboot" , & self . gpio_funcsel_gpboot ()) . field ("gpio_funcsel_gptsel" , & self . gpio_funcsel_gptsel ()) . finish () } } # [cfg (feature = "defmt")]
+impl defmt :: Format for GpioFuncsel { fn format (& self , f : defmt :: Formatter) { defmt :: write ! (f , "GpioFuncsel {{ gpio_funcsel_gpboot: {=bool:?}, gpio_funcsel_gptsel: {=bool:?} }}" , self . gpio_funcsel_gpboot () , self . gpio_funcsel_gptsel ()) } } # [repr (transparent)]
+# [derive (Copy , Clone , Eq , PartialEq)]
+pub struct GpioHldctl (pub u32) ; impl GpioHldctl { # [must_use]
+# [inline (always)]
+pub const fn gpio_hldctl_smp (& self) -> bool { let val = (self . 0 >> 0usize) & 0x01 ; val != 0 } # [inline (always)]
+pub const fn set_gpio_hldctl_smp (& mut self , val : bool) { self . 0 = (self . 0 & ! (0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize) ; } } impl Default for GpioHldctl { # [inline (always)]
+fn default () -> GpioHldctl { GpioHldctl (0) } } impl core :: fmt :: Debug for GpioHldctl { fn fmt (& self , f : & mut core :: fmt :: Formatter) -> core :: fmt :: Result { f . debug_struct ("GpioHldctl") . field ("gpio_hldctl_smp" , & self . gpio_hldctl_smp ()) . finish () } } # [cfg (feature = "defmt")]
+impl defmt :: Format for GpioHldctl { fn format (& self , f : defmt :: Formatter) { defmt :: write ! (f , "GpioHldctl {{ gpio_hldctl_smp: {=bool:?} }}" , self . gpio_hldctl_smp ()) } } }

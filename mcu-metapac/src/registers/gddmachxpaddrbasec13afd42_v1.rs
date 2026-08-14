@@ -1,0 +1,81 @@
+
+                    use crate::metadata::ir::*;
+                    pub(crate) static REGISTERS: IR = IR {
+    blocks: &[
+        Block {
+            name: "DmaChxpaddrBase",
+            extends: None,
+            description: None,
+            items: &[
+                BlockItem {
+                    name: "dma_chpaddr_0",
+                    description: None,
+                    array: None,
+                    byte_offset: 0x0,
+                    inner: BlockItemInner::Register(
+                        Register {
+                            access: Access::ReadWrite,
+                            bit_size: 32,
+                            fieldset: None,
+                        },
+                    ),
+                },
+                BlockItem {
+                    name: "dma_chpaddr_1",
+                    description: None,
+                    array: None,
+                    byte_offset: 0x14,
+                    inner: BlockItemInner::Register(
+                        Register {
+                            access: Access::ReadWrite,
+                            bit_size: 32,
+                            fieldset: None,
+                        },
+                    ),
+                },
+                BlockItem {
+                    name: "dma_chpaddr_2",
+                    description: None,
+                    array: None,
+                    byte_offset: 0x28,
+                    inner: BlockItemInner::Register(
+                        Register {
+                            access: Access::ReadWrite,
+                            bit_size: 32,
+                            fieldset: None,
+                        },
+                    ),
+                },
+                BlockItem {
+                    name: "dma_chpaddr_3",
+                    description: None,
+                    array: None,
+                    byte_offset: 0x3c,
+                    inner: BlockItemInner::Register(
+                        Register {
+                            access: Access::ReadWrite,
+                            bit_size: 32,
+                            fieldset: None,
+                        },
+                    ),
+                },
+                BlockItem {
+                    name: "dma_chpaddr_4",
+                    description: None,
+                    array: None,
+                    byte_offset: 0x50,
+                    inner: BlockItemInner::Register(
+                        Register {
+                            access: Access::ReadWrite,
+                            bit_size: 32,
+                            fieldset: None,
+                        },
+                    ),
+                },
+            ],
+        },
+    ],
+    fieldsets: &[],
+    enums: &[],
+};
+                

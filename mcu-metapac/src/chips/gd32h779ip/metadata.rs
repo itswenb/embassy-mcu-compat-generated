@@ -1,0 +1,77 @@
+include!("../metadata_0043.rs");
+            use crate::metadata::PeripheralRccKernelClock::{Clock, Mux};
+            pub static METADATA: Metadata = Metadata {
+                name: "GD32H779IP",
+                family: "GD32",
+                line: "GD32H77X_78X",
+                memory: &[&[
+    MemoryRegion {
+        name: "ITCMRAM",
+        kind: MemoryRegionKind::Ram,
+        address: 0x0,
+        size: 131072,
+        settings: None,
+    },
+    MemoryRegion {
+        name: "DTCMRAM",
+        kind: MemoryRegionKind::Ram,
+        address: 0x20000000,
+        size: 262144,
+        settings: None,
+    },
+    MemoryRegion {
+        name: "AXISRAM",
+        kind: MemoryRegionKind::Ram,
+        address: 0x24000000,
+        size: 786432,
+        settings: None,
+    },
+    MemoryRegion {
+        name: "SRAM0",
+        kind: MemoryRegionKind::Ram,
+        address: 0x30000000,
+        size: 16384,
+        settings: None,
+    },
+    MemoryRegion {
+        name: "SRAM1",
+        kind: MemoryRegionKind::Ram,
+        address: 0x30004000,
+        size: 16384,
+        settings: None,
+    },
+    MemoryRegion {
+        name: "RRAM_0",
+        kind: MemoryRegionKind::Flash,
+        address: 0x8000000,
+        size: 2097152,
+        settings: None,
+    },
+    MemoryRegion {
+        name: "DFLASH_1",
+        kind: MemoryRegionKind::Flash,
+        address: 0x8200000,
+        size: 1048576,
+        settings: None,
+    },
+    MemoryRegion {
+        name: "FLASH_2",
+        kind: MemoryRegionKind::Flash,
+        address: 0x8300000,
+        size: 2097152,
+        settings: None,
+    },
+    MemoryRegion {
+        name: "DFLASH_3",
+        kind: MemoryRegionKind::Flash,
+        address: 0x8500000,
+        size: 524288,
+        settings: None,
+    },
+]],
+                peripherals: PERIPHERALS,
+                nvic_priority_bits: None,
+                interrupts: INTERRUPTS,
+                dma_channels: DMA_CHANNELS,
+                pins: PINS,
+            };
