@@ -93,12 +93,12 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 1,
             variants: &[
                 EnumVariant {
-                    name: "Connected",
+                    name: "CONNECTED",
                     description: Some("VREF+ pin is internally connected to the voltage reference buffer output."),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "HighZ",
+                    name: "HIGH_Z",
                     description: Some("VREF+ pin is high impedance."),
                     value: 1,
                 },
@@ -110,17 +110,17 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 2,
             variants: &[
                 EnumVariant {
-                    name: "Vref0",
+                    name: "VREF0",
                     description: Some("Voltage reference set to around 2.048 V."),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "Vref1",
+                    name: "VREF1",
                     description: Some("Voltage reference set to around 2.5 V."),
                     value: 1,
                 },
                 EnumVariant {
-                    name: "Vref2",
+                    name: "VREF2",
                     description: Some("Voltage reference set to around 2.9 V."),
                     value: 2,
                 },

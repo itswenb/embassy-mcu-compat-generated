@@ -22,12 +22,12 @@ impl Vrefbuf {
     #[doc = "control and status register."]
     #[inline(always)]
     pub const fn csr(self) -> crate::common::Reg<regs::Csr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0usize) as _) }
     }
     #[doc = "calibration control register."]
     #[inline(always)]
     pub const fn ccr(self) -> crate::common::Reg<regs::Ccr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x04usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x04usize) as _) }
     }
 }
 pub mod regs {
@@ -37,7 +37,6 @@ pub mod regs {
     pub struct Ccr(pub u32);
     impl Ccr {
         #[doc = "Trimming code."]
-        #[must_use]
         #[inline(always)]
         pub const fn trim(&self) -> u8 {
             let val = (self.0 >> 0usize) & 0x3f;
@@ -45,7 +44,7 @@ pub mod regs {
         }
         #[doc = "Trimming code."]
         #[inline(always)]
-        pub const fn set_trim(&mut self, val: u8) {
+        pub fn set_trim(&mut self, val: u8) {
             self.0 = (self.0 & !(0x3f << 0usize)) | (((val as u32) & 0x3f) << 0usize);
         }
     }
@@ -72,7 +71,6 @@ pub mod regs {
     pub struct Csr(pub u32);
     impl Csr {
         #[doc = "Voltage reference buffer mode enable."]
-        #[must_use]
         #[inline(always)]
         pub const fn envr(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -80,11 +78,10 @@ pub mod regs {
         }
         #[doc = "Voltage reference buffer mode enable."]
         #[inline(always)]
-        pub const fn set_envr(&mut self, val: bool) {
+        pub fn set_envr(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "High impedance mode."]
-        #[must_use]
         #[inline(always)]
         pub const fn hiz(&self) -> super::vals::Hiz {
             let val = (self.0 >> 1usize) & 0x01;
@@ -92,11 +89,10 @@ pub mod regs {
         }
         #[doc = "High impedance mode."]
         #[inline(always)]
-        pub const fn set_hiz(&mut self, val: super::vals::Hiz) {
+        pub fn set_hiz(&mut self, val: super::vals::Hiz) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
         }
         #[doc = "Voltage reference scale."]
-        #[must_use]
         #[inline(always)]
         pub const fn vrs(&self) -> super::vals::Vrs {
             let val = (self.0 >> 2usize) & 0x01;
@@ -104,11 +100,10 @@ pub mod regs {
         }
         #[doc = "Voltage reference scale."]
         #[inline(always)]
-        pub const fn set_vrs(&mut self, val: super::vals::Vrs) {
+        pub fn set_vrs(&mut self, val: super::vals::Vrs) {
             self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
         }
         #[doc = "Voltage reference buffer ready."]
-        #[must_use]
         #[inline(always)]
         pub const fn vrr(&self) -> bool {
             let val = (self.0 >> 3usize) & 0x01;
@@ -116,7 +111,7 @@ pub mod regs {
         }
         #[doc = "Voltage reference buffer ready."]
         #[inline(always)]
-        pub const fn set_vrr(&mut self, val: bool) {
+        pub fn set_vrr(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
         }
     }
@@ -156,9 +151,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Hiz {
         #[doc = "VREF+ pin is internally connected to the voltage reference buffer output."]
-        Connected = 0x0,
+        CONNECTED = 0x0,
         #[doc = "VREF+ pin is high impedance."]
-        HighZ = 0x01,
+        HIGH_Z = 0x01,
     }
     impl Hiz {
         #[inline(always)]
@@ -187,9 +182,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Vrs {
         #[doc = "Voltage reference set to around 2.048 V."]
-        Vref0 = 0x0,
+        VREF0 = 0x0,
         #[doc = "Voltage reference set to around 2.5 V."]
-        Vref1 = 0x01,
+        VREF1 = 0x01,
     }
     impl Vrs {
         #[inline(always)]

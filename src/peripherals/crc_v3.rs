@@ -22,37 +22,37 @@ impl Crc {
     #[doc = "Data register - half-word sized"]
     #[inline(always)]
     pub const fn dr16(self) -> crate::common::Reg<u16, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0usize) as _) }
     }
     #[doc = "Data register"]
     #[inline(always)]
     pub const fn dr32(self) -> crate::common::Reg<u32, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0usize) as _) }
     }
     #[doc = "Data register - byte sized"]
     #[inline(always)]
     pub const fn dr8(self) -> crate::common::Reg<u8, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0usize) as _) }
     }
     #[doc = "Independent Data register"]
     #[inline(always)]
     pub const fn idr(self) -> crate::common::Reg<u32, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x04usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x04usize) as _) }
     }
     #[doc = "Control register"]
     #[inline(always)]
     pub const fn cr(self) -> crate::common::Reg<regs::Cr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x08usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x08usize) as _) }
     }
     #[doc = "Initial CRC value"]
     #[inline(always)]
     pub const fn init(self) -> crate::common::Reg<u32, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x10usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x10usize) as _) }
     }
     #[doc = "CRC polynomial"]
     #[inline(always)]
     pub const fn pol(self) -> crate::common::Reg<u32, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x14usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x14usize) as _) }
     }
 }
 pub mod regs {
@@ -62,7 +62,6 @@ pub mod regs {
     pub struct Cr(pub u32);
     impl Cr {
         #[doc = "RESET bit"]
-        #[must_use]
         #[inline(always)]
         pub const fn reset(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -70,11 +69,10 @@ pub mod regs {
         }
         #[doc = "RESET bit"]
         #[inline(always)]
-        pub const fn set_reset(&mut self, val: bool) {
+        pub fn set_reset(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "Polynomial size"]
-        #[must_use]
         #[inline(always)]
         pub const fn polysize(&self) -> super::vals::Polysize {
             let val = (self.0 >> 3usize) & 0x03;
@@ -82,11 +80,10 @@ pub mod regs {
         }
         #[doc = "Polynomial size"]
         #[inline(always)]
-        pub const fn set_polysize(&mut self, val: super::vals::Polysize) {
+        pub fn set_polysize(&mut self, val: super::vals::Polysize) {
             self.0 = (self.0 & !(0x03 << 3usize)) | (((val.to_bits() as u32) & 0x03) << 3usize);
         }
         #[doc = "Reverse input data"]
-        #[must_use]
         #[inline(always)]
         pub const fn rev_in(&self) -> super::vals::RevIn {
             let val = (self.0 >> 5usize) & 0x03;
@@ -94,11 +91,10 @@ pub mod regs {
         }
         #[doc = "Reverse input data"]
         #[inline(always)]
-        pub const fn set_rev_in(&mut self, val: super::vals::RevIn) {
+        pub fn set_rev_in(&mut self, val: super::vals::RevIn) {
             self.0 = (self.0 & !(0x03 << 5usize)) | (((val.to_bits() as u32) & 0x03) << 5usize);
         }
         #[doc = "Reverse output data"]
-        #[must_use]
         #[inline(always)]
         pub const fn rev_out(&self) -> super::vals::RevOut {
             let val = (self.0 >> 7usize) & 0x01;
@@ -106,7 +102,7 @@ pub mod regs {
         }
         #[doc = "Reverse output data"]
         #[inline(always)]
-        pub const fn set_rev_out(&mut self, val: super::vals::RevOut) {
+        pub fn set_rev_out(&mut self, val: super::vals::RevOut) {
             self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u32) & 0x01) << 7usize);
         }
     }
@@ -146,13 +142,13 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Polysize {
         #[doc = "32-bit polynomial"]
-        Polysize32 = 0x0,
+        POLYSIZE32 = 0x0,
         #[doc = "16-bit polynomial"]
-        Polysize16 = 0x01,
+        POLYSIZE16 = 0x01,
         #[doc = "8-bit polynomial"]
-        Polysize8 = 0x02,
+        POLYSIZE8 = 0x02,
         #[doc = "7-bit polynomial"]
-        Polysize7 = 0x03,
+        POLYSIZE7 = 0x03,
     }
     impl Polysize {
         #[inline(always)]
@@ -181,13 +177,13 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum RevIn {
         #[doc = "Bit order not affected"]
-        Normal = 0x0,
+        NORMAL = 0x0,
         #[doc = "Bit reversal done by byte"]
-        Byte = 0x01,
+        BYTE = 0x01,
         #[doc = "Bit reversal done by half-word"]
-        HalfWord = 0x02,
+        HALF_WORD = 0x02,
         #[doc = "Bit reversal done by word"]
-        Word = 0x03,
+        WORD = 0x03,
     }
     impl RevIn {
         #[inline(always)]
@@ -216,9 +212,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum RevOut {
         #[doc = "Bit order not affected"]
-        Normal = 0x0,
+        NORMAL = 0x0,
         #[doc = "Bit reversed output"]
-        Reversed = 0x01,
+        REVERSED = 0x01,
     }
     impl RevOut {
         #[inline(always)]

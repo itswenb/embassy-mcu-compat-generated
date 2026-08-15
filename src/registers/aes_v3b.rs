@@ -371,29 +371,29 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 3,
             variants: &[
                 EnumVariant {
-                    name: "Cbc",
-                    description: Some("Cipher-block chaining"),
-                    value: 1,
-                },
-                EnumVariant {
-                    name: "Ccm",
-                    description: Some("Counter with CBC-MAC"),
-                    value: 4,
-                },
-                EnumVariant {
-                    name: "Ctr",
-                    description: Some("Counter mode"),
-                    value: 2,
-                },
-                EnumVariant {
-                    name: "Ecb",
+                    name: "ECB",
                     description: Some("Electronic codebook"),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "GcmGmac",
+                    name: "CBC",
+                    description: Some("Cipher-block chaining"),
+                    value: 1,
+                },
+                EnumVariant {
+                    name: "CTR",
+                    description: Some("Counter mode"),
+                    value: 2,
+                },
+                EnumVariant {
+                    name: "GCM_GMAC",
                     description: Some("Galois counter mode and Galois message authentication code"),
                     value: 3,
+                },
+                EnumVariant {
+                    name: "CCM",
+                    description: Some("Counter with CBC-MAC"),
+                    value: 4,
                 },
             ],
         },
@@ -403,24 +403,24 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 2,
             variants: &[
                 EnumVariant {
-                    name: "Bit",
-                    description: Some("Bit"),
-                    value: 3,
+                    name: "NONE",
+                    description: Some("Word"),
+                    value: 0,
                 },
                 EnumVariant {
-                    name: "Byte",
-                    description: Some("Byte (8-bit)"),
-                    value: 2,
-                },
-                EnumVariant {
-                    name: "HalfWord",
+                    name: "HALF_WORD",
                     description: Some("Half-word (16-bit)"),
                     value: 1,
                 },
                 EnumVariant {
-                    name: "None",
-                    description: Some("Word"),
-                    value: 0,
+                    name: "BYTE",
+                    description: Some("Byte (8-bit)"),
+                    value: 2,
+                },
+                EnumVariant {
+                    name: "BIT",
+                    description: Some("Bit"),
+                    value: 3,
                 },
             ],
         },
@@ -430,24 +430,24 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 2,
             variants: &[
                 EnumVariant {
-                    name: "FinalPhase",
-                    description: Some("Final phase"),
-                    value: 3,
-                },
-                EnumVariant {
-                    name: "HeaderPhase",
-                    description: Some("Header phase"),
-                    value: 1,
-                },
-                EnumVariant {
-                    name: "InitPhase",
+                    name: "INIT_PHASE",
                     description: Some("Init phase"),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "PayloadPhase",
+                    name: "HEADER_PHASE",
+                    description: Some("Header phase"),
+                    value: 1,
+                },
+                EnumVariant {
+                    name: "PAYLOAD_PHASE",
                     description: Some("Payload phase"),
                     value: 2,
+                },
+                EnumVariant {
+                    name: "FINAL_PHASE",
+                    description: Some("Final phase"),
+                    value: 3,
                 },
             ],
         },
@@ -457,17 +457,17 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 2,
             variants: &[
                 EnumVariant {
-                    name: "Mode1",
+                    name: "MODE1",
                     description: Some("Encryption"),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "Mode2",
+                    name: "MODE2",
                     description: Some("Key derivation (or key preparation for ECB/CBC decryption)"),
                     value: 1,
                 },
                 EnumVariant {
-                    name: "Mode3",
+                    name: "MODE3",
                     description: Some("Decryption"),
                     value: 2,
                 },

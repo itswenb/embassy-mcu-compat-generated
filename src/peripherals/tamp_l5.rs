@@ -22,93 +22,93 @@ impl Tamp {
     #[doc = "control register 1"]
     #[inline(always)]
     pub const fn cr1(self) -> crate::common::Reg<regs::Cr1, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0usize) as _) }
     }
     #[doc = "control register 2"]
     #[inline(always)]
     pub const fn cr2(self) -> crate::common::Reg<regs::Cr2, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x04usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x04usize) as _) }
     }
     #[doc = "control register 3"]
     #[inline(always)]
     pub const fn cr3(self) -> crate::common::Reg<regs::Cr3, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x08usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x08usize) as _) }
     }
     #[doc = "TAMP filter control register"]
     #[inline(always)]
     pub const fn fltcr(self) -> crate::common::Reg<regs::Fltcr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0cusize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0cusize) as _) }
     }
     #[doc = "TAMP active tamper control register 1"]
     #[inline(always)]
     pub const fn atcr1(self) -> crate::common::Reg<regs::Atcr1, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x10usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x10usize) as _) }
     }
     #[doc = "TAMP active tamper seed register"]
     #[inline(always)]
     pub const fn atseedr(self) -> crate::common::Reg<regs::Atseedr, crate::common::W> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x14usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x14usize) as _) }
     }
     #[doc = "TAMP active tamper output register"]
     #[inline(always)]
     pub const fn ator(self) -> crate::common::Reg<regs::Ator, crate::common::R> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x18usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x18usize) as _) }
     }
     #[doc = "TAMP active tamper control register 2"]
     #[inline(always)]
     pub const fn atcr2(self) -> crate::common::Reg<regs::Atcr2, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x1cusize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x1cusize) as _) }
     }
     #[doc = "TAMP secure mode register"]
     #[inline(always)]
     pub const fn smcr(self) -> crate::common::Reg<regs::Smcr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x20usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x20usize) as _) }
     }
     #[doc = "TAMP privilege mode control register"]
     #[inline(always)]
     pub const fn privcr(self) -> crate::common::Reg<regs::Privcr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x24usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x24usize) as _) }
     }
     #[doc = "TAMP interrupt enable register"]
     #[inline(always)]
     pub const fn ier(self) -> crate::common::Reg<regs::Ier, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x2cusize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x2cusize) as _) }
     }
     #[doc = "TAMP status register"]
     #[inline(always)]
     pub const fn sr(self) -> crate::common::Reg<regs::Sr, crate::common::R> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x30usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x30usize) as _) }
     }
     #[doc = "TAMP masked interrupt status register"]
     #[inline(always)]
     pub const fn misr(self) -> crate::common::Reg<regs::Misr, crate::common::R> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x34usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x34usize) as _) }
     }
     #[doc = "TAMP secure masked interrupt status register"]
     #[inline(always)]
     pub const fn smisr(self) -> crate::common::Reg<regs::Smisr, crate::common::R> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x38usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x38usize) as _) }
     }
     #[doc = "TAMP status clear register"]
     #[inline(always)]
     pub const fn scr(self) -> crate::common::Reg<regs::Scr, crate::common::W> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x3cusize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x3cusize) as _) }
     }
     #[doc = "TAMP monotonic counter register"]
     #[inline(always)]
     pub const fn countr(self) -> crate::common::Reg<regs::Countr, crate::common::R> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x40usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x40usize) as _) }
     }
     #[doc = "TAMP configuration register"]
     #[inline(always)]
     pub const fn cfgr(self) -> crate::common::Reg<regs::Cfgr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x50usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x50usize) as _) }
     }
     #[doc = "TAMP backup register"]
     #[inline(always)]
     pub const fn bkpr(self, n: usize) -> crate::common::Reg<regs::Bkpr, crate::common::RW> {
         assert!(n < 32usize);
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0100usize + n * 4usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0100usize + n * 4usize) as _) }
     }
 }
 pub mod regs {
@@ -118,7 +118,6 @@ pub mod regs {
     pub struct Atcr1(pub u32);
     impl Atcr1 {
         #[doc = "TAMPAM"]
-        #[must_use]
         #[inline(always)]
         pub const fn tampam(&self, n: usize) -> bool {
             assert!(n < 8usize);
@@ -128,13 +127,12 @@ pub mod regs {
         }
         #[doc = "TAMPAM"]
         #[inline(always)]
-        pub const fn set_tampam(&mut self, n: usize, val: bool) {
+        pub fn set_tampam(&mut self, n: usize, val: bool) {
             assert!(n < 8usize);
             let offs = 0usize + n * 1usize;
             self.0 = (self.0 & !(0x01 << offs)) | (((val as u32) & 0x01) << offs);
         }
         #[doc = "ATOSEL"]
-        #[must_use]
         #[inline(always)]
         pub const fn atosel(&self, n: usize) -> u8 {
             assert!(n < 4usize);
@@ -144,13 +142,12 @@ pub mod regs {
         }
         #[doc = "ATOSEL"]
         #[inline(always)]
-        pub const fn set_atosel(&mut self, n: usize, val: u8) {
+        pub fn set_atosel(&mut self, n: usize, val: u8) {
             assert!(n < 4usize);
             let offs = 8usize + n * 2usize;
             self.0 = (self.0 & !(0x03 << offs)) | (((val as u32) & 0x03) << offs);
         }
         #[doc = "ATCKSEL"]
-        #[must_use]
         #[inline(always)]
         pub const fn atcksel(&self) -> u8 {
             let val = (self.0 >> 16usize) & 0x03;
@@ -158,11 +155,10 @@ pub mod regs {
         }
         #[doc = "ATCKSEL"]
         #[inline(always)]
-        pub const fn set_atcksel(&mut self, val: u8) {
+        pub fn set_atcksel(&mut self, val: u8) {
             self.0 = (self.0 & !(0x03 << 16usize)) | (((val as u32) & 0x03) << 16usize);
         }
         #[doc = "ATPER"]
-        #[must_use]
         #[inline(always)]
         pub const fn atper(&self) -> u8 {
             let val = (self.0 >> 24usize) & 0x03;
@@ -170,11 +166,10 @@ pub mod regs {
         }
         #[doc = "ATPER"]
         #[inline(always)]
-        pub const fn set_atper(&mut self, val: u8) {
+        pub fn set_atper(&mut self, val: u8) {
             self.0 = (self.0 & !(0x03 << 24usize)) | (((val as u32) & 0x03) << 24usize);
         }
         #[doc = "ATOSHARE"]
-        #[must_use]
         #[inline(always)]
         pub const fn atoshare(&self) -> bool {
             let val = (self.0 >> 30usize) & 0x01;
@@ -182,11 +177,10 @@ pub mod regs {
         }
         #[doc = "ATOSHARE"]
         #[inline(always)]
-        pub const fn set_atoshare(&mut self, val: bool) {
+        pub fn set_atoshare(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
         }
         #[doc = "FLTEN"]
-        #[must_use]
         #[inline(always)]
         pub const fn flten(&self) -> bool {
             let val = (self.0 >> 31usize) & 0x01;
@@ -194,7 +188,7 @@ pub mod regs {
         }
         #[doc = "FLTEN"]
         #[inline(always)]
-        pub const fn set_flten(&mut self, val: bool) {
+        pub fn set_flten(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
         }
     }
@@ -229,26 +223,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Atcr1 {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Atcr1 {{ tampam[0]: {=bool:?}, tampam[1]: {=bool:?}, tampam[2]: {=bool:?}, tampam[3]: {=bool:?}, tampam[4]: {=bool:?}, tampam[5]: {=bool:?}, tampam[6]: {=bool:?}, tampam[7]: {=bool:?}, atosel[0]: {=u8:?}, atosel[1]: {=u8:?}, atosel[2]: {=u8:?}, atosel[3]: {=u8:?}, atcksel: {=u8:?}, atper: {=u8:?}, atoshare: {=bool:?}, flten: {=bool:?} }}",
-                self.tampam(0usize),
-                self.tampam(1usize),
-                self.tampam(2usize),
-                self.tampam(3usize),
-                self.tampam(4usize),
-                self.tampam(5usize),
-                self.tampam(6usize),
-                self.tampam(7usize),
-                self.atosel(0usize),
-                self.atosel(1usize),
-                self.atosel(2usize),
-                self.atosel(3usize),
-                self.atcksel(),
-                self.atper(),
-                self.atoshare(),
-                self.flten()
-            )
+            defmt :: write ! (f , "Atcr1 {{ tampam[0]: {=bool:?}, tampam[1]: {=bool:?}, tampam[2]: {=bool:?}, tampam[3]: {=bool:?}, tampam[4]: {=bool:?}, tampam[5]: {=bool:?}, tampam[6]: {=bool:?}, tampam[7]: {=bool:?}, atosel[0]: {=u8:?}, atosel[1]: {=u8:?}, atosel[2]: {=u8:?}, atosel[3]: {=u8:?}, atcksel: {=u8:?}, atper: {=u8:?}, atoshare: {=bool:?}, flten: {=bool:?} }}" , self . tampam (0usize) , self . tampam (1usize) , self . tampam (2usize) , self . tampam (3usize) , self . tampam (4usize) , self . tampam (5usize) , self . tampam (6usize) , self . tampam (7usize) , self . atosel (0usize) , self . atosel (1usize) , self . atosel (2usize) , self . atosel (3usize) , self . atcksel () , self . atper () , self . atoshare () , self . flten ())
         }
     }
     #[doc = "TAMP active tamper control register 2"]
@@ -257,7 +232,6 @@ pub mod regs {
     pub struct Atcr2(pub u32);
     impl Atcr2 {
         #[doc = "ATOSEL"]
-        #[must_use]
         #[inline(always)]
         pub const fn atosel(&self, n: usize) -> u8 {
             assert!(n < 8usize);
@@ -267,7 +241,7 @@ pub mod regs {
         }
         #[doc = "ATOSEL"]
         #[inline(always)]
-        pub const fn set_atosel(&mut self, n: usize, val: u8) {
+        pub fn set_atosel(&mut self, n: usize, val: u8) {
             assert!(n < 8usize);
             let offs = 8usize + n * 3usize;
             self.0 = (self.0 & !(0x07 << offs)) | (((val as u32) & 0x07) << offs);
@@ -296,18 +270,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Atcr2 {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Atcr2 {{ atosel[0]: {=u8:?}, atosel[1]: {=u8:?}, atosel[2]: {=u8:?}, atosel[3]: {=u8:?}, atosel[4]: {=u8:?}, atosel[5]: {=u8:?}, atosel[6]: {=u8:?}, atosel[7]: {=u8:?} }}",
-                self.atosel(0usize),
-                self.atosel(1usize),
-                self.atosel(2usize),
-                self.atosel(3usize),
-                self.atosel(4usize),
-                self.atosel(5usize),
-                self.atosel(6usize),
-                self.atosel(7usize)
-            )
+            defmt :: write ! (f , "Atcr2 {{ atosel[0]: {=u8:?}, atosel[1]: {=u8:?}, atosel[2]: {=u8:?}, atosel[3]: {=u8:?}, atosel[4]: {=u8:?}, atosel[5]: {=u8:?}, atosel[6]: {=u8:?}, atosel[7]: {=u8:?} }}" , self . atosel (0usize) , self . atosel (1usize) , self . atosel (2usize) , self . atosel (3usize) , self . atosel (4usize) , self . atosel (5usize) , self . atosel (6usize) , self . atosel (7usize))
         }
     }
     #[doc = "TAMP active tamper output register"]
@@ -316,7 +279,6 @@ pub mod regs {
     pub struct Ator(pub u32);
     impl Ator {
         #[doc = "Pseudo-random generator value"]
-        #[must_use]
         #[inline(always)]
         pub const fn prng(&self) -> u8 {
             let val = (self.0 >> 0usize) & 0xff;
@@ -324,11 +286,10 @@ pub mod regs {
         }
         #[doc = "Pseudo-random generator value"]
         #[inline(always)]
-        pub const fn set_prng(&mut self, val: u8) {
+        pub fn set_prng(&mut self, val: u8) {
             self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
         }
         #[doc = "Seed running flag"]
-        #[must_use]
         #[inline(always)]
         pub const fn seedf(&self) -> bool {
             let val = (self.0 >> 14usize) & 0x01;
@@ -336,11 +297,10 @@ pub mod regs {
         }
         #[doc = "Seed running flag"]
         #[inline(always)]
-        pub const fn set_seedf(&mut self, val: bool) {
+        pub fn set_seedf(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
         }
         #[doc = "Active tamper initialization status"]
-        #[must_use]
         #[inline(always)]
         pub const fn inits(&self) -> bool {
             let val = (self.0 >> 15usize) & 0x01;
@@ -348,7 +308,7 @@ pub mod regs {
         }
         #[doc = "Active tamper initialization status"]
         #[inline(always)]
-        pub const fn set_inits(&mut self, val: bool) {
+        pub fn set_inits(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
         }
     }
@@ -385,7 +345,6 @@ pub mod regs {
     pub struct Atseedr(pub u32);
     impl Atseedr {
         #[doc = "Pseudo-random generator seed value"]
-        #[must_use]
         #[inline(always)]
         pub const fn seed(&self) -> u32 {
             let val = (self.0 >> 0usize) & 0xffff_ffff;
@@ -393,7 +352,7 @@ pub mod regs {
         }
         #[doc = "Pseudo-random generator seed value"]
         #[inline(always)]
-        pub const fn set_seed(&mut self, val: u32) {
+        pub fn set_seed(&mut self, val: u32) {
             self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
         }
     }
@@ -420,7 +379,6 @@ pub mod regs {
     pub struct Bkpr(pub u32);
     impl Bkpr {
         #[doc = "BKP"]
-        #[must_use]
         #[inline(always)]
         pub const fn bkp(&self) -> u32 {
             let val = (self.0 >> 0usize) & 0xffff_ffff;
@@ -428,7 +386,7 @@ pub mod regs {
         }
         #[doc = "BKP"]
         #[inline(always)]
-        pub const fn set_bkp(&mut self, val: u32) {
+        pub fn set_bkp(&mut self, val: u32) {
             self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
         }
     }
@@ -455,7 +413,6 @@ pub mod regs {
     pub struct Cfgr(pub u32);
     impl Cfgr {
         #[doc = "TMONEN"]
-        #[must_use]
         #[inline(always)]
         pub const fn tmonen(&self) -> bool {
             let val = (self.0 >> 1usize) & 0x01;
@@ -463,11 +420,10 @@ pub mod regs {
         }
         #[doc = "TMONEN"]
         #[inline(always)]
-        pub const fn set_tmonen(&mut self, val: bool) {
+        pub fn set_tmonen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
         }
         #[doc = "VMONEN"]
-        #[must_use]
         #[inline(always)]
         pub const fn vmonen(&self) -> bool {
             let val = (self.0 >> 2usize) & 0x01;
@@ -475,11 +431,10 @@ pub mod regs {
         }
         #[doc = "VMONEN"]
         #[inline(always)]
-        pub const fn set_vmonen(&mut self, val: bool) {
+        pub fn set_vmonen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
         }
         #[doc = "WUTMONEN"]
-        #[must_use]
         #[inline(always)]
         pub const fn wutmonen(&self) -> bool {
             let val = (self.0 >> 3usize) & 0x01;
@@ -487,7 +442,7 @@ pub mod regs {
         }
         #[doc = "WUTMONEN"]
         #[inline(always)]
-        pub const fn set_wutmonen(&mut self, val: bool) {
+        pub fn set_wutmonen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
         }
     }
@@ -524,7 +479,6 @@ pub mod regs {
     pub struct Countr(pub u32);
     impl Countr {
         #[doc = "COUNT"]
-        #[must_use]
         #[inline(always)]
         pub const fn count(&self) -> u32 {
             let val = (self.0 >> 0usize) & 0xffff_ffff;
@@ -532,7 +486,7 @@ pub mod regs {
         }
         #[doc = "COUNT"]
         #[inline(always)]
-        pub const fn set_count(&mut self, val: u32) {
+        pub fn set_count(&mut self, val: u32) {
             self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
         }
     }
@@ -559,7 +513,6 @@ pub mod regs {
     pub struct Cr1(pub u32);
     impl Cr1 {
         #[doc = "TAMPE"]
-        #[must_use]
         #[inline(always)]
         pub const fn tampe(&self, n: usize) -> bool {
             assert!(n < 8usize);
@@ -569,13 +522,12 @@ pub mod regs {
         }
         #[doc = "TAMPE"]
         #[inline(always)]
-        pub const fn set_tampe(&mut self, n: usize, val: bool) {
+        pub fn set_tampe(&mut self, n: usize, val: bool) {
             assert!(n < 8usize);
             let offs = 0usize + n * 1usize;
             self.0 = (self.0 & !(0x01 << offs)) | (((val as u32) & 0x01) << offs);
         }
         #[doc = "ITAMPE"]
-        #[must_use]
         #[inline(always)]
         pub const fn itampe(&self, n: usize) -> bool {
             assert!(n < 8usize);
@@ -585,7 +537,7 @@ pub mod regs {
         }
         #[doc = "ITAMPE"]
         #[inline(always)]
-        pub const fn set_itampe(&mut self, n: usize, val: bool) {
+        pub fn set_itampe(&mut self, n: usize, val: bool) {
             assert!(n < 8usize);
             let offs = 16usize + n * 1usize;
             self.0 = (self.0 & !(0x01 << offs)) | (((val as u32) & 0x01) << offs);
@@ -622,26 +574,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Cr1 {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Cr1 {{ tampe[0]: {=bool:?}, tampe[1]: {=bool:?}, tampe[2]: {=bool:?}, tampe[3]: {=bool:?}, tampe[4]: {=bool:?}, tampe[5]: {=bool:?}, tampe[6]: {=bool:?}, tampe[7]: {=bool:?}, itampe[0]: {=bool:?}, itampe[1]: {=bool:?}, itampe[2]: {=bool:?}, itampe[3]: {=bool:?}, itampe[4]: {=bool:?}, itampe[5]: {=bool:?}, itampe[6]: {=bool:?}, itampe[7]: {=bool:?} }}",
-                self.tampe(0usize),
-                self.tampe(1usize),
-                self.tampe(2usize),
-                self.tampe(3usize),
-                self.tampe(4usize),
-                self.tampe(5usize),
-                self.tampe(6usize),
-                self.tampe(7usize),
-                self.itampe(0usize),
-                self.itampe(1usize),
-                self.itampe(2usize),
-                self.itampe(3usize),
-                self.itampe(4usize),
-                self.itampe(5usize),
-                self.itampe(6usize),
-                self.itampe(7usize)
-            )
+            defmt :: write ! (f , "Cr1 {{ tampe[0]: {=bool:?}, tampe[1]: {=bool:?}, tampe[2]: {=bool:?}, tampe[3]: {=bool:?}, tampe[4]: {=bool:?}, tampe[5]: {=bool:?}, tampe[6]: {=bool:?}, tampe[7]: {=bool:?}, itampe[0]: {=bool:?}, itampe[1]: {=bool:?}, itampe[2]: {=bool:?}, itampe[3]: {=bool:?}, itampe[4]: {=bool:?}, itampe[5]: {=bool:?}, itampe[6]: {=bool:?}, itampe[7]: {=bool:?} }}" , self . tampe (0usize) , self . tampe (1usize) , self . tampe (2usize) , self . tampe (3usize) , self . tampe (4usize) , self . tampe (5usize) , self . tampe (6usize) , self . tampe (7usize) , self . itampe (0usize) , self . itampe (1usize) , self . itampe (2usize) , self . itampe (3usize) , self . itampe (4usize) , self . itampe (5usize) , self . itampe (6usize) , self . itampe (7usize))
         }
     }
     #[doc = "control register 2"]
@@ -650,7 +583,6 @@ pub mod regs {
     pub struct Cr2(pub u32);
     impl Cr2 {
         #[doc = "Tamper X no erase"]
-        #[must_use]
         #[inline(always)]
         pub const fn tampnoer(&self, n: usize) -> bool {
             assert!(n < 8usize);
@@ -660,13 +592,12 @@ pub mod regs {
         }
         #[doc = "Tamper X no erase"]
         #[inline(always)]
-        pub const fn set_tampnoer(&mut self, n: usize, val: bool) {
+        pub fn set_tampnoer(&mut self, n: usize, val: bool) {
             assert!(n < 8usize);
             let offs = 0usize + n * 1usize;
             self.0 = (self.0 & !(0x01 << offs)) | (((val as u32) & 0x01) << offs);
         }
         #[doc = "Tamper X mask"]
-        #[must_use]
         #[inline(always)]
         pub const fn tampmsk(&self, n: usize) -> bool {
             assert!(n < 3usize);
@@ -676,13 +607,12 @@ pub mod regs {
         }
         #[doc = "Tamper X mask"]
         #[inline(always)]
-        pub const fn set_tampmsk(&mut self, n: usize, val: bool) {
+        pub fn set_tampmsk(&mut self, n: usize, val: bool) {
             assert!(n < 3usize);
             let offs = 16usize + n * 1usize;
             self.0 = (self.0 & !(0x01 << offs)) | (((val as u32) & 0x01) << offs);
         }
         #[doc = "BKERASE"]
-        #[must_use]
         #[inline(always)]
         pub const fn bkerase(&self) -> bool {
             let val = (self.0 >> 23usize) & 0x01;
@@ -690,11 +620,10 @@ pub mod regs {
         }
         #[doc = "BKERASE"]
         #[inline(always)]
-        pub const fn set_bkerase(&mut self, val: bool) {
+        pub fn set_bkerase(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
         }
         #[doc = "Active level for tamper X input"]
-        #[must_use]
         #[inline(always)]
         pub const fn tamptrg(&self, n: usize) -> bool {
             assert!(n < 8usize);
@@ -704,7 +633,7 @@ pub mod regs {
         }
         #[doc = "Active level for tamper X input"]
         #[inline(always)]
-        pub const fn set_tamptrg(&mut self, n: usize, val: bool) {
+        pub fn set_tamptrg(&mut self, n: usize, val: bool) {
             assert!(n < 8usize);
             let offs = 24usize + n * 1usize;
             self.0 = (self.0 & !(0x01 << offs)) | (((val as u32) & 0x01) << offs);
@@ -745,30 +674,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Cr2 {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Cr2 {{ tampnoer[0]: {=bool:?}, tampnoer[1]: {=bool:?}, tampnoer[2]: {=bool:?}, tampnoer[3]: {=bool:?}, tampnoer[4]: {=bool:?}, tampnoer[5]: {=bool:?}, tampnoer[6]: {=bool:?}, tampnoer[7]: {=bool:?}, tampmsk[0]: {=bool:?}, tampmsk[1]: {=bool:?}, tampmsk[2]: {=bool:?}, bkerase: {=bool:?}, tamptrg[0]: {=bool:?}, tamptrg[1]: {=bool:?}, tamptrg[2]: {=bool:?}, tamptrg[3]: {=bool:?}, tamptrg[4]: {=bool:?}, tamptrg[5]: {=bool:?}, tamptrg[6]: {=bool:?}, tamptrg[7]: {=bool:?} }}",
-                self.tampnoer(0usize),
-                self.tampnoer(1usize),
-                self.tampnoer(2usize),
-                self.tampnoer(3usize),
-                self.tampnoer(4usize),
-                self.tampnoer(5usize),
-                self.tampnoer(6usize),
-                self.tampnoer(7usize),
-                self.tampmsk(0usize),
-                self.tampmsk(1usize),
-                self.tampmsk(2usize),
-                self.bkerase(),
-                self.tamptrg(0usize),
-                self.tamptrg(1usize),
-                self.tamptrg(2usize),
-                self.tamptrg(3usize),
-                self.tamptrg(4usize),
-                self.tamptrg(5usize),
-                self.tamptrg(6usize),
-                self.tamptrg(7usize)
-            )
+            defmt :: write ! (f , "Cr2 {{ tampnoer[0]: {=bool:?}, tampnoer[1]: {=bool:?}, tampnoer[2]: {=bool:?}, tampnoer[3]: {=bool:?}, tampnoer[4]: {=bool:?}, tampnoer[5]: {=bool:?}, tampnoer[6]: {=bool:?}, tampnoer[7]: {=bool:?}, tampmsk[0]: {=bool:?}, tampmsk[1]: {=bool:?}, tampmsk[2]: {=bool:?}, bkerase: {=bool:?}, tamptrg[0]: {=bool:?}, tamptrg[1]: {=bool:?}, tamptrg[2]: {=bool:?}, tamptrg[3]: {=bool:?}, tamptrg[4]: {=bool:?}, tamptrg[5]: {=bool:?}, tamptrg[6]: {=bool:?}, tamptrg[7]: {=bool:?} }}" , self . tampnoer (0usize) , self . tampnoer (1usize) , self . tampnoer (2usize) , self . tampnoer (3usize) , self . tampnoer (4usize) , self . tampnoer (5usize) , self . tampnoer (6usize) , self . tampnoer (7usize) , self . tampmsk (0usize) , self . tampmsk (1usize) , self . tampmsk (2usize) , self . bkerase () , self . tamptrg (0usize) , self . tamptrg (1usize) , self . tamptrg (2usize) , self . tamptrg (3usize) , self . tamptrg (4usize) , self . tamptrg (5usize) , self . tamptrg (6usize) , self . tamptrg (7usize))
         }
     }
     #[doc = "control register 3"]
@@ -777,7 +683,6 @@ pub mod regs {
     pub struct Cr3(pub u32);
     impl Cr3 {
         #[doc = "Internal Tamper X no erase"]
-        #[must_use]
         #[inline(always)]
         pub const fn itampnoer(&self, n: usize) -> bool {
             assert!(n < 8usize);
@@ -787,7 +692,7 @@ pub mod regs {
         }
         #[doc = "Internal Tamper X no erase"]
         #[inline(always)]
-        pub const fn set_itampnoer(&mut self, n: usize, val: bool) {
+        pub fn set_itampnoer(&mut self, n: usize, val: bool) {
             assert!(n < 8usize);
             let offs = 0usize + n * 1usize;
             self.0 = (self.0 & !(0x01 << offs)) | (((val as u32) & 0x01) << offs);
@@ -816,18 +721,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Cr3 {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Cr3 {{ itampnoer[0]: {=bool:?}, itampnoer[1]: {=bool:?}, itampnoer[2]: {=bool:?}, itampnoer[3]: {=bool:?}, itampnoer[4]: {=bool:?}, itampnoer[5]: {=bool:?}, itampnoer[6]: {=bool:?}, itampnoer[7]: {=bool:?} }}",
-                self.itampnoer(0usize),
-                self.itampnoer(1usize),
-                self.itampnoer(2usize),
-                self.itampnoer(3usize),
-                self.itampnoer(4usize),
-                self.itampnoer(5usize),
-                self.itampnoer(6usize),
-                self.itampnoer(7usize)
-            )
+            defmt :: write ! (f , "Cr3 {{ itampnoer[0]: {=bool:?}, itampnoer[1]: {=bool:?}, itampnoer[2]: {=bool:?}, itampnoer[3]: {=bool:?}, itampnoer[4]: {=bool:?}, itampnoer[5]: {=bool:?}, itampnoer[6]: {=bool:?}, itampnoer[7]: {=bool:?} }}" , self . itampnoer (0usize) , self . itampnoer (1usize) , self . itampnoer (2usize) , self . itampnoer (3usize) , self . itampnoer (4usize) , self . itampnoer (5usize) , self . itampnoer (6usize) , self . itampnoer (7usize))
         }
     }
     #[doc = "TAMP filter control register"]
@@ -836,7 +730,6 @@ pub mod regs {
     pub struct Fltcr(pub u32);
     impl Fltcr {
         #[doc = "TAMPFREQ"]
-        #[must_use]
         #[inline(always)]
         pub const fn tampfreq(&self) -> u8 {
             let val = (self.0 >> 0usize) & 0x07;
@@ -844,11 +737,10 @@ pub mod regs {
         }
         #[doc = "TAMPFREQ"]
         #[inline(always)]
-        pub const fn set_tampfreq(&mut self, val: u8) {
+        pub fn set_tampfreq(&mut self, val: u8) {
             self.0 = (self.0 & !(0x07 << 0usize)) | (((val as u32) & 0x07) << 0usize);
         }
         #[doc = "TAMPFLT"]
-        #[must_use]
         #[inline(always)]
         pub const fn tampflt(&self) -> u8 {
             let val = (self.0 >> 3usize) & 0x03;
@@ -856,11 +748,10 @@ pub mod regs {
         }
         #[doc = "TAMPFLT"]
         #[inline(always)]
-        pub const fn set_tampflt(&mut self, val: u8) {
+        pub fn set_tampflt(&mut self, val: u8) {
             self.0 = (self.0 & !(0x03 << 3usize)) | (((val as u32) & 0x03) << 3usize);
         }
         #[doc = "TAMPPRCH"]
-        #[must_use]
         #[inline(always)]
         pub const fn tampprch(&self) -> u8 {
             let val = (self.0 >> 5usize) & 0x03;
@@ -868,11 +759,10 @@ pub mod regs {
         }
         #[doc = "TAMPPRCH"]
         #[inline(always)]
-        pub const fn set_tampprch(&mut self, val: u8) {
+        pub fn set_tampprch(&mut self, val: u8) {
             self.0 = (self.0 & !(0x03 << 5usize)) | (((val as u32) & 0x03) << 5usize);
         }
         #[doc = "TAMPPUDIS"]
-        #[must_use]
         #[inline(always)]
         pub const fn tamppudis(&self) -> bool {
             let val = (self.0 >> 7usize) & 0x01;
@@ -880,7 +770,7 @@ pub mod regs {
         }
         #[doc = "TAMPPUDIS"]
         #[inline(always)]
-        pub const fn set_tamppudis(&mut self, val: bool) {
+        pub fn set_tamppudis(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
         }
     }
@@ -919,7 +809,6 @@ pub mod regs {
     pub struct Ier(pub u32);
     impl Ier {
         #[doc = "Tamper X interrupt enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn tampie(&self, n: usize) -> bool {
             assert!(n < 8usize);
@@ -929,13 +818,12 @@ pub mod regs {
         }
         #[doc = "Tamper X interrupt enable"]
         #[inline(always)]
-        pub const fn set_tampie(&mut self, n: usize, val: bool) {
+        pub fn set_tampie(&mut self, n: usize, val: bool) {
             assert!(n < 8usize);
             let offs = 0usize + n * 1usize;
             self.0 = (self.0 & !(0x01 << offs)) | (((val as u32) & 0x01) << offs);
         }
         #[doc = "Internal tamper X interrupt enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn itampie(&self, n: usize) -> bool {
             assert!(n < 8usize);
@@ -945,7 +833,7 @@ pub mod regs {
         }
         #[doc = "Internal tamper X interrupt enable"]
         #[inline(always)]
-        pub const fn set_itampie(&mut self, n: usize, val: bool) {
+        pub fn set_itampie(&mut self, n: usize, val: bool) {
             assert!(n < 8usize);
             let offs = 16usize + n * 1usize;
             self.0 = (self.0 & !(0x01 << offs)) | (((val as u32) & 0x01) << offs);
@@ -982,26 +870,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Ier {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Ier {{ tampie[0]: {=bool:?}, tampie[1]: {=bool:?}, tampie[2]: {=bool:?}, tampie[3]: {=bool:?}, tampie[4]: {=bool:?}, tampie[5]: {=bool:?}, tampie[6]: {=bool:?}, tampie[7]: {=bool:?}, itampie[0]: {=bool:?}, itampie[1]: {=bool:?}, itampie[2]: {=bool:?}, itampie[3]: {=bool:?}, itampie[4]: {=bool:?}, itampie[5]: {=bool:?}, itampie[6]: {=bool:?}, itampie[7]: {=bool:?} }}",
-                self.tampie(0usize),
-                self.tampie(1usize),
-                self.tampie(2usize),
-                self.tampie(3usize),
-                self.tampie(4usize),
-                self.tampie(5usize),
-                self.tampie(6usize),
-                self.tampie(7usize),
-                self.itampie(0usize),
-                self.itampie(1usize),
-                self.itampie(2usize),
-                self.itampie(3usize),
-                self.itampie(4usize),
-                self.itampie(5usize),
-                self.itampie(6usize),
-                self.itampie(7usize)
-            )
+            defmt :: write ! (f , "Ier {{ tampie[0]: {=bool:?}, tampie[1]: {=bool:?}, tampie[2]: {=bool:?}, tampie[3]: {=bool:?}, tampie[4]: {=bool:?}, tampie[5]: {=bool:?}, tampie[6]: {=bool:?}, tampie[7]: {=bool:?}, itampie[0]: {=bool:?}, itampie[1]: {=bool:?}, itampie[2]: {=bool:?}, itampie[3]: {=bool:?}, itampie[4]: {=bool:?}, itampie[5]: {=bool:?}, itampie[6]: {=bool:?}, itampie[7]: {=bool:?} }}" , self . tampie (0usize) , self . tampie (1usize) , self . tampie (2usize) , self . tampie (3usize) , self . tampie (4usize) , self . tampie (5usize) , self . tampie (6usize) , self . tampie (7usize) , self . itampie (0usize) , self . itampie (1usize) , self . itampie (2usize) , self . itampie (3usize) , self . itampie (4usize) , self . itampie (5usize) , self . itampie (6usize) , self . itampie (7usize))
         }
     }
     #[doc = "TAMP masked interrupt status register"]
@@ -1010,7 +879,6 @@ pub mod regs {
     pub struct Misr(pub u32);
     impl Misr {
         #[doc = "Tamper X interrupt masked flag"]
-        #[must_use]
         #[inline(always)]
         pub const fn tampmf(&self, n: usize) -> bool {
             assert!(n < 8usize);
@@ -1020,13 +888,12 @@ pub mod regs {
         }
         #[doc = "Tamper X interrupt masked flag"]
         #[inline(always)]
-        pub const fn set_tampmf(&mut self, n: usize, val: bool) {
+        pub fn set_tampmf(&mut self, n: usize, val: bool) {
             assert!(n < 8usize);
             let offs = 0usize + n * 1usize;
             self.0 = (self.0 & !(0x01 << offs)) | (((val as u32) & 0x01) << offs);
         }
         #[doc = "Internal tamper X interrupt masked flag"]
-        #[must_use]
         #[inline(always)]
         pub const fn itampmf(&self, n: usize) -> bool {
             assert!(n < 8usize);
@@ -1036,7 +903,7 @@ pub mod regs {
         }
         #[doc = "Internal tamper X interrupt masked flag"]
         #[inline(always)]
-        pub const fn set_itampmf(&mut self, n: usize, val: bool) {
+        pub fn set_itampmf(&mut self, n: usize, val: bool) {
             assert!(n < 8usize);
             let offs = 16usize + n * 1usize;
             self.0 = (self.0 & !(0x01 << offs)) | (((val as u32) & 0x01) << offs);
@@ -1073,26 +940,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Misr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Misr {{ tampmf[0]: {=bool:?}, tampmf[1]: {=bool:?}, tampmf[2]: {=bool:?}, tampmf[3]: {=bool:?}, tampmf[4]: {=bool:?}, tampmf[5]: {=bool:?}, tampmf[6]: {=bool:?}, tampmf[7]: {=bool:?}, itampmf[0]: {=bool:?}, itampmf[1]: {=bool:?}, itampmf[2]: {=bool:?}, itampmf[3]: {=bool:?}, itampmf[4]: {=bool:?}, itampmf[5]: {=bool:?}, itampmf[6]: {=bool:?}, itampmf[7]: {=bool:?} }}",
-                self.tampmf(0usize),
-                self.tampmf(1usize),
-                self.tampmf(2usize),
-                self.tampmf(3usize),
-                self.tampmf(4usize),
-                self.tampmf(5usize),
-                self.tampmf(6usize),
-                self.tampmf(7usize),
-                self.itampmf(0usize),
-                self.itampmf(1usize),
-                self.itampmf(2usize),
-                self.itampmf(3usize),
-                self.itampmf(4usize),
-                self.itampmf(5usize),
-                self.itampmf(6usize),
-                self.itampmf(7usize)
-            )
+            defmt :: write ! (f , "Misr {{ tampmf[0]: {=bool:?}, tampmf[1]: {=bool:?}, tampmf[2]: {=bool:?}, tampmf[3]: {=bool:?}, tampmf[4]: {=bool:?}, tampmf[5]: {=bool:?}, tampmf[6]: {=bool:?}, tampmf[7]: {=bool:?}, itampmf[0]: {=bool:?}, itampmf[1]: {=bool:?}, itampmf[2]: {=bool:?}, itampmf[3]: {=bool:?}, itampmf[4]: {=bool:?}, itampmf[5]: {=bool:?}, itampmf[6]: {=bool:?}, itampmf[7]: {=bool:?} }}" , self . tampmf (0usize) , self . tampmf (1usize) , self . tampmf (2usize) , self . tampmf (3usize) , self . tampmf (4usize) , self . tampmf (5usize) , self . tampmf (6usize) , self . tampmf (7usize) , self . itampmf (0usize) , self . itampmf (1usize) , self . itampmf (2usize) , self . itampmf (3usize) , self . itampmf (4usize) , self . itampmf (5usize) , self . itampmf (6usize) , self . itampmf (7usize))
         }
     }
     #[doc = "TAMP privilege mode control register"]
@@ -1101,7 +949,6 @@ pub mod regs {
     pub struct Privcr(pub u32);
     impl Privcr {
         #[doc = "Backup registers zone 1 privilege protection"]
-        #[must_use]
         #[inline(always)]
         pub const fn bkprwpriv(&self) -> bool {
             let val = (self.0 >> 29usize) & 0x01;
@@ -1109,11 +956,10 @@ pub mod regs {
         }
         #[doc = "Backup registers zone 1 privilege protection"]
         #[inline(always)]
-        pub const fn set_bkprwpriv(&mut self, val: bool) {
+        pub fn set_bkprwpriv(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
         }
         #[doc = "Backup registers zone 2 privilege protection"]
-        #[must_use]
         #[inline(always)]
         pub const fn bkpwpriv(&self) -> bool {
             let val = (self.0 >> 30usize) & 0x01;
@@ -1121,11 +967,10 @@ pub mod regs {
         }
         #[doc = "Backup registers zone 2 privilege protection"]
         #[inline(always)]
-        pub const fn set_bkpwpriv(&mut self, val: bool) {
+        pub fn set_bkpwpriv(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
         }
         #[doc = "Tamper privilege protection"]
-        #[must_use]
         #[inline(always)]
         pub const fn tamppriv(&self) -> bool {
             let val = (self.0 >> 31usize) & 0x01;
@@ -1133,7 +978,7 @@ pub mod regs {
         }
         #[doc = "Tamper privilege protection"]
         #[inline(always)]
-        pub const fn set_tamppriv(&mut self, val: bool) {
+        pub fn set_tamppriv(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
         }
     }
@@ -1170,7 +1015,6 @@ pub mod regs {
     pub struct Scr(pub u32);
     impl Scr {
         #[doc = "Clear tamper X detection flag"]
-        #[must_use]
         #[inline(always)]
         pub const fn ctampf(&self, n: usize) -> bool {
             assert!(n < 8usize);
@@ -1180,13 +1024,12 @@ pub mod regs {
         }
         #[doc = "Clear tamper X detection flag"]
         #[inline(always)]
-        pub const fn set_ctampf(&mut self, n: usize, val: bool) {
+        pub fn set_ctampf(&mut self, n: usize, val: bool) {
             assert!(n < 8usize);
             let offs = 0usize + n * 1usize;
             self.0 = (self.0 & !(0x01 << offs)) | (((val as u32) & 0x01) << offs);
         }
         #[doc = "Clear internal tamper X detection flag"]
-        #[must_use]
         #[inline(always)]
         pub const fn citampf(&self, n: usize) -> bool {
             assert!(n < 8usize);
@@ -1196,7 +1039,7 @@ pub mod regs {
         }
         #[doc = "Clear internal tamper X detection flag"]
         #[inline(always)]
-        pub const fn set_citampf(&mut self, n: usize, val: bool) {
+        pub fn set_citampf(&mut self, n: usize, val: bool) {
             assert!(n < 8usize);
             let offs = 16usize + n * 1usize;
             self.0 = (self.0 & !(0x01 << offs)) | (((val as u32) & 0x01) << offs);
@@ -1233,26 +1076,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Scr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Scr {{ ctampf[0]: {=bool:?}, ctampf[1]: {=bool:?}, ctampf[2]: {=bool:?}, ctampf[3]: {=bool:?}, ctampf[4]: {=bool:?}, ctampf[5]: {=bool:?}, ctampf[6]: {=bool:?}, ctampf[7]: {=bool:?}, citampf[0]: {=bool:?}, citampf[1]: {=bool:?}, citampf[2]: {=bool:?}, citampf[3]: {=bool:?}, citampf[4]: {=bool:?}, citampf[5]: {=bool:?}, citampf[6]: {=bool:?}, citampf[7]: {=bool:?} }}",
-                self.ctampf(0usize),
-                self.ctampf(1usize),
-                self.ctampf(2usize),
-                self.ctampf(3usize),
-                self.ctampf(4usize),
-                self.ctampf(5usize),
-                self.ctampf(6usize),
-                self.ctampf(7usize),
-                self.citampf(0usize),
-                self.citampf(1usize),
-                self.citampf(2usize),
-                self.citampf(3usize),
-                self.citampf(4usize),
-                self.citampf(5usize),
-                self.citampf(6usize),
-                self.citampf(7usize)
-            )
+            defmt :: write ! (f , "Scr {{ ctampf[0]: {=bool:?}, ctampf[1]: {=bool:?}, ctampf[2]: {=bool:?}, ctampf[3]: {=bool:?}, ctampf[4]: {=bool:?}, ctampf[5]: {=bool:?}, ctampf[6]: {=bool:?}, ctampf[7]: {=bool:?}, citampf[0]: {=bool:?}, citampf[1]: {=bool:?}, citampf[2]: {=bool:?}, citampf[3]: {=bool:?}, citampf[4]: {=bool:?}, citampf[5]: {=bool:?}, citampf[6]: {=bool:?}, citampf[7]: {=bool:?} }}" , self . ctampf (0usize) , self . ctampf (1usize) , self . ctampf (2usize) , self . ctampf (3usize) , self . ctampf (4usize) , self . ctampf (5usize) , self . ctampf (6usize) , self . ctampf (7usize) , self . citampf (0usize) , self . citampf (1usize) , self . citampf (2usize) , self . citampf (3usize) , self . citampf (4usize) , self . citampf (5usize) , self . citampf (6usize) , self . citampf (7usize))
         }
     }
     #[doc = "TAMP secure mode register"]
@@ -1261,7 +1085,6 @@ pub mod regs {
     pub struct Smcr(pub u32);
     impl Smcr {
         #[doc = "Backup registers read/write protection offset"]
-        #[must_use]
         #[inline(always)]
         pub const fn bkprwdprot(&self) -> u8 {
             let val = (self.0 >> 0usize) & 0xff;
@@ -1269,11 +1092,10 @@ pub mod regs {
         }
         #[doc = "Backup registers read/write protection offset"]
         #[inline(always)]
-        pub const fn set_bkprwdprot(&mut self, val: u8) {
+        pub fn set_bkprwdprot(&mut self, val: u8) {
             self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
         }
         #[doc = "Backup registers write protection offset"]
-        #[must_use]
         #[inline(always)]
         pub const fn bkpwdprot(&self) -> u8 {
             let val = (self.0 >> 16usize) & 0xff;
@@ -1281,11 +1103,10 @@ pub mod regs {
         }
         #[doc = "Backup registers write protection offset"]
         #[inline(always)]
-        pub const fn set_bkpwdprot(&mut self, val: u8) {
+        pub fn set_bkpwdprot(&mut self, val: u8) {
             self.0 = (self.0 & !(0xff << 16usize)) | (((val as u32) & 0xff) << 16usize);
         }
         #[doc = "Tamper protection"]
-        #[must_use]
         #[inline(always)]
         pub const fn tampdprot(&self) -> bool {
             let val = (self.0 >> 31usize) & 0x01;
@@ -1293,7 +1114,7 @@ pub mod regs {
         }
         #[doc = "Tamper protection"]
         #[inline(always)]
-        pub const fn set_tampdprot(&mut self, val: bool) {
+        pub fn set_tampdprot(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
         }
     }
@@ -1330,7 +1151,6 @@ pub mod regs {
     pub struct Smisr(pub u32);
     impl Smisr {
         #[doc = "Tamper X interrupt masked flag"]
-        #[must_use]
         #[inline(always)]
         pub const fn tampmf(&self, n: usize) -> bool {
             assert!(n < 8usize);
@@ -1340,13 +1160,12 @@ pub mod regs {
         }
         #[doc = "Tamper X interrupt masked flag"]
         #[inline(always)]
-        pub const fn set_tampmf(&mut self, n: usize, val: bool) {
+        pub fn set_tampmf(&mut self, n: usize, val: bool) {
             assert!(n < 8usize);
             let offs = 0usize + n * 1usize;
             self.0 = (self.0 & !(0x01 << offs)) | (((val as u32) & 0x01) << offs);
         }
         #[doc = "Internal tamper X interrupt masked flag"]
-        #[must_use]
         #[inline(always)]
         pub const fn itampmf(&self, n: usize) -> bool {
             assert!(n < 8usize);
@@ -1356,7 +1175,7 @@ pub mod regs {
         }
         #[doc = "Internal tamper X interrupt masked flag"]
         #[inline(always)]
-        pub const fn set_itampmf(&mut self, n: usize, val: bool) {
+        pub fn set_itampmf(&mut self, n: usize, val: bool) {
             assert!(n < 8usize);
             let offs = 16usize + n * 1usize;
             self.0 = (self.0 & !(0x01 << offs)) | (((val as u32) & 0x01) << offs);
@@ -1393,26 +1212,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Smisr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Smisr {{ tampmf[0]: {=bool:?}, tampmf[1]: {=bool:?}, tampmf[2]: {=bool:?}, tampmf[3]: {=bool:?}, tampmf[4]: {=bool:?}, tampmf[5]: {=bool:?}, tampmf[6]: {=bool:?}, tampmf[7]: {=bool:?}, itampmf[0]: {=bool:?}, itampmf[1]: {=bool:?}, itampmf[2]: {=bool:?}, itampmf[3]: {=bool:?}, itampmf[4]: {=bool:?}, itampmf[5]: {=bool:?}, itampmf[6]: {=bool:?}, itampmf[7]: {=bool:?} }}",
-                self.tampmf(0usize),
-                self.tampmf(1usize),
-                self.tampmf(2usize),
-                self.tampmf(3usize),
-                self.tampmf(4usize),
-                self.tampmf(5usize),
-                self.tampmf(6usize),
-                self.tampmf(7usize),
-                self.itampmf(0usize),
-                self.itampmf(1usize),
-                self.itampmf(2usize),
-                self.itampmf(3usize),
-                self.itampmf(4usize),
-                self.itampmf(5usize),
-                self.itampmf(6usize),
-                self.itampmf(7usize)
-            )
+            defmt :: write ! (f , "Smisr {{ tampmf[0]: {=bool:?}, tampmf[1]: {=bool:?}, tampmf[2]: {=bool:?}, tampmf[3]: {=bool:?}, tampmf[4]: {=bool:?}, tampmf[5]: {=bool:?}, tampmf[6]: {=bool:?}, tampmf[7]: {=bool:?}, itampmf[0]: {=bool:?}, itampmf[1]: {=bool:?}, itampmf[2]: {=bool:?}, itampmf[3]: {=bool:?}, itampmf[4]: {=bool:?}, itampmf[5]: {=bool:?}, itampmf[6]: {=bool:?}, itampmf[7]: {=bool:?} }}" , self . tampmf (0usize) , self . tampmf (1usize) , self . tampmf (2usize) , self . tampmf (3usize) , self . tampmf (4usize) , self . tampmf (5usize) , self . tampmf (6usize) , self . tampmf (7usize) , self . itampmf (0usize) , self . itampmf (1usize) , self . itampmf (2usize) , self . itampmf (3usize) , self . itampmf (4usize) , self . itampmf (5usize) , self . itampmf (6usize) , self . itampmf (7usize))
         }
     }
     #[doc = "TAMP status register"]
@@ -1421,7 +1221,6 @@ pub mod regs {
     pub struct Sr(pub u32);
     impl Sr {
         #[doc = "Tamper X detection flag"]
-        #[must_use]
         #[inline(always)]
         pub const fn tampf(&self, n: usize) -> bool {
             assert!(n < 8usize);
@@ -1431,13 +1230,12 @@ pub mod regs {
         }
         #[doc = "Tamper X detection flag"]
         #[inline(always)]
-        pub const fn set_tampf(&mut self, n: usize, val: bool) {
+        pub fn set_tampf(&mut self, n: usize, val: bool) {
             assert!(n < 8usize);
             let offs = 0usize + n * 1usize;
             self.0 = (self.0 & !(0x01 << offs)) | (((val as u32) & 0x01) << offs);
         }
         #[doc = "Internal tamper X detection flag"]
-        #[must_use]
         #[inline(always)]
         pub const fn itampf(&self, n: usize) -> bool {
             assert!(n < 8usize);
@@ -1447,7 +1245,7 @@ pub mod regs {
         }
         #[doc = "Internal tamper X detection flag"]
         #[inline(always)]
-        pub const fn set_itampf(&mut self, n: usize, val: bool) {
+        pub fn set_itampf(&mut self, n: usize, val: bool) {
             assert!(n < 8usize);
             let offs = 16usize + n * 1usize;
             self.0 = (self.0 & !(0x01 << offs)) | (((val as u32) & 0x01) << offs);
@@ -1484,26 +1282,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Sr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Sr {{ tampf[0]: {=bool:?}, tampf[1]: {=bool:?}, tampf[2]: {=bool:?}, tampf[3]: {=bool:?}, tampf[4]: {=bool:?}, tampf[5]: {=bool:?}, tampf[6]: {=bool:?}, tampf[7]: {=bool:?}, itampf[0]: {=bool:?}, itampf[1]: {=bool:?}, itampf[2]: {=bool:?}, itampf[3]: {=bool:?}, itampf[4]: {=bool:?}, itampf[5]: {=bool:?}, itampf[6]: {=bool:?}, itampf[7]: {=bool:?} }}",
-                self.tampf(0usize),
-                self.tampf(1usize),
-                self.tampf(2usize),
-                self.tampf(3usize),
-                self.tampf(4usize),
-                self.tampf(5usize),
-                self.tampf(6usize),
-                self.tampf(7usize),
-                self.itampf(0usize),
-                self.itampf(1usize),
-                self.itampf(2usize),
-                self.itampf(3usize),
-                self.itampf(4usize),
-                self.itampf(5usize),
-                self.itampf(6usize),
-                self.itampf(7usize)
-            )
+            defmt :: write ! (f , "Sr {{ tampf[0]: {=bool:?}, tampf[1]: {=bool:?}, tampf[2]: {=bool:?}, tampf[3]: {=bool:?}, tampf[4]: {=bool:?}, tampf[5]: {=bool:?}, tampf[6]: {=bool:?}, tampf[7]: {=bool:?}, itampf[0]: {=bool:?}, itampf[1]: {=bool:?}, itampf[2]: {=bool:?}, itampf[3]: {=bool:?}, itampf[4]: {=bool:?}, itampf[5]: {=bool:?}, itampf[6]: {=bool:?}, itampf[7]: {=bool:?} }}" , self . tampf (0usize) , self . tampf (1usize) , self . tampf (2usize) , self . tampf (3usize) , self . tampf (4usize) , self . tampf (5usize) , self . tampf (6usize) , self . tampf (7usize) , self . itampf (0usize) , self . itampf (1usize) , self . itampf (2usize) , self . itampf (3usize) , self . itampf (4usize) , self . itampf (5usize) , self . itampf (6usize) , self . itampf (7usize))
         }
     }
 }

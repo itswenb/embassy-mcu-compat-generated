@@ -1,9 +1,9 @@
-include!("../compat_metadata_0000.rs");
+include!("../compat_metadata_0042.rs");
 use crate::metadata::PeripheralRccKernelClock::{Clock, Mux};
 pub static METADATA: Metadata = Metadata {
     name: "GD32F103C8",
-    family: "STM32F1",
-    line: "STM32F103",
+    family: "GD32",
+    line: "GD32F10x",
     memory: &[&[
         MemoryRegion {
             name: "BANK_1",

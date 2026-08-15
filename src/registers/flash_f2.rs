@@ -355,42 +355,42 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 3,
             variants: &[
                 EnumVariant {
-                    name: "Ws0",
+                    name: "WS0",
                     description: Some("0 wait states"),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "Ws1",
+                    name: "WS1",
                     description: Some("1 wait states"),
                     value: 1,
                 },
                 EnumVariant {
-                    name: "Ws2",
+                    name: "WS2",
                     description: Some("2 wait states"),
                     value: 2,
                 },
                 EnumVariant {
-                    name: "Ws3",
+                    name: "WS3",
                     description: Some("3 wait states"),
                     value: 3,
                 },
                 EnumVariant {
-                    name: "Ws4",
+                    name: "WS4",
                     description: Some("4 wait states"),
                     value: 4,
                 },
                 EnumVariant {
-                    name: "Ws5",
+                    name: "WS5",
                     description: Some("5 wait states"),
                     value: 5,
                 },
                 EnumVariant {
-                    name: "Ws6",
+                    name: "WS6",
                     description: Some("6 wait states"),
                     value: 6,
                 },
                 EnumVariant {
-                    name: "Ws7",
+                    name: "WS7",
                     description: Some("7 wait states"),
                     value: 7,
                 },
@@ -402,24 +402,24 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 2,
             variants: &[
                 EnumVariant {
-                    name: "Psize16",
+                    name: "PSIZE8",
+                    description: Some("Program x8"),
+                    value: 0,
+                },
+                EnumVariant {
+                    name: "PSIZE16",
                     description: Some("Program x16"),
                     value: 1,
                 },
                 EnumVariant {
-                    name: "Psize32",
+                    name: "PSIZE32",
                     description: Some("Program x32"),
                     value: 2,
                 },
                 EnumVariant {
-                    name: "Psize64",
+                    name: "PSIZE64",
                     description: Some("Program x64"),
                     value: 3,
-                },
-                EnumVariant {
-                    name: "Psize8",
-                    description: Some("Program x8"),
-                    value: 0,
                 },
             ],
         },

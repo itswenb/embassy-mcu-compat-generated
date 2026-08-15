@@ -22,108 +22,108 @@ impl Rtc {
     #[doc = "Time register"]
     #[inline(always)]
     pub const fn tr(self) -> crate::common::Reg<regs::Tr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0usize) as _) }
     }
     #[doc = "Date register"]
     #[inline(always)]
     pub const fn dr(self) -> crate::common::Reg<regs::Dr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x04usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x04usize) as _) }
     }
     #[doc = "Sub second register"]
     #[inline(always)]
     pub const fn ssr(self) -> crate::common::Reg<regs::Ssr, crate::common::R> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x08usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x08usize) as _) }
     }
     #[doc = "Initialization control and status register"]
     #[inline(always)]
     pub const fn icsr(self) -> crate::common::Reg<regs::Icsr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0cusize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0cusize) as _) }
     }
     #[doc = "Prescaler register"]
     #[inline(always)]
     pub const fn prer(self) -> crate::common::Reg<regs::Prer, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x10usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x10usize) as _) }
     }
     #[doc = "Wakeup timer register"]
     #[inline(always)]
     pub const fn wutr(self) -> crate::common::Reg<regs::Wutr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x14usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x14usize) as _) }
     }
     #[doc = "Control register"]
     #[inline(always)]
     pub const fn cr(self) -> crate::common::Reg<regs::Cr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x18usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x18usize) as _) }
     }
     #[doc = "Privilege mode control register"]
     #[inline(always)]
     pub const fn privcr(self) -> crate::common::Reg<regs::Privcr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x1cusize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x1cusize) as _) }
     }
     #[inline(always)]
     pub const fn smcr(self) -> crate::common::Reg<regs::Smcr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x20usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x20usize) as _) }
     }
     #[doc = "Write protection register"]
     #[inline(always)]
     pub const fn wpr(self) -> crate::common::Reg<regs::Wpr, crate::common::W> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x24usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x24usize) as _) }
     }
     #[doc = "Calibration register"]
     #[inline(always)]
     pub const fn calr(self) -> crate::common::Reg<regs::Calr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x28usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x28usize) as _) }
     }
     #[doc = "Shift control register"]
     #[inline(always)]
     pub const fn shiftr(self) -> crate::common::Reg<regs::Shiftr, crate::common::W> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x2cusize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x2cusize) as _) }
     }
     #[doc = "Timestamp time register"]
     #[inline(always)]
     pub const fn tstr(self) -> crate::common::Reg<regs::Tstr, crate::common::R> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x30usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x30usize) as _) }
     }
     #[doc = "Timestamp date register"]
     #[inline(always)]
     pub const fn tsdr(self) -> crate::common::Reg<regs::Tsdr, crate::common::R> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x34usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x34usize) as _) }
     }
     #[doc = "Timestamp sub second register"]
     #[inline(always)]
     pub const fn tsssr(self) -> crate::common::Reg<regs::Tsssr, crate::common::R> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x38usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x38usize) as _) }
     }
     #[doc = "Alarm register"]
     #[inline(always)]
     pub const fn alrmr(self, n: usize) -> crate::common::Reg<regs::Alrmr, crate::common::RW> {
         assert!(n < 2usize);
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x40usize + n * 8usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x40usize + n * 8usize) as _) }
     }
     #[doc = "Alarm sub second register"]
     #[inline(always)]
     pub const fn alrmssr(self, n: usize) -> crate::common::Reg<regs::Alrmssr, crate::common::RW> {
         assert!(n < 2usize);
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x44usize + n * 8usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x44usize + n * 8usize) as _) }
     }
     #[doc = "Status register"]
     #[inline(always)]
     pub const fn sr(self) -> crate::common::Reg<regs::Sr, crate::common::R> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x50usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x50usize) as _) }
     }
     #[doc = "Masked interrupt status register"]
     #[inline(always)]
     pub const fn misr(self) -> crate::common::Reg<regs::Misr, crate::common::R> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x54usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x54usize) as _) }
     }
     #[doc = "Secure masked interrupt status register"]
     #[inline(always)]
     pub const fn smisr(self) -> crate::common::Reg<regs::Smisr, crate::common::R> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x58usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x58usize) as _) }
     }
     #[doc = "Status clear register"]
     #[inline(always)]
     pub const fn scr(self) -> crate::common::Reg<regs::Scr, crate::common::W> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x5cusize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x5cusize) as _) }
     }
 }
 pub mod regs {
@@ -133,7 +133,6 @@ pub mod regs {
     pub struct Alrmr(pub u32);
     impl Alrmr {
         #[doc = "Second units in BCD format"]
-        #[must_use]
         #[inline(always)]
         pub const fn su(&self) -> u8 {
             let val = (self.0 >> 0usize) & 0x0f;
@@ -141,11 +140,10 @@ pub mod regs {
         }
         #[doc = "Second units in BCD format"]
         #[inline(always)]
-        pub const fn set_su(&mut self, val: u8) {
+        pub fn set_su(&mut self, val: u8) {
             self.0 = (self.0 & !(0x0f << 0usize)) | (((val as u32) & 0x0f) << 0usize);
         }
         #[doc = "Second tens in BCD format"]
-        #[must_use]
         #[inline(always)]
         pub const fn st(&self) -> u8 {
             let val = (self.0 >> 4usize) & 0x07;
@@ -153,11 +151,10 @@ pub mod regs {
         }
         #[doc = "Second tens in BCD format"]
         #[inline(always)]
-        pub const fn set_st(&mut self, val: u8) {
+        pub fn set_st(&mut self, val: u8) {
             self.0 = (self.0 & !(0x07 << 4usize)) | (((val as u32) & 0x07) << 4usize);
         }
         #[doc = "Alarm A seconds mask"]
-        #[must_use]
         #[inline(always)]
         pub const fn msk1(&self) -> super::vals::AlrmrMsk {
             let val = (self.0 >> 7usize) & 0x01;
@@ -165,11 +162,10 @@ pub mod regs {
         }
         #[doc = "Alarm A seconds mask"]
         #[inline(always)]
-        pub const fn set_msk1(&mut self, val: super::vals::AlrmrMsk) {
+        pub fn set_msk1(&mut self, val: super::vals::AlrmrMsk) {
             self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u32) & 0x01) << 7usize);
         }
         #[doc = "Minute units in BCD format"]
-        #[must_use]
         #[inline(always)]
         pub const fn mnu(&self) -> u8 {
             let val = (self.0 >> 8usize) & 0x0f;
@@ -177,11 +173,10 @@ pub mod regs {
         }
         #[doc = "Minute units in BCD format"]
         #[inline(always)]
-        pub const fn set_mnu(&mut self, val: u8) {
+        pub fn set_mnu(&mut self, val: u8) {
             self.0 = (self.0 & !(0x0f << 8usize)) | (((val as u32) & 0x0f) << 8usize);
         }
         #[doc = "Minute tens in BCD format"]
-        #[must_use]
         #[inline(always)]
         pub const fn mnt(&self) -> u8 {
             let val = (self.0 >> 12usize) & 0x07;
@@ -189,11 +184,10 @@ pub mod regs {
         }
         #[doc = "Minute tens in BCD format"]
         #[inline(always)]
-        pub const fn set_mnt(&mut self, val: u8) {
+        pub fn set_mnt(&mut self, val: u8) {
             self.0 = (self.0 & !(0x07 << 12usize)) | (((val as u32) & 0x07) << 12usize);
         }
         #[doc = "Alarm A minutes mask"]
-        #[must_use]
         #[inline(always)]
         pub const fn msk2(&self) -> super::vals::AlrmrMsk {
             let val = (self.0 >> 15usize) & 0x01;
@@ -201,11 +195,10 @@ pub mod regs {
         }
         #[doc = "Alarm A minutes mask"]
         #[inline(always)]
-        pub const fn set_msk2(&mut self, val: super::vals::AlrmrMsk) {
+        pub fn set_msk2(&mut self, val: super::vals::AlrmrMsk) {
             self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
         }
         #[doc = "Hour units in BCD format"]
-        #[must_use]
         #[inline(always)]
         pub const fn hu(&self) -> u8 {
             let val = (self.0 >> 16usize) & 0x0f;
@@ -213,11 +206,10 @@ pub mod regs {
         }
         #[doc = "Hour units in BCD format"]
         #[inline(always)]
-        pub const fn set_hu(&mut self, val: u8) {
+        pub fn set_hu(&mut self, val: u8) {
             self.0 = (self.0 & !(0x0f << 16usize)) | (((val as u32) & 0x0f) << 16usize);
         }
         #[doc = "Hour tens in BCD format"]
-        #[must_use]
         #[inline(always)]
         pub const fn ht(&self) -> u8 {
             let val = (self.0 >> 20usize) & 0x03;
@@ -225,11 +217,10 @@ pub mod regs {
         }
         #[doc = "Hour tens in BCD format"]
         #[inline(always)]
-        pub const fn set_ht(&mut self, val: u8) {
+        pub fn set_ht(&mut self, val: u8) {
             self.0 = (self.0 & !(0x03 << 20usize)) | (((val as u32) & 0x03) << 20usize);
         }
         #[doc = "AM/PM notation"]
-        #[must_use]
         #[inline(always)]
         pub const fn pm(&self) -> super::vals::AlrmrPm {
             let val = (self.0 >> 22usize) & 0x01;
@@ -237,11 +228,10 @@ pub mod regs {
         }
         #[doc = "AM/PM notation"]
         #[inline(always)]
-        pub const fn set_pm(&mut self, val: super::vals::AlrmrPm) {
+        pub fn set_pm(&mut self, val: super::vals::AlrmrPm) {
             self.0 = (self.0 & !(0x01 << 22usize)) | (((val.to_bits() as u32) & 0x01) << 22usize);
         }
         #[doc = "Alarm A hours mask"]
-        #[must_use]
         #[inline(always)]
         pub const fn msk3(&self) -> super::vals::AlrmrMsk {
             let val = (self.0 >> 23usize) & 0x01;
@@ -249,11 +239,10 @@ pub mod regs {
         }
         #[doc = "Alarm A hours mask"]
         #[inline(always)]
-        pub const fn set_msk3(&mut self, val: super::vals::AlrmrMsk) {
+        pub fn set_msk3(&mut self, val: super::vals::AlrmrMsk) {
             self.0 = (self.0 & !(0x01 << 23usize)) | (((val.to_bits() as u32) & 0x01) << 23usize);
         }
         #[doc = "Date units or day in BCD format"]
-        #[must_use]
         #[inline(always)]
         pub const fn du(&self) -> u8 {
             let val = (self.0 >> 24usize) & 0x0f;
@@ -261,11 +250,10 @@ pub mod regs {
         }
         #[doc = "Date units or day in BCD format"]
         #[inline(always)]
-        pub const fn set_du(&mut self, val: u8) {
+        pub fn set_du(&mut self, val: u8) {
             self.0 = (self.0 & !(0x0f << 24usize)) | (((val as u32) & 0x0f) << 24usize);
         }
         #[doc = "Date tens in BCD format"]
-        #[must_use]
         #[inline(always)]
         pub const fn dt(&self) -> u8 {
             let val = (self.0 >> 28usize) & 0x03;
@@ -273,11 +261,10 @@ pub mod regs {
         }
         #[doc = "Date tens in BCD format"]
         #[inline(always)]
-        pub const fn set_dt(&mut self, val: u8) {
+        pub fn set_dt(&mut self, val: u8) {
             self.0 = (self.0 & !(0x03 << 28usize)) | (((val as u32) & 0x03) << 28usize);
         }
         #[doc = "Week day selection"]
-        #[must_use]
         #[inline(always)]
         pub const fn wdsel(&self) -> super::vals::AlrmrWdsel {
             let val = (self.0 >> 30usize) & 0x01;
@@ -285,11 +272,10 @@ pub mod regs {
         }
         #[doc = "Week day selection"]
         #[inline(always)]
-        pub const fn set_wdsel(&mut self, val: super::vals::AlrmrWdsel) {
+        pub fn set_wdsel(&mut self, val: super::vals::AlrmrWdsel) {
             self.0 = (self.0 & !(0x01 << 30usize)) | (((val.to_bits() as u32) & 0x01) << 30usize);
         }
         #[doc = "Alarm A date mask"]
-        #[must_use]
         #[inline(always)]
         pub const fn msk4(&self) -> super::vals::AlrmrMsk {
             let val = (self.0 >> 31usize) & 0x01;
@@ -297,7 +283,7 @@ pub mod regs {
         }
         #[doc = "Alarm A date mask"]
         #[inline(always)]
-        pub const fn set_msk4(&mut self, val: super::vals::AlrmrMsk) {
+        pub fn set_msk4(&mut self, val: super::vals::AlrmrMsk) {
             self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
         }
     }
@@ -330,24 +316,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Alrmr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Alrmr {{ su: {=u8:?}, st: {=u8:?}, msk1: {:?}, mnu: {=u8:?}, mnt: {=u8:?}, msk2: {:?}, hu: {=u8:?}, ht: {=u8:?}, pm: {:?}, msk3: {:?}, du: {=u8:?}, dt: {=u8:?}, wdsel: {:?}, msk4: {:?} }}",
-                self.su(),
-                self.st(),
-                self.msk1(),
-                self.mnu(),
-                self.mnt(),
-                self.msk2(),
-                self.hu(),
-                self.ht(),
-                self.pm(),
-                self.msk3(),
-                self.du(),
-                self.dt(),
-                self.wdsel(),
-                self.msk4()
-            )
+            defmt :: write ! (f , "Alrmr {{ su: {=u8:?}, st: {=u8:?}, msk1: {:?}, mnu: {=u8:?}, mnt: {=u8:?}, msk2: {:?}, hu: {=u8:?}, ht: {=u8:?}, pm: {:?}, msk3: {:?}, du: {=u8:?}, dt: {=u8:?}, wdsel: {:?}, msk4: {:?} }}" , self . su () , self . st () , self . msk1 () , self . mnu () , self . mnt () , self . msk2 () , self . hu () , self . ht () , self . pm () , self . msk3 () , self . du () , self . dt () , self . wdsel () , self . msk4 ())
         }
     }
     #[doc = "Alarm sub second register"]
@@ -356,7 +325,6 @@ pub mod regs {
     pub struct Alrmssr(pub u32);
     impl Alrmssr {
         #[doc = "Sub seconds value"]
-        #[must_use]
         #[inline(always)]
         pub const fn ss(&self) -> u16 {
             let val = (self.0 >> 0usize) & 0x7fff;
@@ -364,11 +332,10 @@ pub mod regs {
         }
         #[doc = "Sub seconds value"]
         #[inline(always)]
-        pub const fn set_ss(&mut self, val: u16) {
+        pub fn set_ss(&mut self, val: u16) {
             self.0 = (self.0 & !(0x7fff << 0usize)) | (((val as u32) & 0x7fff) << 0usize);
         }
         #[doc = "Mask the most-significant bits starting at this bit"]
-        #[must_use]
         #[inline(always)]
         pub const fn maskss(&self) -> u8 {
             let val = (self.0 >> 24usize) & 0x0f;
@@ -376,7 +343,7 @@ pub mod regs {
         }
         #[doc = "Mask the most-significant bits starting at this bit"]
         #[inline(always)]
-        pub const fn set_maskss(&mut self, val: u8) {
+        pub fn set_maskss(&mut self, val: u8) {
             self.0 = (self.0 & !(0x0f << 24usize)) | (((val as u32) & 0x0f) << 24usize);
         }
     }
@@ -411,7 +378,6 @@ pub mod regs {
     pub struct Calr(pub u32);
     impl Calr {
         #[doc = "Calibration minus"]
-        #[must_use]
         #[inline(always)]
         pub const fn calm(&self) -> u16 {
             let val = (self.0 >> 0usize) & 0x01ff;
@@ -419,11 +385,10 @@ pub mod regs {
         }
         #[doc = "Calibration minus"]
         #[inline(always)]
-        pub const fn set_calm(&mut self, val: u16) {
+        pub fn set_calm(&mut self, val: u16) {
             self.0 = (self.0 & !(0x01ff << 0usize)) | (((val as u32) & 0x01ff) << 0usize);
         }
         #[doc = "Calibration low-power mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn lpcal(&self) -> super::vals::Lpcal {
             let val = (self.0 >> 12usize) & 0x01;
@@ -431,11 +396,10 @@ pub mod regs {
         }
         #[doc = "Calibration low-power mode"]
         #[inline(always)]
-        pub const fn set_lpcal(&mut self, val: super::vals::Lpcal) {
+        pub fn set_lpcal(&mut self, val: super::vals::Lpcal) {
             self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
         }
         #[doc = "Use a 16-second calibration cycle period"]
-        #[must_use]
         #[inline(always)]
         pub const fn calw16(&self) -> super::vals::Calw16 {
             let val = (self.0 >> 13usize) & 0x01;
@@ -443,11 +407,10 @@ pub mod regs {
         }
         #[doc = "Use a 16-second calibration cycle period"]
         #[inline(always)]
-        pub const fn set_calw16(&mut self, val: super::vals::Calw16) {
+        pub fn set_calw16(&mut self, val: super::vals::Calw16) {
             self.0 = (self.0 & !(0x01 << 13usize)) | (((val.to_bits() as u32) & 0x01) << 13usize);
         }
         #[doc = "Use an 8-second calibration cycle period"]
-        #[must_use]
         #[inline(always)]
         pub const fn calw8(&self) -> super::vals::Calw8 {
             let val = (self.0 >> 14usize) & 0x01;
@@ -455,11 +418,10 @@ pub mod regs {
         }
         #[doc = "Use an 8-second calibration cycle period"]
         #[inline(always)]
-        pub const fn set_calw8(&mut self, val: super::vals::Calw8) {
+        pub fn set_calw8(&mut self, val: super::vals::Calw8) {
             self.0 = (self.0 & !(0x01 << 14usize)) | (((val.to_bits() as u32) & 0x01) << 14usize);
         }
         #[doc = "Increase frequency of RTC by 488.5 ppm"]
-        #[must_use]
         #[inline(always)]
         pub const fn calp(&self) -> super::vals::Calp {
             let val = (self.0 >> 15usize) & 0x01;
@@ -467,7 +429,7 @@ pub mod regs {
         }
         #[doc = "Increase frequency of RTC by 488.5 ppm"]
         #[inline(always)]
-        pub const fn set_calp(&mut self, val: super::vals::Calp) {
+        pub fn set_calp(&mut self, val: super::vals::Calp) {
             self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
         }
     }
@@ -508,7 +470,6 @@ pub mod regs {
     pub struct Cr(pub u32);
     impl Cr {
         #[doc = "Wakeup clock selection"]
-        #[must_use]
         #[inline(always)]
         pub const fn wucksel(&self) -> super::vals::Wucksel {
             let val = (self.0 >> 0usize) & 0x07;
@@ -516,11 +477,10 @@ pub mod regs {
         }
         #[doc = "Wakeup clock selection"]
         #[inline(always)]
-        pub const fn set_wucksel(&mut self, val: super::vals::Wucksel) {
+        pub fn set_wucksel(&mut self, val: super::vals::Wucksel) {
             self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
         }
         #[doc = "Timestamp event active edge"]
-        #[must_use]
         #[inline(always)]
         pub const fn tsedge(&self) -> super::vals::Tsedge {
             let val = (self.0 >> 3usize) & 0x01;
@@ -528,11 +488,10 @@ pub mod regs {
         }
         #[doc = "Timestamp event active edge"]
         #[inline(always)]
-        pub const fn set_tsedge(&mut self, val: super::vals::Tsedge) {
+        pub fn set_tsedge(&mut self, val: super::vals::Tsedge) {
             self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
         }
         #[doc = "RTC_REFIN reference clock detection enable (50 or 60 Hz)"]
-        #[must_use]
         #[inline(always)]
         pub const fn refckon(&self) -> bool {
             let val = (self.0 >> 4usize) & 0x01;
@@ -540,11 +499,10 @@ pub mod regs {
         }
         #[doc = "RTC_REFIN reference clock detection enable (50 or 60 Hz)"]
         #[inline(always)]
-        pub const fn set_refckon(&mut self, val: bool) {
+        pub fn set_refckon(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
         }
         #[doc = "Bypass the shadow registers"]
-        #[must_use]
         #[inline(always)]
         pub const fn bypshad(&self) -> bool {
             let val = (self.0 >> 5usize) & 0x01;
@@ -552,11 +510,10 @@ pub mod regs {
         }
         #[doc = "Bypass the shadow registers"]
         #[inline(always)]
-        pub const fn set_bypshad(&mut self, val: bool) {
+        pub fn set_bypshad(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
         }
         #[doc = "Hour format"]
-        #[must_use]
         #[inline(always)]
         pub const fn fmt(&self) -> super::vals::Fmt {
             let val = (self.0 >> 6usize) & 0x01;
@@ -564,11 +521,10 @@ pub mod regs {
         }
         #[doc = "Hour format"]
         #[inline(always)]
-        pub const fn set_fmt(&mut self, val: super::vals::Fmt) {
+        pub fn set_fmt(&mut self, val: super::vals::Fmt) {
             self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
         }
         #[doc = "Alarm enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn alre(&self, n: usize) -> bool {
             assert!(n < 2usize);
@@ -578,13 +534,12 @@ pub mod regs {
         }
         #[doc = "Alarm enable"]
         #[inline(always)]
-        pub const fn set_alre(&mut self, n: usize, val: bool) {
+        pub fn set_alre(&mut self, n: usize, val: bool) {
             assert!(n < 2usize);
             let offs = 8usize + n * 1usize;
             self.0 = (self.0 & !(0x01 << offs)) | (((val as u32) & 0x01) << offs);
         }
         #[doc = "Wakeup timer enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn wute(&self) -> bool {
             let val = (self.0 >> 10usize) & 0x01;
@@ -592,11 +547,10 @@ pub mod regs {
         }
         #[doc = "Wakeup timer enable"]
         #[inline(always)]
-        pub const fn set_wute(&mut self, val: bool) {
+        pub fn set_wute(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
         }
         #[doc = "Timestamp enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn tse(&self) -> bool {
             let val = (self.0 >> 11usize) & 0x01;
@@ -604,11 +558,10 @@ pub mod regs {
         }
         #[doc = "Timestamp enable"]
         #[inline(always)]
-        pub const fn set_tse(&mut self, val: bool) {
+        pub fn set_tse(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
         }
         #[doc = "Alarm interrupt enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn alrie(&self, n: usize) -> bool {
             assert!(n < 2usize);
@@ -618,13 +571,12 @@ pub mod regs {
         }
         #[doc = "Alarm interrupt enable"]
         #[inline(always)]
-        pub const fn set_alrie(&mut self, n: usize, val: bool) {
+        pub fn set_alrie(&mut self, n: usize, val: bool) {
             assert!(n < 2usize);
             let offs = 12usize + n * 1usize;
             self.0 = (self.0 & !(0x01 << offs)) | (((val as u32) & 0x01) << offs);
         }
         #[doc = "Wakeup timer interrupt enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn wutie(&self) -> bool {
             let val = (self.0 >> 14usize) & 0x01;
@@ -632,11 +584,10 @@ pub mod regs {
         }
         #[doc = "Wakeup timer interrupt enable"]
         #[inline(always)]
-        pub const fn set_wutie(&mut self, val: bool) {
+        pub fn set_wutie(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
         }
         #[doc = "Timestamp interrupt enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn tsie(&self) -> bool {
             let val = (self.0 >> 15usize) & 0x01;
@@ -644,11 +595,10 @@ pub mod regs {
         }
         #[doc = "Timestamp interrupt enable"]
         #[inline(always)]
-        pub const fn set_tsie(&mut self, val: bool) {
+        pub fn set_tsie(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
         }
         #[doc = "Add 1 hour (summer time change)"]
-        #[must_use]
         #[inline(always)]
         pub const fn add1h(&self) -> bool {
             let val = (self.0 >> 16usize) & 0x01;
@@ -656,11 +606,10 @@ pub mod regs {
         }
         #[doc = "Add 1 hour (summer time change)"]
         #[inline(always)]
-        pub const fn set_add1h(&mut self, val: bool) {
+        pub fn set_add1h(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
         }
         #[doc = "Subtract 1 hour (winter time change)"]
-        #[must_use]
         #[inline(always)]
         pub const fn sub1h(&self) -> bool {
             let val = (self.0 >> 17usize) & 0x01;
@@ -668,11 +617,10 @@ pub mod regs {
         }
         #[doc = "Subtract 1 hour (winter time change)"]
         #[inline(always)]
-        pub const fn set_sub1h(&mut self, val: bool) {
+        pub fn set_sub1h(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
         }
         #[doc = "Backup"]
-        #[must_use]
         #[inline(always)]
         pub const fn bkp(&self) -> bool {
             let val = (self.0 >> 18usize) & 0x01;
@@ -680,11 +628,10 @@ pub mod regs {
         }
         #[doc = "Backup"]
         #[inline(always)]
-        pub const fn set_bkp(&mut self, val: bool) {
+        pub fn set_bkp(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
         }
         #[doc = "Calibration output selection"]
-        #[must_use]
         #[inline(always)]
         pub const fn cosel(&self) -> super::vals::Cosel {
             let val = (self.0 >> 19usize) & 0x01;
@@ -692,11 +639,10 @@ pub mod regs {
         }
         #[doc = "Calibration output selection"]
         #[inline(always)]
-        pub const fn set_cosel(&mut self, val: super::vals::Cosel) {
+        pub fn set_cosel(&mut self, val: super::vals::Cosel) {
             self.0 = (self.0 & !(0x01 << 19usize)) | (((val.to_bits() as u32) & 0x01) << 19usize);
         }
         #[doc = "Output polarity"]
-        #[must_use]
         #[inline(always)]
         pub const fn pol(&self) -> super::vals::Pol {
             let val = (self.0 >> 20usize) & 0x01;
@@ -704,11 +650,10 @@ pub mod regs {
         }
         #[doc = "Output polarity"]
         #[inline(always)]
-        pub const fn set_pol(&mut self, val: super::vals::Pol) {
+        pub fn set_pol(&mut self, val: super::vals::Pol) {
             self.0 = (self.0 & !(0x01 << 20usize)) | (((val.to_bits() as u32) & 0x01) << 20usize);
         }
         #[doc = "Output selection"]
-        #[must_use]
         #[inline(always)]
         pub const fn osel(&self) -> super::vals::Osel {
             let val = (self.0 >> 21usize) & 0x03;
@@ -716,11 +661,10 @@ pub mod regs {
         }
         #[doc = "Output selection"]
         #[inline(always)]
-        pub const fn set_osel(&mut self, val: super::vals::Osel) {
+        pub fn set_osel(&mut self, val: super::vals::Osel) {
             self.0 = (self.0 & !(0x03 << 21usize)) | (((val.to_bits() as u32) & 0x03) << 21usize);
         }
         #[doc = "Calibration output enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn coe(&self) -> bool {
             let val = (self.0 >> 23usize) & 0x01;
@@ -728,11 +672,10 @@ pub mod regs {
         }
         #[doc = "Calibration output enable"]
         #[inline(always)]
-        pub const fn set_coe(&mut self, val: bool) {
+        pub fn set_coe(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
         }
         #[doc = "Timestamp on internal event enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn itse(&self) -> bool {
             let val = (self.0 >> 24usize) & 0x01;
@@ -740,11 +683,10 @@ pub mod regs {
         }
         #[doc = "Timestamp on internal event enable"]
         #[inline(always)]
-        pub const fn set_itse(&mut self, val: bool) {
+        pub fn set_itse(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
         }
         #[doc = "Activate timestamp on tamper detection event"]
-        #[must_use]
         #[inline(always)]
         pub const fn tampts(&self) -> bool {
             let val = (self.0 >> 25usize) & 0x01;
@@ -752,11 +694,10 @@ pub mod regs {
         }
         #[doc = "Activate timestamp on tamper detection event"]
         #[inline(always)]
-        pub const fn set_tampts(&mut self, val: bool) {
+        pub fn set_tampts(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
         }
         #[doc = "Tamper detection output enable on TAMPALRM"]
-        #[must_use]
         #[inline(always)]
         pub const fn tampoe(&self) -> bool {
             let val = (self.0 >> 26usize) & 0x01;
@@ -764,11 +705,10 @@ pub mod regs {
         }
         #[doc = "Tamper detection output enable on TAMPALRM"]
         #[inline(always)]
-        pub const fn set_tampoe(&mut self, val: bool) {
+        pub fn set_tampoe(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 26usize)) | (((val as u32) & 0x01) << 26usize);
         }
         #[doc = "TAMPALRM pull-up enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn tampalrm_pu(&self) -> bool {
             let val = (self.0 >> 29usize) & 0x01;
@@ -776,11 +716,10 @@ pub mod regs {
         }
         #[doc = "TAMPALRM pull-up enable"]
         #[inline(always)]
-        pub const fn set_tampalrm_pu(&mut self, val: bool) {
+        pub fn set_tampalrm_pu(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
         }
         #[doc = "TAMPALRM output type"]
-        #[must_use]
         #[inline(always)]
         pub const fn tampalrm_type(&self) -> super::vals::TampalrmType {
             let val = (self.0 >> 30usize) & 0x01;
@@ -788,11 +727,10 @@ pub mod regs {
         }
         #[doc = "TAMPALRM output type"]
         #[inline(always)]
-        pub const fn set_tampalrm_type(&mut self, val: super::vals::TampalrmType) {
+        pub fn set_tampalrm_type(&mut self, val: super::vals::TampalrmType) {
             self.0 = (self.0 & !(0x01 << 30usize)) | (((val.to_bits() as u32) & 0x01) << 30usize);
         }
         #[doc = "RTC_OUT2 output enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn out2en(&self) -> bool {
             let val = (self.0 >> 31usize) & 0x01;
@@ -800,7 +738,7 @@ pub mod regs {
         }
         #[doc = "RTC_OUT2 output enable"]
         #[inline(always)]
-        pub const fn set_out2en(&mut self, val: bool) {
+        pub fn set_out2en(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
         }
     }
@@ -845,36 +783,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Cr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Cr {{ wucksel: {:?}, tsedge: {:?}, refckon: {=bool:?}, bypshad: {=bool:?}, fmt: {:?}, alre[0]: {=bool:?}, alre[1]: {=bool:?}, wute: {=bool:?}, tse: {=bool:?}, alrie[0]: {=bool:?}, alrie[1]: {=bool:?}, wutie: {=bool:?}, tsie: {=bool:?}, add1h: {=bool:?}, sub1h: {=bool:?}, bkp: {=bool:?}, cosel: {:?}, pol: {:?}, osel: {:?}, coe: {=bool:?}, itse: {=bool:?}, tampts: {=bool:?}, tampoe: {=bool:?}, tampalrm_pu: {=bool:?}, tampalrm_type: {:?}, out2en: {=bool:?} }}",
-                self.wucksel(),
-                self.tsedge(),
-                self.refckon(),
-                self.bypshad(),
-                self.fmt(),
-                self.alre(0usize),
-                self.alre(1usize),
-                self.wute(),
-                self.tse(),
-                self.alrie(0usize),
-                self.alrie(1usize),
-                self.wutie(),
-                self.tsie(),
-                self.add1h(),
-                self.sub1h(),
-                self.bkp(),
-                self.cosel(),
-                self.pol(),
-                self.osel(),
-                self.coe(),
-                self.itse(),
-                self.tampts(),
-                self.tampoe(),
-                self.tampalrm_pu(),
-                self.tampalrm_type(),
-                self.out2en()
-            )
+            defmt :: write ! (f , "Cr {{ wucksel: {:?}, tsedge: {:?}, refckon: {=bool:?}, bypshad: {=bool:?}, fmt: {:?}, alre[0]: {=bool:?}, alre[1]: {=bool:?}, wute: {=bool:?}, tse: {=bool:?}, alrie[0]: {=bool:?}, alrie[1]: {=bool:?}, wutie: {=bool:?}, tsie: {=bool:?}, add1h: {=bool:?}, sub1h: {=bool:?}, bkp: {=bool:?}, cosel: {:?}, pol: {:?}, osel: {:?}, coe: {=bool:?}, itse: {=bool:?}, tampts: {=bool:?}, tampoe: {=bool:?}, tampalrm_pu: {=bool:?}, tampalrm_type: {:?}, out2en: {=bool:?} }}" , self . wucksel () , self . tsedge () , self . refckon () , self . bypshad () , self . fmt () , self . alre (0usize) , self . alre (1usize) , self . wute () , self . tse () , self . alrie (0usize) , self . alrie (1usize) , self . wutie () , self . tsie () , self . add1h () , self . sub1h () , self . bkp () , self . cosel () , self . pol () , self . osel () , self . coe () , self . itse () , self . tampts () , self . tampoe () , self . tampalrm_pu () , self . tampalrm_type () , self . out2en ())
         }
     }
     #[doc = "Date register"]
@@ -883,7 +792,6 @@ pub mod regs {
     pub struct Dr(pub u32);
     impl Dr {
         #[doc = "Date units in BCD format"]
-        #[must_use]
         #[inline(always)]
         pub const fn du(&self) -> u8 {
             let val = (self.0 >> 0usize) & 0x0f;
@@ -891,11 +799,10 @@ pub mod regs {
         }
         #[doc = "Date units in BCD format"]
         #[inline(always)]
-        pub const fn set_du(&mut self, val: u8) {
+        pub fn set_du(&mut self, val: u8) {
             self.0 = (self.0 & !(0x0f << 0usize)) | (((val as u32) & 0x0f) << 0usize);
         }
         #[doc = "Date tens in BCD format"]
-        #[must_use]
         #[inline(always)]
         pub const fn dt(&self) -> u8 {
             let val = (self.0 >> 4usize) & 0x03;
@@ -903,11 +810,10 @@ pub mod regs {
         }
         #[doc = "Date tens in BCD format"]
         #[inline(always)]
-        pub const fn set_dt(&mut self, val: u8) {
+        pub fn set_dt(&mut self, val: u8) {
             self.0 = (self.0 & !(0x03 << 4usize)) | (((val as u32) & 0x03) << 4usize);
         }
         #[doc = "Month units in BCD format"]
-        #[must_use]
         #[inline(always)]
         pub const fn mu(&self) -> u8 {
             let val = (self.0 >> 8usize) & 0x0f;
@@ -915,11 +821,10 @@ pub mod regs {
         }
         #[doc = "Month units in BCD format"]
         #[inline(always)]
-        pub const fn set_mu(&mut self, val: u8) {
+        pub fn set_mu(&mut self, val: u8) {
             self.0 = (self.0 & !(0x0f << 8usize)) | (((val as u32) & 0x0f) << 8usize);
         }
         #[doc = "Month tens in BCD format"]
-        #[must_use]
         #[inline(always)]
         pub const fn mt(&self) -> bool {
             let val = (self.0 >> 12usize) & 0x01;
@@ -927,11 +832,10 @@ pub mod regs {
         }
         #[doc = "Month tens in BCD format"]
         #[inline(always)]
-        pub const fn set_mt(&mut self, val: bool) {
+        pub fn set_mt(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
         }
         #[doc = "Week day units"]
-        #[must_use]
         #[inline(always)]
         pub const fn wdu(&self) -> u8 {
             let val = (self.0 >> 13usize) & 0x07;
@@ -939,11 +843,10 @@ pub mod regs {
         }
         #[doc = "Week day units"]
         #[inline(always)]
-        pub const fn set_wdu(&mut self, val: u8) {
+        pub fn set_wdu(&mut self, val: u8) {
             self.0 = (self.0 & !(0x07 << 13usize)) | (((val as u32) & 0x07) << 13usize);
         }
         #[doc = "Year units in BCD format"]
-        #[must_use]
         #[inline(always)]
         pub const fn yu(&self) -> u8 {
             let val = (self.0 >> 16usize) & 0x0f;
@@ -951,11 +854,10 @@ pub mod regs {
         }
         #[doc = "Year units in BCD format"]
         #[inline(always)]
-        pub const fn set_yu(&mut self, val: u8) {
+        pub fn set_yu(&mut self, val: u8) {
             self.0 = (self.0 & !(0x0f << 16usize)) | (((val as u32) & 0x0f) << 16usize);
         }
         #[doc = "Year tens in BCD format"]
-        #[must_use]
         #[inline(always)]
         pub const fn yt(&self) -> u8 {
             let val = (self.0 >> 20usize) & 0x0f;
@@ -963,7 +865,7 @@ pub mod regs {
         }
         #[doc = "Year tens in BCD format"]
         #[inline(always)]
-        pub const fn set_yt(&mut self, val: u8) {
+        pub fn set_yt(&mut self, val: u8) {
             self.0 = (self.0 & !(0x0f << 20usize)) | (((val as u32) & 0x0f) << 20usize);
         }
     }
@@ -1008,7 +910,6 @@ pub mod regs {
     pub struct Icsr(pub u32);
     impl Icsr {
         #[doc = "Alarm write enabled"]
-        #[must_use]
         #[inline(always)]
         pub const fn alrwf(&self, n: usize) -> bool {
             assert!(n < 2usize);
@@ -1018,13 +919,12 @@ pub mod regs {
         }
         #[doc = "Alarm write enabled"]
         #[inline(always)]
-        pub const fn set_alrwf(&mut self, n: usize, val: bool) {
+        pub fn set_alrwf(&mut self, n: usize, val: bool) {
             assert!(n < 2usize);
             let offs = 0usize + n * 1usize;
             self.0 = (self.0 & !(0x01 << offs)) | (((val as u32) & 0x01) << offs);
         }
         #[doc = "Wakeup timer write flag"]
-        #[must_use]
         #[inline(always)]
         pub const fn wutwf(&self) -> bool {
             let val = (self.0 >> 2usize) & 0x01;
@@ -1032,11 +932,10 @@ pub mod regs {
         }
         #[doc = "Wakeup timer write flag"]
         #[inline(always)]
-        pub const fn set_wutwf(&mut self, val: bool) {
+        pub fn set_wutwf(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
         }
         #[doc = "Shift operation pending"]
-        #[must_use]
         #[inline(always)]
         pub const fn shpf(&self) -> bool {
             let val = (self.0 >> 3usize) & 0x01;
@@ -1044,11 +943,10 @@ pub mod regs {
         }
         #[doc = "Shift operation pending"]
         #[inline(always)]
-        pub const fn set_shpf(&mut self, val: bool) {
+        pub fn set_shpf(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
         }
         #[doc = "Initialization status flag"]
-        #[must_use]
         #[inline(always)]
         pub const fn inits(&self) -> bool {
             let val = (self.0 >> 4usize) & 0x01;
@@ -1056,11 +954,10 @@ pub mod regs {
         }
         #[doc = "Initialization status flag"]
         #[inline(always)]
-        pub const fn set_inits(&mut self, val: bool) {
+        pub fn set_inits(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
         }
         #[doc = "Registers synchronization flag"]
-        #[must_use]
         #[inline(always)]
         pub const fn rsf(&self) -> bool {
             let val = (self.0 >> 5usize) & 0x01;
@@ -1068,11 +965,10 @@ pub mod regs {
         }
         #[doc = "Registers synchronization flag"]
         #[inline(always)]
-        pub const fn set_rsf(&mut self, val: bool) {
+        pub fn set_rsf(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
         }
         #[doc = "Initialization flag"]
-        #[must_use]
         #[inline(always)]
         pub const fn initf(&self) -> bool {
             let val = (self.0 >> 6usize) & 0x01;
@@ -1080,11 +976,10 @@ pub mod regs {
         }
         #[doc = "Initialization flag"]
         #[inline(always)]
-        pub const fn set_initf(&mut self, val: bool) {
+        pub fn set_initf(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
         }
         #[doc = "Initialization mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn init(&self) -> bool {
             let val = (self.0 >> 7usize) & 0x01;
@@ -1092,11 +987,10 @@ pub mod regs {
         }
         #[doc = "Initialization mode"]
         #[inline(always)]
-        pub const fn set_init(&mut self, val: bool) {
+        pub fn set_init(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
         }
         #[doc = "Recalibration pending Flag"]
-        #[must_use]
         #[inline(always)]
         pub const fn recalpf(&self) -> super::vals::Recalpf {
             let val = (self.0 >> 16usize) & 0x01;
@@ -1104,7 +998,7 @@ pub mod regs {
         }
         #[doc = "Recalibration pending Flag"]
         #[inline(always)]
-        pub const fn set_recalpf(&mut self, val: super::vals::Recalpf) {
+        pub fn set_recalpf(&mut self, val: super::vals::Recalpf) {
             self.0 = (self.0 & !(0x01 << 16usize)) | (((val.to_bits() as u32) & 0x01) << 16usize);
         }
     }
@@ -1132,19 +1026,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Icsr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Icsr {{ alrwf[0]: {=bool:?}, alrwf[1]: {=bool:?}, wutwf: {=bool:?}, shpf: {=bool:?}, inits: {=bool:?}, rsf: {=bool:?}, initf: {=bool:?}, init: {=bool:?}, recalpf: {:?} }}",
-                self.alrwf(0usize),
-                self.alrwf(1usize),
-                self.wutwf(),
-                self.shpf(),
-                self.inits(),
-                self.rsf(),
-                self.initf(),
-                self.init(),
-                self.recalpf()
-            )
+            defmt :: write ! (f , "Icsr {{ alrwf[0]: {=bool:?}, alrwf[1]: {=bool:?}, wutwf: {=bool:?}, shpf: {=bool:?}, inits: {=bool:?}, rsf: {=bool:?}, initf: {=bool:?}, init: {=bool:?}, recalpf: {:?} }}" , self . alrwf (0usize) , self . alrwf (1usize) , self . wutwf () , self . shpf () , self . inits () , self . rsf () , self . initf () , self . init () , self . recalpf ())
         }
     }
     #[doc = "Masked interrupt status register"]
@@ -1153,7 +1035,6 @@ pub mod regs {
     pub struct Misr(pub u32);
     impl Misr {
         #[doc = "Alarm masked flag"]
-        #[must_use]
         #[inline(always)]
         pub const fn alrmf(&self, n: usize) -> super::vals::Alrmf {
             assert!(n < 2usize);
@@ -1163,13 +1044,12 @@ pub mod regs {
         }
         #[doc = "Alarm masked flag"]
         #[inline(always)]
-        pub const fn set_alrmf(&mut self, n: usize, val: super::vals::Alrmf) {
+        pub fn set_alrmf(&mut self, n: usize, val: super::vals::Alrmf) {
             assert!(n < 2usize);
             let offs = 0usize + n * 1usize;
             self.0 = (self.0 & !(0x01 << offs)) | (((val.to_bits() as u32) & 0x01) << offs);
         }
         #[doc = "Wakeup timer masked flag"]
-        #[must_use]
         #[inline(always)]
         pub const fn wutmf(&self) -> super::vals::Wutmf {
             let val = (self.0 >> 2usize) & 0x01;
@@ -1177,11 +1057,10 @@ pub mod regs {
         }
         #[doc = "Wakeup timer masked flag"]
         #[inline(always)]
-        pub const fn set_wutmf(&mut self, val: super::vals::Wutmf) {
+        pub fn set_wutmf(&mut self, val: super::vals::Wutmf) {
             self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
         }
         #[doc = "Timestamp masked flag"]
-        #[must_use]
         #[inline(always)]
         pub const fn tsmf(&self) -> super::vals::Tsmf {
             let val = (self.0 >> 3usize) & 0x01;
@@ -1189,11 +1068,10 @@ pub mod regs {
         }
         #[doc = "Timestamp masked flag"]
         #[inline(always)]
-        pub const fn set_tsmf(&mut self, val: super::vals::Tsmf) {
+        pub fn set_tsmf(&mut self, val: super::vals::Tsmf) {
             self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
         }
         #[doc = "Timestamp overflow masked flag"]
-        #[must_use]
         #[inline(always)]
         pub const fn tsovmf(&self) -> super::vals::Tsovmf {
             let val = (self.0 >> 4usize) & 0x01;
@@ -1201,11 +1079,10 @@ pub mod regs {
         }
         #[doc = "Timestamp overflow masked flag"]
         #[inline(always)]
-        pub const fn set_tsovmf(&mut self, val: super::vals::Tsovmf) {
+        pub fn set_tsovmf(&mut self, val: super::vals::Tsovmf) {
             self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u32) & 0x01) << 4usize);
         }
         #[doc = "Internal timestamp masked flag"]
-        #[must_use]
         #[inline(always)]
         pub const fn itsmf(&self) -> super::vals::Itsmf {
             let val = (self.0 >> 5usize) & 0x01;
@@ -1213,7 +1090,7 @@ pub mod regs {
         }
         #[doc = "Internal timestamp masked flag"]
         #[inline(always)]
-        pub const fn set_itsmf(&mut self, val: super::vals::Itsmf) {
+        pub fn set_itsmf(&mut self, val: super::vals::Itsmf) {
             self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
         }
     }
@@ -1256,7 +1133,6 @@ pub mod regs {
     pub struct Prer(pub u32);
     impl Prer {
         #[doc = "Synchronous prescaler factor"]
-        #[must_use]
         #[inline(always)]
         pub const fn prediv_s(&self) -> u16 {
             let val = (self.0 >> 0usize) & 0x7fff;
@@ -1264,11 +1140,10 @@ pub mod regs {
         }
         #[doc = "Synchronous prescaler factor"]
         #[inline(always)]
-        pub const fn set_prediv_s(&mut self, val: u16) {
+        pub fn set_prediv_s(&mut self, val: u16) {
             self.0 = (self.0 & !(0x7fff << 0usize)) | (((val as u32) & 0x7fff) << 0usize);
         }
         #[doc = "Asynchronous prescaler factor"]
-        #[must_use]
         #[inline(always)]
         pub const fn prediv_a(&self) -> u8 {
             let val = (self.0 >> 16usize) & 0x7f;
@@ -1276,7 +1151,7 @@ pub mod regs {
         }
         #[doc = "Asynchronous prescaler factor"]
         #[inline(always)]
-        pub const fn set_prediv_a(&mut self, val: u8) {
+        pub fn set_prediv_a(&mut self, val: u8) {
             self.0 = (self.0 & !(0x7f << 16usize)) | (((val as u32) & 0x7f) << 16usize);
         }
     }
@@ -1311,7 +1186,6 @@ pub mod regs {
     pub struct Privcr(pub u32);
     impl Privcr {
         #[doc = "ALRAPRIV"]
-        #[must_use]
         #[inline(always)]
         pub const fn alrpriv(&self, n: usize) -> bool {
             assert!(n < 2usize);
@@ -1321,13 +1195,12 @@ pub mod regs {
         }
         #[doc = "ALRAPRIV"]
         #[inline(always)]
-        pub const fn set_alrpriv(&mut self, n: usize, val: bool) {
+        pub fn set_alrpriv(&mut self, n: usize, val: bool) {
             assert!(n < 2usize);
             let offs = 0usize + n * 1usize;
             self.0 = (self.0 & !(0x01 << offs)) | (((val as u32) & 0x01) << offs);
         }
         #[doc = "WUTPRIV"]
-        #[must_use]
         #[inline(always)]
         pub const fn wutpriv(&self) -> bool {
             let val = (self.0 >> 2usize) & 0x01;
@@ -1335,11 +1208,10 @@ pub mod regs {
         }
         #[doc = "WUTPRIV"]
         #[inline(always)]
-        pub const fn set_wutpriv(&mut self, val: bool) {
+        pub fn set_wutpriv(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
         }
         #[doc = "TSPRIV"]
-        #[must_use]
         #[inline(always)]
         pub const fn tspriv(&self) -> bool {
             let val = (self.0 >> 3usize) & 0x01;
@@ -1347,11 +1219,10 @@ pub mod regs {
         }
         #[doc = "TSPRIV"]
         #[inline(always)]
-        pub const fn set_tspriv(&mut self, val: bool) {
+        pub fn set_tspriv(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
         }
         #[doc = "CALPRIV"]
-        #[must_use]
         #[inline(always)]
         pub const fn calpriv(&self) -> bool {
             let val = (self.0 >> 13usize) & 0x01;
@@ -1359,11 +1230,10 @@ pub mod regs {
         }
         #[doc = "CALPRIV"]
         #[inline(always)]
-        pub const fn set_calpriv(&mut self, val: bool) {
+        pub fn set_calpriv(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
         }
         #[doc = "INITPRIV"]
-        #[must_use]
         #[inline(always)]
         pub const fn initpriv(&self) -> bool {
             let val = (self.0 >> 14usize) & 0x01;
@@ -1371,11 +1241,10 @@ pub mod regs {
         }
         #[doc = "INITPRIV"]
         #[inline(always)]
-        pub const fn set_initpriv(&mut self, val: bool) {
+        pub fn set_initpriv(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
         }
         #[doc = "PRIV"]
-        #[must_use]
         #[inline(always)]
         pub const fn priv_(&self) -> bool {
             let val = (self.0 >> 15usize) & 0x01;
@@ -1383,7 +1252,7 @@ pub mod regs {
         }
         #[doc = "PRIV"]
         #[inline(always)]
-        pub const fn set_priv_(&mut self, val: bool) {
+        pub fn set_priv_(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
         }
     }
@@ -1409,17 +1278,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Privcr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Privcr {{ alrpriv[0]: {=bool:?}, alrpriv[1]: {=bool:?}, wutpriv: {=bool:?}, tspriv: {=bool:?}, calpriv: {=bool:?}, initpriv: {=bool:?}, priv_: {=bool:?} }}",
-                self.alrpriv(0usize),
-                self.alrpriv(1usize),
-                self.wutpriv(),
-                self.tspriv(),
-                self.calpriv(),
-                self.initpriv(),
-                self.priv_()
-            )
+            defmt :: write ! (f , "Privcr {{ alrpriv[0]: {=bool:?}, alrpriv[1]: {=bool:?}, wutpriv: {=bool:?}, tspriv: {=bool:?}, calpriv: {=bool:?}, initpriv: {=bool:?}, priv_: {=bool:?} }}" , self . alrpriv (0usize) , self . alrpriv (1usize) , self . wutpriv () , self . tspriv () , self . calpriv () , self . initpriv () , self . priv_ ())
         }
     }
     #[doc = "Status clear register"]
@@ -1428,7 +1287,6 @@ pub mod regs {
     pub struct Scr(pub u32);
     impl Scr {
         #[doc = "Clear alarm x flag"]
-        #[must_use]
         #[inline(always)]
         pub const fn calrf(&self, n: usize) -> super::vals::Calrf {
             assert!(n < 2usize);
@@ -1438,13 +1296,12 @@ pub mod regs {
         }
         #[doc = "Clear alarm x flag"]
         #[inline(always)]
-        pub const fn set_calrf(&mut self, n: usize, val: super::vals::Calrf) {
+        pub fn set_calrf(&mut self, n: usize, val: super::vals::Calrf) {
             assert!(n < 2usize);
             let offs = 0usize + n * 1usize;
             self.0 = (self.0 & !(0x01 << offs)) | (((val.to_bits() as u32) & 0x01) << offs);
         }
         #[doc = "Clear wakeup timer flag"]
-        #[must_use]
         #[inline(always)]
         pub const fn cwutf(&self) -> super::vals::Calrf {
             let val = (self.0 >> 2usize) & 0x01;
@@ -1452,11 +1309,10 @@ pub mod regs {
         }
         #[doc = "Clear wakeup timer flag"]
         #[inline(always)]
-        pub const fn set_cwutf(&mut self, val: super::vals::Calrf) {
+        pub fn set_cwutf(&mut self, val: super::vals::Calrf) {
             self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
         }
         #[doc = "Clear timestamp flag"]
-        #[must_use]
         #[inline(always)]
         pub const fn ctsf(&self) -> super::vals::Calrf {
             let val = (self.0 >> 3usize) & 0x01;
@@ -1464,11 +1320,10 @@ pub mod regs {
         }
         #[doc = "Clear timestamp flag"]
         #[inline(always)]
-        pub const fn set_ctsf(&mut self, val: super::vals::Calrf) {
+        pub fn set_ctsf(&mut self, val: super::vals::Calrf) {
             self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
         }
         #[doc = "Clear timestamp overflow flag"]
-        #[must_use]
         #[inline(always)]
         pub const fn ctsovf(&self) -> super::vals::Calrf {
             let val = (self.0 >> 4usize) & 0x01;
@@ -1476,11 +1331,10 @@ pub mod regs {
         }
         #[doc = "Clear timestamp overflow flag"]
         #[inline(always)]
-        pub const fn set_ctsovf(&mut self, val: super::vals::Calrf) {
+        pub fn set_ctsovf(&mut self, val: super::vals::Calrf) {
             self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u32) & 0x01) << 4usize);
         }
         #[doc = "Clear internal timestamp flag"]
-        #[must_use]
         #[inline(always)]
         pub const fn citsf(&self) -> super::vals::Calrf {
             let val = (self.0 >> 5usize) & 0x01;
@@ -1488,7 +1342,7 @@ pub mod regs {
         }
         #[doc = "Clear internal timestamp flag"]
         #[inline(always)]
-        pub const fn set_citsf(&mut self, val: super::vals::Calrf) {
+        pub fn set_citsf(&mut self, val: super::vals::Calrf) {
             self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
         }
     }
@@ -1531,7 +1385,6 @@ pub mod regs {
     pub struct Shiftr(pub u32);
     impl Shiftr {
         #[doc = "Subtract a fraction of a second"]
-        #[must_use]
         #[inline(always)]
         pub const fn subfs(&self) -> u16 {
             let val = (self.0 >> 0usize) & 0x7fff;
@@ -1539,11 +1392,10 @@ pub mod regs {
         }
         #[doc = "Subtract a fraction of a second"]
         #[inline(always)]
-        pub const fn set_subfs(&mut self, val: u16) {
+        pub fn set_subfs(&mut self, val: u16) {
             self.0 = (self.0 & !(0x7fff << 0usize)) | (((val as u32) & 0x7fff) << 0usize);
         }
         #[doc = "Add one second"]
-        #[must_use]
         #[inline(always)]
         pub const fn add1s(&self) -> bool {
             let val = (self.0 >> 31usize) & 0x01;
@@ -1551,7 +1403,7 @@ pub mod regs {
         }
         #[doc = "Add one second"]
         #[inline(always)]
-        pub const fn set_add1s(&mut self, val: bool) {
+        pub fn set_add1s(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
         }
     }
@@ -1586,7 +1438,6 @@ pub mod regs {
     pub struct Smcr(pub u32);
     impl Smcr {
         #[doc = "Alarm x protection"]
-        #[must_use]
         #[inline(always)]
         pub const fn alrdprot(&self, n: usize) -> bool {
             assert!(n < 2usize);
@@ -1596,13 +1447,12 @@ pub mod regs {
         }
         #[doc = "Alarm x protection"]
         #[inline(always)]
-        pub const fn set_alrdprot(&mut self, n: usize, val: bool) {
+        pub fn set_alrdprot(&mut self, n: usize, val: bool) {
             assert!(n < 2usize);
             let offs = 0usize + n * 1usize;
             self.0 = (self.0 & !(0x01 << offs)) | (((val as u32) & 0x01) << offs);
         }
         #[doc = "Wakeup timer protection"]
-        #[must_use]
         #[inline(always)]
         pub const fn wutdprot(&self) -> bool {
             let val = (self.0 >> 2usize) & 0x01;
@@ -1610,11 +1460,10 @@ pub mod regs {
         }
         #[doc = "Wakeup timer protection"]
         #[inline(always)]
-        pub const fn set_wutdprot(&mut self, val: bool) {
+        pub fn set_wutdprot(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
         }
         #[doc = "Timestamp protection"]
-        #[must_use]
         #[inline(always)]
         pub const fn tsdprot(&self) -> bool {
             let val = (self.0 >> 3usize) & 0x01;
@@ -1622,11 +1471,10 @@ pub mod regs {
         }
         #[doc = "Timestamp protection"]
         #[inline(always)]
-        pub const fn set_tsdprot(&mut self, val: bool) {
+        pub fn set_tsdprot(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
         }
         #[doc = "Shift register, daylight saving, calibration and reference clock protection"]
-        #[must_use]
         #[inline(always)]
         pub const fn caldprot(&self) -> bool {
             let val = (self.0 >> 13usize) & 0x01;
@@ -1634,11 +1482,10 @@ pub mod regs {
         }
         #[doc = "Shift register, daylight saving, calibration and reference clock protection"]
         #[inline(always)]
-        pub const fn set_caldprot(&mut self, val: bool) {
+        pub fn set_caldprot(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
         }
         #[doc = "Initialization protection"]
-        #[must_use]
         #[inline(always)]
         pub const fn initdprot(&self) -> bool {
             let val = (self.0 >> 14usize) & 0x01;
@@ -1646,11 +1493,10 @@ pub mod regs {
         }
         #[doc = "Initialization protection"]
         #[inline(always)]
-        pub const fn set_initdprot(&mut self, val: bool) {
+        pub fn set_initdprot(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
         }
         #[doc = "RTC global protection"]
-        #[must_use]
         #[inline(always)]
         pub const fn decprot(&self) -> bool {
             let val = (self.0 >> 15usize) & 0x01;
@@ -1658,7 +1504,7 @@ pub mod regs {
         }
         #[doc = "RTC global protection"]
         #[inline(always)]
-        pub const fn set_decprot(&mut self, val: bool) {
+        pub fn set_decprot(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
         }
     }
@@ -1684,17 +1530,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Smcr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Smcr {{ alrdprot[0]: {=bool:?}, alrdprot[1]: {=bool:?}, wutdprot: {=bool:?}, tsdprot: {=bool:?}, caldprot: {=bool:?}, initdprot: {=bool:?}, decprot: {=bool:?} }}",
-                self.alrdprot(0usize),
-                self.alrdprot(1usize),
-                self.wutdprot(),
-                self.tsdprot(),
-                self.caldprot(),
-                self.initdprot(),
-                self.decprot()
-            )
+            defmt :: write ! (f , "Smcr {{ alrdprot[0]: {=bool:?}, alrdprot[1]: {=bool:?}, wutdprot: {=bool:?}, tsdprot: {=bool:?}, caldprot: {=bool:?}, initdprot: {=bool:?}, decprot: {=bool:?} }}" , self . alrdprot (0usize) , self . alrdprot (1usize) , self . wutdprot () , self . tsdprot () , self . caldprot () , self . initdprot () , self . decprot ())
         }
     }
     #[doc = "Secure masked interrupt status register"]
@@ -1703,7 +1539,6 @@ pub mod regs {
     pub struct Smisr(pub u32);
     impl Smisr {
         #[doc = "Alarm x interrupt secure masked flag"]
-        #[must_use]
         #[inline(always)]
         pub const fn alrmf(&self, n: usize) -> bool {
             assert!(n < 2usize);
@@ -1713,13 +1548,12 @@ pub mod regs {
         }
         #[doc = "Alarm x interrupt secure masked flag"]
         #[inline(always)]
-        pub const fn set_alrmf(&mut self, n: usize, val: bool) {
+        pub fn set_alrmf(&mut self, n: usize, val: bool) {
             assert!(n < 2usize);
             let offs = 0usize + n * 1usize;
             self.0 = (self.0 & !(0x01 << offs)) | (((val as u32) & 0x01) << offs);
         }
         #[doc = "WUTMF"]
-        #[must_use]
         #[inline(always)]
         pub const fn wutmf(&self) -> bool {
             let val = (self.0 >> 2usize) & 0x01;
@@ -1727,11 +1561,10 @@ pub mod regs {
         }
         #[doc = "WUTMF"]
         #[inline(always)]
-        pub const fn set_wutmf(&mut self, val: bool) {
+        pub fn set_wutmf(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
         }
         #[doc = "TSMF"]
-        #[must_use]
         #[inline(always)]
         pub const fn tsmf(&self) -> bool {
             let val = (self.0 >> 3usize) & 0x01;
@@ -1739,11 +1572,10 @@ pub mod regs {
         }
         #[doc = "TSMF"]
         #[inline(always)]
-        pub const fn set_tsmf(&mut self, val: bool) {
+        pub fn set_tsmf(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
         }
         #[doc = "TSOVMF"]
-        #[must_use]
         #[inline(always)]
         pub const fn tsovmf(&self) -> bool {
             let val = (self.0 >> 4usize) & 0x01;
@@ -1751,11 +1583,10 @@ pub mod regs {
         }
         #[doc = "TSOVMF"]
         #[inline(always)]
-        pub const fn set_tsovmf(&mut self, val: bool) {
+        pub fn set_tsovmf(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
         }
         #[doc = "ITSMF"]
-        #[must_use]
         #[inline(always)]
         pub const fn itsmf(&self) -> bool {
             let val = (self.0 >> 5usize) & 0x01;
@@ -1763,7 +1594,7 @@ pub mod regs {
         }
         #[doc = "ITSMF"]
         #[inline(always)]
-        pub const fn set_itsmf(&mut self, val: bool) {
+        pub fn set_itsmf(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
         }
     }
@@ -1788,16 +1619,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Smisr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Smisr {{ alrmf[0]: {=bool:?}, alrmf[1]: {=bool:?}, wutmf: {=bool:?}, tsmf: {=bool:?}, tsovmf: {=bool:?}, itsmf: {=bool:?} }}",
-                self.alrmf(0usize),
-                self.alrmf(1usize),
-                self.wutmf(),
-                self.tsmf(),
-                self.tsovmf(),
-                self.itsmf()
-            )
+            defmt :: write ! (f , "Smisr {{ alrmf[0]: {=bool:?}, alrmf[1]: {=bool:?}, wutmf: {=bool:?}, tsmf: {=bool:?}, tsovmf: {=bool:?}, itsmf: {=bool:?} }}" , self . alrmf (0usize) , self . alrmf (1usize) , self . wutmf () , self . tsmf () , self . tsovmf () , self . itsmf ())
         }
     }
     #[doc = "Status register"]
@@ -1806,7 +1628,6 @@ pub mod regs {
     pub struct Sr(pub u32);
     impl Sr {
         #[doc = "Alarm flag"]
-        #[must_use]
         #[inline(always)]
         pub const fn alrf(&self, n: usize) -> super::vals::Alrf {
             assert!(n < 2usize);
@@ -1816,13 +1637,12 @@ pub mod regs {
         }
         #[doc = "Alarm flag"]
         #[inline(always)]
-        pub const fn set_alrf(&mut self, n: usize, val: super::vals::Alrf) {
+        pub fn set_alrf(&mut self, n: usize, val: super::vals::Alrf) {
             assert!(n < 2usize);
             let offs = 0usize + n * 1usize;
             self.0 = (self.0 & !(0x01 << offs)) | (((val.to_bits() as u32) & 0x01) << offs);
         }
         #[doc = "Wakeup timer flag"]
-        #[must_use]
         #[inline(always)]
         pub const fn wutf(&self) -> super::vals::Wutf {
             let val = (self.0 >> 2usize) & 0x01;
@@ -1830,11 +1650,10 @@ pub mod regs {
         }
         #[doc = "Wakeup timer flag"]
         #[inline(always)]
-        pub const fn set_wutf(&mut self, val: super::vals::Wutf) {
+        pub fn set_wutf(&mut self, val: super::vals::Wutf) {
             self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
         }
         #[doc = "Timestamp flag"]
-        #[must_use]
         #[inline(always)]
         pub const fn tsf(&self) -> super::vals::Tsf {
             let val = (self.0 >> 3usize) & 0x01;
@@ -1842,11 +1661,10 @@ pub mod regs {
         }
         #[doc = "Timestamp flag"]
         #[inline(always)]
-        pub const fn set_tsf(&mut self, val: super::vals::Tsf) {
+        pub fn set_tsf(&mut self, val: super::vals::Tsf) {
             self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
         }
         #[doc = "Timestamp overflow flag"]
-        #[must_use]
         #[inline(always)]
         pub const fn tsovf(&self) -> super::vals::Tsovf {
             let val = (self.0 >> 4usize) & 0x01;
@@ -1854,11 +1672,10 @@ pub mod regs {
         }
         #[doc = "Timestamp overflow flag"]
         #[inline(always)]
-        pub const fn set_tsovf(&mut self, val: super::vals::Tsovf) {
+        pub fn set_tsovf(&mut self, val: super::vals::Tsovf) {
             self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u32) & 0x01) << 4usize);
         }
         #[doc = "Internal timestamp flag"]
-        #[must_use]
         #[inline(always)]
         pub const fn itsf(&self) -> super::vals::Itsf {
             let val = (self.0 >> 5usize) & 0x01;
@@ -1866,7 +1683,7 @@ pub mod regs {
         }
         #[doc = "Internal timestamp flag"]
         #[inline(always)]
-        pub const fn set_itsf(&mut self, val: super::vals::Itsf) {
+        pub fn set_itsf(&mut self, val: super::vals::Itsf) {
             self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
         }
     }
@@ -1909,7 +1726,6 @@ pub mod regs {
     pub struct Ssr(pub u32);
     impl Ssr {
         #[doc = "Synchronous binary counter"]
-        #[must_use]
         #[inline(always)]
         pub const fn ss(&self) -> u16 {
             let val = (self.0 >> 0usize) & 0xffff;
@@ -1917,7 +1733,7 @@ pub mod regs {
         }
         #[doc = "Synchronous binary counter"]
         #[inline(always)]
-        pub const fn set_ss(&mut self, val: u16) {
+        pub fn set_ss(&mut self, val: u16) {
             self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
         }
     }
@@ -1944,7 +1760,6 @@ pub mod regs {
     pub struct Tr(pub u32);
     impl Tr {
         #[doc = "Second units in BCD format"]
-        #[must_use]
         #[inline(always)]
         pub const fn su(&self) -> u8 {
             let val = (self.0 >> 0usize) & 0x0f;
@@ -1952,11 +1767,10 @@ pub mod regs {
         }
         #[doc = "Second units in BCD format"]
         #[inline(always)]
-        pub const fn set_su(&mut self, val: u8) {
+        pub fn set_su(&mut self, val: u8) {
             self.0 = (self.0 & !(0x0f << 0usize)) | (((val as u32) & 0x0f) << 0usize);
         }
         #[doc = "Second tens in BCD format"]
-        #[must_use]
         #[inline(always)]
         pub const fn st(&self) -> u8 {
             let val = (self.0 >> 4usize) & 0x07;
@@ -1964,11 +1778,10 @@ pub mod regs {
         }
         #[doc = "Second tens in BCD format"]
         #[inline(always)]
-        pub const fn set_st(&mut self, val: u8) {
+        pub fn set_st(&mut self, val: u8) {
             self.0 = (self.0 & !(0x07 << 4usize)) | (((val as u32) & 0x07) << 4usize);
         }
         #[doc = "Minute units in BCD format"]
-        #[must_use]
         #[inline(always)]
         pub const fn mnu(&self) -> u8 {
             let val = (self.0 >> 8usize) & 0x0f;
@@ -1976,11 +1789,10 @@ pub mod regs {
         }
         #[doc = "Minute units in BCD format"]
         #[inline(always)]
-        pub const fn set_mnu(&mut self, val: u8) {
+        pub fn set_mnu(&mut self, val: u8) {
             self.0 = (self.0 & !(0x0f << 8usize)) | (((val as u32) & 0x0f) << 8usize);
         }
         #[doc = "Minute tens in BCD format"]
-        #[must_use]
         #[inline(always)]
         pub const fn mnt(&self) -> u8 {
             let val = (self.0 >> 12usize) & 0x07;
@@ -1988,11 +1800,10 @@ pub mod regs {
         }
         #[doc = "Minute tens in BCD format"]
         #[inline(always)]
-        pub const fn set_mnt(&mut self, val: u8) {
+        pub fn set_mnt(&mut self, val: u8) {
             self.0 = (self.0 & !(0x07 << 12usize)) | (((val as u32) & 0x07) << 12usize);
         }
         #[doc = "Hour units in BCD format"]
-        #[must_use]
         #[inline(always)]
         pub const fn hu(&self) -> u8 {
             let val = (self.0 >> 16usize) & 0x0f;
@@ -2000,11 +1811,10 @@ pub mod regs {
         }
         #[doc = "Hour units in BCD format"]
         #[inline(always)]
-        pub const fn set_hu(&mut self, val: u8) {
+        pub fn set_hu(&mut self, val: u8) {
             self.0 = (self.0 & !(0x0f << 16usize)) | (((val as u32) & 0x0f) << 16usize);
         }
         #[doc = "Hour tens in BCD format"]
-        #[must_use]
         #[inline(always)]
         pub const fn ht(&self) -> u8 {
             let val = (self.0 >> 20usize) & 0x03;
@@ -2012,11 +1822,10 @@ pub mod regs {
         }
         #[doc = "Hour tens in BCD format"]
         #[inline(always)]
-        pub const fn set_ht(&mut self, val: u8) {
+        pub fn set_ht(&mut self, val: u8) {
             self.0 = (self.0 & !(0x03 << 20usize)) | (((val as u32) & 0x03) << 20usize);
         }
         #[doc = "AM/PM notation"]
-        #[must_use]
         #[inline(always)]
         pub const fn pm(&self) -> super::vals::Ampm {
             let val = (self.0 >> 22usize) & 0x01;
@@ -2024,7 +1833,7 @@ pub mod regs {
         }
         #[doc = "AM/PM notation"]
         #[inline(always)]
-        pub const fn set_pm(&mut self, val: super::vals::Ampm) {
+        pub fn set_pm(&mut self, val: super::vals::Ampm) {
             self.0 = (self.0 & !(0x01 << 22usize)) | (((val.to_bits() as u32) & 0x01) << 22usize);
         }
     }
@@ -2069,7 +1878,6 @@ pub mod regs {
     pub struct Tsdr(pub u32);
     impl Tsdr {
         #[doc = "Date units in BCD format"]
-        #[must_use]
         #[inline(always)]
         pub const fn du(&self) -> u8 {
             let val = (self.0 >> 0usize) & 0x0f;
@@ -2077,11 +1885,10 @@ pub mod regs {
         }
         #[doc = "Date units in BCD format"]
         #[inline(always)]
-        pub const fn set_du(&mut self, val: u8) {
+        pub fn set_du(&mut self, val: u8) {
             self.0 = (self.0 & !(0x0f << 0usize)) | (((val as u32) & 0x0f) << 0usize);
         }
         #[doc = "Date tens in BCD format"]
-        #[must_use]
         #[inline(always)]
         pub const fn dt(&self) -> u8 {
             let val = (self.0 >> 4usize) & 0x03;
@@ -2089,11 +1896,10 @@ pub mod regs {
         }
         #[doc = "Date tens in BCD format"]
         #[inline(always)]
-        pub const fn set_dt(&mut self, val: u8) {
+        pub fn set_dt(&mut self, val: u8) {
             self.0 = (self.0 & !(0x03 << 4usize)) | (((val as u32) & 0x03) << 4usize);
         }
         #[doc = "Month units in BCD format"]
-        #[must_use]
         #[inline(always)]
         pub const fn mu(&self) -> u8 {
             let val = (self.0 >> 8usize) & 0x0f;
@@ -2101,11 +1907,10 @@ pub mod regs {
         }
         #[doc = "Month units in BCD format"]
         #[inline(always)]
-        pub const fn set_mu(&mut self, val: u8) {
+        pub fn set_mu(&mut self, val: u8) {
             self.0 = (self.0 & !(0x0f << 8usize)) | (((val as u32) & 0x0f) << 8usize);
         }
         #[doc = "Month tens in BCD format"]
-        #[must_use]
         #[inline(always)]
         pub const fn mt(&self) -> bool {
             let val = (self.0 >> 12usize) & 0x01;
@@ -2113,11 +1918,10 @@ pub mod regs {
         }
         #[doc = "Month tens in BCD format"]
         #[inline(always)]
-        pub const fn set_mt(&mut self, val: bool) {
+        pub fn set_mt(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
         }
         #[doc = "Week day units"]
-        #[must_use]
         #[inline(always)]
         pub const fn wdu(&self) -> u8 {
             let val = (self.0 >> 13usize) & 0x07;
@@ -2125,7 +1929,7 @@ pub mod regs {
         }
         #[doc = "Week day units"]
         #[inline(always)]
-        pub const fn set_wdu(&mut self, val: u8) {
+        pub fn set_wdu(&mut self, val: u8) {
             self.0 = (self.0 & !(0x07 << 13usize)) | (((val as u32) & 0x07) << 13usize);
         }
     }
@@ -2166,7 +1970,6 @@ pub mod regs {
     pub struct Tsssr(pub u32);
     impl Tsssr {
         #[doc = "Sub second value"]
-        #[must_use]
         #[inline(always)]
         pub const fn ss(&self) -> u16 {
             let val = (self.0 >> 0usize) & 0xffff;
@@ -2174,7 +1977,7 @@ pub mod regs {
         }
         #[doc = "Sub second value"]
         #[inline(always)]
-        pub const fn set_ss(&mut self, val: u16) {
+        pub fn set_ss(&mut self, val: u16) {
             self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
         }
     }
@@ -2201,7 +2004,6 @@ pub mod regs {
     pub struct Tstr(pub u32);
     impl Tstr {
         #[doc = "Second units in BCD format"]
-        #[must_use]
         #[inline(always)]
         pub const fn su(&self) -> u8 {
             let val = (self.0 >> 0usize) & 0x0f;
@@ -2209,11 +2011,10 @@ pub mod regs {
         }
         #[doc = "Second units in BCD format"]
         #[inline(always)]
-        pub const fn set_su(&mut self, val: u8) {
+        pub fn set_su(&mut self, val: u8) {
             self.0 = (self.0 & !(0x0f << 0usize)) | (((val as u32) & 0x0f) << 0usize);
         }
         #[doc = "Second tens in BCD format"]
-        #[must_use]
         #[inline(always)]
         pub const fn st(&self) -> u8 {
             let val = (self.0 >> 4usize) & 0x07;
@@ -2221,11 +2022,10 @@ pub mod regs {
         }
         #[doc = "Second tens in BCD format"]
         #[inline(always)]
-        pub const fn set_st(&mut self, val: u8) {
+        pub fn set_st(&mut self, val: u8) {
             self.0 = (self.0 & !(0x07 << 4usize)) | (((val as u32) & 0x07) << 4usize);
         }
         #[doc = "Minute units in BCD format"]
-        #[must_use]
         #[inline(always)]
         pub const fn mnu(&self) -> u8 {
             let val = (self.0 >> 8usize) & 0x0f;
@@ -2233,11 +2033,10 @@ pub mod regs {
         }
         #[doc = "Minute units in BCD format"]
         #[inline(always)]
-        pub const fn set_mnu(&mut self, val: u8) {
+        pub fn set_mnu(&mut self, val: u8) {
             self.0 = (self.0 & !(0x0f << 8usize)) | (((val as u32) & 0x0f) << 8usize);
         }
         #[doc = "Minute tens in BCD format"]
-        #[must_use]
         #[inline(always)]
         pub const fn mnt(&self) -> u8 {
             let val = (self.0 >> 12usize) & 0x07;
@@ -2245,11 +2044,10 @@ pub mod regs {
         }
         #[doc = "Minute tens in BCD format"]
         #[inline(always)]
-        pub const fn set_mnt(&mut self, val: u8) {
+        pub fn set_mnt(&mut self, val: u8) {
             self.0 = (self.0 & !(0x07 << 12usize)) | (((val as u32) & 0x07) << 12usize);
         }
         #[doc = "Hour units in BCD format"]
-        #[must_use]
         #[inline(always)]
         pub const fn hu(&self) -> u8 {
             let val = (self.0 >> 16usize) & 0x0f;
@@ -2257,11 +2055,10 @@ pub mod regs {
         }
         #[doc = "Hour units in BCD format"]
         #[inline(always)]
-        pub const fn set_hu(&mut self, val: u8) {
+        pub fn set_hu(&mut self, val: u8) {
             self.0 = (self.0 & !(0x0f << 16usize)) | (((val as u32) & 0x0f) << 16usize);
         }
         #[doc = "Hour tens in BCD format"]
-        #[must_use]
         #[inline(always)]
         pub const fn ht(&self) -> u8 {
             let val = (self.0 >> 20usize) & 0x03;
@@ -2269,11 +2066,10 @@ pub mod regs {
         }
         #[doc = "Hour tens in BCD format"]
         #[inline(always)]
-        pub const fn set_ht(&mut self, val: u8) {
+        pub fn set_ht(&mut self, val: u8) {
             self.0 = (self.0 & !(0x03 << 20usize)) | (((val as u32) & 0x03) << 20usize);
         }
         #[doc = "AM/PM notation"]
-        #[must_use]
         #[inline(always)]
         pub const fn pm(&self) -> bool {
             let val = (self.0 >> 22usize) & 0x01;
@@ -2281,7 +2077,7 @@ pub mod regs {
         }
         #[doc = "AM/PM notation"]
         #[inline(always)]
-        pub const fn set_pm(&mut self, val: bool) {
+        pub fn set_pm(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
         }
     }
@@ -2307,17 +2103,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Tstr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Tstr {{ su: {=u8:?}, st: {=u8:?}, mnu: {=u8:?}, mnt: {=u8:?}, hu: {=u8:?}, ht: {=u8:?}, pm: {=bool:?} }}",
-                self.su(),
-                self.st(),
-                self.mnu(),
-                self.mnt(),
-                self.hu(),
-                self.ht(),
-                self.pm()
-            )
+            defmt :: write ! (f , "Tstr {{ su: {=u8:?}, st: {=u8:?}, mnu: {=u8:?}, mnt: {=u8:?}, hu: {=u8:?}, ht: {=u8:?}, pm: {=bool:?} }}" , self . su () , self . st () , self . mnu () , self . mnt () , self . hu () , self . ht () , self . pm ())
         }
     }
     #[doc = "Write protection register"]
@@ -2326,7 +2112,6 @@ pub mod regs {
     pub struct Wpr(pub u32);
     impl Wpr {
         #[doc = "Write protection key"]
-        #[must_use]
         #[inline(always)]
         pub const fn key(&self) -> super::vals::Key {
             let val = (self.0 >> 0usize) & 0xff;
@@ -2334,7 +2119,7 @@ pub mod regs {
         }
         #[doc = "Write protection key"]
         #[inline(always)]
-        pub const fn set_key(&mut self, val: super::vals::Key) {
+        pub fn set_key(&mut self, val: super::vals::Key) {
             self.0 = (self.0 & !(0xff << 0usize)) | (((val.to_bits() as u32) & 0xff) << 0usize);
         }
     }
@@ -2361,7 +2146,6 @@ pub mod regs {
     pub struct Wutr(pub u32);
     impl Wutr {
         #[doc = "Wakeup auto-reload value bits"]
-        #[must_use]
         #[inline(always)]
         pub const fn wut(&self) -> u16 {
             let val = (self.0 >> 0usize) & 0xffff;
@@ -2369,11 +2153,10 @@ pub mod regs {
         }
         #[doc = "Wakeup auto-reload value bits"]
         #[inline(always)]
-        pub const fn set_wut(&mut self, val: u16) {
+        pub fn set_wut(&mut self, val: u16) {
             self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
         }
         #[doc = "Wakeup auto-reload output clear value"]
-        #[must_use]
         #[inline(always)]
         pub const fn wutoclr(&self) -> u16 {
             let val = (self.0 >> 16usize) & 0xffff;
@@ -2381,7 +2164,7 @@ pub mod regs {
         }
         #[doc = "Wakeup auto-reload output clear value"]
         #[inline(always)]
-        pub const fn set_wutoclr(&mut self, val: u16) {
+        pub fn set_wutoclr(&mut self, val: u16) {
             self.0 = (self.0 & !(0xffff << 16usize)) | (((val as u32) & 0xffff) << 16usize);
         }
     }
@@ -2418,7 +2201,7 @@ pub mod vals {
     pub enum Alrf {
         _RESERVED_0 = 0x0,
         #[doc = "This flag is set by hardware when the time/date registers (RTC_TR and RTC_DR) match the Alarm A register (RTC_ALRMAR)"]
-        Match = 0x01,
+        MATCH = 0x01,
     }
     impl Alrf {
         #[inline(always)]
@@ -2448,7 +2231,7 @@ pub mod vals {
     pub enum Alrmf {
         _RESERVED_0 = 0x0,
         #[doc = "This flag is set by hardware when the time/date registers (RTC_TR and RTC_DR) match the Alarm A register (RTC_ALRMAR)"]
-        Match = 0x01,
+        MATCH = 0x01,
     }
     impl Alrmf {
         #[inline(always)]
@@ -2477,9 +2260,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum AlrmrMsk {
         #[doc = "Alarm set if the date/day match"]
-        ToMatch = 0x0,
+        TO_MATCH = 0x0,
         #[doc = "Date/day don’t care in Alarm comparison"]
-        NotMatch = 0x01,
+        NOT_MATCH = 0x01,
     }
     impl AlrmrMsk {
         #[inline(always)]
@@ -2508,9 +2291,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum AlrmrPm {
         #[doc = "AM or 24-hour format"]
-        Am = 0x0,
+        AM = 0x0,
         #[doc = "PM"]
-        Pm = 0x01,
+        PM = 0x01,
     }
     impl AlrmrPm {
         #[inline(always)]
@@ -2540,11 +2323,11 @@ pub mod vals {
     pub enum AlrmrWdsel {
         #[doc = "DU\\[3:0\\]
 represents the date units"]
-        DateUnits = 0x0,
+        DATE_UNITS = 0x0,
         #[doc = "DU\\[3:0\\]
 represents the week day. DT\\[1:0\\]
 is don’t care."]
-        WeekDay = 0x01,
+        WEEK_DAY = 0x01,
     }
     impl AlrmrWdsel {
         #[inline(always)]
@@ -2573,9 +2356,9 @@ is don’t care."]
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Ampm {
         #[doc = "AM or 24-hour format"]
-        Am = 0x0,
+        AM = 0x0,
         #[doc = "PM"]
-        Pm = 0x01,
+        PM = 0x01,
     }
     impl Ampm {
         #[inline(always)]
@@ -2604,9 +2387,9 @@ is don’t care."]
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Calp {
         #[doc = "No RTCCLK pulses are added"]
-        NoChange = 0x0,
+        NO_CHANGE = 0x0,
         #[doc = "One RTCCLK pulse is effectively inserted every 2^11 pulses (frequency increased by 488.5 ppm)"]
-        IncreaseFreq = 0x01,
+        INCREASE_FREQ = 0x01,
     }
     impl Calp {
         #[inline(always)]
@@ -2636,7 +2419,7 @@ is don’t care."]
     pub enum Calrf {
         _RESERVED_0 = 0x0,
         #[doc = "Clear interrupt flag by writing 1"]
-        Clear = 0x01,
+        CLEAR = 0x01,
     }
     impl Calrf {
         #[inline(always)]
@@ -2666,7 +2449,7 @@ is don’t care."]
     pub enum Calw16 {
         _RESERVED_0 = 0x0,
         #[doc = "When CALW16 is set to ‘1’, the 16-second calibration cycle period is selected.This bit must not be set to ‘1’ if CALW8=1"]
-        SixteenSeconds = 0x01,
+        SIXTEEN_SECONDS = 0x01,
     }
     impl Calw16 {
         #[inline(always)]
@@ -2696,7 +2479,7 @@ is don’t care."]
     pub enum Calw8 {
         _RESERVED_0 = 0x0,
         #[doc = "When CALW8 is set to ‘1’, the 8-second calibration cycle period is selected"]
-        EightSeconds = 0x01,
+        EIGHT_SECONDS = 0x01,
     }
     impl Calw8 {
         #[inline(always)]
@@ -2725,9 +2508,9 @@ is don’t care."]
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Cosel {
         #[doc = "Calibration output is 512 Hz (with default prescaler setting)"]
-        CalFreq512hz = 0x0,
+        CAL_FREQ_512HZ = 0x0,
         #[doc = "Calibration output is 1 Hz (with default prescaler setting)"]
-        CalFreq1hz = 0x01,
+        CAL_FREQ_1HZ = 0x01,
     }
     impl Cosel {
         #[inline(always)]
@@ -2756,9 +2539,9 @@ is don’t care."]
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Fmt {
         #[doc = "24 hour/day format"]
-        TwentyFourHour = 0x0,
+        TWENTY_FOUR_HOUR = 0x0,
         #[doc = "AM/PM hour format"]
-        AmPm = 0x01,
+        AM_PM = 0x01,
     }
     impl Fmt {
         #[inline(always)]
@@ -2788,7 +2571,7 @@ is don’t care."]
     pub enum Itsf {
         _RESERVED_0 = 0x0,
         #[doc = "This flag is set by hardware when a timestamp on the internal event occurs"]
-        TimestampEvent = 0x01,
+        TIMESTAMP_EVENT = 0x01,
     }
     impl Itsf {
         #[inline(always)]
@@ -2818,7 +2601,7 @@ is don’t care."]
     pub enum Itsmf {
         _RESERVED_0 = 0x0,
         #[doc = "This flag is set by hardware when a timestamp on the internal event occurs"]
-        TimestampEvent = 0x01,
+        TIMESTAMP_EVENT = 0x01,
     }
     impl Itsmf {
         #[inline(always)]
@@ -2847,11 +2630,11 @@ is don’t care."]
     pub struct Key(u8);
     impl Key {
         #[doc = "Activate write protection (any value that is not the keys)"]
-        pub const Activate: Self = Self(0x0);
+        pub const ACTIVATE: Self = Self(0x0);
         #[doc = "Key 2"]
-        pub const Deactivate2: Self = Self(0x53);
+        pub const DEACTIVATE2: Self = Self(0x53);
         #[doc = "Key 1"]
-        pub const Deactivate1: Self = Self(0xca);
+        pub const DEACTIVATE1: Self = Self(0xca);
     }
     impl Key {
         pub const fn from_bits(val: u8) -> Key {
@@ -2864,9 +2647,9 @@ is don’t care."]
     impl core::fmt::Debug for Key {
         fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
             match self.0 {
-                0x0 => f.write_str("Activate"),
-                0x53 => f.write_str("Deactivate2"),
-                0xca => f.write_str("Deactivate1"),
+                0x0 => f.write_str("ACTIVATE"),
+                0x53 => f.write_str("DEACTIVATE2"),
+                0xca => f.write_str("DEACTIVATE1"),
                 other => core::write!(f, "0x{:02X}", other),
             }
         }
@@ -2875,9 +2658,9 @@ is don’t care."]
     impl defmt::Format for Key {
         fn format(&self, f: defmt::Formatter) {
             match self.0 {
-                0x0 => defmt::write!(f, "Activate"),
-                0x53 => defmt::write!(f, "Deactivate2"),
-                0xca => defmt::write!(f, "Deactivate1"),
+                0x0 => defmt::write!(f, "ACTIVATE"),
+                0x53 => defmt::write!(f, "DEACTIVATE2"),
+                0xca => defmt::write!(f, "DEACTIVATE1"),
                 other => defmt::write!(f, "0x{:02X}", other),
             }
         }
@@ -2899,9 +2682,9 @@ is don’t care."]
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Lpcal {
         #[doc = "Calibration window is 220 RTCCLK, which is a high-consumption mode. This mode should be set only when less than 32s calibration window is required"]
-        Rtcclk = 0x0,
+        RTCCLK = 0x0,
         #[doc = "Calibration window is 220 ck_apre, which is the required configuration for ultra-low consumption mode"]
-        CkApre = 0x01,
+        CK_APRE = 0x01,
     }
     impl Lpcal {
         #[inline(always)]
@@ -2930,13 +2713,13 @@ is don’t care."]
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Osel {
         #[doc = "Output disabled"]
-        Disabled = 0x0,
+        DISABLED = 0x0,
         #[doc = "Alarm A output enabled"]
-        AlarmA = 0x01,
+        ALARM_A = 0x01,
         #[doc = "Alarm B output enabled"]
-        AlarmB = 0x02,
+        ALARM_B = 0x02,
         #[doc = "Wakeup output enabled"]
-        Wakeup = 0x03,
+        WAKEUP = 0x03,
     }
     impl Osel {
         #[inline(always)]
@@ -2965,9 +2748,9 @@ is don’t care."]
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Pol {
         #[doc = "The pin is high when ALRAF/ALRBF/WUTF is asserted (depending on OSEL\\[1:0\\])"]
-        High = 0x0,
+        HIGH = 0x0,
         #[doc = "The pin is low when ALRAF/ALRBF/WUTF is asserted (depending on OSEL\\[1:0\\])"]
-        Low = 0x01,
+        LOW = 0x01,
     }
     impl Pol {
         #[inline(always)]
@@ -2997,7 +2780,7 @@ is don’t care."]
     pub enum Recalpf {
         _RESERVED_0 = 0x0,
         #[doc = "The RECALPF status flag is automatically set to 1 when software writes to the RTC_CALR register, indicating that the RTC_CALR register is blocked. When the new calibration settings are taken into account, this bit returns to 0"]
-        Pending = 0x01,
+        PENDING = 0x01,
     }
     impl Recalpf {
         #[inline(always)]
@@ -3026,9 +2809,9 @@ is don’t care."]
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum TampalrmType {
         #[doc = "TAMPALRM is push-pull output"]
-        PushPull = 0x0,
+        PUSH_PULL = 0x0,
         #[doc = "TAMPALRM is open-drain output"]
-        OpenDrain = 0x01,
+        OPEN_DRAIN = 0x01,
     }
     impl TampalrmType {
         #[inline(always)]
@@ -3057,9 +2840,9 @@ is don’t care."]
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Tsedge {
         #[doc = "RTC_TS input rising edge generates a time-stamp event"]
-        RisingEdge = 0x0,
+        RISING_EDGE = 0x0,
         #[doc = "RTC_TS input falling edge generates a time-stamp event"]
-        FallingEdge = 0x01,
+        FALLING_EDGE = 0x01,
     }
     impl Tsedge {
         #[inline(always)]
@@ -3089,7 +2872,7 @@ is don’t care."]
     pub enum Tsf {
         _RESERVED_0 = 0x0,
         #[doc = "This flag is set by hardware when a time-stamp event occurs"]
-        TimestampEvent = 0x01,
+        TIMESTAMP_EVENT = 0x01,
     }
     impl Tsf {
         #[inline(always)]
@@ -3119,7 +2902,7 @@ is don’t care."]
     pub enum Tsmf {
         _RESERVED_0 = 0x0,
         #[doc = "This flag is set by hardware when a time-stamp event occurs"]
-        TimestampEvent = 0x01,
+        TIMESTAMP_EVENT = 0x01,
     }
     impl Tsmf {
         #[inline(always)]
@@ -3149,7 +2932,7 @@ is don’t care."]
     pub enum Tsovf {
         _RESERVED_0 = 0x0,
         #[doc = "This flag is set by hardware when a time-stamp event occurs while TSF is already set"]
-        Overflow = 0x01,
+        OVERFLOW = 0x01,
     }
     impl Tsovf {
         #[inline(always)]
@@ -3179,7 +2962,7 @@ is don’t care."]
     pub enum Tsovmf {
         _RESERVED_0 = 0x0,
         #[doc = "This flag is set by hardware when a time-stamp event occurs while TSF is already set"]
-        Overflow = 0x01,
+        OVERFLOW = 0x01,
     }
     impl Tsovmf {
         #[inline(always)]
@@ -3208,18 +2991,18 @@ is don’t care."]
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Wucksel {
         #[doc = "RTC/16 clock is selected"]
-        Div16 = 0x0,
+        DIV16 = 0x0,
         #[doc = "RTC/8 clock is selected"]
-        Div8 = 0x01,
+        DIV8 = 0x01,
         #[doc = "RTC/4 clock is selected"]
-        Div4 = 0x02,
+        DIV4 = 0x02,
         #[doc = "RTC/2 clock is selected"]
-        Div2 = 0x03,
+        DIV2 = 0x03,
         #[doc = "ck_spre (usually 1 Hz) clock is selected"]
-        ClockSpare = 0x04,
+        CLOCK_SPARE = 0x04,
         _RESERVED_5 = 0x05,
         #[doc = "ck_spre (usually 1 Hz) clock is selected and 2^16 is added to the WUT counter value"]
-        ClockSpareWithOffset = 0x06,
+        CLOCK_SPARE_WITH_OFFSET = 0x06,
         _RESERVED_7 = 0x07,
     }
     impl Wucksel {
@@ -3250,7 +3033,7 @@ is don’t care."]
     pub enum Wutf {
         _RESERVED_0 = 0x0,
         #[doc = "This flag is set by hardware when the wakeup auto-reload counter reaches 0"]
-        Zero = 0x01,
+        ZERO = 0x01,
     }
     impl Wutf {
         #[inline(always)]
@@ -3280,7 +3063,7 @@ is don’t care."]
     pub enum Wutmf {
         _RESERVED_0 = 0x0,
         #[doc = "This flag is set by hardware when the wakeup auto-reload counter reaches 0"]
-        Zero = 0x01,
+        ZERO = 0x01,
     }
     impl Wutmf {
         #[inline(always)]

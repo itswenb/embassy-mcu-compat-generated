@@ -530,8 +530,6 @@ mod _vectors {
     ];
 }
 pub const UID: uid::Uid = unsafe { uid::Uid::from_ptr(0x0bfa_0700usize as _) };
-pub const TS_CAL1: tscal::Tscal = unsafe { tscal::Tscal::from_ptr(0x0bfa_0710usize as _) };
-pub const TS_CAL2: tscal::Tscal = unsafe { tscal::Tscal::from_ptr(0x0bfa_0742usize as _) };
 pub const TIM2: timer::TimGp32 = unsafe { timer::TimGp32::from_ptr(0x4000_0000usize as _) };
 pub const TIM3: timer::TimGp32 = unsafe { timer::TimGp32::from_ptr(0x4000_0400usize as _) };
 pub const TIM4: timer::TimGp32 = unsafe { timer::TimGp32::from_ptr(0x4000_0800usize as _) };
@@ -566,15 +564,11 @@ pub const FMAC: fmac::Fmac = unsafe { fmac::Fmac::from_ptr(0x4002_1400usize as _
 pub const FLASH: flash::Flash = unsafe { flash::Flash::from_ptr(0x4002_2000usize as _) };
 pub const CRC: crc::Crc = unsafe { crc::Crc::from_ptr(0x4002_3000usize as _) };
 pub const TSC: tsc::Tsc = unsafe { tsc::Tsc::from_ptr(0x4002_4000usize as _) };
-pub const MDF1: mdf::Mdf = unsafe { mdf::Mdf::from_ptr(0x4002_5000usize as _) };
+pub const MDF1: *mut () = 0x4002_5000usize as _;
 pub const RAMCFG: ramcfg::Ramcfg = unsafe { ramcfg::Ramcfg::from_ptr(0x4002_6000usize as _) };
 pub const ICACHE: icache::Icache = unsafe { icache::Icache::from_ptr(0x4003_0400usize as _) };
 pub const DCACHE1: dcache::Dcache = unsafe { dcache::Dcache::from_ptr(0x4003_1400usize as _) };
 pub const GTZC: gtzc::Gtzc1Tzsc = unsafe { gtzc::Gtzc1Tzsc::from_ptr(0x4003_2400usize as _) };
-pub const GTZC_TZSC: gtzc::Gtzc1Tzsc = unsafe { gtzc::Gtzc1Tzsc::from_ptr(0x4003_2400usize as _) };
-pub const GTZC_TZIC: gtzc::Tzic = unsafe { gtzc::Tzic::from_ptr(0x4003_2800usize as _) };
-pub const GTZC_MPCBB1: gtzc::Mpcbb = unsafe { gtzc::Mpcbb::from_ptr(0x4003_2c00usize as _) };
-pub const GTZC_MPCBB2: gtzc::Mpcbb = unsafe { gtzc::Mpcbb::from_ptr(0x4003_3000usize as _) };
 pub const GPIOA: gpio::Gpio = unsafe { gpio::Gpio::from_ptr(0x4202_0000usize as _) };
 pub const GPIOB: gpio::Gpio = unsafe { gpio::Gpio::from_ptr(0x4202_0400usize as _) };
 pub const GPIOC: gpio::Gpio = unsafe { gpio::Gpio::from_ptr(0x4202_0800usize as _) };
@@ -583,7 +577,7 @@ pub const GPIOE: gpio::Gpio = unsafe { gpio::Gpio::from_ptr(0x4202_1000usize as 
 pub const GPIOG: gpio::Gpio = unsafe { gpio::Gpio::from_ptr(0x4202_1800usize as _) };
 pub const GPIOH: gpio::Gpio = unsafe { gpio::Gpio::from_ptr(0x4202_1c00usize as _) };
 pub const ADC1: adc::Adc = unsafe { adc::Adc::from_ptr(0x4202_8000usize as _) };
-pub const ADC12_COMMON: adccommon::AdcCommon = unsafe { adccommon::AdcCommon::from_ptr(0x4204_8300usize as _) };
+pub const ADC12_COMMON: adccommon::AdcCommon = unsafe { adccommon::AdcCommon::from_ptr(0x4202_8308usize as _) };
 pub const AES: aes::Aes = unsafe { aes::Aes::from_ptr(0x420c_0000usize as _) };
 pub const HASH: hash::Hash = unsafe { hash::Hash::from_ptr(0x420c_0400usize as _) };
 pub const RNG: rng::Rng = unsafe { rng::Rng::from_ptr(0x420c_0800usize as _) };
@@ -611,7 +605,6 @@ pub const ADC4: adc::Adc4 = unsafe { adc::Adc4::from_ptr(0x4602_1000usize as _) 
 pub const ADC4_COMMON: adccommon::AdcCommon = unsafe { adccommon::AdcCommon::from_ptr(0x4602_1308usize as _) };
 pub const DAC1: dac::Dac = unsafe { dac::Dac::from_ptr(0x4602_1800usize as _) };
 pub const EXTI: exti::Exti = unsafe { exti::Exti::from_ptr(0x4602_2000usize as _) };
-pub const GTZC_MPCBB4: gtzc::Mpcbb = unsafe { gtzc::Mpcbb::from_ptr(0x4602_3800usize as _) };
 pub const ADF1: adf::Adf = unsafe { adf::Adf::from_ptr(0x4602_4000usize as _) };
 pub const LPDMA1: lpdma::Lpdma = unsafe { lpdma::Lpdma::from_ptr(0x4602_5000usize as _) };
 pub const DBGMCU: dbgmcu::Dbgmcu = unsafe { dbgmcu::Dbgmcu::from_ptr(0xe004_4000usize as _) };
@@ -619,9 +612,9 @@ pub const DBGMCU: dbgmcu::Dbgmcu = unsafe { dbgmcu::Dbgmcu::from_ptr(0xe004_4000
 #[cfg(feature = "rt")]
 pub const NVIC_PRIO_BITS: u8 = 4;
 #[cfg(feature = "rt")]
-pub use Interrupt as interrupt;
-#[cfg(feature = "rt")]
 pub use cortex_m_rt::interrupt;
+#[cfg(feature = "rt")]
+pub use Interrupt as interrupt;
 #[path = "../../peripherals/adc_u5.rs"]
 pub mod adc;
 #[path = "../../peripherals/adccommon_u5.rs"]
@@ -674,8 +667,6 @@ pub mod iwdg;
 pub mod lpdma;
 #[path = "../../peripherals/lptim_v2a.rs"]
 pub mod lptim;
-#[path = "../../peripherals/mdf_u5.rs"]
-pub mod mdf;
 #[path = "../../peripherals/octospi_v1.rs"]
 pub mod octospi;
 #[path = "../../peripherals/opamp_v3.rs"]
@@ -708,8 +699,6 @@ pub mod tamp;
 pub mod timer;
 #[path = "../../peripherals/tsc_v3.rs"]
 pub mod tsc;
-#[path = "../../peripherals/tscal_v1.rs"]
-pub mod tscal;
 #[path = "../../peripherals/uid_v1.rs"]
 pub mod uid;
 #[path = "../../peripherals/usart_v4.rs"]

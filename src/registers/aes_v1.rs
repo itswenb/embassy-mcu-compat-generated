@@ -259,24 +259,24 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 2,
             variants: &[
                 EnumVariant {
-                    name: "Bit",
-                    description: Some("Bit"),
-                    value: 3,
+                    name: "NONE",
+                    description: Some("Word"),
+                    value: 0,
                 },
                 EnumVariant {
-                    name: "Byte",
-                    description: Some("Byte (8-bit)"),
-                    value: 2,
-                },
-                EnumVariant {
-                    name: "HalfWord",
+                    name: "HALF_WORD",
                     description: Some("Half-word (16-bit)"),
                     value: 1,
                 },
                 EnumVariant {
-                    name: "None",
-                    description: Some("Word"),
-                    value: 0,
+                    name: "BYTE",
+                    description: Some("Byte (8-bit)"),
+                    value: 2,
+                },
+                EnumVariant {
+                    name: "BIT",
+                    description: Some("Bit"),
+                    value: 3,
                 },
             ],
         },
@@ -286,22 +286,22 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 2,
             variants: &[
                 EnumVariant {
-                    name: "Mode1",
+                    name: "MODE1",
                     description: Some("Encryption"),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "Mode2",
+                    name: "MODE2",
                     description: Some("Key derivation (or key preparation for ECB/CBC decryption)"),
                     value: 1,
                 },
                 EnumVariant {
-                    name: "Mode3",
+                    name: "MODE3",
                     description: Some("Decryption"),
                     value: 2,
                 },
                 EnumVariant {
-                    name: "Mode4",
+                    name: "MODE4",
                     description: Some("Key derivation then single decryption"),
                     value: 3,
                 },

@@ -8,7 +8,7 @@
             description: None,
             items: &[
                 BlockItem {
-                    name: "hpdf_c_hx_ctl_0",
+                    name: "hpdf_chx_ctl_0",
                     description: None,
                     array: None,
                     byte_offset: 0x0,
@@ -17,13 +17,13 @@
                             access: Access::ReadWrite,
                             bit_size: 32,
                             fieldset: Some(
-                                "HpdfCHxCtl",
+                                "HpdfChxCtl",
                             ),
                         },
                     ),
                 },
                 BlockItem {
-                    name: "hpdf_c_hx_cfg0_0",
+                    name: "hpdf_chx_cfg0_0",
                     description: None,
                     array: None,
                     byte_offset: 0x4,
@@ -32,13 +32,13 @@
                             access: Access::ReadWrite,
                             bit_size: 32,
                             fieldset: Some(
-                                "HpdfCHxCfg0",
+                                "HpdfChxCfg0",
                             ),
                         },
                     ),
                 },
                 BlockItem {
-                    name: "hpdf_c_hx_cfg1_0",
+                    name: "hpdf_chx_cfg1_0",
                     description: None,
                     array: None,
                     byte_offset: 0x8,
@@ -47,13 +47,13 @@
                             access: Access::ReadWrite,
                             bit_size: 32,
                             fieldset: Some(
-                                "HpdfCHxCfg1",
+                                "HpdfChxCfg1",
                             ),
                         },
                     ),
                 },
                 BlockItem {
-                    name: "hpdf_c_hx_tmfdt_0",
+                    name: "hpdf_chx_tmfdt_0",
                     description: None,
                     array: None,
                     byte_offset: 0xc,
@@ -62,13 +62,13 @@
                             access: Access::ReadWrite,
                             bit_size: 32,
                             fieldset: Some(
-                                "HpdfCHxTmfdt",
+                                "HpdfChxTmfdt",
                             ),
                         },
                     ),
                 },
                 BlockItem {
-                    name: "hpdf_c_hx_pdi_0",
+                    name: "hpdf_chx_pdi_0",
                     description: None,
                     array: None,
                     byte_offset: 0x10,
@@ -77,13 +77,13 @@
                             access: Access::ReadWrite,
                             bit_size: 32,
                             fieldset: Some(
-                                "HpdfCHxPdi",
+                                "HpdfChxPdi",
                             ),
                         },
                     ),
                 },
                 BlockItem {
-                    name: "hpdf_c_hx_ps_0",
+                    name: "hpdf_chx_ps_0",
                     description: None,
                     array: None,
                     byte_offset: 0x14,
@@ -92,13 +92,13 @@
                             access: Access::ReadWrite,
                             bit_size: 32,
                             fieldset: Some(
-                                "HpdfCHxPs",
+                                "HpdfChxPs",
                             ),
                         },
                     ),
                 },
                 BlockItem {
-                    name: "hpdf_c_hx_ctl_1",
+                    name: "hpdf_chx_ctl_1",
                     description: None,
                     array: None,
                     byte_offset: 0x20,
@@ -107,13 +107,13 @@
                             access: Access::ReadWrite,
                             bit_size: 32,
                             fieldset: Some(
-                                "HpdfCHxCtl",
+                                "HpdfChxCtl",
                             ),
                         },
                     ),
                 },
                 BlockItem {
-                    name: "hpdf_c_hx_cfg0_1",
+                    name: "hpdf_chx_cfg0_1",
                     description: None,
                     array: None,
                     byte_offset: 0x24,
@@ -122,13 +122,13 @@
                             access: Access::ReadWrite,
                             bit_size: 32,
                             fieldset: Some(
-                                "HpdfCHxCfg0",
+                                "HpdfChxCfg0",
                             ),
                         },
                     ),
                 },
                 BlockItem {
-                    name: "hpdf_c_hx_cfg1_1",
+                    name: "hpdf_chx_cfg1_1",
                     description: None,
                     array: None,
                     byte_offset: 0x28,
@@ -137,13 +137,13 @@
                             access: Access::ReadWrite,
                             bit_size: 32,
                             fieldset: Some(
-                                "HpdfCHxCfg1",
+                                "HpdfChxCfg1",
                             ),
                         },
                     ),
                 },
                 BlockItem {
-                    name: "hpdf_c_hx_tmfdt_1",
+                    name: "hpdf_chx_tmfdt_1",
                     description: None,
                     array: None,
                     byte_offset: 0x2c,
@@ -152,13 +152,13 @@
                             access: Access::ReadWrite,
                             bit_size: 32,
                             fieldset: Some(
-                                "HpdfCHxTmfdt",
+                                "HpdfChxTmfdt",
                             ),
                         },
                     ),
                 },
                 BlockItem {
-                    name: "hpdf_c_hx_pdi_1",
+                    name: "hpdf_chx_pdi_1",
                     description: None,
                     array: None,
                     byte_offset: 0x30,
@@ -167,13 +167,13 @@
                             access: Access::ReadWrite,
                             bit_size: 32,
                             fieldset: Some(
-                                "HpdfCHxPdi",
+                                "HpdfChxPdi",
                             ),
                         },
                     ),
                 },
                 BlockItem {
-                    name: "hpdf_c_hx_ps_1",
+                    name: "hpdf_chx_ps_1",
                     description: None,
                     array: None,
                     byte_offset: 0x34,
@@ -182,13 +182,13 @@
                             access: Access::ReadWrite,
                             bit_size: 32,
                             fieldset: Some(
-                                "HpdfCHxPs",
+                                "HpdfChxPs",
                             ),
                         },
                     ),
                 },
                 BlockItem {
-                    name: "hpdf_fl_ty_ctl0_0",
+                    name: "hpdf_flty_ctl0_0",
                     description: None,
                     array: None,
                     byte_offset: 0x100,
@@ -197,13 +197,13 @@
                             access: Access::ReadWrite,
                             bit_size: 32,
                             fieldset: Some(
-                                "HpdfFlTyCtl0",
+                                "HpdfFltyCtl0",
                             ),
                         },
                     ),
                 },
                 BlockItem {
-                    name: "hpdf_fl_ty_ctl1_0",
+                    name: "hpdf_flty_ctl1_0",
                     description: None,
                     array: None,
                     byte_offset: 0x104,
@@ -212,13 +212,13 @@
                             access: Access::ReadWrite,
                             bit_size: 32,
                             fieldset: Some(
-                                "HpdfFlTyCtl1",
+                                "HpdfFltyCtl1",
                             ),
                         },
                     ),
                 },
                 BlockItem {
-                    name: "hpdf_fl_ty_stat_0",
+                    name: "hpdf_flty_stat_0",
                     description: None,
                     array: None,
                     byte_offset: 0x108,
@@ -227,13 +227,13 @@
                             access: Access::ReadWrite,
                             bit_size: 32,
                             fieldset: Some(
-                                "HpdfFlTyStat",
+                                "HpdfFltyStat",
                             ),
                         },
                     ),
                 },
                 BlockItem {
-                    name: "hpdf_fl_ty_intc_0",
+                    name: "hpdf_flty_intc_0",
                     description: None,
                     array: None,
                     byte_offset: 0x10c,
@@ -242,13 +242,13 @@
                             access: Access::ReadWrite,
                             bit_size: 32,
                             fieldset: Some(
-                                "HpdfFlTyIntc",
+                                "HpdfFltyIntc",
                             ),
                         },
                     ),
                 },
                 BlockItem {
-                    name: "hpdf_fl_ty_igcs_0",
+                    name: "hpdf_flty_igcs_0",
                     description: None,
                     array: None,
                     byte_offset: 0x110,
@@ -257,13 +257,13 @@
                             access: Access::ReadWrite,
                             bit_size: 32,
                             fieldset: Some(
-                                "HpdfFlTyIgcs",
+                                "HpdfFltyIgcs",
                             ),
                         },
                     ),
                 },
                 BlockItem {
-                    name: "hpdf_fl_ty_sfcfg_0",
+                    name: "hpdf_flty_sfcfg_0",
                     description: None,
                     array: None,
                     byte_offset: 0x114,
@@ -272,13 +272,13 @@
                             access: Access::ReadWrite,
                             bit_size: 32,
                             fieldset: Some(
-                                "HpdfFlTySfcfg",
+                                "HpdfFltySfcfg",
                             ),
                         },
                     ),
                 },
                 BlockItem {
-                    name: "hpdf_fl_ty_idata_0",
+                    name: "hpdf_flty_idata_0",
                     description: None,
                     array: None,
                     byte_offset: 0x118,
@@ -287,13 +287,13 @@
                             access: Access::ReadWrite,
                             bit_size: 32,
                             fieldset: Some(
-                                "HpdfFlTyIdata",
+                                "HpdfFltyIdata",
                             ),
                         },
                     ),
                 },
                 BlockItem {
-                    name: "hpdf_fl_ty_rdata_0",
+                    name: "hpdf_flty_rdata_0",
                     description: None,
                     array: None,
                     byte_offset: 0x11c,
@@ -302,13 +302,13 @@
                             access: Access::ReadWrite,
                             bit_size: 32,
                             fieldset: Some(
-                                "HpdfFlTyRdata",
+                                "HpdfFltyRdata",
                             ),
                         },
                     ),
                 },
                 BlockItem {
-                    name: "hpdf_fl_ty_tmht_0",
+                    name: "hpdf_flty_tmht_0",
                     description: None,
                     array: None,
                     byte_offset: 0x120,
@@ -317,13 +317,13 @@
                             access: Access::ReadWrite,
                             bit_size: 32,
                             fieldset: Some(
-                                "HpdfFlTyTmht",
+                                "HpdfFltyTmht",
                             ),
                         },
                     ),
                 },
                 BlockItem {
-                    name: "hpdf_fl_ty_tmlt_0",
+                    name: "hpdf_flty_tmlt_0",
                     description: None,
                     array: None,
                     byte_offset: 0x124,
@@ -332,13 +332,13 @@
                             access: Access::ReadWrite,
                             bit_size: 32,
                             fieldset: Some(
-                                "HpdfFlTyTmlt",
+                                "HpdfFltyTmlt",
                             ),
                         },
                     ),
                 },
                 BlockItem {
-                    name: "hpdf_fl_ty_tmstat_0",
+                    name: "hpdf_flty_tmstat_0",
                     description: None,
                     array: None,
                     byte_offset: 0x128,
@@ -347,13 +347,13 @@
                             access: Access::ReadWrite,
                             bit_size: 32,
                             fieldset: Some(
-                                "HpdfFlTyTmstat",
+                                "HpdfFltyTmstat",
                             ),
                         },
                     ),
                 },
                 BlockItem {
-                    name: "hpdf_fl_ty_tmfc_0",
+                    name: "hpdf_flty_tmfc_0",
                     description: None,
                     array: None,
                     byte_offset: 0x12c,
@@ -362,13 +362,13 @@
                             access: Access::ReadWrite,
                             bit_size: 32,
                             fieldset: Some(
-                                "HpdfFlTyTmfc",
+                                "HpdfFltyTmfc",
                             ),
                         },
                     ),
                 },
                 BlockItem {
-                    name: "hpdf_fl_ty_emmax_0",
+                    name: "hpdf_flty_emmax_0",
                     description: None,
                     array: None,
                     byte_offset: 0x130,
@@ -377,13 +377,13 @@
                             access: Access::ReadWrite,
                             bit_size: 32,
                             fieldset: Some(
-                                "HpdfFlTyEmmax",
+                                "HpdfFltyEmmax",
                             ),
                         },
                     ),
                 },
                 BlockItem {
-                    name: "hpdf_fl_ty_emmin_0",
+                    name: "hpdf_flty_emmin_0",
                     description: None,
                     array: None,
                     byte_offset: 0x134,
@@ -392,13 +392,13 @@
                             access: Access::ReadWrite,
                             bit_size: 32,
                             fieldset: Some(
-                                "HpdfFlTyEmmin",
+                                "HpdfFltyEmmin",
                             ),
                         },
                     ),
                 },
                 BlockItem {
-                    name: "hpdf_fl_ty_ctl0_1",
+                    name: "hpdf_flty_ctl0_1",
                     description: None,
                     array: None,
                     byte_offset: 0x180,
@@ -407,13 +407,13 @@
                             access: Access::ReadWrite,
                             bit_size: 32,
                             fieldset: Some(
-                                "HpdfFlTyCtl0",
+                                "HpdfFltyCtl0",
                             ),
                         },
                     ),
                 },
                 BlockItem {
-                    name: "hpdf_fl_ty_ctl1_1",
+                    name: "hpdf_flty_ctl1_1",
                     description: None,
                     array: None,
                     byte_offset: 0x184,
@@ -422,13 +422,13 @@
                             access: Access::ReadWrite,
                             bit_size: 32,
                             fieldset: Some(
-                                "HpdfFlTyCtl1",
+                                "HpdfFltyCtl1",
                             ),
                         },
                     ),
                 },
                 BlockItem {
-                    name: "hpdf_fl_ty_stat_1",
+                    name: "hpdf_flty_stat_1",
                     description: None,
                     array: None,
                     byte_offset: 0x188,
@@ -437,13 +437,13 @@
                             access: Access::ReadWrite,
                             bit_size: 32,
                             fieldset: Some(
-                                "HpdfFlTyStat",
+                                "HpdfFltyStat",
                             ),
                         },
                     ),
                 },
                 BlockItem {
-                    name: "hpdf_fl_ty_intc_1",
+                    name: "hpdf_flty_intc_1",
                     description: None,
                     array: None,
                     byte_offset: 0x18c,
@@ -452,13 +452,13 @@
                             access: Access::ReadWrite,
                             bit_size: 32,
                             fieldset: Some(
-                                "HpdfFlTyIntc",
+                                "HpdfFltyIntc",
                             ),
                         },
                     ),
                 },
                 BlockItem {
-                    name: "hpdf_fl_ty_igcs_1",
+                    name: "hpdf_flty_igcs_1",
                     description: None,
                     array: None,
                     byte_offset: 0x190,
@@ -467,13 +467,13 @@
                             access: Access::ReadWrite,
                             bit_size: 32,
                             fieldset: Some(
-                                "HpdfFlTyIgcs",
+                                "HpdfFltyIgcs",
                             ),
                         },
                     ),
                 },
                 BlockItem {
-                    name: "hpdf_fl_ty_sfcfg_1",
+                    name: "hpdf_flty_sfcfg_1",
                     description: None,
                     array: None,
                     byte_offset: 0x194,
@@ -482,13 +482,13 @@
                             access: Access::ReadWrite,
                             bit_size: 32,
                             fieldset: Some(
-                                "HpdfFlTySfcfg",
+                                "HpdfFltySfcfg",
                             ),
                         },
                     ),
                 },
                 BlockItem {
-                    name: "hpdf_fl_ty_idata_1",
+                    name: "hpdf_flty_idata_1",
                     description: None,
                     array: None,
                     byte_offset: 0x198,
@@ -497,13 +497,13 @@
                             access: Access::ReadWrite,
                             bit_size: 32,
                             fieldset: Some(
-                                "HpdfFlTyIdata",
+                                "HpdfFltyIdata",
                             ),
                         },
                     ),
                 },
                 BlockItem {
-                    name: "hpdf_fl_ty_rdata_1",
+                    name: "hpdf_flty_rdata_1",
                     description: None,
                     array: None,
                     byte_offset: 0x19c,
@@ -512,13 +512,13 @@
                             access: Access::ReadWrite,
                             bit_size: 32,
                             fieldset: Some(
-                                "HpdfFlTyRdata",
+                                "HpdfFltyRdata",
                             ),
                         },
                     ),
                 },
                 BlockItem {
-                    name: "hpdf_fl_ty_tmht_1",
+                    name: "hpdf_flty_tmht_1",
                     description: None,
                     array: None,
                     byte_offset: 0x1a0,
@@ -527,13 +527,13 @@
                             access: Access::ReadWrite,
                             bit_size: 32,
                             fieldset: Some(
-                                "HpdfFlTyTmht",
+                                "HpdfFltyTmht",
                             ),
                         },
                     ),
                 },
                 BlockItem {
-                    name: "hpdf_fl_ty_tmlt_1",
+                    name: "hpdf_flty_tmlt_1",
                     description: None,
                     array: None,
                     byte_offset: 0x1a4,
@@ -542,13 +542,13 @@
                             access: Access::ReadWrite,
                             bit_size: 32,
                             fieldset: Some(
-                                "HpdfFlTyTmlt",
+                                "HpdfFltyTmlt",
                             ),
                         },
                     ),
                 },
                 BlockItem {
-                    name: "hpdf_fl_ty_tmstat_1",
+                    name: "hpdf_flty_tmstat_1",
                     description: None,
                     array: None,
                     byte_offset: 0x1a8,
@@ -557,13 +557,13 @@
                             access: Access::ReadWrite,
                             bit_size: 32,
                             fieldset: Some(
-                                "HpdfFlTyTmstat",
+                                "HpdfFltyTmstat",
                             ),
                         },
                     ),
                 },
                 BlockItem {
-                    name: "hpdf_fl_ty_tmfc_1",
+                    name: "hpdf_flty_tmfc_1",
                     description: None,
                     array: None,
                     byte_offset: 0x1ac,
@@ -572,13 +572,13 @@
                             access: Access::ReadWrite,
                             bit_size: 32,
                             fieldset: Some(
-                                "HpdfFlTyTmfc",
+                                "HpdfFltyTmfc",
                             ),
                         },
                     ),
                 },
                 BlockItem {
-                    name: "hpdf_fl_ty_emmax_1",
+                    name: "hpdf_flty_emmax_1",
                     description: None,
                     array: None,
                     byte_offset: 0x1b0,
@@ -587,13 +587,13 @@
                             access: Access::ReadWrite,
                             bit_size: 32,
                             fieldset: Some(
-                                "HpdfFlTyEmmax",
+                                "HpdfFltyEmmax",
                             ),
                         },
                     ),
                 },
                 BlockItem {
-                    name: "hpdf_fl_ty_emmin_1",
+                    name: "hpdf_flty_emmin_1",
                     description: None,
                     array: None,
                     byte_offset: 0x1b4,
@@ -602,7 +602,7 @@
                             access: Access::ReadWrite,
                             bit_size: 32,
                             fieldset: Some(
-                                "HpdfFlTyEmmin",
+                                "HpdfFltyEmmin",
                             ),
                         },
                     ),
@@ -612,13 +612,13 @@
     ],
     fieldsets: &[
         FieldSet {
-            name: "HpdfCHxCfg0",
+            name: "HpdfChxCfg0",
             extends: None,
             description: None,
             bit_size: 32,
             fields: &[
                 Field {
-                    name: "hpdf_c_hx_cfg0_dtrs",
+                    name: "hpdf_chx_cfg0_dtrs",
                     description: None,
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
@@ -630,7 +630,7 @@
                     enumm: None,
                 },
                 Field {
-                    name: "hpdf_c_hx_cfg0_caloff",
+                    name: "hpdf_chx_cfg0_caloff",
                     description: None,
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
@@ -644,13 +644,13 @@
             ],
         },
         FieldSet {
-            name: "HpdfCHxCfg1",
+            name: "HpdfChxCfg1",
             extends: None,
             description: None,
             bit_size: 32,
             fields: &[
                 Field {
-                    name: "hpdf_c_hx_cfg1_mmct",
+                    name: "hpdf_chx_cfg1_mmct",
                     description: None,
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
@@ -662,7 +662,7 @@
                     enumm: None,
                 },
                 Field {
-                    name: "hpdf_c_hx_cfg1_mmbsd",
+                    name: "hpdf_chx_cfg1_mmbsd",
                     description: None,
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
@@ -674,7 +674,7 @@
                     enumm: None,
                 },
                 Field {
-                    name: "hpdf_c_hx_cfg1_tmfor",
+                    name: "hpdf_chx_cfg1_tmfor",
                     description: None,
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
@@ -686,7 +686,7 @@
                     enumm: None,
                 },
                 Field {
-                    name: "hpdf_c_hx_cfg1_tmsfo",
+                    name: "hpdf_chx_cfg1_tmsfo",
                     description: None,
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
@@ -700,13 +700,13 @@
             ],
         },
         FieldSet {
-            name: "HpdfCHxCtl",
+            name: "HpdfChxCtl",
             extends: None,
             description: None,
             bit_size: 32,
             fields: &[
                 Field {
-                    name: "hpdf_c_hx_ctl_sityp",
+                    name: "hpdf_chx_ctl_sityp",
                     description: None,
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
@@ -718,7 +718,7 @@
                     enumm: None,
                 },
                 Field {
-                    name: "hpdf_c_hx_ctl_spickss",
+                    name: "hpdf_chx_ctl_spickss",
                     description: None,
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
@@ -730,7 +730,7 @@
                     enumm: None,
                 },
                 Field {
-                    name: "hpdf_c_hx_ctl_mmen",
+                    name: "hpdf_chx_ctl_mmen",
                     description: None,
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
@@ -742,7 +742,7 @@
                     enumm: None,
                 },
                 Field {
-                    name: "hpdf_c_hx_ctl_cklen",
+                    name: "hpdf_chx_ctl_cklen",
                     description: None,
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
@@ -754,7 +754,7 @@
                     enumm: None,
                 },
                 Field {
-                    name: "hpdf_c_hx_ctl_chen",
+                    name: "hpdf_chx_ctl_chen",
                     description: None,
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
@@ -766,7 +766,7 @@
                     enumm: None,
                 },
                 Field {
-                    name: "hpdf_c_hx_ctl_chpinsel",
+                    name: "hpdf_chx_ctl_chpinsel",
                     description: None,
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
@@ -778,7 +778,7 @@
                     enumm: None,
                 },
                 Field {
-                    name: "hpdf_c_hx_ctl_cmsd",
+                    name: "hpdf_chx_ctl_cmsd",
                     description: None,
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
@@ -790,7 +790,7 @@
                     enumm: None,
                 },
                 Field {
-                    name: "hpdf_c_hx_ctl_dpm",
+                    name: "hpdf_chx_ctl_dpm",
                     description: None,
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
@@ -804,13 +804,13 @@
             ],
         },
         FieldSet {
-            name: "HpdfCHxPdi",
+            name: "HpdfChxPdi",
             extends: None,
             description: None,
             bit_size: 32,
             fields: &[
                 Field {
-                    name: "hpdf_c_hx_pdi_idata0",
+                    name: "hpdf_chx_pdi_idata0",
                     description: None,
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
@@ -822,7 +822,7 @@
                     enumm: None,
                 },
                 Field {
-                    name: "hpdf_c_hx_pdi_idata1",
+                    name: "hpdf_chx_pdi_idata1",
                     description: None,
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
@@ -836,13 +836,13 @@
             ],
         },
         FieldSet {
-            name: "HpdfCHxPs",
+            name: "HpdfChxPs",
             extends: None,
             description: None,
             bit_size: 32,
             fields: &[
                 Field {
-                    name: "hpdf_c_hx_ps_plsk",
+                    name: "hpdf_chx_ps_plsk",
                     description: None,
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
@@ -856,13 +856,13 @@
             ],
         },
         FieldSet {
-            name: "HpdfCHxTmfdt",
+            name: "HpdfChxTmfdt",
             extends: None,
             description: None,
             bit_size: 32,
             fields: &[
                 Field {
-                    name: "hpdf_c_hx_tmfdt_tmdata",
+                    name: "hpdf_chx_tmfdt_tmdata",
                     description: None,
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
@@ -876,13 +876,13 @@
             ],
         },
         FieldSet {
-            name: "HpdfFlTyCtl0",
+            name: "HpdfFltyCtl0",
             extends: None,
             description: None,
             bit_size: 32,
             fields: &[
                 Field {
-                    name: "hpdf_fl_ty_ctl0_flten",
+                    name: "hpdf_flty_ctl0_flten",
                     description: None,
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
@@ -894,7 +894,7 @@
                     enumm: None,
                 },
                 Field {
-                    name: "hpdf_fl_ty_ctl0_sicc",
+                    name: "hpdf_flty_ctl0_sicc",
                     description: None,
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
@@ -906,7 +906,7 @@
                     enumm: None,
                 },
                 Field {
-                    name: "hpdf_fl_ty_ctl0_icsyn",
+                    name: "hpdf_flty_ctl0_icsyn",
                     description: None,
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
@@ -918,7 +918,7 @@
                     enumm: None,
                 },
                 Field {
-                    name: "hpdf_fl_ty_ctl0_scmod",
+                    name: "hpdf_flty_ctl0_scmod",
                     description: None,
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
@@ -930,7 +930,7 @@
                     enumm: None,
                 },
                 Field {
-                    name: "hpdf_fl_ty_ctl0_icdmaen",
+                    name: "hpdf_flty_ctl0_icdmaen",
                     description: None,
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
@@ -942,7 +942,7 @@
                     enumm: None,
                 },
                 Field {
-                    name: "hpdf_fl_ty_ctl0_ictssel",
+                    name: "hpdf_flty_ctl0_ictssel",
                     description: None,
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
@@ -954,7 +954,7 @@
                     enumm: None,
                 },
                 Field {
-                    name: "hpdf_fl_ty_ctl0_icteen",
+                    name: "hpdf_flty_ctl0_icteen",
                     description: None,
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
@@ -966,7 +966,7 @@
                     enumm: None,
                 },
                 Field {
-                    name: "hpdf_fl_ty_ctl0_srcs",
+                    name: "hpdf_flty_ctl0_srcs",
                     description: None,
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
@@ -978,7 +978,7 @@
                     enumm: None,
                 },
                 Field {
-                    name: "hpdf_fl_ty_ctl0_rccm",
+                    name: "hpdf_flty_ctl0_rccm",
                     description: None,
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
@@ -990,7 +990,7 @@
                     enumm: None,
                 },
                 Field {
-                    name: "hpdf_fl_ty_ctl0_rcsyn",
+                    name: "hpdf_flty_ctl0_rcsyn",
                     description: None,
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
@@ -1002,7 +1002,7 @@
                     enumm: None,
                 },
                 Field {
-                    name: "hpdf_fl_ty_ctl0_rcdmaen",
+                    name: "hpdf_flty_ctl0_rcdmaen",
                     description: None,
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
@@ -1014,7 +1014,7 @@
                     enumm: None,
                 },
                 Field {
-                    name: "hpdf_fl_ty_ctl0_rcs",
+                    name: "hpdf_flty_ctl0_rcs",
                     description: None,
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
@@ -1026,7 +1026,7 @@
                     enumm: None,
                 },
                 Field {
-                    name: "hpdf_fl_ty_ctl0_fast",
+                    name: "hpdf_flty_ctl0_fast",
                     description: None,
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
@@ -1038,7 +1038,7 @@
                     enumm: None,
                 },
                 Field {
-                    name: "hpdf_fl_ty_ctl0_tmfm",
+                    name: "hpdf_flty_ctl0_tmfm",
                     description: None,
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
@@ -1052,13 +1052,13 @@
             ],
         },
         FieldSet {
-            name: "HpdfFlTyCtl1",
+            name: "HpdfFltyCtl1",
             extends: None,
             description: None,
             bit_size: 32,
             fields: &[
                 Field {
-                    name: "hpdf_fl_ty_ctl1_iceie",
+                    name: "hpdf_flty_ctl1_iceie",
                     description: None,
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
@@ -1070,7 +1070,7 @@
                     enumm: None,
                 },
                 Field {
-                    name: "hpdf_fl_ty_ctl1_rceie",
+                    name: "hpdf_flty_ctl1_rceie",
                     description: None,
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
@@ -1082,7 +1082,7 @@
                     enumm: None,
                 },
                 Field {
-                    name: "hpdf_fl_ty_ctl1_icdoie",
+                    name: "hpdf_flty_ctl1_icdoie",
                     description: None,
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
@@ -1094,7 +1094,7 @@
                     enumm: None,
                 },
                 Field {
-                    name: "hpdf_fl_ty_ctl1_rcdoie",
+                    name: "hpdf_flty_ctl1_rcdoie",
                     description: None,
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
@@ -1106,7 +1106,7 @@
                     enumm: None,
                 },
                 Field {
-                    name: "hpdf_fl_ty_ctl1_tmie",
+                    name: "hpdf_flty_ctl1_tmie",
                     description: None,
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
@@ -1118,7 +1118,7 @@
                     enumm: None,
                 },
                 Field {
-                    name: "hpdf_fl_ty_ctl1_emcs",
+                    name: "hpdf_flty_ctl1_emcs",
                     description: None,
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
@@ -1130,7 +1130,7 @@
                     enumm: None,
                 },
                 Field {
-                    name: "hpdf_fl_ty_ctl1_tmchen",
+                    name: "hpdf_flty_ctl1_tmchen",
                     description: None,
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
@@ -1144,13 +1144,13 @@
             ],
         },
         FieldSet {
-            name: "HpdfFlTyEmmax",
+            name: "HpdfFltyEmmax",
             extends: None,
             description: None,
             bit_size: 32,
             fields: &[
                 Field {
-                    name: "hpdf_fl_ty_emmax_maxdc",
+                    name: "hpdf_flty_emmax_maxdc",
                     description: None,
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
@@ -1162,7 +1162,7 @@
                     enumm: None,
                 },
                 Field {
-                    name: "hpdf_fl_ty_emmax_maxval",
+                    name: "hpdf_flty_emmax_maxval",
                     description: None,
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
@@ -1176,13 +1176,13 @@
             ],
         },
         FieldSet {
-            name: "HpdfFlTyEmmin",
+            name: "HpdfFltyEmmin",
             extends: None,
             description: None,
             bit_size: 32,
             fields: &[
                 Field {
-                    name: "hpdf_fl_ty_emmin_mindc",
+                    name: "hpdf_flty_emmin_mindc",
                     description: None,
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
@@ -1194,7 +1194,7 @@
                     enumm: None,
                 },
                 Field {
-                    name: "hpdf_fl_ty_emmin_minval",
+                    name: "hpdf_flty_emmin_minval",
                     description: None,
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
@@ -1208,13 +1208,13 @@
             ],
         },
         FieldSet {
-            name: "HpdfFlTyIdata",
+            name: "HpdfFltyIdata",
             extends: None,
             description: None,
             bit_size: 32,
             fields: &[
                 Field {
-                    name: "hpdf_fl_ty_idata_icch",
+                    name: "hpdf_flty_idata_icch",
                     description: None,
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
@@ -1226,7 +1226,7 @@
                     enumm: None,
                 },
                 Field {
-                    name: "hpdf_fl_ty_idata_idtat",
+                    name: "hpdf_flty_idata_idtat",
                     description: None,
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
@@ -1240,13 +1240,13 @@
             ],
         },
         FieldSet {
-            name: "HpdfFlTyIgcs",
+            name: "HpdfFltyIgcs",
             extends: None,
             description: None,
             bit_size: 32,
             fields: &[
                 Field {
-                    name: "hpdf_fl_ty_igcs_igcsel",
+                    name: "hpdf_flty_igcs_igcsel",
                     description: None,
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
@@ -1260,13 +1260,13 @@
             ],
         },
         FieldSet {
-            name: "HpdfFlTyIntc",
+            name: "HpdfFltyIntc",
             extends: None,
             description: None,
             bit_size: 32,
             fields: &[
                 Field {
-                    name: "hpdf_fl_ty_intc_icdofc",
+                    name: "hpdf_flty_intc_icdofc",
                     description: None,
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
@@ -1278,7 +1278,7 @@
                     enumm: None,
                 },
                 Field {
-                    name: "hpdf_fl_ty_intc_rcdofc",
+                    name: "hpdf_flty_intc_rcdofc",
                     description: None,
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
@@ -1292,13 +1292,13 @@
             ],
         },
         FieldSet {
-            name: "HpdfFlTyRdata",
+            name: "HpdfFltyRdata",
             extends: None,
             description: None,
             bit_size: 32,
             fields: &[
                 Field {
-                    name: "hpdf_fl_ty_rdata_rcch",
+                    name: "hpdf_flty_rdata_rcch",
                     description: None,
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
@@ -1310,7 +1310,7 @@
                     enumm: None,
                 },
                 Field {
-                    name: "hpdf_fl_ty_rdata_rchpdt",
+                    name: "hpdf_flty_rdata_rchpdt",
                     description: None,
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
@@ -1322,7 +1322,7 @@
                     enumm: None,
                 },
                 Field {
-                    name: "hpdf_fl_ty_rdata_rdata",
+                    name: "hpdf_flty_rdata_rdata",
                     description: None,
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
@@ -1336,13 +1336,13 @@
             ],
         },
         FieldSet {
-            name: "HpdfFlTySfcfg",
+            name: "HpdfFltySfcfg",
             extends: None,
             description: None,
             bit_size: 32,
             fields: &[
                 Field {
-                    name: "hpdf_fl_ty_sfcfg_ior",
+                    name: "hpdf_flty_sfcfg_ior",
                     description: None,
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
@@ -1354,7 +1354,7 @@
                     enumm: None,
                 },
                 Field {
-                    name: "hpdf_fl_ty_sfcfg_sfor",
+                    name: "hpdf_flty_sfcfg_sfor",
                     description: None,
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
@@ -1366,7 +1366,7 @@
                     enumm: None,
                 },
                 Field {
-                    name: "hpdf_fl_ty_sfcfg_sfo",
+                    name: "hpdf_flty_sfcfg_sfo",
                     description: None,
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
@@ -1380,13 +1380,13 @@
             ],
         },
         FieldSet {
-            name: "HpdfFlTyStat",
+            name: "HpdfFltyStat",
             extends: None,
             description: None,
             bit_size: 32,
             fields: &[
                 Field {
-                    name: "hpdf_fl_ty_stat_icef",
+                    name: "hpdf_flty_stat_icef",
                     description: None,
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
@@ -1398,7 +1398,7 @@
                     enumm: None,
                 },
                 Field {
-                    name: "hpdf_fl_ty_stat_rcef",
+                    name: "hpdf_flty_stat_rcef",
                     description: None,
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
@@ -1410,7 +1410,7 @@
                     enumm: None,
                 },
                 Field {
-                    name: "hpdf_fl_ty_stat_icdof",
+                    name: "hpdf_flty_stat_icdof",
                     description: None,
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
@@ -1422,7 +1422,7 @@
                     enumm: None,
                 },
                 Field {
-                    name: "hpdf_fl_ty_stat_rcdof",
+                    name: "hpdf_flty_stat_rcdof",
                     description: None,
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
@@ -1434,7 +1434,7 @@
                     enumm: None,
                 },
                 Field {
-                    name: "hpdf_fl_ty_stat_tmeof",
+                    name: "hpdf_flty_stat_tmeof",
                     description: None,
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
@@ -1446,7 +1446,7 @@
                     enumm: None,
                 },
                 Field {
-                    name: "hpdf_fl_ty_stat_icpf",
+                    name: "hpdf_flty_stat_icpf",
                     description: None,
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
@@ -1458,7 +1458,7 @@
                     enumm: None,
                 },
                 Field {
-                    name: "hpdf_fl_ty_stat_rcpf",
+                    name: "hpdf_flty_stat_rcpf",
                     description: None,
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
@@ -1472,13 +1472,13 @@
             ],
         },
         FieldSet {
-            name: "HpdfFlTyTmfc",
+            name: "HpdfFltyTmfc",
             extends: None,
             description: None,
             bit_size: 32,
             fields: &[
                 Field {
-                    name: "hpdf_fl_ty_tmfc_ltfc",
+                    name: "hpdf_flty_tmfc_ltfc",
                     description: None,
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
@@ -1490,7 +1490,7 @@
                     enumm: None,
                 },
                 Field {
-                    name: "hpdf_fl_ty_tmfc_htfc",
+                    name: "hpdf_flty_tmfc_htfc",
                     description: None,
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
@@ -1504,13 +1504,13 @@
             ],
         },
         FieldSet {
-            name: "HpdfFlTyTmht",
+            name: "HpdfFltyTmht",
             extends: None,
             description: None,
             bit_size: 32,
             fields: &[
                 Field {
-                    name: "hpdf_fl_ty_tmht_htbsd",
+                    name: "hpdf_flty_tmht_htbsd",
                     description: None,
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
@@ -1522,39 +1522,7 @@
                     enumm: None,
                 },
                 Field {
-                    name: "hpdf_fl_ty_tmht_htval",
-                    description: None,
-                    bit_offset: BitOffset::Regular(
-                        RegularBitOffset {
-                            offset: 8,
-                        },
-                    ),
-                    bit_size: 24,
-                    array: None,
-                    enumm: None,
-                },
-            ],
-        },
-        FieldSet {
-            name: "HpdfFlTyTmlt",
-            extends: None,
-            description: None,
-            bit_size: 32,
-            fields: &[
-                Field {
-                    name: "hpdf_fl_ty_tmlt_ltbsd",
-                    description: None,
-                    bit_offset: BitOffset::Regular(
-                        RegularBitOffset {
-                            offset: 0,
-                        },
-                    ),
-                    bit_size: 2,
-                    array: None,
-                    enumm: None,
-                },
-                Field {
-                    name: "hpdf_fl_ty_tmlt_ltval",
+                    name: "hpdf_flty_tmht_htval",
                     description: None,
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
@@ -1568,13 +1536,13 @@
             ],
         },
         FieldSet {
-            name: "HpdfFlTyTmstat",
+            name: "HpdfFltyTmlt",
             extends: None,
             description: None,
             bit_size: 32,
             fields: &[
                 Field {
-                    name: "hpdf_fl_ty_tmstat_ltf",
+                    name: "hpdf_flty_tmlt_ltbsd",
                     description: None,
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
@@ -1586,7 +1554,39 @@
                     enumm: None,
                 },
                 Field {
-                    name: "hpdf_fl_ty_tmstat_htf",
+                    name: "hpdf_flty_tmlt_ltval",
+                    description: None,
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 8,
+                        },
+                    ),
+                    bit_size: 24,
+                    array: None,
+                    enumm: None,
+                },
+            ],
+        },
+        FieldSet {
+            name: "HpdfFltyTmstat",
+            extends: None,
+            description: None,
+            bit_size: 32,
+            fields: &[
+                Field {
+                    name: "hpdf_flty_tmstat_ltf",
+                    description: None,
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 0,
+                        },
+                    ),
+                    bit_size: 2,
+                    array: None,
+                    enumm: None,
+                },
+                Field {
+                    name: "hpdf_flty_tmstat_htf",
                     description: None,
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {

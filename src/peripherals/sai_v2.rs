@@ -22,42 +22,42 @@ impl Ch {
     #[doc = "Configuration register 1"]
     #[inline(always)]
     pub const fn cr1(self) -> crate::common::Reg<regs::Cr1, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0usize) as _) }
     }
     #[doc = "Configuration register 2"]
     #[inline(always)]
     pub const fn cr2(self) -> crate::common::Reg<regs::Cr2, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x04usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x04usize) as _) }
     }
     #[doc = "This register has no meaning in AC97 and SPDIF audio protocol"]
     #[inline(always)]
     pub const fn frcr(self) -> crate::common::Reg<regs::Frcr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x08usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x08usize) as _) }
     }
     #[doc = "This register has no meaning in AC97 and SPDIF audio protocol"]
     #[inline(always)]
     pub const fn slotr(self) -> crate::common::Reg<regs::Slotr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0cusize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0cusize) as _) }
     }
     #[doc = "Interrupt mask register 2"]
     #[inline(always)]
     pub const fn im(self) -> crate::common::Reg<regs::Im, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x10usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x10usize) as _) }
     }
     #[doc = "Status register"]
     #[inline(always)]
     pub const fn sr(self) -> crate::common::Reg<regs::Sr, crate::common::R> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x14usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x14usize) as _) }
     }
     #[doc = "Clear flag register"]
     #[inline(always)]
     pub const fn clrfr(self) -> crate::common::Reg<regs::Clrfr, crate::common::W> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x18usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x18usize) as _) }
     }
     #[doc = "Data register"]
     #[inline(always)]
     pub const fn dr(self) -> crate::common::Reg<regs::Dr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x1cusize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x1cusize) as _) }
     }
 }
 #[doc = "Serial audio interface"]
@@ -79,13 +79,13 @@ impl Sai {
     #[doc = "Global configuration register"]
     #[inline(always)]
     pub const fn gcr(self) -> crate::common::Reg<regs::Gcr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0usize) as _) }
     }
     #[doc = "Cluster CH%s, containing ?CR1, ?CR2, ?FRCR, ?SLOTR, ?IM, ?SR, ?CLRFR, ?DR"]
     #[inline(always)]
     pub const fn ch(self, n: usize) -> Ch {
         assert!(n < 2usize);
-        unsafe { Ch::from_ptr(self.ptr.wrapping_add(0x04usize + n * 32usize) as _) }
+        unsafe { Ch::from_ptr(self.ptr.add(0x04usize + n * 32usize) as _) }
     }
 }
 pub mod regs {
@@ -95,7 +95,6 @@ pub mod regs {
     pub struct Clrfr(pub u32);
     impl Clrfr {
         #[doc = "Clear overrun / underrun. This bit is write only. Programming this bit to 1 clears the OVRUDR flag in the SAI_xSR register. Reading this bit always returns the value 0."]
-        #[must_use]
         #[inline(always)]
         pub const fn covrudr(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -103,11 +102,10 @@ pub mod regs {
         }
         #[doc = "Clear overrun / underrun. This bit is write only. Programming this bit to 1 clears the OVRUDR flag in the SAI_xSR register. Reading this bit always returns the value 0."]
         #[inline(always)]
-        pub const fn set_covrudr(&mut self, val: bool) {
+        pub fn set_covrudr(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "Mute detection flag. This bit is write only. Programming this bit to 1 clears the MUTEDET flag in the SAI_xSR register. Reading this bit always returns the value 0."]
-        #[must_use]
         #[inline(always)]
         pub const fn cmutedet(&self) -> bool {
             let val = (self.0 >> 1usize) & 0x01;
@@ -115,12 +113,11 @@ pub mod regs {
         }
         #[doc = "Mute detection flag. This bit is write only. Programming this bit to 1 clears the MUTEDET flag in the SAI_xSR register. Reading this bit always returns the value 0."]
         #[inline(always)]
-        pub const fn set_cmutedet(&mut self, val: bool) {
+        pub fn set_cmutedet(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
         }
         #[doc = "Clear wrong clock configuration flag. This bit is write only. Programming this bit to 1 clears the WCKCFG flag in the SAI_xSR register. This bit is used only when the audio block is set as master (MODE\\[1\\]
 = 0) and NODIV = 0 in the SAI_xCR1 register. Reading this bit always returns the value 0."]
-        #[must_use]
         #[inline(always)]
         pub const fn cwckcfg(&self) -> bool {
             let val = (self.0 >> 2usize) & 0x01;
@@ -129,11 +126,10 @@ pub mod regs {
         #[doc = "Clear wrong clock configuration flag. This bit is write only. Programming this bit to 1 clears the WCKCFG flag in the SAI_xSR register. This bit is used only when the audio block is set as master (MODE\\[1\\]
 = 0) and NODIV = 0 in the SAI_xCR1 register. Reading this bit always returns the value 0."]
         #[inline(always)]
-        pub const fn set_cwckcfg(&mut self, val: bool) {
+        pub fn set_cwckcfg(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
         }
         #[doc = "Clear Codec not ready flag. This bit is write only. Programming this bit to 1 clears the CNRDY flag in the SAI_xSR register. This bit is used only when the AC97 audio protocol is selected in the SAI_xCR1 register. Reading this bit always returns the value 0."]
-        #[must_use]
         #[inline(always)]
         pub const fn ccnrdy(&self) -> bool {
             let val = (self.0 >> 4usize) & 0x01;
@@ -141,11 +137,10 @@ pub mod regs {
         }
         #[doc = "Clear Codec not ready flag. This bit is write only. Programming this bit to 1 clears the CNRDY flag in the SAI_xSR register. This bit is used only when the AC97 audio protocol is selected in the SAI_xCR1 register. Reading this bit always returns the value 0."]
         #[inline(always)]
-        pub const fn set_ccnrdy(&mut self, val: bool) {
+        pub fn set_ccnrdy(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
         }
         #[doc = "Clear anticipated frame synchronization detection flag. This bit is write only. Programming this bit to 1 clears the AFSDET flag in the SAI_xSR register. It is not used in AC97or SPDIF mode. Reading this bit always returns the value 0."]
-        #[must_use]
         #[inline(always)]
         pub const fn cafsdet(&self) -> bool {
             let val = (self.0 >> 5usize) & 0x01;
@@ -153,11 +148,10 @@ pub mod regs {
         }
         #[doc = "Clear anticipated frame synchronization detection flag. This bit is write only. Programming this bit to 1 clears the AFSDET flag in the SAI_xSR register. It is not used in AC97or SPDIF mode. Reading this bit always returns the value 0."]
         #[inline(always)]
-        pub const fn set_cafsdet(&mut self, val: bool) {
+        pub fn set_cafsdet(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
         }
         #[doc = "Clear late frame synchronization detection flag. This bit is write only. Programming this bit to 1 clears the LFSDET flag in the SAI_xSR register. This bit is not used in AC97or SPDIF mode Reading this bit always returns the value 0."]
-        #[must_use]
         #[inline(always)]
         pub const fn clfsdet(&self) -> bool {
             let val = (self.0 >> 6usize) & 0x01;
@@ -165,7 +159,7 @@ pub mod regs {
         }
         #[doc = "Clear late frame synchronization detection flag. This bit is write only. Programming this bit to 1 clears the LFSDET flag in the SAI_xSR register. This bit is not used in AC97or SPDIF mode Reading this bit always returns the value 0."]
         #[inline(always)]
-        pub const fn set_clfsdet(&mut self, val: bool) {
+        pub fn set_clfsdet(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
         }
     }
@@ -190,16 +184,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Clrfr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Clrfr {{ covrudr: {=bool:?}, cmutedet: {=bool:?}, cwckcfg: {=bool:?}, ccnrdy: {=bool:?}, cafsdet: {=bool:?}, clfsdet: {=bool:?} }}",
-                self.covrudr(),
-                self.cmutedet(),
-                self.cwckcfg(),
-                self.ccnrdy(),
-                self.cafsdet(),
-                self.clfsdet()
-            )
+            defmt :: write ! (f , "Clrfr {{ covrudr: {=bool:?}, cmutedet: {=bool:?}, cwckcfg: {=bool:?}, ccnrdy: {=bool:?}, cafsdet: {=bool:?}, clfsdet: {=bool:?} }}" , self . covrudr () , self . cmutedet () , self . cwckcfg () , self . ccnrdy () , self . cafsdet () , self . clfsdet ())
         }
     }
     #[doc = "Configuration register 1"]
@@ -208,7 +193,6 @@ pub mod regs {
     pub struct Cr1(pub u32);
     impl Cr1 {
         #[doc = "SAIx audio block mode immediately"]
-        #[must_use]
         #[inline(always)]
         pub const fn mode(&self) -> super::vals::Mode {
             let val = (self.0 >> 0usize) & 0x03;
@@ -216,11 +200,10 @@ pub mod regs {
         }
         #[doc = "SAIx audio block mode immediately"]
         #[inline(always)]
-        pub const fn set_mode(&mut self, val: super::vals::Mode) {
+        pub fn set_mode(&mut self, val: super::vals::Mode) {
             self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
         }
         #[doc = "Protocol configuration. These bits are set and cleared by software. These bits have to be configured when the audio block is disabled."]
-        #[must_use]
         #[inline(always)]
         pub const fn prtcfg(&self) -> super::vals::Prtcfg {
             let val = (self.0 >> 2usize) & 0x03;
@@ -228,13 +211,12 @@ pub mod regs {
         }
         #[doc = "Protocol configuration. These bits are set and cleared by software. These bits have to be configured when the audio block is disabled."]
         #[inline(always)]
-        pub const fn set_prtcfg(&mut self, val: super::vals::Prtcfg) {
+        pub fn set_prtcfg(&mut self, val: super::vals::Prtcfg) {
             self.0 = (self.0 & !(0x03 << 2usize)) | (((val.to_bits() as u32) & 0x03) << 2usize);
         }
         #[doc = "Data size. These bits are set and cleared by software. These bits are ignored when the SPDIF protocols are selected (bit PRTCFG\\[1:0\\]), because the frame and the data size are fixed in such case. When the companding mode is selected through COMP\\[1:0\\]
 bits, DS\\[1:0\\]
 are ignored since the data size is fixed to 8 bits by the algorithm. These bits must be configured when the audio block is disabled."]
-        #[must_use]
         #[inline(always)]
         pub const fn ds(&self) -> super::vals::Ds {
             let val = (self.0 >> 5usize) & 0x07;
@@ -244,11 +226,10 @@ are ignored since the data size is fixed to 8 bits by the algorithm. These bits 
 bits, DS\\[1:0\\]
 are ignored since the data size is fixed to 8 bits by the algorithm. These bits must be configured when the audio block is disabled."]
         #[inline(always)]
-        pub const fn set_ds(&mut self, val: super::vals::Ds) {
+        pub fn set_ds(&mut self, val: super::vals::Ds) {
             self.0 = (self.0 & !(0x07 << 5usize)) | (((val.to_bits() as u32) & 0x07) << 5usize);
         }
         #[doc = "Least significant bit first. This bit is set and cleared by software. It must be configured when the audio block is disabled. This bit has no meaning in AC97 audio protocol since AC97 data are always transferred with the MSB first. This bit has no meaning in SPDIF audio protocol since in SPDIF data are always transferred with LSB first."]
-        #[must_use]
         #[inline(always)]
         pub const fn lsbfirst(&self) -> super::vals::Lsbfirst {
             let val = (self.0 >> 8usize) & 0x01;
@@ -256,11 +237,10 @@ are ignored since the data size is fixed to 8 bits by the algorithm. These bits 
         }
         #[doc = "Least significant bit first. This bit is set and cleared by software. It must be configured when the audio block is disabled. This bit has no meaning in AC97 audio protocol since AC97 data are always transferred with the MSB first. This bit has no meaning in SPDIF audio protocol since in SPDIF data are always transferred with LSB first."]
         #[inline(always)]
-        pub const fn set_lsbfirst(&mut self, val: super::vals::Lsbfirst) {
+        pub fn set_lsbfirst(&mut self, val: super::vals::Lsbfirst) {
             self.0 = (self.0 & !(0x01 << 8usize)) | (((val.to_bits() as u32) & 0x01) << 8usize);
         }
         #[doc = "Clock strobing edge. This bit is set and cleared by software. It must be configured when the audio block is disabled. This bit has no meaning in SPDIF audio protocol."]
-        #[must_use]
         #[inline(always)]
         pub const fn ckstr(&self) -> super::vals::Ckstr {
             let val = (self.0 >> 9usize) & 0x01;
@@ -268,11 +248,10 @@ are ignored since the data size is fixed to 8 bits by the algorithm. These bits 
         }
         #[doc = "Clock strobing edge. This bit is set and cleared by software. It must be configured when the audio block is disabled. This bit has no meaning in SPDIF audio protocol."]
         #[inline(always)]
-        pub const fn set_ckstr(&mut self, val: super::vals::Ckstr) {
+        pub fn set_ckstr(&mut self, val: super::vals::Ckstr) {
             self.0 = (self.0 & !(0x01 << 9usize)) | (((val.to_bits() as u32) & 0x01) << 9usize);
         }
         #[doc = "Synchronization enable. These bits are set and cleared by software. They must be configured when the audio sub-block is disabled. Note: The audio sub-block should be configured as asynchronous when SPDIF mode is enabled."]
-        #[must_use]
         #[inline(always)]
         pub const fn syncen(&self) -> super::vals::Syncen {
             let val = (self.0 >> 10usize) & 0x03;
@@ -280,11 +259,10 @@ are ignored since the data size is fixed to 8 bits by the algorithm. These bits 
         }
         #[doc = "Synchronization enable. These bits are set and cleared by software. They must be configured when the audio sub-block is disabled. Note: The audio sub-block should be configured as asynchronous when SPDIF mode is enabled."]
         #[inline(always)]
-        pub const fn set_syncen(&mut self, val: super::vals::Syncen) {
+        pub fn set_syncen(&mut self, val: super::vals::Syncen) {
             self.0 = (self.0 & !(0x03 << 10usize)) | (((val.to_bits() as u32) & 0x03) << 10usize);
         }
         #[doc = "Mono mode. This bit is set and cleared by software. It is meaningful only when the number of slots is equal to 2. When the mono mode is selected, slot 0 data are duplicated on slot 1 when the audio block operates as a transmitter. In reception mode, the slot1 is discarded and only the data received from slot 0 are stored. Refer to Section: Mono/stereo mode for more details."]
-        #[must_use]
         #[inline(always)]
         pub const fn mono(&self) -> super::vals::Mono {
             let val = (self.0 >> 12usize) & 0x01;
@@ -292,11 +270,10 @@ are ignored since the data size is fixed to 8 bits by the algorithm. These bits 
         }
         #[doc = "Mono mode. This bit is set and cleared by software. It is meaningful only when the number of slots is equal to 2. When the mono mode is selected, slot 0 data are duplicated on slot 1 when the audio block operates as a transmitter. In reception mode, the slot1 is discarded and only the data received from slot 0 are stored. Refer to Section: Mono/stereo mode for more details."]
         #[inline(always)]
-        pub const fn set_mono(&mut self, val: super::vals::Mono) {
+        pub fn set_mono(&mut self, val: super::vals::Mono) {
             self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
         }
         #[doc = "Output drive. This bit is set and cleared by software. Note: This bit has to be set before enabling the audio block and after the audio block configuration."]
-        #[must_use]
         #[inline(always)]
         pub const fn outdriv(&self) -> super::vals::Outdriv {
             let val = (self.0 >> 13usize) & 0x01;
@@ -304,11 +281,10 @@ are ignored since the data size is fixed to 8 bits by the algorithm. These bits 
         }
         #[doc = "Output drive. This bit is set and cleared by software. Note: This bit has to be set before enabling the audio block and after the audio block configuration."]
         #[inline(always)]
-        pub const fn set_outdriv(&mut self, val: super::vals::Outdriv) {
+        pub fn set_outdriv(&mut self, val: super::vals::Outdriv) {
             self.0 = (self.0 & !(0x01 << 13usize)) | (((val.to_bits() as u32) & 0x01) << 13usize);
         }
         #[doc = "Audio block enable where x is A or B. This bit is set by software. To switch off the audio block, the application software must program this bit to 0 and poll the bit till it reads back 0, meaning that the block is completely disabled. Before setting this bit to 1, check that it is set to 0, otherwise the enable command will not be taken into account. This bit allows to control the state of SAIx audio block. If it is disabled when an audio frame transfer is ongoing, the ongoing transfer completes and the cell is fully disabled at the end of this audio frame transfer. Note: When SAIx block is configured in master mode, the clock must be present on the input of SAIx before setting SAIXEN bit."]
-        #[must_use]
         #[inline(always)]
         pub const fn saien(&self) -> bool {
             let val = (self.0 >> 16usize) & 0x01;
@@ -316,12 +292,11 @@ are ignored since the data size is fixed to 8 bits by the algorithm. These bits 
         }
         #[doc = "Audio block enable where x is A or B. This bit is set by software. To switch off the audio block, the application software must program this bit to 0 and poll the bit till it reads back 0, meaning that the block is completely disabled. Before setting this bit to 1, check that it is set to 0, otherwise the enable command will not be taken into account. This bit allows to control the state of SAIx audio block. If it is disabled when an audio frame transfer is ongoing, the ongoing transfer completes and the cell is fully disabled at the end of this audio frame transfer. Note: When SAIx block is configured in master mode, the clock must be present on the input of SAIx before setting SAIXEN bit."]
         #[inline(always)]
-        pub const fn set_saien(&mut self, val: bool) {
+        pub fn set_saien(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
         }
         #[doc = "DMA enable. This bit is set and cleared by software. Note: Since the audio block defaults to operate as a transmitter after reset, the MODE\\[1:0\\]
 bits must be configured before setting DMAEN to avoid a DMA request in receiver mode."]
-        #[must_use]
         #[inline(always)]
         pub const fn dmaen(&self) -> bool {
             let val = (self.0 >> 17usize) & 0x01;
@@ -330,11 +305,10 @@ bits must be configured before setting DMAEN to avoid a DMA request in receiver 
         #[doc = "DMA enable. This bit is set and cleared by software. Note: Since the audio block defaults to operate as a transmitter after reset, the MODE\\[1:0\\]
 bits must be configured before setting DMAEN to avoid a DMA request in receiver mode."]
         #[inline(always)]
-        pub const fn set_dmaen(&mut self, val: bool) {
+        pub fn set_dmaen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
         }
         #[doc = "No fixed divider between MCLK and FS"]
-        #[must_use]
         #[inline(always)]
         pub const fn nodiv(&self) -> bool {
             let val = (self.0 >> 19usize) & 0x01;
@@ -342,11 +316,10 @@ bits must be configured before setting DMAEN to avoid a DMA request in receiver 
         }
         #[doc = "No fixed divider between MCLK and FS"]
         #[inline(always)]
-        pub const fn set_nodiv(&mut self, val: bool) {
+        pub fn set_nodiv(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
         }
         #[doc = "Master clock divider. These bits are set and cleared by software. These bits are meaningless when the audio block operates in slave mode. They have to be configured when the audio block is disabled. Others: the master clock frequency is calculated accordingly to the following formula:"]
-        #[must_use]
         #[inline(always)]
         pub const fn mckdiv(&self) -> super::vals::Mckdiv {
             let val = (self.0 >> 20usize) & 0x0f;
@@ -354,7 +327,7 @@ bits must be configured before setting DMAEN to avoid a DMA request in receiver 
         }
         #[doc = "Master clock divider. These bits are set and cleared by software. These bits are meaningless when the audio block operates in slave mode. They have to be configured when the audio block is disabled. Others: the master clock frequency is calculated accordingly to the following formula:"]
         #[inline(always)]
-        pub const fn set_mckdiv(&mut self, val: super::vals::Mckdiv) {
+        pub fn set_mckdiv(&mut self, val: super::vals::Mckdiv) {
             self.0 = (self.0 & !(0x0f << 20usize)) | (((val.to_bits() as u32) & 0x0f) << 20usize);
         }
     }
@@ -385,22 +358,7 @@ bits must be configured before setting DMAEN to avoid a DMA request in receiver 
     #[cfg(feature = "defmt")]
     impl defmt::Format for Cr1 {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Cr1 {{ mode: {:?}, prtcfg: {:?}, ds: {:?}, lsbfirst: {:?}, ckstr: {:?}, syncen: {:?}, mono: {:?}, outdriv: {:?}, saien: {=bool:?}, dmaen: {=bool:?}, nodiv: {=bool:?}, mckdiv: {:?} }}",
-                self.mode(),
-                self.prtcfg(),
-                self.ds(),
-                self.lsbfirst(),
-                self.ckstr(),
-                self.syncen(),
-                self.mono(),
-                self.outdriv(),
-                self.saien(),
-                self.dmaen(),
-                self.nodiv(),
-                self.mckdiv()
-            )
+            defmt :: write ! (f , "Cr1 {{ mode: {:?}, prtcfg: {:?}, ds: {:?}, lsbfirst: {:?}, ckstr: {:?}, syncen: {:?}, mono: {:?}, outdriv: {:?}, saien: {=bool:?}, dmaen: {=bool:?}, nodiv: {=bool:?}, mckdiv: {:?} }}" , self . mode () , self . prtcfg () , self . ds () , self . lsbfirst () , self . ckstr () , self . syncen () , self . mono () , self . outdriv () , self . saien () , self . dmaen () , self . nodiv () , self . mckdiv ())
         }
     }
     #[doc = "Configuration register 2"]
@@ -409,7 +367,6 @@ bits must be configured before setting DMAEN to avoid a DMA request in receiver 
     pub struct Cr2(pub u32);
     impl Cr2 {
         #[doc = "FIFO threshold. This bit is set and cleared by software."]
-        #[must_use]
         #[inline(always)]
         pub const fn fth(&self) -> super::vals::Fth {
             let val = (self.0 >> 0usize) & 0x07;
@@ -417,11 +374,10 @@ bits must be configured before setting DMAEN to avoid a DMA request in receiver 
         }
         #[doc = "FIFO threshold. This bit is set and cleared by software."]
         #[inline(always)]
-        pub const fn set_fth(&mut self, val: super::vals::Fth) {
+        pub fn set_fth(&mut self, val: super::vals::Fth) {
             self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
         }
         #[doc = "FIFO flush. This bit is set by software. It is always read as 0. This bit should be configured when the SAI is disabled."]
-        #[must_use]
         #[inline(always)]
         pub const fn fflush(&self) -> bool {
             let val = (self.0 >> 3usize) & 0x01;
@@ -429,11 +385,10 @@ bits must be configured before setting DMAEN to avoid a DMA request in receiver 
         }
         #[doc = "FIFO flush. This bit is set by software. It is always read as 0. This bit should be configured when the SAI is disabled."]
         #[inline(always)]
-        pub const fn set_fflush(&mut self, val: bool) {
+        pub fn set_fflush(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
         }
         #[doc = "Tristate management on data line. This bit is set and cleared by software. It is meaningful only if the audio block is configured as a transmitter. This bit is not used when the audio block is configured in SPDIF mode. It should be configured when SAI is disabled. Refer to Section: Output data line management on an inactive slot for more details."]
-        #[must_use]
         #[inline(always)]
         pub const fn tris(&self) -> bool {
             let val = (self.0 >> 4usize) & 0x01;
@@ -441,11 +396,10 @@ bits must be configured before setting DMAEN to avoid a DMA request in receiver 
         }
         #[doc = "Tristate management on data line. This bit is set and cleared by software. It is meaningful only if the audio block is configured as a transmitter. This bit is not used when the audio block is configured in SPDIF mode. It should be configured when SAI is disabled. Refer to Section: Output data line management on an inactive slot for more details."]
         #[inline(always)]
-        pub const fn set_tris(&mut self, val: bool) {
+        pub fn set_tris(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
         }
         #[doc = "Mute. This bit is set and cleared by software. It is meaningful only when the audio block operates as a transmitter. The MUTE value is linked to value of MUTEVAL if the number of slots is lower or equal to 2, or equal to 0 if it is greater than 2. Refer to Section: Mute mode for more details. Note: This bit is meaningless and should not be used for SPDIF audio blocks."]
-        #[must_use]
         #[inline(always)]
         pub const fn mute(&self) -> bool {
             let val = (self.0 >> 5usize) & 0x01;
@@ -453,11 +407,10 @@ bits must be configured before setting DMAEN to avoid a DMA request in receiver 
         }
         #[doc = "Mute. This bit is set and cleared by software. It is meaningful only when the audio block operates as a transmitter. The MUTE value is linked to value of MUTEVAL if the number of slots is lower or equal to 2, or equal to 0 if it is greater than 2. Refer to Section: Mute mode for more details. Note: This bit is meaningless and should not be used for SPDIF audio blocks."]
         #[inline(always)]
-        pub const fn set_mute(&mut self, val: bool) {
+        pub fn set_mute(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
         }
         #[doc = "Mute value. This bit is set and cleared by software.It must be written before enabling the audio block: SAIXEN. This bit is meaningful only when the audio block operates as a transmitter, the number of slots is lower or equal to 2 and the MUTE bit is set. If more slots are declared, the bit value sent during the transmission in mute mode is equal to 0, whatever the value of MUTEVAL. if the number of slot is lower or equal to 2 and MUTEVAL = 1, the MUTE value transmitted for each slot is the one sent during the previous frame. Refer to Section: Mute mode for more details. Note: This bit is meaningless and should not be used for SPDIF audio blocks."]
-        #[must_use]
         #[inline(always)]
         pub const fn muteval(&self) -> super::vals::Muteval {
             let val = (self.0 >> 6usize) & 0x01;
@@ -465,11 +418,10 @@ bits must be configured before setting DMAEN to avoid a DMA request in receiver 
         }
         #[doc = "Mute value. This bit is set and cleared by software.It must be written before enabling the audio block: SAIXEN. This bit is meaningful only when the audio block operates as a transmitter, the number of slots is lower or equal to 2 and the MUTE bit is set. If more slots are declared, the bit value sent during the transmission in mute mode is equal to 0, whatever the value of MUTEVAL. if the number of slot is lower or equal to 2 and MUTEVAL = 1, the MUTE value transmitted for each slot is the one sent during the previous frame. Refer to Section: Mute mode for more details. Note: This bit is meaningless and should not be used for SPDIF audio blocks."]
         #[inline(always)]
-        pub const fn set_muteval(&mut self, val: super::vals::Muteval) {
+        pub fn set_muteval(&mut self, val: super::vals::Muteval) {
             self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
         }
         #[doc = "Mute counter. These bits are set and cleared by software. They are used only in reception mode. The value set in these bits is compared to the number of consecutive mute frames detected in reception. When the number of mute frames is equal to this value, the flag MUTEDET will be set and an interrupt will be generated if bit MUTEDETIE is set. Refer to Section: Mute mode for more details."]
-        #[must_use]
         #[inline(always)]
         pub const fn mutecnt(&self) -> u8 {
             let val = (self.0 >> 7usize) & 0x3f;
@@ -477,11 +429,10 @@ bits must be configured before setting DMAEN to avoid a DMA request in receiver 
         }
         #[doc = "Mute counter. These bits are set and cleared by software. They are used only in reception mode. The value set in these bits is compared to the number of consecutive mute frames detected in reception. When the number of mute frames is equal to this value, the flag MUTEDET will be set and an interrupt will be generated if bit MUTEDETIE is set. Refer to Section: Mute mode for more details."]
         #[inline(always)]
-        pub const fn set_mutecnt(&mut self, val: u8) {
+        pub fn set_mutecnt(&mut self, val: u8) {
             self.0 = (self.0 & !(0x3f << 7usize)) | (((val as u32) & 0x3f) << 7usize);
         }
         #[doc = "Complement bit. This bit is set and cleared by software. It defines the type of complement to be used for companding mode Note: This bit has effect only when the companding mode is -Law algorithm or A-Law algorithm."]
-        #[must_use]
         #[inline(always)]
         pub const fn cpl(&self) -> super::vals::Cpl {
             let val = (self.0 >> 13usize) & 0x01;
@@ -489,11 +440,10 @@ bits must be configured before setting DMAEN to avoid a DMA request in receiver 
         }
         #[doc = "Complement bit. This bit is set and cleared by software. It defines the type of complement to be used for companding mode Note: This bit has effect only when the companding mode is -Law algorithm or A-Law algorithm."]
         #[inline(always)]
-        pub const fn set_cpl(&mut self, val: super::vals::Cpl) {
+        pub fn set_cpl(&mut self, val: super::vals::Cpl) {
             self.0 = (self.0 & !(0x01 << 13usize)) | (((val.to_bits() as u32) & 0x01) << 13usize);
         }
         #[doc = "Companding mode. These bits are set and cleared by software. The -Law and the A-Law log are a part of the CCITT G.711 recommendation, the type of complement that will be used depends on CPL bit. The data expansion or data compression are determined by the state of bit MODE\\[0\\]. The data compression is applied if the audio block is configured as a transmitter. The data expansion is automatically applied when the audio block is configured as a receiver. Refer to Section: Companding mode for more details. Note: Companding mode is applicable only when TDM is selected."]
-        #[must_use]
         #[inline(always)]
         pub const fn comp(&self) -> super::vals::Comp {
             let val = (self.0 >> 14usize) & 0x03;
@@ -501,7 +451,7 @@ bits must be configured before setting DMAEN to avoid a DMA request in receiver 
         }
         #[doc = "Companding mode. These bits are set and cleared by software. The -Law and the A-Law log are a part of the CCITT G.711 recommendation, the type of complement that will be used depends on CPL bit. The data expansion or data compression are determined by the state of bit MODE\\[0\\]. The data compression is applied if the audio block is configured as a transmitter. The data expansion is automatically applied when the audio block is configured as a receiver. Refer to Section: Companding mode for more details. Note: Companding mode is applicable only when TDM is selected."]
         #[inline(always)]
-        pub const fn set_comp(&mut self, val: super::vals::Comp) {
+        pub fn set_comp(&mut self, val: super::vals::Comp) {
             self.0 = (self.0 & !(0x03 << 14usize)) | (((val.to_bits() as u32) & 0x03) << 14usize);
         }
     }
@@ -528,18 +478,7 @@ bits must be configured before setting DMAEN to avoid a DMA request in receiver 
     #[cfg(feature = "defmt")]
     impl defmt::Format for Cr2 {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Cr2 {{ fth: {:?}, fflush: {=bool:?}, tris: {=bool:?}, mute: {=bool:?}, muteval: {:?}, mutecnt: {=u8:?}, cpl: {:?}, comp: {:?} }}",
-                self.fth(),
-                self.fflush(),
-                self.tris(),
-                self.mute(),
-                self.muteval(),
-                self.mutecnt(),
-                self.cpl(),
-                self.comp()
-            )
+            defmt :: write ! (f , "Cr2 {{ fth: {:?}, fflush: {=bool:?}, tris: {=bool:?}, mute: {=bool:?}, muteval: {:?}, mutecnt: {=u8:?}, cpl: {:?}, comp: {:?} }}" , self . fth () , self . fflush () , self . tris () , self . mute () , self . muteval () , self . mutecnt () , self . cpl () , self . comp ())
         }
     }
     #[doc = "Data register"]
@@ -548,7 +487,6 @@ bits must be configured before setting DMAEN to avoid a DMA request in receiver 
     pub struct Dr(pub u32);
     impl Dr {
         #[doc = "Data A write to this register loads the FIFO provided the FIFO is not full. A read from this register empties the FIFO if the FIFO is not empty."]
-        #[must_use]
         #[inline(always)]
         pub const fn data(&self) -> u32 {
             let val = (self.0 >> 0usize) & 0xffff_ffff;
@@ -556,7 +494,7 @@ bits must be configured before setting DMAEN to avoid a DMA request in receiver 
         }
         #[doc = "Data A write to this register loads the FIFO provided the FIFO is not full. A read from this register empties the FIFO if the FIFO is not empty."]
         #[inline(always)]
-        pub const fn set_data(&mut self, val: u32) {
+        pub fn set_data(&mut self, val: u32) {
             self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
         }
     }
@@ -586,7 +524,6 @@ bits must be configured before setting DMAEN to avoid a DMA request in receiver 
 + 1. The minimum number of bits to transfer in an audio frame must be equal to 8, otherwise the audio block will behaves in an unexpected way. This is the case when the data size is 8 bits and only one slot 0 is defined in NBSLOT\\[4:0\\]
 of SAI_xSLOTR register (NBSLOT\\[3:0\\]
 = 0000). In master mode, if the master clock (available on MCLK_x pin) is used, the frame length should be aligned with a number equal to a power of 2, ranging from 8 to 256. When the master clock is not used (NODIV = 1), it is recommended to program the frame length to an value ranging from 8 to 256. These bits are meaningless and are not used in AC97 or SPDIF audio block configuration."]
-        #[must_use]
         #[inline(always)]
         pub const fn frl(&self) -> u8 {
             let val = (self.0 >> 0usize) & 0xff;
@@ -597,12 +534,11 @@ of SAI_xSLOTR register (NBSLOT\\[3:0\\]
 of SAI_xSLOTR register (NBSLOT\\[3:0\\]
 = 0000). In master mode, if the master clock (available on MCLK_x pin) is used, the frame length should be aligned with a number equal to a power of 2, ranging from 8 to 256. When the master clock is not used (NODIV = 1), it is recommended to program the frame length to an value ranging from 8 to 256. These bits are meaningless and are not used in AC97 or SPDIF audio block configuration."]
         #[inline(always)]
-        pub const fn set_frl(&mut self, val: u8) {
+        pub fn set_frl(&mut self, val: u8) {
             self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
         }
         #[doc = "Frame synchronization active level length. These bits are set and cleared by software. They specify the length in number of bit clock (SCK) + 1 (FSALL\\[6:0\\]
 + 1) of the active level of the FS signal in the audio frame These bits are meaningless and are not used in AC97 or SPDIF audio block configuration. They must be configured when the audio block is disabled."]
-        #[must_use]
         #[inline(always)]
         pub const fn fsall(&self) -> u8 {
             let val = (self.0 >> 8usize) & 0x7f;
@@ -611,11 +547,10 @@ of SAI_xSLOTR register (NBSLOT\\[3:0\\]
         #[doc = "Frame synchronization active level length. These bits are set and cleared by software. They specify the length in number of bit clock (SCK) + 1 (FSALL\\[6:0\\]
 + 1) of the active level of the FS signal in the audio frame These bits are meaningless and are not used in AC97 or SPDIF audio block configuration. They must be configured when the audio block is disabled."]
         #[inline(always)]
-        pub const fn set_fsall(&mut self, val: u8) {
+        pub fn set_fsall(&mut self, val: u8) {
             self.0 = (self.0 & !(0x7f << 8usize)) | (((val as u32) & 0x7f) << 8usize);
         }
         #[doc = "Frame synchronization definition. This bit is set and cleared by software. When the bit is set, the number of slots defined in the SAI_xSLOTR register has to be even. It means that half of this number of slots will be dedicated to the left channel and the other slots for the right channel (e.g: this bit has to be set for I2S or MSB/LSB-justified protocols...). This bit is meaningless and is not used in AC97 or SPDIF audio block configuration. It must be configured when the audio block is disabled."]
-        #[must_use]
         #[inline(always)]
         pub const fn fsdef(&self) -> bool {
             let val = (self.0 >> 16usize) & 0x01;
@@ -623,11 +558,10 @@ of SAI_xSLOTR register (NBSLOT\\[3:0\\]
         }
         #[doc = "Frame synchronization definition. This bit is set and cleared by software. When the bit is set, the number of slots defined in the SAI_xSLOTR register has to be even. It means that half of this number of slots will be dedicated to the left channel and the other slots for the right channel (e.g: this bit has to be set for I2S or MSB/LSB-justified protocols...). This bit is meaningless and is not used in AC97 or SPDIF audio block configuration. It must be configured when the audio block is disabled."]
         #[inline(always)]
-        pub const fn set_fsdef(&mut self, val: bool) {
+        pub fn set_fsdef(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
         }
         #[doc = "Frame synchronization polarity. This bit is set and cleared by software. It is used to configure the level of the start of frame on the FS signal. It is meaningless and is not used in AC97 or SPDIF audio block configuration. This bit must be configured when the audio block is disabled."]
-        #[must_use]
         #[inline(always)]
         pub const fn fspol(&self) -> super::vals::Fspol {
             let val = (self.0 >> 17usize) & 0x01;
@@ -635,11 +569,10 @@ of SAI_xSLOTR register (NBSLOT\\[3:0\\]
         }
         #[doc = "Frame synchronization polarity. This bit is set and cleared by software. It is used to configure the level of the start of frame on the FS signal. It is meaningless and is not used in AC97 or SPDIF audio block configuration. This bit must be configured when the audio block is disabled."]
         #[inline(always)]
-        pub const fn set_fspol(&mut self, val: super::vals::Fspol) {
+        pub fn set_fspol(&mut self, val: super::vals::Fspol) {
             self.0 = (self.0 & !(0x01 << 17usize)) | (((val.to_bits() as u32) & 0x01) << 17usize);
         }
         #[doc = "Frame synchronization offset. This bit is set and cleared by software. It is meaningless and is not used in AC97 or SPDIF audio block configuration. This bit must be configured when the audio block is disabled."]
-        #[must_use]
         #[inline(always)]
         pub const fn fsoff(&self) -> super::vals::Fsoff {
             let val = (self.0 >> 18usize) & 0x01;
@@ -647,7 +580,7 @@ of SAI_xSLOTR register (NBSLOT\\[3:0\\]
         }
         #[doc = "Frame synchronization offset. This bit is set and cleared by software. It is meaningless and is not used in AC97 or SPDIF audio block configuration. This bit must be configured when the audio block is disabled."]
         #[inline(always)]
-        pub const fn set_fsoff(&mut self, val: super::vals::Fsoff) {
+        pub fn set_fsoff(&mut self, val: super::vals::Fsoff) {
             self.0 = (self.0 & !(0x01 << 18usize)) | (((val.to_bits() as u32) & 0x01) << 18usize);
         }
     }
@@ -688,7 +621,6 @@ of SAI_xSLOTR register (NBSLOT\\[3:0\\]
     pub struct Gcr(pub u32);
     impl Gcr {
         #[doc = "Synchronization inputs"]
-        #[must_use]
         #[inline(always)]
         pub const fn syncin(&self) -> u8 {
             let val = (self.0 >> 0usize) & 0x03;
@@ -696,11 +628,10 @@ of SAI_xSLOTR register (NBSLOT\\[3:0\\]
         }
         #[doc = "Synchronization inputs"]
         #[inline(always)]
-        pub const fn set_syncin(&mut self, val: u8) {
+        pub fn set_syncin(&mut self, val: u8) {
             self.0 = (self.0 & !(0x03 << 0usize)) | (((val as u32) & 0x03) << 0usize);
         }
         #[doc = "Synchronization outputs These bits are set and cleared by software."]
-        #[must_use]
         #[inline(always)]
         pub const fn syncout(&self) -> u8 {
             let val = (self.0 >> 4usize) & 0x03;
@@ -708,7 +639,7 @@ of SAI_xSLOTR register (NBSLOT\\[3:0\\]
         }
         #[doc = "Synchronization outputs These bits are set and cleared by software."]
         #[inline(always)]
-        pub const fn set_syncout(&mut self, val: u8) {
+        pub fn set_syncout(&mut self, val: u8) {
             self.0 = (self.0 & !(0x03 << 4usize)) | (((val as u32) & 0x03) << 4usize);
         }
     }
@@ -743,7 +674,6 @@ of SAI_xSLOTR register (NBSLOT\\[3:0\\]
     pub struct Im(pub u32);
     impl Im {
         #[doc = "Overrun/underrun interrupt enable. This bit is set and cleared by software. When this bit is set, an interrupt is generated if the OVRUDR bit in the SAI_xSR register is set."]
-        #[must_use]
         #[inline(always)]
         pub const fn ovrudrie(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -751,11 +681,10 @@ of SAI_xSLOTR register (NBSLOT\\[3:0\\]
         }
         #[doc = "Overrun/underrun interrupt enable. This bit is set and cleared by software. When this bit is set, an interrupt is generated if the OVRUDR bit in the SAI_xSR register is set."]
         #[inline(always)]
-        pub const fn set_ovrudrie(&mut self, val: bool) {
+        pub fn set_ovrudrie(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "Mute detection interrupt enable. This bit is set and cleared by software. When this bit is set, an interrupt is generated if the MUTEDET bit in the SAI_xSR register is set. This bit has a meaning only if the audio block is configured in receiver mode."]
-        #[must_use]
         #[inline(always)]
         pub const fn mutedetie(&self) -> bool {
             let val = (self.0 >> 1usize) & 0x01;
@@ -763,12 +692,11 @@ of SAI_xSLOTR register (NBSLOT\\[3:0\\]
         }
         #[doc = "Mute detection interrupt enable. This bit is set and cleared by software. When this bit is set, an interrupt is generated if the MUTEDET bit in the SAI_xSR register is set. This bit has a meaning only if the audio block is configured in receiver mode."]
         #[inline(always)]
-        pub const fn set_mutedetie(&mut self, val: bool) {
+        pub fn set_mutedetie(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
         }
         #[doc = "Wrong clock configuration interrupt enable. This bit is set and cleared by software. This bit is taken into account only if the audio block is configured as a master (MODE\\[1\\]
 = 0) and NODIV = 0. It generates an interrupt if the WCKCFG flag in the SAI_xSR register is set. Note: This bit is used only in TDM mode and is meaningless in other modes."]
-        #[must_use]
         #[inline(always)]
         pub const fn wckcfgie(&self) -> bool {
             let val = (self.0 >> 2usize) & 0x01;
@@ -777,11 +705,10 @@ of SAI_xSLOTR register (NBSLOT\\[3:0\\]
         #[doc = "Wrong clock configuration interrupt enable. This bit is set and cleared by software. This bit is taken into account only if the audio block is configured as a master (MODE\\[1\\]
 = 0) and NODIV = 0. It generates an interrupt if the WCKCFG flag in the SAI_xSR register is set. Note: This bit is used only in TDM mode and is meaningless in other modes."]
         #[inline(always)]
-        pub const fn set_wckcfgie(&mut self, val: bool) {
+        pub fn set_wckcfgie(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
         }
         #[doc = "FIFO request interrupt enable. This bit is set and cleared by software. When this bit is set, an interrupt is generated if the FREQ bit in the SAI_xSR register is set. Since the audio block defaults to operate as a transmitter after reset, the MODE bit must be configured before setting FREQIE to avoid a parasitic interruption in receiver mode,"]
-        #[must_use]
         #[inline(always)]
         pub const fn freqie(&self) -> bool {
             let val = (self.0 >> 3usize) & 0x01;
@@ -789,12 +716,11 @@ of SAI_xSLOTR register (NBSLOT\\[3:0\\]
         }
         #[doc = "FIFO request interrupt enable. This bit is set and cleared by software. When this bit is set, an interrupt is generated if the FREQ bit in the SAI_xSR register is set. Since the audio block defaults to operate as a transmitter after reset, the MODE bit must be configured before setting FREQIE to avoid a parasitic interruption in receiver mode,"]
         #[inline(always)]
-        pub const fn set_freqie(&mut self, val: bool) {
+        pub fn set_freqie(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
         }
         #[doc = "Codec not ready interrupt enable (AC97). This bit is set and cleared by software. When the interrupt is enabled, the audio block detects in the slot 0 (tag0) of the AC97 frame if the Codec connected to this line is ready or not. If it is not ready, the CNRDY flag in the SAI_xSR register is set and an interruption i generated. This bit has a meaning only if the AC97 mode is selected through PRTCFG\\[1:0\\]
 bits and the audio block is operates as a receiver."]
-        #[must_use]
         #[inline(always)]
         pub const fn cnrdyie(&self) -> bool {
             let val = (self.0 >> 4usize) & 0x01;
@@ -803,11 +729,10 @@ bits and the audio block is operates as a receiver."]
         #[doc = "Codec not ready interrupt enable (AC97). This bit is set and cleared by software. When the interrupt is enabled, the audio block detects in the slot 0 (tag0) of the AC97 frame if the Codec connected to this line is ready or not. If it is not ready, the CNRDY flag in the SAI_xSR register is set and an interruption i generated. This bit has a meaning only if the AC97 mode is selected through PRTCFG\\[1:0\\]
 bits and the audio block is operates as a receiver."]
         #[inline(always)]
-        pub const fn set_cnrdyie(&mut self, val: bool) {
+        pub fn set_cnrdyie(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
         }
         #[doc = "Anticipated frame synchronization detection interrupt enable. This bit is set and cleared by software. When this bit is set, an interrupt will be generated if the AFSDET bit in the SAI_xSR register is set. This bit is meaningless in AC97, SPDIF mode or when the audio block operates as a master."]
-        #[must_use]
         #[inline(always)]
         pub const fn afsdetie(&self) -> bool {
             let val = (self.0 >> 5usize) & 0x01;
@@ -815,11 +740,10 @@ bits and the audio block is operates as a receiver."]
         }
         #[doc = "Anticipated frame synchronization detection interrupt enable. This bit is set and cleared by software. When this bit is set, an interrupt will be generated if the AFSDET bit in the SAI_xSR register is set. This bit is meaningless in AC97, SPDIF mode or when the audio block operates as a master."]
         #[inline(always)]
-        pub const fn set_afsdetie(&mut self, val: bool) {
+        pub fn set_afsdetie(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
         }
         #[doc = "Late frame synchronization detection interrupt enable. This bit is set and cleared by software. When this bit is set, an interrupt will be generated if the LFSDET bit is set in the SAI_xSR register. This bit is meaningless in AC97, SPDIF mode or when the audio block operates as a master."]
-        #[must_use]
         #[inline(always)]
         pub const fn lfsdetie(&self) -> bool {
             let val = (self.0 >> 6usize) & 0x01;
@@ -827,7 +751,7 @@ bits and the audio block is operates as a receiver."]
         }
         #[doc = "Late frame synchronization detection interrupt enable. This bit is set and cleared by software. When this bit is set, an interrupt will be generated if the LFSDET bit is set in the SAI_xSR register. This bit is meaningless in AC97, SPDIF mode or when the audio block operates as a master."]
         #[inline(always)]
-        pub const fn set_lfsdetie(&mut self, val: bool) {
+        pub fn set_lfsdetie(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
         }
     }
@@ -853,17 +777,7 @@ bits and the audio block is operates as a receiver."]
     #[cfg(feature = "defmt")]
     impl defmt::Format for Im {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Im {{ ovrudrie: {=bool:?}, mutedetie: {=bool:?}, wckcfgie: {=bool:?}, freqie: {=bool:?}, cnrdyie: {=bool:?}, afsdetie: {=bool:?}, lfsdetie: {=bool:?} }}",
-                self.ovrudrie(),
-                self.mutedetie(),
-                self.wckcfgie(),
-                self.freqie(),
-                self.cnrdyie(),
-                self.afsdetie(),
-                self.lfsdetie()
-            )
+            defmt :: write ! (f , "Im {{ ovrudrie: {=bool:?}, mutedetie: {=bool:?}, wckcfgie: {=bool:?}, freqie: {=bool:?}, cnrdyie: {=bool:?}, afsdetie: {=bool:?}, lfsdetie: {=bool:?} }}" , self . ovrudrie () , self . mutedetie () , self . wckcfgie () , self . freqie () , self . cnrdyie () , self . afsdetie () , self . lfsdetie ())
         }
     }
     #[doc = "This register has no meaning in AC97 and SPDIF audio protocol"]
@@ -872,7 +786,6 @@ bits and the audio block is operates as a receiver."]
     pub struct Slotr(pub u32);
     impl Slotr {
         #[doc = "First bit offset These bits are set and cleared by software. The value set in this bitfield defines the position of the first data transfer bit in the slot. It represents an offset value. In transmission mode, the bits outside the data field are forced to 0. In reception mode, the extra received bits are discarded. These bits must be set when the audio block is disabled. They are ignored in AC97 or SPDIF mode."]
-        #[must_use]
         #[inline(always)]
         pub const fn fboff(&self) -> u8 {
             let val = (self.0 >> 0usize) & 0x1f;
@@ -880,11 +793,10 @@ bits and the audio block is operates as a receiver."]
         }
         #[doc = "First bit offset These bits are set and cleared by software. The value set in this bitfield defines the position of the first data transfer bit in the slot. It represents an offset value. In transmission mode, the bits outside the data field are forced to 0. In reception mode, the extra received bits are discarded. These bits must be set when the audio block is disabled. They are ignored in AC97 or SPDIF mode."]
         #[inline(always)]
-        pub const fn set_fboff(&mut self, val: u8) {
+        pub fn set_fboff(&mut self, val: u8) {
             self.0 = (self.0 & !(0x1f << 0usize)) | (((val as u32) & 0x1f) << 0usize);
         }
         #[doc = "Slot size This bits is set and cleared by software. The slot size must be higher or equal to the data size. If this condition is not respected, the behavior of the SAI will be undetermined. Refer to Section: Output data line management on an inactive slot for information on how to drive SD line. These bits must be set when the audio block is disabled. They are ignored in AC97 or SPDIF mode."]
-        #[must_use]
         #[inline(always)]
         pub const fn slotsz(&self) -> super::vals::Slotsz {
             let val = (self.0 >> 6usize) & 0x03;
@@ -892,11 +804,10 @@ bits and the audio block is operates as a receiver."]
         }
         #[doc = "Slot size This bits is set and cleared by software. The slot size must be higher or equal to the data size. If this condition is not respected, the behavior of the SAI will be undetermined. Refer to Section: Output data line management on an inactive slot for information on how to drive SD line. These bits must be set when the audio block is disabled. They are ignored in AC97 or SPDIF mode."]
         #[inline(always)]
-        pub const fn set_slotsz(&mut self, val: super::vals::Slotsz) {
+        pub fn set_slotsz(&mut self, val: super::vals::Slotsz) {
             self.0 = (self.0 & !(0x03 << 6usize)) | (((val.to_bits() as u32) & 0x03) << 6usize);
         }
         #[doc = "Number of slots in an audio frame. These bits are set and cleared by software. The value set in this bitfield represents the number of slots + 1 in the audio frame (including the number of inactive slots). The maximum number of slots is 16. The number of slots should be even if FSDEF bit in the SAI_xFRCR register is set. The number of slots must be configured when the audio block is disabled. They are ignored in AC97 or SPDIF mode."]
-        #[must_use]
         #[inline(always)]
         pub const fn nbslot(&self) -> u8 {
             let val = (self.0 >> 8usize) & 0x0f;
@@ -904,11 +815,10 @@ bits and the audio block is operates as a receiver."]
         }
         #[doc = "Number of slots in an audio frame. These bits are set and cleared by software. The value set in this bitfield represents the number of slots + 1 in the audio frame (including the number of inactive slots). The maximum number of slots is 16. The number of slots should be even if FSDEF bit in the SAI_xFRCR register is set. The number of slots must be configured when the audio block is disabled. They are ignored in AC97 or SPDIF mode."]
         #[inline(always)]
-        pub const fn set_nbslot(&mut self, val: u8) {
+        pub fn set_nbslot(&mut self, val: u8) {
             self.0 = (self.0 & !(0x0f << 8usize)) | (((val as u32) & 0x0f) << 8usize);
         }
         #[doc = "Slot enable. These bits are set and cleared by software. Each SLOTEN bit corresponds to a slot position from 0 to 15 (maximum 16 slots). The slot must be enabled when the audio block is disabled. They are ignored in AC97 or SPDIF mode."]
-        #[must_use]
         #[inline(always)]
         pub const fn sloten(&self) -> super::vals::Sloten {
             let val = (self.0 >> 16usize) & 0xffff;
@@ -916,7 +826,7 @@ bits and the audio block is operates as a receiver."]
         }
         #[doc = "Slot enable. These bits are set and cleared by software. Each SLOTEN bit corresponds to a slot position from 0 to 15 (maximum 16 slots). The slot must be enabled when the audio block is disabled. They are ignored in AC97 or SPDIF mode."]
         #[inline(always)]
-        pub const fn set_sloten(&mut self, val: super::vals::Sloten) {
+        pub fn set_sloten(&mut self, val: super::vals::Sloten) {
             self.0 = (self.0 & !(0xffff << 16usize)) | (((val.to_bits() as u32) & 0xffff) << 16usize);
         }
     }
@@ -955,7 +865,6 @@ bits and the audio block is operates as a receiver."]
     pub struct Sr(pub u32);
     impl Sr {
         #[doc = "Overrun / underrun. This bit is read only. The overrun and underrun conditions can occur only when the audio block is configured as a receiver and a transmitter, respectively. It can generate an interrupt if OVRUDRIE bit is set in SAI_xIM register. This flag is cleared when the software sets COVRUDR bit in SAI_xCLRFR register."]
-        #[must_use]
         #[inline(always)]
         pub const fn ovrudr(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -963,11 +872,10 @@ bits and the audio block is operates as a receiver."]
         }
         #[doc = "Overrun / underrun. This bit is read only. The overrun and underrun conditions can occur only when the audio block is configured as a receiver and a transmitter, respectively. It can generate an interrupt if OVRUDRIE bit is set in SAI_xIM register. This flag is cleared when the software sets COVRUDR bit in SAI_xCLRFR register."]
         #[inline(always)]
-        pub const fn set_ovrudr(&mut self, val: bool) {
+        pub fn set_ovrudr(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "Mute detection. This bit is read only. This flag is set if consecutive 0 values are received in each slot of a given audio frame and for a consecutive number of audio frames (set in the MUTECNT bit in the SAI_xCR2 register). It can generate an interrupt if MUTEDETIE bit is set in SAI_xIM register. This flag is cleared when the software sets bit CMUTEDET in the SAI_xCLRFR register."]
-        #[must_use]
         #[inline(always)]
         pub const fn mutedet(&self) -> bool {
             let val = (self.0 >> 1usize) & 0x01;
@@ -975,12 +883,11 @@ bits and the audio block is operates as a receiver."]
         }
         #[doc = "Mute detection. This bit is read only. This flag is set if consecutive 0 values are received in each slot of a given audio frame and for a consecutive number of audio frames (set in the MUTECNT bit in the SAI_xCR2 register). It can generate an interrupt if MUTEDETIE bit is set in SAI_xIM register. This flag is cleared when the software sets bit CMUTEDET in the SAI_xCLRFR register."]
         #[inline(always)]
-        pub const fn set_mutedet(&mut self, val: bool) {
+        pub fn set_mutedet(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
         }
         #[doc = "Wrong clock configuration flag. This bit is read only. This bit is used only when the audio block operates in master mode (MODE\\[1\\]
 = 0) and NODIV = 0. It can generate an interrupt if WCKCFGIE bit is set in SAI_xIM register. This flag is cleared when the software sets CWCKCFG bit in SAI_xCLRFR register."]
-        #[must_use]
         #[inline(always)]
         pub const fn wckcfg(&self) -> super::vals::Wckcfg {
             let val = (self.0 >> 2usize) & 0x01;
@@ -989,11 +896,10 @@ bits and the audio block is operates as a receiver."]
         #[doc = "Wrong clock configuration flag. This bit is read only. This bit is used only when the audio block operates in master mode (MODE\\[1\\]
 = 0) and NODIV = 0. It can generate an interrupt if WCKCFGIE bit is set in SAI_xIM register. This flag is cleared when the software sets CWCKCFG bit in SAI_xCLRFR register."]
         #[inline(always)]
-        pub const fn set_wckcfg(&mut self, val: super::vals::Wckcfg) {
+        pub fn set_wckcfg(&mut self, val: super::vals::Wckcfg) {
             self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
         }
         #[doc = "FIFO request. This bit is read only. The request depends on the audio block configuration: If the block is configured in transmission mode, the FIFO request is related to a write request operation in the SAI_xDR. If the block configured in reception, the FIFO request related to a read request operation from the SAI_xDR. This flag can generate an interrupt if FREQIE bit is set in SAI_xIM register."]
-        #[must_use]
         #[inline(always)]
         pub const fn freq(&self) -> bool {
             let val = (self.0 >> 3usize) & 0x01;
@@ -1001,11 +907,10 @@ bits and the audio block is operates as a receiver."]
         }
         #[doc = "FIFO request. This bit is read only. The request depends on the audio block configuration: If the block is configured in transmission mode, the FIFO request is related to a write request operation in the SAI_xDR. If the block configured in reception, the FIFO request related to a read request operation from the SAI_xDR. This flag can generate an interrupt if FREQIE bit is set in SAI_xIM register."]
         #[inline(always)]
-        pub const fn set_freq(&mut self, val: bool) {
+        pub fn set_freq(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
         }
         #[doc = "Codec not ready. This bit is read only. This bit is used only when the AC97 audio protocol is selected in the SAI_xCR1 register and configured in receiver mode. It can generate an interrupt if CNRDYIE bit is set in SAI_xIM register. This flag is cleared when the software sets CCNRDY bit in SAI_xCLRFR register."]
-        #[must_use]
         #[inline(always)]
         pub const fn cnrdy(&self) -> super::vals::Cnrdy {
             let val = (self.0 >> 4usize) & 0x01;
@@ -1013,11 +918,10 @@ bits and the audio block is operates as a receiver."]
         }
         #[doc = "Codec not ready. This bit is read only. This bit is used only when the AC97 audio protocol is selected in the SAI_xCR1 register and configured in receiver mode. It can generate an interrupt if CNRDYIE bit is set in SAI_xIM register. This flag is cleared when the software sets CCNRDY bit in SAI_xCLRFR register."]
         #[inline(always)]
-        pub const fn set_cnrdy(&mut self, val: super::vals::Cnrdy) {
+        pub fn set_cnrdy(&mut self, val: super::vals::Cnrdy) {
             self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u32) & 0x01) << 4usize);
         }
         #[doc = "Anticipated frame synchronization detection. This bit is read only. This flag can be set only if the audio block is configured in slave mode. It is not used in AC97or SPDIF mode. It can generate an interrupt if AFSDETIE bit is set in SAI_xIM register. This flag is cleared when the software sets CAFSDET bit in SAI_xCLRFR register."]
-        #[must_use]
         #[inline(always)]
         pub const fn afsdet(&self) -> bool {
             let val = (self.0 >> 5usize) & 0x01;
@@ -1025,11 +929,10 @@ bits and the audio block is operates as a receiver."]
         }
         #[doc = "Anticipated frame synchronization detection. This bit is read only. This flag can be set only if the audio block is configured in slave mode. It is not used in AC97or SPDIF mode. It can generate an interrupt if AFSDETIE bit is set in SAI_xIM register. This flag is cleared when the software sets CAFSDET bit in SAI_xCLRFR register."]
         #[inline(always)]
-        pub const fn set_afsdet(&mut self, val: bool) {
+        pub fn set_afsdet(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
         }
         #[doc = "Late frame synchronization detection. This bit is read only. This flag can be set only if the audio block is configured in slave mode. It is not used in AC97 or SPDIF mode. It can generate an interrupt if LFSDETIE bit is set in the SAI_xIM register. This flag is cleared when the software sets bit CLFSDET in SAI_xCLRFR register"]
-        #[must_use]
         #[inline(always)]
         pub const fn lfsdet(&self) -> bool {
             let val = (self.0 >> 6usize) & 0x01;
@@ -1037,11 +940,10 @@ bits and the audio block is operates as a receiver."]
         }
         #[doc = "Late frame synchronization detection. This bit is read only. This flag can be set only if the audio block is configured in slave mode. It is not used in AC97 or SPDIF mode. It can generate an interrupt if LFSDETIE bit is set in the SAI_xIM register. This flag is cleared when the software sets bit CLFSDET in SAI_xCLRFR register"]
         #[inline(always)]
-        pub const fn set_lfsdet(&mut self, val: bool) {
+        pub fn set_lfsdet(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
         }
         #[doc = "FIFO level threshold. This bit is read only. The FIFO level threshold flag is managed only by hardware and its setting depends on SAI block configuration (transmitter or receiver mode). If the SAI block is configured as transmitter: If SAI block is configured as receiver:"]
-        #[must_use]
         #[inline(always)]
         pub const fn flvl(&self) -> super::vals::Flvl {
             let val = (self.0 >> 16usize) & 0x07;
@@ -1049,7 +951,7 @@ bits and the audio block is operates as a receiver."]
         }
         #[doc = "FIFO level threshold. This bit is read only. The FIFO level threshold flag is managed only by hardware and its setting depends on SAI block configuration (transmitter or receiver mode). If the SAI block is configured as transmitter: If SAI block is configured as receiver:"]
         #[inline(always)]
-        pub const fn set_flvl(&mut self, val: super::vals::Flvl) {
+        pub fn set_flvl(&mut self, val: super::vals::Flvl) {
             self.0 = (self.0 & !(0x07 << 16usize)) | (((val.to_bits() as u32) & 0x07) << 16usize);
         }
     }
@@ -1076,18 +978,7 @@ bits and the audio block is operates as a receiver."]
     #[cfg(feature = "defmt")]
     impl defmt::Format for Sr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Sr {{ ovrudr: {=bool:?}, mutedet: {=bool:?}, wckcfg: {:?}, freq: {=bool:?}, cnrdy: {:?}, afsdet: {=bool:?}, lfsdet: {=bool:?}, flvl: {:?} }}",
-                self.ovrudr(),
-                self.mutedet(),
-                self.wckcfg(),
-                self.freq(),
-                self.cnrdy(),
-                self.afsdet(),
-                self.lfsdet(),
-                self.flvl()
-            )
+            defmt :: write ! (f , "Sr {{ ovrudr: {=bool:?}, mutedet: {=bool:?}, wckcfg: {:?}, freq: {=bool:?}, cnrdy: {:?}, afsdet: {=bool:?}, lfsdet: {=bool:?}, flvl: {:?} }}" , self . ovrudr () , self . mutedet () , self . wckcfg () , self . freq () , self . cnrdy () , self . afsdet () , self . lfsdet () , self . flvl ())
         }
     }
 }
@@ -1097,9 +988,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Ckstr {
         #[doc = "Data strobing edge is falling edge of SCK"]
-        FallingEdge = 0x0,
+        FALLING_EDGE = 0x0,
         #[doc = "Data strobing edge is rising edge of SCK"]
-        RisingEdge = 0x01,
+        RISING_EDGE = 0x01,
     }
     impl Ckstr {
         #[inline(always)]
@@ -1128,9 +1019,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Cnrdy {
         #[doc = "External AC’97 Codec is ready"]
-        Ready = 0x0,
+        READY = 0x0,
         #[doc = "External AC’97 Codec is not ready"]
-        NotReady = 0x01,
+        NOT_READY = 0x01,
     }
     impl Cnrdy {
         #[inline(always)]
@@ -1159,12 +1050,12 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Comp {
         #[doc = "No companding algorithm"]
-        NoCompanding = 0x0,
+        NO_COMPANDING = 0x0,
         _RESERVED_1 = 0x01,
         #[doc = "μ-Law algorithm"]
-        MuLaw = 0x02,
+        MU_LAW = 0x02,
         #[doc = "A-Law algorithm"]
-        ALaw = 0x03,
+        ALAW = 0x03,
     }
     impl Comp {
         #[inline(always)]
@@ -1193,9 +1084,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Cpl {
         #[doc = "1’s complement representation"]
-        OnesComplement = 0x0,
+        ONES_COMPLEMENT = 0x0,
         #[doc = "2’s complement representation"]
-        TwosComplement = 0x01,
+        TWOS_COMPLEMENT = 0x01,
     }
     impl Cpl {
         #[inline(always)]
@@ -1226,17 +1117,17 @@ pub mod vals {
         _RESERVED_0 = 0x0,
         _RESERVED_1 = 0x01,
         #[doc = "8 bits"]
-        Bit8 = 0x02,
+        BIT8 = 0x02,
         #[doc = "10 bits"]
-        Bit10 = 0x03,
+        BIT10 = 0x03,
         #[doc = "16 bits"]
-        Bit16 = 0x04,
+        BIT16 = 0x04,
         #[doc = "20 bits"]
-        Bit20 = 0x05,
+        BIT20 = 0x05,
         #[doc = "24 bits"]
-        Bit24 = 0x06,
+        BIT24 = 0x06,
         #[doc = "32 bits"]
-        Bit32 = 0x07,
+        BIT32 = 0x07,
     }
     impl Ds {
         #[inline(always)]
@@ -1265,17 +1156,17 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Flvl {
         #[doc = "FIFO empty"]
-        Empty = 0x0,
+        EMPTY = 0x0,
         #[doc = "FIFO <= 1⁄4 but not empty"]
-        Quarter1 = 0x01,
+        QUARTER1 = 0x01,
         #[doc = "1⁄4 < FIFO <= 1⁄2"]
-        Quarter2 = 0x02,
+        QUARTER2 = 0x02,
         #[doc = "1⁄2 < FIFO <= 3⁄4"]
-        Quarter3 = 0x03,
+        QUARTER3 = 0x03,
         #[doc = "3⁄4 < FIFO but not full"]
-        Quarter4 = 0x04,
+        QUARTER4 = 0x04,
         #[doc = "FIFO full"]
-        Full = 0x05,
+        FULL = 0x05,
         _RESERVED_6 = 0x06,
         _RESERVED_7 = 0x07,
     }
@@ -1306,9 +1197,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Fsoff {
         #[doc = "FS is asserted on the first bit of the slot 0"]
-        OnFirst = 0x0,
+        ON_FIRST = 0x0,
         #[doc = "FS is asserted one bit before the first bit of the slot 0"]
-        BeforeFirst = 0x01,
+        BEFORE_FIRST = 0x01,
     }
     impl Fsoff {
         #[inline(always)]
@@ -1337,9 +1228,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Fspol {
         #[doc = "FS is active low (falling edge)"]
-        FallingEdge = 0x0,
+        FALLING_EDGE = 0x0,
         #[doc = "FS is active high (rising edge)"]
-        RisingEdge = 0x01,
+        RISING_EDGE = 0x01,
     }
     impl Fspol {
         #[inline(always)]
@@ -1368,15 +1259,15 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Fth {
         #[doc = "FIFO empty"]
-        Empty = 0x0,
+        EMPTY = 0x0,
         #[doc = "1⁄4 FIFO"]
-        Quarter1 = 0x01,
+        QUARTER1 = 0x01,
         #[doc = "1⁄2 FIFO"]
-        Quarter2 = 0x02,
+        QUARTER2 = 0x02,
         #[doc = "3⁄4 FIFO"]
-        Quarter3 = 0x03,
+        QUARTER3 = 0x03,
         #[doc = "FIFO full"]
-        Full = 0x04,
+        FULL = 0x04,
         _RESERVED_5 = 0x05,
         _RESERVED_6 = 0x06,
         _RESERVED_7 = 0x07,
@@ -1408,9 +1299,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Lsbfirst {
         #[doc = "Data are transferred with MSB first"]
-        MsbFirst = 0x0,
+        MSB_FIRST = 0x0,
         #[doc = "Data are transferred with LSB first"]
-        LsbFirst = 0x01,
+        LSB_FIRST = 0x01,
     }
     impl Lsbfirst {
         #[inline(always)]
@@ -1438,22 +1329,22 @@ pub mod vals {
     #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Mckdiv {
-        Div1 = 0x0,
-        Div2 = 0x01,
-        Div4 = 0x02,
-        Div6 = 0x03,
-        Div8 = 0x04,
-        Div10 = 0x05,
-        Div12 = 0x06,
-        Div14 = 0x07,
-        Div16 = 0x08,
-        Div18 = 0x09,
-        Div20 = 0x0a,
-        Div22 = 0x0b,
-        Div24 = 0x0c,
-        Div26 = 0x0d,
-        Div28 = 0x0e,
-        Div30 = 0x0f,
+        DIV1 = 0x0,
+        DIV2 = 0x01,
+        DIV4 = 0x02,
+        DIV6 = 0x03,
+        DIV8 = 0x04,
+        DIV10 = 0x05,
+        DIV12 = 0x06,
+        DIV14 = 0x07,
+        DIV16 = 0x08,
+        DIV18 = 0x09,
+        DIV20 = 0x0a,
+        DIV22 = 0x0b,
+        DIV24 = 0x0c,
+        DIV26 = 0x0d,
+        DIV28 = 0x0e,
+        DIV30 = 0x0f,
     }
     impl Mckdiv {
         #[inline(always)]
@@ -1482,13 +1373,13 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Mode {
         #[doc = "Master transmitter"]
-        MasterTx = 0x0,
+        MASTER_TX = 0x0,
         #[doc = "Master receiver"]
-        MasterRx = 0x01,
+        MASTER_RX = 0x01,
         #[doc = "Slave transmitter"]
-        SlaveTx = 0x02,
+        SLAVE_TX = 0x02,
         #[doc = "Slave receiver"]
-        SlaveRx = 0x03,
+        SLAVE_RX = 0x03,
     }
     impl Mode {
         #[inline(always)]
@@ -1517,9 +1408,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Mono {
         #[doc = "Stereo mode"]
-        Stereo = 0x0,
+        STEREO = 0x0,
         #[doc = "Mono mode"]
-        Mono = 0x01,
+        MONO = 0x01,
     }
     impl Mono {
         #[inline(always)]
@@ -1548,9 +1439,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Muteval {
         #[doc = "Bit value 0 is sent during the mute mode"]
-        SendZero = 0x0,
+        SEND_ZERO = 0x0,
         #[doc = "Last values are sent during the mute mode"]
-        SendLast = 0x01,
+        SEND_LAST = 0x01,
     }
     impl Muteval {
         #[inline(always)]
@@ -1579,9 +1470,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Outdriv {
         #[doc = "Audio block output driven when SAIEN is set"]
-        OnStart = 0x0,
+        ON_START = 0x0,
         #[doc = "Audio block output driven immediately after the setting of this bit"]
-        Immediately = 0x01,
+        IMMEDIATELY = 0x01,
     }
     impl Outdriv {
         #[inline(always)]
@@ -1610,11 +1501,11 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Prtcfg {
         #[doc = "Free protocol. Free protocol allows to use the powerful configuration of the audio block to address a specific audio protocol"]
-        Free = 0x0,
+        FREE = 0x0,
         #[doc = "SPDIF protocol"]
-        Spdif = 0x01,
+        SPDIF = 0x01,
         #[doc = "AC’97 protocol"]
-        Ac97 = 0x02,
+        AC97 = 0x02,
         _RESERVED_3 = 0x03,
     }
     impl Prtcfg {
@@ -1644,9 +1535,9 @@ pub mod vals {
     pub struct Sloten(u16);
     impl Sloten {
         #[doc = "Inactive slot"]
-        pub const Inactive: Self = Self(0x0);
+        pub const INACTIVE: Self = Self(0x0);
         #[doc = "Active slot"]
-        pub const Active: Self = Self(0x01);
+        pub const ACTIVE: Self = Self(0x01);
     }
     impl Sloten {
         pub const fn from_bits(val: u16) -> Sloten {
@@ -1659,8 +1550,8 @@ pub mod vals {
     impl core::fmt::Debug for Sloten {
         fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
             match self.0 {
-                0x0 => f.write_str("Inactive"),
-                0x01 => f.write_str("Active"),
+                0x0 => f.write_str("INACTIVE"),
+                0x01 => f.write_str("ACTIVE"),
                 other => core::write!(f, "0x{:02X}", other),
             }
         }
@@ -1669,8 +1560,8 @@ pub mod vals {
     impl defmt::Format for Sloten {
         fn format(&self, f: defmt::Formatter) {
             match self.0 {
-                0x0 => defmt::write!(f, "Inactive"),
-                0x01 => defmt::write!(f, "Active"),
+                0x0 => defmt::write!(f, "INACTIVE"),
+                0x01 => defmt::write!(f, "ACTIVE"),
                 other => defmt::write!(f, "0x{:02X}", other),
             }
         }
@@ -1693,11 +1584,11 @@ pub mod vals {
     pub enum Slotsz {
         #[doc = "The slot size is equivalent to the data size (specified in DS\\[3:0\\]
 in the SAI_xCR1 register)"]
-        DataSize = 0x0,
+        DATA_SIZE = 0x0,
         #[doc = "16-bit"]
-        Bit16 = 0x01,
+        BIT16 = 0x01,
         #[doc = "32-bit"]
-        Bit32 = 0x02,
+        BIT32 = 0x02,
         _RESERVED_3 = 0x03,
     }
     impl Slotsz {
@@ -1727,11 +1618,11 @@ in the SAI_xCR1 register)"]
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Syncen {
         #[doc = "audio sub-block in asynchronous mode"]
-        Asynchronous = 0x0,
+        ASYNCHRONOUS = 0x0,
         #[doc = "audio sub-block is synchronous with the other internal audio sub-block. In this case, the audio sub-block must be configured in slave mode"]
-        Internal = 0x01,
+        INTERNAL = 0x01,
         #[doc = "audio sub-block is synchronous with an external SAI embedded peripheral. In this case the audio sub-block should be configured in Slave mode"]
-        External = 0x02,
+        EXTERNAL = 0x02,
         _RESERVED_3 = 0x03,
     }
     impl Syncen {
@@ -1761,9 +1652,9 @@ in the SAI_xCR1 register)"]
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Wckcfg {
         #[doc = "Clock configuration is correct"]
-        Correct = 0x0,
+        CORRECT = 0x0,
         #[doc = "Clock configuration does not respect the rule concerning the frame length specification"]
-        Wrong = 0x01,
+        WRONG = 0x01,
     }
     impl Wckcfg {
         #[inline(always)]

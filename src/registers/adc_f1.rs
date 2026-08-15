@@ -627,54 +627,54 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 4,
             variants: &[
                 EnumVariant {
-                    name: "AlternateTrigger",
-                    description: Some("Alternate trigger mode only"),
-                    value: 9,
-                },
-                EnumVariant {
-                    name: "FastInterleaved",
-                    description: Some("Fast interleaved mode only"),
-                    value: 7,
-                },
-                EnumVariant {
-                    name: "Independent",
+                    name: "INDEPENDENT",
                     description: Some("Independent mode."),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "Injected",
-                    description: Some("Injected simultaneous mode only"),
-                    value: 5,
-                },
-                EnumVariant {
-                    name: "InjectedFastInterleaved",
-                    description: Some("Combined injected simultaneous + fast interleaved mode"),
-                    value: 3,
-                },
-                EnumVariant {
-                    name: "InjectedSlowInterleaved",
-                    description: Some("Combined injected simultaneous + slow Interleaved mode"),
-                    value: 4,
-                },
-                EnumVariant {
-                    name: "Regular",
-                    description: Some("Regular simultaneous mode only"),
-                    value: 6,
-                },
-                EnumVariant {
-                    name: "RegularAlternateTrigger",
-                    description: Some("Combined regular simultaneous + alternate trigger mode"),
-                    value: 2,
-                },
-                EnumVariant {
-                    name: "RegularInjected",
+                    name: "REGULAR_INJECTED",
                     description: Some("Combined regular simultaneous + injected simultaneous mode"),
                     value: 1,
                 },
                 EnumVariant {
-                    name: "SlowInterleaved",
+                    name: "REGULAR_ALTERNATE_TRIGGER",
+                    description: Some("Combined regular simultaneous + alternate trigger mode"),
+                    value: 2,
+                },
+                EnumVariant {
+                    name: "INJECTED_FAST_INTERLEAVED",
+                    description: Some("Combined injected simultaneous + fast interleaved mode"),
+                    value: 3,
+                },
+                EnumVariant {
+                    name: "INJECTED_SLOW_INTERLEAVED",
+                    description: Some("Combined injected simultaneous + slow Interleaved mode"),
+                    value: 4,
+                },
+                EnumVariant {
+                    name: "INJECTED",
+                    description: Some("Injected simultaneous mode only"),
+                    value: 5,
+                },
+                EnumVariant {
+                    name: "REGULAR",
+                    description: Some("Regular simultaneous mode only"),
+                    value: 6,
+                },
+                EnumVariant {
+                    name: "FAST_INTERLEAVED",
+                    description: Some("Fast interleaved mode only"),
+                    value: 7,
+                },
+                EnumVariant {
+                    name: "SLOW_INTERLEAVED",
                     description: Some("Slow interleaved mode only"),
                     value: 8,
+                },
+                EnumVariant {
+                    name: "ALTERNATE_TRIGGER",
+                    description: Some("Alternate trigger mode only"),
+                    value: 9,
                 },
             ],
         },
@@ -684,44 +684,44 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 3,
             variants: &[
                 EnumVariant {
-                    name: "Cycles135",
-                    description: Some("13.5 cycles"),
-                    value: 2,
-                },
-                EnumVariant {
-                    name: "Cycles15",
+                    name: "CYCLES1_5",
                     description: Some("1.5 cycles"),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "Cycles2395",
-                    description: Some("239.5 cycles"),
-                    value: 7,
+                    name: "CYCLES7_5",
+                    description: Some("7.5 cycles"),
+                    value: 1,
                 },
                 EnumVariant {
-                    name: "Cycles285",
+                    name: "CYCLES13_5",
+                    description: Some("13.5 cycles"),
+                    value: 2,
+                },
+                EnumVariant {
+                    name: "CYCLES28_5",
                     description: Some("28.5 cycles"),
                     value: 3,
                 },
                 EnumVariant {
-                    name: "Cycles415",
+                    name: "CYCLES41_5",
                     description: Some("41.5 cycles"),
                     value: 4,
                 },
                 EnumVariant {
-                    name: "Cycles555",
+                    name: "CYCLES55_5",
                     description: Some("55.5 cycles"),
                     value: 5,
                 },
                 EnumVariant {
-                    name: "Cycles715",
+                    name: "CYCLES71_5",
                     description: Some("71.5 cycles"),
                     value: 6,
                 },
                 EnumVariant {
-                    name: "Cycles75",
-                    description: Some("7.5 cycles"),
-                    value: 1,
+                    name: "CYCLES239_5",
+                    description: Some("239.5 cycles"),
+                    value: 7,
                 },
             ],
         },

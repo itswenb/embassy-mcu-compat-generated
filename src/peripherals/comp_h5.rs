@@ -22,22 +22,22 @@ impl Comp {
     #[doc = "Comparator status register."]
     #[inline(always)]
     pub const fn sr(self) -> crate::common::Reg<regs::Sr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0usize) as _) }
     }
     #[doc = "Comparator interrupt clear flag register."]
     #[inline(always)]
     pub const fn icfr(self) -> crate::common::Reg<regs::Icfr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x04usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x04usize) as _) }
     }
     #[doc = "Comparator configuration register 1."]
     #[inline(always)]
     pub const fn cfgr1(self) -> crate::common::Reg<regs::Cfgr1, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0cusize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0cusize) as _) }
     }
     #[doc = "Comparator configuration register 2."]
     #[inline(always)]
     pub const fn cfgr2(self) -> crate::common::Reg<regs::Cfgr2, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x10usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x10usize) as _) }
     }
 }
 pub mod regs {
@@ -47,7 +47,6 @@ pub mod regs {
     pub struct Cfgr1(pub u32);
     impl Cfgr1 {
         #[doc = "COMP Channel1 enable This bit is set and cleared by software (only if LOCK not set). It enables the COMP-Channel1."]
-        #[must_use]
         #[inline(always)]
         pub const fn en(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -55,11 +54,10 @@ pub mod regs {
         }
         #[doc = "COMP Channel1 enable This bit is set and cleared by software (only if LOCK not set). It enables the COMP-Channel1."]
         #[inline(always)]
-        pub const fn set_en(&mut self, val: bool) {
+        pub fn set_en(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "Scaler bridge enable This bit is set and cleared by software (only if LOCK not set). This bit enables the bridge of the scaler. If SCALEN is set and BRGEN is reset, all four scaler outputs provide the same level V<sub>REF_COMP</sub> (similar to V<sub>REFINT</sub>). If SCALEN and BRGEN are set, the four scaler outputs provide V<sub>REF_COMP</sub>, 3/4-V<sub>REF_COMP</sub>, 1/2-V<sub>REF_COMP</sub> and 1/4-V<sub>REF_COMP</sub> levels, respectively."]
-        #[must_use]
         #[inline(always)]
         pub const fn brgen(&self) -> bool {
             let val = (self.0 >> 1usize) & 0x01;
@@ -67,11 +65,10 @@ pub mod regs {
         }
         #[doc = "Scaler bridge enable This bit is set and cleared by software (only if LOCK not set). This bit enables the bridge of the scaler. If SCALEN is set and BRGEN is reset, all four scaler outputs provide the same level V<sub>REF_COMP</sub> (similar to V<sub>REFINT</sub>). If SCALEN and BRGEN are set, the four scaler outputs provide V<sub>REF_COMP</sub>, 3/4-V<sub>REF_COMP</sub>, 1/2-V<sub>REF_COMP</sub> and 1/4-V<sub>REF_COMP</sub> levels, respectively."]
         #[inline(always)]
-        pub const fn set_brgen(&mut self, val: bool) {
+        pub fn set_brgen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
         }
         #[doc = "Voltage scaler enable This bit is set and cleared by software (only if LOCK not set). This bit enables the V<sub>REFINT</sub> scaler for the COMP channels."]
-        #[must_use]
         #[inline(always)]
         pub const fn scalen(&self) -> bool {
             let val = (self.0 >> 2usize) & 0x01;
@@ -79,11 +76,10 @@ pub mod regs {
         }
         #[doc = "Voltage scaler enable This bit is set and cleared by software (only if LOCK not set). This bit enables the V<sub>REFINT</sub> scaler for the COMP channels."]
         #[inline(always)]
-        pub const fn set_scalen(&mut self, val: bool) {
+        pub fn set_scalen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
         }
         #[doc = "COMP channel1 polarity selection This bit is set and cleared by software (only if LOCK not set). It inverts COMP channel1 polarity."]
-        #[must_use]
         #[inline(always)]
         pub const fn polarity(&self) -> bool {
             let val = (self.0 >> 3usize) & 0x01;
@@ -91,11 +87,10 @@ pub mod regs {
         }
         #[doc = "COMP channel1 polarity selection This bit is set and cleared by software (only if LOCK not set). It inverts COMP channel1 polarity."]
         #[inline(always)]
-        pub const fn set_polarity(&mut self, val: bool) {
+        pub fn set_polarity(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
         }
         #[doc = "COMP channel1 interrupt enable This bit is set and cleared by software (only if LOCK not set). This bit enable the interrupt generation of the COMP channel1."]
-        #[must_use]
         #[inline(always)]
         pub const fn iten(&self) -> bool {
             let val = (self.0 >> 6usize) & 0x01;
@@ -103,11 +98,10 @@ pub mod regs {
         }
         #[doc = "COMP channel1 interrupt enable This bit is set and cleared by software (only if LOCK not set). This bit enable the interrupt generation of the COMP channel1."]
         #[inline(always)]
-        pub const fn set_iten(&mut self, val: bool) {
+        pub fn set_iten(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
         }
         #[doc = "COMP channel1 hysteresis selection These bits are set and cleared by software (only if LOCK not set). They select the hysteresis voltage of the COMP channel1."]
-        #[must_use]
         #[inline(always)]
         pub const fn hyst(&self) -> super::vals::Hyst {
             let val = (self.0 >> 8usize) & 0x03;
@@ -115,11 +109,10 @@ pub mod regs {
         }
         #[doc = "COMP channel1 hysteresis selection These bits are set and cleared by software (only if LOCK not set). They select the hysteresis voltage of the COMP channel1."]
         #[inline(always)]
-        pub const fn set_hyst(&mut self, val: super::vals::Hyst) {
+        pub fn set_hyst(&mut self, val: super::vals::Hyst) {
             self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u32) & 0x03) << 8usize);
         }
         #[doc = "Power mode of the COMP channel1 These bits are set and cleared by software (only if LOCK not set). They control the power/speed of the COMP channel1."]
-        #[must_use]
         #[inline(always)]
         pub const fn pwrmode(&self) -> super::vals::Pwrmode {
             let val = (self.0 >> 12usize) & 0x03;
@@ -127,11 +120,10 @@ pub mod regs {
         }
         #[doc = "Power mode of the COMP channel1 These bits are set and cleared by software (only if LOCK not set). They control the power/speed of the COMP channel1."]
         #[inline(always)]
-        pub const fn set_pwrmode(&mut self, val: super::vals::Pwrmode) {
+        pub fn set_pwrmode(&mut self, val: super::vals::Pwrmode) {
             self.0 = (self.0 & !(0x03 << 12usize)) | (((val.to_bits() as u32) & 0x03) << 12usize);
         }
         #[doc = "COMP channel1 inverting input selection These bits are set and cleared by software (only if LOCK not set). They select which input is connected to the input minus of the COMP channel. Note: See Table-146: COMP1 inverting input assignment for more details."]
-        #[must_use]
         #[inline(always)]
         pub const fn inmsel(&self) -> super::vals::Inmsel {
             let val = (self.0 >> 16usize) & 0x0f;
@@ -139,11 +131,10 @@ pub mod regs {
         }
         #[doc = "COMP channel1 inverting input selection These bits are set and cleared by software (only if LOCK not set). They select which input is connected to the input minus of the COMP channel. Note: See Table-146: COMP1 inverting input assignment for more details."]
         #[inline(always)]
-        pub const fn set_inmsel(&mut self, val: super::vals::Inmsel) {
+        pub fn set_inmsel(&mut self, val: super::vals::Inmsel) {
             self.0 = (self.0 & !(0x0f << 16usize)) | (((val.to_bits() as u32) & 0x0f) << 16usize);
         }
         #[doc = "COMP noninverting input selection This bit is set and cleared by software (only if LOCK not set). They select which input is connected to the positive input of COMP channel. Note: See Table-145: COMP1 noninverting input assignment for more details."]
-        #[must_use]
         #[inline(always)]
         pub const fn inpsel1(&self) -> bool {
             let val = (self.0 >> 20usize) & 0x01;
@@ -151,11 +142,10 @@ pub mod regs {
         }
         #[doc = "COMP noninverting input selection This bit is set and cleared by software (only if LOCK not set). They select which input is connected to the positive input of COMP channel. Note: See Table-145: COMP1 noninverting input assignment for more details."]
         #[inline(always)]
-        pub const fn set_inpsel1(&mut self, val: bool) {
+        pub fn set_inpsel1(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
         }
         #[doc = "COMP noninverting input selection This bit is set and cleared by software (only if LOCK not set). They select which input is connected to the positive input of the COMP channel. See Table-145: COMP1 noninverting input assignment for more details."]
-        #[must_use]
         #[inline(always)]
         pub const fn inpsel2(&self) -> bool {
             let val = (self.0 >> 22usize) & 0x01;
@@ -163,11 +153,10 @@ pub mod regs {
         }
         #[doc = "COMP noninverting input selection This bit is set and cleared by software (only if LOCK not set). They select which input is connected to the positive input of the COMP channel. See Table-145: COMP1 noninverting input assignment for more details."]
         #[inline(always)]
-        pub const fn set_inpsel2(&mut self, val: bool) {
+        pub fn set_inpsel2(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
         }
         #[doc = "COMP Channel1 blanking source selection Bits of this field are set and cleared by software (only if LOCK not set). The field selects the input source for COMP Channel1 output blanking: All other values: reserved."]
-        #[must_use]
         #[inline(always)]
         pub const fn blanking(&self) -> super::vals::Blanking {
             let val = (self.0 >> 24usize) & 0x0f;
@@ -175,11 +164,10 @@ pub mod regs {
         }
         #[doc = "COMP Channel1 blanking source selection Bits of this field are set and cleared by software (only if LOCK not set). The field selects the input source for COMP Channel1 output blanking: All other values: reserved."]
         #[inline(always)]
-        pub const fn set_blanking(&mut self, val: super::vals::Blanking) {
+        pub fn set_blanking(&mut self, val: super::vals::Blanking) {
             self.0 = (self.0 & !(0x0f << 24usize)) | (((val.to_bits() as u32) & 0x0f) << 24usize);
         }
         #[doc = "Lock This bit is set by software and cleared by a hardware system reset. It locks the whole content of the COMP Channel1 configuration register COMP_CFGR1\\[31:0\\]."]
-        #[must_use]
         #[inline(always)]
         pub const fn lock(&self) -> bool {
             let val = (self.0 >> 31usize) & 0x01;
@@ -187,7 +175,7 @@ pub mod regs {
         }
         #[doc = "Lock This bit is set by software and cleared by a hardware system reset. It locks the whole content of the COMP Channel1 configuration register COMP_CFGR1\\[31:0\\]."]
         #[inline(always)]
-        pub const fn set_lock(&mut self, val: bool) {
+        pub fn set_lock(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
         }
     }
@@ -218,22 +206,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Cfgr1 {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Cfgr1 {{ en: {=bool:?}, brgen: {=bool:?}, scalen: {=bool:?}, polarity: {=bool:?}, iten: {=bool:?}, hyst: {:?}, pwrmode: {:?}, inmsel: {:?}, inpsel1: {=bool:?}, inpsel2: {=bool:?}, blanking: {:?}, lock: {=bool:?} }}",
-                self.en(),
-                self.brgen(),
-                self.scalen(),
-                self.polarity(),
-                self.iten(),
-                self.hyst(),
-                self.pwrmode(),
-                self.inmsel(),
-                self.inpsel1(),
-                self.inpsel2(),
-                self.blanking(),
-                self.lock()
-            )
+            defmt :: write ! (f , "Cfgr1 {{ en: {=bool:?}, brgen: {=bool:?}, scalen: {=bool:?}, polarity: {=bool:?}, iten: {=bool:?}, hyst: {:?}, pwrmode: {:?}, inmsel: {:?}, inpsel1: {=bool:?}, inpsel2: {=bool:?}, blanking: {:?}, lock: {=bool:?} }}" , self . en () , self . brgen () , self . scalen () , self . polarity () , self . iten () , self . hyst () , self . pwrmode () , self . inmsel () , self . inpsel1 () , self . inpsel2 () , self . blanking () , self . lock ())
         }
     }
     #[doc = "Comparator configuration register 2."]
@@ -242,7 +215,6 @@ pub mod regs {
     pub struct Cfgr2(pub u32);
     impl Cfgr2 {
         #[doc = "COMP non-inverting input selection This bit is set and cleared by software (only if LOCK not set). They select which input is connected to the positive input of COMP channel. See Table-145: COMP1 noninverting input assignment for more details."]
-        #[must_use]
         #[inline(always)]
         pub const fn inpsel0(&self) -> bool {
             let val = (self.0 >> 4usize) & 0x01;
@@ -250,11 +222,10 @@ pub mod regs {
         }
         #[doc = "COMP non-inverting input selection This bit is set and cleared by software (only if LOCK not set). They select which input is connected to the positive input of COMP channel. See Table-145: COMP1 noninverting input assignment for more details."]
         #[inline(always)]
-        pub const fn set_inpsel0(&mut self, val: bool) {
+        pub fn set_inpsel0(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
         }
         #[doc = "Lock This bit is set by software and cleared by a hardware system reset. It locks the whole content of the COMP Channel1 configuration register COMP_CFGR2\\[31:0\\]."]
-        #[must_use]
         #[inline(always)]
         pub const fn lock(&self) -> bool {
             let val = (self.0 >> 31usize) & 0x01;
@@ -262,7 +233,7 @@ pub mod regs {
         }
         #[doc = "Lock This bit is set by software and cleared by a hardware system reset. It locks the whole content of the COMP Channel1 configuration register COMP_CFGR2\\[31:0\\]."]
         #[inline(always)]
-        pub const fn set_lock(&mut self, val: bool) {
+        pub fn set_lock(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
         }
     }
@@ -297,7 +268,6 @@ pub mod regs {
     pub struct Icfr(pub u32);
     impl Icfr {
         #[doc = "Clear COMP Channel1 interrupt flag Writing 1 clears the C1IF flag in the COMP_SR register."]
-        #[must_use]
         #[inline(always)]
         pub const fn ccif(&self, n: usize) -> bool {
             assert!(n < 1usize);
@@ -307,7 +277,7 @@ pub mod regs {
         }
         #[doc = "Clear COMP Channel1 interrupt flag Writing 1 clears the C1IF flag in the COMP_SR register."]
         #[inline(always)]
-        pub const fn set_ccif(&mut self, n: usize, val: bool) {
+        pub fn set_ccif(&mut self, n: usize, val: bool) {
             assert!(n < 1usize);
             let offs = 16usize + n * 0usize;
             self.0 = (self.0 & !(0x01 << offs)) | (((val as u32) & 0x01) << offs);
@@ -336,7 +306,6 @@ pub mod regs {
     pub struct Sr(pub u32);
     impl Sr {
         #[doc = "COMP Channel1 output status bit This bit is read-only. It reflects the current COMP Channel1 output taking into account POLARITY and BLANKING bits effect."]
-        #[must_use]
         #[inline(always)]
         pub const fn cval(&self, n: usize) -> bool {
             assert!(n < 1usize);
@@ -346,13 +315,12 @@ pub mod regs {
         }
         #[doc = "COMP Channel1 output status bit This bit is read-only. It reflects the current COMP Channel1 output taking into account POLARITY and BLANKING bits effect."]
         #[inline(always)]
-        pub const fn set_cval(&mut self, n: usize, val: bool) {
+        pub fn set_cval(&mut self, n: usize, val: bool) {
             assert!(n < 1usize);
             let offs = 0usize + n * 0usize;
             self.0 = (self.0 & !(0x01 << offs)) | (((val as u32) & 0x01) << offs);
         }
         #[doc = "COMP Channel1 interrupt flag This bit is set by hardware when the COMP Channel1 output is set This bit is cleared by software writing 1 the CC1IF bit in the COMP_ICFR register."]
-        #[must_use]
         #[inline(always)]
         pub const fn cif(&self, n: usize) -> bool {
             assert!(n < 1usize);
@@ -362,7 +330,7 @@ pub mod regs {
         }
         #[doc = "COMP Channel1 interrupt flag This bit is set by hardware when the COMP Channel1 output is set This bit is cleared by software writing 1 the CC1IF bit in the COMP_ICFR register."]
         #[inline(always)]
-        pub const fn set_cif(&mut self, n: usize, val: bool) {
+        pub fn set_cif(&mut self, n: usize, val: bool) {
             assert!(n < 1usize);
             let offs = 16usize + n * 0usize;
             self.0 = (self.0 & !(0x01 << offs)) | (((val as u32) & 0x01) << offs);
@@ -399,13 +367,13 @@ pub mod vals {
     #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Blanking {
-        NoBlanking = 0x0,
-        Tim1oc5 = 0x01,
-        Tim2oc3 = 0x02,
-        Tim3oc3 = 0x03,
-        Tim3oc4 = 0x04,
-        Lptim1ch2 = 0x05,
-        Lptim2ch2 = 0x06,
+        NO_BLANKING = 0x0,
+        TIM1OC5 = 0x01,
+        TIM2OC3 = 0x02,
+        TIM3OC3 = 0x03,
+        TIM3OC4 = 0x04,
+        LPTIM1CH2 = 0x05,
+        LPTIM2CH2 = 0x06,
         _RESERVED_7 = 0x07,
         _RESERVED_8 = 0x08,
         _RESERVED_9 = 0x09,
@@ -442,10 +410,10 @@ pub mod vals {
     #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Hyst {
-        None = 0x0,
-        Low = 0x01,
-        Medium = 0x02,
-        High = 0x03,
+        NONE = 0x0,
+        LOW = 0x01,
+        MEDIUM = 0x02,
+        HIGH = 0x03,
     }
     impl Hyst {
         #[inline(always)]
@@ -473,16 +441,16 @@ pub mod vals {
     #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Inmsel {
-        VRef1over4 = 0x0,
-        VRef1over2 = 0x01,
-        VRef3over4 = 0x02,
-        VRef = 0x03,
-        Dac1out1 = 0x04,
-        Inm1 = 0x05,
-        Inm2 = 0x06,
-        Inm3 = 0x07,
-        VSense = 0x08,
-        VBat1over4 = 0x09,
+        VREF_1OVER4 = 0x0,
+        VREF_1OVER2 = 0x01,
+        VREF_3OVER4 = 0x02,
+        VREF = 0x03,
+        DAC1OUT1 = 0x04,
+        INM1 = 0x05,
+        INM2 = 0x06,
+        INM3 = 0x07,
+        VSENSE = 0x08,
+        VBAT_1OVER4 = 0x09,
         _RESERVED_a = 0x0a,
         _RESERVED_b = 0x0b,
         _RESERVED_c = 0x0c,
@@ -517,13 +485,13 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Pwrmode {
         #[doc = "High speed / full power"]
-        High = 0x0,
+        HIGH = 0x0,
         #[doc = "Medium speed / medium power"]
-        Medium = 0x01,
+        MEDIUM = 0x01,
         #[doc = "Medium speed / medium power"]
-        MediumEither = 0x02,
+        MEDIUM_EITHER = 0x02,
         #[doc = "Ultra low power / ultra-low-power"]
-        Low = 0x03,
+        LOW = 0x03,
     }
     impl Pwrmode {
         #[inline(always)]

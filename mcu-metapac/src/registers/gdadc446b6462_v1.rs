@@ -1023,7 +1023,7 @@
             bit_size: 32,
             fields: &[
                 Field {
-                    name: "adc_ldctl_covse_lx",
+                    name: "adc_ldctl_covselx",
                     description: None,
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
@@ -1035,7 +1035,7 @@
                     enumm: None,
                 },
                 Field {
-                    name: "adc_ldctl_seqse_lx",
+                    name: "adc_ldctl_seqselx",
                     description: None,
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {

@@ -284,7 +284,7 @@
                     ),
                 },
                 BlockItem {
-                    name: "cau_gcmccmctx_sx_0",
+                    name: "cau_gcmccmctxsx_0",
                     description: None,
                     array: None,
                     byte_offset: 0x50,
@@ -297,7 +297,7 @@
                     ),
                 },
                 BlockItem {
-                    name: "cau_gcmccmctx_sx_1",
+                    name: "cau_gcmccmctxsx_1",
                     description: None,
                     array: None,
                     byte_offset: 0x54,
@@ -310,7 +310,7 @@
                     ),
                 },
                 BlockItem {
-                    name: "cau_gcmccmctx_sx_2",
+                    name: "cau_gcmccmctxsx_2",
                     description: None,
                     array: None,
                     byte_offset: 0x58,
@@ -323,7 +323,7 @@
                     ),
                 },
                 BlockItem {
-                    name: "cau_gcmccmctx_sx_3",
+                    name: "cau_gcmccmctxsx_3",
                     description: None,
                     array: None,
                     byte_offset: 0x5c,
@@ -336,7 +336,7 @@
                     ),
                 },
                 BlockItem {
-                    name: "cau_gcmccmctx_sx_4",
+                    name: "cau_gcmccmctxsx_4",
                     description: None,
                     array: None,
                     byte_offset: 0x60,
@@ -349,7 +349,7 @@
                     ),
                 },
                 BlockItem {
-                    name: "cau_gcmccmctx_sx_5",
+                    name: "cau_gcmccmctxsx_5",
                     description: None,
                     array: None,
                     byte_offset: 0x64,
@@ -362,7 +362,7 @@
                     ),
                 },
                 BlockItem {
-                    name: "cau_gcmccmctx_sx_6",
+                    name: "cau_gcmccmctxsx_6",
                     description: None,
                     array: None,
                     byte_offset: 0x68,
@@ -375,7 +375,7 @@
                     ),
                 },
                 BlockItem {
-                    name: "cau_gcmccmctx_sx_7",
+                    name: "cau_gcmccmctxsx_7",
                     description: None,
                     array: None,
                     byte_offset: 0x6c,
@@ -388,7 +388,7 @@
                     ),
                 },
                 BlockItem {
-                    name: "cau_gcmctx_sx_0",
+                    name: "cau_gcmctxsx_0",
                     description: None,
                     array: None,
                     byte_offset: 0x70,
@@ -401,7 +401,7 @@
                     ),
                 },
                 BlockItem {
-                    name: "cau_gcmctx_sx_1",
+                    name: "cau_gcmctxsx_1",
                     description: None,
                     array: None,
                     byte_offset: 0x74,
@@ -414,7 +414,7 @@
                     ),
                 },
                 BlockItem {
-                    name: "cau_gcmctx_sx_2",
+                    name: "cau_gcmctxsx_2",
                     description: None,
                     array: None,
                     byte_offset: 0x78,
@@ -427,7 +427,7 @@
                     ),
                 },
                 BlockItem {
-                    name: "cau_gcmctx_sx_3",
+                    name: "cau_gcmctxsx_3",
                     description: None,
                     array: None,
                     byte_offset: 0x7c,
@@ -440,7 +440,7 @@
                     ),
                 },
                 BlockItem {
-                    name: "cau_gcmctx_sx_4",
+                    name: "cau_gcmctxsx_4",
                     description: None,
                     array: None,
                     byte_offset: 0x80,
@@ -453,7 +453,7 @@
                     ),
                 },
                 BlockItem {
-                    name: "cau_gcmctx_sx_5",
+                    name: "cau_gcmctxsx_5",
                     description: None,
                     array: None,
                     byte_offset: 0x84,
@@ -466,7 +466,7 @@
                     ),
                 },
                 BlockItem {
-                    name: "cau_gcmctx_sx_6",
+                    name: "cau_gcmctxsx_6",
                     description: None,
                     array: None,
                     byte_offset: 0x88,
@@ -479,7 +479,7 @@
                     ),
                 },
                 BlockItem {
-                    name: "cau_gcmctx_sx_7",
+                    name: "cau_gcmctxsx_7",
                     description: None,
                     array: None,
                     byte_offset: 0x8c,
@@ -492,7 +492,7 @@
                     ),
                 },
                 BlockItem {
-                    name: "cau_cmacct_xx_0",
+                    name: "cau_cmacctxx_0",
                     description: None,
                     array: None,
                     byte_offset: 0x90,
@@ -505,7 +505,7 @@
                     ),
                 },
                 BlockItem {
-                    name: "cau_cmacct_xx_1",
+                    name: "cau_cmacctxx_1",
                     description: None,
                     array: None,
                     byte_offset: 0x94,
@@ -518,7 +518,7 @@
                     ),
                 },
                 BlockItem {
-                    name: "cau_cmacct_xx_2",
+                    name: "cau_cmacctxx_2",
                     description: None,
                     array: None,
                     byte_offset: 0x98,
@@ -531,7 +531,7 @@
                     ),
                 },
                 BlockItem {
-                    name: "cau_cmacct_xx_3",
+                    name: "cau_cmacctxx_3",
                     description: None,
                     array: None,
                     byte_offset: 0x9c,

@@ -903,14 +903,14 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 1,
             variants: &[
                 EnumVariant {
-                    name: "Circular",
-                    description: Some("DMA Circular mode selected"),
-                    value: 1,
-                },
-                EnumVariant {
-                    name: "OneShot",
+                    name: "ONE_SHOT",
                     description: Some("DMA One Shot mode selected"),
                     value: 0,
+                },
+                EnumVariant {
+                    name: "CIRCULAR",
+                    description: Some("DMA Circular mode selected"),
+                    value: 1,
                 },
             ],
         },
@@ -920,24 +920,24 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 2,
             variants: &[
                 EnumVariant {
-                    name: "Bits10",
-                    description: Some("10-bit resolution"),
-                    value: 1,
-                },
-                EnumVariant {
-                    name: "Bits12",
+                    name: "BITS12",
                     description: Some("12-bit resolution"),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "Bits6",
-                    description: Some("6-bit resolution"),
-                    value: 3,
+                    name: "BITS10",
+                    description: Some("10-bit resolution"),
+                    value: 1,
                 },
                 EnumVariant {
-                    name: "Bits8",
+                    name: "BITS8",
                     description: Some("8-bit resolution"),
                     value: 2,
+                },
+                EnumVariant {
+                    name: "BITS6",
+                    description: Some("6-bit resolution"),
+                    value: 3,
                 },
             ],
         },
@@ -947,44 +947,44 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 3,
             variants: &[
                 EnumVariant {
-                    name: "Cycles125",
-                    description: Some("12.5 ADC cycles"),
-                    value: 3,
-                },
-                EnumVariant {
-                    name: "Cycles15",
+                    name: "CYCLES1_5",
                     description: Some("1.5 ADC cycles"),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "Cycles1605",
-                    description: Some("160.5 ADC cycles"),
-                    value: 7,
-                },
-                EnumVariant {
-                    name: "Cycles195",
-                    description: Some("19.5 ADC cycles"),
-                    value: 4,
-                },
-                EnumVariant {
-                    name: "Cycles35",
+                    name: "CYCLES3_5",
                     description: Some("3.5 ADC cycles"),
                     value: 1,
                 },
                 EnumVariant {
-                    name: "Cycles395",
-                    description: Some("39.5 ADC cycles"),
-                    value: 5,
-                },
-                EnumVariant {
-                    name: "Cycles75",
+                    name: "CYCLES7_5",
                     description: Some("7.5 ADC cycles"),
                     value: 2,
                 },
                 EnumVariant {
-                    name: "Cycles795",
+                    name: "CYCLES12_5",
+                    description: Some("12.5 ADC cycles"),
+                    value: 3,
+                },
+                EnumVariant {
+                    name: "CYCLES19_5",
+                    description: Some("19.5 ADC cycles"),
+                    value: 4,
+                },
+                EnumVariant {
+                    name: "CYCLES39_5",
+                    description: Some("39.5 ADC cycles"),
+                    value: 5,
+                },
+                EnumVariant {
+                    name: "CYCLES79_5",
                     description: Some("79.5 ADC cycles"),
                     value: 6,
+                },
+                EnumVariant {
+                    name: "CYCLES160_5",
+                    description: Some("160.5 ADC cycles"),
+                    value: 7,
                 },
             ],
         },

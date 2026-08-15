@@ -5,10 +5,10 @@
         address: 0x40012400,
         registers: Some(
             PeripheralRegisters {
-                kind: "gdadc9be754dc",
+                kind: "gdadc0206d7fed",
                 version: "v1",
-                block: "ADC",
-                ir: &gdadc9be754dc::REGISTERS,
+                block: "ADC0",
+                ir: &gdadc0206d7fed::REGISTERS,
             },
         ),
         rcc: None,
@@ -23,10 +23,10 @@
         address: 0x40012800,
         registers: Some(
             PeripheralRegisters {
-                kind: "gdadc9be754dc",
+                kind: "gdadc1152dce23",
                 version: "v1",
-                block: "ADC",
-                ir: &gdadc9be754dc::REGISTERS,
+                block: "ADC1",
+                ir: &gdadc1152dce23::REGISTERS,
             },
         ),
         rcc: None,
@@ -41,10 +41,10 @@
         address: 0x40013c00,
         registers: Some(
             PeripheralRegisters {
-                kind: "gdadc9be754dc",
+                kind: "gdadc1152dce23",
                 version: "v1",
-                block: "ADC",
-                ir: &gdadc9be754dc::REGISTERS,
+                block: "ADC1",
+                ir: &gdadc1152dce23::REGISTERS,
             },
         ),
         rcc: None,
@@ -59,10 +59,10 @@
         address: 0x40010000,
         registers: Some(
             PeripheralRegisters {
-                kind: "gdafioa2acf8df",
+                kind: "gdafiocb3bc598",
                 version: "v1",
                 block: "AFIO",
-                ir: &gdafioa2acf8df::REGISTERS,
+                ir: &gdafiocb3bc598::REGISTERS,
             },
         ),
         rcc: None,
@@ -77,10 +77,10 @@
         address: 0x40006c00,
         registers: Some(
             PeripheralRegisters {
-                kind: "gdbkpddaa24e5",
+                kind: "gdbkp16a620e0",
                 version: "v1",
                 block: "BKP",
-                ir: &gdbkpddaa24e5::REGISTERS,
+                ir: &gdbkp16a620e0::REGISTERS,
             },
         ),
         rcc: None,
@@ -95,10 +95,10 @@
         address: 0x40006400,
         registers: Some(
             PeripheralRegisters {
-                kind: "gdcan486a8ac4",
+                kind: "gdcan050e9510d",
                 version: "v1",
-                block: "CAN",
-                ir: &gdcan486a8ac4::REGISTERS,
+                block: "CAN0",
+                ir: &gdcan050e9510d::REGISTERS,
             },
         ),
         rcc: None,
@@ -113,10 +113,10 @@
         address: 0x40006800,
         registers: Some(
             PeripheralRegisters {
-                kind: "gdcan486a8ac4",
+                kind: "gdcan050e9510d",
                 version: "v1",
-                block: "CAN",
-                ir: &gdcan486a8ac4::REGISTERS,
+                block: "CAN0",
+                ir: &gdcan050e9510d::REGISTERS,
             },
         ),
         rcc: None,
@@ -131,10 +131,10 @@
         address: 0x40023000,
         registers: Some(
             PeripheralRegisters {
-                kind: "gdcrc3d3f2740",
+                kind: "gdcrc66a4f78d",
                 version: "v1",
                 block: "CRC",
-                ir: &gdcrc3d3f2740::REGISTERS,
+                ir: &gdcrc66a4f78d::REGISTERS,
             },
         ),
         rcc: None,
@@ -149,10 +149,10 @@
         address: 0x4000c800,
         registers: Some(
             PeripheralRegisters {
-                kind: "gdctc6d9ce461",
+                kind: "gdctc0cad8643",
                 version: "v1",
                 block: "CTC",
-                ir: &gdctc6d9ce461::REGISTERS,
+                ir: &gdctc0cad8643::REGISTERS,
             },
         ),
         rcc: None,
@@ -163,14 +163,14 @@
         afio: None,
     },
     Peripheral {
-        name: "DAC0",
+        name: "DAC",
         address: 0x40007400,
         registers: Some(
             PeripheralRegisters {
-                kind: "gddac55126433",
+                kind: "gddac1e2c6112",
                 version: "v1",
                 block: "DAC",
-                ir: &gddac55126433::REGISTERS,
+                ir: &gddac1e2c6112::REGISTERS,
             },
         ),
         rcc: None,
@@ -185,10 +185,10 @@
         address: 0xe0042000,
         registers: Some(
             PeripheralRegisters {
-                kind: "gddbgf6b954df",
+                kind: "gddbg895e48a2",
                 version: "v1",
                 block: "DBG",
-                ir: &gddbgf6b954df::REGISTERS,
+                ir: &gddbg895e48a2::REGISTERS,
             },
         ),
         rcc: None,
@@ -203,10 +203,10 @@
         address: 0x40020000,
         registers: Some(
             PeripheralRegisters {
-                kind: "gddmae208530b",
+                kind: "gddma011392832",
                 version: "v1",
-                block: "DMA",
-                ir: &gddmae208530b::REGISTERS,
+                block: "DMA0",
+                ir: &gddma011392832::REGISTERS,
             },
         ),
         rcc: None,
@@ -221,10 +221,10 @@
         address: 0x40020400,
         registers: Some(
             PeripheralRegisters {
-                kind: "gddmae208530b",
+                kind: "gddma011392832",
                 version: "v1",
-                block: "DMA",
-                ir: &gddmae208530b::REGISTERS,
+                block: "DMA0",
+                ir: &gddma011392832::REGISTERS,
             },
         ),
         rcc: None,
@@ -235,14 +235,86 @@
         afio: None,
     },
     Peripheral {
-        name: "ENET",
+        name: "ENET_DMA",
+        address: 0x40029000,
+        registers: Some(
+            PeripheralRegisters {
+                kind: "gdenetdma717f16f5",
+                version: "v1",
+                block: "ENET_DMA",
+                ir: &gdenetdma717f16f5::REGISTERS,
+            },
+        ),
+        rcc: None,
+        pins: &[],
+        dma_channels: &[],
+        triggers: &[],
+        interrupts: &[],
+        afio: None,
+    },
+    Peripheral {
+        name: "ENET_MAC",
         address: 0x40028000,
         registers: Some(
             PeripheralRegisters {
-                kind: "gdenet4408cf6f",
+                kind: "gdenetmac93552dd1",
                 version: "v1",
-                block: "ENET",
-                ir: &gdenet4408cf6f::REGISTERS,
+                block: "ENET_MAC",
+                ir: &gdenetmac93552dd1::REGISTERS,
+            },
+        ),
+        rcc: None,
+        pins: &[],
+        dma_channels: &[],
+        triggers: &[],
+        interrupts: &[],
+        afio: None,
+    },
+    Peripheral {
+        name: "ENET_MAC_FCTH",
+        address: 0x40029080,
+        registers: Some(
+            PeripheralRegisters {
+                kind: "gdenetmacfcth8ada9e21",
+                version: "v1",
+                block: "ENET_MAC_FCTH",
+                ir: &gdenetmacfcth8ada9e21::REGISTERS,
+            },
+        ),
+        rcc: None,
+        pins: &[],
+        dma_channels: &[],
+        triggers: &[],
+        interrupts: &[],
+        afio: None,
+    },
+    Peripheral {
+        name: "ENET_MSC",
+        address: 0x40028100,
+        registers: Some(
+            PeripheralRegisters {
+                kind: "gdenetmsc10390666",
+                version: "v1",
+                block: "ENET_MSC",
+                ir: &gdenetmsc10390666::REGISTERS,
+            },
+        ),
+        rcc: None,
+        pins: &[],
+        dma_channels: &[],
+        triggers: &[],
+        interrupts: &[],
+        afio: None,
+    },
+    Peripheral {
+        name: "ENET_PTP",
+        address: 0x40028700,
+        registers: Some(
+            PeripheralRegisters {
+                kind: "gdenetptp5c8a2d48",
+                version: "v1",
+                block: "ENET_PTP",
+                ir: &gdenetptp5c8a2d48::REGISTERS,
             },
         ),
         rcc: None,
@@ -257,10 +329,10 @@
         address: 0xa0000000,
         registers: Some(
             PeripheralRegisters {
-                kind: "gdexmc6eb28b9f",
+                kind: "gdexmc9f6a36f3",
                 version: "v1",
                 block: "EXMC",
-                ir: &gdexmc6eb28b9f::REGISTERS,
+                ir: &gdexmc9f6a36f3::REGISTERS,
             },
         ),
         rcc: None,
@@ -275,10 +347,10 @@
         address: 0x40010400,
         registers: Some(
             PeripheralRegisters {
-                kind: "gdextia39263ea",
+                kind: "gdexti11a1be47",
                 version: "v1",
                 block: "EXTI",
-                ir: &gdextia39263ea::REGISTERS,
+                ir: &gdexti11a1be47::REGISTERS,
             },
         ),
         rcc: None,
@@ -293,10 +365,10 @@
         address: 0x40022000,
         registers: Some(
             PeripheralRegisters {
-                kind: "gdfmc5f63b031",
+                kind: "gdfmc2c447638",
                 version: "v1",
                 block: "FMC",
-                ir: &gdfmc5f63b031::REGISTERS,
+                ir: &gdfmc2c447638::REGISTERS,
             },
         ),
         rcc: None,
@@ -311,10 +383,10 @@
         address: 0x40003000,
         registers: Some(
             PeripheralRegisters {
-                kind: "gdfwdgt77bb718d",
+                kind: "gdfwdgtdc3d0d7a",
                 version: "v1",
                 block: "FWDGT",
-                ir: &gdfwdgt77bb718d::REGISTERS,
+                ir: &gdfwdgtdc3d0d7a::REGISTERS,
             },
         ),
         rcc: None,
@@ -329,10 +401,10 @@
         address: 0x40010800,
         registers: Some(
             PeripheralRegisters {
-                kind: "gdgpio114d8126",
+                kind: "gdgpioac3e5c224",
                 version: "v1",
-                block: "GPIO",
-                ir: &gdgpio114d8126::REGISTERS,
+                block: "GPIOA",
+                ir: &gdgpioac3e5c224::REGISTERS,
             },
         ),
         rcc: None,
@@ -347,10 +419,10 @@
         address: 0x40010c00,
         registers: Some(
             PeripheralRegisters {
-                kind: "gdgpio114d8126",
+                kind: "gdgpioac3e5c224",
                 version: "v1",
-                block: "GPIO",
-                ir: &gdgpio114d8126::REGISTERS,
+                block: "GPIOA",
+                ir: &gdgpioac3e5c224::REGISTERS,
             },
         ),
         rcc: None,
@@ -365,10 +437,10 @@
         address: 0x40011000,
         registers: Some(
             PeripheralRegisters {
-                kind: "gdgpio114d8126",
+                kind: "gdgpioac3e5c224",
                 version: "v1",
-                block: "GPIO",
-                ir: &gdgpio114d8126::REGISTERS,
+                block: "GPIOA",
+                ir: &gdgpioac3e5c224::REGISTERS,
             },
         ),
         rcc: None,
@@ -383,10 +455,10 @@
         address: 0x40011400,
         registers: Some(
             PeripheralRegisters {
-                kind: "gdgpio114d8126",
+                kind: "gdgpioac3e5c224",
                 version: "v1",
-                block: "GPIO",
-                ir: &gdgpio114d8126::REGISTERS,
+                block: "GPIOA",
+                ir: &gdgpioac3e5c224::REGISTERS,
             },
         ),
         rcc: None,
@@ -401,10 +473,10 @@
         address: 0x40011800,
         registers: Some(
             PeripheralRegisters {
-                kind: "gdgpio114d8126",
+                kind: "gdgpioac3e5c224",
                 version: "v1",
-                block: "GPIO",
-                ir: &gdgpio114d8126::REGISTERS,
+                block: "GPIOA",
+                ir: &gdgpioac3e5c224::REGISTERS,
             },
         ),
         rcc: None,
@@ -419,10 +491,10 @@
         address: 0x40011c00,
         registers: Some(
             PeripheralRegisters {
-                kind: "gdgpio114d8126",
+                kind: "gdgpioac3e5c224",
                 version: "v1",
-                block: "GPIO",
-                ir: &gdgpio114d8126::REGISTERS,
+                block: "GPIOA",
+                ir: &gdgpioac3e5c224::REGISTERS,
             },
         ),
         rcc: None,
@@ -437,10 +509,10 @@
         address: 0x40012000,
         registers: Some(
             PeripheralRegisters {
-                kind: "gdgpio114d8126",
+                kind: "gdgpioac3e5c224",
                 version: "v1",
-                block: "GPIO",
-                ir: &gdgpio114d8126::REGISTERS,
+                block: "GPIOA",
+                ir: &gdgpioac3e5c224::REGISTERS,
             },
         ),
         rcc: None,
@@ -455,10 +527,10 @@
         address: 0x40005400,
         registers: Some(
             PeripheralRegisters {
-                kind: "gdi2cefbefc44",
+                kind: "gdi2c037cbcb65",
                 version: "v1",
-                block: "I2C",
-                ir: &gdi2cefbefc44::REGISTERS,
+                block: "I2C0",
+                ir: &gdi2c037cbcb65::REGISTERS,
             },
         ),
         rcc: None,
@@ -473,28 +545,10 @@
         address: 0x40005800,
         registers: Some(
             PeripheralRegisters {
-                kind: "gdi2cefbefc44",
+                kind: "gdi2c037cbcb65",
                 version: "v1",
-                block: "I2C",
-                ir: &gdi2cefbefc44::REGISTERS,
-            },
-        ),
-        rcc: None,
-        pins: &[],
-        dma_channels: &[],
-        triggers: &[],
-        interrupts: &[],
-        afio: None,
-    },
-    Peripheral {
-        name: "OB",
-        address: 0x1ffff800,
-        registers: Some(
-            PeripheralRegisters {
-                kind: "gdobad686c92",
-                version: "v1",
-                block: "OB",
-                ir: &gdobad686c92::REGISTERS,
+                block: "I2C0",
+                ir: &gdi2c037cbcb65::REGISTERS,
             },
         ),
         rcc: None,
@@ -509,10 +563,10 @@
         address: 0x40007000,
         registers: Some(
             PeripheralRegisters {
-                kind: "gdpmuaaa394af",
+                kind: "gdpmu3bb0ce43",
                 version: "v1",
                 block: "PMU",
-                ir: &gdpmuaaa394af::REGISTERS,
+                ir: &gdpmu3bb0ce43::REGISTERS,
             },
         ),
         rcc: None,
@@ -527,10 +581,10 @@
         address: 0x40021000,
         registers: Some(
             PeripheralRegisters {
-                kind: "gdrcua227b3a6",
+                kind: "gdrcu08b36be4",
                 version: "v1",
                 block: "RCU",
-                ir: &gdrcua227b3a6::REGISTERS,
+                ir: &gdrcu08b36be4::REGISTERS,
             },
         ),
         rcc: None,
@@ -545,28 +599,10 @@
         address: 0x40002800,
         registers: Some(
             PeripheralRegisters {
-                kind: "gdrtc250e9b91",
+                kind: "gdrtc6b0c077c",
                 version: "v1",
                 block: "RTC",
-                ir: &gdrtc250e9b91::REGISTERS,
-            },
-        ),
-        rcc: None,
-        pins: &[],
-        dma_channels: &[],
-        triggers: &[],
-        interrupts: &[],
-        afio: None,
-    },
-    Peripheral {
-        name: "SDIO",
-        address: 0x40018000,
-        registers: Some(
-            PeripheralRegisters {
-                kind: "gdsdioa16a5588",
-                version: "v1",
-                block: "SDIO",
-                ir: &gdsdioa16a5588::REGISTERS,
+                ir: &gdrtc6b0c077c::REGISTERS,
             },
         ),
         rcc: None,
@@ -581,10 +617,10 @@
         address: 0x40013000,
         registers: Some(
             PeripheralRegisters {
-                kind: "gdspi20dc9722",
+                kind: "gdspi0946ced9d",
                 version: "v1",
-                block: "SPI",
-                ir: &gdspi20dc9722::REGISTERS,
+                block: "SPI0",
+                ir: &gdspi0946ced9d::REGISTERS,
             },
         ),
         rcc: None,
@@ -599,10 +635,10 @@
         address: 0x40003800,
         registers: Some(
             PeripheralRegisters {
-                kind: "gdspi20dc9722",
+                kind: "gdspi0946ced9d",
                 version: "v1",
-                block: "SPI",
-                ir: &gdspi20dc9722::REGISTERS,
+                block: "SPI0",
+                ir: &gdspi0946ced9d::REGISTERS,
             },
         ),
         rcc: None,
@@ -617,10 +653,10 @@
         address: 0x40003c00,
         registers: Some(
             PeripheralRegisters {
-                kind: "gdspi20dc9722",
+                kind: "gdspi0946ced9d",
                 version: "v1",
-                block: "SPI",
-                ir: &gdspi20dc9722::REGISTERS,
+                block: "SPI0",
+                ir: &gdspi0946ced9d::REGISTERS,
             },
         ),
         rcc: None,
@@ -635,10 +671,10 @@
         address: 0x40012c00,
         registers: Some(
             PeripheralRegisters {
-                kind: "gdtimer1f39641a",
+                kind: "gdtimer0a0aa2af0",
                 version: "v1",
-                block: "TIMER",
-                ir: &gdtimer1f39641a::REGISTERS,
+                block: "TIMER0",
+                ir: &gdtimer0a0aa2af0::REGISTERS,
             },
         ),
         rcc: None,
@@ -653,10 +689,10 @@
         address: 0x40000000,
         registers: Some(
             PeripheralRegisters {
-                kind: "gdtimer1f39641a",
+                kind: "gdtimer1b47aad48",
                 version: "v1",
-                block: "TIMER",
-                ir: &gdtimer1f39641a::REGISTERS,
+                block: "TIMER1",
+                ir: &gdtimer1b47aad48::REGISTERS,
             },
         ),
         rcc: None,
@@ -671,10 +707,10 @@
         address: 0x40015400,
         registers: Some(
             PeripheralRegisters {
-                kind: "gdtimer1f39641a",
+                kind: "gdtimer911ce6ab6",
                 version: "v1",
-                block: "TIMER",
-                ir: &gdtimer1f39641a::REGISTERS,
+                block: "TIMER9",
+                ir: &gdtimer911ce6ab6::REGISTERS,
             },
         ),
         rcc: None,
@@ -689,10 +725,10 @@
         address: 0x40001800,
         registers: Some(
             PeripheralRegisters {
-                kind: "gdtimer1f39641a",
+                kind: "gdtimer895e47fd0",
                 version: "v1",
-                block: "TIMER",
-                ir: &gdtimer1f39641a::REGISTERS,
+                block: "TIMER8",
+                ir: &gdtimer895e47fd0::REGISTERS,
             },
         ),
         rcc: None,
@@ -707,10 +743,10 @@
         address: 0x40001c00,
         registers: Some(
             PeripheralRegisters {
-                kind: "gdtimer1f39641a",
+                kind: "gdtimer911ce6ab6",
                 version: "v1",
-                block: "TIMER",
-                ir: &gdtimer1f39641a::REGISTERS,
+                block: "TIMER9",
+                ir: &gdtimer911ce6ab6::REGISTERS,
             },
         ),
         rcc: None,
@@ -725,10 +761,10 @@
         address: 0x40002000,
         registers: Some(
             PeripheralRegisters {
-                kind: "gdtimer1f39641a",
+                kind: "gdtimer911ce6ab6",
                 version: "v1",
-                block: "TIMER",
-                ir: &gdtimer1f39641a::REGISTERS,
+                block: "TIMER9",
+                ir: &gdtimer911ce6ab6::REGISTERS,
             },
         ),
         rcc: None,
@@ -743,10 +779,10 @@
         address: 0x40000400,
         registers: Some(
             PeripheralRegisters {
-                kind: "gdtimer1f39641a",
+                kind: "gdtimer1b47aad48",
                 version: "v1",
-                block: "TIMER",
-                ir: &gdtimer1f39641a::REGISTERS,
+                block: "TIMER1",
+                ir: &gdtimer1b47aad48::REGISTERS,
             },
         ),
         rcc: None,
@@ -761,10 +797,10 @@
         address: 0x40000800,
         registers: Some(
             PeripheralRegisters {
-                kind: "gdtimer1f39641a",
+                kind: "gdtimer1b47aad48",
                 version: "v1",
-                block: "TIMER",
-                ir: &gdtimer1f39641a::REGISTERS,
+                block: "TIMER1",
+                ir: &gdtimer1b47aad48::REGISTERS,
             },
         ),
         rcc: None,
@@ -779,10 +815,10 @@
         address: 0x40000c00,
         registers: Some(
             PeripheralRegisters {
-                kind: "gdtimer1f39641a",
+                kind: "gdtimer1b47aad48",
                 version: "v1",
-                block: "TIMER",
-                ir: &gdtimer1f39641a::REGISTERS,
+                block: "TIMER1",
+                ir: &gdtimer1b47aad48::REGISTERS,
             },
         ),
         rcc: None,
@@ -797,10 +833,10 @@
         address: 0x40001000,
         registers: Some(
             PeripheralRegisters {
-                kind: "gdtimer1f39641a",
+                kind: "gdtimer54b5e73ec",
                 version: "v1",
-                block: "TIMER",
-                ir: &gdtimer1f39641a::REGISTERS,
+                block: "TIMER5",
+                ir: &gdtimer54b5e73ec::REGISTERS,
             },
         ),
         rcc: None,
@@ -815,10 +851,10 @@
         address: 0x40001400,
         registers: Some(
             PeripheralRegisters {
-                kind: "gdtimer1f39641a",
+                kind: "gdtimer54b5e73ec",
                 version: "v1",
-                block: "TIMER",
-                ir: &gdtimer1f39641a::REGISTERS,
+                block: "TIMER5",
+                ir: &gdtimer54b5e73ec::REGISTERS,
             },
         ),
         rcc: None,
@@ -833,10 +869,10 @@
         address: 0x40013400,
         registers: Some(
             PeripheralRegisters {
-                kind: "gdtimer1f39641a",
+                kind: "gdtimer0a0aa2af0",
                 version: "v1",
-                block: "TIMER",
-                ir: &gdtimer1f39641a::REGISTERS,
+                block: "TIMER0",
+                ir: &gdtimer0a0aa2af0::REGISTERS,
             },
         ),
         rcc: None,
@@ -851,10 +887,10 @@
         address: 0x40014c00,
         registers: Some(
             PeripheralRegisters {
-                kind: "gdtimer1f39641a",
+                kind: "gdtimer895e47fd0",
                 version: "v1",
-                block: "TIMER",
-                ir: &gdtimer1f39641a::REGISTERS,
+                block: "TIMER8",
+                ir: &gdtimer895e47fd0::REGISTERS,
             },
         ),
         rcc: None,
@@ -869,10 +905,10 @@
         address: 0x40015000,
         registers: Some(
             PeripheralRegisters {
-                kind: "gdtimer1f39641a",
+                kind: "gdtimer911ce6ab6",
                 version: "v1",
-                block: "TIMER",
-                ir: &gdtimer1f39641a::REGISTERS,
+                block: "TIMER9",
+                ir: &gdtimer911ce6ab6::REGISTERS,
             },
         ),
         rcc: None,
@@ -887,10 +923,10 @@
         address: 0x40004c00,
         registers: Some(
             PeripheralRegisters {
-                kind: "gdusart464fea75",
+                kind: "gduart3c678fe30",
                 version: "v1",
-                block: "USART",
-                ir: &gdusart464fea75::REGISTERS,
+                block: "UART3",
+                ir: &gduart3c678fe30::REGISTERS,
             },
         ),
         rcc: None,
@@ -905,10 +941,10 @@
         address: 0x40005000,
         registers: Some(
             PeripheralRegisters {
-                kind: "gdusart464fea75",
+                kind: "gduart3c678fe30",
                 version: "v1",
-                block: "USART",
-                ir: &gdusart464fea75::REGISTERS,
+                block: "UART3",
+                ir: &gduart3c678fe30::REGISTERS,
             },
         ),
         rcc: None,
@@ -923,10 +959,10 @@
         address: 0x40013800,
         registers: Some(
             PeripheralRegisters {
-                kind: "gdusart464fea75",
+                kind: "gdusart082eeb6ea",
                 version: "v1",
-                block: "USART",
-                ir: &gdusart464fea75::REGISTERS,
+                block: "USART0",
+                ir: &gdusart082eeb6ea::REGISTERS,
             },
         ),
         rcc: None,
@@ -941,10 +977,10 @@
         address: 0x40004400,
         registers: Some(
             PeripheralRegisters {
-                kind: "gdusart464fea75",
+                kind: "gdusart082eeb6ea",
                 version: "v1",
-                block: "USART",
-                ir: &gdusart464fea75::REGISTERS,
+                block: "USART0",
+                ir: &gdusart082eeb6ea::REGISTERS,
             },
         ),
         rcc: None,
@@ -959,10 +995,82 @@
         address: 0x40004800,
         registers: Some(
             PeripheralRegisters {
-                kind: "gdusart464fea75",
+                kind: "gdusart082eeb6ea",
                 version: "v1",
-                block: "USART",
-                ir: &gdusart464fea75::REGISTERS,
+                block: "USART0",
+                ir: &gdusart082eeb6ea::REGISTERS,
+            },
+        ),
+        rcc: None,
+        pins: &[],
+        dma_channels: &[],
+        triggers: &[],
+        interrupts: &[],
+        afio: None,
+    },
+    Peripheral {
+        name: "USBFS_DEVICE",
+        address: 0x50000800,
+        registers: Some(
+            PeripheralRegisters {
+                kind: "gdusbfsdevicec5a1209d",
+                version: "v1",
+                block: "USBFS_DEVICE",
+                ir: &gdusbfsdevicec5a1209d::REGISTERS,
+            },
+        ),
+        rcc: None,
+        pins: &[],
+        dma_channels: &[],
+        triggers: &[],
+        interrupts: &[],
+        afio: None,
+    },
+    Peripheral {
+        name: "USBFS_GLOBAL",
+        address: 0x50000000,
+        registers: Some(
+            PeripheralRegisters {
+                kind: "gdusbfsglobal3505227a",
+                version: "v1",
+                block: "USBFS_GLOBAL",
+                ir: &gdusbfsglobal3505227a::REGISTERS,
+            },
+        ),
+        rcc: None,
+        pins: &[],
+        dma_channels: &[],
+        triggers: &[],
+        interrupts: &[],
+        afio: None,
+    },
+    Peripheral {
+        name: "USBFS_HOST",
+        address: 0x50000400,
+        registers: Some(
+            PeripheralRegisters {
+                kind: "gdusbfshost5f42a79e",
+                version: "v1",
+                block: "USBFS_HOST",
+                ir: &gdusbfshost5f42a79e::REGISTERS,
+            },
+        ),
+        rcc: None,
+        pins: &[],
+        dma_channels: &[],
+        triggers: &[],
+        interrupts: &[],
+        afio: None,
+    },
+    Peripheral {
+        name: "USBFS_PWRCLK",
+        address: 0x50000e00,
+        registers: Some(
+            PeripheralRegisters {
+                kind: "gdusbfspwrclk2ac667f0",
+                version: "v1",
+                block: "USBFS_PWRCLK",
+                ir: &gdusbfspwrclk2ac667f0::REGISTERS,
             },
         ),
         rcc: None,
@@ -977,10 +1085,10 @@
         address: 0x40002c00,
         registers: Some(
             PeripheralRegisters {
-                kind: "gdwwdgt30374593",
+                kind: "gdwwdgt50884229",
                 version: "v1",
                 block: "WWDGT",
-                ir: &gdwwdgt30374593::REGISTERS,
+                ir: &gdwwdgt50884229::REGISTERS,
             },
         ),
         rcc: None,
@@ -995,10 +1103,6 @@
     Interrupt {
         name: "WWDGT",
         number: 0,
-    },
-    Interrupt {
-        name: "LVD",
-        number: 1,
     },
     Interrupt {
         name: "TAMPER",
@@ -1017,23 +1121,23 @@
         number: 5,
     },
     Interrupt {
-        name: "EXTI0",
+        name: "EXTI_LINE0",
         number: 6,
     },
     Interrupt {
-        name: "EXTI1",
+        name: "EXTI_LINE1",
         number: 7,
     },
     Interrupt {
-        name: "EXTI2",
+        name: "EXTI_LINE2",
         number: 8,
     },
     Interrupt {
-        name: "EXTI3",
+        name: "EXTI_LINE3",
         number: 9,
     },
     Interrupt {
-        name: "EXTI4",
+        name: "EXTI_LINE4",
         number: 10,
     },
     Interrupt {
@@ -1069,11 +1173,11 @@
         number: 18,
     },
     Interrupt {
-        name: "USBD_HP_CAN0_TX",
+        name: "CAN0_TX",
         number: 19,
     },
     Interrupt {
-        name: "USBD_LP_CAN0_RX0",
+        name: "CAN0_RX0",
         number: 20,
     },
     Interrupt {
@@ -1085,23 +1189,23 @@
         number: 22,
     },
     Interrupt {
-        name: "EXTI5_9",
+        name: "EXTI_LINE9_5",
         number: 23,
     },
     Interrupt {
-        name: "TIMER0_BRK",
+        name: "TIMER0_BRK_TIMER8",
         number: 24,
     },
     Interrupt {
-        name: "TIMER0_UP",
+        name: "TIMER0_UP_TIMER9",
         number: 25,
     },
     Interrupt {
-        name: "TIMER0_TRG_CMT",
+        name: "TIMER0_TRG_CMT_TIMER10",
         number: 26,
     },
     Interrupt {
-        name: "TIMER0_CHANNEL",
+        name: "TIMER0_CC",
         number: 27,
     },
     Interrupt {
@@ -1153,7 +1257,7 @@
         number: 39,
     },
     Interrupt {
-        name: "EXTI10_15",
+        name: "EXTI_LINE15_10",
         number: 40,
     },
     Interrupt {
@@ -1161,23 +1265,23 @@
         number: 41,
     },
     Interrupt {
-        name: "USBD_WKUP",
+        name: "USBFS_WKUP",
         number: 42,
     },
     Interrupt {
-        name: "TIMER7_BRK",
+        name: "TIMER7_BRK_TIMER11",
         number: 43,
     },
     Interrupt {
-        name: "TIMER7_UP",
+        name: "TIMER7_UP_TIMER12",
         number: 44,
     },
     Interrupt {
-        name: "TIMER7_TRG_CMT",
+        name: "TIMER7_TRG_CMT_TIMER13",
         number: 45,
     },
     Interrupt {
-        name: "TIMER7_CHANNEL",
+        name: "TIMER7_CC",
         number: 46,
     },
     Interrupt {
@@ -1187,10 +1291,6 @@
     Interrupt {
         name: "EXMC",
         number: 48,
-    },
-    Interrupt {
-        name: "SDIO",
-        number: 49,
     },
     Interrupt {
         name: "TIMER4",
@@ -1229,34 +1329,78 @@
         number: 58,
     },
     Interrupt {
-        name: "DMA1_CHANNEL3_CHANNEL4",
+        name: "DMA1_CHANNEL3",
         number: 59,
+    },
+    Interrupt {
+        name: "DMA1_CHANNEL4",
+        number: 60,
+    },
+    Interrupt {
+        name: "ENET",
+        number: 61,
+    },
+    Interrupt {
+        name: "ENET_WKUP",
+        number: 62,
+    },
+    Interrupt {
+        name: "CAN1_TX",
+        number: 63,
+    },
+    Interrupt {
+        name: "CAN1_RX0",
+        number: 64,
+    },
+    Interrupt {
+        name: "CAN1_RX1",
+        number: 65,
+    },
+    Interrupt {
+        name: "CAN1_EWMC",
+        number: 66,
+    },
+    Interrupt {
+        name: "USBFS",
+        number: 67,
     },
 ];
                 pub(crate) static DMA_CHANNELS: &[DmaChannel] = &[];
                 pub(crate) static PINS: &[Pin] = &[];
-            #[path="../registers/gdadc9be754dc_v1.rs"] pub mod gdadc9be754dc;
-#[path="../registers/gdafioa2acf8df_v1.rs"] pub mod gdafioa2acf8df;
-#[path="../registers/gdbkpddaa24e5_v1.rs"] pub mod gdbkpddaa24e5;
-#[path="../registers/gdcan486a8ac4_v1.rs"] pub mod gdcan486a8ac4;
-#[path="../registers/gdcrc3d3f2740_v1.rs"] pub mod gdcrc3d3f2740;
-#[path="../registers/gdctc6d9ce461_v1.rs"] pub mod gdctc6d9ce461;
-#[path="../registers/gddac55126433_v1.rs"] pub mod gddac55126433;
-#[path="../registers/gddbgf6b954df_v1.rs"] pub mod gddbgf6b954df;
-#[path="../registers/gddmae208530b_v1.rs"] pub mod gddmae208530b;
-#[path="../registers/gdenet4408cf6f_v1.rs"] pub mod gdenet4408cf6f;
-#[path="../registers/gdexmc6eb28b9f_v1.rs"] pub mod gdexmc6eb28b9f;
-#[path="../registers/gdextia39263ea_v1.rs"] pub mod gdextia39263ea;
-#[path="../registers/gdfmc5f63b031_v1.rs"] pub mod gdfmc5f63b031;
-#[path="../registers/gdfwdgt77bb718d_v1.rs"] pub mod gdfwdgt77bb718d;
-#[path="../registers/gdgpio114d8126_v1.rs"] pub mod gdgpio114d8126;
-#[path="../registers/gdi2cefbefc44_v1.rs"] pub mod gdi2cefbefc44;
-#[path="../registers/gdobad686c92_v1.rs"] pub mod gdobad686c92;
-#[path="../registers/gdpmuaaa394af_v1.rs"] pub mod gdpmuaaa394af;
-#[path="../registers/gdrcua227b3a6_v1.rs"] pub mod gdrcua227b3a6;
-#[path="../registers/gdrtc250e9b91_v1.rs"] pub mod gdrtc250e9b91;
-#[path="../registers/gdsdioa16a5588_v1.rs"] pub mod gdsdioa16a5588;
-#[path="../registers/gdspi20dc9722_v1.rs"] pub mod gdspi20dc9722;
-#[path="../registers/gdtimer1f39641a_v1.rs"] pub mod gdtimer1f39641a;
-#[path="../registers/gdusart464fea75_v1.rs"] pub mod gdusart464fea75;
-#[path="../registers/gdwwdgt30374593_v1.rs"] pub mod gdwwdgt30374593;
+            #[path="../registers/gdadc0206d7fed_v1.rs"] pub mod gdadc0206d7fed;
+#[path="../registers/gdadc1152dce23_v1.rs"] pub mod gdadc1152dce23;
+#[path="../registers/gdafiocb3bc598_v1.rs"] pub mod gdafiocb3bc598;
+#[path="../registers/gdbkp16a620e0_v1.rs"] pub mod gdbkp16a620e0;
+#[path="../registers/gdcan050e9510d_v1.rs"] pub mod gdcan050e9510d;
+#[path="../registers/gdcrc66a4f78d_v1.rs"] pub mod gdcrc66a4f78d;
+#[path="../registers/gdctc0cad8643_v1.rs"] pub mod gdctc0cad8643;
+#[path="../registers/gddac1e2c6112_v1.rs"] pub mod gddac1e2c6112;
+#[path="../registers/gddbg895e48a2_v1.rs"] pub mod gddbg895e48a2;
+#[path="../registers/gddma011392832_v1.rs"] pub mod gddma011392832;
+#[path="../registers/gdenetdma717f16f5_v1.rs"] pub mod gdenetdma717f16f5;
+#[path="../registers/gdenetmac93552dd1_v1.rs"] pub mod gdenetmac93552dd1;
+#[path="../registers/gdenetmacfcth8ada9e21_v1.rs"] pub mod gdenetmacfcth8ada9e21;
+#[path="../registers/gdenetmsc10390666_v1.rs"] pub mod gdenetmsc10390666;
+#[path="../registers/gdenetptp5c8a2d48_v1.rs"] pub mod gdenetptp5c8a2d48;
+#[path="../registers/gdexmc9f6a36f3_v1.rs"] pub mod gdexmc9f6a36f3;
+#[path="../registers/gdexti11a1be47_v1.rs"] pub mod gdexti11a1be47;
+#[path="../registers/gdfmc2c447638_v1.rs"] pub mod gdfmc2c447638;
+#[path="../registers/gdfwdgtdc3d0d7a_v1.rs"] pub mod gdfwdgtdc3d0d7a;
+#[path="../registers/gdgpioac3e5c224_v1.rs"] pub mod gdgpioac3e5c224;
+#[path="../registers/gdi2c037cbcb65_v1.rs"] pub mod gdi2c037cbcb65;
+#[path="../registers/gdpmu3bb0ce43_v1.rs"] pub mod gdpmu3bb0ce43;
+#[path="../registers/gdrcu08b36be4_v1.rs"] pub mod gdrcu08b36be4;
+#[path="../registers/gdrtc6b0c077c_v1.rs"] pub mod gdrtc6b0c077c;
+#[path="../registers/gdspi0946ced9d_v1.rs"] pub mod gdspi0946ced9d;
+#[path="../registers/gdtimer0a0aa2af0_v1.rs"] pub mod gdtimer0a0aa2af0;
+#[path="../registers/gdtimer1b47aad48_v1.rs"] pub mod gdtimer1b47aad48;
+#[path="../registers/gdtimer54b5e73ec_v1.rs"] pub mod gdtimer54b5e73ec;
+#[path="../registers/gdtimer895e47fd0_v1.rs"] pub mod gdtimer895e47fd0;
+#[path="../registers/gdtimer911ce6ab6_v1.rs"] pub mod gdtimer911ce6ab6;
+#[path="../registers/gduart3c678fe30_v1.rs"] pub mod gduart3c678fe30;
+#[path="../registers/gdusart082eeb6ea_v1.rs"] pub mod gdusart082eeb6ea;
+#[path="../registers/gdusbfsdevicec5a1209d_v1.rs"] pub mod gdusbfsdevicec5a1209d;
+#[path="../registers/gdusbfsglobal3505227a_v1.rs"] pub mod gdusbfsglobal3505227a;
+#[path="../registers/gdusbfshost5f42a79e_v1.rs"] pub mod gdusbfshost5f42a79e;
+#[path="../registers/gdusbfspwrclk2ac667f0_v1.rs"] pub mod gdusbfspwrclk2ac667f0;
+#[path="../registers/gdwwdgt50884229_v1.rs"] pub mod gdwwdgt50884229;

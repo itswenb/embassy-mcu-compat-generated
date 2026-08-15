@@ -45,8 +45,8 @@ This PAC aims to support all STM32 chip families:
 
 ## Embassy STM32 零修改兼容入口
 
-根 `stm32-metapac` 包允许未修改的 `embassy-stm32` 使用 662 个 Cortex-M
-GD32 真实型号。应用选择一个合适的 STM32 feature，并通过环境变量选择真实芯片：
+根 `stm32-metapac` 包允许未修改的 `embassy-stm32` 使用 349 个 Cortex-M
+GD32 真实型号。STM32 feature 必须使用生成矩阵给出的唯一 profile，并通过环境变量选择真实芯片：
 
 ```toml
 [dependencies]
@@ -61,7 +61,7 @@ stm32-metapac = { git = "https://github.com/itswenb/embassy-mcu-compat-generated
 EMBASSY_MCU_COMPAT_CHIP = "gd32f303cb"
 ```
 
-真实型号与 STM32 feature 不做固定映射；使用者负责选择架构及外设拓扑相近的 feature。
+错误的 STM32 feature 会在编译期报告该真实型号要求的 profile。
 
 ## 原生 GD32 PAC
 

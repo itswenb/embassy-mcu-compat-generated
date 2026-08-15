@@ -1041,12 +1041,12 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 1,
             variants: &[
                 EnumVariant {
-                    name: "BankA",
+                    name: "BANK_A",
                     description: Some("Bank A selected for channels ADC_IN0..31"),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "BankB",
+                    name: "BANK_B",
                     description: Some("Bank B selected for channels ADC_IN0..31b"),
                     value: 1,
                 },
@@ -1058,44 +1058,44 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 3,
             variants: &[
                 EnumVariant {
-                    name: "AfterRead",
+                    name: "NO_DELAY",
+                    description: Some("No Delay"),
+                    value: 0,
+                },
+                EnumVariant {
+                    name: "AFTER_READ",
                     description: Some("Until the converted data have been read"),
                     value: 1,
                 },
                 EnumVariant {
-                    name: "Delay127Clk",
-                    description: Some("Delay 127 APB clock cycles after the conversion"),
-                    value: 6,
-                },
-                EnumVariant {
-                    name: "Delay15Clk",
-                    description: Some("Delay 16 APB clock cycles after the conversion"),
-                    value: 3,
-                },
-                EnumVariant {
-                    name: "Delay255Clk",
-                    description: Some("Delay 255 APB clock cycles after the conversion"),
-                    value: 7,
-                },
-                EnumVariant {
-                    name: "Delay31Clk",
-                    description: Some("Delay 31 APB clock cycles after the conversion"),
-                    value: 4,
-                },
-                EnumVariant {
-                    name: "Delay63Clk",
-                    description: Some("Delay 63 APB clock cycles after the conversion"),
-                    value: 5,
-                },
-                EnumVariant {
-                    name: "Delay7Clk",
+                    name: "DELAY_7_CLK",
                     description: Some("Delay 7 APB clock cycles after the conversion"),
                     value: 2,
                 },
                 EnumVariant {
-                    name: "NoDelay",
-                    description: Some("No Delay"),
-                    value: 0,
+                    name: "DELAY_15_CLK",
+                    description: Some("Delay 16 APB clock cycles after the conversion"),
+                    value: 3,
+                },
+                EnumVariant {
+                    name: "DELAY_31_CLK",
+                    description: Some("Delay 31 APB clock cycles after the conversion"),
+                    value: 4,
+                },
+                EnumVariant {
+                    name: "DELAY_63_CLK",
+                    description: Some("Delay 63 APB clock cycles after the conversion"),
+                    value: 5,
+                },
+                EnumVariant {
+                    name: "DELAY_127_CLK",
+                    description: Some("Delay 127 APB clock cycles after the conversion"),
+                    value: 6,
+                },
+                EnumVariant {
+                    name: "DELAY_255_CLK",
+                    description: Some("Delay 255 APB clock cycles after the conversion"),
+                    value: 7,
                 },
             ],
         },
@@ -1105,54 +1105,54 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 3,
             variants: &[
                 EnumVariant {
-                    name: "Discnum1",
+                    name: "DISCNUM_1",
                     description: Some(
                         "1 conversions are discontinued and the conversion is carried out on one channel",
                     ),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "Discnum2",
+                    name: "DISCNUM_2",
                     description: Some("2 conversion is discontinued and the conversions are carried out on 2 channels"),
                     value: 1,
                 },
                 EnumVariant {
-                    name: "Discnum3",
+                    name: "DISCNUM_3",
                     description: Some(
                         "3 conversions are discontinued and the conversions are carried out on 3 channels",
                     ),
                     value: 2,
                 },
                 EnumVariant {
-                    name: "Discnum4",
+                    name: "DISCNUM_4",
                     description: Some(
                         "4 conversions are discontinued and the conversions are carried out on 4 channels",
                     ),
                     value: 3,
                 },
                 EnumVariant {
-                    name: "Discnum5",
+                    name: "DISCNUM_5",
                     description: Some(
                         "5 conversions are discontinued and the conversions are carried out on 5 channels",
                     ),
                     value: 4,
                 },
                 EnumVariant {
-                    name: "Discnum6",
+                    name: "DISCNUM_6",
                     description: Some(
                         "6 conversions are discontinued and the conversions are carried out on 6 channels",
                     ),
                     value: 5,
                 },
                 EnumVariant {
-                    name: "Discnum7",
+                    name: "DISCNUM_7",
                     description: Some(
                         "7 conversions are discontinued and the conversions are carried out on 7 channels",
                     ),
                     value: 6,
                 },
                 EnumVariant {
-                    name: "Discnum8",
+                    name: "DISCNUM_8",
                     description: Some(
                         "8 conversions are discontinued and the conversions are carried out on 8 channels",
                     ),
@@ -1166,24 +1166,24 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 2,
             variants: &[
                 EnumVariant {
-                    name: "Both",
-                    description: Some("Trigger detection on both edges"),
-                    value: 3,
-                },
-                EnumVariant {
-                    name: "Disabled",
+                    name: "DISABLED",
                     description: Some("Trigger detection disabled"),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "Falling",
+                    name: "RISING",
+                    description: Some("Trigger detection on the rising edge"),
+                    value: 1,
+                },
+                EnumVariant {
+                    name: "FALLING",
                     description: Some("Trigger detection on the falling edge"),
                     value: 2,
                 },
                 EnumVariant {
-                    name: "Rising",
-                    description: Some("Trigger detection on the rising edge"),
-                    value: 1,
+                    name: "BOTH",
+                    description: Some("Trigger detection on both edges"),
+                    value: 3,
                 },
             ],
         },
@@ -1193,64 +1193,64 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 4,
             variants: &[
                 EnumVariant {
-                    name: "ExtiLine11",
-                    description: Some("External interrupt line 11"),
-                    value: 15,
-                },
-                EnumVariant {
-                    name: "Tim2Cc2",
-                    description: Some("Timer 2 CC2 event"),
-                    value: 3,
-                },
-                EnumVariant {
-                    name: "Tim2Cc3",
-                    description: Some("Timer 2 CC3 event"),
-                    value: 2,
-                },
-                EnumVariant {
-                    name: "Tim2Trgo",
-                    description: Some("Timer 2 TRGO event"),
-                    value: 6,
-                },
-                EnumVariant {
-                    name: "Tim3Cc1",
-                    description: Some("Timer 3 CC1 event"),
-                    value: 7,
-                },
-                EnumVariant {
-                    name: "Tim3Cc3",
-                    description: Some("Timer 3 CC3 event"),
-                    value: 8,
-                },
-                EnumVariant {
-                    name: "Tim3Trgo",
-                    description: Some("Timer 3 TRGO event"),
-                    value: 4,
-                },
-                EnumVariant {
-                    name: "Tim4Cc4",
-                    description: Some("Timer 4 CC4 event"),
-                    value: 5,
-                },
-                EnumVariant {
-                    name: "Tim4Trgo",
-                    description: Some("Timer 4 TRGO event"),
-                    value: 9,
-                },
-                EnumVariant {
-                    name: "Tim6Trgo",
-                    description: Some("Timer 6 TRGO event"),
-                    value: 10,
-                },
-                EnumVariant {
-                    name: "Tim9Cc2",
+                    name: "TIM9_CC2",
                     description: Some("Timer 9 CC2 event"),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "Tim9Trgo",
+                    name: "TIM9_TRGO",
                     description: Some("Timer 9 TRGO event"),
                     value: 1,
+                },
+                EnumVariant {
+                    name: "TIM2_CC3",
+                    description: Some("Timer 2 CC3 event"),
+                    value: 2,
+                },
+                EnumVariant {
+                    name: "TIM2_CC2",
+                    description: Some("Timer 2 CC2 event"),
+                    value: 3,
+                },
+                EnumVariant {
+                    name: "TIM3_TRGO",
+                    description: Some("Timer 3 TRGO event"),
+                    value: 4,
+                },
+                EnumVariant {
+                    name: "TIM4_CC4",
+                    description: Some("Timer 4 CC4 event"),
+                    value: 5,
+                },
+                EnumVariant {
+                    name: "TIM2_TRGO",
+                    description: Some("Timer 2 TRGO event"),
+                    value: 6,
+                },
+                EnumVariant {
+                    name: "TIM3_CC1",
+                    description: Some("Timer 3 CC1 event"),
+                    value: 7,
+                },
+                EnumVariant {
+                    name: "TIM3_CC3",
+                    description: Some("Timer 3 CC3 event"),
+                    value: 8,
+                },
+                EnumVariant {
+                    name: "TIM4_TRGO",
+                    description: Some("Timer 4 TRGO event"),
+                    value: 9,
+                },
+                EnumVariant {
+                    name: "TIM6_TRGO",
+                    description: Some("Timer 6 TRGO event"),
+                    value: 10,
+                },
+                EnumVariant {
+                    name: "EXTI_LINE11",
+                    description: Some("External interrupt line 11"),
+                    value: 15,
                 },
             ],
         },
@@ -1260,64 +1260,64 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 4,
             variants: &[
                 EnumVariant {
-                    name: "ExtiLine15",
-                    description: Some("External interrupt line 15"),
-                    value: 15,
-                },
-                EnumVariant {
-                    name: "Tim10Cc1",
-                    description: Some("Timer 4 CC3 event"),
-                    value: 9,
-                },
-                EnumVariant {
-                    name: "Tim2Cc1",
-                    description: Some("Timer 2 CC1 event"),
-                    value: 3,
-                },
-                EnumVariant {
-                    name: "Tim2Trgo",
-                    description: Some("Timer 2 TRGO event"),
-                    value: 2,
-                },
-                EnumVariant {
-                    name: "Tim3Cc4",
-                    description: Some("Timer 3 CC4 event"),
-                    value: 4,
-                },
-                EnumVariant {
-                    name: "Tim4Cc1",
-                    description: Some("Timer 4 CC1 event"),
-                    value: 6,
-                },
-                EnumVariant {
-                    name: "Tim4Cc2",
-                    description: Some("Timer 4 CC2 event"),
-                    value: 7,
-                },
-                EnumVariant {
-                    name: "Tim4Cc3",
-                    description: Some("Timer 4 CC3 event"),
-                    value: 8,
-                },
-                EnumVariant {
-                    name: "Tim4Trgo",
-                    description: Some("Timer 4 TRGO event"),
-                    value: 5,
-                },
-                EnumVariant {
-                    name: "Tim7Trgo",
-                    description: Some("Timer 7 TRGO event"),
-                    value: 10,
-                },
-                EnumVariant {
-                    name: "Tim9Cc1",
+                    name: "TIM9_CC1",
                     description: Some("Timer 9 CC1 event"),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "Tim9Trgo",
+                    name: "TIM9_TRGO",
                     description: Some("Timer 9 TRGO event"),
                     value: 1,
+                },
+                EnumVariant {
+                    name: "TIM2_TRGO",
+                    description: Some("Timer 2 TRGO event"),
+                    value: 2,
+                },
+                EnumVariant {
+                    name: "TIM2_CC1",
+                    description: Some("Timer 2 CC1 event"),
+                    value: 3,
+                },
+                EnumVariant {
+                    name: "TIM3_CC4",
+                    description: Some("Timer 3 CC4 event"),
+                    value: 4,
+                },
+                EnumVariant {
+                    name: "TIM4_TRGO",
+                    description: Some("Timer 4 TRGO event"),
+                    value: 5,
+                },
+                EnumVariant {
+                    name: "TIM4_CC1",
+                    description: Some("Timer 4 CC1 event"),
+                    value: 6,
+                },
+                EnumVariant {
+                    name: "TIM4_CC2",
+                    description: Some("Timer 4 CC2 event"),
+                    value: 7,
+                },
+                EnumVariant {
+                    name: "TIM4_CC3",
+                    description: Some("Timer 4 CC3 event"),
+                    value: 8,
+                },
+                EnumVariant {
+                    name: "TIM10_CC1",
+                    description: Some("Timer 4 CC3 event"),
+                    value: 9,
+                },
+                EnumVariant {
+                    name: "TIM7_TRGO",
+                    description: Some("Timer 7 TRGO event"),
+                    value: 10,
+                },
+                EnumVariant {
+                    name: "EXTI_LINE15",
+                    description: Some("External interrupt line 15"),
+                    value: 15,
                 },
             ],
         },
@@ -1327,24 +1327,24 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 2,
             variants: &[
                 EnumVariant {
-                    name: "Bits10",
-                    description: Some("10-bit resolution"),
-                    value: 1,
-                },
-                EnumVariant {
-                    name: "Bits12",
+                    name: "BITS12",
                     description: Some("12-bit resolution"),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "Bits6",
-                    description: Some("6-bit resolution"),
-                    value: 3,
+                    name: "BITS10",
+                    description: Some("10-bit resolution"),
+                    value: 1,
                 },
                 EnumVariant {
-                    name: "Bits8",
+                    name: "BITS8",
                     description: Some("8-bit resolution"),
                     value: 2,
+                },
+                EnumVariant {
+                    name: "BITS6",
+                    description: Some("6-bit resolution"),
+                    value: 3,
                 },
             ],
         },
@@ -1354,44 +1354,44 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 3,
             variants: &[
                 EnumVariant {
-                    name: "Cycles16",
-                    description: Some("16 ADC clock cycles"),
-                    value: 2,
-                },
-                EnumVariant {
-                    name: "Cycles192",
-                    description: Some("192 ADC clock cycles"),
-                    value: 6,
-                },
-                EnumVariant {
-                    name: "Cycles24",
-                    description: Some("24 ADC clock cycles"),
-                    value: 3,
-                },
-                EnumVariant {
-                    name: "Cycles384",
-                    description: Some("384 ADC clock cycles"),
-                    value: 7,
-                },
-                EnumVariant {
-                    name: "Cycles4",
+                    name: "CYCLES4",
                     description: Some("4 ADC clock cycles"),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "Cycles48",
-                    description: Some("48 ADC clock cycles"),
-                    value: 4,
-                },
-                EnumVariant {
-                    name: "Cycles9",
+                    name: "CYCLES9",
                     description: Some("9 ADC clock cycles"),
                     value: 1,
                 },
                 EnumVariant {
-                    name: "Cycles96",
+                    name: "CYCLES16",
+                    description: Some("16 ADC clock cycles"),
+                    value: 2,
+                },
+                EnumVariant {
+                    name: "CYCLES24",
+                    description: Some("24 ADC clock cycles"),
+                    value: 3,
+                },
+                EnumVariant {
+                    name: "CYCLES48",
+                    description: Some("48 ADC clock cycles"),
+                    value: 4,
+                },
+                EnumVariant {
+                    name: "CYCLES96",
                     description: Some("96 ADC clock cycles"),
                     value: 5,
+                },
+                EnumVariant {
+                    name: "CYCLES192",
+                    description: Some("192 ADC clock cycles"),
+                    value: 6,
+                },
+                EnumVariant {
+                    name: "CYCLES384",
+                    description: Some("384 ADC clock cycles"),
+                    value: 7,
                 },
             ],
         },

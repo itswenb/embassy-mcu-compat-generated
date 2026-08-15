@@ -1099,14 +1099,14 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 1,
             variants: &[
                 EnumVariant {
-                    name: "Extended",
-                    description: Some("Extended identifier"),
-                    value: 1,
-                },
-                EnumVariant {
-                    name: "Standard",
+                    name: "STANDARD",
                     description: Some("Standard identifier"),
                     value: 0,
+                },
+                EnumVariant {
+                    name: "EXTENDED",
+                    description: Some("Extended identifier"),
+                    value: 1,
                 },
             ],
         },
@@ -1116,44 +1116,44 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 3,
             variants: &[
                 EnumVariant {
-                    name: "Ack",
-                    description: Some("Acknowledgment Error"),
-                    value: 3,
-                },
-                EnumVariant {
-                    name: "BitDominant",
-                    description: Some("Bit dominant Error"),
-                    value: 5,
-                },
-                EnumVariant {
-                    name: "BitRecessive",
-                    description: Some("Bit recessive Error"),
-                    value: 4,
-                },
-                EnumVariant {
-                    name: "Crc",
-                    description: Some("CRC Error"),
-                    value: 6,
-                },
-                EnumVariant {
-                    name: "Custom",
-                    description: Some("Set by software"),
-                    value: 7,
-                },
-                EnumVariant {
-                    name: "Form",
-                    description: Some("Form Error"),
-                    value: 2,
-                },
-                EnumVariant {
-                    name: "NoError",
+                    name: "NO_ERROR",
                     description: Some("No Error"),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "Stuff",
+                    name: "STUFF",
                     description: Some("Stuff Error"),
                     value: 1,
+                },
+                EnumVariant {
+                    name: "FORM",
+                    description: Some("Form Error"),
+                    value: 2,
+                },
+                EnumVariant {
+                    name: "ACK",
+                    description: Some("Acknowledgment Error"),
+                    value: 3,
+                },
+                EnumVariant {
+                    name: "BIT_RECESSIVE",
+                    description: Some("Bit recessive Error"),
+                    value: 4,
+                },
+                EnumVariant {
+                    name: "BIT_DOMINANT",
+                    description: Some("Bit dominant Error"),
+                    value: 5,
+                },
+                EnumVariant {
+                    name: "CRC",
+                    description: Some("CRC Error"),
+                    value: 6,
+                },
+                EnumVariant {
+                    name: "CUSTOM",
+                    description: Some("Set by software"),
+                    value: 7,
                 },
             ],
         },
@@ -1163,12 +1163,12 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 1,
             variants: &[
                 EnumVariant {
-                    name: "Data",
+                    name: "DATA",
                     description: Some("Data frame"),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "Remote",
+                    name: "REMOTE",
                     description: Some("Remote frame"),
                     value: 1,
                 },
@@ -1180,12 +1180,12 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 1,
             variants: &[
                 EnumVariant {
-                    name: "Normal",
+                    name: "NORMAL",
                     description: Some("Normal operation"),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "Silent",
+                    name: "SILENT",
                     description: Some("Silent Mode"),
                     value: 1,
                 },

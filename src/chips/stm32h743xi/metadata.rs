@@ -1,4 +1,4 @@
-include!("../metadata_0495.rs");
+include!("../metadata_0447.rs");
 use crate::metadata::PeripheralRccKernelClock::{Clock, Mux};
 pub static METADATA: Metadata = Metadata {
     name: "STM32H743XI",
@@ -74,13 +74,6 @@ pub static METADATA: Metadata = Metadata {
             kind: MemoryRegionKind::Ram,
             address: 0x38000000,
             size: 65536,
-            settings: None,
-        },
-        MemoryRegion {
-            name: "BKPSRAM",
-            kind: MemoryRegionKind::Ram,
-            address: 0x38800000,
-            size: 4096,
             settings: None,
         },
     ]],

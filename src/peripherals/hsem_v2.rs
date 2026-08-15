@@ -23,47 +23,47 @@ impl Hsem {
     #[inline(always)]
     pub const fn r(self, n: usize) -> crate::common::Reg<regs::R, crate::common::RW> {
         assert!(n < 32usize);
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0usize + n * 4usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0usize + n * 4usize) as _) }
     }
     #[doc = "HSEM Read lock register."]
     #[inline(always)]
     pub const fn rlr(self, n: usize) -> crate::common::Reg<regs::Rlr, crate::common::R> {
         assert!(n < 32usize);
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x80usize + n * 4usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x80usize + n * 4usize) as _) }
     }
     #[doc = "HSEM Interrupt enable register."]
     #[inline(always)]
     pub const fn ier(self, n: usize) -> crate::common::Reg<regs::Ier, crate::common::RW> {
         assert!(n < 1usize);
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0100usize + n * 16usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0100usize + n * 16usize) as _) }
     }
     #[doc = "HSEM Interrupt clear register."]
     #[inline(always)]
     pub const fn icr(self, n: usize) -> crate::common::Reg<regs::Icr, crate::common::RW> {
         assert!(n < 1usize);
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0104usize + n * 16usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0104usize + n * 16usize) as _) }
     }
     #[doc = "HSEM Interrupt status register."]
     #[inline(always)]
     pub const fn isr(self, n: usize) -> crate::common::Reg<regs::Isr, crate::common::R> {
         assert!(n < 1usize);
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0108usize + n * 16usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0108usize + n * 16usize) as _) }
     }
     #[doc = "HSEM Masked interrupt status register."]
     #[inline(always)]
     pub const fn misr(self, n: usize) -> crate::common::Reg<regs::Misr, crate::common::R> {
         assert!(n < 1usize);
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x010cusize + n * 16usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x010cusize + n * 16usize) as _) }
     }
     #[doc = "HSEM Clear register."]
     #[inline(always)]
     pub const fn cr(self) -> crate::common::Reg<regs::Cr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0140usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0140usize) as _) }
     }
     #[doc = "HSEM Interrupt clear register."]
     #[inline(always)]
     pub const fn keyr(self) -> crate::common::Reg<regs::Keyr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0144usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0144usize) as _) }
     }
 }
 pub mod regs {
@@ -73,7 +73,6 @@ pub mod regs {
     pub struct Cr(pub u32);
     impl Cr {
         #[doc = "COREID of semaphores to be cleared."]
-        #[must_use]
         #[inline(always)]
         pub const fn coreid(&self) -> u8 {
             let val = (self.0 >> 8usize) & 0x0f;
@@ -81,11 +80,10 @@ pub mod regs {
         }
         #[doc = "COREID of semaphores to be cleared."]
         #[inline(always)]
-        pub const fn set_coreid(&mut self, val: u8) {
+        pub fn set_coreid(&mut self, val: u8) {
             self.0 = (self.0 & !(0x0f << 8usize)) | (((val as u32) & 0x0f) << 8usize);
         }
         #[doc = "Semaphore clear Key."]
-        #[must_use]
         #[inline(always)]
         pub const fn key(&self) -> u16 {
             let val = (self.0 >> 16usize) & 0xffff;
@@ -93,7 +91,7 @@ pub mod regs {
         }
         #[doc = "Semaphore clear Key."]
         #[inline(always)]
-        pub const fn set_key(&mut self, val: u16) {
+        pub fn set_key(&mut self, val: u16) {
             self.0 = (self.0 & !(0xffff << 16usize)) | (((val as u32) & 0xffff) << 16usize);
         }
     }
@@ -123,7 +121,6 @@ pub mod regs {
     pub struct Icr(pub u32);
     impl Icr {
         #[doc = "Interrupt semaphore x clear bit."]
-        #[must_use]
         #[inline(always)]
         pub const fn isc(&self, n: usize) -> bool {
             assert!(n < 32usize);
@@ -133,7 +130,7 @@ pub mod regs {
         }
         #[doc = "Interrupt semaphore x clear bit."]
         #[inline(always)]
-        pub const fn set_isc(&mut self, n: usize, val: bool) {
+        pub fn set_isc(&mut self, n: usize, val: bool) {
             assert!(n < 32usize);
             let offs = 0usize + n * 1usize;
             self.0 = (self.0 & !(0x01 << offs)) | (((val as u32) & 0x01) << offs);
@@ -186,42 +183,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Icr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Icr {{ isc[0]: {=bool:?}, isc[1]: {=bool:?}, isc[2]: {=bool:?}, isc[3]: {=bool:?}, isc[4]: {=bool:?}, isc[5]: {=bool:?}, isc[6]: {=bool:?}, isc[7]: {=bool:?}, isc[8]: {=bool:?}, isc[9]: {=bool:?}, isc[10]: {=bool:?}, isc[11]: {=bool:?}, isc[12]: {=bool:?}, isc[13]: {=bool:?}, isc[14]: {=bool:?}, isc[15]: {=bool:?}, isc[16]: {=bool:?}, isc[17]: {=bool:?}, isc[18]: {=bool:?}, isc[19]: {=bool:?}, isc[20]: {=bool:?}, isc[21]: {=bool:?}, isc[22]: {=bool:?}, isc[23]: {=bool:?}, isc[24]: {=bool:?}, isc[25]: {=bool:?}, isc[26]: {=bool:?}, isc[27]: {=bool:?}, isc[28]: {=bool:?}, isc[29]: {=bool:?}, isc[30]: {=bool:?}, isc[31]: {=bool:?} }}",
-                self.isc(0usize),
-                self.isc(1usize),
-                self.isc(2usize),
-                self.isc(3usize),
-                self.isc(4usize),
-                self.isc(5usize),
-                self.isc(6usize),
-                self.isc(7usize),
-                self.isc(8usize),
-                self.isc(9usize),
-                self.isc(10usize),
-                self.isc(11usize),
-                self.isc(12usize),
-                self.isc(13usize),
-                self.isc(14usize),
-                self.isc(15usize),
-                self.isc(16usize),
-                self.isc(17usize),
-                self.isc(18usize),
-                self.isc(19usize),
-                self.isc(20usize),
-                self.isc(21usize),
-                self.isc(22usize),
-                self.isc(23usize),
-                self.isc(24usize),
-                self.isc(25usize),
-                self.isc(26usize),
-                self.isc(27usize),
-                self.isc(28usize),
-                self.isc(29usize),
-                self.isc(30usize),
-                self.isc(31usize)
-            )
+            defmt :: write ! (f , "Icr {{ isc[0]: {=bool:?}, isc[1]: {=bool:?}, isc[2]: {=bool:?}, isc[3]: {=bool:?}, isc[4]: {=bool:?}, isc[5]: {=bool:?}, isc[6]: {=bool:?}, isc[7]: {=bool:?}, isc[8]: {=bool:?}, isc[9]: {=bool:?}, isc[10]: {=bool:?}, isc[11]: {=bool:?}, isc[12]: {=bool:?}, isc[13]: {=bool:?}, isc[14]: {=bool:?}, isc[15]: {=bool:?}, isc[16]: {=bool:?}, isc[17]: {=bool:?}, isc[18]: {=bool:?}, isc[19]: {=bool:?}, isc[20]: {=bool:?}, isc[21]: {=bool:?}, isc[22]: {=bool:?}, isc[23]: {=bool:?}, isc[24]: {=bool:?}, isc[25]: {=bool:?}, isc[26]: {=bool:?}, isc[27]: {=bool:?}, isc[28]: {=bool:?}, isc[29]: {=bool:?}, isc[30]: {=bool:?}, isc[31]: {=bool:?} }}" , self . isc (0usize) , self . isc (1usize) , self . isc (2usize) , self . isc (3usize) , self . isc (4usize) , self . isc (5usize) , self . isc (6usize) , self . isc (7usize) , self . isc (8usize) , self . isc (9usize) , self . isc (10usize) , self . isc (11usize) , self . isc (12usize) , self . isc (13usize) , self . isc (14usize) , self . isc (15usize) , self . isc (16usize) , self . isc (17usize) , self . isc (18usize) , self . isc (19usize) , self . isc (20usize) , self . isc (21usize) , self . isc (22usize) , self . isc (23usize) , self . isc (24usize) , self . isc (25usize) , self . isc (26usize) , self . isc (27usize) , self . isc (28usize) , self . isc (29usize) , self . isc (30usize) , self . isc (31usize))
         }
     }
     #[doc = "HSEM Interrupt enable register."]
@@ -230,7 +192,6 @@ pub mod regs {
     pub struct Ier(pub u32);
     impl Ier {
         #[doc = "Interrupt semaphore x enable bit."]
-        #[must_use]
         #[inline(always)]
         pub const fn ise(&self, n: usize) -> bool {
             assert!(n < 32usize);
@@ -240,7 +201,7 @@ pub mod regs {
         }
         #[doc = "Interrupt semaphore x enable bit."]
         #[inline(always)]
-        pub const fn set_ise(&mut self, n: usize, val: bool) {
+        pub fn set_ise(&mut self, n: usize, val: bool) {
             assert!(n < 32usize);
             let offs = 0usize + n * 1usize;
             self.0 = (self.0 & !(0x01 << offs)) | (((val as u32) & 0x01) << offs);
@@ -293,42 +254,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Ier {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Ier {{ ise[0]: {=bool:?}, ise[1]: {=bool:?}, ise[2]: {=bool:?}, ise[3]: {=bool:?}, ise[4]: {=bool:?}, ise[5]: {=bool:?}, ise[6]: {=bool:?}, ise[7]: {=bool:?}, ise[8]: {=bool:?}, ise[9]: {=bool:?}, ise[10]: {=bool:?}, ise[11]: {=bool:?}, ise[12]: {=bool:?}, ise[13]: {=bool:?}, ise[14]: {=bool:?}, ise[15]: {=bool:?}, ise[16]: {=bool:?}, ise[17]: {=bool:?}, ise[18]: {=bool:?}, ise[19]: {=bool:?}, ise[20]: {=bool:?}, ise[21]: {=bool:?}, ise[22]: {=bool:?}, ise[23]: {=bool:?}, ise[24]: {=bool:?}, ise[25]: {=bool:?}, ise[26]: {=bool:?}, ise[27]: {=bool:?}, ise[28]: {=bool:?}, ise[29]: {=bool:?}, ise[30]: {=bool:?}, ise[31]: {=bool:?} }}",
-                self.ise(0usize),
-                self.ise(1usize),
-                self.ise(2usize),
-                self.ise(3usize),
-                self.ise(4usize),
-                self.ise(5usize),
-                self.ise(6usize),
-                self.ise(7usize),
-                self.ise(8usize),
-                self.ise(9usize),
-                self.ise(10usize),
-                self.ise(11usize),
-                self.ise(12usize),
-                self.ise(13usize),
-                self.ise(14usize),
-                self.ise(15usize),
-                self.ise(16usize),
-                self.ise(17usize),
-                self.ise(18usize),
-                self.ise(19usize),
-                self.ise(20usize),
-                self.ise(21usize),
-                self.ise(22usize),
-                self.ise(23usize),
-                self.ise(24usize),
-                self.ise(25usize),
-                self.ise(26usize),
-                self.ise(27usize),
-                self.ise(28usize),
-                self.ise(29usize),
-                self.ise(30usize),
-                self.ise(31usize)
-            )
+            defmt :: write ! (f , "Ier {{ ise[0]: {=bool:?}, ise[1]: {=bool:?}, ise[2]: {=bool:?}, ise[3]: {=bool:?}, ise[4]: {=bool:?}, ise[5]: {=bool:?}, ise[6]: {=bool:?}, ise[7]: {=bool:?}, ise[8]: {=bool:?}, ise[9]: {=bool:?}, ise[10]: {=bool:?}, ise[11]: {=bool:?}, ise[12]: {=bool:?}, ise[13]: {=bool:?}, ise[14]: {=bool:?}, ise[15]: {=bool:?}, ise[16]: {=bool:?}, ise[17]: {=bool:?}, ise[18]: {=bool:?}, ise[19]: {=bool:?}, ise[20]: {=bool:?}, ise[21]: {=bool:?}, ise[22]: {=bool:?}, ise[23]: {=bool:?}, ise[24]: {=bool:?}, ise[25]: {=bool:?}, ise[26]: {=bool:?}, ise[27]: {=bool:?}, ise[28]: {=bool:?}, ise[29]: {=bool:?}, ise[30]: {=bool:?}, ise[31]: {=bool:?} }}" , self . ise (0usize) , self . ise (1usize) , self . ise (2usize) , self . ise (3usize) , self . ise (4usize) , self . ise (5usize) , self . ise (6usize) , self . ise (7usize) , self . ise (8usize) , self . ise (9usize) , self . ise (10usize) , self . ise (11usize) , self . ise (12usize) , self . ise (13usize) , self . ise (14usize) , self . ise (15usize) , self . ise (16usize) , self . ise (17usize) , self . ise (18usize) , self . ise (19usize) , self . ise (20usize) , self . ise (21usize) , self . ise (22usize) , self . ise (23usize) , self . ise (24usize) , self . ise (25usize) , self . ise (26usize) , self . ise (27usize) , self . ise (28usize) , self . ise (29usize) , self . ise (30usize) , self . ise (31usize))
         }
     }
     #[doc = "HSEM Interrupt status register."]
@@ -337,7 +263,6 @@ pub mod regs {
     pub struct Isr(pub u32);
     impl Isr {
         #[doc = "Interrupt semaphore x status bit before enable (mask)."]
-        #[must_use]
         #[inline(always)]
         pub const fn isf(&self, n: usize) -> bool {
             assert!(n < 32usize);
@@ -347,7 +272,7 @@ pub mod regs {
         }
         #[doc = "Interrupt semaphore x status bit before enable (mask)."]
         #[inline(always)]
-        pub const fn set_isf(&mut self, n: usize, val: bool) {
+        pub fn set_isf(&mut self, n: usize, val: bool) {
             assert!(n < 32usize);
             let offs = 0usize + n * 1usize;
             self.0 = (self.0 & !(0x01 << offs)) | (((val as u32) & 0x01) << offs);
@@ -400,42 +325,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Isr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Isr {{ isf[0]: {=bool:?}, isf[1]: {=bool:?}, isf[2]: {=bool:?}, isf[3]: {=bool:?}, isf[4]: {=bool:?}, isf[5]: {=bool:?}, isf[6]: {=bool:?}, isf[7]: {=bool:?}, isf[8]: {=bool:?}, isf[9]: {=bool:?}, isf[10]: {=bool:?}, isf[11]: {=bool:?}, isf[12]: {=bool:?}, isf[13]: {=bool:?}, isf[14]: {=bool:?}, isf[15]: {=bool:?}, isf[16]: {=bool:?}, isf[17]: {=bool:?}, isf[18]: {=bool:?}, isf[19]: {=bool:?}, isf[20]: {=bool:?}, isf[21]: {=bool:?}, isf[22]: {=bool:?}, isf[23]: {=bool:?}, isf[24]: {=bool:?}, isf[25]: {=bool:?}, isf[26]: {=bool:?}, isf[27]: {=bool:?}, isf[28]: {=bool:?}, isf[29]: {=bool:?}, isf[30]: {=bool:?}, isf[31]: {=bool:?} }}",
-                self.isf(0usize),
-                self.isf(1usize),
-                self.isf(2usize),
-                self.isf(3usize),
-                self.isf(4usize),
-                self.isf(5usize),
-                self.isf(6usize),
-                self.isf(7usize),
-                self.isf(8usize),
-                self.isf(9usize),
-                self.isf(10usize),
-                self.isf(11usize),
-                self.isf(12usize),
-                self.isf(13usize),
-                self.isf(14usize),
-                self.isf(15usize),
-                self.isf(16usize),
-                self.isf(17usize),
-                self.isf(18usize),
-                self.isf(19usize),
-                self.isf(20usize),
-                self.isf(21usize),
-                self.isf(22usize),
-                self.isf(23usize),
-                self.isf(24usize),
-                self.isf(25usize),
-                self.isf(26usize),
-                self.isf(27usize),
-                self.isf(28usize),
-                self.isf(29usize),
-                self.isf(30usize),
-                self.isf(31usize)
-            )
+            defmt :: write ! (f , "Isr {{ isf[0]: {=bool:?}, isf[1]: {=bool:?}, isf[2]: {=bool:?}, isf[3]: {=bool:?}, isf[4]: {=bool:?}, isf[5]: {=bool:?}, isf[6]: {=bool:?}, isf[7]: {=bool:?}, isf[8]: {=bool:?}, isf[9]: {=bool:?}, isf[10]: {=bool:?}, isf[11]: {=bool:?}, isf[12]: {=bool:?}, isf[13]: {=bool:?}, isf[14]: {=bool:?}, isf[15]: {=bool:?}, isf[16]: {=bool:?}, isf[17]: {=bool:?}, isf[18]: {=bool:?}, isf[19]: {=bool:?}, isf[20]: {=bool:?}, isf[21]: {=bool:?}, isf[22]: {=bool:?}, isf[23]: {=bool:?}, isf[24]: {=bool:?}, isf[25]: {=bool:?}, isf[26]: {=bool:?}, isf[27]: {=bool:?}, isf[28]: {=bool:?}, isf[29]: {=bool:?}, isf[30]: {=bool:?}, isf[31]: {=bool:?} }}" , self . isf (0usize) , self . isf (1usize) , self . isf (2usize) , self . isf (3usize) , self . isf (4usize) , self . isf (5usize) , self . isf (6usize) , self . isf (7usize) , self . isf (8usize) , self . isf (9usize) , self . isf (10usize) , self . isf (11usize) , self . isf (12usize) , self . isf (13usize) , self . isf (14usize) , self . isf (15usize) , self . isf (16usize) , self . isf (17usize) , self . isf (18usize) , self . isf (19usize) , self . isf (20usize) , self . isf (21usize) , self . isf (22usize) , self . isf (23usize) , self . isf (24usize) , self . isf (25usize) , self . isf (26usize) , self . isf (27usize) , self . isf (28usize) , self . isf (29usize) , self . isf (30usize) , self . isf (31usize))
         }
     }
     #[doc = "HSEM Interrupt clear register."]
@@ -444,7 +334,6 @@ pub mod regs {
     pub struct Keyr(pub u32);
     impl Keyr {
         #[doc = "Semaphore Clear Key."]
-        #[must_use]
         #[inline(always)]
         pub const fn key(&self) -> u16 {
             let val = (self.0 >> 16usize) & 0xffff;
@@ -452,7 +341,7 @@ pub mod regs {
         }
         #[doc = "Semaphore Clear Key."]
         #[inline(always)]
-        pub const fn set_key(&mut self, val: u16) {
+        pub fn set_key(&mut self, val: u16) {
             self.0 = (self.0 & !(0xffff << 16usize)) | (((val as u32) & 0xffff) << 16usize);
         }
     }
@@ -479,7 +368,6 @@ pub mod regs {
     pub struct Misr(pub u32);
     impl Misr {
         #[doc = "masked interrupt semaphore x status bit after enable (mask)."]
-        #[must_use]
         #[inline(always)]
         pub const fn misf(&self, n: usize) -> bool {
             assert!(n < 32usize);
@@ -489,7 +377,7 @@ pub mod regs {
         }
         #[doc = "masked interrupt semaphore x status bit after enable (mask)."]
         #[inline(always)]
-        pub const fn set_misf(&mut self, n: usize, val: bool) {
+        pub fn set_misf(&mut self, n: usize, val: bool) {
             assert!(n < 32usize);
             let offs = 0usize + n * 1usize;
             self.0 = (self.0 & !(0x01 << offs)) | (((val as u32) & 0x01) << offs);
@@ -542,42 +430,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Misr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Misr {{ misf[0]: {=bool:?}, misf[1]: {=bool:?}, misf[2]: {=bool:?}, misf[3]: {=bool:?}, misf[4]: {=bool:?}, misf[5]: {=bool:?}, misf[6]: {=bool:?}, misf[7]: {=bool:?}, misf[8]: {=bool:?}, misf[9]: {=bool:?}, misf[10]: {=bool:?}, misf[11]: {=bool:?}, misf[12]: {=bool:?}, misf[13]: {=bool:?}, misf[14]: {=bool:?}, misf[15]: {=bool:?}, misf[16]: {=bool:?}, misf[17]: {=bool:?}, misf[18]: {=bool:?}, misf[19]: {=bool:?}, misf[20]: {=bool:?}, misf[21]: {=bool:?}, misf[22]: {=bool:?}, misf[23]: {=bool:?}, misf[24]: {=bool:?}, misf[25]: {=bool:?}, misf[26]: {=bool:?}, misf[27]: {=bool:?}, misf[28]: {=bool:?}, misf[29]: {=bool:?}, misf[30]: {=bool:?}, misf[31]: {=bool:?} }}",
-                self.misf(0usize),
-                self.misf(1usize),
-                self.misf(2usize),
-                self.misf(3usize),
-                self.misf(4usize),
-                self.misf(5usize),
-                self.misf(6usize),
-                self.misf(7usize),
-                self.misf(8usize),
-                self.misf(9usize),
-                self.misf(10usize),
-                self.misf(11usize),
-                self.misf(12usize),
-                self.misf(13usize),
-                self.misf(14usize),
-                self.misf(15usize),
-                self.misf(16usize),
-                self.misf(17usize),
-                self.misf(18usize),
-                self.misf(19usize),
-                self.misf(20usize),
-                self.misf(21usize),
-                self.misf(22usize),
-                self.misf(23usize),
-                self.misf(24usize),
-                self.misf(25usize),
-                self.misf(26usize),
-                self.misf(27usize),
-                self.misf(28usize),
-                self.misf(29usize),
-                self.misf(30usize),
-                self.misf(31usize)
-            )
+            defmt :: write ! (f , "Misr {{ misf[0]: {=bool:?}, misf[1]: {=bool:?}, misf[2]: {=bool:?}, misf[3]: {=bool:?}, misf[4]: {=bool:?}, misf[5]: {=bool:?}, misf[6]: {=bool:?}, misf[7]: {=bool:?}, misf[8]: {=bool:?}, misf[9]: {=bool:?}, misf[10]: {=bool:?}, misf[11]: {=bool:?}, misf[12]: {=bool:?}, misf[13]: {=bool:?}, misf[14]: {=bool:?}, misf[15]: {=bool:?}, misf[16]: {=bool:?}, misf[17]: {=bool:?}, misf[18]: {=bool:?}, misf[19]: {=bool:?}, misf[20]: {=bool:?}, misf[21]: {=bool:?}, misf[22]: {=bool:?}, misf[23]: {=bool:?}, misf[24]: {=bool:?}, misf[25]: {=bool:?}, misf[26]: {=bool:?}, misf[27]: {=bool:?}, misf[28]: {=bool:?}, misf[29]: {=bool:?}, misf[30]: {=bool:?}, misf[31]: {=bool:?} }}" , self . misf (0usize) , self . misf (1usize) , self . misf (2usize) , self . misf (3usize) , self . misf (4usize) , self . misf (5usize) , self . misf (6usize) , self . misf (7usize) , self . misf (8usize) , self . misf (9usize) , self . misf (10usize) , self . misf (11usize) , self . misf (12usize) , self . misf (13usize) , self . misf (14usize) , self . misf (15usize) , self . misf (16usize) , self . misf (17usize) , self . misf (18usize) , self . misf (19usize) , self . misf (20usize) , self . misf (21usize) , self . misf (22usize) , self . misf (23usize) , self . misf (24usize) , self . misf (25usize) , self . misf (26usize) , self . misf (27usize) , self . misf (28usize) , self . misf (29usize) , self . misf (30usize) , self . misf (31usize))
         }
     }
     #[doc = "HSEM register HSEM_R%s HSEM_R31."]
@@ -586,7 +439,6 @@ pub mod regs {
     pub struct R(pub u32);
     impl R {
         #[doc = "Semaphore ProcessID."]
-        #[must_use]
         #[inline(always)]
         pub const fn procid(&self) -> u8 {
             let val = (self.0 >> 0usize) & 0xff;
@@ -594,11 +446,10 @@ pub mod regs {
         }
         #[doc = "Semaphore ProcessID."]
         #[inline(always)]
-        pub const fn set_procid(&mut self, val: u8) {
+        pub fn set_procid(&mut self, val: u8) {
             self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
         }
         #[doc = "Semaphore COREID."]
-        #[must_use]
         #[inline(always)]
         pub const fn coreid(&self) -> u8 {
             let val = (self.0 >> 8usize) & 0x0f;
@@ -606,11 +457,10 @@ pub mod regs {
         }
         #[doc = "Semaphore COREID."]
         #[inline(always)]
-        pub const fn set_coreid(&mut self, val: u8) {
+        pub fn set_coreid(&mut self, val: u8) {
             self.0 = (self.0 & !(0x0f << 8usize)) | (((val as u32) & 0x0f) << 8usize);
         }
         #[doc = "Lock indication."]
-        #[must_use]
         #[inline(always)]
         pub const fn lock(&self) -> bool {
             let val = (self.0 >> 31usize) & 0x01;
@@ -618,7 +468,7 @@ pub mod regs {
         }
         #[doc = "Lock indication."]
         #[inline(always)]
-        pub const fn set_lock(&mut self, val: bool) {
+        pub fn set_lock(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
         }
     }
@@ -655,7 +505,6 @@ pub mod regs {
     pub struct Rlr(pub u32);
     impl Rlr {
         #[doc = "Semaphore ProcessID."]
-        #[must_use]
         #[inline(always)]
         pub const fn procid(&self) -> u8 {
             let val = (self.0 >> 0usize) & 0xff;
@@ -663,11 +512,10 @@ pub mod regs {
         }
         #[doc = "Semaphore ProcessID."]
         #[inline(always)]
-        pub const fn set_procid(&mut self, val: u8) {
+        pub fn set_procid(&mut self, val: u8) {
             self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
         }
         #[doc = "Semaphore COREID."]
-        #[must_use]
         #[inline(always)]
         pub const fn coreid(&self) -> u8 {
             let val = (self.0 >> 8usize) & 0x0f;
@@ -675,11 +523,10 @@ pub mod regs {
         }
         #[doc = "Semaphore COREID."]
         #[inline(always)]
-        pub const fn set_coreid(&mut self, val: u8) {
+        pub fn set_coreid(&mut self, val: u8) {
             self.0 = (self.0 & !(0x0f << 8usize)) | (((val as u32) & 0x0f) << 8usize);
         }
         #[doc = "Lock indication."]
-        #[must_use]
         #[inline(always)]
         pub const fn lock(&self) -> bool {
             let val = (self.0 >> 31usize) & 0x01;
@@ -687,7 +534,7 @@ pub mod regs {
         }
         #[doc = "Lock indication."]
         #[inline(always)]
-        pub const fn set_lock(&mut self, val: bool) {
+        pub fn set_lock(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
         }
     }

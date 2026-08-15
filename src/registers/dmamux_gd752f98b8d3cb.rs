@@ -1,0 +1,909 @@
+
+                    use crate::metadata::ir::*;
+                    pub(crate) static REGISTERS: IR = IR {
+    blocks: &[
+        Block {
+            name: "Dmamux",
+            extends: None,
+            description: Some(
+                "DMAMUX controller",
+            ),
+            items: &[
+                BlockItem {
+                    name: "ccr",
+                    description: None,
+                    array: Some(
+                        Array::Regular(
+                            RegularArray {
+                                len: 7,
+                                stride: 4,
+                            },
+                        ),
+                    ),
+                    byte_offset: 0x0,
+                    inner: BlockItemInner::Register(
+                        Register {
+                            access: Access::ReadWrite,
+                            bit_size: 32,
+                            fieldset: Some(
+                                "Ccr",
+                            ),
+                        },
+                    ),
+                },
+                BlockItem {
+                    name: "rm_intf",
+                    description: Some(
+                        "Request multiplexer channel interrupt flag register",
+                    ),
+                    array: None,
+                    byte_offset: 0x80,
+                    inner: BlockItemInner::Register(
+                        Register {
+                            access: Access::Read,
+                            bit_size: 32,
+                            fieldset: Some(
+                                "RmIntf",
+                            ),
+                        },
+                    ),
+                },
+                BlockItem {
+                    name: "rm_intc",
+                    description: Some(
+                        "Request multiplexer channel interrupt flag clear register",
+                    ),
+                    array: None,
+                    byte_offset: 0x84,
+                    inner: BlockItemInner::Register(
+                        Register {
+                            access: Access::Write,
+                            bit_size: 32,
+                            fieldset: Some(
+                                "RmIntc",
+                            ),
+                        },
+                    ),
+                },
+                BlockItem {
+                    name: "rg_ch0cfg",
+                    description: Some(
+                        "Request generator channel x configuration register",
+                    ),
+                    array: None,
+                    byte_offset: 0x100,
+                    inner: BlockItemInner::Register(
+                        Register {
+                            access: Access::ReadWrite,
+                            bit_size: 32,
+                            fieldset: Some(
+                                "RgCh0cfg",
+                            ),
+                        },
+                    ),
+                },
+                BlockItem {
+                    name: "rg_ch1cfg",
+                    description: Some(
+                        "Request generator channel 1 configuration register",
+                    ),
+                    array: None,
+                    byte_offset: 0x104,
+                    inner: BlockItemInner::Register(
+                        Register {
+                            access: Access::ReadWrite,
+                            bit_size: 32,
+                            fieldset: Some(
+                                "RgCh1cfg",
+                            ),
+                        },
+                    ),
+                },
+                BlockItem {
+                    name: "rg_ch2cfg",
+                    description: Some(
+                        "Request generator channel 2 configuration register",
+                    ),
+                    array: None,
+                    byte_offset: 0x108,
+                    inner: BlockItemInner::Register(
+                        Register {
+                            access: Access::ReadWrite,
+                            bit_size: 32,
+                            fieldset: Some(
+                                "RgCh2cfg",
+                            ),
+                        },
+                    ),
+                },
+                BlockItem {
+                    name: "rg_ch3cfg",
+                    description: Some(
+                        "Request generator channel 3 configuration register",
+                    ),
+                    array: None,
+                    byte_offset: 0x10c,
+                    inner: BlockItemInner::Register(
+                        Register {
+                            access: Access::ReadWrite,
+                            bit_size: 32,
+                            fieldset: Some(
+                                "RgCh3cfg",
+                            ),
+                        },
+                    ),
+                },
+                BlockItem {
+                    name: "rg_intf",
+                    description: Some(
+                        "Request generator interrupt flag register",
+                    ),
+                    array: None,
+                    byte_offset: 0x140,
+                    inner: BlockItemInner::Register(
+                        Register {
+                            access: Access::Read,
+                            bit_size: 32,
+                            fieldset: Some(
+                                "RgIntf",
+                            ),
+                        },
+                    ),
+                },
+                BlockItem {
+                    name: "rg_intc",
+                    description: Some(
+                        "Rquest generator interrupt flag clear register",
+                    ),
+                    array: None,
+                    byte_offset: 0x144,
+                    inner: BlockItemInner::Register(
+                        Register {
+                            access: Access::Read,
+                            bit_size: 32,
+                            fieldset: Some(
+                                "RgIntc",
+                            ),
+                        },
+                    ),
+                },
+            ],
+        },
+    ],
+    fieldsets: &[
+        FieldSet {
+            name: "Ccr",
+            extends: None,
+            description: None,
+            bit_size: 32,
+            fields: &[
+                Field {
+                    name: "dmareq_id",
+                    description: Some(
+                        "Multiplexer input identification",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 0,
+                        },
+                    ),
+                    bit_size: 7,
+                    array: None,
+                    enumm: None,
+                },
+                Field {
+                    name: "soie",
+                    description: Some(
+                        "Synchronization overrun interrupt enable",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 8,
+                        },
+                    ),
+                    bit_size: 1,
+                    array: None,
+                    enumm: None,
+                },
+                Field {
+                    name: "ege",
+                    description: Some(
+                        "Event generation enable",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 9,
+                        },
+                    ),
+                    bit_size: 1,
+                    array: None,
+                    enumm: None,
+                },
+                Field {
+                    name: "se",
+                    description: Some(
+                        "Synchronization enable",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 16,
+                        },
+                    ),
+                    bit_size: 1,
+                    array: None,
+                    enumm: None,
+                },
+                Field {
+                    name: "spol",
+                    description: Some(
+                        "Synchronization input polarity",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 17,
+                        },
+                    ),
+                    bit_size: 2,
+                    array: None,
+                    enumm: None,
+                },
+                Field {
+                    name: "nbreq",
+                    description: Some(
+                        "Number of DMA requests to forward",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 19,
+                        },
+                    ),
+                    bit_size: 5,
+                    array: None,
+                    enumm: None,
+                },
+                Field {
+                    name: "sync_id",
+                    description: Some(
+                        "Synchronization input identification",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 24,
+                        },
+                    ),
+                    bit_size: 5,
+                    array: None,
+                    enumm: None,
+                },
+            ],
+        },
+        FieldSet {
+            name: "RgCh0cfg",
+            extends: None,
+            description: Some(
+                "Request generator channel x configuration register",
+            ),
+            bit_size: 32,
+            fields: &[
+                Field {
+                    name: "tid",
+                    description: Some(
+                        "Trigger input identification",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 0,
+                        },
+                    ),
+                    bit_size: 5,
+                    array: None,
+                    enumm: None,
+                },
+                Field {
+                    name: "toie",
+                    description: Some(
+                        "Trigger overrun interrupt enable",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 8,
+                        },
+                    ),
+                    bit_size: 1,
+                    array: None,
+                    enumm: None,
+                },
+                Field {
+                    name: "rgen",
+                    description: Some(
+                        "DMAMUX request generator channel x enable",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 16,
+                        },
+                    ),
+                    bit_size: 1,
+                    array: None,
+                    enumm: None,
+                },
+                Field {
+                    name: "rgtp",
+                    description: Some(
+                        "DMA request generator trigger polarity",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 17,
+                        },
+                    ),
+                    bit_size: 2,
+                    array: None,
+                    enumm: None,
+                },
+                Field {
+                    name: "nbrg",
+                    description: Some(
+                        "Number of DMA requests to be generated",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 19,
+                        },
+                    ),
+                    bit_size: 5,
+                    array: None,
+                    enumm: None,
+                },
+            ],
+        },
+        FieldSet {
+            name: "RgCh1cfg",
+            extends: None,
+            description: Some(
+                "Request generator channel 1 configuration register",
+            ),
+            bit_size: 32,
+            fields: &[
+                Field {
+                    name: "tid",
+                    description: Some(
+                        "Trigger input identification",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 0,
+                        },
+                    ),
+                    bit_size: 5,
+                    array: None,
+                    enumm: None,
+                },
+                Field {
+                    name: "toie",
+                    description: Some(
+                        "Trigger overrun interrupt enable",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 8,
+                        },
+                    ),
+                    bit_size: 1,
+                    array: None,
+                    enumm: None,
+                },
+                Field {
+                    name: "rgtp",
+                    description: Some(
+                        "DMA request generator trigger polarity",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 16,
+                        },
+                    ),
+                    bit_size: 2,
+                    array: None,
+                    enumm: None,
+                },
+                Field {
+                    name: "nbrg",
+                    description: Some(
+                        "Number of DMA requests to be generated",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 19,
+                        },
+                    ),
+                    bit_size: 5,
+                    array: None,
+                    enumm: None,
+                },
+            ],
+        },
+        FieldSet {
+            name: "RgCh2cfg",
+            extends: None,
+            description: Some(
+                "Request generator channel 2 configuration register",
+            ),
+            bit_size: 32,
+            fields: &[
+                Field {
+                    name: "tid",
+                    description: Some(
+                        "Trigger input identification",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 0,
+                        },
+                    ),
+                    bit_size: 5,
+                    array: None,
+                    enumm: None,
+                },
+                Field {
+                    name: "toie",
+                    description: Some(
+                        "Trigger overrun interrupt enable",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 8,
+                        },
+                    ),
+                    bit_size: 1,
+                    array: None,
+                    enumm: None,
+                },
+                Field {
+                    name: "rgtp",
+                    description: Some(
+                        "DMA request generator trigger polarity",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 16,
+                        },
+                    ),
+                    bit_size: 2,
+                    array: None,
+                    enumm: None,
+                },
+                Field {
+                    name: "nbrg",
+                    description: Some(
+                        "Number of DMA requests to be generated",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 19,
+                        },
+                    ),
+                    bit_size: 5,
+                    array: None,
+                    enumm: None,
+                },
+            ],
+        },
+        FieldSet {
+            name: "RgCh3cfg",
+            extends: None,
+            description: Some(
+                "Request generator channel 3 configuration register",
+            ),
+            bit_size: 32,
+            fields: &[
+                Field {
+                    name: "tid",
+                    description: Some(
+                        "Trigger input identification",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 0,
+                        },
+                    ),
+                    bit_size: 5,
+                    array: None,
+                    enumm: None,
+                },
+                Field {
+                    name: "toie",
+                    description: Some(
+                        "Trigger overrun interrupt enable",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 8,
+                        },
+                    ),
+                    bit_size: 1,
+                    array: None,
+                    enumm: None,
+                },
+                Field {
+                    name: "rgtp",
+                    description: Some(
+                        "DMA request generator trigger polarity",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 16,
+                        },
+                    ),
+                    bit_size: 2,
+                    array: None,
+                    enumm: None,
+                },
+                Field {
+                    name: "nbrg",
+                    description: Some(
+                        "Number of DMA requests to be generated",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 19,
+                        },
+                    ),
+                    bit_size: 5,
+                    array: None,
+                    enumm: None,
+                },
+            ],
+        },
+        FieldSet {
+            name: "RgIntc",
+            extends: None,
+            description: Some(
+                "Rquest generator interrupt flag clear register",
+            ),
+            bit_size: 32,
+            fields: &[
+                Field {
+                    name: "toifc0",
+                    description: Some(
+                        "Clear bit for trigger overrun event flag of request generator channel 0",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 0,
+                        },
+                    ),
+                    bit_size: 1,
+                    array: None,
+                    enumm: None,
+                },
+                Field {
+                    name: "toifc1",
+                    description: Some(
+                        "Clear bit for trigger overrun event flag of request generator channel 1",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 1,
+                        },
+                    ),
+                    bit_size: 1,
+                    array: None,
+                    enumm: None,
+                },
+                Field {
+                    name: "toifc2",
+                    description: Some(
+                        "Clear bit for trigger overrun event flag of request generator channel 2",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 2,
+                        },
+                    ),
+                    bit_size: 1,
+                    array: None,
+                    enumm: None,
+                },
+                Field {
+                    name: "toifc3",
+                    description: Some(
+                        "Clear bit for trigger overrun event flag of request generator channel 3",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 3,
+                        },
+                    ),
+                    bit_size: 1,
+                    array: None,
+                    enumm: None,
+                },
+            ],
+        },
+        FieldSet {
+            name: "RgIntf",
+            extends: None,
+            description: Some(
+                "Request generator interrupt flag register",
+            ),
+            bit_size: 32,
+            fields: &[
+                Field {
+                    name: "toif0",
+                    description: Some(
+                        "Trigger overrun event flag of request generator channel 0",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 0,
+                        },
+                    ),
+                    bit_size: 1,
+                    array: None,
+                    enumm: None,
+                },
+                Field {
+                    name: "toif1",
+                    description: Some(
+                        "Trigger overrun event flag of request generator channel 1",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 1,
+                        },
+                    ),
+                    bit_size: 1,
+                    array: None,
+                    enumm: None,
+                },
+                Field {
+                    name: "toif2",
+                    description: Some(
+                        "Trigger overrun event flag of request generator channel 2",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 2,
+                        },
+                    ),
+                    bit_size: 1,
+                    array: None,
+                    enumm: None,
+                },
+                Field {
+                    name: "toif3",
+                    description: Some(
+                        "Trigger overrun event flag of request generator channel 3",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 3,
+                        },
+                    ),
+                    bit_size: 1,
+                    array: None,
+                    enumm: None,
+                },
+            ],
+        },
+        FieldSet {
+            name: "RmIntc",
+            extends: None,
+            description: Some(
+                "Request multiplexer channel interrupt flag clear register",
+            ),
+            bit_size: 32,
+            fields: &[
+                Field {
+                    name: "soifc0",
+                    description: Some(
+                        "Clear bit for synchronization overrun event flag of request multiplexer channel 0",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 0,
+                        },
+                    ),
+                    bit_size: 1,
+                    array: None,
+                    enumm: None,
+                },
+                Field {
+                    name: "soifc1",
+                    description: Some(
+                        "Clear bit for synchronization overrun event flag of request multiplexer channel 1",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 1,
+                        },
+                    ),
+                    bit_size: 1,
+                    array: None,
+                    enumm: None,
+                },
+                Field {
+                    name: "soifc2",
+                    description: Some(
+                        "Clear bit for synchronization overrun event flag of request multiplexer channel 2",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 2,
+                        },
+                    ),
+                    bit_size: 1,
+                    array: None,
+                    enumm: None,
+                },
+                Field {
+                    name: "soifc3",
+                    description: Some(
+                        "Clear bit for synchronization overrun event flag of request multiplexer channel 3",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 3,
+                        },
+                    ),
+                    bit_size: 1,
+                    array: None,
+                    enumm: None,
+                },
+                Field {
+                    name: "soifc4",
+                    description: Some(
+                        "Clear bit for synchronization overrun event flag of request multiplexer channel 4",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 4,
+                        },
+                    ),
+                    bit_size: 1,
+                    array: None,
+                    enumm: None,
+                },
+                Field {
+                    name: "soifc5",
+                    description: Some(
+                        "Clear bit for synchronization overrun event flag of request multiplexer channel 5",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 5,
+                        },
+                    ),
+                    bit_size: 1,
+                    array: None,
+                    enumm: None,
+                },
+                Field {
+                    name: "soifc6",
+                    description: Some(
+                        "Clear bit for synchronization overrun event flag of request multiplexer channel 6",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 6,
+                        },
+                    ),
+                    bit_size: 1,
+                    array: None,
+                    enumm: None,
+                },
+            ],
+        },
+        FieldSet {
+            name: "RmIntf",
+            extends: None,
+            description: Some(
+                "Request multiplexer channel interrupt flag register",
+            ),
+            bit_size: 32,
+            fields: &[
+                Field {
+                    name: "soif0",
+                    description: Some(
+                        "Synchronization overrun event flag of request multiplexer channel 0",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 0,
+                        },
+                    ),
+                    bit_size: 1,
+                    array: None,
+                    enumm: None,
+                },
+                Field {
+                    name: "soif1",
+                    description: Some(
+                        "Synchronization overrun event flag of request multiplexer channel 1",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 1,
+                        },
+                    ),
+                    bit_size: 1,
+                    array: None,
+                    enumm: None,
+                },
+                Field {
+                    name: "soif2",
+                    description: Some(
+                        "Synchronization overrun event flag of request multiplexer channel 2",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 2,
+                        },
+                    ),
+                    bit_size: 1,
+                    array: None,
+                    enumm: None,
+                },
+                Field {
+                    name: "soif3",
+                    description: Some(
+                        "Synchronization overrun event flag of request multiplexer channel 3",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 3,
+                        },
+                    ),
+                    bit_size: 1,
+                    array: None,
+                    enumm: None,
+                },
+                Field {
+                    name: "soif4",
+                    description: Some(
+                        "Synchronization overrun event flag of request multiplexer channel 4",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 4,
+                        },
+                    ),
+                    bit_size: 1,
+                    array: None,
+                    enumm: None,
+                },
+                Field {
+                    name: "soif5",
+                    description: Some(
+                        "Synchronization overrun event flag of request multiplexer channel 5",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 5,
+                        },
+                    ),
+                    bit_size: 1,
+                    array: None,
+                    enumm: None,
+                },
+                Field {
+                    name: "soif6",
+                    description: Some(
+                        "Synchronization overrun event flag of request multiplexer channel 6",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 6,
+                        },
+                    ),
+                    bit_size: 1,
+                    array: None,
+                    enumm: None,
+                },
+            ],
+        },
+    ],
+    enums: &[],
+};
+                

@@ -324,12 +324,12 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 8,
             variants: &[
                 EnumVariant {
-                    name: "Stm32wba5",
+                    name: "STM32WBA5",
                     description: Some("STM32WBA5xxx"),
                     value: 42,
                 },
                 EnumVariant {
-                    name: "Stm32wba6",
+                    name: "STM32WBA6",
                     description: Some("STM32WBA6xxx"),
                     value: 44,
                 },
@@ -341,44 +341,44 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 5,
             variants: &[
                 EnumVariant {
-                    name: "Ufbga121SmpsUsb",
-                    description: Some("UFBGA121 SMPS USB"),
-                    value: 15,
-                },
-                EnumVariant {
-                    name: "Ufbga121Usb",
-                    description: Some("UFBGA121 USB"),
-                    value: 7,
-                },
-                EnumVariant {
-                    name: "Ufqfpn48Smps",
-                    description: Some("UFQFPN48 SMPS"),
-                    value: 10,
-                },
-                EnumVariant {
-                    name: "Ufqfpn48SmpsUsb",
-                    description: Some("UFQFPN48 SMPS USB"),
-                    value: 11,
-                },
-                EnumVariant {
-                    name: "Ufqfpn48Usb",
+                    name: "UFQFPN48_USB",
                     description: Some("UFQFPN48 USB"),
                     value: 3,
                 },
                 EnumVariant {
-                    name: "Vfqfpn68SmpsUsb",
+                    name: "WLSCP88_USB",
+                    description: Some("WLSCP88 USB"),
+                    value: 5,
+                },
+                EnumVariant {
+                    name: "UFBGA121_USB",
+                    description: Some("UFBGA121 USB"),
+                    value: 7,
+                },
+                EnumVariant {
+                    name: "UFQFPN48_SMPS",
+                    description: Some("UFQFPN48 SMPS"),
+                    value: 10,
+                },
+                EnumVariant {
+                    name: "UFQFPN48_SMPS_USB",
+                    description: Some("UFQFPN48 SMPS USB"),
+                    value: 11,
+                },
+                EnumVariant {
+                    name: "VFQFPN68_SMPS_USB",
                     description: Some("VFQFPN68 SMPS USB"),
                     value: 12,
                 },
                 EnumVariant {
-                    name: "Wlscp88SmpsUsb",
+                    name: "WLSCP88_SMPS_USB",
                     description: Some("WLSCP88 SMPS USB"),
                     value: 13,
                 },
                 EnumVariant {
-                    name: "Wlscp88Usb",
-                    description: Some("WLSCP88 USB"),
-                    value: 5,
+                    name: "UFBGA121_SMPS_USB",
+                    description: Some("UFBGA121 SMPS USB"),
+                    value: 15,
                 },
             ],
         },
@@ -387,7 +387,7 @@ pub(crate) static REGISTERS: IR = IR {
             description: Some("IEEE company ID assignment"),
             bit_size: 24,
             variants: &[EnumVariant {
-                name: "Stmicroelectronics",
+                name: "STMICROELECTRONICS",
                 description: Some("STMicroelectronics"),
                 value: 32993,
             }],

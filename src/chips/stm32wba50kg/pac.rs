@@ -273,8 +273,6 @@ mod _vectors {
 }
 pub const DESIG: desig::Desig = unsafe { desig::Desig::from_ptr(0x0bf9_0500usize as _) };
 pub const UID: uid::Uid = unsafe { uid::Uid::from_ptr(0x0bf9_0700usize as _) };
-pub const TS_CAL1: tscal::Tscal = unsafe { tscal::Tscal::from_ptr(0x0bf9_0710usize as _) };
-pub const TS_CAL2: tscal::Tscal = unsafe { tscal::Tscal::from_ptr(0x0bf9_0742usize as _) };
 pub const VREFINTCAL: vrefintcal::Vrefintcal = unsafe { vrefintcal::Vrefintcal::from_ptr(0x0bf9_07a4usize as _) };
 pub const TIM2: timer::TimGp32 = unsafe { timer::TimGp32::from_ptr(0x4000_0000usize as _) };
 pub const WWDG: wwdg::Wwdg = unsafe { wwdg::Wwdg::from_ptr(0x4000_2c00usize as _) };
@@ -295,7 +293,7 @@ pub const GPIOH: gpio::Gpio = unsafe { gpio::Gpio::from_ptr(0x4202_1c00usize as 
 pub const AES: aes::Aes = unsafe { aes::Aes::from_ptr(0x420c_0000usize as _) };
 pub const HASH: hash::Hash = unsafe { hash::Hash::from_ptr(0x420c_0400usize as _) };
 pub const RNG: rng::Rng = unsafe { rng::Rng::from_ptr(0x420c_0800usize as _) };
-pub const HSEM: hsem::Hsem = unsafe { hsem::Hsem::from_ptr(0x420c_1c00usize as _) };
+pub const HSEM: *mut () = 0x420c_1c00usize as _;
 pub const PKA: pka::Pka = unsafe { pka::Pka::from_ptr(0x420c_2000usize as _) };
 pub const SYSCFG: syscfg::Syscfg = unsafe { syscfg::Syscfg::from_ptr(0x4600_0400usize as _) };
 pub const SPI3: spi::Spi = unsafe { spi::Spi::from_ptr(0x4600_2000usize as _) };
@@ -314,9 +312,9 @@ pub const DBGMCU: dbgmcu::Dbgmcu = unsafe { dbgmcu::Dbgmcu::from_ptr(0xe004_4000
 #[cfg(feature = "rt")]
 pub const NVIC_PRIO_BITS: u8 = 4;
 #[cfg(feature = "rt")]
-pub use Interrupt as interrupt;
-#[cfg(feature = "rt")]
 pub use cortex_m_rt::interrupt;
+#[cfg(feature = "rt")]
+pub use Interrupt as interrupt;
 #[path = "../../peripherals/adc_wba.rs"]
 pub mod adc;
 #[path = "../../peripherals/adccommon_v3.rs"]
@@ -339,8 +337,6 @@ pub mod gpdma;
 pub mod gpio;
 #[path = "../../peripherals/hash_v4.rs"]
 pub mod hash;
-#[path = "../../peripherals/hsem_wba.rs"]
-pub mod hsem;
 #[path = "../../peripherals/i2c_v2.rs"]
 pub mod i2c;
 #[path = "../../peripherals/icache_v1_4crr.rs"]
@@ -371,8 +367,6 @@ pub mod tamp;
 pub mod timer;
 #[path = "../../peripherals/tsc_v1.rs"]
 pub mod tsc;
-#[path = "../../peripherals/tscal_v1.rs"]
-pub mod tscal;
 #[path = "../../peripherals/uid_v1.rs"]
 pub mod uid;
 #[path = "../../peripherals/usart_v4.rs"]

@@ -569,8 +569,6 @@ mod _vectors {
     ];
 }
 pub const UID: uid::Uid = unsafe { uid::Uid::from_ptr(0x08ff_f800usize as _) };
-pub const TS_CAL1: tscal::Tscal = unsafe { tscal::Tscal::from_ptr(0x08ff_f814usize as _) };
-pub const TS_CAL2: tscal::Tscal = unsafe { tscal::Tscal::from_ptr(0x08ff_f818usize as _) };
 pub const TIM2: timer::TimGp32 = unsafe { timer::TimGp32::from_ptr(0x4000_0000usize as _) };
 pub const TIM3: timer::TimGp16 = unsafe { timer::TimGp16::from_ptr(0x4000_0400usize as _) };
 pub const TIM4: timer::TimGp16 = unsafe { timer::TimGp16::from_ptr(0x4000_0800usize as _) };
@@ -631,11 +629,6 @@ pub const ETH: eth::Eth = unsafe { eth::Eth::from_ptr(0x4002_8000usize as _) };
 pub const ICACHE: icache::Icache = unsafe { icache::Icache::from_ptr(0x4003_0400usize as _) };
 pub const DCACHE1: dcache::Dcache = unsafe { dcache::Dcache::from_ptr(0x4003_1400usize as _) };
 pub const GTZC: gtzc::Gtzc1Tzsc = unsafe { gtzc::Gtzc1Tzsc::from_ptr(0x4003_2400usize as _) };
-pub const GTZC_TZSC: gtzc::Gtzc1Tzsc = unsafe { gtzc::Gtzc1Tzsc::from_ptr(0x4003_2400usize as _) };
-pub const GTZC_TZIC: gtzc::Tzic = unsafe { gtzc::Tzic::from_ptr(0x4003_2800usize as _) };
-pub const GTZC_MPCBB1: gtzc::Mpcbb = unsafe { gtzc::Mpcbb::from_ptr(0x4003_2c00usize as _) };
-pub const GTZC_MPCBB2: gtzc::Mpcbb = unsafe { gtzc::Mpcbb::from_ptr(0x4003_3000usize as _) };
-pub const GTZC_MPCBB3: gtzc::Mpcbb = unsafe { gtzc::Mpcbb::from_ptr(0x4003_3400usize as _) };
 pub const GPIOA: gpio::Gpio = unsafe { gpio::Gpio::from_ptr(0x4202_0000usize as _) };
 pub const GPIOB: gpio::Gpio = unsafe { gpio::Gpio::from_ptr(0x4202_0400usize as _) };
 pub const GPIOC: gpio::Gpio = unsafe { gpio::Gpio::from_ptr(0x4202_0800usize as _) };
@@ -680,9 +673,9 @@ pub const OCTOSPI1: octospi::Octospi = unsafe { octospi::Octospi::from_ptr(0x470
 #[cfg(feature = "rt")]
 pub const NVIC_PRIO_BITS: u8 = 4;
 #[cfg(feature = "rt")]
-pub use Interrupt as interrupt;
-#[cfg(feature = "rt")]
 pub use cortex_m_rt::interrupt;
+#[cfg(feature = "rt")]
+pub use Interrupt as interrupt;
 #[path = "../../peripherals/adc_h5.rs"]
 pub mod adc;
 #[path = "../../peripherals/adccommon_h5.rs"]
@@ -767,8 +760,6 @@ pub mod syscfg;
 pub mod tamp;
 #[path = "../../peripherals/timer_v2.rs"]
 pub mod timer;
-#[path = "../../peripherals/tscal_v1.rs"]
-pub mod tscal;
 #[path = "../../peripherals/ucpd_h5.rs"]
 pub mod ucpd;
 #[path = "../../peripherals/uid_v1.rs"]

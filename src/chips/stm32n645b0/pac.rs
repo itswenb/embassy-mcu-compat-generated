@@ -805,19 +805,19 @@ mod _vectors {
         Vector { _handler: LTDC_UP_ERR },
     ];
 }
-pub const TIM2: timer::TimGp32 = unsafe { timer::TimGp32::from_ptr(0x4000_0000usize as _) };
-pub const TIM3: timer::TimGp16 = unsafe { timer::TimGp16::from_ptr(0x4000_0400usize as _) };
-pub const TIM4: timer::TimGp32 = unsafe { timer::TimGp32::from_ptr(0x4000_0800usize as _) };
-pub const TIM5: timer::TimGp32 = unsafe { timer::TimGp32::from_ptr(0x4000_0c00usize as _) };
-pub const TIM6: timer::TimBasic = unsafe { timer::TimBasic::from_ptr(0x4000_1000usize as _) };
-pub const TIM7: timer::TimBasic = unsafe { timer::TimBasic::from_ptr(0x4000_1400usize as _) };
-pub const TIM12: timer::Tim2ch = unsafe { timer::Tim2ch::from_ptr(0x4000_1800usize as _) };
-pub const TIM13: timer::Tim1ch = unsafe { timer::Tim1ch::from_ptr(0x4000_1c00usize as _) };
-pub const TIM14: timer::Tim1ch = unsafe { timer::Tim1ch::from_ptr(0x4000_2000usize as _) };
-pub const LPTIM1: lptim::Lptim = unsafe { lptim::Lptim::from_ptr(0x4000_2400usize as _) };
+pub const TIM2: *mut () = 0x4000_0000usize as _;
+pub const TIM3: *mut () = 0x4000_0400usize as _;
+pub const TIM4: *mut () = 0x4000_0800usize as _;
+pub const TIM5: *mut () = 0x4000_0c00usize as _;
+pub const TIM6: *mut () = 0x4000_1000usize as _;
+pub const TIM7: *mut () = 0x4000_1400usize as _;
+pub const TIM12: *mut () = 0x4000_1800usize as _;
+pub const TIM13: *mut () = 0x4000_1c00usize as _;
+pub const TIM14: *mut () = 0x4000_2000usize as _;
+pub const LPTIM1: *mut () = 0x4000_2400usize as _;
 pub const WWDG: wwdg::Wwdg = unsafe { wwdg::Wwdg::from_ptr(0x4000_2c00usize as _) };
-pub const TIM10: timer::Tim1ch = unsafe { timer::Tim1ch::from_ptr(0x4000_3000usize as _) };
-pub const TIM11: timer::Tim1ch = unsafe { timer::Tim1ch::from_ptr(0x4000_3400usize as _) };
+pub const TIM10: *mut () = 0x4000_3000usize as _;
+pub const TIM11: *mut () = 0x4000_3400usize as _;
 pub const SPI2: spi::Spi = unsafe { spi::Spi::from_ptr(0x4000_3800usize as _) };
 pub const SPI3: spi::Spi = unsafe { spi::Spi::from_ptr(0x4000_3c00usize as _) };
 pub const USART2: usart::Usart = unsafe { usart::Usart::from_ptr(0x4000_4400usize as _) };
@@ -827,39 +827,41 @@ pub const UART5: usart::Usart = unsafe { usart::Usart::from_ptr(0x4000_5000usize
 pub const I2C1: i2c::I2c = unsafe { i2c::I2c::from_ptr(0x4000_5400usize as _) };
 pub const I2C2: i2c::I2c = unsafe { i2c::I2c::from_ptr(0x4000_5800usize as _) };
 pub const I2C3: i2c::I2c = unsafe { i2c::I2c::from_ptr(0x4000_5c00usize as _) };
-pub const I3C1: i3c::I3c = unsafe { i3c::I3c::from_ptr(0x4000_6000usize as _) };
-pub const I3C2: i3c::I3c = unsafe { i3c::I3c::from_ptr(0x4000_6400usize as _) };
+pub const I3C1: *mut () = 0x4000_6000usize as _;
+pub const I3C2: *mut () = 0x4000_6400usize as _;
 pub const UART7: usart::Usart = unsafe { usart::Usart::from_ptr(0x4000_7800usize as _) };
 pub const UART8: usart::Usart = unsafe { usart::Usart::from_ptr(0x4000_7c00usize as _) };
 pub const MDIOS: mdios::Mdios = unsafe { mdios::Mdios::from_ptr(0x4000_9400usize as _) };
-pub const FDCAN1: can::Fdcan = unsafe { can::Fdcan::from_ptr(0x4000_a000usize as _) };
-pub const FDCAN2: can::Fdcan = unsafe { can::Fdcan::from_ptr(0x4000_a400usize as _) };
-pub const FDCANRAM: fdcanram::Fdcanram = unsafe { fdcanram::Fdcanram::from_ptr(0x4000_c000usize as _) };
-pub const FDCAN3: can::Fdcan = unsafe { can::Fdcan::from_ptr(0x4000_e800usize as _) };
+pub const FDCAN1: *mut () = 0x4000_a000usize as _;
+pub const FDCAN2: *mut () = 0x4000_a400usize as _;
+pub const FDCANRAM1: fdcanram::Fdcanram = unsafe { fdcanram::Fdcanram::from_ptr(0x4000_c000usize as _) };
+pub const FDCANRAM2: fdcanram::Fdcanram = unsafe { fdcanram::Fdcanram::from_ptr(0x4000_c350usize as _) };
+pub const FDCANRAM3: fdcanram::Fdcanram = unsafe { fdcanram::Fdcanram::from_ptr(0x4000_c6a0usize as _) };
+pub const FDCAN3: *mut () = 0x4000_e800usize as _;
 pub const UCPD1: ucpd::Ucpd = unsafe { ucpd::Ucpd::from_ptr(0x4000_fc00usize as _) };
 pub const GPDMA1: gpdma::Gpdma = unsafe { gpdma::Gpdma::from_ptr(0x4002_1000usize as _) };
-pub const ADC1: adc::Adc = unsafe { adc::Adc::from_ptr(0x4002_2000usize as _) };
-pub const ADC2: adc::Adc = unsafe { adc::Adc::from_ptr(0x4002_2100usize as _) };
-pub const ADC12_COMMON: adccommon::AdcCommon = unsafe { adccommon::AdcCommon::from_ptr(0x4002_2300usize as _) };
-pub const TIM1: timer::TimAdv = unsafe { timer::TimAdv::from_ptr(0x4200_0000usize as _) };
+pub const ADC1: *mut () = 0x4002_2000usize as _;
+pub const ADC2: *mut () = 0x4002_2100usize as _;
+pub const ADC12_COMMON: *mut () = 0x4002_2300usize as _;
+pub const TIM1: *mut () = 0x4200_0000usize as _;
 pub const USART1: usart::Usart = unsafe { usart::Usart::from_ptr(0x4200_1000usize as _) };
 pub const USART6: usart::Usart = unsafe { usart::Usart::from_ptr(0x4200_1400usize as _) };
 pub const UART9: usart::Usart = unsafe { usart::Usart::from_ptr(0x4200_1800usize as _) };
 pub const SPI1: spi::Spi = unsafe { spi::Spi::from_ptr(0x4200_3000usize as _) };
 pub const SPI4: spi::Spi = unsafe { spi::Spi::from_ptr(0x4200_3400usize as _) };
-pub const TIM18: timer::TimBasic = unsafe { timer::TimBasic::from_ptr(0x4200_3c00usize as _) };
-pub const TIM15: timer::Tim2chCmp = unsafe { timer::Tim2chCmp::from_ptr(0x4200_4000usize as _) };
-pub const TIM16: timer::Tim1chCmp = unsafe { timer::Tim1chCmp::from_ptr(0x4200_4400usize as _) };
-pub const TIM17: timer::Tim1chCmp = unsafe { timer::Tim1chCmp::from_ptr(0x4200_4800usize as _) };
+pub const TIM18: *mut () = 0x4200_3c00usize as _;
+pub const TIM15: *mut () = 0x4200_4000usize as _;
+pub const TIM16: *mut () = 0x4200_4400usize as _;
+pub const TIM17: *mut () = 0x4200_4800usize as _;
 pub const TIM9: timer::Tim2ch = unsafe { timer::Tim2ch::from_ptr(0x4200_4c00usize as _) };
 pub const SPI5: spi::Spi = unsafe { spi::Spi::from_ptr(0x4200_5000usize as _) };
-pub const SAI1: sai::Sai = unsafe { sai::Sai::from_ptr(0x4200_5800usize as _) };
-pub const SAI2: sai::Sai = unsafe { sai::Sai::from_ptr(0x4200_5c00usize as _) };
+pub const SAI1: *mut () = 0x4200_5800usize as _;
+pub const SAI2: *mut () = 0x4200_5c00usize as _;
 pub const RAMCFG: ramcfg::Ramcfg = unsafe { ramcfg::Ramcfg::from_ptr(0x4202_3000usize as _) };
-pub const MDF1: mdf::Mdf = unsafe { mdf::Mdf::from_ptr(0x4202_5000usize as _) };
-pub const ADF1: adf::Adf = unsafe { adf::Adf::from_ptr(0x4202_6000usize as _) };
+pub const MDF1: *mut () = 0x4202_5000usize as _;
+pub const ADF1: *mut () = 0x4202_6000usize as _;
 pub const DBGMCU: dbgmcu::Dbgmcu = unsafe { dbgmcu::Dbgmcu::from_ptr(0x4400_1000usize as _) };
-pub const RNG: rng::Rng = unsafe { rng::Rng::from_ptr(0x4402_0000usize as _) };
+pub const RNG: *mut () = 0x4402_0000usize as _;
 pub const HASH: hash::Hash = unsafe { hash::Hash::from_ptr(0x4402_0400usize as _) };
 pub const RIFSC: rifsc::Rifsc = unsafe { rifsc::Rifsc::from_ptr(0x4402_4000usize as _) };
 pub const RISAF1: risaf::Risaf = unsafe { risaf::Risaf::from_ptr(0x4402_6000usize as _) };
@@ -882,12 +884,12 @@ pub const RISAF23: risaf::Risaf = unsafe { risaf::Risaf::from_ptr(0x4403_7000usi
 pub const LPUART1: usart::Lpuart = unsafe { usart::Lpuart::from_ptr(0x4600_0c00usize as _) };
 pub const SPI6: spi::Spi = unsafe { spi::Spi::from_ptr(0x4600_1400usize as _) };
 pub const I2C4: i2c::I2c = unsafe { i2c::I2c::from_ptr(0x4600_1c00usize as _) };
-pub const LPTIM2: lptim::Lptim = unsafe { lptim::Lptim::from_ptr(0x4600_2400usize as _) };
-pub const LPTIM3: lptim::Lptim = unsafe { lptim::Lptim::from_ptr(0x4600_2800usize as _) };
-pub const LPTIM5: lptim::Lptim = unsafe { lptim::Lptim::from_ptr(0x4600_3000usize as _) };
-pub const VREFBUF: vrefbuf::Vrefbuf = unsafe { vrefbuf::Vrefbuf::from_ptr(0x4600_3c00usize as _) };
-pub const RTC: rtc::Rtc = unsafe { rtc::Rtc::from_ptr(0x4600_4000usize as _) };
-pub const TAMP: tamp::Tamp = unsafe { tamp::Tamp::from_ptr(0x4600_4400usize as _) };
+pub const LPTIM2: *mut () = 0x4600_2400usize as _;
+pub const LPTIM3: *mut () = 0x4600_2800usize as _;
+pub const LPTIM5: *mut () = 0x4600_3000usize as _;
+pub const VREFBUF: *mut () = 0x4600_3c00usize as _;
+pub const RTC: *mut () = 0x4600_4000usize as _;
+pub const TAMP: *mut () = 0x4600_4400usize as _;
 pub const IWDG: iwdg::Iwdg = unsafe { iwdg::Iwdg::from_ptr(0x4600_4800usize as _) };
 pub const SYSCFG: syscfg::Syscfg = unsafe { syscfg::Syscfg::from_ptr(0x4600_8000usize as _) };
 pub const BSEC: bsec::Bsec = unsafe { bsec::Bsec::from_ptr(0x4600_9000usize as _) };
@@ -910,104 +912,72 @@ pub const CRC: crc::Crc = unsafe { crc::Crc::from_ptr(0x4602_4c00usize as _) };
 pub const EXTI: exti::Exti = unsafe { exti::Exti::from_ptr(0x4602_5000usize as _) };
 pub const RCC: rcc::Rcc = unsafe { rcc::Rcc::from_ptr(0x4602_8000usize as _) };
 pub const LTDC: ltdc::Ltdc = unsafe { ltdc::Ltdc::from_ptr(0x4800_1000usize as _) };
-pub const DCMIPP: dcmipp::Dcmipp = unsafe { dcmipp::Dcmipp::from_ptr(0x4800_2000usize as _) };
-pub const GFXTIM: gfxtim::Gfxtim = unsafe { gfxtim::Gfxtim::from_ptr(0x4800_4000usize as _) };
-pub const VENC: venc::Venc = unsafe { venc::Venc::from_ptr(0x4800_5000usize as _) };
-pub const CSI: csi::Csi = unsafe { csi::Csi::from_ptr(0x4800_6000usize as _) };
+pub const DCMIPP: *mut () = 0x4800_2000usize as _;
+pub const GFXTIM: *mut () = 0x4800_4000usize as _;
+pub const VENC: *mut () = 0x4800_5000usize as _;
+pub const CSI: *mut () = 0x4800_6000usize as _;
 pub const HPDMA1: gpdma::Gpdma = unsafe { gpdma::Gpdma::from_ptr(0x4802_0000usize as _) };
 pub const DMA2D: dma2d::Dma2d = unsafe { dma2d::Dma2d::from_ptr(0x4802_1000usize as _) };
 pub const JPEG: jpeg::Jpeg = unsafe { jpeg::Jpeg::from_ptr(0x4802_3000usize as _) };
 pub const FMC: fmc::Fmc = unsafe { fmc::Fmc::from_ptr(0x4802_4000usize as _) };
 pub const XSPI1: xspi::Xspi = unsafe { xspi::Xspi::from_ptr(0x4802_5000usize as _) };
-pub const PSSI: pssi::Pssi = unsafe { pssi::Pssi::from_ptr(0x4802_6400usize as _) };
-pub const DLYB_SDMMC2: dlybsd::Dlybsd = unsafe { dlybsd::Dlybsd::from_ptr(0x4802_6c00usize as _) };
-pub const SDMMC1: sdmmc::Sdmmc = unsafe { sdmmc::Sdmmc::from_ptr(0x4802_7000usize as _) };
-pub const DLYB_SDMMC1: dlybsd::Dlybsd = unsafe { dlybsd::Dlybsd::from_ptr(0x4802_8000usize as _) };
+pub const PSSI: *mut () = 0x4802_6400usize as _;
+pub const SDMMC1: *mut () = 0x4802_7000usize as _;
 pub const DCMI: dcmi::Dcmi = unsafe { dcmi::Dcmi::from_ptr(0x4802_8400usize as _) };
 pub const XSPI2: xspi::Xspi = unsafe { xspi::Xspi::from_ptr(0x4802_a000usize as _) };
 pub const XSPIM: xspim::Xspim = unsafe { xspim::Xspim::from_ptr(0x4802_b400usize as _) };
 pub const XSPI3: xspi::Xspi = unsafe { xspi::Xspi::from_ptr(0x4802_d000usize as _) };
-pub const GFXMMU: gfxmmu::Gfxmmu = unsafe { gfxmmu::Gfxmmu::from_ptr(0x4803_0000usize as _) };
-pub const GPU2D: gpu2d::Gpu2d = unsafe { gpu2d::Gpu2d::from_ptr(0x4803_4000usize as _) };
+pub const GFXMMU: *mut () = 0x4803_0000usize as _;
+pub const GPU2D: *mut () = 0x4803_4000usize as _;
 pub const ICACHE: icache::Icache = unsafe { icache::Icache::from_ptr(0x4803_5000usize as _) };
-pub const ETH1: eth::Eth = unsafe { eth::Eth::from_ptr(0x4803_6000usize as _) };
+pub const ETH1: *mut () = 0x4803_6000usize as _;
 pub const USB1_OTG_HS: otg::Otg = unsafe { otg::Otg::from_ptr(0x4804_0000usize as _) };
 pub const USB2_OTG_HS: otg::Otg = unsafe { otg::Otg::from_ptr(0x4808_0000usize as _) };
 #[doc = r" Number available in the NVIC for configuring priority"]
 #[cfg(feature = "rt")]
 pub const NVIC_PRIO_BITS: u8 = 4;
 #[cfg(feature = "rt")]
-pub use Interrupt as interrupt;
-#[cfg(feature = "rt")]
 pub use cortex_m_rt::interrupt;
-#[path = "../../peripherals/adc_n6.rs"]
-pub mod adc;
-#[path = "../../peripherals/adccommon_n6.rs"]
-pub mod adccommon;
-#[path = "../../peripherals/adf_v1.rs"]
-pub mod adf;
+#[cfg(feature = "rt")]
+pub use Interrupt as interrupt;
 #[path = "../../peripherals/bsec_v2.rs"]
 pub mod bsec;
-#[path = "../../peripherals/can_fdcan_v2.rs"]
-pub mod can;
 #[path = "../../peripherals/crc_v3.rs"]
 pub mod crc;
-#[path = "../../peripherals/csi_v1.rs"]
-pub mod csi;
 #[path = "../../peripherals/dbgmcu_n6.rs"]
 pub mod dbgmcu;
 #[path = "../../peripherals/dcmi_v1.rs"]
 pub mod dcmi;
-#[path = "../../peripherals/dcmipp_v2.rs"]
-pub mod dcmipp;
-#[path = "../../peripherals/dlybsd_v1.rs"]
-pub mod dlybsd;
 #[path = "../../peripherals/dma2d_v1.rs"]
 pub mod dma2d;
 #[path = "../../peripherals/dts_v1.rs"]
 pub mod dts;
-#[path = "../../peripherals/eth_v2a.rs"]
-pub mod eth;
 #[path = "../../peripherals/exti_n6.rs"]
 pub mod exti;
-#[path = "../../peripherals/fdcanram_v2.rs"]
+#[path = "../../peripherals/fdcanram_v1.rs"]
 pub mod fdcanram;
 #[path = "../../peripherals/fmc_n6.rs"]
 pub mod fmc;
-#[path = "../../peripherals/gfxmmu_n6.rs"]
-pub mod gfxmmu;
-#[path = "../../peripherals/gfxtim_v1.rs"]
-pub mod gfxtim;
 #[path = "../../peripherals/gpdma_v1.rs"]
 pub mod gpdma;
 #[path = "../../peripherals/gpio_v2.rs"]
 pub mod gpio;
-#[path = "../../peripherals/gpu2d_v1.rs"]
-pub mod gpu2d;
 #[path = "../../peripherals/hash_v3.rs"]
 pub mod hash;
 #[path = "../../peripherals/i2c_v3.rs"]
 pub mod i2c;
-#[path = "../../peripherals/i3c_v1.rs"]
-pub mod i3c;
 #[path = "../../peripherals/icache_v1_0crr.rs"]
 pub mod icache;
 #[path = "../../peripherals/iwdg_v3.rs"]
 pub mod iwdg;
 #[path = "../../peripherals/jpeg_v1.rs"]
 pub mod jpeg;
-#[path = "../../peripherals/lptim_n6.rs"]
-pub mod lptim;
 #[path = "../../peripherals/ltdc_v1_3.rs"]
 pub mod ltdc;
-#[path = "../../peripherals/mdf_n6.rs"]
-pub mod mdf;
 #[path = "../../peripherals/mdios_v1.rs"]
 pub mod mdios;
 #[path = "../../peripherals/otg_v1.rs"]
 pub mod otg;
-#[path = "../../peripherals/pssi_v1.rs"]
-pub mod pssi;
 #[path = "../../peripherals/pwr_n6.rs"]
 pub mod pwr;
 #[path = "../../peripherals/ramcfg_h5.rs"]
@@ -1018,21 +988,11 @@ pub mod rcc;
 pub mod rifsc;
 #[path = "../../peripherals/risaf_n6.rs"]
 pub mod risaf;
-#[path = "../../peripherals/rng_v3.rs"]
-pub mod rng;
-#[path = "../../peripherals/rtc_v3_u5.rs"]
-pub mod rtc;
-#[path = "../../peripherals/sai_n6.rs"]
-pub mod sai;
-#[path = "../../peripherals/sdmmc_v3.rs"]
-pub mod sdmmc;
 #[path = "../../peripherals/spi_v5.rs"]
 pub mod spi;
 #[path = "../../peripherals/syscfg_n6.rs"]
 pub mod syscfg;
-#[path = "../../peripherals/tamp_n6.rs"]
-pub mod tamp;
-#[path = "../../peripherals/timer_v2.rs"]
+#[path = "../../peripherals/timer_v3.rs"]
 pub mod timer;
 #[path = "../../peripherals/ucpd_v1.rs"]
 pub mod ucpd;
@@ -1040,10 +1000,6 @@ pub mod ucpd;
 pub mod uid;
 #[path = "../../peripherals/usart_v4.rs"]
 pub mod usart;
-#[path = "../../peripherals/venc_v1.rs"]
-pub mod venc;
-#[path = "../../peripherals/vrefbuf_v1.rs"]
-pub mod vrefbuf;
 #[path = "../../peripherals/wwdg_v2.rs"]
 pub mod wwdg;
 #[path = "../../peripherals/xspi_v1.rs"]

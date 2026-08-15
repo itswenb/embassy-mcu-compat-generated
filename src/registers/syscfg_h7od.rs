@@ -886,12 +886,12 @@ pub(crate) static REGISTERS: IR = IR {
         bit_size: 3,
         variants: &[
             EnumVariant {
-                name: "MiiGmii",
+                name: "MII_GMII",
                 description: Some("GMII or MII"),
                 value: 0,
             },
             EnumVariant {
-                name: "Rmii",
+                name: "RMII",
                 description: Some("RMII"),
                 value: 4,
             },

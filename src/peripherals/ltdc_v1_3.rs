@@ -22,127 +22,127 @@ impl Layer {
     #[doc = "Layerx Configuration 0 Register."]
     #[inline(always)]
     pub const fn c0r(self) -> crate::common::Reg<regs::C0r, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0usize) as _) }
     }
     #[doc = "Layerx Configuration 1 Register."]
     #[inline(always)]
     pub const fn c1r(self) -> crate::common::Reg<regs::C1r, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x04usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x04usize) as _) }
     }
     #[doc = "Layerx Reload Control Register."]
     #[inline(always)]
     pub const fn rcr(self) -> crate::common::Reg<regs::Rcr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x08usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x08usize) as _) }
     }
     #[doc = "Layerx Control Register."]
     #[inline(always)]
     pub const fn cr(self) -> crate::common::Reg<regs::Cr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0cusize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0cusize) as _) }
     }
     #[doc = "Layerx Window Horizontal Position Configuration Register."]
     #[inline(always)]
     pub const fn whpcr(self) -> crate::common::Reg<regs::Whpcr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x10usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x10usize) as _) }
     }
     #[doc = "Layerx Window Vertical Position Configuration Register."]
     #[inline(always)]
     pub const fn wvpcr(self) -> crate::common::Reg<regs::Wvpcr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x14usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x14usize) as _) }
     }
     #[doc = "Layerx Color Keying Configuration Register."]
     #[inline(always)]
     pub const fn ckcr(self) -> crate::common::Reg<regs::Ckcr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x18usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x18usize) as _) }
     }
     #[doc = "Layerx Pixel Format Configuration Register."]
     #[inline(always)]
     pub const fn pfcr(self) -> crate::common::Reg<regs::Pfcr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x1cusize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x1cusize) as _) }
     }
     #[doc = "Layerx Constant Alpha Configuration Register."]
     #[inline(always)]
     pub const fn cacr(self) -> crate::common::Reg<regs::Cacr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x20usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x20usize) as _) }
     }
     #[doc = "Layerx Default Color Configuration Register."]
     #[inline(always)]
     pub const fn dccr(self) -> crate::common::Reg<regs::Dccr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x24usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x24usize) as _) }
     }
     #[doc = "Layerx Blending Factors Configuration Register."]
     #[inline(always)]
     pub const fn bfcr(self) -> crate::common::Reg<regs::Bfcr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x28usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x28usize) as _) }
     }
     #[doc = "Layerx Burst Length Configuration Register."]
     #[inline(always)]
     pub const fn blcr(self) -> crate::common::Reg<regs::Blcr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x2cusize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x2cusize) as _) }
     }
     #[doc = "Layerx Planar Configuration Register."]
     #[inline(always)]
     pub const fn pcr(self) -> crate::common::Reg<regs::Pcr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x30usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x30usize) as _) }
     }
     #[doc = "Layerx Color Frame Buffer Address Register."]
     #[inline(always)]
     pub const fn cfbar(self) -> crate::common::Reg<regs::Cfbar, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x34usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x34usize) as _) }
     }
     #[doc = "Layerx Color Frame Buffer Length Register."]
     #[inline(always)]
     pub const fn cfblr(self) -> crate::common::Reg<regs::Cfblr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x38usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x38usize) as _) }
     }
     #[doc = "Layerx Color Frame Buffer Line Number Register."]
     #[inline(always)]
     pub const fn cfblnr(self) -> crate::common::Reg<regs::Cfblnr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x3cusize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x3cusize) as _) }
     }
     #[doc = "Layer1 Auxiliary Frame Buffer Address 0 Register."]
     #[inline(always)]
     pub const fn afba0r(self) -> crate::common::Reg<regs::Afba0r, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x40usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x40usize) as _) }
     }
     #[doc = "Layer1 Auxiliary Frame Buffer Address 1 Register."]
     #[inline(always)]
     pub const fn afba1r(self) -> crate::common::Reg<regs::Afba1r, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x44usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x44usize) as _) }
     }
     #[doc = "Layer1 Auxiliary Frame Buffer Length Register."]
     #[inline(always)]
     pub const fn afblr(self) -> crate::common::Reg<regs::Afblr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x48usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x48usize) as _) }
     }
     #[doc = "Layer1 Auxiliary Frame Buffer Line Number Register."]
     #[inline(always)]
     pub const fn afblnr(self) -> crate::common::Reg<regs::Afblnr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x4cusize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x4cusize) as _) }
     }
     #[doc = "Layerx Clut Write Register."]
     #[inline(always)]
     pub const fn clutwr(self) -> crate::common::Reg<regs::Clutwr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x50usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x50usize) as _) }
     }
     #[doc = "Layerx Conversion Ycbcr Rgb 0 Register."]
     #[inline(always)]
     pub const fn cyr0r(self) -> crate::common::Reg<regs::Cyr0r, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x6cusize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x6cusize) as _) }
     }
     #[doc = "Layerx Conversion Ycbcr Rgb 1 Register."]
     #[inline(always)]
     pub const fn cyr1r(self) -> crate::common::Reg<regs::Cyr1r, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x70usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x70usize) as _) }
     }
     #[doc = "Layerx Flexible Pixel Format 0 Register."]
     #[inline(always)]
     pub const fn fpf0r(self) -> crate::common::Reg<regs::Fpf0r, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x74usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x74usize) as _) }
     }
     #[doc = "Layerx Flexible Pixel Format 1 Register."]
     #[inline(always)]
     pub const fn fpf1r(self) -> crate::common::Reg<regs::Fpf1r, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x78usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x78usize) as _) }
     }
 }
 #[doc = "LCD-TFT Controller"]
@@ -164,128 +164,128 @@ impl Ltdc {
     #[doc = "Ltdc Synchronization Size Configuration Register."]
     #[inline(always)]
     pub const fn sscr(self) -> crate::common::Reg<regs::Sscr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x08usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x08usize) as _) }
     }
     #[doc = "Ltdc Back Porch Configuration Register."]
     #[inline(always)]
     pub const fn bpcr(self) -> crate::common::Reg<regs::Bpcr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0cusize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0cusize) as _) }
     }
     #[doc = "Ltdc Active Width Configuration Register."]
     #[inline(always)]
     pub const fn awcr(self) -> crate::common::Reg<regs::Awcr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x10usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x10usize) as _) }
     }
     #[doc = "Ltdc Total Width Configuration Register."]
     #[inline(always)]
     pub const fn twcr(self) -> crate::common::Reg<regs::Twcr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x14usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x14usize) as _) }
     }
     #[doc = "Ltdc Global Control Register."]
     #[inline(always)]
     pub const fn gcr(self) -> crate::common::Reg<regs::Gcr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x18usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x18usize) as _) }
     }
     #[doc = "Ltdc Global Configuration 1 Register."]
     #[inline(always)]
     pub const fn gc1r(self) -> crate::common::Reg<regs::Gc1r, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x1cusize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x1cusize) as _) }
     }
     #[doc = "Ltdc Global Configuration 2 Register."]
     #[inline(always)]
     pub const fn gc2r(self) -> crate::common::Reg<regs::Gc2r, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x20usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x20usize) as _) }
     }
     #[doc = "Ltdc Shadow Reload Configuration Register."]
     #[inline(always)]
     pub const fn srcr(self) -> crate::common::Reg<regs::Srcr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x24usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x24usize) as _) }
     }
     #[doc = "Ltdc Gamma Correction Configuration Register."]
     #[inline(always)]
     pub const fn gccr(self) -> crate::common::Reg<regs::Gccr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x28usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x28usize) as _) }
     }
     #[doc = "Ltdc Background Color Configuration Register."]
     #[inline(always)]
     pub const fn bccr(self) -> crate::common::Reg<regs::Bccr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x2cusize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x2cusize) as _) }
     }
     #[doc = "Ltdc Interrupt Enable Register."]
     #[inline(always)]
     pub const fn ier(self) -> crate::common::Reg<regs::Ier, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x34usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x34usize) as _) }
     }
     #[doc = "Ltdc Interrupt Status Register."]
     #[inline(always)]
     pub const fn isr(self) -> crate::common::Reg<regs::Isr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x38usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x38usize) as _) }
     }
     #[doc = "Ltdc Interrupt Clear Register."]
     #[inline(always)]
     pub const fn icr(self) -> crate::common::Reg<regs::Icr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x3cusize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x3cusize) as _) }
     }
     #[doc = "Line Interrupt Position Configuration Register."]
     #[inline(always)]
     pub const fn lipcr(self) -> crate::common::Reg<regs::Lipcr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x40usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x40usize) as _) }
     }
     #[doc = "Ltdc Current Position Status Register."]
     #[inline(always)]
     pub const fn cpsr(self) -> crate::common::Reg<regs::Cpsr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x44usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x44usize) as _) }
     }
     #[doc = "Ltdc Current Display Status Register."]
     #[inline(always)]
     pub const fn cdsr(self) -> crate::common::Reg<regs::Cdsr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x48usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x48usize) as _) }
     }
     #[doc = "Ltdc External Display Control Register."]
     #[inline(always)]
     pub const fn edcr(self) -> crate::common::Reg<regs::Edcr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x60usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x60usize) as _) }
     }
     #[doc = "Ltdc Interrupt Enable Register 2."]
     #[inline(always)]
     pub const fn ier2(self) -> crate::common::Reg<regs::Ier2, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x64usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x64usize) as _) }
     }
     #[doc = "Ltdc Interrupt Status Register 2."]
     #[inline(always)]
     pub const fn isr2(self) -> crate::common::Reg<regs::Isr2, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x68usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x68usize) as _) }
     }
     #[doc = "Ltdc Interrupt Clear Register 2."]
     #[inline(always)]
     pub const fn icr2(self) -> crate::common::Reg<regs::Icr2, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x6cusize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x6cusize) as _) }
     }
     #[doc = "Line Interrupt Position Configuration Register 2."]
     #[inline(always)]
     pub const fn lipcr2(self) -> crate::common::Reg<regs::Lipcr2, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x70usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x70usize) as _) }
     }
     #[doc = "Ltdc Expected Crc Register."]
     #[inline(always)]
     pub const fn ecrcr(self) -> crate::common::Reg<regs::Ecrcr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x78usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x78usize) as _) }
     }
     #[doc = "Ltdc Computed Crc Register."]
     #[inline(always)]
     pub const fn ccrcr(self) -> crate::common::Reg<regs::Ccrcr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x7cusize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x7cusize) as _) }
     }
     #[doc = "Ltdc Fifo Underrun Threshold Register."]
     #[inline(always)]
     pub const fn futr(self) -> crate::common::Reg<regs::Futr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x90usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x90usize) as _) }
     }
     #[doc = "Cluster Layer%S"]
     #[inline(always)]
     pub const fn layer(self, n: usize) -> Layer {
         assert!(n < 2usize);
-        unsafe { Layer::from_ptr(self.ptr.wrapping_add(0x0100usize + n * 256usize) as _) }
+        unsafe { Layer::from_ptr(self.ptr.add(0x0100usize + n * 256usize) as _) }
     }
 }
 pub mod regs {
@@ -295,7 +295,6 @@ pub mod regs {
     pub struct Afba0r(pub u32);
     impl Afba0r {
         #[doc = "Frame Buffer Start Address."]
-        #[must_use]
         #[inline(always)]
         pub const fn afbadd0(&self) -> u32 {
             let val = (self.0 >> 0usize) & 0xffff_ffff;
@@ -303,7 +302,7 @@ pub mod regs {
         }
         #[doc = "Frame Buffer Start Address."]
         #[inline(always)]
-        pub const fn set_afbadd0(&mut self, val: u32) {
+        pub fn set_afbadd0(&mut self, val: u32) {
             self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
         }
     }
@@ -330,7 +329,6 @@ pub mod regs {
     pub struct Afba1r(pub u32);
     impl Afba1r {
         #[doc = "Auxiliary Frame Buffer Start Address."]
-        #[must_use]
         #[inline(always)]
         pub const fn afbadd1(&self) -> u32 {
             let val = (self.0 >> 0usize) & 0xffff_ffff;
@@ -338,7 +336,7 @@ pub mod regs {
         }
         #[doc = "Auxiliary Frame Buffer Start Address."]
         #[inline(always)]
-        pub const fn set_afbadd1(&mut self, val: u32) {
+        pub fn set_afbadd1(&mut self, val: u32) {
             self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
         }
     }
@@ -365,7 +363,6 @@ pub mod regs {
     pub struct Afblnr(pub u32);
     impl Afblnr {
         #[doc = "Auxiliary Frame Buffer Line Number."]
-        #[must_use]
         #[inline(always)]
         pub const fn afblnbr(&self) -> u16 {
             let val = (self.0 >> 0usize) & 0xffff;
@@ -373,7 +370,7 @@ pub mod regs {
         }
         #[doc = "Auxiliary Frame Buffer Line Number."]
         #[inline(always)]
-        pub const fn set_afblnbr(&mut self, val: u16) {
+        pub fn set_afblnbr(&mut self, val: u16) {
             self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
         }
     }
@@ -400,7 +397,6 @@ pub mod regs {
     pub struct Afblr(pub u32);
     impl Afblr {
         #[doc = "Auxiliary Frame Buffer Line Length."]
-        #[must_use]
         #[inline(always)]
         pub const fn afbll(&self) -> u16 {
             let val = (self.0 >> 0usize) & 0xffff;
@@ -408,11 +404,10 @@ pub mod regs {
         }
         #[doc = "Auxiliary Frame Buffer Line Length."]
         #[inline(always)]
-        pub const fn set_afbll(&mut self, val: u16) {
+        pub fn set_afbll(&mut self, val: u16) {
             self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
         }
         #[doc = "Auxiliary Frame Buffer Pitch In Bytes."]
-        #[must_use]
         #[inline(always)]
         pub const fn afbp(&self) -> u16 {
             let val = (self.0 >> 16usize) & 0xffff;
@@ -420,7 +415,7 @@ pub mod regs {
         }
         #[doc = "Auxiliary Frame Buffer Pitch In Bytes."]
         #[inline(always)]
-        pub const fn set_afbp(&mut self, val: u16) {
+        pub fn set_afbp(&mut self, val: u16) {
             self.0 = (self.0 & !(0xffff << 16usize)) | (((val as u32) & 0xffff) << 16usize);
         }
     }
@@ -455,7 +450,6 @@ pub mod regs {
     pub struct Awcr(pub u32);
     impl Awcr {
         #[doc = "Accumulated Active Height (In Units Of Horizontal Scan Line)."]
-        #[must_use]
         #[inline(always)]
         pub const fn aah(&self) -> u16 {
             let val = (self.0 >> 0usize) & 0xffff;
@@ -463,11 +457,10 @@ pub mod regs {
         }
         #[doc = "Accumulated Active Height (In Units Of Horizontal Scan Line)."]
         #[inline(always)]
-        pub const fn set_aah(&mut self, val: u16) {
+        pub fn set_aah(&mut self, val: u16) {
             self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
         }
         #[doc = "Accumulated Active Width (In Units Of Pixel Clock Period)."]
-        #[must_use]
         #[inline(always)]
         pub const fn aaw(&self) -> u16 {
             let val = (self.0 >> 16usize) & 0xffff;
@@ -475,7 +468,7 @@ pub mod regs {
         }
         #[doc = "Accumulated Active Width (In Units Of Pixel Clock Period)."]
         #[inline(always)]
-        pub const fn set_aaw(&mut self, val: u16) {
+        pub fn set_aaw(&mut self, val: u16) {
             self.0 = (self.0 & !(0xffff << 16usize)) | (((val as u32) & 0xffff) << 16usize);
         }
     }
@@ -505,7 +498,6 @@ pub mod regs {
     pub struct Bccr(pub u32);
     impl Bccr {
         #[doc = "Background Color Blue Value."]
-        #[must_use]
         #[inline(always)]
         pub const fn bcblue(&self) -> u8 {
             let val = (self.0 >> 0usize) & 0xff;
@@ -513,11 +505,10 @@ pub mod regs {
         }
         #[doc = "Background Color Blue Value."]
         #[inline(always)]
-        pub const fn set_bcblue(&mut self, val: u8) {
+        pub fn set_bcblue(&mut self, val: u8) {
             self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
         }
         #[doc = "Background Color Green Value."]
-        #[must_use]
         #[inline(always)]
         pub const fn bcgreen(&self) -> u8 {
             let val = (self.0 >> 8usize) & 0xff;
@@ -525,11 +516,10 @@ pub mod regs {
         }
         #[doc = "Background Color Green Value."]
         #[inline(always)]
-        pub const fn set_bcgreen(&mut self, val: u8) {
+        pub fn set_bcgreen(&mut self, val: u8) {
             self.0 = (self.0 & !(0xff << 8usize)) | (((val as u32) & 0xff) << 8usize);
         }
         #[doc = "Background Color Red Value."]
-        #[must_use]
         #[inline(always)]
         pub const fn bcred(&self) -> u8 {
             let val = (self.0 >> 16usize) & 0xff;
@@ -537,7 +527,7 @@ pub mod regs {
         }
         #[doc = "Background Color Red Value."]
         #[inline(always)]
-        pub const fn set_bcred(&mut self, val: u8) {
+        pub fn set_bcred(&mut self, val: u8) {
             self.0 = (self.0 & !(0xff << 16usize)) | (((val as u32) & 0xff) << 16usize);
         }
     }
@@ -574,7 +564,6 @@ pub mod regs {
     pub struct Bfcr(pub u32);
     impl Bfcr {
         #[doc = "Blending Factor 2."]
-        #[must_use]
         #[inline(always)]
         pub const fn bf2(&self) -> super::vals::Bf2 {
             let val = (self.0 >> 0usize) & 0x07;
@@ -582,11 +571,10 @@ pub mod regs {
         }
         #[doc = "Blending Factor 2."]
         #[inline(always)]
-        pub const fn set_bf2(&mut self, val: super::vals::Bf2) {
+        pub fn set_bf2(&mut self, val: super::vals::Bf2) {
             self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
         }
         #[doc = "Blending Factor 1."]
-        #[must_use]
         #[inline(always)]
         pub const fn bf1(&self) -> super::vals::Bf1 {
             let val = (self.0 >> 8usize) & 0x07;
@@ -594,11 +582,10 @@ pub mod regs {
         }
         #[doc = "Blending Factor 1."]
         #[inline(always)]
-        pub const fn set_bf1(&mut self, val: super::vals::Bf1) {
+        pub fn set_bf1(&mut self, val: super::vals::Bf1) {
             self.0 = (self.0 & !(0x07 << 8usize)) | (((val.to_bits() as u32) & 0x07) << 8usize);
         }
         #[doc = "Blending Order."]
-        #[must_use]
         #[inline(always)]
         pub const fn bor(&self) -> super::vals::Bor {
             let val = (self.0 >> 16usize) & 0x01;
@@ -606,7 +593,7 @@ pub mod regs {
         }
         #[doc = "Blending Order."]
         #[inline(always)]
-        pub const fn set_bor(&mut self, val: super::vals::Bor) {
+        pub fn set_bor(&mut self, val: super::vals::Bor) {
             self.0 = (self.0 & !(0x01 << 16usize)) | (((val.to_bits() as u32) & 0x01) << 16usize);
         }
     }
@@ -643,7 +630,6 @@ pub mod regs {
     pub struct Blcr(pub u32);
     impl Blcr {
         #[doc = "Burst Length."]
-        #[must_use]
         #[inline(always)]
         pub const fn bl(&self) -> super::vals::Bl {
             let val = (self.0 >> 0usize) & 0xff;
@@ -651,7 +637,7 @@ pub mod regs {
         }
         #[doc = "Burst Length."]
         #[inline(always)]
-        pub const fn set_bl(&mut self, val: super::vals::Bl) {
+        pub fn set_bl(&mut self, val: super::vals::Bl) {
             self.0 = (self.0 & !(0xff << 0usize)) | (((val.to_bits() as u32) & 0xff) << 0usize);
         }
     }
@@ -678,7 +664,6 @@ pub mod regs {
     pub struct Bpcr(pub u32);
     impl Bpcr {
         #[doc = "Accumulated Vertical Back Porch (In Units Of Horizontal Scan Line)."]
-        #[must_use]
         #[inline(always)]
         pub const fn avbp(&self) -> u16 {
             let val = (self.0 >> 0usize) & 0xffff;
@@ -686,11 +671,10 @@ pub mod regs {
         }
         #[doc = "Accumulated Vertical Back Porch (In Units Of Horizontal Scan Line)."]
         #[inline(always)]
-        pub const fn set_avbp(&mut self, val: u16) {
+        pub fn set_avbp(&mut self, val: u16) {
             self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
         }
         #[doc = "Accumulated Horizontal Back Porch (In Units Of Pixel Clock Period)."]
-        #[must_use]
         #[inline(always)]
         pub const fn ahbp(&self) -> u16 {
             let val = (self.0 >> 16usize) & 0xffff;
@@ -698,7 +682,7 @@ pub mod regs {
         }
         #[doc = "Accumulated Horizontal Back Porch (In Units Of Pixel Clock Period)."]
         #[inline(always)]
-        pub const fn set_ahbp(&mut self, val: u16) {
+        pub fn set_ahbp(&mut self, val: u16) {
             self.0 = (self.0 & !(0xffff << 16usize)) | (((val as u32) & 0xffff) << 16usize);
         }
     }
@@ -728,7 +712,6 @@ pub mod regs {
     pub struct C0r(pub u32);
     impl C0r {
         #[doc = "Color Key Transparency Ability."]
-        #[must_use]
         #[inline(always)]
         pub const fn ckta(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -736,11 +719,10 @@ pub mod regs {
         }
         #[doc = "Color Key Transparency Ability."]
         #[inline(always)]
-        pub const fn set_ckta(&mut self, val: bool) {
+        pub fn set_ckta(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "Color Frame Buffer Duplication Ability."]
-        #[must_use]
         #[inline(always)]
         pub const fn cfbda(&self) -> bool {
             let val = (self.0 >> 1usize) & 0x01;
@@ -748,11 +730,10 @@ pub mod regs {
         }
         #[doc = "Color Frame Buffer Duplication Ability."]
         #[inline(always)]
-        pub const fn set_cfbda(&mut self, val: bool) {
+        pub fn set_cfbda(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
         }
         #[doc = "Color Frame Buffer Pitch Ability."]
-        #[must_use]
         #[inline(always)]
         pub const fn cfbpa(&self) -> bool {
             let val = (self.0 >> 2usize) & 0x01;
@@ -760,11 +741,10 @@ pub mod regs {
         }
         #[doc = "Color Frame Buffer Pitch Ability."]
         #[inline(always)]
-        pub const fn set_cfbpa(&mut self, val: bool) {
+        pub fn set_cfbpa(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
         }
         #[doc = "Alpha Plane Ability."]
-        #[must_use]
         #[inline(always)]
         pub const fn apa(&self) -> bool {
             let val = (self.0 >> 3usize) & 0x01;
@@ -772,11 +752,10 @@ pub mod regs {
         }
         #[doc = "Alpha Plane Ability."]
         #[inline(always)]
-        pub const fn set_apa(&mut self, val: bool) {
+        pub fn set_apa(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
         }
         #[doc = "Default Color Programmability."]
-        #[must_use]
         #[inline(always)]
         pub const fn dcp(&self) -> bool {
             let val = (self.0 >> 4usize) & 0x01;
@@ -784,11 +763,10 @@ pub mod regs {
         }
         #[doc = "Default Color Programmability."]
         #[inline(always)]
-        pub const fn set_dcp(&mut self, val: bool) {
+        pub fn set_dcp(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
         }
         #[doc = "Windowing Ability."]
-        #[must_use]
         #[inline(always)]
         pub const fn wina(&self) -> bool {
             let val = (self.0 >> 5usize) & 0x01;
@@ -796,11 +774,10 @@ pub mod regs {
         }
         #[doc = "Windowing Ability."]
         #[inline(always)]
-        pub const fn set_wina(&mut self, val: bool) {
+        pub fn set_wina(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
         }
         #[doc = "Clut Ability."]
-        #[must_use]
         #[inline(always)]
         pub const fn cluta(&self) -> bool {
             let val = (self.0 >> 6usize) & 0x01;
@@ -808,11 +785,10 @@ pub mod regs {
         }
         #[doc = "Clut Ability."]
         #[inline(always)]
-        pub const fn set_cluta(&mut self, val: bool) {
+        pub fn set_cluta(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
         }
         #[doc = "Color Key Replace Ability."]
-        #[must_use]
         #[inline(always)]
         pub const fn ckra(&self) -> bool {
             let val = (self.0 >> 7usize) & 0x01;
@@ -820,11 +796,10 @@ pub mod regs {
         }
         #[doc = "Color Key Replace Ability."]
         #[inline(always)]
-        pub const fn set_ckra(&mut self, val: bool) {
+        pub fn set_ckra(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
         }
         #[doc = "Blending Factor 2, Ability For: 1.0."]
-        #[must_use]
         #[inline(always)]
         pub const fn f21(&self) -> bool {
             let val = (self.0 >> 8usize) & 0x01;
@@ -832,11 +807,10 @@ pub mod regs {
         }
         #[doc = "Blending Factor 2, Ability For: 1.0."]
         #[inline(always)]
-        pub const fn set_f21(&mut self, val: bool) {
+        pub fn set_f21(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
         }
         #[doc = "Blending Factor 2, Ability For: 0.0."]
-        #[must_use]
         #[inline(always)]
         pub const fn f20(&self) -> bool {
             let val = (self.0 >> 9usize) & 0x01;
@@ -844,11 +818,10 @@ pub mod regs {
         }
         #[doc = "Blending Factor 2, Ability For: 0.0."]
         #[inline(always)]
-        pub const fn set_f20(&mut self, val: bool) {
+        pub fn set_f20(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
         }
         #[doc = "Blending Factor 2, Ability For: Pixel_Alpha."]
-        #[must_use]
         #[inline(always)]
         pub const fn f2p(&self) -> bool {
             let val = (self.0 >> 10usize) & 0x01;
@@ -856,11 +829,10 @@ pub mod regs {
         }
         #[doc = "Blending Factor 2, Ability For: Pixel_Alpha."]
         #[inline(always)]
-        pub const fn set_f2p(&mut self, val: bool) {
+        pub fn set_f2p(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
         }
         #[doc = "Blending Factor 2, Ability For: 1.0 - Pixel_Alpha."]
-        #[must_use]
         #[inline(always)]
         pub const fn f21p(&self) -> bool {
             let val = (self.0 >> 11usize) & 0x01;
@@ -868,11 +840,10 @@ pub mod regs {
         }
         #[doc = "Blending Factor 2, Ability For: 1.0 - Pixel_Alpha."]
         #[inline(always)]
-        pub const fn set_f21p(&mut self, val: bool) {
+        pub fn set_f21p(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
         }
         #[doc = "Blending Factor 2, Ability For: Constant_Alpha."]
-        #[must_use]
         #[inline(always)]
         pub const fn f2c(&self) -> bool {
             let val = (self.0 >> 12usize) & 0x01;
@@ -880,11 +851,10 @@ pub mod regs {
         }
         #[doc = "Blending Factor 2, Ability For: Constant_Alpha."]
         #[inline(always)]
-        pub const fn set_f2c(&mut self, val: bool) {
+        pub fn set_f2c(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
         }
         #[doc = "Blending Factor 2, Ability For: 1.0 - Constant_Alpha."]
-        #[must_use]
         #[inline(always)]
         pub const fn f21c(&self) -> bool {
             let val = (self.0 >> 13usize) & 0x01;
@@ -892,11 +862,10 @@ pub mod regs {
         }
         #[doc = "Blending Factor 2, Ability For: 1.0 - Constant_Alpha."]
         #[inline(always)]
-        pub const fn set_f21c(&mut self, val: bool) {
+        pub fn set_f21c(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
         }
         #[doc = "Blending Factor 2, Ability For: Pixel_Alpha * Constant_Alpha."]
-        #[must_use]
         #[inline(always)]
         pub const fn f2pc(&self) -> bool {
             let val = (self.0 >> 14usize) & 0x01;
@@ -904,11 +873,10 @@ pub mod regs {
         }
         #[doc = "Blending Factor 2, Ability For: Pixel_Alpha * Constant_Alpha."]
         #[inline(always)]
-        pub const fn set_f2pc(&mut self, val: bool) {
+        pub fn set_f2pc(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
         }
         #[doc = "Blending Factor 2, Ability For: 1.0 - (Pixel_Alpha * Constant_Alpha)."]
-        #[must_use]
         #[inline(always)]
         pub const fn f21pc(&self) -> bool {
             let val = (self.0 >> 15usize) & 0x01;
@@ -916,11 +884,10 @@ pub mod regs {
         }
         #[doc = "Blending Factor 2, Ability For: 1.0 - (Pixel_Alpha * Constant_Alpha)."]
         #[inline(always)]
-        pub const fn set_f21pc(&mut self, val: bool) {
+        pub fn set_f21pc(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
         }
         #[doc = "Blending Factor 1, Ability For: 1.0."]
-        #[must_use]
         #[inline(always)]
         pub const fn f11(&self) -> bool {
             let val = (self.0 >> 16usize) & 0x01;
@@ -928,11 +895,10 @@ pub mod regs {
         }
         #[doc = "Blending Factor 1, Ability For: 1.0."]
         #[inline(always)]
-        pub const fn set_f11(&mut self, val: bool) {
+        pub fn set_f11(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
         }
         #[doc = "Blending Factor 1,Ability For: 0.0."]
-        #[must_use]
         #[inline(always)]
         pub const fn f10(&self) -> bool {
             let val = (self.0 >> 17usize) & 0x01;
@@ -940,11 +906,10 @@ pub mod regs {
         }
         #[doc = "Blending Factor 1,Ability For: 0.0."]
         #[inline(always)]
-        pub const fn set_f10(&mut self, val: bool) {
+        pub fn set_f10(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
         }
         #[doc = "Blending Factor 1, Ability For: Pixel_Alpha."]
-        #[must_use]
         #[inline(always)]
         pub const fn f1p(&self) -> bool {
             let val = (self.0 >> 18usize) & 0x01;
@@ -952,11 +917,10 @@ pub mod regs {
         }
         #[doc = "Blending Factor 1, Ability For: Pixel_Alpha."]
         #[inline(always)]
-        pub const fn set_f1p(&mut self, val: bool) {
+        pub fn set_f1p(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
         }
         #[doc = "Blending Factor 1, Ability For: 1.0 - Pixel_Alpha."]
-        #[must_use]
         #[inline(always)]
         pub const fn f11p(&self) -> bool {
             let val = (self.0 >> 19usize) & 0x01;
@@ -964,11 +928,10 @@ pub mod regs {
         }
         #[doc = "Blending Factor 1, Ability For: 1.0 - Pixel_Alpha."]
         #[inline(always)]
-        pub const fn set_f11p(&mut self, val: bool) {
+        pub fn set_f11p(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
         }
         #[doc = "Blending Factor 1, Ability For: Constant_Alpha."]
-        #[must_use]
         #[inline(always)]
         pub const fn f1c(&self) -> bool {
             let val = (self.0 >> 20usize) & 0x01;
@@ -976,11 +939,10 @@ pub mod regs {
         }
         #[doc = "Blending Factor 1, Ability For: Constant_Alpha."]
         #[inline(always)]
-        pub const fn set_f1c(&mut self, val: bool) {
+        pub fn set_f1c(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
         }
         #[doc = "Blending Factor 1, Ability For: 1.0 - Constant_Alpha."]
-        #[must_use]
         #[inline(always)]
         pub const fn f11c(&self) -> bool {
             let val = (self.0 >> 21usize) & 0x01;
@@ -988,11 +950,10 @@ pub mod regs {
         }
         #[doc = "Blending Factor 1, Ability For: 1.0 - Constant_Alpha."]
         #[inline(always)]
-        pub const fn set_f11c(&mut self, val: bool) {
+        pub fn set_f11c(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
         }
         #[doc = "Blending Factor 1, Ability For: Pixel_Alpha * Constant_Alpha."]
-        #[must_use]
         #[inline(always)]
         pub const fn f1pc(&self) -> bool {
             let val = (self.0 >> 22usize) & 0x01;
@@ -1000,11 +961,10 @@ pub mod regs {
         }
         #[doc = "Blending Factor 1, Ability For: Pixel_Alpha * Constant_Alpha."]
         #[inline(always)]
-        pub const fn set_f1pc(&mut self, val: bool) {
+        pub fn set_f1pc(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
         }
         #[doc = "Blending Factor 1, Ability For: 1.0 - (Pixel_Alpha * Constant_Alpha)."]
-        #[must_use]
         #[inline(always)]
         pub const fn f11pc(&self) -> bool {
             let val = (self.0 >> 23usize) & 0x01;
@@ -1012,11 +972,10 @@ pub mod regs {
         }
         #[doc = "Blending Factor 1, Ability For: 1.0 - (Pixel_Alpha * Constant_Alpha)."]
         #[inline(always)]
-        pub const fn set_f11pc(&mut self, val: bool) {
+        pub fn set_f11pc(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
         }
         #[doc = "Flexible Pixel Format, Ability."]
-        #[must_use]
         #[inline(always)]
         pub const fn ff(&self) -> bool {
             let val = (self.0 >> 24usize) & 0x01;
@@ -1024,11 +983,10 @@ pub mod regs {
         }
         #[doc = "Flexible Pixel Format, Ability."]
         #[inline(always)]
-        pub const fn set_ff(&mut self, val: bool) {
+        pub fn set_ff(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
         }
         #[doc = "Pixel Format, Ability For Rgb888."]
-        #[must_use]
         #[inline(always)]
         pub const fn rgb888(&self) -> bool {
             let val = (self.0 >> 25usize) & 0x01;
@@ -1036,11 +994,10 @@ pub mod regs {
         }
         #[doc = "Pixel Format, Ability For Rgb888."]
         #[inline(always)]
-        pub const fn set_rgb888(&mut self, val: bool) {
+        pub fn set_rgb888(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
         }
         #[doc = "Pixel Format, Ability For Bgr565."]
-        #[must_use]
         #[inline(always)]
         pub const fn bgr565(&self) -> bool {
             let val = (self.0 >> 26usize) & 0x01;
@@ -1048,11 +1005,10 @@ pub mod regs {
         }
         #[doc = "Pixel Format, Ability For Bgr565."]
         #[inline(always)]
-        pub const fn set_bgr565(&mut self, val: bool) {
+        pub fn set_bgr565(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 26usize)) | (((val as u32) & 0x01) << 26usize);
         }
         #[doc = "Pixel Format, Ability For Rgb565."]
-        #[must_use]
         #[inline(always)]
         pub const fn rgb565(&self) -> bool {
             let val = (self.0 >> 27usize) & 0x01;
@@ -1060,11 +1016,10 @@ pub mod regs {
         }
         #[doc = "Pixel Format, Ability For Rgb565."]
         #[inline(always)]
-        pub const fn set_rgb565(&mut self, val: bool) {
+        pub fn set_rgb565(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 27usize)) | (((val as u32) & 0x01) << 27usize);
         }
         #[doc = "Pixel Format, Ability For Bgra8888."]
-        #[must_use]
         #[inline(always)]
         pub const fn bgra8888(&self) -> bool {
             let val = (self.0 >> 28usize) & 0x01;
@@ -1072,11 +1027,10 @@ pub mod regs {
         }
         #[doc = "Pixel Format, Ability For Bgra8888."]
         #[inline(always)]
-        pub const fn set_bgra8888(&mut self, val: bool) {
+        pub fn set_bgra8888(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
         }
         #[doc = "Pixel Format, Ability For Rgba8888."]
-        #[must_use]
         #[inline(always)]
         pub const fn rgba8888(&self) -> bool {
             let val = (self.0 >> 29usize) & 0x01;
@@ -1084,11 +1038,10 @@ pub mod regs {
         }
         #[doc = "Pixel Format, Ability For Rgba8888."]
         #[inline(always)]
-        pub const fn set_rgba8888(&mut self, val: bool) {
+        pub fn set_rgba8888(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
         }
         #[doc = "Pixel Format, Ability For Abgr8888."]
-        #[must_use]
         #[inline(always)]
         pub const fn abgr8888(&self) -> bool {
             let val = (self.0 >> 30usize) & 0x01;
@@ -1096,11 +1049,10 @@ pub mod regs {
         }
         #[doc = "Pixel Format, Ability For Abgr8888."]
         #[inline(always)]
-        pub const fn set_abgr8888(&mut self, val: bool) {
+        pub fn set_abgr8888(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
         }
         #[doc = "Pixel Format, Ability For Argb8888."]
-        #[must_use]
         #[inline(always)]
         pub const fn argb8888(&self) -> bool {
             let val = (self.0 >> 31usize) & 0x01;
@@ -1108,7 +1060,7 @@ pub mod regs {
         }
         #[doc = "Pixel Format, Ability For Argb8888."]
         #[inline(always)]
-        pub const fn set_argb8888(&mut self, val: bool) {
+        pub fn set_argb8888(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
         }
     }
@@ -1159,42 +1111,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for C0r {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "C0r {{ ckta: {=bool:?}, cfbda: {=bool:?}, cfbpa: {=bool:?}, apa: {=bool:?}, dcp: {=bool:?}, wina: {=bool:?}, cluta: {=bool:?}, ckra: {=bool:?}, f21: {=bool:?}, f20: {=bool:?}, f2p: {=bool:?}, f21p: {=bool:?}, f2c: {=bool:?}, f21c: {=bool:?}, f2pc: {=bool:?}, f21pc: {=bool:?}, f11: {=bool:?}, f10: {=bool:?}, f1p: {=bool:?}, f11p: {=bool:?}, f1c: {=bool:?}, f11c: {=bool:?}, f1pc: {=bool:?}, f11pc: {=bool:?}, ff: {=bool:?}, rgb888: {=bool:?}, bgr565: {=bool:?}, rgb565: {=bool:?}, bgra8888: {=bool:?}, rgba8888: {=bool:?}, abgr8888: {=bool:?}, argb8888: {=bool:?} }}",
-                self.ckta(),
-                self.cfbda(),
-                self.cfbpa(),
-                self.apa(),
-                self.dcp(),
-                self.wina(),
-                self.cluta(),
-                self.ckra(),
-                self.f21(),
-                self.f20(),
-                self.f2p(),
-                self.f21p(),
-                self.f2c(),
-                self.f21c(),
-                self.f2pc(),
-                self.f21pc(),
-                self.f11(),
-                self.f10(),
-                self.f1p(),
-                self.f11p(),
-                self.f1c(),
-                self.f11c(),
-                self.f1pc(),
-                self.f11pc(),
-                self.ff(),
-                self.rgb888(),
-                self.bgr565(),
-                self.rgb565(),
-                self.bgra8888(),
-                self.rgba8888(),
-                self.abgr8888(),
-                self.argb8888()
-            )
+            defmt :: write ! (f , "C0r {{ ckta: {=bool:?}, cfbda: {=bool:?}, cfbpa: {=bool:?}, apa: {=bool:?}, dcp: {=bool:?}, wina: {=bool:?}, cluta: {=bool:?}, ckra: {=bool:?}, f21: {=bool:?}, f20: {=bool:?}, f2p: {=bool:?}, f21p: {=bool:?}, f2c: {=bool:?}, f21c: {=bool:?}, f2pc: {=bool:?}, f21pc: {=bool:?}, f11: {=bool:?}, f10: {=bool:?}, f1p: {=bool:?}, f11p: {=bool:?}, f1c: {=bool:?}, f11c: {=bool:?}, f1pc: {=bool:?}, f11pc: {=bool:?}, ff: {=bool:?}, rgb888: {=bool:?}, bgr565: {=bool:?}, rgb565: {=bool:?}, bgra8888: {=bool:?}, rgba8888: {=bool:?}, abgr8888: {=bool:?}, argb8888: {=bool:?} }}" , self . ckta () , self . cfbda () , self . cfbpa () , self . apa () , self . dcp () , self . wina () , self . cluta () , self . ckra () , self . f21 () , self . f20 () , self . f2p () , self . f21p () , self . f2c () , self . f21c () , self . f2pc () , self . f21pc () , self . f11 () , self . f10 () , self . f1p () , self . f11p () , self . f1c () , self . f11c () , self . f1pc () , self . f11pc () , self . ff () , self . rgb888 () , self . bgr565 () , self . rgb565 () , self . bgra8888 () , self . rgba8888 () , self . abgr8888 () , self . argb8888 ())
         }
     }
     #[doc = "Layerx Configuration 1 Register."]
@@ -1203,7 +1120,6 @@ pub mod regs {
     pub struct C1r(pub u32);
     impl C1r {
         #[doc = "Ycbcr 422 Interleaved Ability For That Layer."]
-        #[must_use]
         #[inline(always)]
         pub const fn yia(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -1211,11 +1127,10 @@ pub mod regs {
         }
         #[doc = "Ycbcr 422 Interleaved Ability For That Layer."]
         #[inline(always)]
-        pub const fn set_yia(&mut self, val: bool) {
+        pub fn set_yia(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "Ycbcr 420 Semi-Planar Ability For That Layer."]
-        #[must_use]
         #[inline(always)]
         pub const fn yspa(&self) -> bool {
             let val = (self.0 >> 1usize) & 0x01;
@@ -1223,11 +1138,10 @@ pub mod regs {
         }
         #[doc = "Ycbcr 420 Semi-Planar Ability For That Layer."]
         #[inline(always)]
-        pub const fn set_yspa(&mut self, val: bool) {
+        pub fn set_yspa(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
         }
         #[doc = "Ycbcr 420 Full-Planar Ability For That Layer."]
-        #[must_use]
         #[inline(always)]
         pub const fn yfpa(&self) -> bool {
             let val = (self.0 >> 2usize) & 0x01;
@@ -1235,11 +1149,10 @@ pub mod regs {
         }
         #[doc = "Ycbcr 420 Full-Planar Ability For That Layer."]
         #[inline(always)]
-        pub const fn set_yfpa(&mut self, val: bool) {
+        pub fn set_yfpa(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
         }
         #[doc = "Scaling Ability For That Layer."]
-        #[must_use]
         #[inline(always)]
         pub const fn sca(&self) -> bool {
             let val = (self.0 >> 31usize) & 0x01;
@@ -1247,7 +1160,7 @@ pub mod regs {
         }
         #[doc = "Scaling Ability For That Layer."]
         #[inline(always)]
-        pub const fn set_sca(&mut self, val: bool) {
+        pub fn set_sca(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
         }
     }
@@ -1286,7 +1199,6 @@ pub mod regs {
     pub struct Cacr(pub u32);
     impl Cacr {
         #[doc = "Constant Alpha."]
-        #[must_use]
         #[inline(always)]
         pub const fn consta(&self) -> u8 {
             let val = (self.0 >> 0usize) & 0xff;
@@ -1294,7 +1206,7 @@ pub mod regs {
         }
         #[doc = "Constant Alpha."]
         #[inline(always)]
-        pub const fn set_consta(&mut self, val: u8) {
+        pub fn set_consta(&mut self, val: u8) {
             self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
         }
     }
@@ -1321,7 +1233,6 @@ pub mod regs {
     pub struct Ccrcr(pub u32);
     impl Ccrcr {
         #[doc = "Computed Crc Of Frame."]
-        #[must_use]
         #[inline(always)]
         pub const fn ccrc(&self) -> u16 {
             let val = (self.0 >> 0usize) & 0xffff;
@@ -1329,7 +1240,7 @@ pub mod regs {
         }
         #[doc = "Computed Crc Of Frame."]
         #[inline(always)]
-        pub const fn set_ccrc(&mut self, val: u16) {
+        pub fn set_ccrc(&mut self, val: u16) {
             self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
         }
     }
@@ -1356,7 +1267,6 @@ pub mod regs {
     pub struct Cdsr(pub u32);
     impl Cdsr {
         #[doc = "Vertical Data Enable Display Status."]
-        #[must_use]
         #[inline(always)]
         pub const fn vdes(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -1364,11 +1274,10 @@ pub mod regs {
         }
         #[doc = "Vertical Data Enable Display Status."]
         #[inline(always)]
-        pub const fn set_vdes(&mut self, val: bool) {
+        pub fn set_vdes(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "Horizontal Data Enable Display Status."]
-        #[must_use]
         #[inline(always)]
         pub const fn hdes(&self) -> bool {
             let val = (self.0 >> 1usize) & 0x01;
@@ -1376,11 +1285,10 @@ pub mod regs {
         }
         #[doc = "Horizontal Data Enable Display Status."]
         #[inline(always)]
-        pub const fn set_hdes(&mut self, val: bool) {
+        pub fn set_hdes(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
         }
         #[doc = "Vertical Synchronization Display Status."]
-        #[must_use]
         #[inline(always)]
         pub const fn vsyncs(&self) -> bool {
             let val = (self.0 >> 2usize) & 0x01;
@@ -1388,11 +1296,10 @@ pub mod regs {
         }
         #[doc = "Vertical Synchronization Display Status."]
         #[inline(always)]
-        pub const fn set_vsyncs(&mut self, val: bool) {
+        pub fn set_vsyncs(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
         }
         #[doc = "Horizontal Synchronization Display Status."]
-        #[must_use]
         #[inline(always)]
         pub const fn hsyncs(&self) -> bool {
             let val = (self.0 >> 3usize) & 0x01;
@@ -1400,7 +1307,7 @@ pub mod regs {
         }
         #[doc = "Horizontal Synchronization Display Status."]
         #[inline(always)]
-        pub const fn set_hsyncs(&mut self, val: bool) {
+        pub fn set_hsyncs(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
         }
     }
@@ -1439,7 +1346,6 @@ pub mod regs {
     pub struct Cfbar(pub u32);
     impl Cfbar {
         #[doc = "Color Frame Buffer Start Address."]
-        #[must_use]
         #[inline(always)]
         pub const fn cfbadd(&self) -> u32 {
             let val = (self.0 >> 0usize) & 0xffff_ffff;
@@ -1447,7 +1353,7 @@ pub mod regs {
         }
         #[doc = "Color Frame Buffer Start Address."]
         #[inline(always)]
-        pub const fn set_cfbadd(&mut self, val: u32) {
+        pub fn set_cfbadd(&mut self, val: u32) {
             self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
         }
     }
@@ -1474,7 +1380,6 @@ pub mod regs {
     pub struct Cfblnr(pub u32);
     impl Cfblnr {
         #[doc = "Frame Buffer Line Number."]
-        #[must_use]
         #[inline(always)]
         pub const fn cfblnbr(&self) -> u16 {
             let val = (self.0 >> 0usize) & 0xffff;
@@ -1482,7 +1387,7 @@ pub mod regs {
         }
         #[doc = "Frame Buffer Line Number."]
         #[inline(always)]
-        pub const fn set_cfblnbr(&mut self, val: u16) {
+        pub fn set_cfblnbr(&mut self, val: u16) {
             self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
         }
     }
@@ -1509,7 +1414,6 @@ pub mod regs {
     pub struct Cfblr(pub u32);
     impl Cfblr {
         #[doc = "Color Frame Buffer Line Length."]
-        #[must_use]
         #[inline(always)]
         pub const fn cfbll(&self) -> u16 {
             let val = (self.0 >> 0usize) & 0xffff;
@@ -1517,11 +1421,10 @@ pub mod regs {
         }
         #[doc = "Color Frame Buffer Line Length."]
         #[inline(always)]
-        pub const fn set_cfbll(&mut self, val: u16) {
+        pub fn set_cfbll(&mut self, val: u16) {
             self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
         }
         #[doc = "Color Frame Buffer Pitch In Bytes."]
-        #[must_use]
         #[inline(always)]
         pub const fn cfbp(&self) -> u16 {
             let val = (self.0 >> 16usize) & 0xffff;
@@ -1529,7 +1432,7 @@ pub mod regs {
         }
         #[doc = "Color Frame Buffer Pitch In Bytes."]
         #[inline(always)]
-        pub const fn set_cfbp(&mut self, val: u16) {
+        pub fn set_cfbp(&mut self, val: u16) {
             self.0 = (self.0 & !(0xffff << 16usize)) | (((val as u32) & 0xffff) << 16usize);
         }
     }
@@ -1564,7 +1467,6 @@ pub mod regs {
     pub struct Ckcr(pub u32);
     impl Ckcr {
         #[doc = "Color Key Blue Value."]
-        #[must_use]
         #[inline(always)]
         pub const fn ckblue(&self) -> u8 {
             let val = (self.0 >> 0usize) & 0xff;
@@ -1572,11 +1474,10 @@ pub mod regs {
         }
         #[doc = "Color Key Blue Value."]
         #[inline(always)]
-        pub const fn set_ckblue(&mut self, val: u8) {
+        pub fn set_ckblue(&mut self, val: u8) {
             self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
         }
         #[doc = "Color Key Green Value."]
-        #[must_use]
         #[inline(always)]
         pub const fn ckgreen(&self) -> u8 {
             let val = (self.0 >> 8usize) & 0xff;
@@ -1584,11 +1485,10 @@ pub mod regs {
         }
         #[doc = "Color Key Green Value."]
         #[inline(always)]
-        pub const fn set_ckgreen(&mut self, val: u8) {
+        pub fn set_ckgreen(&mut self, val: u8) {
             self.0 = (self.0 & !(0xff << 8usize)) | (((val as u32) & 0xff) << 8usize);
         }
         #[doc = "Color Key Red Value."]
-        #[must_use]
         #[inline(always)]
         pub const fn ckred(&self) -> u8 {
             let val = (self.0 >> 16usize) & 0xff;
@@ -1596,7 +1496,7 @@ pub mod regs {
         }
         #[doc = "Color Key Red Value."]
         #[inline(always)]
-        pub const fn set_ckred(&mut self, val: u8) {
+        pub fn set_ckred(&mut self, val: u8) {
             self.0 = (self.0 & !(0xff << 16usize)) | (((val as u32) & 0xff) << 16usize);
         }
     }
@@ -1633,7 +1533,6 @@ pub mod regs {
     pub struct Clutwr(pub u32);
     impl Clutwr {
         #[doc = "Blue Value."]
-        #[must_use]
         #[inline(always)]
         pub const fn blue(&self) -> u8 {
             let val = (self.0 >> 0usize) & 0xff;
@@ -1641,11 +1540,10 @@ pub mod regs {
         }
         #[doc = "Blue Value."]
         #[inline(always)]
-        pub const fn set_blue(&mut self, val: u8) {
+        pub fn set_blue(&mut self, val: u8) {
             self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
         }
         #[doc = "Green Value."]
-        #[must_use]
         #[inline(always)]
         pub const fn green(&self) -> u8 {
             let val = (self.0 >> 8usize) & 0xff;
@@ -1653,11 +1551,10 @@ pub mod regs {
         }
         #[doc = "Green Value."]
         #[inline(always)]
-        pub const fn set_green(&mut self, val: u8) {
+        pub fn set_green(&mut self, val: u8) {
             self.0 = (self.0 & !(0xff << 8usize)) | (((val as u32) & 0xff) << 8usize);
         }
         #[doc = "Red Value."]
-        #[must_use]
         #[inline(always)]
         pub const fn red(&self) -> u8 {
             let val = (self.0 >> 16usize) & 0xff;
@@ -1665,11 +1562,10 @@ pub mod regs {
         }
         #[doc = "Red Value."]
         #[inline(always)]
-        pub const fn set_red(&mut self, val: u8) {
+        pub fn set_red(&mut self, val: u8) {
             self.0 = (self.0 & !(0xff << 16usize)) | (((val as u32) & 0xff) << 16usize);
         }
         #[doc = "Clut Address."]
-        #[must_use]
         #[inline(always)]
         pub const fn clutadd(&self) -> u8 {
             let val = (self.0 >> 24usize) & 0xff;
@@ -1677,7 +1573,7 @@ pub mod regs {
         }
         #[doc = "Clut Address."]
         #[inline(always)]
-        pub const fn set_clutadd(&mut self, val: u8) {
+        pub fn set_clutadd(&mut self, val: u8) {
             self.0 = (self.0 & !(0xff << 24usize)) | (((val as u32) & 0xff) << 24usize);
         }
     }
@@ -1716,7 +1612,6 @@ pub mod regs {
     pub struct Cpsr(pub u32);
     impl Cpsr {
         #[doc = "Current Y Position."]
-        #[must_use]
         #[inline(always)]
         pub const fn cypos(&self) -> u16 {
             let val = (self.0 >> 0usize) & 0xffff;
@@ -1724,11 +1619,10 @@ pub mod regs {
         }
         #[doc = "Current Y Position."]
         #[inline(always)]
-        pub const fn set_cypos(&mut self, val: u16) {
+        pub fn set_cypos(&mut self, val: u16) {
             self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
         }
         #[doc = "Current X Position."]
-        #[must_use]
         #[inline(always)]
         pub const fn cxpos(&self) -> u16 {
             let val = (self.0 >> 16usize) & 0xffff;
@@ -1736,7 +1630,7 @@ pub mod regs {
         }
         #[doc = "Current X Position."]
         #[inline(always)]
-        pub const fn set_cxpos(&mut self, val: u16) {
+        pub fn set_cxpos(&mut self, val: u16) {
             self.0 = (self.0 & !(0xffff << 16usize)) | (((val as u32) & 0xffff) << 16usize);
         }
     }
@@ -1771,7 +1665,6 @@ pub mod regs {
     pub struct Cr(pub u32);
     impl Cr {
         #[doc = "Layer Enable."]
-        #[must_use]
         #[inline(always)]
         pub const fn len(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -1779,11 +1672,10 @@ pub mod regs {
         }
         #[doc = "Layer Enable."]
         #[inline(always)]
-        pub const fn set_len(&mut self, val: bool) {
+        pub fn set_len(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "Color Keying Enable."]
-        #[must_use]
         #[inline(always)]
         pub const fn cken(&self) -> bool {
             let val = (self.0 >> 1usize) & 0x01;
@@ -1791,11 +1683,10 @@ pub mod regs {
         }
         #[doc = "Color Keying Enable."]
         #[inline(always)]
-        pub const fn set_cken(&mut self, val: bool) {
+        pub fn set_cken(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
         }
         #[doc = "Color Look-Up Table Enable."]
-        #[must_use]
         #[inline(always)]
         pub const fn cluten(&self) -> bool {
             let val = (self.0 >> 4usize) & 0x01;
@@ -1803,11 +1694,10 @@ pub mod regs {
         }
         #[doc = "Color Look-Up Table Enable."]
         #[inline(always)]
-        pub const fn set_cluten(&mut self, val: bool) {
+        pub fn set_cluten(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
         }
         #[doc = "Horizontal Mirroring Enable."]
-        #[must_use]
         #[inline(always)]
         pub const fn hmen(&self) -> bool {
             let val = (self.0 >> 8usize) & 0x01;
@@ -1815,11 +1705,10 @@ pub mod regs {
         }
         #[doc = "Horizontal Mirroring Enable."]
         #[inline(always)]
-        pub const fn set_hmen(&mut self, val: bool) {
+        pub fn set_hmen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
         }
         #[doc = "Default Color Blending Enable."]
-        #[must_use]
         #[inline(always)]
         pub const fn dcben(&self) -> bool {
             let val = (self.0 >> 9usize) & 0x01;
@@ -1827,7 +1716,7 @@ pub mod regs {
         }
         #[doc = "Default Color Blending Enable."]
         #[inline(always)]
-        pub const fn set_dcben(&mut self, val: bool) {
+        pub fn set_dcben(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
         }
     }
@@ -1868,7 +1757,6 @@ pub mod regs {
     pub struct Cyr0r(pub u32);
     impl Cyr0r {
         #[doc = "Cr-To-Red Coefficient, With Bits 9:8 As Positive Integer And 7:0 As Decimals."]
-        #[must_use]
         #[inline(always)]
         pub const fn cr2r(&self) -> u16 {
             let val = (self.0 >> 0usize) & 0x03ff;
@@ -1876,11 +1764,10 @@ pub mod regs {
         }
         #[doc = "Cr-To-Red Coefficient, With Bits 9:8 As Positive Integer And 7:0 As Decimals."]
         #[inline(always)]
-        pub const fn set_cr2r(&mut self, val: u16) {
+        pub fn set_cr2r(&mut self, val: u16) {
             self.0 = (self.0 & !(0x03ff << 0usize)) | (((val as u32) & 0x03ff) << 0usize);
         }
         #[doc = "Cb-To-Blue Coefficient, With Bits 9:8 As Positive Integer And 7:0 As Decimals."]
-        #[must_use]
         #[inline(always)]
         pub const fn cb2b(&self) -> u16 {
             let val = (self.0 >> 16usize) & 0x03ff;
@@ -1888,7 +1775,7 @@ pub mod regs {
         }
         #[doc = "Cb-To-Blue Coefficient, With Bits 9:8 As Positive Integer And 7:0 As Decimals."]
         #[inline(always)]
-        pub const fn set_cb2b(&mut self, val: u16) {
+        pub fn set_cb2b(&mut self, val: u16) {
             self.0 = (self.0 & !(0x03ff << 16usize)) | (((val as u32) & 0x03ff) << 16usize);
         }
     }
@@ -1923,7 +1810,6 @@ pub mod regs {
     pub struct Cyr1r(pub u32);
     impl Cyr1r {
         #[doc = "Cr-To-Green Coefficient, With Bits 9:8 As Positive Integer And 7:0 As Decimals."]
-        #[must_use]
         #[inline(always)]
         pub const fn cr2g(&self) -> u16 {
             let val = (self.0 >> 0usize) & 0x03ff;
@@ -1931,11 +1817,10 @@ pub mod regs {
         }
         #[doc = "Cr-To-Green Coefficient, With Bits 9:8 As Positive Integer And 7:0 As Decimals."]
         #[inline(always)]
-        pub const fn set_cr2g(&mut self, val: u16) {
+        pub fn set_cr2g(&mut self, val: u16) {
             self.0 = (self.0 & !(0x03ff << 0usize)) | (((val as u32) & 0x03ff) << 0usize);
         }
         #[doc = "Cb-To-Green Coefficient, With Bits 9:8 As Positive Integer And 7:0 As Decimals."]
-        #[must_use]
         #[inline(always)]
         pub const fn cb2g(&self) -> u16 {
             let val = (self.0 >> 16usize) & 0x03ff;
@@ -1943,7 +1828,7 @@ pub mod regs {
         }
         #[doc = "Cb-To-Green Coefficient, With Bits 9:8 As Positive Integer And 7:0 As Decimals."]
         #[inline(always)]
-        pub const fn set_cb2g(&mut self, val: u16) {
+        pub fn set_cb2g(&mut self, val: u16) {
             self.0 = (self.0 & !(0x03ff << 16usize)) | (((val as u32) & 0x03ff) << 16usize);
         }
     }
@@ -1978,7 +1863,6 @@ pub mod regs {
     pub struct Dccr(pub u32);
     impl Dccr {
         #[doc = "Default Color Blue."]
-        #[must_use]
         #[inline(always)]
         pub const fn dcblue(&self) -> u8 {
             let val = (self.0 >> 0usize) & 0xff;
@@ -1986,11 +1870,10 @@ pub mod regs {
         }
         #[doc = "Default Color Blue."]
         #[inline(always)]
-        pub const fn set_dcblue(&mut self, val: u8) {
+        pub fn set_dcblue(&mut self, val: u8) {
             self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
         }
         #[doc = "Default Color Green."]
-        #[must_use]
         #[inline(always)]
         pub const fn dcgreen(&self) -> u8 {
             let val = (self.0 >> 8usize) & 0xff;
@@ -1998,11 +1881,10 @@ pub mod regs {
         }
         #[doc = "Default Color Green."]
         #[inline(always)]
-        pub const fn set_dcgreen(&mut self, val: u8) {
+        pub fn set_dcgreen(&mut self, val: u8) {
             self.0 = (self.0 & !(0xff << 8usize)) | (((val as u32) & 0xff) << 8usize);
         }
         #[doc = "Default Color Red."]
-        #[must_use]
         #[inline(always)]
         pub const fn dcred(&self) -> u8 {
             let val = (self.0 >> 16usize) & 0xff;
@@ -2010,11 +1892,10 @@ pub mod regs {
         }
         #[doc = "Default Color Red."]
         #[inline(always)]
-        pub const fn set_dcred(&mut self, val: u8) {
+        pub fn set_dcred(&mut self, val: u8) {
             self.0 = (self.0 & !(0xff << 16usize)) | (((val as u32) & 0xff) << 16usize);
         }
         #[doc = "Default Color Alpha."]
-        #[must_use]
         #[inline(always)]
         pub const fn dcalpha(&self) -> u8 {
             let val = (self.0 >> 24usize) & 0xff;
@@ -2022,7 +1903,7 @@ pub mod regs {
         }
         #[doc = "Default Color Alpha."]
         #[inline(always)]
-        pub const fn set_dcalpha(&mut self, val: u8) {
+        pub fn set_dcalpha(&mut self, val: u8) {
             self.0 = (self.0 & !(0xff << 24usize)) | (((val as u32) & 0xff) << 24usize);
         }
     }
@@ -2061,7 +1942,6 @@ pub mod regs {
     pub struct Ecrcr(pub u32);
     impl Ecrcr {
         #[doc = "Expected Crc Of Frame."]
-        #[must_use]
         #[inline(always)]
         pub const fn ecrc(&self) -> u16 {
             let val = (self.0 >> 0usize) & 0xffff;
@@ -2069,7 +1949,7 @@ pub mod regs {
         }
         #[doc = "Expected Crc Of Frame."]
         #[inline(always)]
-        pub const fn set_ecrc(&mut self, val: u16) {
+        pub fn set_ecrc(&mut self, val: u16) {
             self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
         }
     }
@@ -2096,7 +1976,6 @@ pub mod regs {
     pub struct Edcr(pub u32);
     impl Edcr {
         #[doc = "Output Conversion To Ycbcr 422 Enable."]
-        #[must_use]
         #[inline(always)]
         pub const fn ocyen(&self) -> bool {
             let val = (self.0 >> 25usize) & 0x01;
@@ -2104,11 +1983,10 @@ pub mod regs {
         }
         #[doc = "Output Conversion To Ycbcr 422 Enable."]
         #[inline(always)]
-        pub const fn set_ocyen(&mut self, val: bool) {
+        pub fn set_ocyen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
         }
         #[doc = "Output Conversion To Ycbcr 422."]
-        #[must_use]
         #[inline(always)]
         pub const fn ocysel(&self) -> super::vals::Ocysel {
             let val = (self.0 >> 26usize) & 0x01;
@@ -2116,11 +1994,10 @@ pub mod regs {
         }
         #[doc = "Output Conversion To Ycbcr 422."]
         #[inline(always)]
-        pub const fn set_ocysel(&mut self, val: super::vals::Ocysel) {
+        pub fn set_ocysel(&mut self, val: super::vals::Ocysel) {
             self.0 = (self.0 & !(0x01 << 26usize)) | (((val.to_bits() as u32) & 0x01) << 26usize);
         }
         #[doc = "Output Conversion To Ycbcr 422."]
-        #[must_use]
         #[inline(always)]
         pub const fn ocyco(&self) -> super::vals::Ocyco {
             let val = (self.0 >> 27usize) & 0x01;
@@ -2128,7 +2005,7 @@ pub mod regs {
         }
         #[doc = "Output Conversion To Ycbcr 422."]
         #[inline(always)]
-        pub const fn set_ocyco(&mut self, val: super::vals::Ocyco) {
+        pub fn set_ocyco(&mut self, val: super::vals::Ocyco) {
             self.0 = (self.0 & !(0x01 << 27usize)) | (((val.to_bits() as u32) & 0x01) << 27usize);
         }
     }
@@ -2165,7 +2042,6 @@ pub mod regs {
     pub struct Fpf0r(pub u32);
     impl Fpf0r {
         #[doc = "Location Of The Alpha Component Inside The Pixel Memory Word (In Bits)."]
-        #[must_use]
         #[inline(always)]
         pub const fn apos(&self) -> u8 {
             let val = (self.0 >> 0usize) & 0x1f;
@@ -2173,11 +2049,10 @@ pub mod regs {
         }
         #[doc = "Location Of The Alpha Component Inside The Pixel Memory Word (In Bits)."]
         #[inline(always)]
-        pub const fn set_apos(&mut self, val: u8) {
+        pub fn set_apos(&mut self, val: u8) {
             self.0 = (self.0 & !(0x1f << 0usize)) | (((val as u32) & 0x1f) << 0usize);
         }
         #[doc = "Width Of The Alpha Component (In Bits)."]
-        #[must_use]
         #[inline(always)]
         pub const fn alen(&self) -> u8 {
             let val = (self.0 >> 5usize) & 0x0f;
@@ -2185,11 +2060,10 @@ pub mod regs {
         }
         #[doc = "Width Of The Alpha Component (In Bits)."]
         #[inline(always)]
-        pub const fn set_alen(&mut self, val: u8) {
+        pub fn set_alen(&mut self, val: u8) {
             self.0 = (self.0 & !(0x0f << 5usize)) | (((val as u32) & 0x0f) << 5usize);
         }
         #[doc = "Location Of The Red Component Inside The Pixel Memory Word (In Bits)."]
-        #[must_use]
         #[inline(always)]
         pub const fn rpos(&self) -> u8 {
             let val = (self.0 >> 9usize) & 0x1f;
@@ -2197,11 +2071,10 @@ pub mod regs {
         }
         #[doc = "Location Of The Red Component Inside The Pixel Memory Word (In Bits)."]
         #[inline(always)]
-        pub const fn set_rpos(&mut self, val: u8) {
+        pub fn set_rpos(&mut self, val: u8) {
             self.0 = (self.0 & !(0x1f << 9usize)) | (((val as u32) & 0x1f) << 9usize);
         }
         #[doc = "Width Of The Red Component (In Bits)."]
-        #[must_use]
         #[inline(always)]
         pub const fn rlen(&self) -> u8 {
             let val = (self.0 >> 14usize) & 0x0f;
@@ -2209,7 +2082,7 @@ pub mod regs {
         }
         #[doc = "Width Of The Red Component (In Bits)."]
         #[inline(always)]
-        pub const fn set_rlen(&mut self, val: u8) {
+        pub fn set_rlen(&mut self, val: u8) {
             self.0 = (self.0 & !(0x0f << 14usize)) | (((val as u32) & 0x0f) << 14usize);
         }
     }
@@ -2248,7 +2121,6 @@ pub mod regs {
     pub struct Fpf1r(pub u32);
     impl Fpf1r {
         #[doc = "Location Of The Green Component Inside The Pixel Memory Word (In Bits)."]
-        #[must_use]
         #[inline(always)]
         pub const fn gpos(&self) -> u8 {
             let val = (self.0 >> 0usize) & 0x1f;
@@ -2256,11 +2128,10 @@ pub mod regs {
         }
         #[doc = "Location Of The Green Component Inside The Pixel Memory Word (In Bits)."]
         #[inline(always)]
-        pub const fn set_gpos(&mut self, val: u8) {
+        pub fn set_gpos(&mut self, val: u8) {
             self.0 = (self.0 & !(0x1f << 0usize)) | (((val as u32) & 0x1f) << 0usize);
         }
         #[doc = "Width Of The Green Component (In Bits)."]
-        #[must_use]
         #[inline(always)]
         pub const fn glen(&self) -> u8 {
             let val = (self.0 >> 5usize) & 0x0f;
@@ -2268,11 +2139,10 @@ pub mod regs {
         }
         #[doc = "Width Of The Green Component (In Bits)."]
         #[inline(always)]
-        pub const fn set_glen(&mut self, val: u8) {
+        pub fn set_glen(&mut self, val: u8) {
             self.0 = (self.0 & !(0x0f << 5usize)) | (((val as u32) & 0x0f) << 5usize);
         }
         #[doc = "Location Of The Blue Component Inside The Pixel Memory Word (In Bits)."]
-        #[must_use]
         #[inline(always)]
         pub const fn bpos(&self) -> u8 {
             let val = (self.0 >> 9usize) & 0x1f;
@@ -2280,11 +2150,10 @@ pub mod regs {
         }
         #[doc = "Location Of The Blue Component Inside The Pixel Memory Word (In Bits)."]
         #[inline(always)]
-        pub const fn set_bpos(&mut self, val: u8) {
+        pub fn set_bpos(&mut self, val: u8) {
             self.0 = (self.0 & !(0x1f << 9usize)) | (((val as u32) & 0x1f) << 9usize);
         }
         #[doc = "Width Of The Blue Component (In Bits)."]
-        #[must_use]
         #[inline(always)]
         pub const fn blen(&self) -> u8 {
             let val = (self.0 >> 14usize) & 0x0f;
@@ -2292,11 +2161,10 @@ pub mod regs {
         }
         #[doc = "Width Of The Blue Component (In Bits)."]
         #[inline(always)]
-        pub const fn set_blen(&mut self, val: u8) {
+        pub fn set_blen(&mut self, val: u8) {
             self.0 = (self.0 & !(0x0f << 14usize)) | (((val as u32) & 0x0f) << 14usize);
         }
         #[doc = "Pixel Size (In Bytes)."]
-        #[must_use]
         #[inline(always)]
         pub const fn psize(&self) -> u8 {
             let val = (self.0 >> 18usize) & 0x07;
@@ -2304,7 +2172,7 @@ pub mod regs {
         }
         #[doc = "Pixel Size (In Bytes)."]
         #[inline(always)]
-        pub const fn set_psize(&mut self, val: u8) {
+        pub fn set_psize(&mut self, val: u8) {
             self.0 = (self.0 & !(0x07 << 18usize)) | (((val as u32) & 0x07) << 18usize);
         }
     }
@@ -2345,7 +2213,6 @@ pub mod regs {
     pub struct Futr(pub u32);
     impl Futr {
         #[doc = "Threshold To Trigger A Fifo Underrun Interrupt (Per Fifo Word, 64 Bits)."]
-        #[must_use]
         #[inline(always)]
         pub const fn thre(&self) -> u16 {
             let val = (self.0 >> 0usize) & 0xffff;
@@ -2353,7 +2220,7 @@ pub mod regs {
         }
         #[doc = "Threshold To Trigger A Fifo Underrun Interrupt (Per Fifo Word, 64 Bits)."]
         #[inline(always)]
-        pub const fn set_thre(&mut self, val: u16) {
+        pub fn set_thre(&mut self, val: u16) {
             self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
         }
     }
@@ -2380,7 +2247,6 @@ pub mod regs {
     pub struct Gc1r(pub u32);
     impl Gc1r {
         #[doc = "Width Of Blue Channel Output."]
-        #[must_use]
         #[inline(always)]
         pub const fn wbch(&self) -> u8 {
             let val = (self.0 >> 0usize) & 0x0f;
@@ -2388,11 +2254,10 @@ pub mod regs {
         }
         #[doc = "Width Of Blue Channel Output."]
         #[inline(always)]
-        pub const fn set_wbch(&mut self, val: u8) {
+        pub fn set_wbch(&mut self, val: u8) {
             self.0 = (self.0 & !(0x0f << 0usize)) | (((val as u32) & 0x0f) << 0usize);
         }
         #[doc = "Width Of Green Channel Output."]
-        #[must_use]
         #[inline(always)]
         pub const fn wgch(&self) -> u8 {
             let val = (self.0 >> 4usize) & 0x0f;
@@ -2400,11 +2265,10 @@ pub mod regs {
         }
         #[doc = "Width Of Green Channel Output."]
         #[inline(always)]
-        pub const fn set_wgch(&mut self, val: u8) {
+        pub fn set_wgch(&mut self, val: u8) {
             self.0 = (self.0 & !(0x0f << 4usize)) | (((val as u32) & 0x0f) << 4usize);
         }
         #[doc = "Width Of Red Channel Output."]
-        #[must_use]
         #[inline(always)]
         pub const fn wrch(&self) -> u8 {
             let val = (self.0 >> 8usize) & 0x0f;
@@ -2412,11 +2276,10 @@ pub mod regs {
         }
         #[doc = "Width Of Red Channel Output."]
         #[inline(always)]
-        pub const fn set_wrch(&mut self, val: u8) {
+        pub fn set_wrch(&mut self, val: u8) {
             self.0 = (self.0 & !(0x0f << 8usize)) | (((val as u32) & 0x0f) << 8usize);
         }
         #[doc = "Precise Blending Ability."]
-        #[must_use]
         #[inline(always)]
         pub const fn prba(&self) -> bool {
             let val = (self.0 >> 12usize) & 0x01;
@@ -2424,11 +2287,10 @@ pub mod regs {
         }
         #[doc = "Precise Blending Ability."]
         #[inline(always)]
-        pub const fn set_prba(&mut self, val: bool) {
+        pub fn set_prba(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
         }
         #[doc = "Dithering Technique Implemented."]
-        #[must_use]
         #[inline(always)]
         pub const fn dt(&self) -> super::vals::Dt {
             let val = (self.0 >> 14usize) & 0x03;
@@ -2436,11 +2298,10 @@ pub mod regs {
         }
         #[doc = "Dithering Technique Implemented."]
         #[inline(always)]
-        pub const fn set_dt(&mut self, val: super::vals::Dt) {
+        pub fn set_dt(&mut self, val: super::vals::Dt) {
             self.0 = (self.0 & !(0x03 << 14usize)) | (((val.to_bits() as u32) & 0x03) << 14usize);
         }
         #[doc = "Gamma Correction Technique Implemented."]
-        #[must_use]
         #[inline(always)]
         pub const fn gct(&self) -> super::vals::Gct {
             let val = (self.0 >> 17usize) & 0x07;
@@ -2448,11 +2309,10 @@ pub mod regs {
         }
         #[doc = "Gamma Correction Technique Implemented."]
         #[inline(always)]
-        pub const fn set_gct(&mut self, val: super::vals::Gct) {
+        pub fn set_gct(&mut self, val: super::vals::Gct) {
             self.0 = (self.0 & !(0x07 << 17usize)) | (((val.to_bits() as u32) & 0x07) << 17usize);
         }
         #[doc = "Shadow Registers Ability."]
-        #[must_use]
         #[inline(always)]
         pub const fn shra(&self) -> bool {
             let val = (self.0 >> 21usize) & 0x01;
@@ -2460,11 +2320,10 @@ pub mod regs {
         }
         #[doc = "Shadow Registers Ability."]
         #[inline(always)]
-        pub const fn set_shra(&mut self, val: bool) {
+        pub fn set_shra(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
         }
         #[doc = "Background Color Programmability (Unique Color Blended As Background)."]
-        #[must_use]
         #[inline(always)]
         pub const fn bcp(&self) -> bool {
             let val = (self.0 >> 22usize) & 0x01;
@@ -2472,11 +2331,10 @@ pub mod regs {
         }
         #[doc = "Background Color Programmability (Unique Color Blended As Background)."]
         #[inline(always)]
-        pub const fn set_bcp(&mut self, val: bool) {
+        pub fn set_bcp(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
         }
         #[doc = "Background Blending Ability."]
-        #[must_use]
         #[inline(always)]
         pub const fn bba(&self) -> bool {
             let val = (self.0 >> 23usize) & 0x01;
@@ -2484,11 +2342,10 @@ pub mod regs {
         }
         #[doc = "Background Blending Ability."]
         #[inline(always)]
-        pub const fn set_bba(&mut self, val: bool) {
+        pub fn set_bba(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
         }
         #[doc = "Line-Irq: Line Position Programmability."]
-        #[must_use]
         #[inline(always)]
         pub const fn lnip(&self) -> bool {
             let val = (self.0 >> 24usize) & 0x01;
@@ -2496,11 +2353,10 @@ pub mod regs {
         }
         #[doc = "Line-Irq: Line Position Programmability."]
         #[inline(always)]
-        pub const fn set_lnip(&mut self, val: bool) {
+        pub fn set_lnip(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
         }
         #[doc = "Timing Programmability."]
-        #[must_use]
         #[inline(always)]
         pub const fn tp(&self) -> bool {
             let val = (self.0 >> 25usize) & 0x01;
@@ -2508,11 +2364,10 @@ pub mod regs {
         }
         #[doc = "Timing Programmability."]
         #[inline(always)]
-        pub const fn set_tp(&mut self, val: bool) {
+        pub fn set_tp(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
         }
         #[doc = "Sync Polarity Programmability."]
-        #[must_use]
         #[inline(always)]
         pub const fn spp(&self) -> bool {
             let val = (self.0 >> 27usize) & 0x01;
@@ -2520,11 +2375,10 @@ pub mod regs {
         }
         #[doc = "Sync Polarity Programmability."]
         #[inline(always)]
-        pub const fn set_spp(&mut self, val: bool) {
+        pub fn set_spp(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 27usize)) | (((val as u32) & 0x01) << 27usize);
         }
         #[doc = "Dither Width Programmability."]
-        #[must_use]
         #[inline(always)]
         pub const fn dwp(&self) -> bool {
             let val = (self.0 >> 28usize) & 0x01;
@@ -2532,11 +2386,10 @@ pub mod regs {
         }
         #[doc = "Dither Width Programmability."]
         #[inline(always)]
-        pub const fn set_dwp(&mut self, val: bool) {
+        pub fn set_dwp(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
         }
         #[doc = "Status Register Ability."]
-        #[must_use]
         #[inline(always)]
         pub const fn stra(&self) -> bool {
             let val = (self.0 >> 29usize) & 0x01;
@@ -2544,11 +2397,10 @@ pub mod regs {
         }
         #[doc = "Status Register Ability."]
         #[inline(always)]
-        pub const fn set_stra(&mut self, val: bool) {
+        pub fn set_stra(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
         }
         #[doc = "Configuration Reading Mode Ability."]
-        #[must_use]
         #[inline(always)]
         pub const fn crma(&self) -> bool {
             let val = (self.0 >> 30usize) & 0x01;
@@ -2556,11 +2408,10 @@ pub mod regs {
         }
         #[doc = "Configuration Reading Mode Ability."]
         #[inline(always)]
-        pub const fn set_crma(&mut self, val: bool) {
+        pub fn set_crma(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
         }
         #[doc = "Blind Mode Ability."]
-        #[must_use]
         #[inline(always)]
         pub const fn bma(&self) -> bool {
             let val = (self.0 >> 31usize) & 0x01;
@@ -2568,7 +2419,7 @@ pub mod regs {
         }
         #[doc = "Blind Mode Ability."]
         #[inline(always)]
-        pub const fn set_bma(&mut self, val: bool) {
+        pub fn set_bma(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
         }
     }
@@ -2603,26 +2454,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Gc1r {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Gc1r {{ wbch: {=u8:?}, wgch: {=u8:?}, wrch: {=u8:?}, prba: {=bool:?}, dt: {:?}, gct: {:?}, shra: {=bool:?}, bcp: {=bool:?}, bba: {=bool:?}, lnip: {=bool:?}, tp: {=bool:?}, spp: {=bool:?}, dwp: {=bool:?}, stra: {=bool:?}, crma: {=bool:?}, bma: {=bool:?} }}",
-                self.wbch(),
-                self.wgch(),
-                self.wrch(),
-                self.prba(),
-                self.dt(),
-                self.gct(),
-                self.shra(),
-                self.bcp(),
-                self.bba(),
-                self.lnip(),
-                self.tp(),
-                self.spp(),
-                self.dwp(),
-                self.stra(),
-                self.crma(),
-                self.bma()
-            )
+            defmt :: write ! (f , "Gc1r {{ wbch: {=u8:?}, wgch: {=u8:?}, wrch: {=u8:?}, prba: {=bool:?}, dt: {:?}, gct: {:?}, shra: {=bool:?}, bcp: {=bool:?}, bba: {=bool:?}, lnip: {=bool:?}, tp: {=bool:?}, spp: {=bool:?}, dwp: {=bool:?}, stra: {=bool:?}, crma: {=bool:?}, bma: {=bool:?} }}" , self . wbch () , self . wgch () , self . wrch () , self . prba () , self . dt () , self . gct () , self . shra () , self . bcp () , self . bba () , self . lnip () , self . tp () , self . spp () , self . dwp () , self . stra () , self . crma () , self . bma ())
         }
     }
     #[doc = "Ltdc Global Configuration 2 Register."]
@@ -2631,7 +2463,6 @@ pub mod regs {
     pub struct Gc2r(pub u32);
     impl Gc2r {
         #[doc = "Background Layer Ability (Pixels Of Background Layer Are Read From Memory)."]
-        #[must_use]
         #[inline(always)]
         pub const fn bla(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -2639,11 +2470,10 @@ pub mod regs {
         }
         #[doc = "Background Layer Ability (Pixels Of Background Layer Are Read From Memory)."]
         #[inline(always)]
-        pub const fn set_bla(&mut self, val: bool) {
+        pub fn set_bla(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "Slave Timings Synchronization Ability."]
-        #[must_use]
         #[inline(always)]
         pub const fn stsa(&self) -> bool {
             let val = (self.0 >> 1usize) & 0x01;
@@ -2651,11 +2481,10 @@ pub mod regs {
         }
         #[doc = "Slave Timings Synchronization Ability."]
         #[inline(always)]
-        pub const fn set_stsa(&mut self, val: bool) {
+        pub fn set_stsa(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
         }
         #[doc = "Dual-View Ability."]
-        #[must_use]
         #[inline(always)]
         pub const fn dva(&self) -> bool {
             let val = (self.0 >> 2usize) & 0x01;
@@ -2663,11 +2492,10 @@ pub mod regs {
         }
         #[doc = "Dual-View Ability."]
         #[inline(always)]
-        pub const fn set_dva(&mut self, val: bool) {
+        pub fn set_dva(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
         }
         #[doc = "Secondary Rgb Output Port Ability."]
-        #[must_use]
         #[inline(always)]
         pub const fn dpa(&self) -> bool {
             let val = (self.0 >> 3usize) & 0x01;
@@ -2675,11 +2503,10 @@ pub mod regs {
         }
         #[doc = "Secondary Rgb Output Port Ability."]
         #[inline(always)]
-        pub const fn set_dpa(&mut self, val: bool) {
+        pub fn set_dpa(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
         }
         #[doc = "Bus Width (Log2 Of Number Of Bytes)."]
-        #[must_use]
         #[inline(always)]
         pub const fn bw(&self) -> super::vals::Bw {
             let val = (self.0 >> 4usize) & 0x07;
@@ -2687,11 +2514,10 @@ pub mod regs {
         }
         #[doc = "Bus Width (Log2 Of Number Of Bytes)."]
         #[inline(always)]
-        pub const fn set_bw(&mut self, val: super::vals::Bw) {
+        pub fn set_bw(&mut self, val: super::vals::Bw) {
             self.0 = (self.0 & !(0x07 << 4usize)) | (((val.to_bits() as u32) & 0x07) << 4usize);
         }
         #[doc = "External Display Control Ability."]
-        #[must_use]
         #[inline(always)]
         pub const fn edca(&self) -> bool {
             let val = (self.0 >> 7usize) & 0x01;
@@ -2699,11 +2525,10 @@ pub mod regs {
         }
         #[doc = "External Display Control Ability."]
         #[inline(always)]
-        pub const fn set_edca(&mut self, val: bool) {
+        pub fn set_edca(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
         }
         #[doc = "Output Conversion Ability (Rgb To Ycbcr)."]
-        #[must_use]
         #[inline(always)]
         pub const fn oca(&self) -> bool {
             let val = (self.0 >> 8usize) & 0x01;
@@ -2711,11 +2536,10 @@ pub mod regs {
         }
         #[doc = "Output Conversion Ability (Rgb To Ycbcr)."]
         #[inline(always)]
-        pub const fn set_oca(&mut self, val: bool) {
+        pub fn set_oca(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
         }
         #[doc = "Axiid Ability."]
-        #[must_use]
         #[inline(always)]
         pub const fn axiida(&self) -> bool {
             let val = (self.0 >> 9usize) & 0x01;
@@ -2723,11 +2547,10 @@ pub mod regs {
         }
         #[doc = "Axiid Ability."]
         #[inline(always)]
-        pub const fn set_axiida(&mut self, val: bool) {
+        pub fn set_axiida(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
         }
         #[doc = "Rotation Support Ability."]
-        #[must_use]
         #[inline(always)]
         pub const fn rota(&self) -> bool {
             let val = (self.0 >> 10usize) & 0x01;
@@ -2735,11 +2558,10 @@ pub mod regs {
         }
         #[doc = "Rotation Support Ability."]
         #[inline(always)]
-        pub const fn set_rota(&mut self, val: bool) {
+        pub fn set_rota(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
         }
         #[doc = "Second Interrupt Set Ability."]
-        #[must_use]
         #[inline(always)]
         pub const fn sisa(&self) -> bool {
             let val = (self.0 >> 11usize) & 0x01;
@@ -2747,11 +2569,10 @@ pub mod regs {
         }
         #[doc = "Second Interrupt Set Ability."]
         #[inline(always)]
-        pub const fn set_sisa(&mut self, val: bool) {
+        pub fn set_sisa(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
         }
         #[doc = "Single Frame Mode Ability."]
-        #[must_use]
         #[inline(always)]
         pub const fn sfa(&self) -> bool {
             let val = (self.0 >> 12usize) & 0x01;
@@ -2759,11 +2580,10 @@ pub mod regs {
         }
         #[doc = "Single Frame Mode Ability."]
         #[inline(always)]
-        pub const fn set_sfa(&mut self, val: bool) {
+        pub fn set_sfa(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
         }
         #[doc = "Crc Ability."]
-        #[must_use]
         #[inline(always)]
         pub const fn crca(&self) -> super::vals::Crca {
             let val = (self.0 >> 13usize) & 0x01;
@@ -2771,11 +2591,10 @@ pub mod regs {
         }
         #[doc = "Crc Ability."]
         #[inline(always)]
-        pub const fn set_crca(&mut self, val: super::vals::Crca) {
+        pub fn set_crca(&mut self, val: super::vals::Crca) {
             self.0 = (self.0 & !(0x01 << 13usize)) | (((val.to_bits() as u32) & 0x01) << 13usize);
         }
         #[doc = "Blending Order Ability."]
-        #[must_use]
         #[inline(always)]
         pub const fn boa(&self) -> super::vals::Boa {
             let val = (self.0 >> 15usize) & 0x01;
@@ -2783,7 +2602,7 @@ pub mod regs {
         }
         #[doc = "Blending Order Ability."]
         #[inline(always)]
-        pub const fn set_boa(&mut self, val: super::vals::Boa) {
+        pub fn set_boa(&mut self, val: super::vals::Boa) {
             self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
         }
     }
@@ -2815,23 +2634,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Gc2r {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Gc2r {{ bla: {=bool:?}, stsa: {=bool:?}, dva: {=bool:?}, dpa: {=bool:?}, bw: {:?}, edca: {=bool:?}, oca: {=bool:?}, axiida: {=bool:?}, rota: {=bool:?}, sisa: {=bool:?}, sfa: {=bool:?}, crca: {:?}, boa: {:?} }}",
-                self.bla(),
-                self.stsa(),
-                self.dva(),
-                self.dpa(),
-                self.bw(),
-                self.edca(),
-                self.oca(),
-                self.axiida(),
-                self.rota(),
-                self.sisa(),
-                self.sfa(),
-                self.crca(),
-                self.boa()
-            )
+            defmt :: write ! (f , "Gc2r {{ bla: {=bool:?}, stsa: {=bool:?}, dva: {=bool:?}, dpa: {=bool:?}, bw: {:?}, edca: {=bool:?}, oca: {=bool:?}, axiida: {=bool:?}, rota: {=bool:?}, sisa: {=bool:?}, sfa: {=bool:?}, crca: {:?}, boa: {:?} }}" , self . bla () , self . stsa () , self . dva () , self . dpa () , self . bw () , self . edca () , self . oca () , self . axiida () , self . rota () , self . sisa () , self . sfa () , self . crca () , self . boa ())
         }
     }
     #[doc = "Ltdc Gamma Correction Configuration Register."]
@@ -2840,7 +2643,6 @@ pub mod regs {
     pub struct Gccr(pub u32);
     impl Gccr {
         #[doc = "Address Of The R,G,B Table Where The Comp Component Is Written."]
-        #[must_use]
         #[inline(always)]
         pub const fn addr(&self) -> u8 {
             let val = (self.0 >> 0usize) & 0xff;
@@ -2848,11 +2650,10 @@ pub mod regs {
         }
         #[doc = "Address Of The R,G,B Table Where The Comp Component Is Written."]
         #[inline(always)]
-        pub const fn set_addr(&mut self, val: u8) {
+        pub fn set_addr(&mut self, val: u8) {
             self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
         }
         #[doc = "Color Component To Be Written, In Either (Or All) The R,G,B Tables."]
-        #[must_use]
         #[inline(always)]
         pub const fn comp(&self) -> u8 {
             let val = (self.0 >> 8usize) & 0xff;
@@ -2860,11 +2661,10 @@ pub mod regs {
         }
         #[doc = "Color Component To Be Written, In Either (Or All) The R,G,B Tables."]
         #[inline(always)]
-        pub const fn set_comp(&mut self, val: u8) {
+        pub fn set_comp(&mut self, val: u8) {
             self.0 = (self.0 & !(0xff << 8usize)) | (((val as u32) & 0xff) << 8usize);
         }
         #[doc = "Write Trigger To The Blue Table."]
-        #[must_use]
         #[inline(always)]
         pub const fn blueen(&self) -> bool {
             let val = (self.0 >> 16usize) & 0x01;
@@ -2872,11 +2672,10 @@ pub mod regs {
         }
         #[doc = "Write Trigger To The Blue Table."]
         #[inline(always)]
-        pub const fn set_blueen(&mut self, val: bool) {
+        pub fn set_blueen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
         }
         #[doc = "Write Trigger To The Green Table."]
-        #[must_use]
         #[inline(always)]
         pub const fn greenen(&self) -> bool {
             let val = (self.0 >> 17usize) & 0x01;
@@ -2884,11 +2683,10 @@ pub mod regs {
         }
         #[doc = "Write Trigger To The Green Table."]
         #[inline(always)]
-        pub const fn set_greenen(&mut self, val: bool) {
+        pub fn set_greenen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
         }
         #[doc = "Write Trigger To The Red Table."]
-        #[must_use]
         #[inline(always)]
         pub const fn reden(&self) -> bool {
             let val = (self.0 >> 18usize) & 0x01;
@@ -2896,7 +2694,7 @@ pub mod regs {
         }
         #[doc = "Write Trigger To The Red Table."]
         #[inline(always)]
-        pub const fn set_reden(&mut self, val: bool) {
+        pub fn set_reden(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
         }
     }
@@ -2937,7 +2735,6 @@ pub mod regs {
     pub struct Gcr(pub u32);
     impl Gcr {
         #[doc = "Ltdc Global Enable."]
-        #[must_use]
         #[inline(always)]
         pub const fn ltdcen(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -2945,11 +2742,10 @@ pub mod regs {
         }
         #[doc = "Ltdc Global Enable."]
         #[inline(always)]
-        pub const fn set_ltdcen(&mut self, val: bool) {
+        pub fn set_ltdcen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "Gamma Correction Enable."]
-        #[must_use]
         #[inline(always)]
         pub const fn gamen(&self) -> bool {
             let val = (self.0 >> 1usize) & 0x01;
@@ -2957,11 +2753,10 @@ pub mod regs {
         }
         #[doc = "Gamma Correction Enable."]
         #[inline(always)]
-        pub const fn set_gamen(&mut self, val: bool) {
+        pub fn set_gamen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
         }
         #[doc = "Dither Blue Width."]
-        #[must_use]
         #[inline(always)]
         pub const fn dbw(&self) -> u8 {
             let val = (self.0 >> 4usize) & 0x07;
@@ -2969,11 +2764,10 @@ pub mod regs {
         }
         #[doc = "Dither Blue Width."]
         #[inline(always)]
-        pub const fn set_dbw(&mut self, val: u8) {
+        pub fn set_dbw(&mut self, val: u8) {
             self.0 = (self.0 & !(0x07 << 4usize)) | (((val as u32) & 0x07) << 4usize);
         }
         #[doc = "Dither Green Width."]
-        #[must_use]
         #[inline(always)]
         pub const fn dgw(&self) -> u8 {
             let val = (self.0 >> 8usize) & 0x07;
@@ -2981,11 +2775,10 @@ pub mod regs {
         }
         #[doc = "Dither Green Width."]
         #[inline(always)]
-        pub const fn set_dgw(&mut self, val: u8) {
+        pub fn set_dgw(&mut self, val: u8) {
             self.0 = (self.0 & !(0x07 << 8usize)) | (((val as u32) & 0x07) << 8usize);
         }
         #[doc = "Dither Red Width."]
-        #[must_use]
         #[inline(always)]
         pub const fn drw(&self) -> u8 {
             let val = (self.0 >> 12usize) & 0x07;
@@ -2993,11 +2786,10 @@ pub mod regs {
         }
         #[doc = "Dither Red Width."]
         #[inline(always)]
-        pub const fn set_drw(&mut self, val: u8) {
+        pub fn set_drw(&mut self, val: u8) {
             self.0 = (self.0 & !(0x07 << 12usize)) | (((val as u32) & 0x07) << 12usize);
         }
         #[doc = "Dither Enable."]
-        #[must_use]
         #[inline(always)]
         pub const fn den(&self) -> bool {
             let val = (self.0 >> 16usize) & 0x01;
@@ -3005,11 +2797,10 @@ pub mod regs {
         }
         #[doc = "Dither Enable."]
         #[inline(always)]
-        pub const fn set_den(&mut self, val: bool) {
+        pub fn set_den(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
         }
         #[doc = "Crc Enable."]
-        #[must_use]
         #[inline(always)]
         pub const fn crcen(&self) -> bool {
             let val = (self.0 >> 19usize) & 0x01;
@@ -3017,11 +2808,10 @@ pub mod regs {
         }
         #[doc = "Crc Enable."]
         #[inline(always)]
-        pub const fn set_crcen(&mut self, val: bool) {
+        pub fn set_crcen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
         }
         #[doc = "Single-Frame Mode: Mode Enable."]
-        #[must_use]
         #[inline(always)]
         pub const fn sfen(&self) -> bool {
             let val = (self.0 >> 24usize) & 0x01;
@@ -3029,11 +2819,10 @@ pub mod regs {
         }
         #[doc = "Single-Frame Mode: Mode Enable."]
         #[inline(always)]
-        pub const fn set_sfen(&mut self, val: bool) {
+        pub fn set_sfen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
         }
         #[doc = "Single-Frame Mode: Software Trigger."]
-        #[must_use]
         #[inline(always)]
         pub const fn sfswtr(&self) -> super::vals::Sfswtr {
             let val = (self.0 >> 25usize) & 0x01;
@@ -3041,11 +2830,10 @@ pub mod regs {
         }
         #[doc = "Single-Frame Mode: Software Trigger."]
         #[inline(always)]
-        pub const fn set_sfswtr(&mut self, val: super::vals::Sfswtr) {
+        pub fn set_sfswtr(&mut self, val: super::vals::Sfswtr) {
             self.0 = (self.0 & !(0x01 << 25usize)) | (((val.to_bits() as u32) & 0x01) << 25usize);
         }
         #[doc = "Pixel Clock Polarity."]
-        #[must_use]
         #[inline(always)]
         pub const fn pcpol(&self) -> super::vals::Pcpol {
             let val = (self.0 >> 28usize) & 0x01;
@@ -3053,11 +2841,10 @@ pub mod regs {
         }
         #[doc = "Pixel Clock Polarity."]
         #[inline(always)]
-        pub const fn set_pcpol(&mut self, val: super::vals::Pcpol) {
+        pub fn set_pcpol(&mut self, val: super::vals::Pcpol) {
             self.0 = (self.0 & !(0x01 << 28usize)) | (((val.to_bits() as u32) & 0x01) << 28usize);
         }
         #[doc = "Blanking (No Data/Pixel) Polarity."]
-        #[must_use]
         #[inline(always)]
         pub const fn depol(&self) -> super::vals::Depol {
             let val = (self.0 >> 29usize) & 0x01;
@@ -3065,11 +2852,10 @@ pub mod regs {
         }
         #[doc = "Blanking (No Data/Pixel) Polarity."]
         #[inline(always)]
-        pub const fn set_depol(&mut self, val: super::vals::Depol) {
+        pub fn set_depol(&mut self, val: super::vals::Depol) {
             self.0 = (self.0 & !(0x01 << 29usize)) | (((val.to_bits() as u32) & 0x01) << 29usize);
         }
         #[doc = "Vertical Synchronization Polarity."]
-        #[must_use]
         #[inline(always)]
         pub const fn vspol(&self) -> super::vals::Vspol {
             let val = (self.0 >> 30usize) & 0x01;
@@ -3077,11 +2863,10 @@ pub mod regs {
         }
         #[doc = "Vertical Synchronization Polarity."]
         #[inline(always)]
-        pub const fn set_vspol(&mut self, val: super::vals::Vspol) {
+        pub fn set_vspol(&mut self, val: super::vals::Vspol) {
             self.0 = (self.0 & !(0x01 << 30usize)) | (((val.to_bits() as u32) & 0x01) << 30usize);
         }
         #[doc = "Horizontal Synchronization Polarity."]
-        #[must_use]
         #[inline(always)]
         pub const fn hspol(&self) -> super::vals::Hspol {
             let val = (self.0 >> 31usize) & 0x01;
@@ -3089,7 +2874,7 @@ pub mod regs {
         }
         #[doc = "Horizontal Synchronization Polarity."]
         #[inline(always)]
-        pub const fn set_hspol(&mut self, val: super::vals::Hspol) {
+        pub fn set_hspol(&mut self, val: super::vals::Hspol) {
             self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
         }
     }
@@ -3121,23 +2906,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Gcr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Gcr {{ ltdcen: {=bool:?}, gamen: {=bool:?}, dbw: {=u8:?}, dgw: {=u8:?}, drw: {=u8:?}, den: {=bool:?}, crcen: {=bool:?}, sfen: {=bool:?}, sfswtr: {:?}, pcpol: {:?}, depol: {:?}, vspol: {:?}, hspol: {:?} }}",
-                self.ltdcen(),
-                self.gamen(),
-                self.dbw(),
-                self.dgw(),
-                self.drw(),
-                self.den(),
-                self.crcen(),
-                self.sfen(),
-                self.sfswtr(),
-                self.pcpol(),
-                self.depol(),
-                self.vspol(),
-                self.hspol()
-            )
+            defmt :: write ! (f , "Gcr {{ ltdcen: {=bool:?}, gamen: {=bool:?}, dbw: {=u8:?}, dgw: {=u8:?}, drw: {=u8:?}, den: {=bool:?}, crcen: {=bool:?}, sfen: {=bool:?}, sfswtr: {:?}, pcpol: {:?}, depol: {:?}, vspol: {:?}, hspol: {:?} }}" , self . ltdcen () , self . gamen () , self . dbw () , self . dgw () , self . drw () , self . den () , self . crcen () , self . sfen () , self . sfswtr () , self . pcpol () , self . depol () , self . vspol () , self . hspol ())
         }
     }
     #[doc = "Ltdc Interrupt Clear Register."]
@@ -3146,7 +2915,6 @@ pub mod regs {
     pub struct Icr(pub u32);
     impl Icr {
         #[doc = "Clears The Line Interrupt Flag."]
-        #[must_use]
         #[inline(always)]
         pub const fn clif(&self) -> super::vals::Clif {
             let val = (self.0 >> 0usize) & 0x01;
@@ -3154,11 +2922,10 @@ pub mod regs {
         }
         #[doc = "Clears The Line Interrupt Flag."]
         #[inline(always)]
-        pub const fn set_clif(&mut self, val: super::vals::Clif) {
+        pub fn set_clif(&mut self, val: super::vals::Clif) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
         }
         #[doc = "Clears The Fifo Underrun Warning Interrupt Flag."]
-        #[must_use]
         #[inline(always)]
         pub const fn cfuwif(&self) -> super::vals::Cfuwif {
             let val = (self.0 >> 1usize) & 0x01;
@@ -3166,11 +2933,10 @@ pub mod regs {
         }
         #[doc = "Clears The Fifo Underrun Warning Interrupt Flag."]
         #[inline(always)]
-        pub const fn set_cfuwif(&mut self, val: super::vals::Cfuwif) {
+        pub fn set_cfuwif(&mut self, val: super::vals::Cfuwif) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
         }
         #[doc = "Clears The Transfer Error Interrupt Flag."]
-        #[must_use]
         #[inline(always)]
         pub const fn cterrif(&self) -> super::vals::Cterrif {
             let val = (self.0 >> 2usize) & 0x01;
@@ -3178,11 +2944,10 @@ pub mod regs {
         }
         #[doc = "Clears The Transfer Error Interrupt Flag."]
         #[inline(always)]
-        pub const fn set_cterrif(&mut self, val: super::vals::Cterrif) {
+        pub fn set_cterrif(&mut self, val: super::vals::Cterrif) {
             self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
         }
         #[doc = "Clears Register Reload Interrupt Flag."]
-        #[must_use]
         #[inline(always)]
         pub const fn crrif(&self) -> super::vals::Crrif {
             let val = (self.0 >> 3usize) & 0x01;
@@ -3190,11 +2955,10 @@ pub mod regs {
         }
         #[doc = "Clears Register Reload Interrupt Flag."]
         #[inline(always)]
-        pub const fn set_crrif(&mut self, val: super::vals::Crrif) {
+        pub fn set_crrif(&mut self, val: super::vals::Crrif) {
             self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
         }
         #[doc = "Clears The Fifo Underrun Interrupt Flag."]
-        #[must_use]
         #[inline(always)]
         pub const fn cfuif(&self) -> super::vals::Cfuif {
             let val = (self.0 >> 6usize) & 0x01;
@@ -3202,11 +2966,10 @@ pub mod regs {
         }
         #[doc = "Clears The Fifo Underrun Interrupt Flag."]
         #[inline(always)]
-        pub const fn set_cfuif(&mut self, val: super::vals::Cfuif) {
+        pub fn set_cfuif(&mut self, val: super::vals::Cfuif) {
             self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
         }
         #[doc = "Clears The Crc Error Interrupt Flag."]
-        #[must_use]
         #[inline(always)]
         pub const fn ccrcif(&self) -> super::vals::Ccrcif {
             let val = (self.0 >> 7usize) & 0x01;
@@ -3214,7 +2977,7 @@ pub mod regs {
         }
         #[doc = "Clears The Crc Error Interrupt Flag."]
         #[inline(always)]
-        pub const fn set_ccrcif(&mut self, val: super::vals::Ccrcif) {
+        pub fn set_ccrcif(&mut self, val: super::vals::Ccrcif) {
             self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u32) & 0x01) << 7usize);
         }
     }
@@ -3257,7 +3020,6 @@ pub mod regs {
     pub struct Icr2(pub u32);
     impl Icr2 {
         #[doc = "Clears The Line Interrupt Flag."]
-        #[must_use]
         #[inline(always)]
         pub const fn clif(&self) -> super::vals::Clif {
             let val = (self.0 >> 0usize) & 0x01;
@@ -3265,11 +3027,10 @@ pub mod regs {
         }
         #[doc = "Clears The Line Interrupt Flag."]
         #[inline(always)]
-        pub const fn set_clif(&mut self, val: super::vals::Clif) {
+        pub fn set_clif(&mut self, val: super::vals::Clif) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
         }
         #[doc = "Clears The Fifo Underrun Warning Interrupt Flag."]
-        #[must_use]
         #[inline(always)]
         pub const fn cfuwif(&self) -> super::vals::Cfuwif {
             let val = (self.0 >> 1usize) & 0x01;
@@ -3277,11 +3038,10 @@ pub mod regs {
         }
         #[doc = "Clears The Fifo Underrun Warning Interrupt Flag."]
         #[inline(always)]
-        pub const fn set_cfuwif(&mut self, val: super::vals::Cfuwif) {
+        pub fn set_cfuwif(&mut self, val: super::vals::Cfuwif) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
         }
         #[doc = "Clears The Transfer Error Interrupt Flag."]
-        #[must_use]
         #[inline(always)]
         pub const fn cterrif(&self) -> super::vals::Cterrif {
             let val = (self.0 >> 2usize) & 0x01;
@@ -3289,11 +3049,10 @@ pub mod regs {
         }
         #[doc = "Clears The Transfer Error Interrupt Flag."]
         #[inline(always)]
-        pub const fn set_cterrif(&mut self, val: super::vals::Cterrif) {
+        pub fn set_cterrif(&mut self, val: super::vals::Cterrif) {
             self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
         }
         #[doc = "Clears Register Reload Interrupt Flag."]
-        #[must_use]
         #[inline(always)]
         pub const fn crrif(&self) -> super::vals::Crrif {
             let val = (self.0 >> 3usize) & 0x01;
@@ -3301,11 +3060,10 @@ pub mod regs {
         }
         #[doc = "Clears Register Reload Interrupt Flag."]
         #[inline(always)]
-        pub const fn set_crrif(&mut self, val: super::vals::Crrif) {
+        pub fn set_crrif(&mut self, val: super::vals::Crrif) {
             self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
         }
         #[doc = "Clears The Fifo Underrun Interrupt Flag."]
-        #[must_use]
         #[inline(always)]
         pub const fn cfuif(&self) -> super::vals::Cfuif {
             let val = (self.0 >> 6usize) & 0x01;
@@ -3313,11 +3071,10 @@ pub mod regs {
         }
         #[doc = "Clears The Fifo Underrun Interrupt Flag."]
         #[inline(always)]
-        pub const fn set_cfuif(&mut self, val: super::vals::Cfuif) {
+        pub fn set_cfuif(&mut self, val: super::vals::Cfuif) {
             self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
         }
         #[doc = "Clears The Crc Error Interrupt Flag."]
-        #[must_use]
         #[inline(always)]
         pub const fn ccrcif(&self) -> super::vals::Ccrcif {
             let val = (self.0 >> 7usize) & 0x01;
@@ -3325,7 +3082,7 @@ pub mod regs {
         }
         #[doc = "Clears The Crc Error Interrupt Flag."]
         #[inline(always)]
-        pub const fn set_ccrcif(&mut self, val: super::vals::Ccrcif) {
+        pub fn set_ccrcif(&mut self, val: super::vals::Ccrcif) {
             self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u32) & 0x01) << 7usize);
         }
     }
@@ -3368,7 +3125,6 @@ pub mod regs {
     pub struct Ier(pub u32);
     impl Ier {
         #[doc = "Line Interrupt Enable."]
-        #[must_use]
         #[inline(always)]
         pub const fn lie(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -3376,11 +3132,10 @@ pub mod regs {
         }
         #[doc = "Line Interrupt Enable."]
         #[inline(always)]
-        pub const fn set_lie(&mut self, val: bool) {
+        pub fn set_lie(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "Fifo Underrun Warning Interrupt Enable."]
-        #[must_use]
         #[inline(always)]
         pub const fn fuwie(&self) -> bool {
             let val = (self.0 >> 1usize) & 0x01;
@@ -3388,11 +3143,10 @@ pub mod regs {
         }
         #[doc = "Fifo Underrun Warning Interrupt Enable."]
         #[inline(always)]
-        pub const fn set_fuwie(&mut self, val: bool) {
+        pub fn set_fuwie(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
         }
         #[doc = "Transfer Error Interrupt Enable."]
-        #[must_use]
         #[inline(always)]
         pub const fn terrie(&self) -> bool {
             let val = (self.0 >> 2usize) & 0x01;
@@ -3400,11 +3154,10 @@ pub mod regs {
         }
         #[doc = "Transfer Error Interrupt Enable."]
         #[inline(always)]
-        pub const fn set_terrie(&mut self, val: bool) {
+        pub fn set_terrie(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
         }
         #[doc = "Register Reload Interrupt Enable."]
-        #[must_use]
         #[inline(always)]
         pub const fn rrie(&self) -> bool {
             let val = (self.0 >> 3usize) & 0x01;
@@ -3412,11 +3165,10 @@ pub mod regs {
         }
         #[doc = "Register Reload Interrupt Enable."]
         #[inline(always)]
-        pub const fn set_rrie(&mut self, val: bool) {
+        pub fn set_rrie(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
         }
         #[doc = "Fifo Underrun Interrupt Enable."]
-        #[must_use]
         #[inline(always)]
         pub const fn fuie(&self) -> bool {
             let val = (self.0 >> 6usize) & 0x01;
@@ -3424,11 +3176,10 @@ pub mod regs {
         }
         #[doc = "Fifo Underrun Interrupt Enable."]
         #[inline(always)]
-        pub const fn set_fuie(&mut self, val: bool) {
+        pub fn set_fuie(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
         }
         #[doc = "Crc Error Interrupt Enable."]
-        #[must_use]
         #[inline(always)]
         pub const fn crcie(&self) -> bool {
             let val = (self.0 >> 7usize) & 0x01;
@@ -3436,7 +3187,7 @@ pub mod regs {
         }
         #[doc = "Crc Error Interrupt Enable."]
         #[inline(always)]
-        pub const fn set_crcie(&mut self, val: bool) {
+        pub fn set_crcie(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
         }
     }
@@ -3461,16 +3212,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Ier {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Ier {{ lie: {=bool:?}, fuwie: {=bool:?}, terrie: {=bool:?}, rrie: {=bool:?}, fuie: {=bool:?}, crcie: {=bool:?} }}",
-                self.lie(),
-                self.fuwie(),
-                self.terrie(),
-                self.rrie(),
-                self.fuie(),
-                self.crcie()
-            )
+            defmt :: write ! (f , "Ier {{ lie: {=bool:?}, fuwie: {=bool:?}, terrie: {=bool:?}, rrie: {=bool:?}, fuie: {=bool:?}, crcie: {=bool:?} }}" , self . lie () , self . fuwie () , self . terrie () , self . rrie () , self . fuie () , self . crcie ())
         }
     }
     #[doc = "Ltdc Interrupt Enable Register 2."]
@@ -3479,7 +3221,6 @@ pub mod regs {
     pub struct Ier2(pub u32);
     impl Ier2 {
         #[doc = "Line Interrupt Enable."]
-        #[must_use]
         #[inline(always)]
         pub const fn lie(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -3487,11 +3228,10 @@ pub mod regs {
         }
         #[doc = "Line Interrupt Enable."]
         #[inline(always)]
-        pub const fn set_lie(&mut self, val: bool) {
+        pub fn set_lie(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "Fifo Underrun Warning Interrupt Enable."]
-        #[must_use]
         #[inline(always)]
         pub const fn fuwie(&self) -> bool {
             let val = (self.0 >> 1usize) & 0x01;
@@ -3499,11 +3239,10 @@ pub mod regs {
         }
         #[doc = "Fifo Underrun Warning Interrupt Enable."]
         #[inline(always)]
-        pub const fn set_fuwie(&mut self, val: bool) {
+        pub fn set_fuwie(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
         }
         #[doc = "Transfer Error Interrupt Enable."]
-        #[must_use]
         #[inline(always)]
         pub const fn terrie(&self) -> bool {
             let val = (self.0 >> 2usize) & 0x01;
@@ -3511,11 +3250,10 @@ pub mod regs {
         }
         #[doc = "Transfer Error Interrupt Enable."]
         #[inline(always)]
-        pub const fn set_terrie(&mut self, val: bool) {
+        pub fn set_terrie(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
         }
         #[doc = "Register Reload Interrupt Enable."]
-        #[must_use]
         #[inline(always)]
         pub const fn rrie(&self) -> bool {
             let val = (self.0 >> 3usize) & 0x01;
@@ -3523,11 +3261,10 @@ pub mod regs {
         }
         #[doc = "Register Reload Interrupt Enable."]
         #[inline(always)]
-        pub const fn set_rrie(&mut self, val: bool) {
+        pub fn set_rrie(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
         }
         #[doc = "Fifo Underrun Interrupt Enable."]
-        #[must_use]
         #[inline(always)]
         pub const fn fuie(&self) -> bool {
             let val = (self.0 >> 6usize) & 0x01;
@@ -3535,11 +3272,10 @@ pub mod regs {
         }
         #[doc = "Fifo Underrun Interrupt Enable."]
         #[inline(always)]
-        pub const fn set_fuie(&mut self, val: bool) {
+        pub fn set_fuie(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
         }
         #[doc = "Crc Error Interrupt Enable."]
-        #[must_use]
         #[inline(always)]
         pub const fn crcie(&self) -> bool {
             let val = (self.0 >> 7usize) & 0x01;
@@ -3547,7 +3283,7 @@ pub mod regs {
         }
         #[doc = "Crc Error Interrupt Enable."]
         #[inline(always)]
-        pub const fn set_crcie(&mut self, val: bool) {
+        pub fn set_crcie(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
         }
     }
@@ -3572,16 +3308,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Ier2 {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Ier2 {{ lie: {=bool:?}, fuwie: {=bool:?}, terrie: {=bool:?}, rrie: {=bool:?}, fuie: {=bool:?}, crcie: {=bool:?} }}",
-                self.lie(),
-                self.fuwie(),
-                self.terrie(),
-                self.rrie(),
-                self.fuie(),
-                self.crcie()
-            )
+            defmt :: write ! (f , "Ier2 {{ lie: {=bool:?}, fuwie: {=bool:?}, terrie: {=bool:?}, rrie: {=bool:?}, fuie: {=bool:?}, crcie: {=bool:?} }}" , self . lie () , self . fuwie () , self . terrie () , self . rrie () , self . fuie () , self . crcie ())
         }
     }
     #[doc = "Ltdc Interrupt Status Register."]
@@ -3590,7 +3317,6 @@ pub mod regs {
     pub struct Isr(pub u32);
     impl Isr {
         #[doc = "Line Interrupt Flag."]
-        #[must_use]
         #[inline(always)]
         pub const fn lif(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -3598,11 +3324,10 @@ pub mod regs {
         }
         #[doc = "Line Interrupt Flag."]
         #[inline(always)]
-        pub const fn set_lif(&mut self, val: bool) {
+        pub fn set_lif(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "Fifo Underrun Warning Interrupt Flag."]
-        #[must_use]
         #[inline(always)]
         pub const fn fuwif(&self) -> bool {
             let val = (self.0 >> 1usize) & 0x01;
@@ -3610,11 +3335,10 @@ pub mod regs {
         }
         #[doc = "Fifo Underrun Warning Interrupt Flag."]
         #[inline(always)]
-        pub const fn set_fuwif(&mut self, val: bool) {
+        pub fn set_fuwif(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
         }
         #[doc = "Transfer Error Interrupt Flag."]
-        #[must_use]
         #[inline(always)]
         pub const fn terrif(&self) -> bool {
             let val = (self.0 >> 2usize) & 0x01;
@@ -3622,11 +3346,10 @@ pub mod regs {
         }
         #[doc = "Transfer Error Interrupt Flag."]
         #[inline(always)]
-        pub const fn set_terrif(&mut self, val: bool) {
+        pub fn set_terrif(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
         }
         #[doc = "Register Reload Interrupt Flag."]
-        #[must_use]
         #[inline(always)]
         pub const fn rrif(&self) -> bool {
             let val = (self.0 >> 3usize) & 0x01;
@@ -3634,11 +3357,10 @@ pub mod regs {
         }
         #[doc = "Register Reload Interrupt Flag."]
         #[inline(always)]
-        pub const fn set_rrif(&mut self, val: bool) {
+        pub fn set_rrif(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
         }
         #[doc = "Fifo Underrun Interrupt Flag."]
-        #[must_use]
         #[inline(always)]
         pub const fn fuif(&self) -> bool {
             let val = (self.0 >> 6usize) & 0x01;
@@ -3646,11 +3368,10 @@ pub mod regs {
         }
         #[doc = "Fifo Underrun Interrupt Flag."]
         #[inline(always)]
-        pub const fn set_fuif(&mut self, val: bool) {
+        pub fn set_fuif(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
         }
         #[doc = "Crc Error Interrupt Flag."]
-        #[must_use]
         #[inline(always)]
         pub const fn crcif(&self) -> bool {
             let val = (self.0 >> 7usize) & 0x01;
@@ -3658,7 +3379,7 @@ pub mod regs {
         }
         #[doc = "Crc Error Interrupt Flag."]
         #[inline(always)]
-        pub const fn set_crcif(&mut self, val: bool) {
+        pub fn set_crcif(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
         }
     }
@@ -3683,16 +3404,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Isr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Isr {{ lif: {=bool:?}, fuwif: {=bool:?}, terrif: {=bool:?}, rrif: {=bool:?}, fuif: {=bool:?}, crcif: {=bool:?} }}",
-                self.lif(),
-                self.fuwif(),
-                self.terrif(),
-                self.rrif(),
-                self.fuif(),
-                self.crcif()
-            )
+            defmt :: write ! (f , "Isr {{ lif: {=bool:?}, fuwif: {=bool:?}, terrif: {=bool:?}, rrif: {=bool:?}, fuif: {=bool:?}, crcif: {=bool:?} }}" , self . lif () , self . fuwif () , self . terrif () , self . rrif () , self . fuif () , self . crcif ())
         }
     }
     #[doc = "Ltdc Interrupt Status Register 2."]
@@ -3701,7 +3413,6 @@ pub mod regs {
     pub struct Isr2(pub u32);
     impl Isr2 {
         #[doc = "Line Interrupt Flag."]
-        #[must_use]
         #[inline(always)]
         pub const fn lif(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -3709,11 +3420,10 @@ pub mod regs {
         }
         #[doc = "Line Interrupt Flag."]
         #[inline(always)]
-        pub const fn set_lif(&mut self, val: bool) {
+        pub fn set_lif(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "Fifo Underrun Warning Interrupt Flag."]
-        #[must_use]
         #[inline(always)]
         pub const fn fuwif(&self) -> bool {
             let val = (self.0 >> 1usize) & 0x01;
@@ -3721,11 +3431,10 @@ pub mod regs {
         }
         #[doc = "Fifo Underrun Warning Interrupt Flag."]
         #[inline(always)]
-        pub const fn set_fuwif(&mut self, val: bool) {
+        pub fn set_fuwif(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
         }
         #[doc = "Transfer Error Interrupt Flag."]
-        #[must_use]
         #[inline(always)]
         pub const fn terrif(&self) -> bool {
             let val = (self.0 >> 2usize) & 0x01;
@@ -3733,11 +3442,10 @@ pub mod regs {
         }
         #[doc = "Transfer Error Interrupt Flag."]
         #[inline(always)]
-        pub const fn set_terrif(&mut self, val: bool) {
+        pub fn set_terrif(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
         }
         #[doc = "Register Reload Interrupt Flag."]
-        #[must_use]
         #[inline(always)]
         pub const fn rrif(&self) -> bool {
             let val = (self.0 >> 3usize) & 0x01;
@@ -3745,11 +3453,10 @@ pub mod regs {
         }
         #[doc = "Register Reload Interrupt Flag."]
         #[inline(always)]
-        pub const fn set_rrif(&mut self, val: bool) {
+        pub fn set_rrif(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
         }
         #[doc = "Fifo Underrun Interrupt Flag."]
-        #[must_use]
         #[inline(always)]
         pub const fn fuif(&self) -> bool {
             let val = (self.0 >> 6usize) & 0x01;
@@ -3757,11 +3464,10 @@ pub mod regs {
         }
         #[doc = "Fifo Underrun Interrupt Flag."]
         #[inline(always)]
-        pub const fn set_fuif(&mut self, val: bool) {
+        pub fn set_fuif(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
         }
         #[doc = "Crc Error Interrupt Flag."]
-        #[must_use]
         #[inline(always)]
         pub const fn crcif(&self) -> bool {
             let val = (self.0 >> 7usize) & 0x01;
@@ -3769,7 +3475,7 @@ pub mod regs {
         }
         #[doc = "Crc Error Interrupt Flag."]
         #[inline(always)]
-        pub const fn set_crcif(&mut self, val: bool) {
+        pub fn set_crcif(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
         }
     }
@@ -3794,16 +3500,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Isr2 {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Isr2 {{ lif: {=bool:?}, fuwif: {=bool:?}, terrif: {=bool:?}, rrif: {=bool:?}, fuif: {=bool:?}, crcif: {=bool:?} }}",
-                self.lif(),
-                self.fuwif(),
-                self.terrif(),
-                self.rrif(),
-                self.fuif(),
-                self.crcif()
-            )
+            defmt :: write ! (f , "Isr2 {{ lif: {=bool:?}, fuwif: {=bool:?}, terrif: {=bool:?}, rrif: {=bool:?}, fuif: {=bool:?}, crcif: {=bool:?} }}" , self . lif () , self . fuwif () , self . terrif () , self . rrif () , self . fuif () , self . crcif ())
         }
     }
     #[doc = "Line Interrupt Position Configuration Register."]
@@ -3812,7 +3509,6 @@ pub mod regs {
     pub struct Lipcr(pub u32);
     impl Lipcr {
         #[doc = "Line Interrupt Position."]
-        #[must_use]
         #[inline(always)]
         pub const fn lipos(&self) -> u16 {
             let val = (self.0 >> 0usize) & 0xffff;
@@ -3820,7 +3516,7 @@ pub mod regs {
         }
         #[doc = "Line Interrupt Position."]
         #[inline(always)]
-        pub const fn set_lipos(&mut self, val: u16) {
+        pub fn set_lipos(&mut self, val: u16) {
             self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
         }
     }
@@ -3847,7 +3543,6 @@ pub mod regs {
     pub struct Lipcr2(pub u32);
     impl Lipcr2 {
         #[doc = "Line Interrupt Position."]
-        #[must_use]
         #[inline(always)]
         pub const fn lipos(&self) -> u16 {
             let val = (self.0 >> 0usize) & 0xffff;
@@ -3855,7 +3550,7 @@ pub mod regs {
         }
         #[doc = "Line Interrupt Position."]
         #[inline(always)]
-        pub const fn set_lipos(&mut self, val: u16) {
+        pub fn set_lipos(&mut self, val: u16) {
             self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
         }
     }
@@ -3882,7 +3577,6 @@ pub mod regs {
     pub struct Pcr(pub u32);
     impl Pcr {
         #[doc = "Ycbcr-To-Rgb Conversion Enable."]
-        #[must_use]
         #[inline(always)]
         pub const fn ycen(&self) -> bool {
             let val = (self.0 >> 3usize) & 0x01;
@@ -3890,11 +3584,10 @@ pub mod regs {
         }
         #[doc = "Ycbcr-To-Rgb Conversion Enable."]
         #[inline(always)]
-        pub const fn set_ycen(&mut self, val: bool) {
+        pub fn set_ycen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
         }
         #[doc = "Ycbcr Conversion Mode."]
-        #[must_use]
         #[inline(always)]
         pub const fn ycm(&self) -> super::vals::Ycm {
             let val = (self.0 >> 4usize) & 0x03;
@@ -3902,11 +3595,10 @@ pub mod regs {
         }
         #[doc = "Ycbcr Conversion Mode."]
         #[inline(always)]
-        pub const fn set_ycm(&mut self, val: super::vals::Ycm) {
+        pub fn set_ycm(&mut self, val: super::vals::Ycm) {
             self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
         }
         #[doc = "Y Component First."]
-        #[must_use]
         #[inline(always)]
         pub const fn yf(&self) -> bool {
             let val = (self.0 >> 6usize) & 0x01;
@@ -3914,11 +3606,10 @@ pub mod regs {
         }
         #[doc = "Y Component First."]
         #[inline(always)]
-        pub const fn set_yf(&mut self, val: bool) {
+        pub fn set_yf(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
         }
         #[doc = "Cb Component First."]
-        #[must_use]
         #[inline(always)]
         pub const fn cbf(&self) -> bool {
             let val = (self.0 >> 7usize) & 0x01;
@@ -3926,11 +3617,10 @@ pub mod regs {
         }
         #[doc = "Cb Component First."]
         #[inline(always)]
-        pub const fn set_cbf(&mut self, val: bool) {
+        pub fn set_cbf(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
         }
         #[doc = "Odd Pixel First."]
-        #[must_use]
         #[inline(always)]
         pub const fn of(&self) -> bool {
             let val = (self.0 >> 8usize) & 0x01;
@@ -3938,11 +3628,10 @@ pub mod regs {
         }
         #[doc = "Odd Pixel First."]
         #[inline(always)]
-        pub const fn set_of(&mut self, val: bool) {
+        pub fn set_of(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
         }
         #[doc = "Y Rescale Enable For The Color Dynamic Range."]
-        #[must_use]
         #[inline(always)]
         pub const fn yren(&self) -> bool {
             let val = (self.0 >> 9usize) & 0x01;
@@ -3950,7 +3639,7 @@ pub mod regs {
         }
         #[doc = "Y Rescale Enable For The Color Dynamic Range."]
         #[inline(always)]
-        pub const fn set_yren(&mut self, val: bool) {
+        pub fn set_yren(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
         }
     }
@@ -3993,7 +3682,6 @@ pub mod regs {
     pub struct Pfcr(pub u32);
     impl Pfcr {
         #[doc = "Pixel Format."]
-        #[must_use]
         #[inline(always)]
         pub const fn pf(&self) -> super::vals::Pf {
             let val = (self.0 >> 0usize) & 0x07;
@@ -4001,7 +3689,7 @@ pub mod regs {
         }
         #[doc = "Pixel Format."]
         #[inline(always)]
-        pub const fn set_pf(&mut self, val: super::vals::Pf) {
+        pub fn set_pf(&mut self, val: super::vals::Pf) {
             self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
         }
     }
@@ -4028,7 +3716,6 @@ pub mod regs {
     pub struct Rcr(pub u32);
     impl Rcr {
         #[doc = "Immediate Reload Trigger."]
-        #[must_use]
         #[inline(always)]
         pub const fn imr(&self) -> super::vals::Imr {
             let val = (self.0 >> 0usize) & 0x01;
@@ -4036,11 +3723,10 @@ pub mod regs {
         }
         #[doc = "Immediate Reload Trigger."]
         #[inline(always)]
-        pub const fn set_imr(&mut self, val: super::vals::Imr) {
+        pub fn set_imr(&mut self, val: super::vals::Imr) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
         }
         #[doc = "Vertical Blanking Reload Request."]
-        #[must_use]
         #[inline(always)]
         pub const fn vbr(&self) -> super::vals::Vbr {
             let val = (self.0 >> 1usize) & 0x01;
@@ -4048,11 +3734,10 @@ pub mod regs {
         }
         #[doc = "Vertical Blanking Reload Request."]
         #[inline(always)]
-        pub const fn set_vbr(&mut self, val: super::vals::Vbr) {
+        pub fn set_vbr(&mut self, val: super::vals::Vbr) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
         }
         #[doc = "Shadow Reload Control, Global (Centralized) Reload Masked."]
-        #[must_use]
         #[inline(always)]
         pub const fn grmsk(&self) -> super::vals::Grmsk {
             let val = (self.0 >> 2usize) & 0x01;
@@ -4060,7 +3745,7 @@ pub mod regs {
         }
         #[doc = "Shadow Reload Control, Global (Centralized) Reload Masked."]
         #[inline(always)]
-        pub const fn set_grmsk(&mut self, val: super::vals::Grmsk) {
+        pub fn set_grmsk(&mut self, val: super::vals::Grmsk) {
             self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
         }
     }
@@ -4097,7 +3782,6 @@ pub mod regs {
     pub struct Srcr(pub u32);
     impl Srcr {
         #[doc = "Immediate Reload Trigger."]
-        #[must_use]
         #[inline(always)]
         pub const fn imr(&self) -> super::vals::Imr {
             let val = (self.0 >> 0usize) & 0x01;
@@ -4105,11 +3789,10 @@ pub mod regs {
         }
         #[doc = "Immediate Reload Trigger."]
         #[inline(always)]
-        pub const fn set_imr(&mut self, val: super::vals::Imr) {
+        pub fn set_imr(&mut self, val: super::vals::Imr) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
         }
         #[doc = "Vertical Blanking Reload Request."]
-        #[must_use]
         #[inline(always)]
         pub const fn vbr(&self) -> super::vals::Vbr {
             let val = (self.0 >> 1usize) & 0x01;
@@ -4117,7 +3800,7 @@ pub mod regs {
         }
         #[doc = "Vertical Blanking Reload Request."]
         #[inline(always)]
-        pub const fn set_vbr(&mut self, val: super::vals::Vbr) {
+        pub fn set_vbr(&mut self, val: super::vals::Vbr) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
         }
     }
@@ -4147,7 +3830,6 @@ pub mod regs {
     pub struct Sscr(pub u32);
     impl Sscr {
         #[doc = "Vertical Synchronization Height (In Units Of Horizontal Scan Line)."]
-        #[must_use]
         #[inline(always)]
         pub const fn vsh(&self) -> u16 {
             let val = (self.0 >> 0usize) & 0xffff;
@@ -4155,11 +3837,10 @@ pub mod regs {
         }
         #[doc = "Vertical Synchronization Height (In Units Of Horizontal Scan Line)."]
         #[inline(always)]
-        pub const fn set_vsh(&mut self, val: u16) {
+        pub fn set_vsh(&mut self, val: u16) {
             self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
         }
         #[doc = "Horizontal Synchronization Width (In Units Of Pixel Clock Period)."]
-        #[must_use]
         #[inline(always)]
         pub const fn hsw(&self) -> u16 {
             let val = (self.0 >> 16usize) & 0xffff;
@@ -4167,7 +3848,7 @@ pub mod regs {
         }
         #[doc = "Horizontal Synchronization Width (In Units Of Pixel Clock Period)."]
         #[inline(always)]
-        pub const fn set_hsw(&mut self, val: u16) {
+        pub fn set_hsw(&mut self, val: u16) {
             self.0 = (self.0 & !(0xffff << 16usize)) | (((val as u32) & 0xffff) << 16usize);
         }
     }
@@ -4197,7 +3878,6 @@ pub mod regs {
     pub struct Twcr(pub u32);
     impl Twcr {
         #[doc = "Total Height (In Units Of Horizontal Scan Line)."]
-        #[must_use]
         #[inline(always)]
         pub const fn totalh(&self) -> u16 {
             let val = (self.0 >> 0usize) & 0xffff;
@@ -4205,11 +3885,10 @@ pub mod regs {
         }
         #[doc = "Total Height (In Units Of Horizontal Scan Line)."]
         #[inline(always)]
-        pub const fn set_totalh(&mut self, val: u16) {
+        pub fn set_totalh(&mut self, val: u16) {
             self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
         }
         #[doc = "Total Width (In Units Of Pixel Clock Period)."]
-        #[must_use]
         #[inline(always)]
         pub const fn totalw(&self) -> u16 {
             let val = (self.0 >> 16usize) & 0xffff;
@@ -4217,7 +3896,7 @@ pub mod regs {
         }
         #[doc = "Total Width (In Units Of Pixel Clock Period)."]
         #[inline(always)]
-        pub const fn set_totalw(&mut self, val: u16) {
+        pub fn set_totalw(&mut self, val: u16) {
             self.0 = (self.0 & !(0xffff << 16usize)) | (((val as u32) & 0xffff) << 16usize);
         }
     }
@@ -4252,7 +3931,6 @@ pub mod regs {
     pub struct Whpcr(pub u32);
     impl Whpcr {
         #[doc = "Window Horizontal Start Position."]
-        #[must_use]
         #[inline(always)]
         pub const fn whstpos(&self) -> u16 {
             let val = (self.0 >> 0usize) & 0xffff;
@@ -4260,11 +3938,10 @@ pub mod regs {
         }
         #[doc = "Window Horizontal Start Position."]
         #[inline(always)]
-        pub const fn set_whstpos(&mut self, val: u16) {
+        pub fn set_whstpos(&mut self, val: u16) {
             self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
         }
         #[doc = "Window Horizontal Stop Position."]
-        #[must_use]
         #[inline(always)]
         pub const fn whsppos(&self) -> u16 {
             let val = (self.0 >> 16usize) & 0xffff;
@@ -4272,7 +3949,7 @@ pub mod regs {
         }
         #[doc = "Window Horizontal Stop Position."]
         #[inline(always)]
-        pub const fn set_whsppos(&mut self, val: u16) {
+        pub fn set_whsppos(&mut self, val: u16) {
             self.0 = (self.0 & !(0xffff << 16usize)) | (((val as u32) & 0xffff) << 16usize);
         }
     }
@@ -4307,7 +3984,6 @@ pub mod regs {
     pub struct Wvpcr(pub u32);
     impl Wvpcr {
         #[doc = "Window Vertical Start Position."]
-        #[must_use]
         #[inline(always)]
         pub const fn wvstpos(&self) -> u16 {
             let val = (self.0 >> 0usize) & 0xffff;
@@ -4315,11 +3991,10 @@ pub mod regs {
         }
         #[doc = "Window Vertical Start Position."]
         #[inline(always)]
-        pub const fn set_wvstpos(&mut self, val: u16) {
+        pub fn set_wvstpos(&mut self, val: u16) {
             self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
         }
         #[doc = "Window Vertical Stop Position."]
-        #[must_use]
         #[inline(always)]
         pub const fn wvsppos(&self) -> u16 {
             let val = (self.0 >> 16usize) & 0xffff;
@@ -4327,7 +4002,7 @@ pub mod regs {
         }
         #[doc = "Window Vertical Stop Position."]
         #[inline(always)]
-        pub const fn set_wvsppos(&mut self, val: u16) {
+        pub fn set_wvsppos(&mut self, val: u16) {
             self.0 = (self.0 & !(0xffff << 16usize)) | (((val as u32) & 0xffff) << 16usize);
         }
     }
@@ -4367,10 +4042,10 @@ pub mod vals {
         _RESERVED_2 = 0x02,
         _RESERVED_3 = 0x03,
         #[doc = "constant alpha."]
-        Constant = 0x04,
+        CONSTANT = 0x04,
         _RESERVED_5 = 0x05,
         #[doc = "pixel alpha x constant alpha."]
-        Pixel = 0x06,
+        PIXEL = 0x06,
         _RESERVED_7 = 0x07,
     }
     impl Bf1 {
@@ -4405,10 +4080,10 @@ pub mod vals {
         _RESERVED_3 = 0x03,
         _RESERVED_4 = 0x04,
         #[doc = "1 - constant alpha."]
-        Constant = 0x05,
+        CONSTANT = 0x05,
         _RESERVED_6 = 0x06,
         #[doc = "1 - (pixel alpha x constant alpha)."]
-        Pixel = 0x07,
+        PIXEL = 0x07,
     }
     impl Bf2 {
         #[inline(always)]
@@ -4437,11 +4112,11 @@ pub mod vals {
     pub struct Bl(u8);
     impl Bl {
         #[doc = "maximum burst length (16 words 64 bits, thus 128 Bytes)."]
-        pub const Maximum: Self = Self(0x0);
+        pub const MAXIMUM: Self = Self(0x0);
         #[doc = "1 word (of 64 bits) per burst."]
-        pub const Word1: Self = Self(0x01);
+        pub const WORD1: Self = Self(0x01);
         #[doc = "16 words (of 64 bits) per burst."]
-        pub const Word16: Self = Self(0x10);
+        pub const WORD16: Self = Self(0x10);
     }
     impl Bl {
         pub const fn from_bits(val: u8) -> Bl {
@@ -4454,9 +4129,9 @@ pub mod vals {
     impl core::fmt::Debug for Bl {
         fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
             match self.0 {
-                0x0 => f.write_str("Maximum"),
-                0x01 => f.write_str("Word1"),
-                0x10 => f.write_str("Word16"),
+                0x0 => f.write_str("MAXIMUM"),
+                0x01 => f.write_str("WORD1"),
+                0x10 => f.write_str("WORD16"),
                 other => core::write!(f, "0x{:02X}", other),
             }
         }
@@ -4465,9 +4140,9 @@ pub mod vals {
     impl defmt::Format for Bl {
         fn format(&self, f: defmt::Formatter) {
             match self.0 {
-                0x0 => defmt::write!(f, "Maximum"),
-                0x01 => defmt::write!(f, "Word1"),
-                0x10 => defmt::write!(f, "Word16"),
+                0x0 => defmt::write!(f, "MAXIMUM"),
+                0x01 => defmt::write!(f, "WORD1"),
+                0x10 => defmt::write!(f, "WORD16"),
                 other => defmt::write!(f, "0x{:02X}", other),
             }
         }
@@ -4489,9 +4164,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Boa {
         #[doc = "Blending Order Fixed."]
-        Fixed = 0x0,
+        FIXED = 0x0,
         #[doc = "Blending Order Configurable."]
-        Configurable = 0x01,
+        CONFIGURABLE = 0x01,
     }
     impl Boa {
         #[inline(always)]
@@ -4520,9 +4195,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Bor {
         #[doc = "layer set in background."]
-        Background = 0x0,
+        BACKGROUND = 0x0,
         #[doc = "layer set in foreground."]
-        Foreground = 0x01,
+        FOREGROUND = 0x01,
     }
     impl Bor {
         #[inline(always)]
@@ -4553,11 +4228,11 @@ pub mod vals {
         _RESERVED_0 = 0x0,
         _RESERVED_1 = 0x01,
         #[doc = "32-Bit Bus."]
-        Bus32 = 0x02,
+        BUS32 = 0x02,
         #[doc = "64-Bit Bus."]
-        Bus64 = 0x03,
+        BUS64 = 0x03,
         #[doc = "128-Bit Bus."]
-        Bus128 = 0x04,
+        BUS128 = 0x04,
         _RESERVED_5 = 0x05,
         _RESERVED_6 = 0x06,
         _RESERVED_7 = 0x07,
@@ -4590,7 +4265,7 @@ pub mod vals {
     pub enum Ccrcif {
         _RESERVED_0 = 0x0,
         #[doc = "Clears The Crcif Flag In Isrx."]
-        Clear = 0x01,
+        CLEAR = 0x01,
     }
     impl Ccrcif {
         #[inline(always)]
@@ -4620,7 +4295,7 @@ pub mod vals {
     pub enum Cfuif {
         _RESERVED_0 = 0x0,
         #[doc = "Clears The Fuif Flag In Isrx"]
-        Clear = 0x01,
+        CLEAR = 0x01,
     }
     impl Cfuif {
         #[inline(always)]
@@ -4650,7 +4325,7 @@ pub mod vals {
     pub enum Cfuwif {
         _RESERVED_0 = 0x0,
         #[doc = "Clears The Fuwif Flag In Isrx."]
-        Clear = 0x01,
+        CLEAR = 0x01,
     }
     impl Cfuwif {
         #[inline(always)]
@@ -4680,7 +4355,7 @@ pub mod vals {
     pub enum Clif {
         _RESERVED_0 = 0x0,
         #[doc = "Clears The Lif Flag In Isrx."]
-        Clear = 0x01,
+        CLEAR = 0x01,
     }
     impl Clif {
         #[inline(always)]
@@ -4709,9 +4384,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Crca {
         #[doc = "Crc No Computation Available."]
-        NotAvailable = 0x0,
+        NOT_AVAILABLE = 0x0,
         #[doc = "Crc Computation Available."]
-        Available = 0x01,
+        AVAILABLE = 0x01,
     }
     impl Crca {
         #[inline(always)]
@@ -4741,7 +4416,7 @@ pub mod vals {
     pub enum Crrif {
         _RESERVED_0 = 0x0,
         #[doc = "Clears The Rrif Flag In Isrx."]
-        Clear = 0x01,
+        CLEAR = 0x01,
     }
     impl Crrif {
         #[inline(always)]
@@ -4771,7 +4446,7 @@ pub mod vals {
     pub enum Cterrif {
         _RESERVED_0 = 0x0,
         #[doc = "Clears The Terrif Flag In Isrx."]
-        Clear = 0x01,
+        CLEAR = 0x01,
     }
     impl Cterrif {
         #[inline(always)]
@@ -4800,9 +4475,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Depol {
         #[doc = "Blanking (No Data/Pixel) Polarity Is Active Low."]
-        ActiveLow = 0x0,
+        ACTIVE_LOW = 0x0,
         #[doc = "Blanking (No Data/Pixel) Polarity Is Active High."]
-        ActiveHigh = 0x01,
+        ACTIVE_HIGH = 0x01,
     }
     impl Depol {
         #[inline(always)]
@@ -4831,12 +4506,12 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Dt {
         #[doc = "No Dithering."]
-        NoDithering = 0x0,
+        NO_DITHERING = 0x0,
         #[doc = "Ordered 4X4 Bayer."]
-        Ordered = 0x01,
+        ORDERED = 0x01,
         _RESERVED_2 = 0x02,
         #[doc = "Pseudo-Random Lfsr."]
-        PseudoRandom = 0x03,
+        PSEUDO_RANDOM = 0x03,
     }
     impl Dt {
         #[inline(always)]
@@ -4865,11 +4540,11 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Gct {
         #[doc = "No Gamma."]
-        NoGamma = 0x0,
+        NO_GAMMA = 0x0,
         #[doc = "Gamma With 256 Samples."]
-        GammaSamples = 0x01,
+        GAMMA_SAMPLES = 0x01,
         #[doc = "Gamma With 8 Interpolated Segments."]
-        GammaInterpolated = 0x02,
+        GAMMA_INTERPOLATED = 0x02,
         _RESERVED_3 = 0x03,
         _RESERVED_4 = 0x04,
         _RESERVED_5 = 0x05,
@@ -4903,9 +4578,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Grmsk {
         #[doc = "global reload active for this layer (control from LTDC_SRCR enabled)."]
-        Active = 0x0,
+        ACTIVE = 0x0,
         #[doc = "global reload masked for this layer (control from LTDC_SRCR disabled)."]
-        Masked = 0x01,
+        MASKED = 0x01,
     }
     impl Grmsk {
         #[inline(always)]
@@ -4934,9 +4609,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Hspol {
         #[doc = "Horizontal Synchronization Polarity Is Active Low."]
-        ActiveLow = 0x0,
+        ACTIVE_LOW = 0x0,
         #[doc = "Horizontal Synchronization Polarity Is Active High."]
-        ActiveHigh = 0x01,
+        ACTIVE_HIGH = 0x01,
     }
     impl Hspol {
         #[inline(always)]
@@ -4965,9 +4640,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Imr {
         #[doc = "No Effect"]
-        NoEffect = 0x0,
+        NO_EFFECT = 0x0,
         #[doc = "The Shadow Registers Are Reloaded Immediately."]
-        Reload = 0x01,
+        RELOAD = 0x01,
     }
     impl Imr {
         #[inline(always)]
@@ -4996,9 +4671,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Ocyco {
         #[doc = "Cb Is Output First (Y0Cb, Then Y1Cr, Y2Cb And So On)."]
-        CbFirst = 0x0,
+        CB_FIRST = 0x0,
         #[doc = "Cr Is Output First (Y0Cr, Then Y1Cb, Y2Cr And So On)."]
-        CrFirst = 0x01,
+        CR_FIRST = 0x01,
     }
     impl Ocyco {
         #[inline(always)]
@@ -5027,9 +4702,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Ocysel {
         #[doc = "Use Itu-R Bt.601 Set (For Typically Sdtv Analog-Like Displays)."]
-        Bt601 = 0x0,
+        BT601 = 0x0,
         #[doc = "Use Itu-R Bt.709 Set (For Typically Hdtv Digital-Like Displays)."]
-        Bt709 = 0x01,
+        BT709 = 0x01,
     }
     impl Ocysel {
         #[inline(always)]
@@ -5058,9 +4733,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Pcpol {
         #[doc = "The Pixel And Sync Data Are Generated At The Rising-Edge Of The Output Lcd_Clk Clock."]
-        RisingEdge = 0x0,
+        RISING_EDGE = 0x0,
         #[doc = "The Pixel And Sync Data Are Generated At The Falling-Edge Of The Output Lcd_Clk Clock."]
-        FallingEdge = 0x01,
+        FALLING_EDGE = 0x01,
     }
     impl Pcpol {
         #[inline(always)]
@@ -5089,21 +4764,21 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Pf {
         #[doc = "ARGB8888 (32 bpp)."]
-        Argb8888 = 0x0,
+        ARGB8888 = 0x0,
         #[doc = "ABGR8888 (32 bpp)."]
-        Abgr8888 = 0x01,
+        ABGR8888 = 0x01,
         #[doc = "RGBA8888 (32 bpp)."]
-        Rgba8888 = 0x02,
+        RGBA8888 = 0x02,
         #[doc = "BGRA8888 (32 bpp)."]
-        Bgra8888 = 0x03,
+        BGRA8888 = 0x03,
         #[doc = "RGB565 (16 bpp, A = 255)."]
-        Rgb565 = 0x04,
+        RGB565 = 0x04,
         #[doc = "BGR565 (16 bpp, A = 255)."]
-        Bgr565 = 0x05,
+        BGR565 = 0x05,
         #[doc = "RGB888 (24 bpp packed, A = 255)."]
-        Rgb888 = 0x06,
+        RGB888 = 0x06,
         #[doc = "Flexible pixel format selected."]
-        Flexible = 0x07,
+        FLEXIBLE = 0x07,
     }
     impl Pf {
         #[inline(always)]
@@ -5132,9 +4807,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Sfswtr {
         #[doc = "No Action."]
-        NoAction = 0x0,
+        NO_ACTION = 0x0,
         #[doc = "Triggers One Frame."]
-        OneFrame = 0x01,
+        ONE_FRAME = 0x01,
     }
     impl Sfswtr {
         #[inline(always)]
@@ -5163,9 +4838,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Vbr {
         #[doc = "No Effect"]
-        NoEffect = 0x0,
+        NO_EFFECT = 0x0,
         #[doc = "The Shadow Registers Are Reloaded During The Vertical Blanking Period (At The Beginning Of The First Line After The Active Display Area)."]
-        Reload = 0x01,
+        RELOAD = 0x01,
     }
     impl Vbr {
         #[inline(always)]
@@ -5194,9 +4869,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Vspol {
         #[doc = "Vertical Synchronization Is Active Low."]
-        ActiveLow = 0x0,
+        ACTIVE_LOW = 0x0,
         #[doc = "Vertical Synchronization Is Active High."]
-        ActiveHigh = 0x01,
+        ACTIVE_HIGH = 0x01,
     }
     impl Vspol {
         #[inline(always)]
@@ -5225,11 +4900,11 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Ycm {
         #[doc = "interleaved 422 (Cb and Cr component are replicated horizontally for pixels P and P+1)."]
-        Interleaved = 0x0,
+        INTERLEAVED = 0x0,
         #[doc = "semi-Planar 420: (Cb and Cr component are replicated horizontally and vertically.The layer main configuration defines the access to the Y buffer, and auxiliary registers define the access to the Cb and Cr buffers)."]
-        SemiPlanar = 0x01,
+        SEMI_PLANAR = 0x01,
         #[doc = "full-Planar 420: (Cb and Cr component are replicated horizontally and vertically. The layer main configuration defines the access to the Y buffer, and auxiliary registers define the access to the Cb and Cr buffers)."]
-        FullPlanar = 0x02,
+        FULL_PLANAR = 0x02,
         _RESERVED_3 = 0x03,
     }
     impl Ycm {

@@ -22,162 +22,162 @@ impl Syscfg {
     #[doc = "SYSCFG boot pin control register."]
     #[inline(always)]
     pub const fn bootcr(self) -> crate::common::Reg<regs::Bootcr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0usize) as _) }
     }
     #[doc = "SYSCFG Cortex-M55 control register."]
     #[inline(always)]
     pub const fn cm55cr(self) -> crate::common::Reg<regs::Cm55cr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x04usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x04usize) as _) }
     }
     #[doc = "SYSCFG Cortex-M55 TCM control register."]
     #[inline(always)]
     pub const fn cm55tcmcr(self) -> crate::common::Reg<regs::Cm55tcmcr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x08usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x08usize) as _) }
     }
     #[doc = "SYSCFG Cortex-CM55 memory RW margin register."]
     #[inline(always)]
     pub const fn cm55rwmcr(self) -> crate::common::Reg<regs::Cm55rwmcr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0cusize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0cusize) as _) }
     }
     #[doc = "SYSCFG Cortex-M55 SVTOR control register."]
     #[inline(always)]
     pub const fn initsvtorcr(self) -> crate::common::Reg<regs::Initsvtorcr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x10usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x10usize) as _) }
     }
     #[doc = "SYSCFG Cortex-M55 NSVTOR control register."]
     #[inline(always)]
     pub const fn initnsvtorcr(self) -> crate::common::Reg<regs::Initnsvtorcr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x14usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x14usize) as _) }
     }
     #[doc = "SYSCFG Cortex-M55 reset type control register."]
     #[inline(always)]
     pub const fn cm55rstcr(self) -> crate::common::Reg<regs::Cm55rstcr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x18usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x18usize) as _) }
     }
     #[doc = "SYSCFG Cortex-M55 P-AHB write posting control register."]
     #[inline(always)]
     pub const fn cm55pahbwpr(self) -> crate::common::Reg<regs::Cm55pahbwpr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x1cusize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x1cusize) as _) }
     }
     #[doc = "SYSCFG VENCRAM control register."]
     #[inline(always)]
     pub const fn vencramcr(self) -> crate::common::Reg<regs::Vencramcr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x20usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x20usize) as _) }
     }
     #[doc = "SYSCFG potential tamper reset register."]
     #[inline(always)]
     pub const fn pottamprstcr(self) -> crate::common::Reg<regs::Pottamprstcr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x24usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x24usize) as _) }
     }
     #[doc = "SYSCFG AHB-AXI bridge early write response control register."]
     #[inline(always)]
     pub const fn icnewrcr(self) -> crate::common::Reg<regs::Icnewrcr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x34usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x34usize) as _) }
     }
     #[doc = "SYSCFG ICN clock gating control register."]
     #[inline(always)]
     pub const fn icncgcr(self) -> crate::common::Reg<regs::Icncgcr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x38usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x38usize) as _) }
     }
     #[doc = "SYSCFG ICN bandwidth regulator control register."]
     #[inline(always)]
     pub const fn icnbwrcr(self) -> crate::common::Reg<regs::Icnbwrcr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x3cusize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x3cusize) as _) }
     }
     #[doc = "SYSCFG /O control register."]
     #[inline(always)]
     pub const fn iocr(self) -> crate::common::Reg<regs::Iocr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x40usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x40usize) as _) }
     }
     #[doc = "SYSCFG VDDIO1 compensation cell control register."]
     #[inline(always)]
     pub const fn vddio1cccr(self) -> crate::common::Reg<regs::Vddio1cccr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x44usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x44usize) as _) }
     }
     #[doc = "SYSCFG VDDIO1 compensation cell status register."]
     #[inline(always)]
     pub const fn vddio1ccsr(self) -> crate::common::Reg<regs::Vddio1ccsr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x48usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x48usize) as _) }
     }
     #[doc = "SYSCFG VDDIO2 compensation cell control register."]
     #[inline(always)]
     pub const fn vddio2cccr(self) -> crate::common::Reg<regs::Vddio2cccr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x4cusize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x4cusize) as _) }
     }
     #[doc = "SYSCFG VDDIO2 compensation cell status register."]
     #[inline(always)]
     pub const fn vddio2ccsr(self) -> crate::common::Reg<regs::Vddio2ccsr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x50usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x50usize) as _) }
     }
     #[doc = "SYSCFG VDDIO3 compensation cell control register."]
     #[inline(always)]
     pub const fn vddio3cccr(self) -> crate::common::Reg<regs::Vddio3cccr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x54usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x54usize) as _) }
     }
     #[doc = "SYSCFG VDDIO3 compensation cell status register."]
     #[inline(always)]
     pub const fn vddio3ccsr(self) -> crate::common::Reg<regs::Vddio3ccsr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x58usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x58usize) as _) }
     }
     #[doc = "SYSCFG VDDIO4 compensation cell control register."]
     #[inline(always)]
     pub const fn vddio4cccr(self) -> crate::common::Reg<regs::Vddio4cccr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x5cusize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x5cusize) as _) }
     }
     #[doc = "SYSCFG VDDIO4 compensation cell status register."]
     #[inline(always)]
     pub const fn vddio4ccsr(self) -> crate::common::Reg<regs::Vddio4ccsr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x60usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x60usize) as _) }
     }
     #[doc = "SYSCFG VDDIO compensation cell control register."]
     #[inline(always)]
     pub const fn vddiocccr(self) -> crate::common::Reg<regs::Vddiocccr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x64usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x64usize) as _) }
     }
     #[doc = "SYSCFG VDDIO compensation cell status register."]
     #[inline(always)]
     pub const fn vddioccsr(self) -> crate::common::Reg<regs::Vddioccsr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x68usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x68usize) as _) }
     }
     #[doc = "SYSCFG control timer break register."]
     #[inline(always)]
     pub const fn cbr(self) -> crate::common::Reg<regs::Cbr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x6cusize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x6cusize) as _) }
     }
     #[doc = "SYSCFG DMA CID secure control register."]
     #[inline(always)]
     pub const fn sec_aidcr(self) -> crate::common::Reg<regs::SecAidcr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x70usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x70usize) as _) }
     }
     #[doc = "SYSCFG FMC retiming logic control register."]
     #[inline(always)]
     pub const fn fmc_retimecr(self) -> crate::common::Reg<regs::FmcRetimecr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x74usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x74usize) as _) }
     }
     #[doc = "SYSCFG NPU RAM interleaving control register."]
     #[inline(always)]
     pub const fn npu_icncr(self) -> crate::common::Reg<regs::NpuIcncr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x78usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x78usize) as _) }
     }
     #[doc = "SYSCFG boot pin status register."]
     #[inline(always)]
     pub const fn bootsr(self) -> crate::common::Reg<regs::Bootsr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0100usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0100usize) as _) }
     }
     #[doc = "SYSCFG AHB write posting address error register."]
     #[inline(always)]
     pub const fn ahbwp_error_sr(self) -> crate::common::Reg<regs::AhbwpErrorSr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0104usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0104usize) as _) }
     }
     #[doc = "SYSCFG SMPS observable signals through HDP selection configuration register."]
     #[inline(always)]
     pub const fn smpshdpcr(self) -> crate::common::Reg<regs::Smpshdpcr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0400usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0400usize) as _) }
     }
     #[doc = "SYSCFG DMA CID non-secure control register."]
     #[inline(always)]
     pub const fn nonsec_aidcr(self) -> crate::common::Reg<regs::NonsecAidcr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0800usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0800usize) as _) }
     }
 }
 pub mod regs {
@@ -187,7 +187,6 @@ pub mod regs {
     pub struct AhbwpErrorSr(pub u32);
     impl AhbwpErrorSr {
         #[doc = "Reports address of the first error in P-AHB write-posting buffer."]
-        #[must_use]
         #[inline(always)]
         pub const fn pahb_error_addr(&self) -> u32 {
             let val = (self.0 >> 0usize) & 0xffff_ffff;
@@ -195,7 +194,7 @@ pub mod regs {
         }
         #[doc = "Reports address of the first error in P-AHB write-posting buffer."]
         #[inline(always)]
-        pub const fn set_pahb_error_addr(&mut self, val: u32) {
+        pub fn set_pahb_error_addr(&mut self, val: u32) {
             self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
         }
     }
@@ -228,7 +227,6 @@ pub mod regs {
     pub struct Bootcr(pub u32);
     impl Bootcr {
         #[doc = "BOOT0 pin pull-down disable."]
-        #[must_use]
         #[inline(always)]
         pub const fn boot0_pd(&self) -> super::vals::Boot0Pd {
             let val = (self.0 >> 0usize) & 0x01;
@@ -236,11 +234,10 @@ pub mod regs {
         }
         #[doc = "BOOT0 pin pull-down disable."]
         #[inline(always)]
-        pub const fn set_boot0_pd(&mut self, val: super::vals::Boot0Pd) {
+        pub fn set_boot0_pd(&mut self, val: super::vals::Boot0Pd) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
         }
         #[doc = "BOOT1 pin pull-down disable."]
-        #[must_use]
         #[inline(always)]
         pub const fn boot1_pd(&self) -> super::vals::Boot1Pd {
             let val = (self.0 >> 1usize) & 0x01;
@@ -248,7 +245,7 @@ pub mod regs {
         }
         #[doc = "BOOT1 pin pull-down disable."]
         #[inline(always)]
-        pub const fn set_boot1_pd(&mut self, val: super::vals::Boot1Pd) {
+        pub fn set_boot1_pd(&mut self, val: super::vals::Boot1Pd) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
         }
     }
@@ -283,7 +280,6 @@ pub mod regs {
     pub struct Bootsr(pub u32);
     impl Bootsr {
         #[doc = "BOOT0 pin value."]
-        #[must_use]
         #[inline(always)]
         pub const fn boot0(&self) -> super::vals::Boot0 {
             let val = (self.0 >> 0usize) & 0x01;
@@ -291,11 +287,10 @@ pub mod regs {
         }
         #[doc = "BOOT0 pin value."]
         #[inline(always)]
-        pub const fn set_boot0(&mut self, val: super::vals::Boot0) {
+        pub fn set_boot0(&mut self, val: super::vals::Boot0) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
         }
         #[doc = "BOOT1 pin value."]
-        #[must_use]
         #[inline(always)]
         pub const fn boot1(&self) -> super::vals::Boot1 {
             let val = (self.0 >> 1usize) & 0x01;
@@ -303,7 +298,7 @@ pub mod regs {
         }
         #[doc = "BOOT1 pin value."]
         #[inline(always)]
-        pub const fn set_boot1(&mut self, val: super::vals::Boot1) {
+        pub fn set_boot1(&mut self, val: super::vals::Boot1) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
         }
     }
@@ -333,7 +328,6 @@ pub mod regs {
     pub struct Cbr(pub u32);
     impl Cbr {
         #[doc = "CM55 lockup lock enable."]
-        #[must_use]
         #[inline(always)]
         pub const fn cm55l(&self) -> super::vals::Cm55l {
             let val = (self.0 >> 0usize) & 0x01;
@@ -341,11 +335,10 @@ pub mod regs {
         }
         #[doc = "CM55 lockup lock enable."]
         #[inline(always)]
-        pub const fn set_cm55l(&mut self, val: super::vals::Cm55l) {
+        pub fn set_cm55l(&mut self, val: super::vals::Cm55l) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
         }
         #[doc = "PVD lock enable."]
-        #[must_use]
         #[inline(always)]
         pub const fn pvdl_lock(&self) -> super::vals::PvdlLock {
             let val = (self.0 >> 2usize) & 0x01;
@@ -353,11 +346,10 @@ pub mod regs {
         }
         #[doc = "PVD lock enable."]
         #[inline(always)]
-        pub const fn set_pvdl_lock(&mut self, val: super::vals::PvdlLock) {
+        pub fn set_pvdl_lock(&mut self, val: super::vals::PvdlLock) {
             self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
         }
         #[doc = "Backup SRAM double ECC error lock."]
-        #[must_use]
         #[inline(always)]
         pub const fn bkpraml(&self) -> super::vals::Bkpraml {
             let val = (self.0 >> 3usize) & 0x01;
@@ -365,11 +357,10 @@ pub mod regs {
         }
         #[doc = "Backup SRAM double ECC error lock."]
         #[inline(always)]
-        pub const fn set_bkpraml(&mut self, val: super::vals::Bkpraml) {
+        pub fn set_bkpraml(&mut self, val: super::vals::Bkpraml) {
             self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
         }
         #[doc = "CM55 cache double ECC error lock."]
-        #[must_use]
         #[inline(always)]
         pub const fn cm55cachel(&self) -> super::vals::Cm55cachel {
             let val = (self.0 >> 5usize) & 0x01;
@@ -377,11 +368,10 @@ pub mod regs {
         }
         #[doc = "CM55 cache double ECC error lock."]
         #[inline(always)]
-        pub const fn set_cm55cachel(&mut self, val: super::vals::Cm55cachel) {
+        pub fn set_cm55cachel(&mut self, val: super::vals::Cm55cachel) {
             self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
         }
         #[doc = "CM55 TCM double ECC error lock."]
-        #[must_use]
         #[inline(always)]
         pub const fn cm55tcml(&self) -> super::vals::Cm55tcml {
             let val = (self.0 >> 6usize) & 0x01;
@@ -389,7 +379,7 @@ pub mod regs {
         }
         #[doc = "CM55 TCM double ECC error lock."]
         #[inline(always)]
-        pub const fn set_cm55tcml(&mut self, val: super::vals::Cm55tcml) {
+        pub fn set_cm55tcml(&mut self, val: super::vals::Cm55tcml) {
             self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
         }
     }
@@ -430,7 +420,6 @@ pub mod regs {
     pub struct Cm55cr(pub u32);
     impl Cm55cr {
         #[doc = "Enable FPU exception."]
-        #[must_use]
         #[inline(always)]
         pub const fn fpu_it_en(&self) -> u8 {
             let val = (self.0 >> 0usize) & 0x3f;
@@ -438,11 +427,10 @@ pub mod regs {
         }
         #[doc = "Enable FPU exception."]
         #[inline(always)]
-        pub const fn set_fpu_it_en(&mut self, val: u8) {
+        pub fn set_fpu_it_en(&mut self, val: u8) {
             self.0 = (self.0 & !(0x3f << 0usize)) | (((val as u32) & 0x3f) << 0usize);
         }
         #[doc = "Prevent changes to:."]
-        #[must_use]
         #[inline(always)]
         pub const fn locksvtaircr(&self) -> bool {
             let val = (self.0 >> 16usize) & 0x01;
@@ -450,11 +438,10 @@ pub mod regs {
         }
         #[doc = "Prevent changes to:."]
         #[inline(always)]
-        pub const fn set_locksvtaircr(&mut self, val: bool) {
+        pub fn set_locksvtaircr(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
         }
         #[doc = "Prevent changes to the non-secure vector table base address."]
-        #[must_use]
         #[inline(always)]
         pub const fn locknsvtor(&self) -> bool {
             let val = (self.0 >> 17usize) & 0x01;
@@ -462,11 +449,10 @@ pub mod regs {
         }
         #[doc = "Prevent changes to the non-secure vector table base address."]
         #[inline(always)]
-        pub const fn set_locknsvtor(&mut self, val: bool) {
+        pub fn set_locknsvtor(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
         }
         #[doc = "Prevent changes to programmed secure MPU memory regions."]
-        #[must_use]
         #[inline(always)]
         pub const fn locksmpu(&self) -> bool {
             let val = (self.0 >> 18usize) & 0x01;
@@ -474,11 +460,10 @@ pub mod regs {
         }
         #[doc = "Prevent changes to programmed secure MPU memory regions."]
         #[inline(always)]
-        pub const fn set_locksmpu(&mut self, val: bool) {
+        pub fn set_locksmpu(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
         }
         #[doc = "Prevent changes to non-secure MPU memory regions already programmed."]
-        #[must_use]
         #[inline(always)]
         pub const fn locknsmpu(&self) -> bool {
             let val = (self.0 >> 19usize) & 0x01;
@@ -486,11 +471,10 @@ pub mod regs {
         }
         #[doc = "Prevent changes to non-secure MPU memory regions already programmed."]
         #[inline(always)]
-        pub const fn set_locknsmpu(&mut self, val: bool) {
+        pub fn set_locknsmpu(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
         }
         #[doc = "Prevent changes to secure SAU memory regions already programmed."]
-        #[must_use]
         #[inline(always)]
         pub const fn locksau(&self) -> bool {
             let val = (self.0 >> 20usize) & 0x01;
@@ -498,11 +482,10 @@ pub mod regs {
         }
         #[doc = "Prevent changes to secure SAU memory regions already programmed."]
         #[inline(always)]
-        pub const fn set_locksau(&mut self, val: bool) {
+        pub fn set_locksau(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
         }
         #[doc = "Disable access to the instruction cache direct cache access registers DCAICLR and DCAICRR."]
-        #[must_use]
         #[inline(always)]
         pub const fn lockdcaic(&self) -> bool {
             let val = (self.0 >> 21usize) & 0x01;
@@ -510,7 +493,7 @@ pub mod regs {
         }
         #[doc = "Disable access to the instruction cache direct cache access registers DCAICLR and DCAICRR."]
         #[inline(always)]
-        pub const fn set_lockdcaic(&mut self, val: bool) {
+        pub fn set_lockdcaic(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
         }
     }
@@ -536,17 +519,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Cm55cr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Cm55cr {{ fpu_it_en: {=u8:?}, locksvtaircr: {=bool:?}, locknsvtor: {=bool:?}, locksmpu: {=bool:?}, locknsmpu: {=bool:?}, locksau: {=bool:?}, lockdcaic: {=bool:?} }}",
-                self.fpu_it_en(),
-                self.locksvtaircr(),
-                self.locknsvtor(),
-                self.locksmpu(),
-                self.locknsmpu(),
-                self.locksau(),
-                self.lockdcaic()
-            )
+            defmt :: write ! (f , "Cm55cr {{ fpu_it_en: {=u8:?}, locksvtaircr: {=bool:?}, locknsvtor: {=bool:?}, locksmpu: {=bool:?}, locknsmpu: {=bool:?}, locksau: {=bool:?}, lockdcaic: {=bool:?} }}" , self . fpu_it_en () , self . locksvtaircr () , self . locknsvtor () , self . locksmpu () , self . locknsmpu () , self . locksau () , self . lockdcaic ())
         }
     }
     #[doc = "SYSCFG Cortex-M55 P-AHB write posting control register."]
@@ -555,7 +528,6 @@ pub mod regs {
     pub struct Cm55pahbwpr(pub u32);
     impl Cm55pahbwpr {
         #[doc = "Error capture in write posting buffer."]
-        #[must_use]
         #[inline(always)]
         pub const fn pahb_error_ack(&self) -> super::vals::PahbErrorAck {
             let val = (self.0 >> 0usize) & 0x01;
@@ -563,7 +535,7 @@ pub mod regs {
         }
         #[doc = "Error capture in write posting buffer."]
         #[inline(always)]
-        pub const fn set_pahb_error_ack(&mut self, val: super::vals::PahbErrorAck) {
+        pub fn set_pahb_error_ack(&mut self, val: super::vals::PahbErrorAck) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
         }
     }
@@ -592,7 +564,6 @@ pub mod regs {
     pub struct Cm55rstcr(pub u32);
     impl Cm55rstcr {
         #[doc = "Select reset to apply on core upon SYSRESETREQ."]
-        #[must_use]
         #[inline(always)]
         pub const fn core_reset_type(&self) -> super::vals::CoreResetType {
             let val = (self.0 >> 0usize) & 0x01;
@@ -600,11 +571,10 @@ pub mod regs {
         }
         #[doc = "Select reset to apply on core upon SYSRESETREQ."]
         #[inline(always)]
-        pub const fn set_core_reset_type(&mut self, val: super::vals::CoreResetType) {
+        pub fn set_core_reset_type(&mut self, val: super::vals::CoreResetType) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
         }
         #[doc = "Select action to perform on a lockup state on the core."]
-        #[must_use]
         #[inline(always)]
         pub const fn lockup_rst_en(&self) -> super::vals::LockupRstEn {
             let val = (self.0 >> 1usize) & 0x01;
@@ -612,11 +582,10 @@ pub mod regs {
         }
         #[doc = "Select action to perform on a lockup state on the core."]
         #[inline(always)]
-        pub const fn set_lockup_rst_en(&mut self, val: super::vals::LockupRstEn) {
+        pub fn set_lockup_rst_en(&mut self, val: super::vals::LockupRstEn) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
         }
         #[doc = "Select action to perform on a lockup state on the core."]
-        #[must_use]
         #[inline(always)]
         pub const fn lockup_nmi_en(&self) -> super::vals::LockupNmiEn {
             let val = (self.0 >> 2usize) & 0x01;
@@ -624,7 +593,7 @@ pub mod regs {
         }
         #[doc = "Select action to perform on a lockup state on the core."]
         #[inline(always)]
-        pub const fn set_lockup_nmi_en(&mut self, val: super::vals::LockupNmiEn) {
+        pub fn set_lockup_nmi_en(&mut self, val: super::vals::LockupNmiEn) {
             self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
         }
     }
@@ -661,7 +630,6 @@ pub mod regs {
     pub struct Cm55rwmcr(pub u32);
     impl Cm55rwmcr {
         #[doc = "RW margin enable input for TCM memories."]
-        #[must_use]
         #[inline(always)]
         pub const fn rme_tcm(&self) -> super::vals::RmeTcm {
             let val = (self.0 >> 0usize) & 0x01;
@@ -669,11 +637,10 @@ pub mod regs {
         }
         #[doc = "RW margin enable input for TCM memories."]
         #[inline(always)]
-        pub const fn set_rme_tcm(&mut self, val: super::vals::RmeTcm) {
+        pub fn set_rme_tcm(&mut self, val: super::vals::RmeTcm) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
         }
         #[doc = "External RW margin inputs for TCM memories."]
-        #[must_use]
         #[inline(always)]
         pub const fn rm_tcm(&self) -> u8 {
             let val = (self.0 >> 1usize) & 0x0f;
@@ -681,11 +648,10 @@ pub mod regs {
         }
         #[doc = "External RW margin inputs for TCM memories."]
         #[inline(always)]
-        pub const fn set_rm_tcm(&mut self, val: u8) {
+        pub fn set_rm_tcm(&mut self, val: u8) {
             self.0 = (self.0 & !(0x0f << 1usize)) | (((val as u32) & 0x0f) << 1usize);
         }
         #[doc = "Biasing level adjust input recommended for Vnom."]
-        #[must_use]
         #[inline(always)]
         pub const fn bc1_tcm(&self) -> bool {
             let val = (self.0 >> 5usize) & 0x01;
@@ -693,11 +659,10 @@ pub mod regs {
         }
         #[doc = "Biasing level adjust input recommended for Vnom."]
         #[inline(always)]
-        pub const fn set_bc1_tcm(&mut self, val: bool) {
+        pub fn set_bc1_tcm(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
         }
         #[doc = "Biasing level adjust input recommended for Vnom + 10%."]
-        #[must_use]
         #[inline(always)]
         pub const fn bc2_tcm(&self) -> bool {
             let val = (self.0 >> 6usize) & 0x01;
@@ -705,11 +670,10 @@ pub mod regs {
         }
         #[doc = "Biasing level adjust input recommended for Vnom + 10%."]
         #[inline(always)]
-        pub const fn set_bc2_tcm(&mut self, val: bool) {
+        pub fn set_bc2_tcm(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
         }
         #[doc = "RW margin enable input for caches memories."]
-        #[must_use]
         #[inline(always)]
         pub const fn rme_cache(&self) -> super::vals::RmeCache {
             let val = (self.0 >> 7usize) & 0x01;
@@ -717,11 +681,10 @@ pub mod regs {
         }
         #[doc = "RW margin enable input for caches memories."]
         #[inline(always)]
-        pub const fn set_rme_cache(&mut self, val: super::vals::RmeCache) {
+        pub fn set_rme_cache(&mut self, val: super::vals::RmeCache) {
             self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u32) & 0x01) << 7usize);
         }
         #[doc = "External read/write (RW) margin inputs for caches memories."]
-        #[must_use]
         #[inline(always)]
         pub const fn rm_cache(&self) -> u8 {
             let val = (self.0 >> 8usize) & 0x0f;
@@ -729,11 +692,10 @@ pub mod regs {
         }
         #[doc = "External read/write (RW) margin inputs for caches memories."]
         #[inline(always)]
-        pub const fn set_rm_cache(&mut self, val: u8) {
+        pub fn set_rm_cache(&mut self, val: u8) {
             self.0 = (self.0 & !(0x0f << 8usize)) | (((val as u32) & 0x0f) << 8usize);
         }
         #[doc = "Biasing level adjust input recommended for Vnom."]
-        #[must_use]
         #[inline(always)]
         pub const fn bc1_cache(&self) -> bool {
             let val = (self.0 >> 12usize) & 0x01;
@@ -741,11 +703,10 @@ pub mod regs {
         }
         #[doc = "Biasing level adjust input recommended for Vnom."]
         #[inline(always)]
-        pub const fn set_bc1_cache(&mut self, val: bool) {
+        pub fn set_bc1_cache(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
         }
         #[doc = "Biasing level adjust input recommended for Vnom + 10%."]
-        #[must_use]
         #[inline(always)]
         pub const fn bc2_cache(&self) -> bool {
             let val = (self.0 >> 13usize) & 0x01;
@@ -753,7 +714,7 @@ pub mod regs {
         }
         #[doc = "Biasing level adjust input recommended for Vnom + 10%."]
         #[inline(always)]
-        pub const fn set_bc2_cache(&mut self, val: bool) {
+        pub fn set_bc2_cache(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
         }
     }
@@ -780,18 +741,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Cm55rwmcr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Cm55rwmcr {{ rme_tcm: {:?}, rm_tcm: {=u8:?}, bc1_tcm: {=bool:?}, bc2_tcm: {=bool:?}, rme_cache: {:?}, rm_cache: {=u8:?}, bc1_cache: {=bool:?}, bc2_cache: {=bool:?} }}",
-                self.rme_tcm(),
-                self.rm_tcm(),
-                self.bc1_tcm(),
-                self.bc2_tcm(),
-                self.rme_cache(),
-                self.rm_cache(),
-                self.bc1_cache(),
-                self.bc2_cache()
-            )
+            defmt :: write ! (f , "Cm55rwmcr {{ rme_tcm: {:?}, rm_tcm: {=u8:?}, bc1_tcm: {=bool:?}, bc2_tcm: {=bool:?}, rme_cache: {:?}, rm_cache: {=u8:?}, bc1_cache: {=bool:?}, bc2_cache: {=bool:?} }}" , self . rme_tcm () , self . rm_tcm () , self . bc1_tcm () , self . bc2_tcm () , self . rme_cache () , self . rm_cache () , self . bc1_cache () , self . bc2_cache ())
         }
     }
     #[doc = "SYSCFG Cortex-M55 TCM control register."]
@@ -800,7 +750,6 @@ pub mod regs {
     pub struct Cm55tcmcr(pub u32);
     impl Cm55tcmcr {
         #[doc = "Select ITCM memory size."]
-        #[must_use]
         #[inline(always)]
         pub const fn cfgitcmsz(&self) -> super::vals::Cfgitcmsz {
             let val = (self.0 >> 0usize) & 0x0f;
@@ -808,11 +757,10 @@ pub mod regs {
         }
         #[doc = "Select ITCM memory size."]
         #[inline(always)]
-        pub const fn set_cfgitcmsz(&mut self, val: super::vals::Cfgitcmsz) {
+        pub fn set_cfgitcmsz(&mut self, val: super::vals::Cfgitcmsz) {
             self.0 = (self.0 & !(0x0f << 0usize)) | (((val.to_bits() as u32) & 0x0f) << 0usize);
         }
         #[doc = "Select DTCM memory size."]
-        #[must_use]
         #[inline(always)]
         pub const fn cfgdtcmsz(&self) -> super::vals::Cfgdtcmsz {
             let val = (self.0 >> 4usize) & 0x0f;
@@ -820,11 +768,10 @@ pub mod regs {
         }
         #[doc = "Select DTCM memory size."]
         #[inline(always)]
-        pub const fn set_cfgdtcmsz(&mut self, val: super::vals::Cfgdtcmsz) {
+        pub fn set_cfgdtcmsz(&mut self, val: super::vals::Cfgdtcmsz) {
             self.0 = (self.0 & !(0x0f << 4usize)) | (((val.to_bits() as u32) & 0x0f) << 4usize);
         }
         #[doc = "Disable writes to registers associated with the TCM region."]
-        #[must_use]
         #[inline(always)]
         pub const fn locktcm(&self) -> bool {
             let val = (self.0 >> 16usize) & 0x01;
@@ -832,11 +779,10 @@ pub mod regs {
         }
         #[doc = "Disable writes to registers associated with the TCM region."]
         #[inline(always)]
-        pub const fn set_locktcm(&mut self, val: bool) {
+        pub fn set_locktcm(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
         }
         #[doc = "Disable writes to registers associated with the ITCM interface security gating."]
-        #[must_use]
         #[inline(always)]
         pub const fn lockitgu(&self) -> bool {
             let val = (self.0 >> 17usize) & 0x01;
@@ -844,11 +790,10 @@ pub mod regs {
         }
         #[doc = "Disable writes to registers associated with the ITCM interface security gating."]
         #[inline(always)]
-        pub const fn set_lockitgu(&mut self, val: bool) {
+        pub fn set_lockitgu(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
         }
         #[doc = "Disable writes to registers associated with the DTCM interface security gating."]
-        #[must_use]
         #[inline(always)]
         pub const fn lockdtgu(&self) -> bool {
             let val = (self.0 >> 18usize) & 0x01;
@@ -856,11 +801,10 @@ pub mod regs {
         }
         #[doc = "Disable writes to registers associated with the DTCM interface security gating."]
         #[inline(always)]
-        pub const fn set_lockdtgu(&mut self, val: bool) {
+        pub fn set_lockdtgu(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
         }
         #[doc = "Disable wait-state applied by default on extended ITCM memory."]
-        #[must_use]
         #[inline(always)]
         pub const fn itcmwsdisable(&self) -> bool {
             let val = (self.0 >> 23usize) & 0x01;
@@ -868,11 +812,10 @@ pub mod regs {
         }
         #[doc = "Disable wait-state applied by default on extended ITCM memory."]
         #[inline(always)]
-        pub const fn set_itcmwsdisable(&mut self, val: bool) {
+        pub fn set_itcmwsdisable(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
         }
         #[doc = "Disable wait-state applied by default on extended DTCM memory."]
-        #[must_use]
         #[inline(always)]
         pub const fn dtcmwsdisable(&self) -> bool {
             let val = (self.0 >> 24usize) & 0x01;
@@ -880,7 +823,7 @@ pub mod regs {
         }
         #[doc = "Disable wait-state applied by default on extended DTCM memory."]
         #[inline(always)]
-        pub const fn set_dtcmwsdisable(&mut self, val: bool) {
+        pub fn set_dtcmwsdisable(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
         }
     }
@@ -906,17 +849,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Cm55tcmcr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Cm55tcmcr {{ cfgitcmsz: {:?}, cfgdtcmsz: {:?}, locktcm: {=bool:?}, lockitgu: {=bool:?}, lockdtgu: {=bool:?}, itcmwsdisable: {=bool:?}, dtcmwsdisable: {=bool:?} }}",
-                self.cfgitcmsz(),
-                self.cfgdtcmsz(),
-                self.locktcm(),
-                self.lockitgu(),
-                self.lockdtgu(),
-                self.itcmwsdisable(),
-                self.dtcmwsdisable()
-            )
+            defmt :: write ! (f , "Cm55tcmcr {{ cfgitcmsz: {:?}, cfgdtcmsz: {:?}, locktcm: {=bool:?}, lockitgu: {=bool:?}, lockdtgu: {=bool:?}, itcmwsdisable: {=bool:?}, dtcmwsdisable: {=bool:?} }}" , self . cfgitcmsz () , self . cfgdtcmsz () , self . locktcm () , self . lockitgu () , self . lockdtgu () , self . itcmwsdisable () , self . dtcmwsdisable ())
         }
     }
     #[doc = "SYSCFG FMC retiming logic control register."]
@@ -925,7 +858,6 @@ pub mod regs {
     pub struct FmcRetimecr(pub u32);
     impl FmcRetimecr {
         #[doc = "Retiming on Rx path."]
-        #[must_use]
         #[inline(always)]
         pub const fn cfg_retime_rx(&self) -> super::vals::CfgRetimeRx {
             let val = (self.0 >> 0usize) & 0x01;
@@ -933,11 +865,10 @@ pub mod regs {
         }
         #[doc = "Retiming on Rx path."]
         #[inline(always)]
-        pub const fn set_cfg_retime_rx(&mut self, val: super::vals::CfgRetimeRx) {
+        pub fn set_cfg_retime_rx(&mut self, val: super::vals::CfgRetimeRx) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
         }
         #[doc = "Retiming on Tx path."]
-        #[must_use]
         #[inline(always)]
         pub const fn cfg_retime_tx(&self) -> super::vals::CfgRetimeTx {
             let val = (self.0 >> 1usize) & 0x01;
@@ -945,11 +876,10 @@ pub mod regs {
         }
         #[doc = "Retiming on Tx path."]
         #[inline(always)]
-        pub const fn set_cfg_retime_tx(&mut self, val: super::vals::CfgRetimeTx) {
+        pub fn set_cfg_retime_tx(&mut self, val: super::vals::CfgRetimeTx) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
         }
         #[doc = "Delay on feedback clock."]
-        #[must_use]
         #[inline(always)]
         pub const fn sdfbclk_180(&self) -> super::vals::Sdfbclk180 {
             let val = (self.0 >> 2usize) & 0x01;
@@ -957,7 +887,7 @@ pub mod regs {
         }
         #[doc = "Delay on feedback clock."]
         #[inline(always)]
-        pub const fn set_sdfbclk_180(&mut self, val: super::vals::Sdfbclk180) {
+        pub fn set_sdfbclk_180(&mut self, val: super::vals::Sdfbclk180) {
             self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
         }
     }
@@ -994,7 +924,6 @@ pub mod regs {
     pub struct Icnbwrcr(pub u32);
     impl Icnbwrcr {
         #[doc = "Bandwidth regulator control bits."]
-        #[must_use]
         #[inline(always)]
         pub const fn icnbwrcr(&self) -> u32 {
             let val = (self.0 >> 0usize) & 0xffff_ffff;
@@ -1002,7 +931,7 @@ pub mod regs {
         }
         #[doc = "Bandwidth regulator control bits."]
         #[inline(always)]
-        pub const fn set_icnbwrcr(&mut self, val: u32) {
+        pub fn set_icnbwrcr(&mut self, val: u32) {
             self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
         }
     }
@@ -1031,7 +960,6 @@ pub mod regs {
         #[doc = "When bit\\[i\\]
 is set to 1, ICN clock gating\\[i\\]
 is OFF."]
-        #[must_use]
         #[inline(always)]
         pub const fn icncgcr(&self) -> u32 {
             let val = (self.0 >> 0usize) & 0xffff_ffff;
@@ -1041,7 +969,7 @@ is OFF."]
 is set to 1, ICN clock gating\\[i\\]
 is OFF."]
         #[inline(always)]
-        pub const fn set_icncgcr(&mut self, val: u32) {
+        pub fn set_icncgcr(&mut self, val: u32) {
             self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
         }
     }
@@ -1068,7 +996,6 @@ is OFF."]
     pub struct Icnewrcr(pub u32);
     impl Icnewrcr {
         #[doc = "None."]
-        #[must_use]
         #[inline(always)]
         pub const fn sdmmc1_early_wr_rsp_enable(&self) -> super::vals::Sdmmc1EarlyWrRspEnable {
             let val = (self.0 >> 0usize) & 0x01;
@@ -1076,11 +1003,10 @@ is OFF."]
         }
         #[doc = "None."]
         #[inline(always)]
-        pub const fn set_sdmmc1_early_wr_rsp_enable(&mut self, val: super::vals::Sdmmc1EarlyWrRspEnable) {
+        pub fn set_sdmmc1_early_wr_rsp_enable(&mut self, val: super::vals::Sdmmc1EarlyWrRspEnable) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
         }
         #[doc = "None."]
-        #[must_use]
         #[inline(always)]
         pub const fn sdmmc2_early_wr_rsp_enable(&self) -> super::vals::Sdmmc2EarlyWrRspEnable {
             let val = (self.0 >> 1usize) & 0x01;
@@ -1088,11 +1014,10 @@ is OFF."]
         }
         #[doc = "None."]
         #[inline(always)]
-        pub const fn set_sdmmc2_early_wr_rsp_enable(&mut self, val: super::vals::Sdmmc2EarlyWrRspEnable) {
+        pub fn set_sdmmc2_early_wr_rsp_enable(&mut self, val: super::vals::Sdmmc2EarlyWrRspEnable) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
         }
         #[doc = "None."]
-        #[must_use]
         #[inline(always)]
         pub const fn usb1_early_wr_rsp_enable(&self) -> super::vals::Usb1EarlyWrRspEnable {
             let val = (self.0 >> 2usize) & 0x01;
@@ -1100,11 +1025,10 @@ is OFF."]
         }
         #[doc = "None."]
         #[inline(always)]
-        pub const fn set_usb1_early_wr_rsp_enable(&mut self, val: super::vals::Usb1EarlyWrRspEnable) {
+        pub fn set_usb1_early_wr_rsp_enable(&mut self, val: super::vals::Usb1EarlyWrRspEnable) {
             self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
         }
         #[doc = "None."]
-        #[must_use]
         #[inline(always)]
         pub const fn usb2_early_wr_rsp_enable(&self) -> super::vals::Usb2EarlyWrRspEnable {
             let val = (self.0 >> 3usize) & 0x01;
@@ -1112,7 +1036,7 @@ is OFF."]
         }
         #[doc = "None."]
         #[inline(always)]
-        pub const fn set_usb2_early_wr_rsp_enable(&mut self, val: super::vals::Usb2EarlyWrRspEnable) {
+        pub fn set_usb2_early_wr_rsp_enable(&mut self, val: super::vals::Usb2EarlyWrRspEnable) {
             self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
         }
     }
@@ -1135,14 +1059,7 @@ is OFF."]
     #[cfg(feature = "defmt")]
     impl defmt::Format for Icnewrcr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Icnewrcr {{ sdmmc1_early_wr_rsp_enable: {:?}, sdmmc2_early_wr_rsp_enable: {:?}, usb1_early_wr_rsp_enable: {:?}, usb2_early_wr_rsp_enable: {:?} }}",
-                self.sdmmc1_early_wr_rsp_enable(),
-                self.sdmmc2_early_wr_rsp_enable(),
-                self.usb1_early_wr_rsp_enable(),
-                self.usb2_early_wr_rsp_enable()
-            )
+            defmt :: write ! (f , "Icnewrcr {{ sdmmc1_early_wr_rsp_enable: {:?}, sdmmc2_early_wr_rsp_enable: {:?}, usb1_early_wr_rsp_enable: {:?}, usb2_early_wr_rsp_enable: {:?} }}" , self . sdmmc1_early_wr_rsp_enable () , self . sdmmc2_early_wr_rsp_enable () , self . usb1_early_wr_rsp_enable () , self . usb2_early_wr_rsp_enable ())
         }
     }
     #[doc = "SYSCFG Cortex-M55 NSVTOR control register."]
@@ -1151,7 +1068,6 @@ is OFF."]
     pub struct Initnsvtorcr(pub u32);
     impl Initnsvtorcr {
         #[doc = "Non-secure vector table base address."]
-        #[must_use]
         #[inline(always)]
         pub const fn nsvtor_addr(&self) -> u32 {
             let val = (self.0 >> 7usize) & 0x01ff_ffff;
@@ -1159,7 +1075,7 @@ is OFF."]
         }
         #[doc = "Non-secure vector table base address."]
         #[inline(always)]
-        pub const fn set_nsvtor_addr(&mut self, val: u32) {
+        pub fn set_nsvtor_addr(&mut self, val: u32) {
             self.0 = (self.0 & !(0x01ff_ffff << 7usize)) | (((val as u32) & 0x01ff_ffff) << 7usize);
         }
     }
@@ -1188,7 +1104,6 @@ is OFF."]
     pub struct Initsvtorcr(pub u32);
     impl Initsvtorcr {
         #[doc = "Secure vector table base address."]
-        #[must_use]
         #[inline(always)]
         pub const fn svtor_addr(&self) -> u32 {
             let val = (self.0 >> 7usize) & 0x01ff_ffff;
@@ -1196,7 +1111,7 @@ is OFF."]
         }
         #[doc = "Secure vector table base address."]
         #[inline(always)]
-        pub const fn set_svtor_addr(&mut self, val: u32) {
+        pub fn set_svtor_addr(&mut self, val: u32) {
             self.0 = (self.0 & !(0x01ff_ffff << 7usize)) | (((val as u32) & 0x01ff_ffff) << 7usize);
         }
     }
@@ -1225,7 +1140,6 @@ is OFF."]
     pub struct Iocr(pub u32);
     impl Iocr {
         #[doc = "Digital or analog pins."]
-        #[must_use]
         #[inline(always)]
         pub const fn iocr(&self) -> super::vals::Iocr {
             let val = (self.0 >> 0usize) & 0xffff_ffff;
@@ -1233,7 +1147,7 @@ is OFF."]
         }
         #[doc = "Digital or analog pins."]
         #[inline(always)]
-        pub const fn set_iocr(&mut self, val: super::vals::Iocr) {
+        pub fn set_iocr(&mut self, val: super::vals::Iocr) {
             self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val.to_bits() as u32) & 0xffff_ffff) << 0usize);
         }
     }
@@ -1260,7 +1174,6 @@ is OFF."]
     pub struct NonsecAidcr(pub u32);
     impl NonsecAidcr {
         #[doc = "Non-secure OS allocates specific CID to DMA channel through these bits."]
-        #[must_use]
         #[inline(always)]
         pub const fn dmacid_nonsec(&self) -> u8 {
             let val = (self.0 >> 0usize) & 0x07;
@@ -1268,7 +1181,7 @@ is OFF."]
         }
         #[doc = "Non-secure OS allocates specific CID to DMA channel through these bits."]
         #[inline(always)]
-        pub const fn set_dmacid_nonsec(&mut self, val: u8) {
+        pub fn set_dmacid_nonsec(&mut self, val: u8) {
             self.0 = (self.0 & !(0x07 << 0usize)) | (((val as u32) & 0x07) << 0usize);
         }
     }
@@ -1297,7 +1210,6 @@ is OFF."]
     pub struct NpuIcncr(pub u32);
     impl NpuIcncr {
         #[doc = "Control interleaving on NPU RAMs."]
-        #[must_use]
         #[inline(always)]
         pub const fn interleaving_active(&self) -> super::vals::InterleavingActive {
             let val = (self.0 >> 0usize) & 0x01;
@@ -1305,7 +1217,7 @@ is OFF."]
         }
         #[doc = "Control interleaving on NPU RAMs."]
         #[inline(always)]
-        pub const fn set_interleaving_active(&mut self, val: super::vals::InterleavingActive) {
+        pub fn set_interleaving_active(&mut self, val: super::vals::InterleavingActive) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
         }
     }
@@ -1338,7 +1250,6 @@ is OFF."]
     pub struct Pottamprstcr(pub u32);
     impl Pottamprstcr {
         #[doc = "This bit can be set by software to mask PKA, SAES, CRYP1/2, and HASH reset, in case of potential tamper."]
-        #[must_use]
         #[inline(always)]
         pub const fn pottampersetmask(&self) -> super::vals::Pottampersetmask {
             let val = (self.0 >> 0usize) & 0x01;
@@ -1346,7 +1257,7 @@ is OFF."]
         }
         #[doc = "This bit can be set by software to mask PKA, SAES, CRYP1/2, and HASH reset, in case of potential tamper."]
         #[inline(always)]
-        pub const fn set_pottampersetmask(&mut self, val: super::vals::Pottampersetmask) {
+        pub fn set_pottampersetmask(&mut self, val: super::vals::Pottampersetmask) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
         }
     }
@@ -1375,7 +1286,6 @@ is OFF."]
     pub struct SecAidcr(pub u32);
     impl SecAidcr {
         #[doc = "Secure OS allocates specific CID to DMA channel through these bits."]
-        #[must_use]
         #[inline(always)]
         pub const fn dmacid_sec(&self) -> u8 {
             let val = (self.0 >> 0usize) & 0x07;
@@ -1383,7 +1293,7 @@ is OFF."]
         }
         #[doc = "Secure OS allocates specific CID to DMA channel through these bits."]
         #[inline(always)]
-        pub const fn set_dmacid_sec(&mut self, val: u8) {
+        pub fn set_dmacid_sec(&mut self, val: u8) {
             self.0 = (self.0 & !(0x07 << 0usize)) | (((val as u32) & 0x07) << 0usize);
         }
     }
@@ -1412,7 +1322,6 @@ is OFF."]
     pub struct Smpshdpcr(pub u32);
     impl Smpshdpcr {
         #[doc = "Others: Reserved."]
-        #[must_use]
         #[inline(always)]
         pub const fn smpshdpsel(&self) -> super::vals::Smpshdpsel {
             let val = (self.0 >> 0usize) & 0x0f;
@@ -1420,7 +1329,7 @@ is OFF."]
         }
         #[doc = "Others: Reserved."]
         #[inline(always)]
-        pub const fn set_smpshdpsel(&mut self, val: super::vals::Smpshdpsel) {
+        pub fn set_smpshdpsel(&mut self, val: super::vals::Smpshdpsel) {
             self.0 = (self.0 & !(0x0f << 0usize)) | (((val.to_bits() as u32) & 0x0f) << 0usize);
         }
     }
@@ -1449,7 +1358,6 @@ is OFF."]
     pub struct Vddio1cccr(pub u32);
     impl Vddio1cccr {
         #[doc = "These bits are written by software to define an I/O compensation code for NMOS transistors. This code is applied to the I/O compensation cell when the CS = 1."]
-        #[must_use]
         #[inline(always)]
         pub const fn ransrc(&self) -> u8 {
             let val = (self.0 >> 0usize) & 0x0f;
@@ -1457,11 +1365,10 @@ is OFF."]
         }
         #[doc = "These bits are written by software to define an I/O compensation code for NMOS transistors. This code is applied to the I/O compensation cell when the CS = 1."]
         #[inline(always)]
-        pub const fn set_ransrc(&mut self, val: u8) {
+        pub fn set_ransrc(&mut self, val: u8) {
             self.0 = (self.0 & !(0x0f << 0usize)) | (((val as u32) & 0x0f) << 0usize);
         }
         #[doc = "These bits are written by software to define an I/O compensation code for PMOS transistors. This code is applied to the I/O compensation cell when CS = 1."]
-        #[must_use]
         #[inline(always)]
         pub const fn rapsrc(&self) -> u8 {
             let val = (self.0 >> 4usize) & 0x0f;
@@ -1469,11 +1376,10 @@ is OFF."]
         }
         #[doc = "These bits are written by software to define an I/O compensation code for PMOS transistors. This code is applied to the I/O compensation cell when CS = 1."]
         #[inline(always)]
-        pub const fn set_rapsrc(&mut self, val: u8) {
+        pub fn set_rapsrc(&mut self, val: u8) {
             self.0 = (self.0 & !(0x0f << 4usize)) | (((val as u32) & 0x0f) << 4usize);
         }
         #[doc = "Enables the compensation cell of I/Os supplied by VDDIOx."]
-        #[must_use]
         #[inline(always)]
         pub const fn en(&self) -> super::vals::Vddio1cccrEn {
             let val = (self.0 >> 8usize) & 0x01;
@@ -1481,11 +1387,10 @@ is OFF."]
         }
         #[doc = "Enables the compensation cell of I/Os supplied by VDDIOx."]
         #[inline(always)]
-        pub const fn set_en(&mut self, val: super::vals::Vddio1cccrEn) {
+        pub fn set_en(&mut self, val: super::vals::Vddio1cccrEn) {
             self.0 = (self.0 & !(0x01 << 8usize)) | (((val.to_bits() as u32) & 0x01) << 8usize);
         }
         #[doc = "Selects the code to be applied for the compensation cell of I/Os supplied by VDDIOx."]
-        #[must_use]
         #[inline(always)]
         pub const fn cs(&self) -> super::vals::Vddio1cccrCs {
             let val = (self.0 >> 9usize) & 0x01;
@@ -1493,7 +1398,7 @@ is OFF."]
         }
         #[doc = "Selects the code to be applied for the compensation cell of I/Os supplied by VDDIOx."]
         #[inline(always)]
-        pub const fn set_cs(&mut self, val: super::vals::Vddio1cccrCs) {
+        pub fn set_cs(&mut self, val: super::vals::Vddio1cccrCs) {
             self.0 = (self.0 & !(0x01 << 9usize)) | (((val.to_bits() as u32) & 0x01) << 9usize);
         }
     }
@@ -1532,7 +1437,6 @@ is OFF."]
     pub struct Vddio1ccsr(pub u32);
     impl Vddio1ccsr {
         #[doc = "This value is provided by the cell, and can be used by the CPU to compute an I/O compensation cell code for NMOS transistors."]
-        #[must_use]
         #[inline(always)]
         pub const fn ansrc(&self) -> u8 {
             let val = (self.0 >> 0usize) & 0x0f;
@@ -1540,11 +1444,10 @@ is OFF."]
         }
         #[doc = "This value is provided by the cell, and can be used by the CPU to compute an I/O compensation cell code for NMOS transistors."]
         #[inline(always)]
-        pub const fn set_ansrc(&mut self, val: u8) {
+        pub fn set_ansrc(&mut self, val: u8) {
             self.0 = (self.0 & !(0x0f << 0usize)) | (((val as u32) & 0x0f) << 0usize);
         }
         #[doc = "This value is provided by the cell, and can be used by the CPU to compute an I/O compensation cell code for PMOS transistors."]
-        #[must_use]
         #[inline(always)]
         pub const fn apsrc(&self) -> u8 {
             let val = (self.0 >> 4usize) & 0x0f;
@@ -1552,11 +1455,10 @@ is OFF."]
         }
         #[doc = "This value is provided by the cell, and can be used by the CPU to compute an I/O compensation cell code for PMOS transistors."]
         #[inline(always)]
-        pub const fn set_apsrc(&mut self, val: u8) {
+        pub fn set_apsrc(&mut self, val: u8) {
             self.0 = (self.0 & !(0x0f << 4usize)) | (((val as u32) & 0x0f) << 4usize);
         }
         #[doc = "Provides the compensation cell status of I/Os supplied by VDDIOx."]
-        #[must_use]
         #[inline(always)]
         pub const fn ready(&self) -> super::vals::Vddio1ccsrReady {
             let val = (self.0 >> 8usize) & 0x01;
@@ -1564,7 +1466,7 @@ is OFF."]
         }
         #[doc = "Provides the compensation cell status of I/Os supplied by VDDIOx."]
         #[inline(always)]
-        pub const fn set_ready(&mut self, val: super::vals::Vddio1ccsrReady) {
+        pub fn set_ready(&mut self, val: super::vals::Vddio1ccsrReady) {
             self.0 = (self.0 & !(0x01 << 8usize)) | (((val.to_bits() as u32) & 0x01) << 8usize);
         }
     }
@@ -1601,7 +1503,6 @@ is OFF."]
     pub struct Vddio2cccr(pub u32);
     impl Vddio2cccr {
         #[doc = "These bits are written by software to define an I/O compensation code for NMOS transistors. This code is applied to the I/O compensation cell when the CS = 1."]
-        #[must_use]
         #[inline(always)]
         pub const fn ransrc(&self) -> u8 {
             let val = (self.0 >> 0usize) & 0x0f;
@@ -1609,11 +1510,10 @@ is OFF."]
         }
         #[doc = "These bits are written by software to define an I/O compensation code for NMOS transistors. This code is applied to the I/O compensation cell when the CS = 1."]
         #[inline(always)]
-        pub const fn set_ransrc(&mut self, val: u8) {
+        pub fn set_ransrc(&mut self, val: u8) {
             self.0 = (self.0 & !(0x0f << 0usize)) | (((val as u32) & 0x0f) << 0usize);
         }
         #[doc = "These bits are written by software to define an I/O compensation code for PMOS transistors. This code is applied to the I/O compensation cell when CS = 1."]
-        #[must_use]
         #[inline(always)]
         pub const fn rapsrc(&self) -> u8 {
             let val = (self.0 >> 4usize) & 0x0f;
@@ -1621,11 +1521,10 @@ is OFF."]
         }
         #[doc = "These bits are written by software to define an I/O compensation code for PMOS transistors. This code is applied to the I/O compensation cell when CS = 1."]
         #[inline(always)]
-        pub const fn set_rapsrc(&mut self, val: u8) {
+        pub fn set_rapsrc(&mut self, val: u8) {
             self.0 = (self.0 & !(0x0f << 4usize)) | (((val as u32) & 0x0f) << 4usize);
         }
         #[doc = "Enables the compensation cell of I/Os supplied by VDDIOx."]
-        #[must_use]
         #[inline(always)]
         pub const fn en(&self) -> super::vals::Vddio2cccrEn {
             let val = (self.0 >> 8usize) & 0x01;
@@ -1633,11 +1532,10 @@ is OFF."]
         }
         #[doc = "Enables the compensation cell of I/Os supplied by VDDIOx."]
         #[inline(always)]
-        pub const fn set_en(&mut self, val: super::vals::Vddio2cccrEn) {
+        pub fn set_en(&mut self, val: super::vals::Vddio2cccrEn) {
             self.0 = (self.0 & !(0x01 << 8usize)) | (((val.to_bits() as u32) & 0x01) << 8usize);
         }
         #[doc = "Selects the code to be applied for the compensation cell of I/Os supplied by VDDIOx."]
-        #[must_use]
         #[inline(always)]
         pub const fn cs(&self) -> super::vals::Vddio2cccrCs {
             let val = (self.0 >> 9usize) & 0x01;
@@ -1645,7 +1543,7 @@ is OFF."]
         }
         #[doc = "Selects the code to be applied for the compensation cell of I/Os supplied by VDDIOx."]
         #[inline(always)]
-        pub const fn set_cs(&mut self, val: super::vals::Vddio2cccrCs) {
+        pub fn set_cs(&mut self, val: super::vals::Vddio2cccrCs) {
             self.0 = (self.0 & !(0x01 << 9usize)) | (((val.to_bits() as u32) & 0x01) << 9usize);
         }
     }
@@ -1684,7 +1582,6 @@ is OFF."]
     pub struct Vddio2ccsr(pub u32);
     impl Vddio2ccsr {
         #[doc = "This value is provided by the cell, and can be used by the CPU to compute an I/O compensation cell code for NMOS transistors."]
-        #[must_use]
         #[inline(always)]
         pub const fn ansrc(&self) -> u8 {
             let val = (self.0 >> 0usize) & 0x0f;
@@ -1692,11 +1589,10 @@ is OFF."]
         }
         #[doc = "This value is provided by the cell, and can be used by the CPU to compute an I/O compensation cell code for NMOS transistors."]
         #[inline(always)]
-        pub const fn set_ansrc(&mut self, val: u8) {
+        pub fn set_ansrc(&mut self, val: u8) {
             self.0 = (self.0 & !(0x0f << 0usize)) | (((val as u32) & 0x0f) << 0usize);
         }
         #[doc = "This value is provided by the cell, and can be used by the CPU to compute an I/O compensation cell code for PMOS transistors."]
-        #[must_use]
         #[inline(always)]
         pub const fn apsrc(&self) -> u8 {
             let val = (self.0 >> 4usize) & 0x0f;
@@ -1704,11 +1600,10 @@ is OFF."]
         }
         #[doc = "This value is provided by the cell, and can be used by the CPU to compute an I/O compensation cell code for PMOS transistors."]
         #[inline(always)]
-        pub const fn set_apsrc(&mut self, val: u8) {
+        pub fn set_apsrc(&mut self, val: u8) {
             self.0 = (self.0 & !(0x0f << 4usize)) | (((val as u32) & 0x0f) << 4usize);
         }
         #[doc = "Provides the compensation cell status of I/Os supplied by VDDIOx."]
-        #[must_use]
         #[inline(always)]
         pub const fn ready(&self) -> super::vals::Vddio2ccsrReady {
             let val = (self.0 >> 8usize) & 0x01;
@@ -1716,7 +1611,7 @@ is OFF."]
         }
         #[doc = "Provides the compensation cell status of I/Os supplied by VDDIOx."]
         #[inline(always)]
-        pub const fn set_ready(&mut self, val: super::vals::Vddio2ccsrReady) {
+        pub fn set_ready(&mut self, val: super::vals::Vddio2ccsrReady) {
             self.0 = (self.0 & !(0x01 << 8usize)) | (((val.to_bits() as u32) & 0x01) << 8usize);
         }
     }
@@ -1753,7 +1648,6 @@ is OFF."]
     pub struct Vddio3cccr(pub u32);
     impl Vddio3cccr {
         #[doc = "These bits are written by software to define an I/O compensation code for NMOS transistors. This code is applied to the I/O compensation cell when the CS = 1."]
-        #[must_use]
         #[inline(always)]
         pub const fn ransrc(&self) -> u8 {
             let val = (self.0 >> 0usize) & 0x0f;
@@ -1761,11 +1655,10 @@ is OFF."]
         }
         #[doc = "These bits are written by software to define an I/O compensation code for NMOS transistors. This code is applied to the I/O compensation cell when the CS = 1."]
         #[inline(always)]
-        pub const fn set_ransrc(&mut self, val: u8) {
+        pub fn set_ransrc(&mut self, val: u8) {
             self.0 = (self.0 & !(0x0f << 0usize)) | (((val as u32) & 0x0f) << 0usize);
         }
         #[doc = "These bits are written by software to define an I/O compensation code for PMOS transistors. This code is applied to the I/O compensation cell when CS = 1."]
-        #[must_use]
         #[inline(always)]
         pub const fn rapsrc(&self) -> u8 {
             let val = (self.0 >> 4usize) & 0x0f;
@@ -1773,11 +1666,10 @@ is OFF."]
         }
         #[doc = "These bits are written by software to define an I/O compensation code for PMOS transistors. This code is applied to the I/O compensation cell when CS = 1."]
         #[inline(always)]
-        pub const fn set_rapsrc(&mut self, val: u8) {
+        pub fn set_rapsrc(&mut self, val: u8) {
             self.0 = (self.0 & !(0x0f << 4usize)) | (((val as u32) & 0x0f) << 4usize);
         }
         #[doc = "Enables the compensation cell of I/Os supplied by VDDIOx."]
-        #[must_use]
         #[inline(always)]
         pub const fn en(&self) -> super::vals::Vddio3cccrEn {
             let val = (self.0 >> 8usize) & 0x01;
@@ -1785,11 +1677,10 @@ is OFF."]
         }
         #[doc = "Enables the compensation cell of I/Os supplied by VDDIOx."]
         #[inline(always)]
-        pub const fn set_en(&mut self, val: super::vals::Vddio3cccrEn) {
+        pub fn set_en(&mut self, val: super::vals::Vddio3cccrEn) {
             self.0 = (self.0 & !(0x01 << 8usize)) | (((val.to_bits() as u32) & 0x01) << 8usize);
         }
         #[doc = "Selects the code to be applied for the compensation cell of I/Os supplied by VDDIOx."]
-        #[must_use]
         #[inline(always)]
         pub const fn cs(&self) -> super::vals::Vddio3cccrCs {
             let val = (self.0 >> 9usize) & 0x01;
@@ -1797,7 +1688,7 @@ is OFF."]
         }
         #[doc = "Selects the code to be applied for the compensation cell of I/Os supplied by VDDIOx."]
         #[inline(always)]
-        pub const fn set_cs(&mut self, val: super::vals::Vddio3cccrCs) {
+        pub fn set_cs(&mut self, val: super::vals::Vddio3cccrCs) {
             self.0 = (self.0 & !(0x01 << 9usize)) | (((val.to_bits() as u32) & 0x01) << 9usize);
         }
     }
@@ -1836,7 +1727,6 @@ is OFF."]
     pub struct Vddio3ccsr(pub u32);
     impl Vddio3ccsr {
         #[doc = "This value is provided by the cell, and can be used by the CPU to compute an I/O compensation cell code for NMOS transistors."]
-        #[must_use]
         #[inline(always)]
         pub const fn ansrc(&self) -> u8 {
             let val = (self.0 >> 0usize) & 0x0f;
@@ -1844,11 +1734,10 @@ is OFF."]
         }
         #[doc = "This value is provided by the cell, and can be used by the CPU to compute an I/O compensation cell code for NMOS transistors."]
         #[inline(always)]
-        pub const fn set_ansrc(&mut self, val: u8) {
+        pub fn set_ansrc(&mut self, val: u8) {
             self.0 = (self.0 & !(0x0f << 0usize)) | (((val as u32) & 0x0f) << 0usize);
         }
         #[doc = "This value is provided by the cell, and can be used by the CPU to compute an I/O compensation cell code for PMOS transistors."]
-        #[must_use]
         #[inline(always)]
         pub const fn apsrc(&self) -> u8 {
             let val = (self.0 >> 4usize) & 0x0f;
@@ -1856,11 +1745,10 @@ is OFF."]
         }
         #[doc = "This value is provided by the cell, and can be used by the CPU to compute an I/O compensation cell code for PMOS transistors."]
         #[inline(always)]
-        pub const fn set_apsrc(&mut self, val: u8) {
+        pub fn set_apsrc(&mut self, val: u8) {
             self.0 = (self.0 & !(0x0f << 4usize)) | (((val as u32) & 0x0f) << 4usize);
         }
         #[doc = "Provides the compensation cell status of I/Os supplied by VDDIOx."]
-        #[must_use]
         #[inline(always)]
         pub const fn ready(&self) -> super::vals::Vddio3ccsrReady {
             let val = (self.0 >> 8usize) & 0x01;
@@ -1868,7 +1756,7 @@ is OFF."]
         }
         #[doc = "Provides the compensation cell status of I/Os supplied by VDDIOx."]
         #[inline(always)]
-        pub const fn set_ready(&mut self, val: super::vals::Vddio3ccsrReady) {
+        pub fn set_ready(&mut self, val: super::vals::Vddio3ccsrReady) {
             self.0 = (self.0 & !(0x01 << 8usize)) | (((val.to_bits() as u32) & 0x01) << 8usize);
         }
     }
@@ -1905,7 +1793,6 @@ is OFF."]
     pub struct Vddio4cccr(pub u32);
     impl Vddio4cccr {
         #[doc = "These bits are written by software to define an I/O compensation code for NMOS transistors. This code is applied to the I/O compensation cell when the CS = 1."]
-        #[must_use]
         #[inline(always)]
         pub const fn ransrc(&self) -> u8 {
             let val = (self.0 >> 0usize) & 0x0f;
@@ -1913,11 +1800,10 @@ is OFF."]
         }
         #[doc = "These bits are written by software to define an I/O compensation code for NMOS transistors. This code is applied to the I/O compensation cell when the CS = 1."]
         #[inline(always)]
-        pub const fn set_ransrc(&mut self, val: u8) {
+        pub fn set_ransrc(&mut self, val: u8) {
             self.0 = (self.0 & !(0x0f << 0usize)) | (((val as u32) & 0x0f) << 0usize);
         }
         #[doc = "These bits are written by software to define an I/O compensation code for PMOS transistors. This code is applied to the I/O compensation cell when CS = 1."]
-        #[must_use]
         #[inline(always)]
         pub const fn rapsrc(&self) -> u8 {
             let val = (self.0 >> 4usize) & 0x0f;
@@ -1925,11 +1811,10 @@ is OFF."]
         }
         #[doc = "These bits are written by software to define an I/O compensation code for PMOS transistors. This code is applied to the I/O compensation cell when CS = 1."]
         #[inline(always)]
-        pub const fn set_rapsrc(&mut self, val: u8) {
+        pub fn set_rapsrc(&mut self, val: u8) {
             self.0 = (self.0 & !(0x0f << 4usize)) | (((val as u32) & 0x0f) << 4usize);
         }
         #[doc = "Enables the compensation cell of I/Os supplied by VDDIOx."]
-        #[must_use]
         #[inline(always)]
         pub const fn en(&self) -> super::vals::Vddio4cccrEn {
             let val = (self.0 >> 8usize) & 0x01;
@@ -1937,11 +1822,10 @@ is OFF."]
         }
         #[doc = "Enables the compensation cell of I/Os supplied by VDDIOx."]
         #[inline(always)]
-        pub const fn set_en(&mut self, val: super::vals::Vddio4cccrEn) {
+        pub fn set_en(&mut self, val: super::vals::Vddio4cccrEn) {
             self.0 = (self.0 & !(0x01 << 8usize)) | (((val.to_bits() as u32) & 0x01) << 8usize);
         }
         #[doc = "Selects the code to be applied for the compensation cell of I/Os supplied by VDDIOx."]
-        #[must_use]
         #[inline(always)]
         pub const fn cs(&self) -> super::vals::Vddio4cccrCs {
             let val = (self.0 >> 9usize) & 0x01;
@@ -1949,7 +1833,7 @@ is OFF."]
         }
         #[doc = "Selects the code to be applied for the compensation cell of I/Os supplied by VDDIOx."]
         #[inline(always)]
-        pub const fn set_cs(&mut self, val: super::vals::Vddio4cccrCs) {
+        pub fn set_cs(&mut self, val: super::vals::Vddio4cccrCs) {
             self.0 = (self.0 & !(0x01 << 9usize)) | (((val.to_bits() as u32) & 0x01) << 9usize);
         }
     }
@@ -1988,7 +1872,6 @@ is OFF."]
     pub struct Vddio4ccsr(pub u32);
     impl Vddio4ccsr {
         #[doc = "This value is provided by the cell, and can be used by the CPU to compute an I/O compensation cell code for NMOS transistors."]
-        #[must_use]
         #[inline(always)]
         pub const fn ansrc(&self) -> u8 {
             let val = (self.0 >> 0usize) & 0x0f;
@@ -1996,11 +1879,10 @@ is OFF."]
         }
         #[doc = "This value is provided by the cell, and can be used by the CPU to compute an I/O compensation cell code for NMOS transistors."]
         #[inline(always)]
-        pub const fn set_ansrc(&mut self, val: u8) {
+        pub fn set_ansrc(&mut self, val: u8) {
             self.0 = (self.0 & !(0x0f << 0usize)) | (((val as u32) & 0x0f) << 0usize);
         }
         #[doc = "This value is provided by the cell, and can be used by the CPU to compute an I/O compensation cell code for PMOS transistors."]
-        #[must_use]
         #[inline(always)]
         pub const fn apsrc(&self) -> u8 {
             let val = (self.0 >> 4usize) & 0x0f;
@@ -2008,11 +1890,10 @@ is OFF."]
         }
         #[doc = "This value is provided by the cell, and can be used by the CPU to compute an I/O compensation cell code for PMOS transistors."]
         #[inline(always)]
-        pub const fn set_apsrc(&mut self, val: u8) {
+        pub fn set_apsrc(&mut self, val: u8) {
             self.0 = (self.0 & !(0x0f << 4usize)) | (((val as u32) & 0x0f) << 4usize);
         }
         #[doc = "Provides the compensation cell status of I/Os supplied by VDDIOx."]
-        #[must_use]
         #[inline(always)]
         pub const fn ready(&self) -> super::vals::Vddio4ccsrReady {
             let val = (self.0 >> 8usize) & 0x01;
@@ -2020,7 +1901,7 @@ is OFF."]
         }
         #[doc = "Provides the compensation cell status of I/Os supplied by VDDIOx."]
         #[inline(always)]
-        pub const fn set_ready(&mut self, val: super::vals::Vddio4ccsrReady) {
+        pub fn set_ready(&mut self, val: super::vals::Vddio4ccsrReady) {
             self.0 = (self.0 & !(0x01 << 8usize)) | (((val.to_bits() as u32) & 0x01) << 8usize);
         }
     }
@@ -2057,7 +1938,6 @@ is OFF."]
     pub struct Vddiocccr(pub u32);
     impl Vddiocccr {
         #[doc = "These bits are written by software to define an I/O compensation code for NMOS transistors. This code is applied to the I/O compensation cell when CS = 1."]
-        #[must_use]
         #[inline(always)]
         pub const fn ransrc(&self) -> u8 {
             let val = (self.0 >> 0usize) & 0x0f;
@@ -2065,11 +1945,10 @@ is OFF."]
         }
         #[doc = "These bits are written by software to define an I/O compensation code for NMOS transistors. This code is applied to the I/O compensation cell when CS = 1."]
         #[inline(always)]
-        pub const fn set_ransrc(&mut self, val: u8) {
+        pub fn set_ransrc(&mut self, val: u8) {
             self.0 = (self.0 & !(0x0f << 0usize)) | (((val as u32) & 0x0f) << 0usize);
         }
         #[doc = "These bits are written by software to define an I/O compensation code for PMOS transistors. This code is applied to the I/O compensation cell when CS = 1."]
-        #[must_use]
         #[inline(always)]
         pub const fn rapsrc(&self) -> u8 {
             let val = (self.0 >> 4usize) & 0x0f;
@@ -2077,11 +1956,10 @@ is OFF."]
         }
         #[doc = "These bits are written by software to define an I/O compensation code for PMOS transistors. This code is applied to the I/O compensation cell when CS = 1."]
         #[inline(always)]
-        pub const fn set_rapsrc(&mut self, val: u8) {
+        pub fn set_rapsrc(&mut self, val: u8) {
             self.0 = (self.0 & !(0x0f << 4usize)) | (((val as u32) & 0x0f) << 4usize);
         }
         #[doc = "Enables the compensation cell of I/Os supplied by VDDIO."]
-        #[must_use]
         #[inline(always)]
         pub const fn en(&self) -> super::vals::VddiocccrEn {
             let val = (self.0 >> 8usize) & 0x01;
@@ -2089,11 +1967,10 @@ is OFF."]
         }
         #[doc = "Enables the compensation cell of I/Os supplied by VDDIO."]
         #[inline(always)]
-        pub const fn set_en(&mut self, val: super::vals::VddiocccrEn) {
+        pub fn set_en(&mut self, val: super::vals::VddiocccrEn) {
             self.0 = (self.0 & !(0x01 << 8usize)) | (((val.to_bits() as u32) & 0x01) << 8usize);
         }
         #[doc = "Selects the code to be applied for the compensation cell of I/Os supplied by VDDIO."]
-        #[must_use]
         #[inline(always)]
         pub const fn cs(&self) -> super::vals::VddiocccrCs {
             let val = (self.0 >> 9usize) & 0x01;
@@ -2101,7 +1978,7 @@ is OFF."]
         }
         #[doc = "Selects the code to be applied for the compensation cell of I/Os supplied by VDDIO."]
         #[inline(always)]
-        pub const fn set_cs(&mut self, val: super::vals::VddiocccrCs) {
+        pub fn set_cs(&mut self, val: super::vals::VddiocccrCs) {
             self.0 = (self.0 & !(0x01 << 9usize)) | (((val.to_bits() as u32) & 0x01) << 9usize);
         }
     }
@@ -2140,7 +2017,6 @@ is OFF."]
     pub struct Vddioccsr(pub u32);
     impl Vddioccsr {
         #[doc = "This value is provided by the cell, and can be used by the CPU to compute an I/O compensation cell code for NMOS transistors."]
-        #[must_use]
         #[inline(always)]
         pub const fn ansrc(&self) -> u8 {
             let val = (self.0 >> 0usize) & 0x0f;
@@ -2148,11 +2024,10 @@ is OFF."]
         }
         #[doc = "This value is provided by the cell, and can be used by the CPU to compute an I/O compensation cell code for NMOS transistors."]
         #[inline(always)]
-        pub const fn set_ansrc(&mut self, val: u8) {
+        pub fn set_ansrc(&mut self, val: u8) {
             self.0 = (self.0 & !(0x0f << 0usize)) | (((val as u32) & 0x0f) << 0usize);
         }
         #[doc = "This value is provided by the cell, and can be used by the CPU to compute an I/O compensation cell code for PMOS transistors."]
-        #[must_use]
         #[inline(always)]
         pub const fn apsrc(&self) -> u8 {
             let val = (self.0 >> 4usize) & 0x0f;
@@ -2160,11 +2035,10 @@ is OFF."]
         }
         #[doc = "This value is provided by the cell, and can be used by the CPU to compute an I/O compensation cell code for PMOS transistors."]
         #[inline(always)]
-        pub const fn set_apsrc(&mut self, val: u8) {
+        pub fn set_apsrc(&mut self, val: u8) {
             self.0 = (self.0 & !(0x0f << 4usize)) | (((val as u32) & 0x0f) << 4usize);
         }
         #[doc = "Provides the compensation cell status of I/Os supplied by VDDIO."]
-        #[must_use]
         #[inline(always)]
         pub const fn ready(&self) -> super::vals::VddioccsrReady {
             let val = (self.0 >> 8usize) & 0x01;
@@ -2172,7 +2046,7 @@ is OFF."]
         }
         #[doc = "Provides the compensation cell status of I/Os supplied by VDDIO."]
         #[inline(always)]
-        pub const fn set_ready(&mut self, val: super::vals::VddioccsrReady) {
+        pub fn set_ready(&mut self, val: super::vals::VddioccsrReady) {
             self.0 = (self.0 & !(0x01 << 8usize)) | (((val.to_bits() as u32) & 0x01) << 8usize);
         }
     }
@@ -2209,7 +2083,6 @@ is OFF."]
     pub struct Vencramcr(pub u32);
     impl Vencramcr {
         #[doc = "VENCRAM allocation VENC if active, or to system (if VENC inactive)."]
-        #[must_use]
         #[inline(always)]
         pub const fn vencram_en(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -2217,7 +2090,7 @@ is OFF."]
         }
         #[doc = "VENCRAM allocation VENC if active, or to system (if VENC inactive)."]
         #[inline(always)]
-        pub const fn set_vencram_en(&mut self, val: bool) {
+        pub fn set_vencram_en(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
     }
@@ -2247,9 +2120,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Bkpraml {
         #[doc = "Backup SRAM double ECC error signal disconnected from TIM1/8/15/16/17 break inputs."]
-        B0x0 = 0x0,
+        B_0X0 = 0x0,
         #[doc = "Backup SRAM double ECC error signal connected to TIM1/8/15/16/17 break inputs."]
-        B0x1 = 0x01,
+        B_0X1 = 0x01,
     }
     impl Bkpraml {
         #[inline(always)]
@@ -2278,9 +2151,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Boot0 {
         #[doc = "BOOT0 pin connected to VSS (or left open if BOOT0_PD = 0)."]
-        B0x0 = 0x0,
+        B_0X0 = 0x0,
         #[doc = "BOOT0 pin connected to VDD."]
-        B0x1 = 0x01,
+        B_0X1 = 0x01,
     }
     impl Boot0 {
         #[inline(always)]
@@ -2309,9 +2182,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Boot0Pd {
         #[doc = "Pull-down enabled. The BOOT0 pin can be left open and takes a value of 0 if open."]
-        B0x0 = 0x0,
+        B_0X0 = 0x0,
         #[doc = "Pull-down disabled. The BOOT0 pin must not be left open."]
-        B0x1 = 0x01,
+        B_0X1 = 0x01,
     }
     impl Boot0Pd {
         #[inline(always)]
@@ -2340,9 +2213,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Boot1 {
         #[doc = "BOOT1 pin connected to VSS (or left open if BOOT1_PD = 0 in BOOTCR)."]
-        B0x0 = 0x0,
+        B_0X0 = 0x0,
         #[doc = "BOOT1 pin connected to VDD."]
-        B0x1 = 0x01,
+        B_0X1 = 0x01,
     }
     impl Boot1 {
         #[inline(always)]
@@ -2371,9 +2244,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Boot1Pd {
         #[doc = "Pull-down enabled. The BOOT1 pin can be left open and takes a value of 0 if open."]
-        B0x0 = 0x0,
+        B_0X0 = 0x0,
         #[doc = "Pull-down disabled. The BOOT1 pin must not be left open."]
-        B0x1 = 0x01,
+        B_0X1 = 0x01,
     }
     impl Boot1Pd {
         #[inline(always)]
@@ -2402,9 +2275,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum CfgRetimeRx {
         #[doc = "No retiming on Rx path."]
-        B0x0 = 0x0,
+        B_0X0 = 0x0,
         #[doc = "Retiming on Rx path."]
-        B0x1 = 0x01,
+        B_0X1 = 0x01,
     }
     impl CfgRetimeRx {
         #[inline(always)]
@@ -2433,9 +2306,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum CfgRetimeTx {
         #[doc = "No retiming on Tx path."]
-        B0x0 = 0x0,
+        B_0X0 = 0x0,
         #[doc = "Retiming on Tx path."]
-        B0x1 = 0x01,
+        B_0X1 = 0x01,
     }
     impl CfgRetimeTx {
         #[inline(always)]
@@ -2472,9 +2345,9 @@ pub mod vals {
         _RESERVED_6 = 0x06,
         _RESERVED_7 = 0x07,
         #[doc = "128 Kbytes (default value)."]
-        B0x8 = 0x08,
+        B_0X8 = 0x08,
         #[doc = "256 Kbytes."]
-        B0x9 = 0x09,
+        B_0X9 = 0x09,
         _RESERVED_a = 0x0a,
         _RESERVED_b = 0x0b,
         _RESERVED_c = 0x0c,
@@ -2516,11 +2389,11 @@ pub mod vals {
         _RESERVED_5 = 0x05,
         _RESERVED_6 = 0x06,
         #[doc = "64 KB (default value)."]
-        B0x7 = 0x07,
+        B_0X7 = 0x07,
         #[doc = "128 Kbytes."]
-        B0x8 = 0x08,
+        B_0X8 = 0x08,
         #[doc = "256 Kbytes."]
-        B0x9 = 0x09,
+        B_0X9 = 0x09,
         _RESERVED_a = 0x0a,
         _RESERVED_b = 0x0b,
         _RESERVED_c = 0x0c,
@@ -2555,9 +2428,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Cm55cachel {
         #[doc = "Cortex-M55 cache double ECC error signal disconnected from TIM1/8/15/16/17 break inputs."]
-        B0x0 = 0x0,
+        B_0X0 = 0x0,
         #[doc = "Cortex-M55 cache double ECC error signal connected to TIM1/8/15/16/17 break inputs."]
-        B0x1 = 0x01,
+        B_0X1 = 0x01,
     }
     impl Cm55cachel {
         #[inline(always)]
@@ -2586,9 +2459,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Cm55l {
         #[doc = "Cortex-M55 lockup output disconnected from TIM1/8/15/16/17 break inputs."]
-        B0x0 = 0x0,
+        B_0X0 = 0x0,
         #[doc = "Cortex-M55 lockup output disconnected from TIM1/8/15/16/17 break inputs."]
-        B0x1 = 0x01,
+        B_0X1 = 0x01,
     }
     impl Cm55l {
         #[inline(always)]
@@ -2617,9 +2490,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Cm55tcml {
         #[doc = "Cortex-M55 TCM double ECC error signal disconnected from TIM1/8/15/16/17 break inputs."]
-        B0x0 = 0x0,
+        B_0X0 = 0x0,
         #[doc = "Cortex-M55 TCM double ECC error signal connected to TIM1/8/15/16/17 break inputs."]
-        B0x1 = 0x01,
+        B_0X1 = 0x01,
     }
     impl Cm55tcml {
         #[inline(always)]
@@ -2648,9 +2521,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum CoreResetType {
         #[doc = "Warm reset (default value)."]
-        B0x0 = 0x0,
+        B_0X0 = 0x0,
         #[doc = "Power-on reset."]
-        B0x1 = 0x01,
+        B_0X1 = 0x01,
     }
     impl CoreResetType {
         #[inline(always)]
@@ -2679,9 +2552,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum InterleavingActive {
         #[doc = "Interleaving disabled."]
-        B0x0 = 0x0,
+        B_0X0 = 0x0,
         #[doc = "Interleaving enabled."]
-        B0x1 = 0x01,
+        B_0X1 = 0x01,
     }
     impl InterleavingActive {
         #[inline(always)]
@@ -2710,9 +2583,9 @@ pub mod vals {
     pub struct Iocr(u32);
     impl Iocr {
         #[doc = "High-speed mode disabled, or use ADC ANA pin."]
-        pub const B0x0: Self = Self(0x0);
+        pub const B_0X0: Self = Self(0x0);
         #[doc = "High-speed mode enabled, or connect internal ADC ANA signal to GPIO."]
-        pub const B0x1: Self = Self(0x01);
+        pub const B_0X1: Self = Self(0x01);
     }
     impl Iocr {
         pub const fn from_bits(val: u32) -> Iocr {
@@ -2725,8 +2598,8 @@ pub mod vals {
     impl core::fmt::Debug for Iocr {
         fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
             match self.0 {
-                0x0 => f.write_str("B0x0"),
-                0x01 => f.write_str("B0x1"),
+                0x0 => f.write_str("B_0X0"),
+                0x01 => f.write_str("B_0X1"),
                 other => core::write!(f, "0x{:02X}", other),
             }
         }
@@ -2735,8 +2608,8 @@ pub mod vals {
     impl defmt::Format for Iocr {
         fn format(&self, f: defmt::Formatter) {
             match self.0 {
-                0x0 => defmt::write!(f, "B0x0"),
-                0x01 => defmt::write!(f, "B0x1"),
+                0x0 => defmt::write!(f, "B_0X0"),
+                0x01 => defmt::write!(f, "B_0X1"),
                 other => defmt::write!(f, "0x{:02X}", other),
             }
         }
@@ -2758,9 +2631,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum LockupNmiEn {
         #[doc = "Lockup state must be recovered from NVIC interrupt (default value)."]
-        B0x0 = 0x0,
+        B_0X0 = 0x0,
         #[doc = "Lockup generates a NMI on the core."]
-        B0x1 = 0x01,
+        B_0X1 = 0x01,
     }
     impl LockupNmiEn {
         #[inline(always)]
@@ -2789,9 +2662,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum LockupRstEn {
         #[doc = "Lockup state shall be recovered from interrupt (default value)."]
-        B0x0 = 0x0,
+        B_0X0 = 0x0,
         #[doc = "Lockup requests a warm reset to the RCC."]
-        B0x1 = 0x01,
+        B_0X1 = 0x01,
     }
     impl LockupRstEn {
         #[inline(always)]
@@ -2820,9 +2693,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum PahbErrorAck {
         #[doc = "Error capture."]
-        B0x0 = 0x0,
+        B_0X0 = 0x0,
         #[doc = "Clean error."]
-        B0x1 = 0x01,
+        B_0X1 = 0x01,
     }
     impl PahbErrorAck {
         #[inline(always)]
@@ -2851,9 +2724,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Pottampersetmask {
         #[doc = "PKA, SAES, CRYP1/2, and HASH reset in case of potential tamper."]
-        B0x0 = 0x0,
+        B_0X0 = 0x0,
         #[doc = "PKA, SAES, CRYP1/2, and HASH not reset in case of potential tamper."]
-        B0x1 = 0x01,
+        B_0X1 = 0x01,
     }
     impl Pottampersetmask {
         #[inline(always)]
@@ -2882,9 +2755,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum PvdlLock {
         #[doc = "PVD interrupt disconnected from TIM1/8/15/16/17 break input. PVDE bits can be programmed by the application."]
-        B0x0 = 0x0,
+        B_0X0 = 0x0,
         #[doc = "PVD interrupt connected to TIM1/8/15/16/17 break input. PVDE and bits are read only."]
-        B0x1 = 0x01,
+        B_0X1 = 0x01,
     }
     impl PvdlLock {
         #[inline(always)]
@@ -2913,9 +2786,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum RmeCache {
         #[doc = "Default RW margin settings."]
-        B0x0 = 0x0,
+        B_0X0 = 0x0,
         #[doc = "Use external pin RW margin setting."]
-        B0x1 = 0x01,
+        B_0X1 = 0x01,
     }
     impl RmeCache {
         #[inline(always)]
@@ -2944,9 +2817,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum RmeTcm {
         #[doc = "Default RW margin settings."]
-        B0x0 = 0x0,
+        B_0X0 = 0x0,
         #[doc = "Use external pin RW margin setting."]
-        B0x1 = 0x01,
+        B_0X1 = 0x01,
     }
     impl RmeTcm {
         #[inline(always)]
@@ -2975,9 +2848,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Sdfbclk180 {
         #[doc = "No delay on the feedback clock."]
-        B0x0 = 0x0,
+        B_0X0 = 0x0,
         #[doc = "Half a cycle delay on the feedback clock."]
-        B0x1 = 0x01,
+        B_0X1 = 0x01,
     }
     impl Sdfbclk180 {
         #[inline(always)]
@@ -3006,9 +2879,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Sdmmc1EarlyWrRspEnable {
         #[doc = "Early-write response disabled. The last AHB write data beat receives the AXI buffered response for the complete AHB transaction."]
-        B0x0 = 0x0,
+        B_0X0 = 0x0,
         #[doc = "Early-write response enabled. AHB-Lite write data beats receive an automatic OK response from the AHB-to-AXI bridge, whatever the B-channel AXI response."]
-        B0x1 = 0x01,
+        B_0X1 = 0x01,
     }
     impl Sdmmc1EarlyWrRspEnable {
         #[inline(always)]
@@ -3037,9 +2910,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Sdmmc2EarlyWrRspEnable {
         #[doc = "Early-write response disabled. The last AHB write data beat receives the AXI buffered response for the complete AHB transaction."]
-        B0x0 = 0x0,
+        B_0X0 = 0x0,
         #[doc = "Early-write response enabled. AHB-Lite write data beats receive an automatic OK response from the AHB-to-AXI bridge, whatever the B-channel AXI response."]
-        B0x1 = 0x01,
+        B_0X1 = 0x01,
     }
     impl Sdmmc2EarlyWrRspEnable {
         #[inline(always)]
@@ -3068,7 +2941,7 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Smpshdpsel {
         #[doc = "Standard run mode (no HDP)."]
-        B0x0 = 0x0,
+        B_0X0 = 0x0,
         _RESERVED_1 = 0x01,
         _RESERVED_2 = 0x02,
         _RESERVED_3 = 0x03,
@@ -3081,13 +2954,13 @@ pub mod vals {
         _RESERVED_a = 0x0a,
         _RESERVED_b = 0x0b,
         #[doc = "Analyze fsm mode analysis."]
-        B0xC = 0x0c,
+        B_0X_C = 0x0c,
         #[doc = "Analyze fsm mos analysis."]
-        B0xD = 0x0d,
+        B_0X_D = 0x0d,
         #[doc = "Analyze fsm rampe analysis."]
-        B0xE = 0x0e,
+        B_0X_E = 0x0e,
         #[doc = "Analyze fsm mode analysis."]
-        B0xF = 0x0f,
+        B_0X_F = 0x0f,
     }
     impl Smpshdpsel {
         #[inline(always)]
@@ -3116,9 +2989,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Usb1EarlyWrRspEnable {
         #[doc = "Early-write response disabled. The last AHB write data beat receives the AXI buffered response for the complete AHB transaction."]
-        B0x0 = 0x0,
+        B_0X0 = 0x0,
         #[doc = "Early-write response enabled. AHB-Lite write data beats receive an automatic OK response from the AHB-to-AXI bridge, whatever the B-channel AXI response."]
-        B0x1 = 0x01,
+        B_0X1 = 0x01,
     }
     impl Usb1EarlyWrRspEnable {
         #[inline(always)]
@@ -3147,9 +3020,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Usb2EarlyWrRspEnable {
         #[doc = "Early-write response disabled. The last AHB write data beat receives the AXI buffered response for the complete AHB transaction."]
-        B0x0 = 0x0,
+        B_0X0 = 0x0,
         #[doc = "Early-write response enabled. AHB-Lite write data beats receive an automatic OK response from the AHB-to-AXI bridge, whatever the B-channel AXI response."]
-        B0x1 = 0x01,
+        B_0X1 = 0x01,
     }
     impl Usb2EarlyWrRspEnable {
         #[inline(always)]
@@ -3178,11 +3051,11 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Vddio1cccrCs {
         #[doc = "VDDIOx I/O code from the cell (available in the VDDIOxCCSR)."]
-        B0x0 = 0x0,
+        B_0X0 = 0x0,
         #[doc = "VDDIOx I/O code from RANSRC\\[3:0\\]
 and RAPSRC\\[3:0\\]
 in this register."]
-        B0x1 = 0x01,
+        B_0X1 = 0x01,
     }
     impl Vddio1cccrCs {
         #[inline(always)]
@@ -3211,9 +3084,9 @@ in this register."]
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Vddio1cccrEn {
         #[doc = "VDDIOx I/O compensation cell disabled."]
-        B0x0 = 0x0,
+        B_0X0 = 0x0,
         #[doc = "VDDIOx I/O compensation cell enabled."]
-        B0x1 = 0x01,
+        B_0X1 = 0x01,
     }
     impl Vddio1cccrEn {
         #[inline(always)]
@@ -3242,9 +3115,9 @@ in this register."]
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Vddio1ccsrReady {
         #[doc = "VDDIOx I/O compensation cell not ready."]
-        B0x0 = 0x0,
+        B_0X0 = 0x0,
         #[doc = "VDDIOx I/O compensation cell ready."]
-        B0x1 = 0x01,
+        B_0X1 = 0x01,
     }
     impl Vddio1ccsrReady {
         #[inline(always)]
@@ -3273,11 +3146,11 @@ in this register."]
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Vddio2cccrCs {
         #[doc = "VDDIOx I/O code from the cell (available in the VDDIOxCCSR)."]
-        B0x0 = 0x0,
+        B_0X0 = 0x0,
         #[doc = "VDDIOx I/O code from RANSRC\\[3:0\\]
 and RAPSRC\\[3:0\\]
 in this register."]
-        B0x1 = 0x01,
+        B_0X1 = 0x01,
     }
     impl Vddio2cccrCs {
         #[inline(always)]
@@ -3306,9 +3179,9 @@ in this register."]
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Vddio2cccrEn {
         #[doc = "VDDIOx I/O compensation cell disabled."]
-        B0x0 = 0x0,
+        B_0X0 = 0x0,
         #[doc = "VDDIOx I/O compensation cell enabled."]
-        B0x1 = 0x01,
+        B_0X1 = 0x01,
     }
     impl Vddio2cccrEn {
         #[inline(always)]
@@ -3337,9 +3210,9 @@ in this register."]
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Vddio2ccsrReady {
         #[doc = "VDDIOx I/O compensation cell not ready."]
-        B0x0 = 0x0,
+        B_0X0 = 0x0,
         #[doc = "VDDIOx I/O compensation cell ready."]
-        B0x1 = 0x01,
+        B_0X1 = 0x01,
     }
     impl Vddio2ccsrReady {
         #[inline(always)]
@@ -3368,11 +3241,11 @@ in this register."]
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Vddio3cccrCs {
         #[doc = "VDDIOx I/O code from the cell (available in the VDDIOxCCSR)."]
-        B0x0 = 0x0,
+        B_0X0 = 0x0,
         #[doc = "VDDIOx I/O code from RANSRC\\[3:0\\]
 and RAPSRC\\[3:0\\]
 in this register."]
-        B0x1 = 0x01,
+        B_0X1 = 0x01,
     }
     impl Vddio3cccrCs {
         #[inline(always)]
@@ -3401,9 +3274,9 @@ in this register."]
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Vddio3cccrEn {
         #[doc = "VDDIOx I/O compensation cell disabled."]
-        B0x0 = 0x0,
+        B_0X0 = 0x0,
         #[doc = "VDDIOx I/O compensation cell enabled."]
-        B0x1 = 0x01,
+        B_0X1 = 0x01,
     }
     impl Vddio3cccrEn {
         #[inline(always)]
@@ -3432,9 +3305,9 @@ in this register."]
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Vddio3ccsrReady {
         #[doc = "VDDIOx I/O compensation cell not ready."]
-        B0x0 = 0x0,
+        B_0X0 = 0x0,
         #[doc = "VDDIOx I/O compensation cell ready."]
-        B0x1 = 0x01,
+        B_0X1 = 0x01,
     }
     impl Vddio3ccsrReady {
         #[inline(always)]
@@ -3463,11 +3336,11 @@ in this register."]
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Vddio4cccrCs {
         #[doc = "VDDIOx I/O code from the cell (available in the VDDIOxCCSR)."]
-        B0x0 = 0x0,
+        B_0X0 = 0x0,
         #[doc = "VDDIOx I/O code from RANSRC\\[3:0\\]
 and RAPSRC\\[3:0\\]
 in this register."]
-        B0x1 = 0x01,
+        B_0X1 = 0x01,
     }
     impl Vddio4cccrCs {
         #[inline(always)]
@@ -3496,9 +3369,9 @@ in this register."]
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Vddio4cccrEn {
         #[doc = "VDDIOx I/O compensation cell disabled."]
-        B0x0 = 0x0,
+        B_0X0 = 0x0,
         #[doc = "VDDIOx I/O compensation cell enabled."]
-        B0x1 = 0x01,
+        B_0X1 = 0x01,
     }
     impl Vddio4cccrEn {
         #[inline(always)]
@@ -3527,9 +3400,9 @@ in this register."]
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Vddio4ccsrReady {
         #[doc = "VDDIOx I/O compensation cell not ready."]
-        B0x0 = 0x0,
+        B_0X0 = 0x0,
         #[doc = "VDDIOx I/O compensation cell ready."]
-        B0x1 = 0x01,
+        B_0X1 = 0x01,
     }
     impl Vddio4ccsrReady {
         #[inline(always)]
@@ -3558,10 +3431,10 @@ in this register."]
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum VddiocccrCs {
         #[doc = "VDDIO I/O code from the cell (available in the VDDIOCCSR)."]
-        B0x0 = 0x0,
+        B_0X0 = 0x0,
         #[doc = "VDDIO I/O code from RANSRC\\[3:0\\]
 and RAPSRC\\[3:0\\]."]
-        B0x1 = 0x01,
+        B_0X1 = 0x01,
     }
     impl VddiocccrCs {
         #[inline(always)]
@@ -3590,9 +3463,9 @@ and RAPSRC\\[3:0\\]."]
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum VddiocccrEn {
         #[doc = "VDDIO I/O compensation cell disabled."]
-        B0x0 = 0x0,
+        B_0X0 = 0x0,
         #[doc = "VDDIO I/O compensation cell enabled."]
-        B0x1 = 0x01,
+        B_0X1 = 0x01,
     }
     impl VddiocccrEn {
         #[inline(always)]
@@ -3621,9 +3494,9 @@ and RAPSRC\\[3:0\\]."]
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum VddioccsrReady {
         #[doc = "VDDIO I/O compensation cell not ready."]
-        B0x0 = 0x0,
+        B_0X0 = 0x0,
         #[doc = "VDDIO I/O compensation cell ready."]
-        B0x1 = 0x01,
+        B_0X1 = 0x01,
     }
     impl VddioccsrReady {
         #[inline(always)]

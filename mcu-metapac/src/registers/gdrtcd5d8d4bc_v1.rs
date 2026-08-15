@@ -2571,7 +2571,7 @@
                     enumm: None,
                 },
                 Field {
-                    name: "rtc_tamp_t_px_ie",
+                    name: "rtc_tamp_tpx_ie",
                     description: None,
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {

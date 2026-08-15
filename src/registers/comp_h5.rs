@@ -1,62 +1,92 @@
 
 use crate::metadata::ir::*;
 pub(crate) static REGISTERS: IR = IR {
-    blocks: &[Block {
-        name: "Comp",
-        extends: None,
-        description: Some("Comparator."),
-        items: &[
-            BlockItem {
-                name: "sr",
-                description: Some("Comparator status register."),
-                array: None,
-                byte_offset: 0x0,
-                inner: BlockItemInner::Register(Register {
-                    access: Access::ReadWrite,
-                    bit_size: 32,
-                    fieldset: Some("Sr"),
-                }),
-            },
-            BlockItem {
-                name: "icfr",
-                description: Some("Comparator interrupt clear flag register."),
-                array: None,
-                byte_offset: 0x4,
-                inner: BlockItemInner::Register(Register {
-                    access: Access::ReadWrite,
-                    bit_size: 32,
-                    fieldset: Some("Icfr"),
-                }),
-            },
-            BlockItem {
-                name: "cfgr1",
-                description: Some("Comparator configuration register 1."),
-                array: None,
-                byte_offset: 0xc,
-                inner: BlockItemInner::Register(Register {
-                    access: Access::ReadWrite,
-                    bit_size: 32,
-                    fieldset: Some("Cfgr1"),
-                }),
-            },
-            BlockItem {
-                name: "cfgr2",
-                description: Some("Comparator configuration register 2."),
-                array: None,
-                byte_offset: 0x10,
-                inner: BlockItemInner::Register(Register {
-                    access: Access::ReadWrite,
-                    bit_size: 32,
-                    fieldset: Some("Cfgr2"),
-                }),
-            },
-        ],
-    }],
+    blocks: &[
+        Block {
+            name: "Comp",
+            extends: None,
+            description: Some(
+                "Comparator.",
+            ),
+            items: &[
+                BlockItem {
+                    name: "sr",
+                    description: Some(
+                        "Comparator status register.",
+                    ),
+                    array: None,
+                    byte_offset: 0x0,
+                    inner: BlockItemInner::Register(
+                        Register {
+                            access: Access::ReadWrite,
+                            bit_size: 32,
+                            fieldset: Some(
+                                "Sr",
+                            ),
+                        },
+                    ),
+                },
+                BlockItem {
+                    name: "icfr",
+                    description: Some(
+                        "Comparator interrupt clear flag register.",
+                    ),
+                    array: None,
+                    byte_offset: 0x4,
+                    inner: BlockItemInner::Register(
+                        Register {
+                            access: Access::ReadWrite,
+                            bit_size: 32,
+                            fieldset: Some(
+                                "Icfr",
+                            ),
+                        },
+                    ),
+                },
+                BlockItem {
+                    name: "cfgr1",
+                    description: Some(
+                        "Comparator configuration register 1.",
+                    ),
+                    array: None,
+                    byte_offset: 0xc,
+                    inner: BlockItemInner::Register(
+                        Register {
+                            access: Access::ReadWrite,
+                            bit_size: 32,
+                            fieldset: Some(
+                                "Cfgr1",
+                            ),
+                        },
+                    ),
+                },
+                BlockItem {
+                    name: "cfgr2",
+                    description: Some(
+                        "Comparator configuration register 2.",
+                    ),
+                    array: None,
+                    byte_offset: 0x10,
+                    inner: BlockItemInner::Register(
+                        Register {
+                            access: Access::ReadWrite,
+                            bit_size: 32,
+                            fieldset: Some(
+                                "Cfgr2",
+                            ),
+                        },
+                    ),
+                },
+            ],
+        },
+    ],
     fieldsets: &[
         FieldSet {
             name: "Cfgr1",
             extends: None,
-            description: Some("Comparator configuration register 1."),
+            description: Some(
+                "Comparator configuration register 1.",
+            ),
             bit_size: 32,
             fields: &[
                 Field {
@@ -64,7 +94,11 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "COMP Channel1 enable This bit is set and cleared by software (only if LOCK not set). It enables the COMP-Channel1.",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 0 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 0,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -74,7 +108,11 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "Scaler bridge enable This bit is set and cleared by software (only if LOCK not set). This bit enables the bridge of the scaler. If SCALEN is set and BRGEN is reset, all four scaler outputs provide the same level V<sub>REF_COMP</sub> (similar to V<sub>REFINT</sub>). If SCALEN and BRGEN are set, the four scaler outputs provide V<sub>REF_COMP</sub>, 3/4-V<sub>REF_COMP</sub>, 1/2-V<sub>REF_COMP</sub> and 1/4-V<sub>REF_COMP</sub> levels, respectively.",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 1 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 1,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -84,7 +122,11 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "Voltage scaler enable This bit is set and cleared by software (only if LOCK not set). This bit enables the V<sub>REFINT</sub> scaler for the COMP channels.",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 2 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 2,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -94,7 +136,11 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "COMP channel1 polarity selection This bit is set and cleared by software (only if LOCK not set). It inverts COMP channel1 polarity.",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 3 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 3,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -104,7 +150,11 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "COMP channel1 interrupt enable This bit is set and cleared by software (only if LOCK not set). This bit enable the interrupt generation of the COMP channel1.",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 6 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 6,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -114,37 +164,59 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "COMP channel1 hysteresis selection These bits are set and cleared by software (only if LOCK not set). They select the hysteresis voltage of the COMP channel1.",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 8 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 8,
+                        },
+                    ),
                     bit_size: 2,
                     array: None,
-                    enumm: Some("Hyst"),
+                    enumm: Some(
+                        "Hyst",
+                    ),
                 },
                 Field {
                     name: "pwrmode",
                     description: Some(
                         "Power mode of the COMP channel1 These bits are set and cleared by software (only if LOCK not set). They control the power/speed of the COMP channel1.",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 12 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 12,
+                        },
+                    ),
                     bit_size: 2,
                     array: None,
-                    enumm: Some("Pwrmode"),
+                    enumm: Some(
+                        "Pwrmode",
+                    ),
                 },
                 Field {
                     name: "inmsel",
                     description: Some(
                         "COMP channel1 inverting input selection These bits are set and cleared by software (only if LOCK not set). They select which input is connected to the input minus of the COMP channel. Note: See Table-146: COMP1 inverting input assignment for more details.",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 16 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 16,
+                        },
+                    ),
                     bit_size: 4,
                     array: None,
-                    enumm: Some("Inmsel"),
+                    enumm: Some(
+                        "Inmsel",
+                    ),
                 },
                 Field {
                     name: "inpsel1",
                     description: Some(
                         "COMP noninverting input selection This bit is set and cleared by software (only if LOCK not set). They select which input is connected to the positive input of COMP channel. Note: See Table-145: COMP1 noninverting input assignment for more details.",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 20 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 20,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -154,7 +226,11 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "COMP noninverting input selection This bit is set and cleared by software (only if LOCK not set). They select which input is connected to the positive input of the COMP channel. See Table-145: COMP1 noninverting input assignment for more details.",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 22 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 22,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -164,17 +240,27 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "COMP Channel1 blanking source selection Bits of this field are set and cleared by software (only if LOCK not set). The field selects the input source for COMP Channel1 output blanking: All other values: reserved.",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 24 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 24,
+                        },
+                    ),
                     bit_size: 4,
                     array: None,
-                    enumm: Some("Blanking"),
+                    enumm: Some(
+                        "Blanking",
+                    ),
                 },
                 Field {
                     name: "lock",
                     description: Some(
                         "Lock This bit is set by software and cleared by a hardware system reset. It locks the whole content of the COMP Channel1 configuration register COMP_CFGR1[31:0].",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 31 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 31,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -184,7 +270,9 @@ pub(crate) static REGISTERS: IR = IR {
         FieldSet {
             name: "Cfgr2",
             extends: None,
-            description: Some("Comparator configuration register 2."),
+            description: Some(
+                "Comparator configuration register 2.",
+            ),
             bit_size: 32,
             fields: &[
                 Field {
@@ -192,7 +280,11 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "COMP non-inverting input selection This bit is set and cleared by software (only if LOCK not set). They select which input is connected to the positive input of COMP channel. See Table-145: COMP1 noninverting input assignment for more details.",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 4 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 4,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -202,7 +294,11 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "Lock This bit is set by software and cleared by a hardware system reset. It locks the whole content of the COMP Channel1 configuration register COMP_CFGR2[31:0].",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 31 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 31,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -212,23 +308,40 @@ pub(crate) static REGISTERS: IR = IR {
         FieldSet {
             name: "Icfr",
             extends: None,
-            description: Some("Comparator interrupt clear flag register."),
+            description: Some(
+                "Comparator interrupt clear flag register.",
+            ),
             bit_size: 32,
-            fields: &[Field {
-                name: "ccif",
-                description: Some(
-                    "Clear COMP Channel1 interrupt flag Writing 1 clears the C1IF flag in the COMP_SR register.",
-                ),
-                bit_offset: BitOffset::Regular(RegularBitOffset { offset: 16 }),
-                bit_size: 1,
-                array: Some(Array::Regular(RegularArray { len: 1, stride: 0 })),
-                enumm: None,
-            }],
+            fields: &[
+                Field {
+                    name: "ccif",
+                    description: Some(
+                        "Clear COMP Channel1 interrupt flag Writing 1 clears the C1IF flag in the COMP_SR register.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 16,
+                        },
+                    ),
+                    bit_size: 1,
+                    array: Some(
+                        Array::Regular(
+                            RegularArray {
+                                len: 1,
+                                stride: 0,
+                            },
+                        ),
+                    ),
+                    enumm: None,
+                },
+            ],
         },
         FieldSet {
             name: "Sr",
             extends: None,
-            description: Some("Comparator status register."),
+            description: Some(
+                "Comparator status register.",
+            ),
             bit_size: 32,
             fields: &[
                 Field {
@@ -236,9 +349,20 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "COMP Channel1 output status bit This bit is read-only. It reflects the current COMP Channel1 output taking into account POLARITY and BLANKING bits effect.",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 0 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 0,
+                        },
+                    ),
                     bit_size: 1,
-                    array: Some(Array::Regular(RegularArray { len: 1, stride: 0 })),
+                    array: Some(
+                        Array::Regular(
+                            RegularArray {
+                                len: 1,
+                                stride: 0,
+                            },
+                        ),
+                    ),
                     enumm: None,
                 },
                 Field {
@@ -246,9 +370,20 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "COMP Channel1 interrupt flag This bit is set by hardware when the COMP Channel1 output is set This bit is cleared by software writing 1 the CC1IF bit in the COMP_ICFR register.",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 16 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 16,
+                        },
+                    ),
                     bit_size: 1,
-                    array: Some(Array::Regular(RegularArray { len: 1, stride: 0 })),
+                    array: Some(
+                        Array::Regular(
+                            RegularArray {
+                                len: 1,
+                                stride: 0,
+                            },
+                        ),
+                    ),
                     enumm: None,
                 },
             ],
@@ -261,39 +396,39 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 4,
             variants: &[
                 EnumVariant {
-                    name: "Lptim1ch2",
-                    description: None,
-                    value: 5,
-                },
-                EnumVariant {
-                    name: "Lptim2ch2",
-                    description: None,
-                    value: 6,
-                },
-                EnumVariant {
-                    name: "NoBlanking",
+                    name: "NO_BLANKING",
                     description: None,
                     value: 0,
                 },
                 EnumVariant {
-                    name: "Tim1oc5",
+                    name: "TIM1OC5",
                     description: None,
                     value: 1,
                 },
                 EnumVariant {
-                    name: "Tim2oc3",
+                    name: "TIM2OC3",
                     description: None,
                     value: 2,
                 },
                 EnumVariant {
-                    name: "Tim3oc3",
+                    name: "TIM3OC3",
                     description: None,
                     value: 3,
                 },
                 EnumVariant {
-                    name: "Tim3oc4",
+                    name: "TIM3OC4",
                     description: None,
                     value: 4,
+                },
+                EnumVariant {
+                    name: "LPTIM1CH2",
+                    description: None,
+                    value: 5,
+                },
+                EnumVariant {
+                    name: "LPTIM2CH2",
+                    description: None,
+                    value: 6,
                 },
             ],
         },
@@ -303,24 +438,24 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 2,
             variants: &[
                 EnumVariant {
-                    name: "High",
+                    name: "NONE",
                     description: None,
-                    value: 3,
+                    value: 0,
                 },
                 EnumVariant {
-                    name: "Low",
+                    name: "LOW",
                     description: None,
                     value: 1,
                 },
                 EnumVariant {
-                    name: "Medium",
+                    name: "MEDIUM",
                     description: None,
                     value: 2,
                 },
                 EnumVariant {
-                    name: "None",
+                    name: "HIGH",
                     description: None,
-                    value: 0,
+                    value: 3,
                 },
             ],
         },
@@ -330,54 +465,54 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 4,
             variants: &[
                 EnumVariant {
-                    name: "Dac1out1",
-                    description: None,
-                    value: 4,
-                },
-                EnumVariant {
-                    name: "Inm1",
-                    description: None,
-                    value: 5,
-                },
-                EnumVariant {
-                    name: "Inm2",
-                    description: None,
-                    value: 6,
-                },
-                EnumVariant {
-                    name: "Inm3",
-                    description: None,
-                    value: 7,
-                },
-                EnumVariant {
-                    name: "VBat1over4",
-                    description: None,
-                    value: 9,
-                },
-                EnumVariant {
-                    name: "VRef",
-                    description: None,
-                    value: 3,
-                },
-                EnumVariant {
-                    name: "VRef1over2",
-                    description: None,
-                    value: 1,
-                },
-                EnumVariant {
-                    name: "VRef1over4",
+                    name: "VREF_1OVER4",
                     description: None,
                     value: 0,
                 },
                 EnumVariant {
-                    name: "VRef3over4",
+                    name: "VREF_1OVER2",
+                    description: None,
+                    value: 1,
+                },
+                EnumVariant {
+                    name: "VREF_3OVER4",
                     description: None,
                     value: 2,
                 },
                 EnumVariant {
-                    name: "VSense",
+                    name: "VREF",
+                    description: None,
+                    value: 3,
+                },
+                EnumVariant {
+                    name: "DAC1OUT1",
+                    description: None,
+                    value: 4,
+                },
+                EnumVariant {
+                    name: "INM1",
+                    description: None,
+                    value: 5,
+                },
+                EnumVariant {
+                    name: "INM2",
+                    description: None,
+                    value: 6,
+                },
+                EnumVariant {
+                    name: "INM3",
+                    description: None,
+                    value: 7,
+                },
+                EnumVariant {
+                    name: "VSENSE",
                     description: None,
                     value: 8,
+                },
+                EnumVariant {
+                    name: "VBAT_1OVER4",
+                    description: None,
+                    value: 9,
                 },
             ],
         },
@@ -387,24 +522,32 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 2,
             variants: &[
                 EnumVariant {
-                    name: "High",
-                    description: Some("High speed / full power"),
+                    name: "HIGH",
+                    description: Some(
+                        "High speed / full power",
+                    ),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "Low",
-                    description: Some("Ultra low power / ultra-low-power"),
-                    value: 3,
-                },
-                EnumVariant {
-                    name: "Medium",
-                    description: Some("Medium speed / medium power"),
+                    name: "MEDIUM",
+                    description: Some(
+                        "Medium speed / medium power",
+                    ),
                     value: 1,
                 },
                 EnumVariant {
-                    name: "MediumEither",
-                    description: Some("Medium speed / medium power"),
+                    name: "MEDIUM_EITHER",
+                    description: Some(
+                        "Medium speed / medium power",
+                    ),
                     value: 2,
+                },
+                EnumVariant {
+                    name: "LOW",
+                    description: Some(
+                        "Ultra low power / ultra-low-power",
+                    ),
+                    value: 3,
                 },
             ],
         },

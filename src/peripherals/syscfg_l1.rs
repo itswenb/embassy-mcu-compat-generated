@@ -22,18 +22,18 @@ impl Syscfg {
     #[doc = "memory remap register"]
     #[inline(always)]
     pub const fn memrmp(self) -> crate::common::Reg<regs::Memrmp, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0usize) as _) }
     }
     #[doc = "peripheral mode configuration register"]
     #[inline(always)]
     pub const fn pmc(self) -> crate::common::Reg<regs::Pmc, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x04usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x04usize) as _) }
     }
     #[doc = "external interrupt configuration register 1"]
     #[inline(always)]
     pub const fn exticr(self, n: usize) -> crate::common::Reg<regs::Exticr, crate::common::RW> {
         assert!(n < 4usize);
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x08usize + n * 4usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x08usize + n * 4usize) as _) }
     }
 }
 pub mod regs {
@@ -43,7 +43,6 @@ pub mod regs {
     pub struct Exticr(pub u32);
     impl Exticr {
         #[doc = "EXTI x configuration (x = 8 to 11)"]
-        #[must_use]
         #[inline(always)]
         pub const fn exti(&self, n: usize) -> u8 {
             assert!(n < 4usize);
@@ -53,7 +52,7 @@ pub mod regs {
         }
         #[doc = "EXTI x configuration (x = 8 to 11)"]
         #[inline(always)]
-        pub const fn set_exti(&mut self, n: usize, val: u8) {
+        pub fn set_exti(&mut self, n: usize, val: u8) {
             assert!(n < 4usize);
             let offs = 0usize + n * 4usize;
             self.0 = (self.0 & !(0x0f << offs)) | (((val as u32) & 0x0f) << offs);
@@ -94,7 +93,6 @@ pub mod regs {
     pub struct Memrmp(pub u32);
     impl Memrmp {
         #[doc = "MEM_MODE"]
-        #[must_use]
         #[inline(always)]
         pub const fn mem_mode(&self) -> u8 {
             let val = (self.0 >> 0usize) & 0x03;
@@ -102,11 +100,10 @@ pub mod regs {
         }
         #[doc = "MEM_MODE"]
         #[inline(always)]
-        pub const fn set_mem_mode(&mut self, val: u8) {
+        pub fn set_mem_mode(&mut self, val: u8) {
             self.0 = (self.0 & !(0x03 << 0usize)) | (((val as u32) & 0x03) << 0usize);
         }
         #[doc = "BOOT_MODE"]
-        #[must_use]
         #[inline(always)]
         pub const fn boot_mode(&self) -> u8 {
             let val = (self.0 >> 8usize) & 0x03;
@@ -114,7 +111,7 @@ pub mod regs {
         }
         #[doc = "BOOT_MODE"]
         #[inline(always)]
-        pub const fn set_boot_mode(&mut self, val: u8) {
+        pub fn set_boot_mode(&mut self, val: u8) {
             self.0 = (self.0 & !(0x03 << 8usize)) | (((val as u32) & 0x03) << 8usize);
         }
     }
@@ -149,7 +146,6 @@ pub mod regs {
     pub struct Pmc(pub u32);
     impl Pmc {
         #[doc = "USB pull-up"]
-        #[must_use]
         #[inline(always)]
         pub const fn usb_pu(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -157,11 +153,10 @@ pub mod regs {
         }
         #[doc = "USB pull-up"]
         #[inline(always)]
-        pub const fn set_usb_pu(&mut self, val: bool) {
+        pub fn set_usb_pu(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "USB pull-up enable on DP line"]
-        #[must_use]
         #[inline(always)]
         pub const fn lcd_capa(&self) -> u8 {
             let val = (self.0 >> 1usize) & 0x1f;
@@ -169,7 +164,7 @@ pub mod regs {
         }
         #[doc = "USB pull-up enable on DP line"]
         #[inline(always)]
-        pub const fn set_lcd_capa(&mut self, val: u8) {
+        pub fn set_lcd_capa(&mut self, val: u8) {
             self.0 = (self.0 & !(0x1f << 1usize)) | (((val as u32) & 0x1f) << 1usize);
         }
     }

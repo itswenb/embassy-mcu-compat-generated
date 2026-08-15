@@ -22,259 +22,259 @@ impl Rcc {
     #[doc = "clock control register"]
     #[inline(always)]
     pub const fn cr(self) -> crate::common::Reg<regs::Cr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0usize) as _) }
     }
     #[doc = "RCC HSI configuration register"]
     #[inline(always)]
     pub const fn hsicfgr(self) -> crate::common::Reg<regs::Hsicfgr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x04usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x04usize) as _) }
     }
     #[doc = "RCC Clock Recovery RC Register"]
     #[inline(always)]
     pub const fn crrcr(self) -> crate::common::Reg<regs::Crrcr, crate::common::R> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x08usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x08usize) as _) }
     }
     #[doc = "RCC CSI configuration register"]
     #[inline(always)]
     pub const fn csicfgr(self) -> crate::common::Reg<regs::Csicfgr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0cusize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0cusize) as _) }
     }
     #[doc = "RCC Clock Configuration Register"]
     #[inline(always)]
     pub const fn cfgr(self) -> crate::common::Reg<regs::Cfgr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x10usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x10usize) as _) }
     }
     #[doc = "RCC Domain 1 Clock Configuration Register"]
     #[inline(always)]
     pub const fn d1cfgr(self) -> crate::common::Reg<regs::D1cfgr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x18usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x18usize) as _) }
     }
     #[doc = "RCC Domain 2 Clock Configuration Register"]
     #[inline(always)]
     pub const fn d2cfgr(self) -> crate::common::Reg<regs::D2cfgr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x1cusize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x1cusize) as _) }
     }
     #[doc = "RCC Domain 3 Clock Configuration Register"]
     #[inline(always)]
     pub const fn d3cfgr(self) -> crate::common::Reg<regs::D3cfgr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x20usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x20usize) as _) }
     }
     #[doc = "RCC PLLs Clock Source Selection Register"]
     #[inline(always)]
     pub const fn pllckselr(self) -> crate::common::Reg<regs::Pllckselr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x28usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x28usize) as _) }
     }
     #[doc = "RCC PLLs Configuration Register"]
     #[inline(always)]
     pub const fn pllcfgr(self) -> crate::common::Reg<regs::Pllcfgr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x2cusize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x2cusize) as _) }
     }
     #[doc = "RCC PLL1 Dividers Configuration Register"]
     #[inline(always)]
     pub const fn plldivr(self, n: usize) -> crate::common::Reg<regs::Plldivr, crate::common::RW> {
         assert!(n < 3usize);
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x30usize + n * 8usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x30usize + n * 8usize) as _) }
     }
     #[doc = "RCC PLL1 Fractional Divider Register"]
     #[inline(always)]
     pub const fn pllfracr(self, n: usize) -> crate::common::Reg<regs::Pllfracr, crate::common::RW> {
         assert!(n < 3usize);
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x34usize + n * 8usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x34usize + n * 8usize) as _) }
     }
     #[doc = "RCC Domain 1 Kernel Clock Configuration Register"]
     #[inline(always)]
     pub const fn d1ccipr(self) -> crate::common::Reg<regs::D1ccipr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x4cusize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x4cusize) as _) }
     }
     #[doc = "RCC Domain 2 Kernel Clock Configuration Register"]
     #[inline(always)]
     pub const fn d2ccip1r(self) -> crate::common::Reg<regs::D2ccip1r, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x50usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x50usize) as _) }
     }
     #[doc = "RCC Domain 2 Kernel Clock Configuration Register"]
     #[inline(always)]
     pub const fn d2ccip2r(self) -> crate::common::Reg<regs::D2ccip2r, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x54usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x54usize) as _) }
     }
     #[doc = "RCC Domain 3 Kernel Clock Configuration Register"]
     #[inline(always)]
     pub const fn d3ccipr(self) -> crate::common::Reg<regs::D3ccipr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x58usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x58usize) as _) }
     }
     #[doc = "RCC Clock Source Interrupt Enable Register"]
     #[inline(always)]
     pub const fn cier(self) -> crate::common::Reg<regs::Cier, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x60usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x60usize) as _) }
     }
     #[doc = "RCC Clock Source Interrupt Flag Register"]
     #[inline(always)]
     pub const fn cifr(self) -> crate::common::Reg<regs::Cifr, crate::common::R> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x64usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x64usize) as _) }
     }
     #[doc = "RCC Clock Source Interrupt Clear Register"]
     #[inline(always)]
     pub const fn cicr(self) -> crate::common::Reg<regs::Cicr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x68usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x68usize) as _) }
     }
     #[doc = "RCC Backup Domain Control Register"]
     #[inline(always)]
     pub const fn bdcr(self) -> crate::common::Reg<regs::Bdcr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x70usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x70usize) as _) }
     }
     #[doc = "RCC Clock Control and Status Register"]
     #[inline(always)]
     pub const fn csr(self) -> crate::common::Reg<regs::Csr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x74usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x74usize) as _) }
     }
     #[doc = "RCC AHB3 Reset Register"]
     #[inline(always)]
     pub const fn ahb3rstr(self) -> crate::common::Reg<regs::Ahb3rstr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x7cusize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x7cusize) as _) }
     }
     #[doc = "RCC AHB1 Peripheral Reset Register"]
     #[inline(always)]
     pub const fn ahb1rstr(self) -> crate::common::Reg<regs::Ahb1rstr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x80usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x80usize) as _) }
     }
     #[doc = "RCC AHB2 Peripheral Reset Register"]
     #[inline(always)]
     pub const fn ahb2rstr(self) -> crate::common::Reg<regs::Ahb2rstr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x84usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x84usize) as _) }
     }
     #[doc = "RCC AHB4 Peripheral Reset Register"]
     #[inline(always)]
     pub const fn ahb4rstr(self) -> crate::common::Reg<regs::Ahb4rstr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x88usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x88usize) as _) }
     }
     #[doc = "RCC APB3 Peripheral Reset Register"]
     #[inline(always)]
     pub const fn apb3rstr(self) -> crate::common::Reg<regs::Apb3rstr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x8cusize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x8cusize) as _) }
     }
     #[doc = "RCC APB1 Peripheral Reset Register"]
     #[inline(always)]
     pub const fn apb1lrstr(self) -> crate::common::Reg<regs::Apb1lrstr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x90usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x90usize) as _) }
     }
     #[doc = "RCC APB1 Peripheral Reset Register"]
     #[inline(always)]
     pub const fn apb1hrstr(self) -> crate::common::Reg<regs::Apb1hrstr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x94usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x94usize) as _) }
     }
     #[doc = "RCC APB2 Peripheral Reset Register"]
     #[inline(always)]
     pub const fn apb2rstr(self) -> crate::common::Reg<regs::Apb2rstr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x98usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x98usize) as _) }
     }
     #[doc = "RCC APB4 Peripheral Reset Register"]
     #[inline(always)]
     pub const fn apb4rstr(self) -> crate::common::Reg<regs::Apb4rstr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x9cusize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x9cusize) as _) }
     }
     #[doc = "Global Control Register"]
     #[inline(always)]
     pub const fn gcr(self) -> crate::common::Reg<regs::Gcr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0xa0usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0xa0usize) as _) }
     }
     #[doc = "RCC D3 Autonomous mode Register"]
     #[inline(always)]
     pub const fn d3amr(self) -> crate::common::Reg<regs::D3amr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0xa8usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0xa8usize) as _) }
     }
     #[doc = "RCC Reset Status Register"]
     #[inline(always)]
     pub const fn rsr(self) -> crate::common::Reg<regs::Rsr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0130usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0130usize) as _) }
     }
     #[doc = "RCC AHB3 Clock Register"]
     #[inline(always)]
     pub const fn ahb3enr(self) -> crate::common::Reg<regs::Ahb3enr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0134usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0134usize) as _) }
     }
     #[doc = "RCC AHB1 Clock Register"]
     #[inline(always)]
     pub const fn ahb1enr(self) -> crate::common::Reg<regs::Ahb1enr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0138usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0138usize) as _) }
     }
     #[doc = "RCC AHB2 Clock Register"]
     #[inline(always)]
     pub const fn ahb2enr(self) -> crate::common::Reg<regs::Ahb2enr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x013cusize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x013cusize) as _) }
     }
     #[doc = "RCC AHB4 Clock Register"]
     #[inline(always)]
     pub const fn ahb4enr(self) -> crate::common::Reg<regs::Ahb4enr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0140usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0140usize) as _) }
     }
     #[doc = "RCC APB3 Clock Register"]
     #[inline(always)]
     pub const fn apb3enr(self) -> crate::common::Reg<regs::Apb3enr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0144usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0144usize) as _) }
     }
     #[doc = "RCC APB1 Clock Register"]
     #[inline(always)]
     pub const fn apb1lenr(self) -> crate::common::Reg<regs::Apb1lenr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0148usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0148usize) as _) }
     }
     #[doc = "RCC APB1 Clock Register"]
     #[inline(always)]
     pub const fn apb1henr(self) -> crate::common::Reg<regs::Apb1henr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x014cusize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x014cusize) as _) }
     }
     #[doc = "RCC APB2 Clock Register"]
     #[inline(always)]
     pub const fn apb2enr(self) -> crate::common::Reg<regs::Apb2enr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0150usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0150usize) as _) }
     }
     #[doc = "RCC APB4 Clock Register"]
     #[inline(always)]
     pub const fn apb4enr(self) -> crate::common::Reg<regs::Apb4enr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0154usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0154usize) as _) }
     }
     #[doc = "RCC AHB3 Sleep Clock Register"]
     #[inline(always)]
     pub const fn ahb3lpenr(self) -> crate::common::Reg<regs::Ahb3lpenr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x015cusize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x015cusize) as _) }
     }
     #[doc = "RCC AHB1 Sleep Clock Register"]
     #[inline(always)]
     pub const fn ahb1lpenr(self) -> crate::common::Reg<regs::Ahb1lpenr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0160usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0160usize) as _) }
     }
     #[doc = "RCC AHB2 Sleep Clock Register"]
     #[inline(always)]
     pub const fn ahb2lpenr(self) -> crate::common::Reg<regs::Ahb2lpenr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0164usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0164usize) as _) }
     }
     #[doc = "RCC AHB4 Sleep Clock Register"]
     #[inline(always)]
     pub const fn ahb4lpenr(self) -> crate::common::Reg<regs::Ahb4lpenr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0168usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0168usize) as _) }
     }
     #[doc = "RCC APB3 Sleep Clock Register"]
     #[inline(always)]
     pub const fn apb3lpenr(self) -> crate::common::Reg<regs::Apb3lpenr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x016cusize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x016cusize) as _) }
     }
     #[doc = "RCC APB1 Low Sleep Clock Register"]
     #[inline(always)]
     pub const fn apb1llpenr(self) -> crate::common::Reg<regs::Apb1llpenr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0170usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0170usize) as _) }
     }
     #[doc = "RCC APB1 High Sleep Clock Register"]
     #[inline(always)]
     pub const fn apb1hlpenr(self) -> crate::common::Reg<regs::Apb1hlpenr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0174usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0174usize) as _) }
     }
     #[doc = "RCC APB2 Sleep Clock Register"]
     #[inline(always)]
     pub const fn apb2lpenr(self) -> crate::common::Reg<regs::Apb2lpenr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0178usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0178usize) as _) }
     }
     #[doc = "RCC APB4 Sleep Clock Register"]
     #[inline(always)]
     pub const fn apb4lpenr(self) -> crate::common::Reg<regs::Apb4lpenr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x017cusize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x017cusize) as _) }
     }
 }
 pub mod regs {
@@ -284,7 +284,6 @@ pub mod regs {
     pub struct Ahb1enr(pub u32);
     impl Ahb1enr {
         #[doc = "DMA1 Clock Enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn dma1en(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -292,11 +291,10 @@ pub mod regs {
         }
         #[doc = "DMA1 Clock Enable"]
         #[inline(always)]
-        pub const fn set_dma1en(&mut self, val: bool) {
+        pub fn set_dma1en(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "DMA2 Clock Enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn dma2en(&self) -> bool {
             let val = (self.0 >> 1usize) & 0x01;
@@ -304,11 +302,10 @@ pub mod regs {
         }
         #[doc = "DMA2 Clock Enable"]
         #[inline(always)]
-        pub const fn set_dma2en(&mut self, val: bool) {
+        pub fn set_dma2en(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
         }
         #[doc = "ADC1/2 Peripheral Clocks Enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn adc12en(&self) -> bool {
             let val = (self.0 >> 5usize) & 0x01;
@@ -316,11 +313,10 @@ pub mod regs {
         }
         #[doc = "ADC1/2 Peripheral Clocks Enable"]
         #[inline(always)]
-        pub const fn set_adc12en(&mut self, val: bool) {
+        pub fn set_adc12en(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
         }
         #[doc = "ART Clock Enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn arten(&self) -> bool {
             let val = (self.0 >> 14usize) & 0x01;
@@ -328,11 +324,10 @@ pub mod regs {
         }
         #[doc = "ART Clock Enable"]
         #[inline(always)]
-        pub const fn set_arten(&mut self, val: bool) {
+        pub fn set_arten(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
         }
         #[doc = "Ethernet MAC bus interface Clock Enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn ethen(&self) -> bool {
             let val = (self.0 >> 15usize) & 0x01;
@@ -340,11 +335,10 @@ pub mod regs {
         }
         #[doc = "Ethernet MAC bus interface Clock Enable"]
         #[inline(always)]
-        pub const fn set_ethen(&mut self, val: bool) {
+        pub fn set_ethen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
         }
         #[doc = "Ethernet Transmission Clock Enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn ethtxen(&self) -> bool {
             let val = (self.0 >> 16usize) & 0x01;
@@ -352,11 +346,10 @@ pub mod regs {
         }
         #[doc = "Ethernet Transmission Clock Enable"]
         #[inline(always)]
-        pub const fn set_ethtxen(&mut self, val: bool) {
+        pub fn set_ethtxen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
         }
         #[doc = "Ethernet Reception Clock Enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn ethrxen(&self) -> bool {
             let val = (self.0 >> 17usize) & 0x01;
@@ -364,11 +357,10 @@ pub mod regs {
         }
         #[doc = "Ethernet Reception Clock Enable"]
         #[inline(always)]
-        pub const fn set_ethrxen(&mut self, val: bool) {
+        pub fn set_ethrxen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
         }
         #[doc = "USB_OTG_HS Peripheral Clocks Enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn usb_otg_hsen(&self) -> bool {
             let val = (self.0 >> 25usize) & 0x01;
@@ -376,11 +368,10 @@ pub mod regs {
         }
         #[doc = "USB_OTG_HS Peripheral Clocks Enable"]
         #[inline(always)]
-        pub const fn set_usb_otg_hsen(&mut self, val: bool) {
+        pub fn set_usb_otg_hsen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
         }
         #[doc = "USB_OTG_HS ULPI clock enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn usb_otg_hs_ulpien(&self) -> bool {
             let val = (self.0 >> 26usize) & 0x01;
@@ -388,11 +379,10 @@ pub mod regs {
         }
         #[doc = "USB_OTG_HS ULPI clock enable"]
         #[inline(always)]
-        pub const fn set_usb_otg_hs_ulpien(&mut self, val: bool) {
+        pub fn set_usb_otg_hs_ulpien(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 26usize)) | (((val as u32) & 0x01) << 26usize);
         }
         #[doc = "USB_OTG_FS Peripheral Clocks Enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn usb_otg_fsen(&self) -> bool {
             let val = (self.0 >> 27usize) & 0x01;
@@ -400,11 +390,10 @@ pub mod regs {
         }
         #[doc = "USB_OTG_FS Peripheral Clocks Enable"]
         #[inline(always)]
-        pub const fn set_usb_otg_fsen(&mut self, val: bool) {
+        pub fn set_usb_otg_fsen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 27usize)) | (((val as u32) & 0x01) << 27usize);
         }
         #[doc = "USB_OTG_FS ULPI clock enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn usb_otg_fs_ulpien(&self) -> bool {
             let val = (self.0 >> 28usize) & 0x01;
@@ -412,7 +401,7 @@ pub mod regs {
         }
         #[doc = "USB_OTG_FS ULPI clock enable"]
         #[inline(always)]
-        pub const fn set_usb_otg_fs_ulpien(&mut self, val: bool) {
+        pub fn set_usb_otg_fs_ulpien(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
         }
     }
@@ -442,21 +431,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Ahb1enr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Ahb1enr {{ dma1en: {=bool:?}, dma2en: {=bool:?}, adc12en: {=bool:?}, arten: {=bool:?}, ethen: {=bool:?}, ethtxen: {=bool:?}, ethrxen: {=bool:?}, usb_otg_hsen: {=bool:?}, usb_otg_hs_ulpien: {=bool:?}, usb_otg_fsen: {=bool:?}, usb_otg_fs_ulpien: {=bool:?} }}",
-                self.dma1en(),
-                self.dma2en(),
-                self.adc12en(),
-                self.arten(),
-                self.ethen(),
-                self.ethtxen(),
-                self.ethrxen(),
-                self.usb_otg_hsen(),
-                self.usb_otg_hs_ulpien(),
-                self.usb_otg_fsen(),
-                self.usb_otg_fs_ulpien()
-            )
+            defmt :: write ! (f , "Ahb1enr {{ dma1en: {=bool:?}, dma2en: {=bool:?}, adc12en: {=bool:?}, arten: {=bool:?}, ethen: {=bool:?}, ethtxen: {=bool:?}, ethrxen: {=bool:?}, usb_otg_hsen: {=bool:?}, usb_otg_hs_ulpien: {=bool:?}, usb_otg_fsen: {=bool:?}, usb_otg_fs_ulpien: {=bool:?} }}" , self . dma1en () , self . dma2en () , self . adc12en () , self . arten () , self . ethen () , self . ethtxen () , self . ethrxen () , self . usb_otg_hsen () , self . usb_otg_hs_ulpien () , self . usb_otg_fsen () , self . usb_otg_fs_ulpien ())
         }
     }
     #[doc = "RCC AHB1 Sleep Clock Register"]
@@ -465,7 +440,6 @@ pub mod regs {
     pub struct Ahb1lpenr(pub u32);
     impl Ahb1lpenr {
         #[doc = "DMA1 Clock Enable During CSleep Mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn dma1lpen(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -473,11 +447,10 @@ pub mod regs {
         }
         #[doc = "DMA1 Clock Enable During CSleep Mode"]
         #[inline(always)]
-        pub const fn set_dma1lpen(&mut self, val: bool) {
+        pub fn set_dma1lpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "DMA2 Clock Enable During CSleep Mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn dma2lpen(&self) -> bool {
             let val = (self.0 >> 1usize) & 0x01;
@@ -485,11 +458,10 @@ pub mod regs {
         }
         #[doc = "DMA2 Clock Enable During CSleep Mode"]
         #[inline(always)]
-        pub const fn set_dma2lpen(&mut self, val: bool) {
+        pub fn set_dma2lpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
         }
         #[doc = "ADC1/2 Peripheral Clocks Enable During CSleep Mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn adc12lpen(&self) -> bool {
             let val = (self.0 >> 5usize) & 0x01;
@@ -497,11 +469,10 @@ pub mod regs {
         }
         #[doc = "ADC1/2 Peripheral Clocks Enable During CSleep Mode"]
         #[inline(always)]
-        pub const fn set_adc12lpen(&mut self, val: bool) {
+        pub fn set_adc12lpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
         }
         #[doc = "ART Clock Enable During CSleep Mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn artlpen(&self) -> bool {
             let val = (self.0 >> 14usize) & 0x01;
@@ -509,11 +480,10 @@ pub mod regs {
         }
         #[doc = "ART Clock Enable During CSleep Mode"]
         #[inline(always)]
-        pub const fn set_artlpen(&mut self, val: bool) {
+        pub fn set_artlpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
         }
         #[doc = "Ethernet MAC bus interface Clock Enable During CSleep Mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn ethlpen(&self) -> bool {
             let val = (self.0 >> 15usize) & 0x01;
@@ -521,11 +491,10 @@ pub mod regs {
         }
         #[doc = "Ethernet MAC bus interface Clock Enable During CSleep Mode"]
         #[inline(always)]
-        pub const fn set_ethlpen(&mut self, val: bool) {
+        pub fn set_ethlpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
         }
         #[doc = "Ethernet Transmission Clock Enable During CSleep Mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn ethtxlpen(&self) -> bool {
             let val = (self.0 >> 16usize) & 0x01;
@@ -533,11 +502,10 @@ pub mod regs {
         }
         #[doc = "Ethernet Transmission Clock Enable During CSleep Mode"]
         #[inline(always)]
-        pub const fn set_ethtxlpen(&mut self, val: bool) {
+        pub fn set_ethtxlpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
         }
         #[doc = "Ethernet Reception Clock Enable During CSleep Mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn ethrxlpen(&self) -> bool {
             let val = (self.0 >> 17usize) & 0x01;
@@ -545,11 +513,10 @@ pub mod regs {
         }
         #[doc = "Ethernet Reception Clock Enable During CSleep Mode"]
         #[inline(always)]
-        pub const fn set_ethrxlpen(&mut self, val: bool) {
+        pub fn set_ethrxlpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
         }
         #[doc = "USB_OTG_HS peripheral clock enable during CSleep mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn usb_otg_hslpen(&self) -> bool {
             let val = (self.0 >> 25usize) & 0x01;
@@ -557,11 +524,10 @@ pub mod regs {
         }
         #[doc = "USB_OTG_HS peripheral clock enable during CSleep mode"]
         #[inline(always)]
-        pub const fn set_usb_otg_hslpen(&mut self, val: bool) {
+        pub fn set_usb_otg_hslpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
         }
         #[doc = "USB_PHY1 clock enable during CSleep mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn usb_otg_hs_ulpilpen(&self) -> bool {
             let val = (self.0 >> 26usize) & 0x01;
@@ -569,11 +535,10 @@ pub mod regs {
         }
         #[doc = "USB_PHY1 clock enable during CSleep mode"]
         #[inline(always)]
-        pub const fn set_usb_otg_hs_ulpilpen(&mut self, val: bool) {
+        pub fn set_usb_otg_hs_ulpilpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 26usize)) | (((val as u32) & 0x01) << 26usize);
         }
         #[doc = "USB_OTG_FS peripheral clock enable during CSleep mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn usb_otg_fslpen(&self) -> bool {
             let val = (self.0 >> 27usize) & 0x01;
@@ -581,11 +546,10 @@ pub mod regs {
         }
         #[doc = "USB_OTG_FS peripheral clock enable during CSleep mode"]
         #[inline(always)]
-        pub const fn set_usb_otg_fslpen(&mut self, val: bool) {
+        pub fn set_usb_otg_fslpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 27usize)) | (((val as u32) & 0x01) << 27usize);
         }
         #[doc = "USB_PHY2 clocks enable during CSleep mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn usb_otg_fs_ulpilpen(&self) -> bool {
             let val = (self.0 >> 28usize) & 0x01;
@@ -593,7 +557,7 @@ pub mod regs {
         }
         #[doc = "USB_PHY2 clocks enable during CSleep mode"]
         #[inline(always)]
-        pub const fn set_usb_otg_fs_ulpilpen(&mut self, val: bool) {
+        pub fn set_usb_otg_fs_ulpilpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
         }
     }
@@ -623,21 +587,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Ahb1lpenr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Ahb1lpenr {{ dma1lpen: {=bool:?}, dma2lpen: {=bool:?}, adc12lpen: {=bool:?}, artlpen: {=bool:?}, ethlpen: {=bool:?}, ethtxlpen: {=bool:?}, ethrxlpen: {=bool:?}, usb_otg_hslpen: {=bool:?}, usb_otg_hs_ulpilpen: {=bool:?}, usb_otg_fslpen: {=bool:?}, usb_otg_fs_ulpilpen: {=bool:?} }}",
-                self.dma1lpen(),
-                self.dma2lpen(),
-                self.adc12lpen(),
-                self.artlpen(),
-                self.ethlpen(),
-                self.ethtxlpen(),
-                self.ethrxlpen(),
-                self.usb_otg_hslpen(),
-                self.usb_otg_hs_ulpilpen(),
-                self.usb_otg_fslpen(),
-                self.usb_otg_fs_ulpilpen()
-            )
+            defmt :: write ! (f , "Ahb1lpenr {{ dma1lpen: {=bool:?}, dma2lpen: {=bool:?}, adc12lpen: {=bool:?}, artlpen: {=bool:?}, ethlpen: {=bool:?}, ethtxlpen: {=bool:?}, ethrxlpen: {=bool:?}, usb_otg_hslpen: {=bool:?}, usb_otg_hs_ulpilpen: {=bool:?}, usb_otg_fslpen: {=bool:?}, usb_otg_fs_ulpilpen: {=bool:?} }}" , self . dma1lpen () , self . dma2lpen () , self . adc12lpen () , self . artlpen () , self . ethlpen () , self . ethtxlpen () , self . ethrxlpen () , self . usb_otg_hslpen () , self . usb_otg_hs_ulpilpen () , self . usb_otg_fslpen () , self . usb_otg_fs_ulpilpen ())
         }
     }
     #[doc = "RCC AHB1 Peripheral Reset Register"]
@@ -646,7 +596,6 @@ pub mod regs {
     pub struct Ahb1rstr(pub u32);
     impl Ahb1rstr {
         #[doc = "DMA1 block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn dma1rst(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -654,11 +603,10 @@ pub mod regs {
         }
         #[doc = "DMA1 block reset"]
         #[inline(always)]
-        pub const fn set_dma1rst(&mut self, val: bool) {
+        pub fn set_dma1rst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "DMA2 block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn dma2rst(&self) -> bool {
             let val = (self.0 >> 1usize) & 0x01;
@@ -666,11 +614,10 @@ pub mod regs {
         }
         #[doc = "DMA2 block reset"]
         #[inline(always)]
-        pub const fn set_dma2rst(&mut self, val: bool) {
+        pub fn set_dma2rst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
         }
         #[doc = "ADC1&2 block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn adc12rst(&self) -> bool {
             let val = (self.0 >> 5usize) & 0x01;
@@ -678,11 +625,10 @@ pub mod regs {
         }
         #[doc = "ADC1&2 block reset"]
         #[inline(always)]
-        pub const fn set_adc12rst(&mut self, val: bool) {
+        pub fn set_adc12rst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
         }
         #[doc = "ART block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn artrst(&self) -> bool {
             let val = (self.0 >> 14usize) & 0x01;
@@ -690,11 +636,10 @@ pub mod regs {
         }
         #[doc = "ART block reset"]
         #[inline(always)]
-        pub const fn set_artrst(&mut self, val: bool) {
+        pub fn set_artrst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
         }
         #[doc = "ETH block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn ethrst(&self) -> bool {
             let val = (self.0 >> 15usize) & 0x01;
@@ -702,11 +647,10 @@ pub mod regs {
         }
         #[doc = "ETH block reset"]
         #[inline(always)]
-        pub const fn set_ethrst(&mut self, val: bool) {
+        pub fn set_ethrst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
         }
         #[doc = "USB_OTG_HS block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn usb_otg_hsrst(&self) -> bool {
             let val = (self.0 >> 25usize) & 0x01;
@@ -714,11 +658,10 @@ pub mod regs {
         }
         #[doc = "USB_OTG_HS block reset"]
         #[inline(always)]
-        pub const fn set_usb_otg_hsrst(&mut self, val: bool) {
+        pub fn set_usb_otg_hsrst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
         }
         #[doc = "USB_OTG_FS block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn usb_otg_fsrst(&self) -> bool {
             let val = (self.0 >> 27usize) & 0x01;
@@ -726,7 +669,7 @@ pub mod regs {
         }
         #[doc = "USB_OTG_FS block reset"]
         #[inline(always)]
-        pub const fn set_usb_otg_fsrst(&mut self, val: bool) {
+        pub fn set_usb_otg_fsrst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 27usize)) | (((val as u32) & 0x01) << 27usize);
         }
     }
@@ -752,17 +695,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Ahb1rstr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Ahb1rstr {{ dma1rst: {=bool:?}, dma2rst: {=bool:?}, adc12rst: {=bool:?}, artrst: {=bool:?}, ethrst: {=bool:?}, usb_otg_hsrst: {=bool:?}, usb_otg_fsrst: {=bool:?} }}",
-                self.dma1rst(),
-                self.dma2rst(),
-                self.adc12rst(),
-                self.artrst(),
-                self.ethrst(),
-                self.usb_otg_hsrst(),
-                self.usb_otg_fsrst()
-            )
+            defmt :: write ! (f , "Ahb1rstr {{ dma1rst: {=bool:?}, dma2rst: {=bool:?}, adc12rst: {=bool:?}, artrst: {=bool:?}, ethrst: {=bool:?}, usb_otg_hsrst: {=bool:?}, usb_otg_fsrst: {=bool:?} }}" , self . dma1rst () , self . dma2rst () , self . adc12rst () , self . artrst () , self . ethrst () , self . usb_otg_hsrst () , self . usb_otg_fsrst ())
         }
     }
     #[doc = "RCC AHB2 Clock Register"]
@@ -771,7 +704,6 @@ pub mod regs {
     pub struct Ahb2enr(pub u32);
     impl Ahb2enr {
         #[doc = "DCMI peripheral clock"]
-        #[must_use]
         #[inline(always)]
         pub const fn dcmien(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -779,11 +711,10 @@ pub mod regs {
         }
         #[doc = "DCMI peripheral clock"]
         #[inline(always)]
-        pub const fn set_dcmien(&mut self, val: bool) {
+        pub fn set_dcmien(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "CRYP peripheral clock enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn crypen(&self) -> bool {
             let val = (self.0 >> 4usize) & 0x01;
@@ -791,11 +722,10 @@ pub mod regs {
         }
         #[doc = "CRYP peripheral clock enable"]
         #[inline(always)]
-        pub const fn set_crypen(&mut self, val: bool) {
+        pub fn set_crypen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
         }
         #[doc = "HASH peripheral clock enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn hashen(&self) -> bool {
             let val = (self.0 >> 5usize) & 0x01;
@@ -803,11 +733,10 @@ pub mod regs {
         }
         #[doc = "HASH peripheral clock enable"]
         #[inline(always)]
-        pub const fn set_hashen(&mut self, val: bool) {
+        pub fn set_hashen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
         }
         #[doc = "RNG peripheral clocks enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn rngen(&self) -> bool {
             let val = (self.0 >> 6usize) & 0x01;
@@ -815,11 +744,10 @@ pub mod regs {
         }
         #[doc = "RNG peripheral clocks enable"]
         #[inline(always)]
-        pub const fn set_rngen(&mut self, val: bool) {
+        pub fn set_rngen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
         }
         #[doc = "SDMMC2 and SDMMC2 delay clock enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn sdmmc2en(&self) -> bool {
             let val = (self.0 >> 9usize) & 0x01;
@@ -827,11 +755,10 @@ pub mod regs {
         }
         #[doc = "SDMMC2 and SDMMC2 delay clock enable"]
         #[inline(always)]
-        pub const fn set_sdmmc2en(&mut self, val: bool) {
+        pub fn set_sdmmc2en(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
         }
         #[doc = "BDMA1 clock enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn bdma1en(&self) -> bool {
             let val = (self.0 >> 11usize) & 0x01;
@@ -839,11 +766,10 @@ pub mod regs {
         }
         #[doc = "BDMA1 clock enable"]
         #[inline(always)]
-        pub const fn set_bdma1en(&mut self, val: bool) {
+        pub fn set_bdma1en(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
         }
         #[doc = "FMAC enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn fmacen(&self) -> bool {
             let val = (self.0 >> 16usize) & 0x01;
@@ -851,11 +777,10 @@ pub mod regs {
         }
         #[doc = "FMAC enable"]
         #[inline(always)]
-        pub const fn set_fmacen(&mut self, val: bool) {
+        pub fn set_fmacen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
         }
         #[doc = "CORDIC enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn cordicen(&self) -> bool {
             let val = (self.0 >> 17usize) & 0x01;
@@ -863,11 +788,10 @@ pub mod regs {
         }
         #[doc = "CORDIC enable"]
         #[inline(always)]
-        pub const fn set_cordicen(&mut self, val: bool) {
+        pub fn set_cordicen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
         }
         #[doc = "SRAM1 block enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn sram1en(&self) -> bool {
             let val = (self.0 >> 29usize) & 0x01;
@@ -875,11 +799,10 @@ pub mod regs {
         }
         #[doc = "SRAM1 block enable"]
         #[inline(always)]
-        pub const fn set_sram1en(&mut self, val: bool) {
+        pub fn set_sram1en(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
         }
         #[doc = "SRAM2 block enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn sram2en(&self) -> bool {
             let val = (self.0 >> 30usize) & 0x01;
@@ -887,11 +810,10 @@ pub mod regs {
         }
         #[doc = "SRAM2 block enable"]
         #[inline(always)]
-        pub const fn set_sram2en(&mut self, val: bool) {
+        pub fn set_sram2en(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
         }
         #[doc = "SRAM3 block enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn sram3en(&self) -> bool {
             let val = (self.0 >> 31usize) & 0x01;
@@ -899,7 +821,7 @@ pub mod regs {
         }
         #[doc = "SRAM3 block enable"]
         #[inline(always)]
-        pub const fn set_sram3en(&mut self, val: bool) {
+        pub fn set_sram3en(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
         }
     }
@@ -929,21 +851,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Ahb2enr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Ahb2enr {{ dcmien: {=bool:?}, crypen: {=bool:?}, hashen: {=bool:?}, rngen: {=bool:?}, sdmmc2en: {=bool:?}, bdma1en: {=bool:?}, fmacen: {=bool:?}, cordicen: {=bool:?}, sram1en: {=bool:?}, sram2en: {=bool:?}, sram3en: {=bool:?} }}",
-                self.dcmien(),
-                self.crypen(),
-                self.hashen(),
-                self.rngen(),
-                self.sdmmc2en(),
-                self.bdma1en(),
-                self.fmacen(),
-                self.cordicen(),
-                self.sram1en(),
-                self.sram2en(),
-                self.sram3en()
-            )
+            defmt :: write ! (f , "Ahb2enr {{ dcmien: {=bool:?}, crypen: {=bool:?}, hashen: {=bool:?}, rngen: {=bool:?}, sdmmc2en: {=bool:?}, bdma1en: {=bool:?}, fmacen: {=bool:?}, cordicen: {=bool:?}, sram1en: {=bool:?}, sram2en: {=bool:?}, sram3en: {=bool:?} }}" , self . dcmien () , self . crypen () , self . hashen () , self . rngen () , self . sdmmc2en () , self . bdma1en () , self . fmacen () , self . cordicen () , self . sram1en () , self . sram2en () , self . sram3en ())
         }
     }
     #[doc = "RCC AHB2 Sleep Clock Register"]
@@ -952,7 +860,6 @@ pub mod regs {
     pub struct Ahb2lpenr(pub u32);
     impl Ahb2lpenr {
         #[doc = "DCMI peripheral clock enable during csleep mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn dcmilpen(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -960,11 +867,10 @@ pub mod regs {
         }
         #[doc = "DCMI peripheral clock enable during csleep mode"]
         #[inline(always)]
-        pub const fn set_dcmilpen(&mut self, val: bool) {
+        pub fn set_dcmilpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "CRYP peripheral clock enable during CSleep mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn cryplpen(&self) -> bool {
             let val = (self.0 >> 4usize) & 0x01;
@@ -972,11 +878,10 @@ pub mod regs {
         }
         #[doc = "CRYP peripheral clock enable during CSleep mode"]
         #[inline(always)]
-        pub const fn set_cryplpen(&mut self, val: bool) {
+        pub fn set_cryplpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
         }
         #[doc = "HASH peripheral clock enable during CSleep mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn hashlpen(&self) -> bool {
             let val = (self.0 >> 5usize) & 0x01;
@@ -984,11 +889,10 @@ pub mod regs {
         }
         #[doc = "HASH peripheral clock enable during CSleep mode"]
         #[inline(always)]
-        pub const fn set_hashlpen(&mut self, val: bool) {
+        pub fn set_hashlpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
         }
         #[doc = "RNG peripheral clock enable during CSleep mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn rnglpen(&self) -> bool {
             let val = (self.0 >> 6usize) & 0x01;
@@ -996,11 +900,10 @@ pub mod regs {
         }
         #[doc = "RNG peripheral clock enable during CSleep mode"]
         #[inline(always)]
-        pub const fn set_rnglpen(&mut self, val: bool) {
+        pub fn set_rnglpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
         }
         #[doc = "SDMMC2 and SDMMC2 Delay Clock Enable During CSleep Mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn sdmmc2lpen(&self) -> bool {
             let val = (self.0 >> 9usize) & 0x01;
@@ -1008,11 +911,10 @@ pub mod regs {
         }
         #[doc = "SDMMC2 and SDMMC2 Delay Clock Enable During CSleep Mode"]
         #[inline(always)]
-        pub const fn set_sdmmc2lpen(&mut self, val: bool) {
+        pub fn set_sdmmc2lpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
         }
         #[doc = "BDMA1 Clock Enable During CSleep Mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn bdma1lpen(&self) -> bool {
             let val = (self.0 >> 11usize) & 0x01;
@@ -1020,11 +922,10 @@ pub mod regs {
         }
         #[doc = "BDMA1 Clock Enable During CSleep Mode"]
         #[inline(always)]
-        pub const fn set_bdma1lpen(&mut self, val: bool) {
+        pub fn set_bdma1lpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
         }
         #[doc = "FMAC enable during CSleep Mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn fmaclpen(&self) -> bool {
             let val = (self.0 >> 16usize) & 0x01;
@@ -1032,11 +933,10 @@ pub mod regs {
         }
         #[doc = "FMAC enable during CSleep Mode"]
         #[inline(always)]
-        pub const fn set_fmaclpen(&mut self, val: bool) {
+        pub fn set_fmaclpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
         }
         #[doc = "CORDIC enable during CSleep Mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn cordiclpen(&self) -> bool {
             let val = (self.0 >> 17usize) & 0x01;
@@ -1044,11 +944,10 @@ pub mod regs {
         }
         #[doc = "CORDIC enable during CSleep Mode"]
         #[inline(always)]
-        pub const fn set_cordiclpen(&mut self, val: bool) {
+        pub fn set_cordiclpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
         }
         #[doc = "SRAM1 Clock Enable During CSleep Mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn sram1lpen(&self) -> bool {
             let val = (self.0 >> 29usize) & 0x01;
@@ -1056,11 +955,10 @@ pub mod regs {
         }
         #[doc = "SRAM1 Clock Enable During CSleep Mode"]
         #[inline(always)]
-        pub const fn set_sram1lpen(&mut self, val: bool) {
+        pub fn set_sram1lpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
         }
         #[doc = "SRAM2 Clock Enable During CSleep Mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn sram2lpen(&self) -> bool {
             let val = (self.0 >> 30usize) & 0x01;
@@ -1068,11 +966,10 @@ pub mod regs {
         }
         #[doc = "SRAM2 Clock Enable During CSleep Mode"]
         #[inline(always)]
-        pub const fn set_sram2lpen(&mut self, val: bool) {
+        pub fn set_sram2lpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
         }
         #[doc = "SRAM3 Clock Enable During CSleep Mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn sram3lpen(&self) -> bool {
             let val = (self.0 >> 31usize) & 0x01;
@@ -1080,7 +977,7 @@ pub mod regs {
         }
         #[doc = "SRAM3 Clock Enable During CSleep Mode"]
         #[inline(always)]
-        pub const fn set_sram3lpen(&mut self, val: bool) {
+        pub fn set_sram3lpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
         }
     }
@@ -1110,21 +1007,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Ahb2lpenr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Ahb2lpenr {{ dcmilpen: {=bool:?}, cryplpen: {=bool:?}, hashlpen: {=bool:?}, rnglpen: {=bool:?}, sdmmc2lpen: {=bool:?}, bdma1lpen: {=bool:?}, fmaclpen: {=bool:?}, cordiclpen: {=bool:?}, sram1lpen: {=bool:?}, sram2lpen: {=bool:?}, sram3lpen: {=bool:?} }}",
-                self.dcmilpen(),
-                self.cryplpen(),
-                self.hashlpen(),
-                self.rnglpen(),
-                self.sdmmc2lpen(),
-                self.bdma1lpen(),
-                self.fmaclpen(),
-                self.cordiclpen(),
-                self.sram1lpen(),
-                self.sram2lpen(),
-                self.sram3lpen()
-            )
+            defmt :: write ! (f , "Ahb2lpenr {{ dcmilpen: {=bool:?}, cryplpen: {=bool:?}, hashlpen: {=bool:?}, rnglpen: {=bool:?}, sdmmc2lpen: {=bool:?}, bdma1lpen: {=bool:?}, fmaclpen: {=bool:?}, cordiclpen: {=bool:?}, sram1lpen: {=bool:?}, sram2lpen: {=bool:?}, sram3lpen: {=bool:?} }}" , self . dcmilpen () , self . cryplpen () , self . hashlpen () , self . rnglpen () , self . sdmmc2lpen () , self . bdma1lpen () , self . fmaclpen () , self . cordiclpen () , self . sram1lpen () , self . sram2lpen () , self . sram3lpen ())
         }
     }
     #[doc = "RCC AHB2 Peripheral Reset Register"]
@@ -1133,7 +1016,6 @@ pub mod regs {
     pub struct Ahb2rstr(pub u32);
     impl Ahb2rstr {
         #[doc = "DCMI block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn dcmirst(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -1141,11 +1023,10 @@ pub mod regs {
         }
         #[doc = "DCMI block reset"]
         #[inline(always)]
-        pub const fn set_dcmirst(&mut self, val: bool) {
+        pub fn set_dcmirst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "CRYPography block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn cryprst(&self) -> bool {
             let val = (self.0 >> 4usize) & 0x01;
@@ -1153,11 +1034,10 @@ pub mod regs {
         }
         #[doc = "CRYPography block reset"]
         #[inline(always)]
-        pub const fn set_cryprst(&mut self, val: bool) {
+        pub fn set_cryprst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
         }
         #[doc = "Hash block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn hashrst(&self) -> bool {
             let val = (self.0 >> 5usize) & 0x01;
@@ -1165,11 +1045,10 @@ pub mod regs {
         }
         #[doc = "Hash block reset"]
         #[inline(always)]
-        pub const fn set_hashrst(&mut self, val: bool) {
+        pub fn set_hashrst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
         }
         #[doc = "Random Number Generator block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn rngrst(&self) -> bool {
             let val = (self.0 >> 6usize) & 0x01;
@@ -1177,11 +1056,10 @@ pub mod regs {
         }
         #[doc = "Random Number Generator block reset"]
         #[inline(always)]
-        pub const fn set_rngrst(&mut self, val: bool) {
+        pub fn set_rngrst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
         }
         #[doc = "SDMMC2 and SDMMC2 Delay block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn sdmmc2rst(&self) -> bool {
             let val = (self.0 >> 9usize) & 0x01;
@@ -1189,11 +1067,10 @@ pub mod regs {
         }
         #[doc = "SDMMC2 and SDMMC2 Delay block reset"]
         #[inline(always)]
-        pub const fn set_sdmmc2rst(&mut self, val: bool) {
+        pub fn set_sdmmc2rst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
         }
         #[doc = "BDMA1 block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn bdma1rst(&self) -> bool {
             let val = (self.0 >> 11usize) & 0x01;
@@ -1201,11 +1078,10 @@ pub mod regs {
         }
         #[doc = "BDMA1 block reset"]
         #[inline(always)]
-        pub const fn set_bdma1rst(&mut self, val: bool) {
+        pub fn set_bdma1rst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
         }
         #[doc = "FMAC reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn fmacrst(&self) -> bool {
             let val = (self.0 >> 16usize) & 0x01;
@@ -1213,11 +1089,10 @@ pub mod regs {
         }
         #[doc = "FMAC reset"]
         #[inline(always)]
-        pub const fn set_fmacrst(&mut self, val: bool) {
+        pub fn set_fmacrst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
         }
         #[doc = "CORDIC reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn cordicrst(&self) -> bool {
             let val = (self.0 >> 17usize) & 0x01;
@@ -1225,7 +1100,7 @@ pub mod regs {
         }
         #[doc = "CORDIC reset"]
         #[inline(always)]
-        pub const fn set_cordicrst(&mut self, val: bool) {
+        pub fn set_cordicrst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
         }
     }
@@ -1252,18 +1127,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Ahb2rstr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Ahb2rstr {{ dcmirst: {=bool:?}, cryprst: {=bool:?}, hashrst: {=bool:?}, rngrst: {=bool:?}, sdmmc2rst: {=bool:?}, bdma1rst: {=bool:?}, fmacrst: {=bool:?}, cordicrst: {=bool:?} }}",
-                self.dcmirst(),
-                self.cryprst(),
-                self.hashrst(),
-                self.rngrst(),
-                self.sdmmc2rst(),
-                self.bdma1rst(),
-                self.fmacrst(),
-                self.cordicrst()
-            )
+            defmt :: write ! (f , "Ahb2rstr {{ dcmirst: {=bool:?}, cryprst: {=bool:?}, hashrst: {=bool:?}, rngrst: {=bool:?}, sdmmc2rst: {=bool:?}, bdma1rst: {=bool:?}, fmacrst: {=bool:?}, cordicrst: {=bool:?} }}" , self . dcmirst () , self . cryprst () , self . hashrst () , self . rngrst () , self . sdmmc2rst () , self . bdma1rst () , self . fmacrst () , self . cordicrst ())
         }
     }
     #[doc = "RCC AHB3 Clock Register"]
@@ -1272,7 +1136,6 @@ pub mod regs {
     pub struct Ahb3enr(pub u32);
     impl Ahb3enr {
         #[doc = "MDMA Peripheral Clock Enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn mdmaen(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -1280,11 +1143,10 @@ pub mod regs {
         }
         #[doc = "MDMA Peripheral Clock Enable"]
         #[inline(always)]
-        pub const fn set_mdmaen(&mut self, val: bool) {
+        pub fn set_mdmaen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "DMA2D Peripheral Clock Enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn dma2den(&self) -> bool {
             let val = (self.0 >> 4usize) & 0x01;
@@ -1292,11 +1154,10 @@ pub mod regs {
         }
         #[doc = "DMA2D Peripheral Clock Enable"]
         #[inline(always)]
-        pub const fn set_dma2den(&mut self, val: bool) {
+        pub fn set_dma2den(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
         }
         #[doc = "JPGDEC Peripheral Clock Enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn jpgdecen(&self) -> bool {
             let val = (self.0 >> 5usize) & 0x01;
@@ -1304,11 +1165,10 @@ pub mod regs {
         }
         #[doc = "JPGDEC Peripheral Clock Enable"]
         #[inline(always)]
-        pub const fn set_jpgdecen(&mut self, val: bool) {
+        pub fn set_jpgdecen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
         }
         #[doc = "FMC Peripheral Clocks Enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn fmcen(&self) -> bool {
             let val = (self.0 >> 12usize) & 0x01;
@@ -1316,11 +1176,10 @@ pub mod regs {
         }
         #[doc = "FMC Peripheral Clocks Enable"]
         #[inline(always)]
-        pub const fn set_fmcen(&mut self, val: bool) {
+        pub fn set_fmcen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
         }
         #[doc = "OCTOSPI1 and OCTOSPI1 Delay Clock Enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn octospi1en(&self) -> bool {
             let val = (self.0 >> 14usize) & 0x01;
@@ -1328,11 +1187,10 @@ pub mod regs {
         }
         #[doc = "OCTOSPI1 and OCTOSPI1 Delay Clock Enable"]
         #[inline(always)]
-        pub const fn set_octospi1en(&mut self, val: bool) {
+        pub fn set_octospi1en(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
         }
         #[doc = "SDMMC1 and SDMMC1 Delay Clock Enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn sdmmc1en(&self) -> bool {
             let val = (self.0 >> 16usize) & 0x01;
@@ -1340,11 +1198,10 @@ pub mod regs {
         }
         #[doc = "SDMMC1 and SDMMC1 Delay Clock Enable"]
         #[inline(always)]
-        pub const fn set_sdmmc1en(&mut self, val: bool) {
+        pub fn set_sdmmc1en(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
         }
         #[doc = "OCTOSPI2 and OCTOSPI2 delay block enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn octospi2en(&self) -> bool {
             let val = (self.0 >> 19usize) & 0x01;
@@ -1352,11 +1209,10 @@ pub mod regs {
         }
         #[doc = "OCTOSPI2 and OCTOSPI2 delay block enable"]
         #[inline(always)]
-        pub const fn set_octospi2en(&mut self, val: bool) {
+        pub fn set_octospi2en(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
         }
         #[doc = "OCTOSPI IO manager enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn iomngren(&self) -> bool {
             let val = (self.0 >> 21usize) & 0x01;
@@ -1364,11 +1220,10 @@ pub mod regs {
         }
         #[doc = "OCTOSPI IO manager enable"]
         #[inline(always)]
-        pub const fn set_iomngren(&mut self, val: bool) {
+        pub fn set_iomngren(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
         }
         #[doc = "OTFDEC1 enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn otfd1en(&self) -> bool {
             let val = (self.0 >> 22usize) & 0x01;
@@ -1376,11 +1231,10 @@ pub mod regs {
         }
         #[doc = "OTFDEC1 enable"]
         #[inline(always)]
-        pub const fn set_otfd1en(&mut self, val: bool) {
+        pub fn set_otfd1en(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
         }
         #[doc = "OTFDEC2 enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn otfd2en(&self) -> bool {
             let val = (self.0 >> 23usize) & 0x01;
@@ -1388,11 +1242,10 @@ pub mod regs {
         }
         #[doc = "OTFDEC2 enable"]
         #[inline(always)]
-        pub const fn set_otfd2en(&mut self, val: bool) {
+        pub fn set_otfd2en(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
         }
         #[doc = "D1 DTCM1 block enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn dtcm1en(&self) -> bool {
             let val = (self.0 >> 28usize) & 0x01;
@@ -1400,11 +1253,10 @@ pub mod regs {
         }
         #[doc = "D1 DTCM1 block enable"]
         #[inline(always)]
-        pub const fn set_dtcm1en(&mut self, val: bool) {
+        pub fn set_dtcm1en(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
         }
         #[doc = "D1 DTCM2 block enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn dtcm2en(&self) -> bool {
             let val = (self.0 >> 29usize) & 0x01;
@@ -1412,11 +1264,10 @@ pub mod regs {
         }
         #[doc = "D1 DTCM2 block enable"]
         #[inline(always)]
-        pub const fn set_dtcm2en(&mut self, val: bool) {
+        pub fn set_dtcm2en(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
         }
         #[doc = "D1 ITCM block enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn itcm1en(&self) -> bool {
             let val = (self.0 >> 30usize) & 0x01;
@@ -1424,11 +1275,10 @@ pub mod regs {
         }
         #[doc = "D1 ITCM block enable"]
         #[inline(always)]
-        pub const fn set_itcm1en(&mut self, val: bool) {
+        pub fn set_itcm1en(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
         }
         #[doc = "AXISRAM block enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn axisramen(&self) -> bool {
             let val = (self.0 >> 31usize) & 0x01;
@@ -1436,7 +1286,7 @@ pub mod regs {
         }
         #[doc = "AXISRAM block enable"]
         #[inline(always)]
-        pub const fn set_axisramen(&mut self, val: bool) {
+        pub fn set_axisramen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
         }
     }
@@ -1469,24 +1319,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Ahb3enr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Ahb3enr {{ mdmaen: {=bool:?}, dma2den: {=bool:?}, jpgdecen: {=bool:?}, fmcen: {=bool:?}, octospi1en: {=bool:?}, sdmmc1en: {=bool:?}, octospi2en: {=bool:?}, iomngren: {=bool:?}, otfd1en: {=bool:?}, otfd2en: {=bool:?}, dtcm1en: {=bool:?}, dtcm2en: {=bool:?}, itcm1en: {=bool:?}, axisramen: {=bool:?} }}",
-                self.mdmaen(),
-                self.dma2den(),
-                self.jpgdecen(),
-                self.fmcen(),
-                self.octospi1en(),
-                self.sdmmc1en(),
-                self.octospi2en(),
-                self.iomngren(),
-                self.otfd1en(),
-                self.otfd2en(),
-                self.dtcm1en(),
-                self.dtcm2en(),
-                self.itcm1en(),
-                self.axisramen()
-            )
+            defmt :: write ! (f , "Ahb3enr {{ mdmaen: {=bool:?}, dma2den: {=bool:?}, jpgdecen: {=bool:?}, fmcen: {=bool:?}, octospi1en: {=bool:?}, sdmmc1en: {=bool:?}, octospi2en: {=bool:?}, iomngren: {=bool:?}, otfd1en: {=bool:?}, otfd2en: {=bool:?}, dtcm1en: {=bool:?}, dtcm2en: {=bool:?}, itcm1en: {=bool:?}, axisramen: {=bool:?} }}" , self . mdmaen () , self . dma2den () , self . jpgdecen () , self . fmcen () , self . octospi1en () , self . sdmmc1en () , self . octospi2en () , self . iomngren () , self . otfd1en () , self . otfd2en () , self . dtcm1en () , self . dtcm2en () , self . itcm1en () , self . axisramen ())
         }
     }
     #[doc = "RCC AHB3 Sleep Clock Register"]
@@ -1495,7 +1328,6 @@ pub mod regs {
     pub struct Ahb3lpenr(pub u32);
     impl Ahb3lpenr {
         #[doc = "MDMA Clock Enable During CSleep Mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn mdmalpen(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -1503,11 +1335,10 @@ pub mod regs {
         }
         #[doc = "MDMA Clock Enable During CSleep Mode"]
         #[inline(always)]
-        pub const fn set_mdmalpen(&mut self, val: bool) {
+        pub fn set_mdmalpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "DMA2D Clock Enable During CSleep Mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn dma2dlpen(&self) -> bool {
             let val = (self.0 >> 4usize) & 0x01;
@@ -1515,11 +1346,10 @@ pub mod regs {
         }
         #[doc = "DMA2D Clock Enable During CSleep Mode"]
         #[inline(always)]
-        pub const fn set_dma2dlpen(&mut self, val: bool) {
+        pub fn set_dma2dlpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
         }
         #[doc = "JPGDEC Clock Enable During CSleep Mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn jpgdeclpen(&self) -> bool {
             let val = (self.0 >> 5usize) & 0x01;
@@ -1527,11 +1357,10 @@ pub mod regs {
         }
         #[doc = "JPGDEC Clock Enable During CSleep Mode"]
         #[inline(always)]
-        pub const fn set_jpgdeclpen(&mut self, val: bool) {
+        pub fn set_jpgdeclpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
         }
         #[doc = "FLASH Clock Enable During CSleep Mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn flashlpen(&self) -> bool {
             let val = (self.0 >> 8usize) & 0x01;
@@ -1539,11 +1368,10 @@ pub mod regs {
         }
         #[doc = "FLASH Clock Enable During CSleep Mode"]
         #[inline(always)]
-        pub const fn set_flashlpen(&mut self, val: bool) {
+        pub fn set_flashlpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
         }
         #[doc = "FMC Peripheral Clocks Enable During CSleep Mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn fmclpen(&self) -> bool {
             let val = (self.0 >> 12usize) & 0x01;
@@ -1551,11 +1379,10 @@ pub mod regs {
         }
         #[doc = "FMC Peripheral Clocks Enable During CSleep Mode"]
         #[inline(always)]
-        pub const fn set_fmclpen(&mut self, val: bool) {
+        pub fn set_fmclpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
         }
         #[doc = "OCTOSPI1 and OCTOSPI1 Delay Clock Enable During CSleep Mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn octospi1lpen(&self) -> bool {
             let val = (self.0 >> 14usize) & 0x01;
@@ -1563,11 +1390,10 @@ pub mod regs {
         }
         #[doc = "OCTOSPI1 and OCTOSPI1 Delay Clock Enable During CSleep Mode"]
         #[inline(always)]
-        pub const fn set_octospi1lpen(&mut self, val: bool) {
+        pub fn set_octospi1lpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
         }
         #[doc = "SDMMC1 and SDMMC1 Delay Clock Enable During CSleep Mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn sdmmc1lpen(&self) -> bool {
             let val = (self.0 >> 16usize) & 0x01;
@@ -1575,11 +1401,10 @@ pub mod regs {
         }
         #[doc = "SDMMC1 and SDMMC1 Delay Clock Enable During CSleep Mode"]
         #[inline(always)]
-        pub const fn set_sdmmc1lpen(&mut self, val: bool) {
+        pub fn set_sdmmc1lpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
         }
         #[doc = "OCTOSPI2 and OCTOSPI2 delay block enable during CSleep Mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn octospi2lpen(&self) -> bool {
             let val = (self.0 >> 19usize) & 0x01;
@@ -1587,11 +1412,10 @@ pub mod regs {
         }
         #[doc = "OCTOSPI2 and OCTOSPI2 delay block enable during CSleep Mode"]
         #[inline(always)]
-        pub const fn set_octospi2lpen(&mut self, val: bool) {
+        pub fn set_octospi2lpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
         }
         #[doc = "OCTOSPI IO manager enable during CSleep Mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn iomngrlpen(&self) -> bool {
             let val = (self.0 >> 21usize) & 0x01;
@@ -1599,11 +1423,10 @@ pub mod regs {
         }
         #[doc = "OCTOSPI IO manager enable during CSleep Mode"]
         #[inline(always)]
-        pub const fn set_iomngrlpen(&mut self, val: bool) {
+        pub fn set_iomngrlpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
         }
         #[doc = "OTFDEC1 enable during CSleep Mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn otfd1lpen(&self) -> bool {
             let val = (self.0 >> 22usize) & 0x01;
@@ -1611,11 +1434,10 @@ pub mod regs {
         }
         #[doc = "OTFDEC1 enable during CSleep Mode"]
         #[inline(always)]
-        pub const fn set_otfd1lpen(&mut self, val: bool) {
+        pub fn set_otfd1lpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
         }
         #[doc = "OTFDEC2 enable during CSleep Mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn otfd2lpen(&self) -> bool {
             let val = (self.0 >> 23usize) & 0x01;
@@ -1623,11 +1445,10 @@ pub mod regs {
         }
         #[doc = "OTFDEC2 enable during CSleep Mode"]
         #[inline(always)]
-        pub const fn set_otfd2lpen(&mut self, val: bool) {
+        pub fn set_otfd2lpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
         }
         #[doc = "D1DTCM1 Block Clock Enable During CSleep mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn d1dtcm1lpen(&self) -> bool {
             let val = (self.0 >> 28usize) & 0x01;
@@ -1635,11 +1456,10 @@ pub mod regs {
         }
         #[doc = "D1DTCM1 Block Clock Enable During CSleep mode"]
         #[inline(always)]
-        pub const fn set_d1dtcm1lpen(&mut self, val: bool) {
+        pub fn set_d1dtcm1lpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
         }
         #[doc = "D1 DTCM2 Block Clock Enable During CSleep mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn dtcm2lpen(&self) -> bool {
             let val = (self.0 >> 29usize) & 0x01;
@@ -1647,11 +1467,10 @@ pub mod regs {
         }
         #[doc = "D1 DTCM2 Block Clock Enable During CSleep mode"]
         #[inline(always)]
-        pub const fn set_dtcm2lpen(&mut self, val: bool) {
+        pub fn set_dtcm2lpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
         }
         #[doc = "D1ITCM Block Clock Enable During CSleep mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn itcmlpen(&self) -> bool {
             let val = (self.0 >> 30usize) & 0x01;
@@ -1659,11 +1478,10 @@ pub mod regs {
         }
         #[doc = "D1ITCM Block Clock Enable During CSleep mode"]
         #[inline(always)]
-        pub const fn set_itcmlpen(&mut self, val: bool) {
+        pub fn set_itcmlpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
         }
         #[doc = "AXISRAM Block Clock Enable During CSleep mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn axisramlpen(&self) -> bool {
             let val = (self.0 >> 31usize) & 0x01;
@@ -1671,7 +1489,7 @@ pub mod regs {
         }
         #[doc = "AXISRAM Block Clock Enable During CSleep mode"]
         #[inline(always)]
-        pub const fn set_axisramlpen(&mut self, val: bool) {
+        pub fn set_axisramlpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
         }
     }
@@ -1705,25 +1523,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Ahb3lpenr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Ahb3lpenr {{ mdmalpen: {=bool:?}, dma2dlpen: {=bool:?}, jpgdeclpen: {=bool:?}, flashlpen: {=bool:?}, fmclpen: {=bool:?}, octospi1lpen: {=bool:?}, sdmmc1lpen: {=bool:?}, octospi2lpen: {=bool:?}, iomngrlpen: {=bool:?}, otfd1lpen: {=bool:?}, otfd2lpen: {=bool:?}, d1dtcm1lpen: {=bool:?}, dtcm2lpen: {=bool:?}, itcmlpen: {=bool:?}, axisramlpen: {=bool:?} }}",
-                self.mdmalpen(),
-                self.dma2dlpen(),
-                self.jpgdeclpen(),
-                self.flashlpen(),
-                self.fmclpen(),
-                self.octospi1lpen(),
-                self.sdmmc1lpen(),
-                self.octospi2lpen(),
-                self.iomngrlpen(),
-                self.otfd1lpen(),
-                self.otfd2lpen(),
-                self.d1dtcm1lpen(),
-                self.dtcm2lpen(),
-                self.itcmlpen(),
-                self.axisramlpen()
-            )
+            defmt :: write ! (f , "Ahb3lpenr {{ mdmalpen: {=bool:?}, dma2dlpen: {=bool:?}, jpgdeclpen: {=bool:?}, flashlpen: {=bool:?}, fmclpen: {=bool:?}, octospi1lpen: {=bool:?}, sdmmc1lpen: {=bool:?}, octospi2lpen: {=bool:?}, iomngrlpen: {=bool:?}, otfd1lpen: {=bool:?}, otfd2lpen: {=bool:?}, d1dtcm1lpen: {=bool:?}, dtcm2lpen: {=bool:?}, itcmlpen: {=bool:?}, axisramlpen: {=bool:?} }}" , self . mdmalpen () , self . dma2dlpen () , self . jpgdeclpen () , self . flashlpen () , self . fmclpen () , self . octospi1lpen () , self . sdmmc1lpen () , self . octospi2lpen () , self . iomngrlpen () , self . otfd1lpen () , self . otfd2lpen () , self . d1dtcm1lpen () , self . dtcm2lpen () , self . itcmlpen () , self . axisramlpen ())
         }
     }
     #[doc = "RCC AHB3 Reset Register"]
@@ -1732,7 +1532,6 @@ pub mod regs {
     pub struct Ahb3rstr(pub u32);
     impl Ahb3rstr {
         #[doc = "MDMA block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn mdmarst(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -1740,11 +1539,10 @@ pub mod regs {
         }
         #[doc = "MDMA block reset"]
         #[inline(always)]
-        pub const fn set_mdmarst(&mut self, val: bool) {
+        pub fn set_mdmarst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "DMA2D block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn dma2drst(&self) -> bool {
             let val = (self.0 >> 4usize) & 0x01;
@@ -1752,11 +1550,10 @@ pub mod regs {
         }
         #[doc = "DMA2D block reset"]
         #[inline(always)]
-        pub const fn set_dma2drst(&mut self, val: bool) {
+        pub fn set_dma2drst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
         }
         #[doc = "JPGDEC block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn jpgdecrst(&self) -> bool {
             let val = (self.0 >> 5usize) & 0x01;
@@ -1764,11 +1561,10 @@ pub mod regs {
         }
         #[doc = "JPGDEC block reset"]
         #[inline(always)]
-        pub const fn set_jpgdecrst(&mut self, val: bool) {
+        pub fn set_jpgdecrst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
         }
         #[doc = "FMC block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn fmcrst(&self) -> bool {
             let val = (self.0 >> 12usize) & 0x01;
@@ -1776,11 +1572,10 @@ pub mod regs {
         }
         #[doc = "FMC block reset"]
         #[inline(always)]
-        pub const fn set_fmcrst(&mut self, val: bool) {
+        pub fn set_fmcrst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
         }
         #[doc = "OCTOSPI1 and OCTOSPI1 delay block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn octospi1rst(&self) -> bool {
             let val = (self.0 >> 14usize) & 0x01;
@@ -1788,11 +1583,10 @@ pub mod regs {
         }
         #[doc = "OCTOSPI1 and OCTOSPI1 delay block reset"]
         #[inline(always)]
-        pub const fn set_octospi1rst(&mut self, val: bool) {
+        pub fn set_octospi1rst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
         }
         #[doc = "SDMMC1 and SDMMC1 delay block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn sdmmc1rst(&self) -> bool {
             let val = (self.0 >> 16usize) & 0x01;
@@ -1800,11 +1594,10 @@ pub mod regs {
         }
         #[doc = "SDMMC1 and SDMMC1 delay block reset"]
         #[inline(always)]
-        pub const fn set_sdmmc1rst(&mut self, val: bool) {
+        pub fn set_sdmmc1rst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
         }
         #[doc = "OCTOSPI2 and OCTOSPI2 delay block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn octospi2rst(&self) -> bool {
             let val = (self.0 >> 19usize) & 0x01;
@@ -1812,11 +1605,10 @@ pub mod regs {
         }
         #[doc = "OCTOSPI2 and OCTOSPI2 delay block reset"]
         #[inline(always)]
-        pub const fn set_octospi2rst(&mut self, val: bool) {
+        pub fn set_octospi2rst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
         }
         #[doc = "OCTOSPI IO manager reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn iomngrrst(&self) -> bool {
             let val = (self.0 >> 21usize) & 0x01;
@@ -1824,11 +1616,10 @@ pub mod regs {
         }
         #[doc = "OCTOSPI IO manager reset"]
         #[inline(always)]
-        pub const fn set_iomngrrst(&mut self, val: bool) {
+        pub fn set_iomngrrst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
         }
         #[doc = "OTFDEC1 reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn otfd1rst(&self) -> bool {
             let val = (self.0 >> 22usize) & 0x01;
@@ -1836,11 +1627,10 @@ pub mod regs {
         }
         #[doc = "OTFDEC1 reset"]
         #[inline(always)]
-        pub const fn set_otfd1rst(&mut self, val: bool) {
+        pub fn set_otfd1rst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
         }
         #[doc = "OTFDEC2 reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn otfd2rst(&self) -> bool {
             let val = (self.0 >> 23usize) & 0x01;
@@ -1848,11 +1638,10 @@ pub mod regs {
         }
         #[doc = "OTFDEC2 reset"]
         #[inline(always)]
-        pub const fn set_otfd2rst(&mut self, val: bool) {
+        pub fn set_otfd2rst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
         }
         #[doc = "CPU reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn cpurst(&self) -> bool {
             let val = (self.0 >> 31usize) & 0x01;
@@ -1860,7 +1649,7 @@ pub mod regs {
         }
         #[doc = "CPU reset"]
         #[inline(always)]
-        pub const fn set_cpurst(&mut self, val: bool) {
+        pub fn set_cpurst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
         }
     }
@@ -1890,21 +1679,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Ahb3rstr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Ahb3rstr {{ mdmarst: {=bool:?}, dma2drst: {=bool:?}, jpgdecrst: {=bool:?}, fmcrst: {=bool:?}, octospi1rst: {=bool:?}, sdmmc1rst: {=bool:?}, octospi2rst: {=bool:?}, iomngrrst: {=bool:?}, otfd1rst: {=bool:?}, otfd2rst: {=bool:?}, cpurst: {=bool:?} }}",
-                self.mdmarst(),
-                self.dma2drst(),
-                self.jpgdecrst(),
-                self.fmcrst(),
-                self.octospi1rst(),
-                self.sdmmc1rst(),
-                self.octospi2rst(),
-                self.iomngrrst(),
-                self.otfd1rst(),
-                self.otfd2rst(),
-                self.cpurst()
-            )
+            defmt :: write ! (f , "Ahb3rstr {{ mdmarst: {=bool:?}, dma2drst: {=bool:?}, jpgdecrst: {=bool:?}, fmcrst: {=bool:?}, octospi1rst: {=bool:?}, sdmmc1rst: {=bool:?}, octospi2rst: {=bool:?}, iomngrrst: {=bool:?}, otfd1rst: {=bool:?}, otfd2rst: {=bool:?}, cpurst: {=bool:?} }}" , self . mdmarst () , self . dma2drst () , self . jpgdecrst () , self . fmcrst () , self . octospi1rst () , self . sdmmc1rst () , self . octospi2rst () , self . iomngrrst () , self . otfd1rst () , self . otfd2rst () , self . cpurst ())
         }
     }
     #[doc = "RCC AHB4 Clock Register"]
@@ -1913,7 +1688,6 @@ pub mod regs {
     pub struct Ahb4enr(pub u32);
     impl Ahb4enr {
         #[doc = "0GPIO peripheral clock enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn gpioaen(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -1921,11 +1695,10 @@ pub mod regs {
         }
         #[doc = "0GPIO peripheral clock enable"]
         #[inline(always)]
-        pub const fn set_gpioaen(&mut self, val: bool) {
+        pub fn set_gpioaen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "0GPIO peripheral clock enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn gpioben(&self) -> bool {
             let val = (self.0 >> 1usize) & 0x01;
@@ -1933,11 +1706,10 @@ pub mod regs {
         }
         #[doc = "0GPIO peripheral clock enable"]
         #[inline(always)]
-        pub const fn set_gpioben(&mut self, val: bool) {
+        pub fn set_gpioben(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
         }
         #[doc = "0GPIO peripheral clock enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn gpiocen(&self) -> bool {
             let val = (self.0 >> 2usize) & 0x01;
@@ -1945,11 +1717,10 @@ pub mod regs {
         }
         #[doc = "0GPIO peripheral clock enable"]
         #[inline(always)]
-        pub const fn set_gpiocen(&mut self, val: bool) {
+        pub fn set_gpiocen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
         }
         #[doc = "0GPIO peripheral clock enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn gpioden(&self) -> bool {
             let val = (self.0 >> 3usize) & 0x01;
@@ -1957,11 +1728,10 @@ pub mod regs {
         }
         #[doc = "0GPIO peripheral clock enable"]
         #[inline(always)]
-        pub const fn set_gpioden(&mut self, val: bool) {
+        pub fn set_gpioden(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
         }
         #[doc = "0GPIO peripheral clock enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn gpioeen(&self) -> bool {
             let val = (self.0 >> 4usize) & 0x01;
@@ -1969,11 +1739,10 @@ pub mod regs {
         }
         #[doc = "0GPIO peripheral clock enable"]
         #[inline(always)]
-        pub const fn set_gpioeen(&mut self, val: bool) {
+        pub fn set_gpioeen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
         }
         #[doc = "0GPIO peripheral clock enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn gpiofen(&self) -> bool {
             let val = (self.0 >> 5usize) & 0x01;
@@ -1981,11 +1750,10 @@ pub mod regs {
         }
         #[doc = "0GPIO peripheral clock enable"]
         #[inline(always)]
-        pub const fn set_gpiofen(&mut self, val: bool) {
+        pub fn set_gpiofen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
         }
         #[doc = "0GPIO peripheral clock enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn gpiogen(&self) -> bool {
             let val = (self.0 >> 6usize) & 0x01;
@@ -1993,11 +1761,10 @@ pub mod regs {
         }
         #[doc = "0GPIO peripheral clock enable"]
         #[inline(always)]
-        pub const fn set_gpiogen(&mut self, val: bool) {
+        pub fn set_gpiogen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
         }
         #[doc = "0GPIO peripheral clock enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn gpiohen(&self) -> bool {
             let val = (self.0 >> 7usize) & 0x01;
@@ -2005,11 +1772,10 @@ pub mod regs {
         }
         #[doc = "0GPIO peripheral clock enable"]
         #[inline(always)]
-        pub const fn set_gpiohen(&mut self, val: bool) {
+        pub fn set_gpiohen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
         }
         #[doc = "0GPIO peripheral clock enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn gpioien(&self) -> bool {
             let val = (self.0 >> 8usize) & 0x01;
@@ -2017,11 +1783,10 @@ pub mod regs {
         }
         #[doc = "0GPIO peripheral clock enable"]
         #[inline(always)]
-        pub const fn set_gpioien(&mut self, val: bool) {
+        pub fn set_gpioien(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
         }
         #[doc = "0GPIO peripheral clock enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn gpiojen(&self) -> bool {
             let val = (self.0 >> 9usize) & 0x01;
@@ -2029,11 +1794,10 @@ pub mod regs {
         }
         #[doc = "0GPIO peripheral clock enable"]
         #[inline(always)]
-        pub const fn set_gpiojen(&mut self, val: bool) {
+        pub fn set_gpiojen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
         }
         #[doc = "0GPIO peripheral clock enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn gpioken(&self) -> bool {
             let val = (self.0 >> 10usize) & 0x01;
@@ -2041,11 +1805,10 @@ pub mod regs {
         }
         #[doc = "0GPIO peripheral clock enable"]
         #[inline(always)]
-        pub const fn set_gpioken(&mut self, val: bool) {
+        pub fn set_gpioken(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
         }
         #[doc = "CRC peripheral clock enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn crcen(&self) -> bool {
             let val = (self.0 >> 19usize) & 0x01;
@@ -2053,11 +1816,10 @@ pub mod regs {
         }
         #[doc = "CRC peripheral clock enable"]
         #[inline(always)]
-        pub const fn set_crcen(&mut self, val: bool) {
+        pub fn set_crcen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
         }
         #[doc = "BDMA2 and DMAMUX2 Clock Enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn bdma2en(&self) -> bool {
             let val = (self.0 >> 21usize) & 0x01;
@@ -2065,11 +1827,10 @@ pub mod regs {
         }
         #[doc = "BDMA2 and DMAMUX2 Clock Enable"]
         #[inline(always)]
-        pub const fn set_bdma2en(&mut self, val: bool) {
+        pub fn set_bdma2en(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
         }
         #[doc = "BDMA and DMAMUX2 Clock Enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn bdmaen(&self) -> bool {
             let val = (self.0 >> 21usize) & 0x01;
@@ -2077,11 +1838,10 @@ pub mod regs {
         }
         #[doc = "BDMA and DMAMUX2 Clock Enable"]
         #[inline(always)]
-        pub const fn set_bdmaen(&mut self, val: bool) {
+        pub fn set_bdmaen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
         }
         #[doc = "ADC3 Peripheral Clocks Enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn adc3en(&self) -> bool {
             let val = (self.0 >> 24usize) & 0x01;
@@ -2089,11 +1849,10 @@ pub mod regs {
         }
         #[doc = "ADC3 Peripheral Clocks Enable"]
         #[inline(always)]
-        pub const fn set_adc3en(&mut self, val: bool) {
+        pub fn set_adc3en(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
         }
         #[doc = "HSEM peripheral clock enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn hsemen(&self) -> bool {
             let val = (self.0 >> 25usize) & 0x01;
@@ -2101,11 +1860,10 @@ pub mod regs {
         }
         #[doc = "HSEM peripheral clock enable"]
         #[inline(always)]
-        pub const fn set_hsemen(&mut self, val: bool) {
+        pub fn set_hsemen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
         }
         #[doc = "Backup RAM Clock Enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn bkpsramen(&self) -> bool {
             let val = (self.0 >> 28usize) & 0x01;
@@ -2113,7 +1871,7 @@ pub mod regs {
         }
         #[doc = "Backup RAM Clock Enable"]
         #[inline(always)]
-        pub const fn set_bkpsramen(&mut self, val: bool) {
+        pub fn set_bkpsramen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
         }
     }
@@ -2149,27 +1907,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Ahb4enr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Ahb4enr {{ gpioaen: {=bool:?}, gpioben: {=bool:?}, gpiocen: {=bool:?}, gpioden: {=bool:?}, gpioeen: {=bool:?}, gpiofen: {=bool:?}, gpiogen: {=bool:?}, gpiohen: {=bool:?}, gpioien: {=bool:?}, gpiojen: {=bool:?}, gpioken: {=bool:?}, crcen: {=bool:?}, bdma2en: {=bool:?}, bdmaen: {=bool:?}, adc3en: {=bool:?}, hsemen: {=bool:?}, bkpsramen: {=bool:?} }}",
-                self.gpioaen(),
-                self.gpioben(),
-                self.gpiocen(),
-                self.gpioden(),
-                self.gpioeen(),
-                self.gpiofen(),
-                self.gpiogen(),
-                self.gpiohen(),
-                self.gpioien(),
-                self.gpiojen(),
-                self.gpioken(),
-                self.crcen(),
-                self.bdma2en(),
-                self.bdmaen(),
-                self.adc3en(),
-                self.hsemen(),
-                self.bkpsramen()
-            )
+            defmt :: write ! (f , "Ahb4enr {{ gpioaen: {=bool:?}, gpioben: {=bool:?}, gpiocen: {=bool:?}, gpioden: {=bool:?}, gpioeen: {=bool:?}, gpiofen: {=bool:?}, gpiogen: {=bool:?}, gpiohen: {=bool:?}, gpioien: {=bool:?}, gpiojen: {=bool:?}, gpioken: {=bool:?}, crcen: {=bool:?}, bdma2en: {=bool:?}, bdmaen: {=bool:?}, adc3en: {=bool:?}, hsemen: {=bool:?}, bkpsramen: {=bool:?} }}" , self . gpioaen () , self . gpioben () , self . gpiocen () , self . gpioden () , self . gpioeen () , self . gpiofen () , self . gpiogen () , self . gpiohen () , self . gpioien () , self . gpiojen () , self . gpioken () , self . crcen () , self . bdma2en () , self . bdmaen () , self . adc3en () , self . hsemen () , self . bkpsramen ())
         }
     }
     #[doc = "RCC AHB4 Sleep Clock Register"]
@@ -2178,7 +1916,6 @@ pub mod regs {
     pub struct Ahb4lpenr(pub u32);
     impl Ahb4lpenr {
         #[doc = "GPIO peripheral clock enable during CSleep mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn gpioalpen(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -2186,11 +1923,10 @@ pub mod regs {
         }
         #[doc = "GPIO peripheral clock enable during CSleep mode"]
         #[inline(always)]
-        pub const fn set_gpioalpen(&mut self, val: bool) {
+        pub fn set_gpioalpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "GPIO peripheral clock enable during CSleep mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn gpioblpen(&self) -> bool {
             let val = (self.0 >> 1usize) & 0x01;
@@ -2198,11 +1934,10 @@ pub mod regs {
         }
         #[doc = "GPIO peripheral clock enable during CSleep mode"]
         #[inline(always)]
-        pub const fn set_gpioblpen(&mut self, val: bool) {
+        pub fn set_gpioblpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
         }
         #[doc = "GPIO peripheral clock enable during CSleep mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn gpioclpen(&self) -> bool {
             let val = (self.0 >> 2usize) & 0x01;
@@ -2210,11 +1945,10 @@ pub mod regs {
         }
         #[doc = "GPIO peripheral clock enable during CSleep mode"]
         #[inline(always)]
-        pub const fn set_gpioclpen(&mut self, val: bool) {
+        pub fn set_gpioclpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
         }
         #[doc = "GPIO peripheral clock enable during CSleep mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn gpiodlpen(&self) -> bool {
             let val = (self.0 >> 3usize) & 0x01;
@@ -2222,11 +1956,10 @@ pub mod regs {
         }
         #[doc = "GPIO peripheral clock enable during CSleep mode"]
         #[inline(always)]
-        pub const fn set_gpiodlpen(&mut self, val: bool) {
+        pub fn set_gpiodlpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
         }
         #[doc = "GPIO peripheral clock enable during CSleep mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn gpioelpen(&self) -> bool {
             let val = (self.0 >> 4usize) & 0x01;
@@ -2234,11 +1967,10 @@ pub mod regs {
         }
         #[doc = "GPIO peripheral clock enable during CSleep mode"]
         #[inline(always)]
-        pub const fn set_gpioelpen(&mut self, val: bool) {
+        pub fn set_gpioelpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
         }
         #[doc = "GPIO peripheral clock enable during CSleep mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn gpioflpen(&self) -> bool {
             let val = (self.0 >> 5usize) & 0x01;
@@ -2246,11 +1978,10 @@ pub mod regs {
         }
         #[doc = "GPIO peripheral clock enable during CSleep mode"]
         #[inline(always)]
-        pub const fn set_gpioflpen(&mut self, val: bool) {
+        pub fn set_gpioflpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
         }
         #[doc = "GPIO peripheral clock enable during CSleep mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn gpioglpen(&self) -> bool {
             let val = (self.0 >> 6usize) & 0x01;
@@ -2258,11 +1989,10 @@ pub mod regs {
         }
         #[doc = "GPIO peripheral clock enable during CSleep mode"]
         #[inline(always)]
-        pub const fn set_gpioglpen(&mut self, val: bool) {
+        pub fn set_gpioglpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
         }
         #[doc = "GPIO peripheral clock enable during CSleep mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn gpiohlpen(&self) -> bool {
             let val = (self.0 >> 7usize) & 0x01;
@@ -2270,11 +2000,10 @@ pub mod regs {
         }
         #[doc = "GPIO peripheral clock enable during CSleep mode"]
         #[inline(always)]
-        pub const fn set_gpiohlpen(&mut self, val: bool) {
+        pub fn set_gpiohlpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
         }
         #[doc = "GPIO peripheral clock enable during CSleep mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn gpioilpen(&self) -> bool {
             let val = (self.0 >> 8usize) & 0x01;
@@ -2282,11 +2011,10 @@ pub mod regs {
         }
         #[doc = "GPIO peripheral clock enable during CSleep mode"]
         #[inline(always)]
-        pub const fn set_gpioilpen(&mut self, val: bool) {
+        pub fn set_gpioilpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
         }
         #[doc = "GPIO peripheral clock enable during CSleep mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn gpiojlpen(&self) -> bool {
             let val = (self.0 >> 9usize) & 0x01;
@@ -2294,11 +2022,10 @@ pub mod regs {
         }
         #[doc = "GPIO peripheral clock enable during CSleep mode"]
         #[inline(always)]
-        pub const fn set_gpiojlpen(&mut self, val: bool) {
+        pub fn set_gpiojlpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
         }
         #[doc = "GPIO peripheral clock enable during CSleep mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn gpioklpen(&self) -> bool {
             let val = (self.0 >> 10usize) & 0x01;
@@ -2306,11 +2033,10 @@ pub mod regs {
         }
         #[doc = "GPIO peripheral clock enable during CSleep mode"]
         #[inline(always)]
-        pub const fn set_gpioklpen(&mut self, val: bool) {
+        pub fn set_gpioklpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
         }
         #[doc = "CRC peripheral clock enable during CSleep mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn crclpen(&self) -> bool {
             let val = (self.0 >> 19usize) & 0x01;
@@ -2318,11 +2044,10 @@ pub mod regs {
         }
         #[doc = "CRC peripheral clock enable during CSleep mode"]
         #[inline(always)]
-        pub const fn set_crclpen(&mut self, val: bool) {
+        pub fn set_crclpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
         }
         #[doc = "BDMA2 Clock Enable During CSleep Mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn bdma2lpen(&self) -> bool {
             let val = (self.0 >> 21usize) & 0x01;
@@ -2330,11 +2055,10 @@ pub mod regs {
         }
         #[doc = "BDMA2 Clock Enable During CSleep Mode"]
         #[inline(always)]
-        pub const fn set_bdma2lpen(&mut self, val: bool) {
+        pub fn set_bdma2lpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
         }
         #[doc = "BDMA Clock Enable During CSleep Mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn bdmalpen(&self) -> bool {
             let val = (self.0 >> 21usize) & 0x01;
@@ -2342,11 +2066,10 @@ pub mod regs {
         }
         #[doc = "BDMA Clock Enable During CSleep Mode"]
         #[inline(always)]
-        pub const fn set_bdmalpen(&mut self, val: bool) {
+        pub fn set_bdmalpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
         }
         #[doc = "ADC3 Peripheral Clocks Enable During CSleep Mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn adc3lpen(&self) -> bool {
             let val = (self.0 >> 24usize) & 0x01;
@@ -2354,11 +2077,10 @@ pub mod regs {
         }
         #[doc = "ADC3 Peripheral Clocks Enable During CSleep Mode"]
         #[inline(always)]
-        pub const fn set_adc3lpen(&mut self, val: bool) {
+        pub fn set_adc3lpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
         }
         #[doc = "Backup RAM Clock Enable During CSleep Mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn bkpsramlpen(&self) -> bool {
             let val = (self.0 >> 28usize) & 0x01;
@@ -2366,11 +2088,10 @@ pub mod regs {
         }
         #[doc = "Backup RAM Clock Enable During CSleep Mode"]
         #[inline(always)]
-        pub const fn set_bkpsramlpen(&mut self, val: bool) {
+        pub fn set_bkpsramlpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
         }
         #[doc = "SRAM4 Clock Enable During CSleep Mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn sram4lpen(&self) -> bool {
             let val = (self.0 >> 29usize) & 0x01;
@@ -2378,7 +2099,7 @@ pub mod regs {
         }
         #[doc = "SRAM4 Clock Enable During CSleep Mode"]
         #[inline(always)]
-        pub const fn set_sram4lpen(&mut self, val: bool) {
+        pub fn set_sram4lpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
         }
     }
@@ -2414,27 +2135,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Ahb4lpenr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Ahb4lpenr {{ gpioalpen: {=bool:?}, gpioblpen: {=bool:?}, gpioclpen: {=bool:?}, gpiodlpen: {=bool:?}, gpioelpen: {=bool:?}, gpioflpen: {=bool:?}, gpioglpen: {=bool:?}, gpiohlpen: {=bool:?}, gpioilpen: {=bool:?}, gpiojlpen: {=bool:?}, gpioklpen: {=bool:?}, crclpen: {=bool:?}, bdma2lpen: {=bool:?}, bdmalpen: {=bool:?}, adc3lpen: {=bool:?}, bkpsramlpen: {=bool:?}, sram4lpen: {=bool:?} }}",
-                self.gpioalpen(),
-                self.gpioblpen(),
-                self.gpioclpen(),
-                self.gpiodlpen(),
-                self.gpioelpen(),
-                self.gpioflpen(),
-                self.gpioglpen(),
-                self.gpiohlpen(),
-                self.gpioilpen(),
-                self.gpiojlpen(),
-                self.gpioklpen(),
-                self.crclpen(),
-                self.bdma2lpen(),
-                self.bdmalpen(),
-                self.adc3lpen(),
-                self.bkpsramlpen(),
-                self.sram4lpen()
-            )
+            defmt :: write ! (f , "Ahb4lpenr {{ gpioalpen: {=bool:?}, gpioblpen: {=bool:?}, gpioclpen: {=bool:?}, gpiodlpen: {=bool:?}, gpioelpen: {=bool:?}, gpioflpen: {=bool:?}, gpioglpen: {=bool:?}, gpiohlpen: {=bool:?}, gpioilpen: {=bool:?}, gpiojlpen: {=bool:?}, gpioklpen: {=bool:?}, crclpen: {=bool:?}, bdma2lpen: {=bool:?}, bdmalpen: {=bool:?}, adc3lpen: {=bool:?}, bkpsramlpen: {=bool:?}, sram4lpen: {=bool:?} }}" , self . gpioalpen () , self . gpioblpen () , self . gpioclpen () , self . gpiodlpen () , self . gpioelpen () , self . gpioflpen () , self . gpioglpen () , self . gpiohlpen () , self . gpioilpen () , self . gpiojlpen () , self . gpioklpen () , self . crclpen () , self . bdma2lpen () , self . bdmalpen () , self . adc3lpen () , self . bkpsramlpen () , self . sram4lpen ())
         }
     }
     #[doc = "RCC AHB4 Peripheral Reset Register"]
@@ -2443,7 +2144,6 @@ pub mod regs {
     pub struct Ahb4rstr(pub u32);
     impl Ahb4rstr {
         #[doc = "GPIO block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn gpioarst(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -2451,11 +2151,10 @@ pub mod regs {
         }
         #[doc = "GPIO block reset"]
         #[inline(always)]
-        pub const fn set_gpioarst(&mut self, val: bool) {
+        pub fn set_gpioarst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "GPIO block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn gpiobrst(&self) -> bool {
             let val = (self.0 >> 1usize) & 0x01;
@@ -2463,11 +2162,10 @@ pub mod regs {
         }
         #[doc = "GPIO block reset"]
         #[inline(always)]
-        pub const fn set_gpiobrst(&mut self, val: bool) {
+        pub fn set_gpiobrst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
         }
         #[doc = "GPIO block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn gpiocrst(&self) -> bool {
             let val = (self.0 >> 2usize) & 0x01;
@@ -2475,11 +2173,10 @@ pub mod regs {
         }
         #[doc = "GPIO block reset"]
         #[inline(always)]
-        pub const fn set_gpiocrst(&mut self, val: bool) {
+        pub fn set_gpiocrst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
         }
         #[doc = "GPIO block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn gpiodrst(&self) -> bool {
             let val = (self.0 >> 3usize) & 0x01;
@@ -2487,11 +2184,10 @@ pub mod regs {
         }
         #[doc = "GPIO block reset"]
         #[inline(always)]
-        pub const fn set_gpiodrst(&mut self, val: bool) {
+        pub fn set_gpiodrst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
         }
         #[doc = "GPIO block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn gpioerst(&self) -> bool {
             let val = (self.0 >> 4usize) & 0x01;
@@ -2499,11 +2195,10 @@ pub mod regs {
         }
         #[doc = "GPIO block reset"]
         #[inline(always)]
-        pub const fn set_gpioerst(&mut self, val: bool) {
+        pub fn set_gpioerst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
         }
         #[doc = "GPIO block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn gpiofrst(&self) -> bool {
             let val = (self.0 >> 5usize) & 0x01;
@@ -2511,11 +2206,10 @@ pub mod regs {
         }
         #[doc = "GPIO block reset"]
         #[inline(always)]
-        pub const fn set_gpiofrst(&mut self, val: bool) {
+        pub fn set_gpiofrst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
         }
         #[doc = "GPIO block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn gpiogrst(&self) -> bool {
             let val = (self.0 >> 6usize) & 0x01;
@@ -2523,11 +2217,10 @@ pub mod regs {
         }
         #[doc = "GPIO block reset"]
         #[inline(always)]
-        pub const fn set_gpiogrst(&mut self, val: bool) {
+        pub fn set_gpiogrst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
         }
         #[doc = "GPIO block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn gpiohrst(&self) -> bool {
             let val = (self.0 >> 7usize) & 0x01;
@@ -2535,11 +2228,10 @@ pub mod regs {
         }
         #[doc = "GPIO block reset"]
         #[inline(always)]
-        pub const fn set_gpiohrst(&mut self, val: bool) {
+        pub fn set_gpiohrst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
         }
         #[doc = "GPIO block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn gpioirst(&self) -> bool {
             let val = (self.0 >> 8usize) & 0x01;
@@ -2547,11 +2239,10 @@ pub mod regs {
         }
         #[doc = "GPIO block reset"]
         #[inline(always)]
-        pub const fn set_gpioirst(&mut self, val: bool) {
+        pub fn set_gpioirst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
         }
         #[doc = "GPIO block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn gpiojrst(&self) -> bool {
             let val = (self.0 >> 9usize) & 0x01;
@@ -2559,11 +2250,10 @@ pub mod regs {
         }
         #[doc = "GPIO block reset"]
         #[inline(always)]
-        pub const fn set_gpiojrst(&mut self, val: bool) {
+        pub fn set_gpiojrst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
         }
         #[doc = "GPIO block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn gpiokrst(&self) -> bool {
             let val = (self.0 >> 10usize) & 0x01;
@@ -2571,11 +2261,10 @@ pub mod regs {
         }
         #[doc = "GPIO block reset"]
         #[inline(always)]
-        pub const fn set_gpiokrst(&mut self, val: bool) {
+        pub fn set_gpiokrst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
         }
         #[doc = "CRC block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn crcrst(&self) -> bool {
             let val = (self.0 >> 19usize) & 0x01;
@@ -2583,11 +2272,10 @@ pub mod regs {
         }
         #[doc = "CRC block reset"]
         #[inline(always)]
-        pub const fn set_crcrst(&mut self, val: bool) {
+        pub fn set_crcrst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
         }
         #[doc = "BDMA2 block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn bdma2rst(&self) -> bool {
             let val = (self.0 >> 21usize) & 0x01;
@@ -2595,11 +2283,10 @@ pub mod regs {
         }
         #[doc = "BDMA2 block reset"]
         #[inline(always)]
-        pub const fn set_bdma2rst(&mut self, val: bool) {
+        pub fn set_bdma2rst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
         }
         #[doc = "BDMA block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn bdmarst(&self) -> bool {
             let val = (self.0 >> 21usize) & 0x01;
@@ -2607,11 +2294,10 @@ pub mod regs {
         }
         #[doc = "BDMA block reset"]
         #[inline(always)]
-        pub const fn set_bdmarst(&mut self, val: bool) {
+        pub fn set_bdmarst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
         }
         #[doc = "ADC3 block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn adc3rst(&self) -> bool {
             let val = (self.0 >> 24usize) & 0x01;
@@ -2619,11 +2305,10 @@ pub mod regs {
         }
         #[doc = "ADC3 block reset"]
         #[inline(always)]
-        pub const fn set_adc3rst(&mut self, val: bool) {
+        pub fn set_adc3rst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
         }
         #[doc = "HSEM block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn hsemrst(&self) -> bool {
             let val = (self.0 >> 25usize) & 0x01;
@@ -2631,7 +2316,7 @@ pub mod regs {
         }
         #[doc = "HSEM block reset"]
         #[inline(always)]
-        pub const fn set_hsemrst(&mut self, val: bool) {
+        pub fn set_hsemrst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
         }
     }
@@ -2666,26 +2351,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Ahb4rstr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Ahb4rstr {{ gpioarst: {=bool:?}, gpiobrst: {=bool:?}, gpiocrst: {=bool:?}, gpiodrst: {=bool:?}, gpioerst: {=bool:?}, gpiofrst: {=bool:?}, gpiogrst: {=bool:?}, gpiohrst: {=bool:?}, gpioirst: {=bool:?}, gpiojrst: {=bool:?}, gpiokrst: {=bool:?}, crcrst: {=bool:?}, bdma2rst: {=bool:?}, bdmarst: {=bool:?}, adc3rst: {=bool:?}, hsemrst: {=bool:?} }}",
-                self.gpioarst(),
-                self.gpiobrst(),
-                self.gpiocrst(),
-                self.gpiodrst(),
-                self.gpioerst(),
-                self.gpiofrst(),
-                self.gpiogrst(),
-                self.gpiohrst(),
-                self.gpioirst(),
-                self.gpiojrst(),
-                self.gpiokrst(),
-                self.crcrst(),
-                self.bdma2rst(),
-                self.bdmarst(),
-                self.adc3rst(),
-                self.hsemrst()
-            )
+            defmt :: write ! (f , "Ahb4rstr {{ gpioarst: {=bool:?}, gpiobrst: {=bool:?}, gpiocrst: {=bool:?}, gpiodrst: {=bool:?}, gpioerst: {=bool:?}, gpiofrst: {=bool:?}, gpiogrst: {=bool:?}, gpiohrst: {=bool:?}, gpioirst: {=bool:?}, gpiojrst: {=bool:?}, gpiokrst: {=bool:?}, crcrst: {=bool:?}, bdma2rst: {=bool:?}, bdmarst: {=bool:?}, adc3rst: {=bool:?}, hsemrst: {=bool:?} }}" , self . gpioarst () , self . gpiobrst () , self . gpiocrst () , self . gpiodrst () , self . gpioerst () , self . gpiofrst () , self . gpiogrst () , self . gpiohrst () , self . gpioirst () , self . gpiojrst () , self . gpiokrst () , self . crcrst () , self . bdma2rst () , self . bdmarst () , self . adc3rst () , self . hsemrst ())
         }
     }
     #[doc = "RCC APB1 Clock Register"]
@@ -2694,7 +2360,6 @@ pub mod regs {
     pub struct Apb1henr(pub u32);
     impl Apb1henr {
         #[doc = "Clock Recovery System peripheral clock enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn crsen(&self) -> bool {
             let val = (self.0 >> 1usize) & 0x01;
@@ -2702,11 +2367,10 @@ pub mod regs {
         }
         #[doc = "Clock Recovery System peripheral clock enable"]
         #[inline(always)]
-        pub const fn set_crsen(&mut self, val: bool) {
+        pub fn set_crsen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
         }
         #[doc = "SWPMI Peripheral Clocks Enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn swpmien(&self) -> bool {
             let val = (self.0 >> 2usize) & 0x01;
@@ -2714,11 +2378,10 @@ pub mod regs {
         }
         #[doc = "SWPMI Peripheral Clocks Enable"]
         #[inline(always)]
-        pub const fn set_swpmien(&mut self, val: bool) {
+        pub fn set_swpmien(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
         }
         #[doc = "OPAMP peripheral clock enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn opampen(&self) -> bool {
             let val = (self.0 >> 4usize) & 0x01;
@@ -2726,11 +2389,10 @@ pub mod regs {
         }
         #[doc = "OPAMP peripheral clock enable"]
         #[inline(always)]
-        pub const fn set_opampen(&mut self, val: bool) {
+        pub fn set_opampen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
         }
         #[doc = "MDIOS peripheral clock enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn mdiosen(&self) -> bool {
             let val = (self.0 >> 5usize) & 0x01;
@@ -2738,11 +2400,10 @@ pub mod regs {
         }
         #[doc = "MDIOS peripheral clock enable"]
         #[inline(always)]
-        pub const fn set_mdiosen(&mut self, val: bool) {
+        pub fn set_mdiosen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
         }
         #[doc = "FDCAN Peripheral Clocks Enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn fdcanen(&self) -> bool {
             let val = (self.0 >> 8usize) & 0x01;
@@ -2750,11 +2411,10 @@ pub mod regs {
         }
         #[doc = "FDCAN Peripheral Clocks Enable"]
         #[inline(always)]
-        pub const fn set_fdcanen(&mut self, val: bool) {
+        pub fn set_fdcanen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
         }
         #[doc = "TIM23 block enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn tim23en(&self) -> bool {
             let val = (self.0 >> 24usize) & 0x01;
@@ -2762,11 +2422,10 @@ pub mod regs {
         }
         #[doc = "TIM23 block enable"]
         #[inline(always)]
-        pub const fn set_tim23en(&mut self, val: bool) {
+        pub fn set_tim23en(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
         }
         #[doc = "TIM24 block enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn tim24en(&self) -> bool {
             let val = (self.0 >> 25usize) & 0x01;
@@ -2774,7 +2433,7 @@ pub mod regs {
         }
         #[doc = "TIM24 block enable"]
         #[inline(always)]
-        pub const fn set_tim24en(&mut self, val: bool) {
+        pub fn set_tim24en(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
         }
     }
@@ -2800,17 +2459,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Apb1henr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Apb1henr {{ crsen: {=bool:?}, swpmien: {=bool:?}, opampen: {=bool:?}, mdiosen: {=bool:?}, fdcanen: {=bool:?}, tim23en: {=bool:?}, tim24en: {=bool:?} }}",
-                self.crsen(),
-                self.swpmien(),
-                self.opampen(),
-                self.mdiosen(),
-                self.fdcanen(),
-                self.tim23en(),
-                self.tim24en()
-            )
+            defmt :: write ! (f , "Apb1henr {{ crsen: {=bool:?}, swpmien: {=bool:?}, opampen: {=bool:?}, mdiosen: {=bool:?}, fdcanen: {=bool:?}, tim23en: {=bool:?}, tim24en: {=bool:?} }}" , self . crsen () , self . swpmien () , self . opampen () , self . mdiosen () , self . fdcanen () , self . tim23en () , self . tim24en ())
         }
     }
     #[doc = "RCC APB1 High Sleep Clock Register"]
@@ -2819,7 +2468,6 @@ pub mod regs {
     pub struct Apb1hlpenr(pub u32);
     impl Apb1hlpenr {
         #[doc = "Clock Recovery System peripheral clock enable during CSleep mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn crslpen(&self) -> bool {
             let val = (self.0 >> 1usize) & 0x01;
@@ -2827,11 +2475,10 @@ pub mod regs {
         }
         #[doc = "Clock Recovery System peripheral clock enable during CSleep mode"]
         #[inline(always)]
-        pub const fn set_crslpen(&mut self, val: bool) {
+        pub fn set_crslpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
         }
         #[doc = "SWPMI Peripheral Clocks Enable During CSleep Mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn swpmilpen(&self) -> bool {
             let val = (self.0 >> 2usize) & 0x01;
@@ -2839,11 +2486,10 @@ pub mod regs {
         }
         #[doc = "SWPMI Peripheral Clocks Enable During CSleep Mode"]
         #[inline(always)]
-        pub const fn set_swpmilpen(&mut self, val: bool) {
+        pub fn set_swpmilpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
         }
         #[doc = "OPAMP peripheral clock enable during CSleep mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn opamplpen(&self) -> bool {
             let val = (self.0 >> 4usize) & 0x01;
@@ -2851,11 +2497,10 @@ pub mod regs {
         }
         #[doc = "OPAMP peripheral clock enable during CSleep mode"]
         #[inline(always)]
-        pub const fn set_opamplpen(&mut self, val: bool) {
+        pub fn set_opamplpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
         }
         #[doc = "MDIOS peripheral clock enable during CSleep mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn mdioslpen(&self) -> bool {
             let val = (self.0 >> 5usize) & 0x01;
@@ -2863,11 +2508,10 @@ pub mod regs {
         }
         #[doc = "MDIOS peripheral clock enable during CSleep mode"]
         #[inline(always)]
-        pub const fn set_mdioslpen(&mut self, val: bool) {
+        pub fn set_mdioslpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
         }
         #[doc = "FDCAN Peripheral Clocks Enable During CSleep Mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn fdcanlpen(&self) -> bool {
             let val = (self.0 >> 8usize) & 0x01;
@@ -2875,11 +2519,10 @@ pub mod regs {
         }
         #[doc = "FDCAN Peripheral Clocks Enable During CSleep Mode"]
         #[inline(always)]
-        pub const fn set_fdcanlpen(&mut self, val: bool) {
+        pub fn set_fdcanlpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
         }
         #[doc = "TIM23 block enable during CSleep Mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn tim23lpen(&self) -> bool {
             let val = (self.0 >> 24usize) & 0x01;
@@ -2887,11 +2530,10 @@ pub mod regs {
         }
         #[doc = "TIM23 block enable during CSleep Mode"]
         #[inline(always)]
-        pub const fn set_tim23lpen(&mut self, val: bool) {
+        pub fn set_tim23lpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
         }
         #[doc = "TIM24 block enable during CSleep Mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn tim24lpen(&self) -> bool {
             let val = (self.0 >> 25usize) & 0x01;
@@ -2899,7 +2541,7 @@ pub mod regs {
         }
         #[doc = "TIM24 block enable during CSleep Mode"]
         #[inline(always)]
-        pub const fn set_tim24lpen(&mut self, val: bool) {
+        pub fn set_tim24lpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
         }
     }
@@ -2925,17 +2567,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Apb1hlpenr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Apb1hlpenr {{ crslpen: {=bool:?}, swpmilpen: {=bool:?}, opamplpen: {=bool:?}, mdioslpen: {=bool:?}, fdcanlpen: {=bool:?}, tim23lpen: {=bool:?}, tim24lpen: {=bool:?} }}",
-                self.crslpen(),
-                self.swpmilpen(),
-                self.opamplpen(),
-                self.mdioslpen(),
-                self.fdcanlpen(),
-                self.tim23lpen(),
-                self.tim24lpen()
-            )
+            defmt :: write ! (f , "Apb1hlpenr {{ crslpen: {=bool:?}, swpmilpen: {=bool:?}, opamplpen: {=bool:?}, mdioslpen: {=bool:?}, fdcanlpen: {=bool:?}, tim23lpen: {=bool:?}, tim24lpen: {=bool:?} }}" , self . crslpen () , self . swpmilpen () , self . opamplpen () , self . mdioslpen () , self . fdcanlpen () , self . tim23lpen () , self . tim24lpen ())
         }
     }
     #[doc = "RCC APB1 Peripheral Reset Register"]
@@ -2944,7 +2576,6 @@ pub mod regs {
     pub struct Apb1hrstr(pub u32);
     impl Apb1hrstr {
         #[doc = "Clock Recovery System reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn crsrst(&self) -> bool {
             let val = (self.0 >> 1usize) & 0x01;
@@ -2952,11 +2583,10 @@ pub mod regs {
         }
         #[doc = "Clock Recovery System reset"]
         #[inline(always)]
-        pub const fn set_crsrst(&mut self, val: bool) {
+        pub fn set_crsrst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
         }
         #[doc = "SWPMI block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn swpmirst(&self) -> bool {
             let val = (self.0 >> 2usize) & 0x01;
@@ -2964,11 +2594,10 @@ pub mod regs {
         }
         #[doc = "SWPMI block reset"]
         #[inline(always)]
-        pub const fn set_swpmirst(&mut self, val: bool) {
+        pub fn set_swpmirst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
         }
         #[doc = "OPAMP block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn opamprst(&self) -> bool {
             let val = (self.0 >> 4usize) & 0x01;
@@ -2976,11 +2605,10 @@ pub mod regs {
         }
         #[doc = "OPAMP block reset"]
         #[inline(always)]
-        pub const fn set_opamprst(&mut self, val: bool) {
+        pub fn set_opamprst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
         }
         #[doc = "MDIOS block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn mdiosrst(&self) -> bool {
             let val = (self.0 >> 5usize) & 0x01;
@@ -2988,11 +2616,10 @@ pub mod regs {
         }
         #[doc = "MDIOS block reset"]
         #[inline(always)]
-        pub const fn set_mdiosrst(&mut self, val: bool) {
+        pub fn set_mdiosrst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
         }
         #[doc = "FDCAN block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn fdcanrst(&self) -> bool {
             let val = (self.0 >> 8usize) & 0x01;
@@ -3000,11 +2627,10 @@ pub mod regs {
         }
         #[doc = "FDCAN block reset"]
         #[inline(always)]
-        pub const fn set_fdcanrst(&mut self, val: bool) {
+        pub fn set_fdcanrst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
         }
         #[doc = "TIM23 block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn tim23rst(&self) -> bool {
             let val = (self.0 >> 24usize) & 0x01;
@@ -3012,11 +2638,10 @@ pub mod regs {
         }
         #[doc = "TIM23 block reset"]
         #[inline(always)]
-        pub const fn set_tim23rst(&mut self, val: bool) {
+        pub fn set_tim23rst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
         }
         #[doc = "TIM24 block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn tim24rst(&self) -> bool {
             let val = (self.0 >> 25usize) & 0x01;
@@ -3024,7 +2649,7 @@ pub mod regs {
         }
         #[doc = "TIM24 block reset"]
         #[inline(always)]
-        pub const fn set_tim24rst(&mut self, val: bool) {
+        pub fn set_tim24rst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
         }
     }
@@ -3050,17 +2675,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Apb1hrstr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Apb1hrstr {{ crsrst: {=bool:?}, swpmirst: {=bool:?}, opamprst: {=bool:?}, mdiosrst: {=bool:?}, fdcanrst: {=bool:?}, tim23rst: {=bool:?}, tim24rst: {=bool:?} }}",
-                self.crsrst(),
-                self.swpmirst(),
-                self.opamprst(),
-                self.mdiosrst(),
-                self.fdcanrst(),
-                self.tim23rst(),
-                self.tim24rst()
-            )
+            defmt :: write ! (f , "Apb1hrstr {{ crsrst: {=bool:?}, swpmirst: {=bool:?}, opamprst: {=bool:?}, mdiosrst: {=bool:?}, fdcanrst: {=bool:?}, tim23rst: {=bool:?}, tim24rst: {=bool:?} }}" , self . crsrst () , self . swpmirst () , self . opamprst () , self . mdiosrst () , self . fdcanrst () , self . tim23rst () , self . tim24rst ())
         }
     }
     #[doc = "RCC APB1 Clock Register"]
@@ -3069,7 +2684,6 @@ pub mod regs {
     pub struct Apb1lenr(pub u32);
     impl Apb1lenr {
         #[doc = "TIM peripheral clock enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn tim2en(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -3077,11 +2691,10 @@ pub mod regs {
         }
         #[doc = "TIM peripheral clock enable"]
         #[inline(always)]
-        pub const fn set_tim2en(&mut self, val: bool) {
+        pub fn set_tim2en(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "TIM peripheral clock enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn tim3en(&self) -> bool {
             let val = (self.0 >> 1usize) & 0x01;
@@ -3089,11 +2702,10 @@ pub mod regs {
         }
         #[doc = "TIM peripheral clock enable"]
         #[inline(always)]
-        pub const fn set_tim3en(&mut self, val: bool) {
+        pub fn set_tim3en(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
         }
         #[doc = "TIM peripheral clock enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn tim4en(&self) -> bool {
             let val = (self.0 >> 2usize) & 0x01;
@@ -3101,11 +2713,10 @@ pub mod regs {
         }
         #[doc = "TIM peripheral clock enable"]
         #[inline(always)]
-        pub const fn set_tim4en(&mut self, val: bool) {
+        pub fn set_tim4en(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
         }
         #[doc = "TIM peripheral clock enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn tim5en(&self) -> bool {
             let val = (self.0 >> 3usize) & 0x01;
@@ -3113,11 +2724,10 @@ pub mod regs {
         }
         #[doc = "TIM peripheral clock enable"]
         #[inline(always)]
-        pub const fn set_tim5en(&mut self, val: bool) {
+        pub fn set_tim5en(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
         }
         #[doc = "TIM peripheral clock enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn tim6en(&self) -> bool {
             let val = (self.0 >> 4usize) & 0x01;
@@ -3125,11 +2735,10 @@ pub mod regs {
         }
         #[doc = "TIM peripheral clock enable"]
         #[inline(always)]
-        pub const fn set_tim6en(&mut self, val: bool) {
+        pub fn set_tim6en(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
         }
         #[doc = "TIM peripheral clock enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn tim7en(&self) -> bool {
             let val = (self.0 >> 5usize) & 0x01;
@@ -3137,11 +2746,10 @@ pub mod regs {
         }
         #[doc = "TIM peripheral clock enable"]
         #[inline(always)]
-        pub const fn set_tim7en(&mut self, val: bool) {
+        pub fn set_tim7en(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
         }
         #[doc = "TIM peripheral clock enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn tim12en(&self) -> bool {
             let val = (self.0 >> 6usize) & 0x01;
@@ -3149,11 +2757,10 @@ pub mod regs {
         }
         #[doc = "TIM peripheral clock enable"]
         #[inline(always)]
-        pub const fn set_tim12en(&mut self, val: bool) {
+        pub fn set_tim12en(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
         }
         #[doc = "TIM peripheral clock enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn tim13en(&self) -> bool {
             let val = (self.0 >> 7usize) & 0x01;
@@ -3161,11 +2768,10 @@ pub mod regs {
         }
         #[doc = "TIM peripheral clock enable"]
         #[inline(always)]
-        pub const fn set_tim13en(&mut self, val: bool) {
+        pub fn set_tim13en(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
         }
         #[doc = "TIM peripheral clock enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn tim14en(&self) -> bool {
             let val = (self.0 >> 8usize) & 0x01;
@@ -3173,11 +2779,10 @@ pub mod regs {
         }
         #[doc = "TIM peripheral clock enable"]
         #[inline(always)]
-        pub const fn set_tim14en(&mut self, val: bool) {
+        pub fn set_tim14en(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
         }
         #[doc = "LPTIM1 Peripheral Clocks Enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn lptim1en(&self) -> bool {
             let val = (self.0 >> 9usize) & 0x01;
@@ -3185,11 +2790,10 @@ pub mod regs {
         }
         #[doc = "LPTIM1 Peripheral Clocks Enable"]
         #[inline(always)]
-        pub const fn set_lptim1en(&mut self, val: bool) {
+        pub fn set_lptim1en(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
         }
         #[doc = "WWDG2 peripheral clock enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn wwdg2en(&self) -> bool {
             let val = (self.0 >> 11usize) & 0x01;
@@ -3197,11 +2801,10 @@ pub mod regs {
         }
         #[doc = "WWDG2 peripheral clock enable"]
         #[inline(always)]
-        pub const fn set_wwdg2en(&mut self, val: bool) {
+        pub fn set_wwdg2en(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
         }
         #[doc = "SPI2 Peripheral Clocks Enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn spi2en(&self) -> bool {
             let val = (self.0 >> 14usize) & 0x01;
@@ -3209,11 +2812,10 @@ pub mod regs {
         }
         #[doc = "SPI2 Peripheral Clocks Enable"]
         #[inline(always)]
-        pub const fn set_spi2en(&mut self, val: bool) {
+        pub fn set_spi2en(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
         }
         #[doc = "SPI3 Peripheral Clocks Enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn spi3en(&self) -> bool {
             let val = (self.0 >> 15usize) & 0x01;
@@ -3221,11 +2823,10 @@ pub mod regs {
         }
         #[doc = "SPI3 Peripheral Clocks Enable"]
         #[inline(always)]
-        pub const fn set_spi3en(&mut self, val: bool) {
+        pub fn set_spi3en(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
         }
         #[doc = "SPDIFRX Peripheral Clocks Enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn spdifrxen(&self) -> bool {
             let val = (self.0 >> 16usize) & 0x01;
@@ -3233,11 +2834,10 @@ pub mod regs {
         }
         #[doc = "SPDIFRX Peripheral Clocks Enable"]
         #[inline(always)]
-        pub const fn set_spdifrxen(&mut self, val: bool) {
+        pub fn set_spdifrxen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
         }
         #[doc = "USART2 Peripheral Clocks Enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn usart2en(&self) -> bool {
             let val = (self.0 >> 17usize) & 0x01;
@@ -3245,11 +2845,10 @@ pub mod regs {
         }
         #[doc = "USART2 Peripheral Clocks Enable"]
         #[inline(always)]
-        pub const fn set_usart2en(&mut self, val: bool) {
+        pub fn set_usart2en(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
         }
         #[doc = "USART3 Peripheral Clocks Enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn usart3en(&self) -> bool {
             let val = (self.0 >> 18usize) & 0x01;
@@ -3257,11 +2856,10 @@ pub mod regs {
         }
         #[doc = "USART3 Peripheral Clocks Enable"]
         #[inline(always)]
-        pub const fn set_usart3en(&mut self, val: bool) {
+        pub fn set_usart3en(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
         }
         #[doc = "UART4 Peripheral Clocks Enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn uart4en(&self) -> bool {
             let val = (self.0 >> 19usize) & 0x01;
@@ -3269,11 +2867,10 @@ pub mod regs {
         }
         #[doc = "UART4 Peripheral Clocks Enable"]
         #[inline(always)]
-        pub const fn set_uart4en(&mut self, val: bool) {
+        pub fn set_uart4en(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
         }
         #[doc = "UART5 Peripheral Clocks Enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn uart5en(&self) -> bool {
             let val = (self.0 >> 20usize) & 0x01;
@@ -3281,11 +2878,10 @@ pub mod regs {
         }
         #[doc = "UART5 Peripheral Clocks Enable"]
         #[inline(always)]
-        pub const fn set_uart5en(&mut self, val: bool) {
+        pub fn set_uart5en(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
         }
         #[doc = "I2C1 Peripheral Clocks Enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn i2c1en(&self) -> bool {
             let val = (self.0 >> 21usize) & 0x01;
@@ -3293,11 +2889,10 @@ pub mod regs {
         }
         #[doc = "I2C1 Peripheral Clocks Enable"]
         #[inline(always)]
-        pub const fn set_i2c1en(&mut self, val: bool) {
+        pub fn set_i2c1en(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
         }
         #[doc = "I2C2 Peripheral Clocks Enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn i2c2en(&self) -> bool {
             let val = (self.0 >> 22usize) & 0x01;
@@ -3305,11 +2900,10 @@ pub mod regs {
         }
         #[doc = "I2C2 Peripheral Clocks Enable"]
         #[inline(always)]
-        pub const fn set_i2c2en(&mut self, val: bool) {
+        pub fn set_i2c2en(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
         }
         #[doc = "I2C3 Peripheral Clocks Enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn i2c3en(&self) -> bool {
             let val = (self.0 >> 23usize) & 0x01;
@@ -3317,11 +2911,10 @@ pub mod regs {
         }
         #[doc = "I2C3 Peripheral Clocks Enable"]
         #[inline(always)]
-        pub const fn set_i2c3en(&mut self, val: bool) {
+        pub fn set_i2c3en(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
         }
         #[doc = "I2C5 Peripheral Clocks Enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn i2c5en(&self) -> bool {
             let val = (self.0 >> 25usize) & 0x01;
@@ -3329,11 +2922,10 @@ pub mod regs {
         }
         #[doc = "I2C5 Peripheral Clocks Enable"]
         #[inline(always)]
-        pub const fn set_i2c5en(&mut self, val: bool) {
+        pub fn set_i2c5en(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
         }
         #[doc = "HDMI-CEC peripheral clock enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn cecen(&self) -> bool {
             let val = (self.0 >> 27usize) & 0x01;
@@ -3341,11 +2933,10 @@ pub mod regs {
         }
         #[doc = "HDMI-CEC peripheral clock enable"]
         #[inline(always)]
-        pub const fn set_cecen(&mut self, val: bool) {
+        pub fn set_cecen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 27usize)) | (((val as u32) & 0x01) << 27usize);
         }
         #[doc = "DAC1 (containing two converters) peripheral clock enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn dac1en(&self) -> bool {
             let val = (self.0 >> 29usize) & 0x01;
@@ -3353,11 +2944,10 @@ pub mod regs {
         }
         #[doc = "DAC1 (containing two converters) peripheral clock enable"]
         #[inline(always)]
-        pub const fn set_dac1en(&mut self, val: bool) {
+        pub fn set_dac1en(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
         }
         #[doc = "UART7 Peripheral Clocks Enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn uart7en(&self) -> bool {
             let val = (self.0 >> 30usize) & 0x01;
@@ -3365,11 +2955,10 @@ pub mod regs {
         }
         #[doc = "UART7 Peripheral Clocks Enable"]
         #[inline(always)]
-        pub const fn set_uart7en(&mut self, val: bool) {
+        pub fn set_uart7en(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
         }
         #[doc = "UART8 Peripheral Clocks Enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn uart8en(&self) -> bool {
             let val = (self.0 >> 31usize) & 0x01;
@@ -3377,7 +2966,7 @@ pub mod regs {
         }
         #[doc = "UART8 Peripheral Clocks Enable"]
         #[inline(always)]
-        pub const fn set_uart8en(&mut self, val: bool) {
+        pub fn set_uart8en(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
         }
     }
@@ -3422,36 +3011,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Apb1lenr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Apb1lenr {{ tim2en: {=bool:?}, tim3en: {=bool:?}, tim4en: {=bool:?}, tim5en: {=bool:?}, tim6en: {=bool:?}, tim7en: {=bool:?}, tim12en: {=bool:?}, tim13en: {=bool:?}, tim14en: {=bool:?}, lptim1en: {=bool:?}, wwdg2en: {=bool:?}, spi2en: {=bool:?}, spi3en: {=bool:?}, spdifrxen: {=bool:?}, usart2en: {=bool:?}, usart3en: {=bool:?}, uart4en: {=bool:?}, uart5en: {=bool:?}, i2c1en: {=bool:?}, i2c2en: {=bool:?}, i2c3en: {=bool:?}, i2c5en: {=bool:?}, cecen: {=bool:?}, dac1en: {=bool:?}, uart7en: {=bool:?}, uart8en: {=bool:?} }}",
-                self.tim2en(),
-                self.tim3en(),
-                self.tim4en(),
-                self.tim5en(),
-                self.tim6en(),
-                self.tim7en(),
-                self.tim12en(),
-                self.tim13en(),
-                self.tim14en(),
-                self.lptim1en(),
-                self.wwdg2en(),
-                self.spi2en(),
-                self.spi3en(),
-                self.spdifrxen(),
-                self.usart2en(),
-                self.usart3en(),
-                self.uart4en(),
-                self.uart5en(),
-                self.i2c1en(),
-                self.i2c2en(),
-                self.i2c3en(),
-                self.i2c5en(),
-                self.cecen(),
-                self.dac1en(),
-                self.uart7en(),
-                self.uart8en()
-            )
+            defmt :: write ! (f , "Apb1lenr {{ tim2en: {=bool:?}, tim3en: {=bool:?}, tim4en: {=bool:?}, tim5en: {=bool:?}, tim6en: {=bool:?}, tim7en: {=bool:?}, tim12en: {=bool:?}, tim13en: {=bool:?}, tim14en: {=bool:?}, lptim1en: {=bool:?}, wwdg2en: {=bool:?}, spi2en: {=bool:?}, spi3en: {=bool:?}, spdifrxen: {=bool:?}, usart2en: {=bool:?}, usart3en: {=bool:?}, uart4en: {=bool:?}, uart5en: {=bool:?}, i2c1en: {=bool:?}, i2c2en: {=bool:?}, i2c3en: {=bool:?}, i2c5en: {=bool:?}, cecen: {=bool:?}, dac1en: {=bool:?}, uart7en: {=bool:?}, uart8en: {=bool:?} }}" , self . tim2en () , self . tim3en () , self . tim4en () , self . tim5en () , self . tim6en () , self . tim7en () , self . tim12en () , self . tim13en () , self . tim14en () , self . lptim1en () , self . wwdg2en () , self . spi2en () , self . spi3en () , self . spdifrxen () , self . usart2en () , self . usart3en () , self . uart4en () , self . uart5en () , self . i2c1en () , self . i2c2en () , self . i2c3en () , self . i2c5en () , self . cecen () , self . dac1en () , self . uart7en () , self . uart8en ())
         }
     }
     #[doc = "RCC APB1 Low Sleep Clock Register"]
@@ -3460,7 +3020,6 @@ pub mod regs {
     pub struct Apb1llpenr(pub u32);
     impl Apb1llpenr {
         #[doc = "TIM2 peripheral clock enable during CSleep mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn tim2lpen(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -3468,11 +3027,10 @@ pub mod regs {
         }
         #[doc = "TIM2 peripheral clock enable during CSleep mode"]
         #[inline(always)]
-        pub const fn set_tim2lpen(&mut self, val: bool) {
+        pub fn set_tim2lpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "TIM3 peripheral clock enable during CSleep mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn tim3lpen(&self) -> bool {
             let val = (self.0 >> 1usize) & 0x01;
@@ -3480,11 +3038,10 @@ pub mod regs {
         }
         #[doc = "TIM3 peripheral clock enable during CSleep mode"]
         #[inline(always)]
-        pub const fn set_tim3lpen(&mut self, val: bool) {
+        pub fn set_tim3lpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
         }
         #[doc = "TIM4 peripheral clock enable during CSleep mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn tim4lpen(&self) -> bool {
             let val = (self.0 >> 2usize) & 0x01;
@@ -3492,11 +3049,10 @@ pub mod regs {
         }
         #[doc = "TIM4 peripheral clock enable during CSleep mode"]
         #[inline(always)]
-        pub const fn set_tim4lpen(&mut self, val: bool) {
+        pub fn set_tim4lpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
         }
         #[doc = "TIM5 peripheral clock enable during CSleep mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn tim5lpen(&self) -> bool {
             let val = (self.0 >> 3usize) & 0x01;
@@ -3504,11 +3060,10 @@ pub mod regs {
         }
         #[doc = "TIM5 peripheral clock enable during CSleep mode"]
         #[inline(always)]
-        pub const fn set_tim5lpen(&mut self, val: bool) {
+        pub fn set_tim5lpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
         }
         #[doc = "TIM6 peripheral clock enable during CSleep mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn tim6lpen(&self) -> bool {
             let val = (self.0 >> 4usize) & 0x01;
@@ -3516,11 +3071,10 @@ pub mod regs {
         }
         #[doc = "TIM6 peripheral clock enable during CSleep mode"]
         #[inline(always)]
-        pub const fn set_tim6lpen(&mut self, val: bool) {
+        pub fn set_tim6lpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
         }
         #[doc = "TIM7 peripheral clock enable during CSleep mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn tim7lpen(&self) -> bool {
             let val = (self.0 >> 5usize) & 0x01;
@@ -3528,11 +3082,10 @@ pub mod regs {
         }
         #[doc = "TIM7 peripheral clock enable during CSleep mode"]
         #[inline(always)]
-        pub const fn set_tim7lpen(&mut self, val: bool) {
+        pub fn set_tim7lpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
         }
         #[doc = "TIM12 peripheral clock enable during CSleep mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn tim12lpen(&self) -> bool {
             let val = (self.0 >> 6usize) & 0x01;
@@ -3540,11 +3093,10 @@ pub mod regs {
         }
         #[doc = "TIM12 peripheral clock enable during CSleep mode"]
         #[inline(always)]
-        pub const fn set_tim12lpen(&mut self, val: bool) {
+        pub fn set_tim12lpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
         }
         #[doc = "TIM13 peripheral clock enable during CSleep mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn tim13lpen(&self) -> bool {
             let val = (self.0 >> 7usize) & 0x01;
@@ -3552,11 +3104,10 @@ pub mod regs {
         }
         #[doc = "TIM13 peripheral clock enable during CSleep mode"]
         #[inline(always)]
-        pub const fn set_tim13lpen(&mut self, val: bool) {
+        pub fn set_tim13lpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
         }
         #[doc = "TIM14 peripheral clock enable during CSleep mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn tim14lpen(&self) -> bool {
             let val = (self.0 >> 8usize) & 0x01;
@@ -3564,11 +3115,10 @@ pub mod regs {
         }
         #[doc = "TIM14 peripheral clock enable during CSleep mode"]
         #[inline(always)]
-        pub const fn set_tim14lpen(&mut self, val: bool) {
+        pub fn set_tim14lpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
         }
         #[doc = "LPTIM1 Peripheral Clocks Enable During CSleep Mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn lptim1lpen(&self) -> bool {
             let val = (self.0 >> 9usize) & 0x01;
@@ -3576,11 +3126,10 @@ pub mod regs {
         }
         #[doc = "LPTIM1 Peripheral Clocks Enable During CSleep Mode"]
         #[inline(always)]
-        pub const fn set_lptim1lpen(&mut self, val: bool) {
+        pub fn set_lptim1lpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
         }
         #[doc = "WWDG2 peripheral Clocks Enable During CSleep Mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn wwdg2lpen(&self) -> bool {
             let val = (self.0 >> 11usize) & 0x01;
@@ -3588,11 +3137,10 @@ pub mod regs {
         }
         #[doc = "WWDG2 peripheral Clocks Enable During CSleep Mode"]
         #[inline(always)]
-        pub const fn set_wwdg2lpen(&mut self, val: bool) {
+        pub fn set_wwdg2lpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
         }
         #[doc = "SPI2 Peripheral Clocks Enable During CSleep Mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn spi2lpen(&self) -> bool {
             let val = (self.0 >> 14usize) & 0x01;
@@ -3600,11 +3148,10 @@ pub mod regs {
         }
         #[doc = "SPI2 Peripheral Clocks Enable During CSleep Mode"]
         #[inline(always)]
-        pub const fn set_spi2lpen(&mut self, val: bool) {
+        pub fn set_spi2lpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
         }
         #[doc = "SPI3 Peripheral Clocks Enable During CSleep Mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn spi3lpen(&self) -> bool {
             let val = (self.0 >> 15usize) & 0x01;
@@ -3612,11 +3159,10 @@ pub mod regs {
         }
         #[doc = "SPI3 Peripheral Clocks Enable During CSleep Mode"]
         #[inline(always)]
-        pub const fn set_spi3lpen(&mut self, val: bool) {
+        pub fn set_spi3lpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
         }
         #[doc = "SPDIFRX Peripheral Clocks Enable During CSleep Mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn spdifrxlpen(&self) -> bool {
             let val = (self.0 >> 16usize) & 0x01;
@@ -3624,11 +3170,10 @@ pub mod regs {
         }
         #[doc = "SPDIFRX Peripheral Clocks Enable During CSleep Mode"]
         #[inline(always)]
-        pub const fn set_spdifrxlpen(&mut self, val: bool) {
+        pub fn set_spdifrxlpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
         }
         #[doc = "USART2 Peripheral Clocks Enable During CSleep Mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn usart2lpen(&self) -> bool {
             let val = (self.0 >> 17usize) & 0x01;
@@ -3636,11 +3181,10 @@ pub mod regs {
         }
         #[doc = "USART2 Peripheral Clocks Enable During CSleep Mode"]
         #[inline(always)]
-        pub const fn set_usart2lpen(&mut self, val: bool) {
+        pub fn set_usart2lpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
         }
         #[doc = "USART3 Peripheral Clocks Enable During CSleep Mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn usart3lpen(&self) -> bool {
             let val = (self.0 >> 18usize) & 0x01;
@@ -3648,11 +3192,10 @@ pub mod regs {
         }
         #[doc = "USART3 Peripheral Clocks Enable During CSleep Mode"]
         #[inline(always)]
-        pub const fn set_usart3lpen(&mut self, val: bool) {
+        pub fn set_usart3lpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
         }
         #[doc = "UART4 Peripheral Clocks Enable During CSleep Mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn uart4lpen(&self) -> bool {
             let val = (self.0 >> 19usize) & 0x01;
@@ -3660,11 +3203,10 @@ pub mod regs {
         }
         #[doc = "UART4 Peripheral Clocks Enable During CSleep Mode"]
         #[inline(always)]
-        pub const fn set_uart4lpen(&mut self, val: bool) {
+        pub fn set_uart4lpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
         }
         #[doc = "UART5 Peripheral Clocks Enable During CSleep Mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn uart5lpen(&self) -> bool {
             let val = (self.0 >> 20usize) & 0x01;
@@ -3672,11 +3214,10 @@ pub mod regs {
         }
         #[doc = "UART5 Peripheral Clocks Enable During CSleep Mode"]
         #[inline(always)]
-        pub const fn set_uart5lpen(&mut self, val: bool) {
+        pub fn set_uart5lpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
         }
         #[doc = "I2C1 Peripheral Clocks Enable During CSleep Mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn i2c1lpen(&self) -> bool {
             let val = (self.0 >> 21usize) & 0x01;
@@ -3684,11 +3225,10 @@ pub mod regs {
         }
         #[doc = "I2C1 Peripheral Clocks Enable During CSleep Mode"]
         #[inline(always)]
-        pub const fn set_i2c1lpen(&mut self, val: bool) {
+        pub fn set_i2c1lpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
         }
         #[doc = "I2C2 Peripheral Clocks Enable During CSleep Mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn i2c2lpen(&self) -> bool {
             let val = (self.0 >> 22usize) & 0x01;
@@ -3696,11 +3236,10 @@ pub mod regs {
         }
         #[doc = "I2C2 Peripheral Clocks Enable During CSleep Mode"]
         #[inline(always)]
-        pub const fn set_i2c2lpen(&mut self, val: bool) {
+        pub fn set_i2c2lpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
         }
         #[doc = "I2C3 Peripheral Clocks Enable During CSleep Mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn i2c3lpen(&self) -> bool {
             let val = (self.0 >> 23usize) & 0x01;
@@ -3708,11 +3247,10 @@ pub mod regs {
         }
         #[doc = "I2C3 Peripheral Clocks Enable During CSleep Mode"]
         #[inline(always)]
-        pub const fn set_i2c3lpen(&mut self, val: bool) {
+        pub fn set_i2c3lpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
         }
         #[doc = "I2C5 block enable during CSleep Mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn i2c5lpen(&self) -> bool {
             let val = (self.0 >> 25usize) & 0x01;
@@ -3720,11 +3258,10 @@ pub mod regs {
         }
         #[doc = "I2C5 block enable during CSleep Mode"]
         #[inline(always)]
-        pub const fn set_i2c5lpen(&mut self, val: bool) {
+        pub fn set_i2c5lpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
         }
         #[doc = "HDMI-CEC Peripheral Clocks Enable During CSleep Mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn ceclpen(&self) -> bool {
             let val = (self.0 >> 27usize) & 0x01;
@@ -3732,11 +3269,10 @@ pub mod regs {
         }
         #[doc = "HDMI-CEC Peripheral Clocks Enable During CSleep Mode"]
         #[inline(always)]
-        pub const fn set_ceclpen(&mut self, val: bool) {
+        pub fn set_ceclpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 27usize)) | (((val as u32) & 0x01) << 27usize);
         }
         #[doc = "DAC1 (containing two converters) peripheral clock enable during CSleep mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn dac1lpen(&self) -> bool {
             let val = (self.0 >> 29usize) & 0x01;
@@ -3744,11 +3280,10 @@ pub mod regs {
         }
         #[doc = "DAC1 (containing two converters) peripheral clock enable during CSleep mode"]
         #[inline(always)]
-        pub const fn set_dac1lpen(&mut self, val: bool) {
+        pub fn set_dac1lpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
         }
         #[doc = "UART7 Peripheral Clocks Enable During CSleep Mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn uart7lpen(&self) -> bool {
             let val = (self.0 >> 30usize) & 0x01;
@@ -3756,11 +3291,10 @@ pub mod regs {
         }
         #[doc = "UART7 Peripheral Clocks Enable During CSleep Mode"]
         #[inline(always)]
-        pub const fn set_uart7lpen(&mut self, val: bool) {
+        pub fn set_uart7lpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
         }
         #[doc = "UART8 Peripheral Clocks Enable During CSleep Mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn uart8lpen(&self) -> bool {
             let val = (self.0 >> 31usize) & 0x01;
@@ -3768,7 +3302,7 @@ pub mod regs {
         }
         #[doc = "UART8 Peripheral Clocks Enable During CSleep Mode"]
         #[inline(always)]
-        pub const fn set_uart8lpen(&mut self, val: bool) {
+        pub fn set_uart8lpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
         }
     }
@@ -3813,36 +3347,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Apb1llpenr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Apb1llpenr {{ tim2lpen: {=bool:?}, tim3lpen: {=bool:?}, tim4lpen: {=bool:?}, tim5lpen: {=bool:?}, tim6lpen: {=bool:?}, tim7lpen: {=bool:?}, tim12lpen: {=bool:?}, tim13lpen: {=bool:?}, tim14lpen: {=bool:?}, lptim1lpen: {=bool:?}, wwdg2lpen: {=bool:?}, spi2lpen: {=bool:?}, spi3lpen: {=bool:?}, spdifrxlpen: {=bool:?}, usart2lpen: {=bool:?}, usart3lpen: {=bool:?}, uart4lpen: {=bool:?}, uart5lpen: {=bool:?}, i2c1lpen: {=bool:?}, i2c2lpen: {=bool:?}, i2c3lpen: {=bool:?}, i2c5lpen: {=bool:?}, ceclpen: {=bool:?}, dac1lpen: {=bool:?}, uart7lpen: {=bool:?}, uart8lpen: {=bool:?} }}",
-                self.tim2lpen(),
-                self.tim3lpen(),
-                self.tim4lpen(),
-                self.tim5lpen(),
-                self.tim6lpen(),
-                self.tim7lpen(),
-                self.tim12lpen(),
-                self.tim13lpen(),
-                self.tim14lpen(),
-                self.lptim1lpen(),
-                self.wwdg2lpen(),
-                self.spi2lpen(),
-                self.spi3lpen(),
-                self.spdifrxlpen(),
-                self.usart2lpen(),
-                self.usart3lpen(),
-                self.uart4lpen(),
-                self.uart5lpen(),
-                self.i2c1lpen(),
-                self.i2c2lpen(),
-                self.i2c3lpen(),
-                self.i2c5lpen(),
-                self.ceclpen(),
-                self.dac1lpen(),
-                self.uart7lpen(),
-                self.uart8lpen()
-            )
+            defmt :: write ! (f , "Apb1llpenr {{ tim2lpen: {=bool:?}, tim3lpen: {=bool:?}, tim4lpen: {=bool:?}, tim5lpen: {=bool:?}, tim6lpen: {=bool:?}, tim7lpen: {=bool:?}, tim12lpen: {=bool:?}, tim13lpen: {=bool:?}, tim14lpen: {=bool:?}, lptim1lpen: {=bool:?}, wwdg2lpen: {=bool:?}, spi2lpen: {=bool:?}, spi3lpen: {=bool:?}, spdifrxlpen: {=bool:?}, usart2lpen: {=bool:?}, usart3lpen: {=bool:?}, uart4lpen: {=bool:?}, uart5lpen: {=bool:?}, i2c1lpen: {=bool:?}, i2c2lpen: {=bool:?}, i2c3lpen: {=bool:?}, i2c5lpen: {=bool:?}, ceclpen: {=bool:?}, dac1lpen: {=bool:?}, uart7lpen: {=bool:?}, uart8lpen: {=bool:?} }}" , self . tim2lpen () , self . tim3lpen () , self . tim4lpen () , self . tim5lpen () , self . tim6lpen () , self . tim7lpen () , self . tim12lpen () , self . tim13lpen () , self . tim14lpen () , self . lptim1lpen () , self . wwdg2lpen () , self . spi2lpen () , self . spi3lpen () , self . spdifrxlpen () , self . usart2lpen () , self . usart3lpen () , self . uart4lpen () , self . uart5lpen () , self . i2c1lpen () , self . i2c2lpen () , self . i2c3lpen () , self . i2c5lpen () , self . ceclpen () , self . dac1lpen () , self . uart7lpen () , self . uart8lpen ())
         }
     }
     #[doc = "RCC APB1 Peripheral Reset Register"]
@@ -3851,7 +3356,6 @@ pub mod regs {
     pub struct Apb1lrstr(pub u32);
     impl Apb1lrstr {
         #[doc = "TIM block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn tim2rst(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -3859,11 +3363,10 @@ pub mod regs {
         }
         #[doc = "TIM block reset"]
         #[inline(always)]
-        pub const fn set_tim2rst(&mut self, val: bool) {
+        pub fn set_tim2rst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "TIM block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn tim3rst(&self) -> bool {
             let val = (self.0 >> 1usize) & 0x01;
@@ -3871,11 +3374,10 @@ pub mod regs {
         }
         #[doc = "TIM block reset"]
         #[inline(always)]
-        pub const fn set_tim3rst(&mut self, val: bool) {
+        pub fn set_tim3rst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
         }
         #[doc = "TIM block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn tim4rst(&self) -> bool {
             let val = (self.0 >> 2usize) & 0x01;
@@ -3883,11 +3385,10 @@ pub mod regs {
         }
         #[doc = "TIM block reset"]
         #[inline(always)]
-        pub const fn set_tim4rst(&mut self, val: bool) {
+        pub fn set_tim4rst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
         }
         #[doc = "TIM block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn tim5rst(&self) -> bool {
             let val = (self.0 >> 3usize) & 0x01;
@@ -3895,11 +3396,10 @@ pub mod regs {
         }
         #[doc = "TIM block reset"]
         #[inline(always)]
-        pub const fn set_tim5rst(&mut self, val: bool) {
+        pub fn set_tim5rst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
         }
         #[doc = "TIM block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn tim6rst(&self) -> bool {
             let val = (self.0 >> 4usize) & 0x01;
@@ -3907,11 +3407,10 @@ pub mod regs {
         }
         #[doc = "TIM block reset"]
         #[inline(always)]
-        pub const fn set_tim6rst(&mut self, val: bool) {
+        pub fn set_tim6rst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
         }
         #[doc = "TIM block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn tim7rst(&self) -> bool {
             let val = (self.0 >> 5usize) & 0x01;
@@ -3919,11 +3418,10 @@ pub mod regs {
         }
         #[doc = "TIM block reset"]
         #[inline(always)]
-        pub const fn set_tim7rst(&mut self, val: bool) {
+        pub fn set_tim7rst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
         }
         #[doc = "TIM block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn tim12rst(&self) -> bool {
             let val = (self.0 >> 6usize) & 0x01;
@@ -3931,11 +3429,10 @@ pub mod regs {
         }
         #[doc = "TIM block reset"]
         #[inline(always)]
-        pub const fn set_tim12rst(&mut self, val: bool) {
+        pub fn set_tim12rst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
         }
         #[doc = "TIM block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn tim13rst(&self) -> bool {
             let val = (self.0 >> 7usize) & 0x01;
@@ -3943,11 +3440,10 @@ pub mod regs {
         }
         #[doc = "TIM block reset"]
         #[inline(always)]
-        pub const fn set_tim13rst(&mut self, val: bool) {
+        pub fn set_tim13rst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
         }
         #[doc = "TIM block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn tim14rst(&self) -> bool {
             let val = (self.0 >> 8usize) & 0x01;
@@ -3955,11 +3451,10 @@ pub mod regs {
         }
         #[doc = "TIM block reset"]
         #[inline(always)]
-        pub const fn set_tim14rst(&mut self, val: bool) {
+        pub fn set_tim14rst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
         }
         #[doc = "TIM block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn lptim1rst(&self) -> bool {
             let val = (self.0 >> 9usize) & 0x01;
@@ -3967,11 +3462,10 @@ pub mod regs {
         }
         #[doc = "TIM block reset"]
         #[inline(always)]
-        pub const fn set_lptim1rst(&mut self, val: bool) {
+        pub fn set_lptim1rst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
         }
         #[doc = "SPI2 block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn spi2rst(&self) -> bool {
             let val = (self.0 >> 14usize) & 0x01;
@@ -3979,11 +3473,10 @@ pub mod regs {
         }
         #[doc = "SPI2 block reset"]
         #[inline(always)]
-        pub const fn set_spi2rst(&mut self, val: bool) {
+        pub fn set_spi2rst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
         }
         #[doc = "SPI3 block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn spi3rst(&self) -> bool {
             let val = (self.0 >> 15usize) & 0x01;
@@ -3991,11 +3484,10 @@ pub mod regs {
         }
         #[doc = "SPI3 block reset"]
         #[inline(always)]
-        pub const fn set_spi3rst(&mut self, val: bool) {
+        pub fn set_spi3rst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
         }
         #[doc = "SPDIFRX block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn spdifrxrst(&self) -> bool {
             let val = (self.0 >> 16usize) & 0x01;
@@ -4003,11 +3495,10 @@ pub mod regs {
         }
         #[doc = "SPDIFRX block reset"]
         #[inline(always)]
-        pub const fn set_spdifrxrst(&mut self, val: bool) {
+        pub fn set_spdifrxrst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
         }
         #[doc = "USART2 block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn usart2rst(&self) -> bool {
             let val = (self.0 >> 17usize) & 0x01;
@@ -4015,11 +3506,10 @@ pub mod regs {
         }
         #[doc = "USART2 block reset"]
         #[inline(always)]
-        pub const fn set_usart2rst(&mut self, val: bool) {
+        pub fn set_usart2rst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
         }
         #[doc = "USART3 block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn usart3rst(&self) -> bool {
             let val = (self.0 >> 18usize) & 0x01;
@@ -4027,11 +3517,10 @@ pub mod regs {
         }
         #[doc = "USART3 block reset"]
         #[inline(always)]
-        pub const fn set_usart3rst(&mut self, val: bool) {
+        pub fn set_usart3rst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
         }
         #[doc = "UART4 block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn uart4rst(&self) -> bool {
             let val = (self.0 >> 19usize) & 0x01;
@@ -4039,11 +3528,10 @@ pub mod regs {
         }
         #[doc = "UART4 block reset"]
         #[inline(always)]
-        pub const fn set_uart4rst(&mut self, val: bool) {
+        pub fn set_uart4rst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
         }
         #[doc = "UART5 block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn uart5rst(&self) -> bool {
             let val = (self.0 >> 20usize) & 0x01;
@@ -4051,11 +3539,10 @@ pub mod regs {
         }
         #[doc = "UART5 block reset"]
         #[inline(always)]
-        pub const fn set_uart5rst(&mut self, val: bool) {
+        pub fn set_uart5rst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
         }
         #[doc = "I2C1 block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn i2c1rst(&self) -> bool {
             let val = (self.0 >> 21usize) & 0x01;
@@ -4063,11 +3550,10 @@ pub mod regs {
         }
         #[doc = "I2C1 block reset"]
         #[inline(always)]
-        pub const fn set_i2c1rst(&mut self, val: bool) {
+        pub fn set_i2c1rst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
         }
         #[doc = "I2C2 block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn i2c2rst(&self) -> bool {
             let val = (self.0 >> 22usize) & 0x01;
@@ -4075,11 +3561,10 @@ pub mod regs {
         }
         #[doc = "I2C2 block reset"]
         #[inline(always)]
-        pub const fn set_i2c2rst(&mut self, val: bool) {
+        pub fn set_i2c2rst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
         }
         #[doc = "I2C3 block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn i2c3rst(&self) -> bool {
             let val = (self.0 >> 23usize) & 0x01;
@@ -4087,11 +3572,10 @@ pub mod regs {
         }
         #[doc = "I2C3 block reset"]
         #[inline(always)]
-        pub const fn set_i2c3rst(&mut self, val: bool) {
+        pub fn set_i2c3rst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
         }
         #[doc = "I2C5 block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn i2c5rst(&self) -> bool {
             let val = (self.0 >> 25usize) & 0x01;
@@ -4099,11 +3583,10 @@ pub mod regs {
         }
         #[doc = "I2C5 block reset"]
         #[inline(always)]
-        pub const fn set_i2c5rst(&mut self, val: bool) {
+        pub fn set_i2c5rst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
         }
         #[doc = "HDMI-CEC block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn cecrst(&self) -> bool {
             let val = (self.0 >> 27usize) & 0x01;
@@ -4111,11 +3594,10 @@ pub mod regs {
         }
         #[doc = "HDMI-CEC block reset"]
         #[inline(always)]
-        pub const fn set_cecrst(&mut self, val: bool) {
+        pub fn set_cecrst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 27usize)) | (((val as u32) & 0x01) << 27usize);
         }
         #[doc = "DAC1 (containing two converters) reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn dac1rst(&self) -> bool {
             let val = (self.0 >> 29usize) & 0x01;
@@ -4123,11 +3605,10 @@ pub mod regs {
         }
         #[doc = "DAC1 (containing two converters) reset"]
         #[inline(always)]
-        pub const fn set_dac1rst(&mut self, val: bool) {
+        pub fn set_dac1rst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
         }
         #[doc = "UART7 block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn uart7rst(&self) -> bool {
             let val = (self.0 >> 30usize) & 0x01;
@@ -4135,11 +3616,10 @@ pub mod regs {
         }
         #[doc = "UART7 block reset"]
         #[inline(always)]
-        pub const fn set_uart7rst(&mut self, val: bool) {
+        pub fn set_uart7rst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
         }
         #[doc = "UART8 block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn uart8rst(&self) -> bool {
             let val = (self.0 >> 31usize) & 0x01;
@@ -4147,7 +3627,7 @@ pub mod regs {
         }
         #[doc = "UART8 block reset"]
         #[inline(always)]
-        pub const fn set_uart8rst(&mut self, val: bool) {
+        pub fn set_uart8rst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
         }
     }
@@ -4191,35 +3671,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Apb1lrstr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Apb1lrstr {{ tim2rst: {=bool:?}, tim3rst: {=bool:?}, tim4rst: {=bool:?}, tim5rst: {=bool:?}, tim6rst: {=bool:?}, tim7rst: {=bool:?}, tim12rst: {=bool:?}, tim13rst: {=bool:?}, tim14rst: {=bool:?}, lptim1rst: {=bool:?}, spi2rst: {=bool:?}, spi3rst: {=bool:?}, spdifrxrst: {=bool:?}, usart2rst: {=bool:?}, usart3rst: {=bool:?}, uart4rst: {=bool:?}, uart5rst: {=bool:?}, i2c1rst: {=bool:?}, i2c2rst: {=bool:?}, i2c3rst: {=bool:?}, i2c5rst: {=bool:?}, cecrst: {=bool:?}, dac1rst: {=bool:?}, uart7rst: {=bool:?}, uart8rst: {=bool:?} }}",
-                self.tim2rst(),
-                self.tim3rst(),
-                self.tim4rst(),
-                self.tim5rst(),
-                self.tim6rst(),
-                self.tim7rst(),
-                self.tim12rst(),
-                self.tim13rst(),
-                self.tim14rst(),
-                self.lptim1rst(),
-                self.spi2rst(),
-                self.spi3rst(),
-                self.spdifrxrst(),
-                self.usart2rst(),
-                self.usart3rst(),
-                self.uart4rst(),
-                self.uart5rst(),
-                self.i2c1rst(),
-                self.i2c2rst(),
-                self.i2c3rst(),
-                self.i2c5rst(),
-                self.cecrst(),
-                self.dac1rst(),
-                self.uart7rst(),
-                self.uart8rst()
-            )
+            defmt :: write ! (f , "Apb1lrstr {{ tim2rst: {=bool:?}, tim3rst: {=bool:?}, tim4rst: {=bool:?}, tim5rst: {=bool:?}, tim6rst: {=bool:?}, tim7rst: {=bool:?}, tim12rst: {=bool:?}, tim13rst: {=bool:?}, tim14rst: {=bool:?}, lptim1rst: {=bool:?}, spi2rst: {=bool:?}, spi3rst: {=bool:?}, spdifrxrst: {=bool:?}, usart2rst: {=bool:?}, usart3rst: {=bool:?}, uart4rst: {=bool:?}, uart5rst: {=bool:?}, i2c1rst: {=bool:?}, i2c2rst: {=bool:?}, i2c3rst: {=bool:?}, i2c5rst: {=bool:?}, cecrst: {=bool:?}, dac1rst: {=bool:?}, uart7rst: {=bool:?}, uart8rst: {=bool:?} }}" , self . tim2rst () , self . tim3rst () , self . tim4rst () , self . tim5rst () , self . tim6rst () , self . tim7rst () , self . tim12rst () , self . tim13rst () , self . tim14rst () , self . lptim1rst () , self . spi2rst () , self . spi3rst () , self . spdifrxrst () , self . usart2rst () , self . usart3rst () , self . uart4rst () , self . uart5rst () , self . i2c1rst () , self . i2c2rst () , self . i2c3rst () , self . i2c5rst () , self . cecrst () , self . dac1rst () , self . uart7rst () , self . uart8rst ())
         }
     }
     #[doc = "RCC APB2 Clock Register"]
@@ -4228,7 +3680,6 @@ pub mod regs {
     pub struct Apb2enr(pub u32);
     impl Apb2enr {
         #[doc = "TIM1 peripheral clock enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn tim1en(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -4236,11 +3687,10 @@ pub mod regs {
         }
         #[doc = "TIM1 peripheral clock enable"]
         #[inline(always)]
-        pub const fn set_tim1en(&mut self, val: bool) {
+        pub fn set_tim1en(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "TIM8 peripheral clock enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn tim8en(&self) -> bool {
             let val = (self.0 >> 1usize) & 0x01;
@@ -4248,11 +3698,10 @@ pub mod regs {
         }
         #[doc = "TIM8 peripheral clock enable"]
         #[inline(always)]
-        pub const fn set_tim8en(&mut self, val: bool) {
+        pub fn set_tim8en(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
         }
         #[doc = "USART1 Peripheral Clocks Enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn usart1en(&self) -> bool {
             let val = (self.0 >> 4usize) & 0x01;
@@ -4260,11 +3709,10 @@ pub mod regs {
         }
         #[doc = "USART1 Peripheral Clocks Enable"]
         #[inline(always)]
-        pub const fn set_usart1en(&mut self, val: bool) {
+        pub fn set_usart1en(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
         }
         #[doc = "USART6 Peripheral Clocks Enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn usart6en(&self) -> bool {
             let val = (self.0 >> 5usize) & 0x01;
@@ -4272,11 +3720,10 @@ pub mod regs {
         }
         #[doc = "USART6 Peripheral Clocks Enable"]
         #[inline(always)]
-        pub const fn set_usart6en(&mut self, val: bool) {
+        pub fn set_usart6en(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
         }
         #[doc = "UART9 Peripheral Clocks Enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn uart9en(&self) -> bool {
             let val = (self.0 >> 6usize) & 0x01;
@@ -4284,11 +3731,10 @@ pub mod regs {
         }
         #[doc = "UART9 Peripheral Clocks Enable"]
         #[inline(always)]
-        pub const fn set_uart9en(&mut self, val: bool) {
+        pub fn set_uart9en(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
         }
         #[doc = "USART10 Peripheral Clocks Enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn usart10en(&self) -> bool {
             let val = (self.0 >> 7usize) & 0x01;
@@ -4296,11 +3742,10 @@ pub mod regs {
         }
         #[doc = "USART10 Peripheral Clocks Enable"]
         #[inline(always)]
-        pub const fn set_usart10en(&mut self, val: bool) {
+        pub fn set_usart10en(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
         }
         #[doc = "SPI1 Peripheral Clocks Enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn spi1en(&self) -> bool {
             let val = (self.0 >> 12usize) & 0x01;
@@ -4308,11 +3753,10 @@ pub mod regs {
         }
         #[doc = "SPI1 Peripheral Clocks Enable"]
         #[inline(always)]
-        pub const fn set_spi1en(&mut self, val: bool) {
+        pub fn set_spi1en(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
         }
         #[doc = "SPI4 Peripheral Clocks Enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn spi4en(&self) -> bool {
             let val = (self.0 >> 13usize) & 0x01;
@@ -4320,11 +3764,10 @@ pub mod regs {
         }
         #[doc = "SPI4 Peripheral Clocks Enable"]
         #[inline(always)]
-        pub const fn set_spi4en(&mut self, val: bool) {
+        pub fn set_spi4en(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
         }
         #[doc = "TIM15 peripheral clock enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn tim15en(&self) -> bool {
             let val = (self.0 >> 16usize) & 0x01;
@@ -4332,11 +3775,10 @@ pub mod regs {
         }
         #[doc = "TIM15 peripheral clock enable"]
         #[inline(always)]
-        pub const fn set_tim15en(&mut self, val: bool) {
+        pub fn set_tim15en(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
         }
         #[doc = "TIM16 peripheral clock enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn tim16en(&self) -> bool {
             let val = (self.0 >> 17usize) & 0x01;
@@ -4344,11 +3786,10 @@ pub mod regs {
         }
         #[doc = "TIM16 peripheral clock enable"]
         #[inline(always)]
-        pub const fn set_tim16en(&mut self, val: bool) {
+        pub fn set_tim16en(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
         }
         #[doc = "TIM17 peripheral clock enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn tim17en(&self) -> bool {
             let val = (self.0 >> 18usize) & 0x01;
@@ -4356,11 +3797,10 @@ pub mod regs {
         }
         #[doc = "TIM17 peripheral clock enable"]
         #[inline(always)]
-        pub const fn set_tim17en(&mut self, val: bool) {
+        pub fn set_tim17en(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
         }
         #[doc = "SPI5 Peripheral Clocks Enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn spi5en(&self) -> bool {
             let val = (self.0 >> 20usize) & 0x01;
@@ -4368,11 +3808,10 @@ pub mod regs {
         }
         #[doc = "SPI5 Peripheral Clocks Enable"]
         #[inline(always)]
-        pub const fn set_spi5en(&mut self, val: bool) {
+        pub fn set_spi5en(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
         }
         #[doc = "SAI1 Peripheral Clocks Enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn sai1en(&self) -> bool {
             let val = (self.0 >> 22usize) & 0x01;
@@ -4380,11 +3819,10 @@ pub mod regs {
         }
         #[doc = "SAI1 Peripheral Clocks Enable"]
         #[inline(always)]
-        pub const fn set_sai1en(&mut self, val: bool) {
+        pub fn set_sai1en(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
         }
         #[doc = "SAI2 Peripheral Clocks Enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn sai2en(&self) -> bool {
             let val = (self.0 >> 23usize) & 0x01;
@@ -4392,11 +3830,10 @@ pub mod regs {
         }
         #[doc = "SAI2 Peripheral Clocks Enable"]
         #[inline(always)]
-        pub const fn set_sai2en(&mut self, val: bool) {
+        pub fn set_sai2en(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
         }
         #[doc = "SAI3 Peripheral Clocks Enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn sai3en(&self) -> bool {
             let val = (self.0 >> 24usize) & 0x01;
@@ -4404,11 +3841,10 @@ pub mod regs {
         }
         #[doc = "SAI3 Peripheral Clocks Enable"]
         #[inline(always)]
-        pub const fn set_sai3en(&mut self, val: bool) {
+        pub fn set_sai3en(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
         }
         #[doc = "DFSDM1 Peripheral Clocks Enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn dfsdm1en(&self) -> bool {
             let val = (self.0 >> 28usize) & 0x01;
@@ -4416,11 +3852,10 @@ pub mod regs {
         }
         #[doc = "DFSDM1 Peripheral Clocks Enable"]
         #[inline(always)]
-        pub const fn set_dfsdm1en(&mut self, val: bool) {
+        pub fn set_dfsdm1en(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
         }
         #[doc = "HRTIM peripheral clock enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn hrtimen(&self) -> bool {
             let val = (self.0 >> 29usize) & 0x01;
@@ -4428,7 +3863,7 @@ pub mod regs {
         }
         #[doc = "HRTIM peripheral clock enable"]
         #[inline(always)]
-        pub const fn set_hrtimen(&mut self, val: bool) {
+        pub fn set_hrtimen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
         }
     }
@@ -4464,27 +3899,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Apb2enr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Apb2enr {{ tim1en: {=bool:?}, tim8en: {=bool:?}, usart1en: {=bool:?}, usart6en: {=bool:?}, uart9en: {=bool:?}, usart10en: {=bool:?}, spi1en: {=bool:?}, spi4en: {=bool:?}, tim15en: {=bool:?}, tim16en: {=bool:?}, tim17en: {=bool:?}, spi5en: {=bool:?}, sai1en: {=bool:?}, sai2en: {=bool:?}, sai3en: {=bool:?}, dfsdm1en: {=bool:?}, hrtimen: {=bool:?} }}",
-                self.tim1en(),
-                self.tim8en(),
-                self.usart1en(),
-                self.usart6en(),
-                self.uart9en(),
-                self.usart10en(),
-                self.spi1en(),
-                self.spi4en(),
-                self.tim15en(),
-                self.tim16en(),
-                self.tim17en(),
-                self.spi5en(),
-                self.sai1en(),
-                self.sai2en(),
-                self.sai3en(),
-                self.dfsdm1en(),
-                self.hrtimen()
-            )
+            defmt :: write ! (f , "Apb2enr {{ tim1en: {=bool:?}, tim8en: {=bool:?}, usart1en: {=bool:?}, usart6en: {=bool:?}, uart9en: {=bool:?}, usart10en: {=bool:?}, spi1en: {=bool:?}, spi4en: {=bool:?}, tim15en: {=bool:?}, tim16en: {=bool:?}, tim17en: {=bool:?}, spi5en: {=bool:?}, sai1en: {=bool:?}, sai2en: {=bool:?}, sai3en: {=bool:?}, dfsdm1en: {=bool:?}, hrtimen: {=bool:?} }}" , self . tim1en () , self . tim8en () , self . usart1en () , self . usart6en () , self . uart9en () , self . usart10en () , self . spi1en () , self . spi4en () , self . tim15en () , self . tim16en () , self . tim17en () , self . spi5en () , self . sai1en () , self . sai2en () , self . sai3en () , self . dfsdm1en () , self . hrtimen ())
         }
     }
     #[doc = "RCC APB2 Sleep Clock Register"]
@@ -4493,7 +3908,6 @@ pub mod regs {
     pub struct Apb2lpenr(pub u32);
     impl Apb2lpenr {
         #[doc = "TIM1 peripheral clock enable during CSleep mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn tim1lpen(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -4501,11 +3915,10 @@ pub mod regs {
         }
         #[doc = "TIM1 peripheral clock enable during CSleep mode"]
         #[inline(always)]
-        pub const fn set_tim1lpen(&mut self, val: bool) {
+        pub fn set_tim1lpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "TIM8 peripheral clock enable during CSleep mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn tim8lpen(&self) -> bool {
             let val = (self.0 >> 1usize) & 0x01;
@@ -4513,11 +3926,10 @@ pub mod regs {
         }
         #[doc = "TIM8 peripheral clock enable during CSleep mode"]
         #[inline(always)]
-        pub const fn set_tim8lpen(&mut self, val: bool) {
+        pub fn set_tim8lpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
         }
         #[doc = "USART1 Peripheral Clocks Enable During CSleep Mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn usart1lpen(&self) -> bool {
             let val = (self.0 >> 4usize) & 0x01;
@@ -4525,11 +3937,10 @@ pub mod regs {
         }
         #[doc = "USART1 Peripheral Clocks Enable During CSleep Mode"]
         #[inline(always)]
-        pub const fn set_usart1lpen(&mut self, val: bool) {
+        pub fn set_usart1lpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
         }
         #[doc = "USART6 Peripheral Clocks Enable During CSleep Mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn usart6lpen(&self) -> bool {
             let val = (self.0 >> 5usize) & 0x01;
@@ -4537,11 +3948,10 @@ pub mod regs {
         }
         #[doc = "USART6 Peripheral Clocks Enable During CSleep Mode"]
         #[inline(always)]
-        pub const fn set_usart6lpen(&mut self, val: bool) {
+        pub fn set_usart6lpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
         }
         #[doc = "SPI1 Peripheral Clocks Enable During CSleep Mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn spi1lpen(&self) -> bool {
             let val = (self.0 >> 12usize) & 0x01;
@@ -4549,11 +3959,10 @@ pub mod regs {
         }
         #[doc = "SPI1 Peripheral Clocks Enable During CSleep Mode"]
         #[inline(always)]
-        pub const fn set_spi1lpen(&mut self, val: bool) {
+        pub fn set_spi1lpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
         }
         #[doc = "SPI4 Peripheral Clocks Enable During CSleep Mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn spi4lpen(&self) -> bool {
             let val = (self.0 >> 13usize) & 0x01;
@@ -4561,11 +3970,10 @@ pub mod regs {
         }
         #[doc = "SPI4 Peripheral Clocks Enable During CSleep Mode"]
         #[inline(always)]
-        pub const fn set_spi4lpen(&mut self, val: bool) {
+        pub fn set_spi4lpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
         }
         #[doc = "TIM15 peripheral clock enable during CSleep mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn tim15lpen(&self) -> bool {
             let val = (self.0 >> 16usize) & 0x01;
@@ -4573,11 +3981,10 @@ pub mod regs {
         }
         #[doc = "TIM15 peripheral clock enable during CSleep mode"]
         #[inline(always)]
-        pub const fn set_tim15lpen(&mut self, val: bool) {
+        pub fn set_tim15lpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
         }
         #[doc = "TIM16 peripheral clock enable during CSleep mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn tim16lpen(&self) -> bool {
             let val = (self.0 >> 17usize) & 0x01;
@@ -4585,11 +3992,10 @@ pub mod regs {
         }
         #[doc = "TIM16 peripheral clock enable during CSleep mode"]
         #[inline(always)]
-        pub const fn set_tim16lpen(&mut self, val: bool) {
+        pub fn set_tim16lpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
         }
         #[doc = "TIM17 peripheral clock enable during CSleep mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn tim17lpen(&self) -> bool {
             let val = (self.0 >> 18usize) & 0x01;
@@ -4597,11 +4003,10 @@ pub mod regs {
         }
         #[doc = "TIM17 peripheral clock enable during CSleep mode"]
         #[inline(always)]
-        pub const fn set_tim17lpen(&mut self, val: bool) {
+        pub fn set_tim17lpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
         }
         #[doc = "SPI5 Peripheral Clocks Enable During CSleep Mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn spi5lpen(&self) -> bool {
             let val = (self.0 >> 20usize) & 0x01;
@@ -4609,11 +4014,10 @@ pub mod regs {
         }
         #[doc = "SPI5 Peripheral Clocks Enable During CSleep Mode"]
         #[inline(always)]
-        pub const fn set_spi5lpen(&mut self, val: bool) {
+        pub fn set_spi5lpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
         }
         #[doc = "SAI1 Peripheral Clocks Enable During CSleep Mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn sai1lpen(&self) -> bool {
             let val = (self.0 >> 22usize) & 0x01;
@@ -4621,11 +4025,10 @@ pub mod regs {
         }
         #[doc = "SAI1 Peripheral Clocks Enable During CSleep Mode"]
         #[inline(always)]
-        pub const fn set_sai1lpen(&mut self, val: bool) {
+        pub fn set_sai1lpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
         }
         #[doc = "SAI2 Peripheral Clocks Enable During CSleep Mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn sai2lpen(&self) -> bool {
             let val = (self.0 >> 23usize) & 0x01;
@@ -4633,11 +4036,10 @@ pub mod regs {
         }
         #[doc = "SAI2 Peripheral Clocks Enable During CSleep Mode"]
         #[inline(always)]
-        pub const fn set_sai2lpen(&mut self, val: bool) {
+        pub fn set_sai2lpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
         }
         #[doc = "SAI3 Peripheral Clocks Enable During CSleep Mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn sai3lpen(&self) -> bool {
             let val = (self.0 >> 24usize) & 0x01;
@@ -4645,11 +4047,10 @@ pub mod regs {
         }
         #[doc = "SAI3 Peripheral Clocks Enable During CSleep Mode"]
         #[inline(always)]
-        pub const fn set_sai3lpen(&mut self, val: bool) {
+        pub fn set_sai3lpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
         }
         #[doc = "DFSDM1 Peripheral Clocks Enable During CSleep Mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn dfsdm1lpen(&self) -> bool {
             let val = (self.0 >> 28usize) & 0x01;
@@ -4657,11 +4058,10 @@ pub mod regs {
         }
         #[doc = "DFSDM1 Peripheral Clocks Enable During CSleep Mode"]
         #[inline(always)]
-        pub const fn set_dfsdm1lpen(&mut self, val: bool) {
+        pub fn set_dfsdm1lpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
         }
         #[doc = "HRTIM peripheral clock enable during CSleep mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn hrtimlpen(&self) -> bool {
             let val = (self.0 >> 29usize) & 0x01;
@@ -4669,7 +4069,7 @@ pub mod regs {
         }
         #[doc = "HRTIM peripheral clock enable during CSleep mode"]
         #[inline(always)]
-        pub const fn set_hrtimlpen(&mut self, val: bool) {
+        pub fn set_hrtimlpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
         }
     }
@@ -4703,25 +4103,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Apb2lpenr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Apb2lpenr {{ tim1lpen: {=bool:?}, tim8lpen: {=bool:?}, usart1lpen: {=bool:?}, usart6lpen: {=bool:?}, spi1lpen: {=bool:?}, spi4lpen: {=bool:?}, tim15lpen: {=bool:?}, tim16lpen: {=bool:?}, tim17lpen: {=bool:?}, spi5lpen: {=bool:?}, sai1lpen: {=bool:?}, sai2lpen: {=bool:?}, sai3lpen: {=bool:?}, dfsdm1lpen: {=bool:?}, hrtimlpen: {=bool:?} }}",
-                self.tim1lpen(),
-                self.tim8lpen(),
-                self.usart1lpen(),
-                self.usart6lpen(),
-                self.spi1lpen(),
-                self.spi4lpen(),
-                self.tim15lpen(),
-                self.tim16lpen(),
-                self.tim17lpen(),
-                self.spi5lpen(),
-                self.sai1lpen(),
-                self.sai2lpen(),
-                self.sai3lpen(),
-                self.dfsdm1lpen(),
-                self.hrtimlpen()
-            )
+            defmt :: write ! (f , "Apb2lpenr {{ tim1lpen: {=bool:?}, tim8lpen: {=bool:?}, usart1lpen: {=bool:?}, usart6lpen: {=bool:?}, spi1lpen: {=bool:?}, spi4lpen: {=bool:?}, tim15lpen: {=bool:?}, tim16lpen: {=bool:?}, tim17lpen: {=bool:?}, spi5lpen: {=bool:?}, sai1lpen: {=bool:?}, sai2lpen: {=bool:?}, sai3lpen: {=bool:?}, dfsdm1lpen: {=bool:?}, hrtimlpen: {=bool:?} }}" , self . tim1lpen () , self . tim8lpen () , self . usart1lpen () , self . usart6lpen () , self . spi1lpen () , self . spi4lpen () , self . tim15lpen () , self . tim16lpen () , self . tim17lpen () , self . spi5lpen () , self . sai1lpen () , self . sai2lpen () , self . sai3lpen () , self . dfsdm1lpen () , self . hrtimlpen ())
         }
     }
     #[doc = "RCC APB2 Peripheral Reset Register"]
@@ -4730,7 +4112,6 @@ pub mod regs {
     pub struct Apb2rstr(pub u32);
     impl Apb2rstr {
         #[doc = "TIM1 block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn tim1rst(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -4738,11 +4119,10 @@ pub mod regs {
         }
         #[doc = "TIM1 block reset"]
         #[inline(always)]
-        pub const fn set_tim1rst(&mut self, val: bool) {
+        pub fn set_tim1rst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "TIM8 block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn tim8rst(&self) -> bool {
             let val = (self.0 >> 1usize) & 0x01;
@@ -4750,11 +4130,10 @@ pub mod regs {
         }
         #[doc = "TIM8 block reset"]
         #[inline(always)]
-        pub const fn set_tim8rst(&mut self, val: bool) {
+        pub fn set_tim8rst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
         }
         #[doc = "USART1 block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn usart1rst(&self) -> bool {
             let val = (self.0 >> 4usize) & 0x01;
@@ -4762,11 +4141,10 @@ pub mod regs {
         }
         #[doc = "USART1 block reset"]
         #[inline(always)]
-        pub const fn set_usart1rst(&mut self, val: bool) {
+        pub fn set_usart1rst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
         }
         #[doc = "USART6 block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn usart6rst(&self) -> bool {
             let val = (self.0 >> 5usize) & 0x01;
@@ -4774,11 +4152,10 @@ pub mod regs {
         }
         #[doc = "USART6 block reset"]
         #[inline(always)]
-        pub const fn set_usart6rst(&mut self, val: bool) {
+        pub fn set_usart6rst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
         }
         #[doc = "UART9 block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn uart9rst(&self) -> bool {
             let val = (self.0 >> 6usize) & 0x01;
@@ -4786,11 +4163,10 @@ pub mod regs {
         }
         #[doc = "UART9 block reset"]
         #[inline(always)]
-        pub const fn set_uart9rst(&mut self, val: bool) {
+        pub fn set_uart9rst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
         }
         #[doc = "USART10 block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn usart10rst(&self) -> bool {
             let val = (self.0 >> 7usize) & 0x01;
@@ -4798,11 +4174,10 @@ pub mod regs {
         }
         #[doc = "USART10 block reset"]
         #[inline(always)]
-        pub const fn set_usart10rst(&mut self, val: bool) {
+        pub fn set_usart10rst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
         }
         #[doc = "SPI1 block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn spi1rst(&self) -> bool {
             let val = (self.0 >> 12usize) & 0x01;
@@ -4810,11 +4185,10 @@ pub mod regs {
         }
         #[doc = "SPI1 block reset"]
         #[inline(always)]
-        pub const fn set_spi1rst(&mut self, val: bool) {
+        pub fn set_spi1rst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
         }
         #[doc = "SPI4 block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn spi4rst(&self) -> bool {
             let val = (self.0 >> 13usize) & 0x01;
@@ -4822,11 +4196,10 @@ pub mod regs {
         }
         #[doc = "SPI4 block reset"]
         #[inline(always)]
-        pub const fn set_spi4rst(&mut self, val: bool) {
+        pub fn set_spi4rst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
         }
         #[doc = "TIM15 block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn tim15rst(&self) -> bool {
             let val = (self.0 >> 16usize) & 0x01;
@@ -4834,11 +4207,10 @@ pub mod regs {
         }
         #[doc = "TIM15 block reset"]
         #[inline(always)]
-        pub const fn set_tim15rst(&mut self, val: bool) {
+        pub fn set_tim15rst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
         }
         #[doc = "TIM16 block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn tim16rst(&self) -> bool {
             let val = (self.0 >> 17usize) & 0x01;
@@ -4846,11 +4218,10 @@ pub mod regs {
         }
         #[doc = "TIM16 block reset"]
         #[inline(always)]
-        pub const fn set_tim16rst(&mut self, val: bool) {
+        pub fn set_tim16rst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
         }
         #[doc = "TIM17 block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn tim17rst(&self) -> bool {
             let val = (self.0 >> 18usize) & 0x01;
@@ -4858,11 +4229,10 @@ pub mod regs {
         }
         #[doc = "TIM17 block reset"]
         #[inline(always)]
-        pub const fn set_tim17rst(&mut self, val: bool) {
+        pub fn set_tim17rst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
         }
         #[doc = "SPI5 block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn spi5rst(&self) -> bool {
             let val = (self.0 >> 20usize) & 0x01;
@@ -4870,11 +4240,10 @@ pub mod regs {
         }
         #[doc = "SPI5 block reset"]
         #[inline(always)]
-        pub const fn set_spi5rst(&mut self, val: bool) {
+        pub fn set_spi5rst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
         }
         #[doc = "SAI1 block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn sai1rst(&self) -> bool {
             let val = (self.0 >> 22usize) & 0x01;
@@ -4882,11 +4251,10 @@ pub mod regs {
         }
         #[doc = "SAI1 block reset"]
         #[inline(always)]
-        pub const fn set_sai1rst(&mut self, val: bool) {
+        pub fn set_sai1rst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
         }
         #[doc = "SAI2 block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn sai2rst(&self) -> bool {
             let val = (self.0 >> 23usize) & 0x01;
@@ -4894,11 +4262,10 @@ pub mod regs {
         }
         #[doc = "SAI2 block reset"]
         #[inline(always)]
-        pub const fn set_sai2rst(&mut self, val: bool) {
+        pub fn set_sai2rst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
         }
         #[doc = "SAI3 block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn sai3rst(&self) -> bool {
             let val = (self.0 >> 24usize) & 0x01;
@@ -4906,11 +4273,10 @@ pub mod regs {
         }
         #[doc = "SAI3 block reset"]
         #[inline(always)]
-        pub const fn set_sai3rst(&mut self, val: bool) {
+        pub fn set_sai3rst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
         }
         #[doc = "DFSDM1 block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn dfsdm1rst(&self) -> bool {
             let val = (self.0 >> 28usize) & 0x01;
@@ -4918,11 +4284,10 @@ pub mod regs {
         }
         #[doc = "DFSDM1 block reset"]
         #[inline(always)]
-        pub const fn set_dfsdm1rst(&mut self, val: bool) {
+        pub fn set_dfsdm1rst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
         }
         #[doc = "HRTIM block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn hrtimrst(&self) -> bool {
             let val = (self.0 >> 29usize) & 0x01;
@@ -4930,7 +4295,7 @@ pub mod regs {
         }
         #[doc = "HRTIM block reset"]
         #[inline(always)]
-        pub const fn set_hrtimrst(&mut self, val: bool) {
+        pub fn set_hrtimrst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
         }
     }
@@ -4966,27 +4331,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Apb2rstr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Apb2rstr {{ tim1rst: {=bool:?}, tim8rst: {=bool:?}, usart1rst: {=bool:?}, usart6rst: {=bool:?}, uart9rst: {=bool:?}, usart10rst: {=bool:?}, spi1rst: {=bool:?}, spi4rst: {=bool:?}, tim15rst: {=bool:?}, tim16rst: {=bool:?}, tim17rst: {=bool:?}, spi5rst: {=bool:?}, sai1rst: {=bool:?}, sai2rst: {=bool:?}, sai3rst: {=bool:?}, dfsdm1rst: {=bool:?}, hrtimrst: {=bool:?} }}",
-                self.tim1rst(),
-                self.tim8rst(),
-                self.usart1rst(),
-                self.usart6rst(),
-                self.uart9rst(),
-                self.usart10rst(),
-                self.spi1rst(),
-                self.spi4rst(),
-                self.tim15rst(),
-                self.tim16rst(),
-                self.tim17rst(),
-                self.spi5rst(),
-                self.sai1rst(),
-                self.sai2rst(),
-                self.sai3rst(),
-                self.dfsdm1rst(),
-                self.hrtimrst()
-            )
+            defmt :: write ! (f , "Apb2rstr {{ tim1rst: {=bool:?}, tim8rst: {=bool:?}, usart1rst: {=bool:?}, usart6rst: {=bool:?}, uart9rst: {=bool:?}, usart10rst: {=bool:?}, spi1rst: {=bool:?}, spi4rst: {=bool:?}, tim15rst: {=bool:?}, tim16rst: {=bool:?}, tim17rst: {=bool:?}, spi5rst: {=bool:?}, sai1rst: {=bool:?}, sai2rst: {=bool:?}, sai3rst: {=bool:?}, dfsdm1rst: {=bool:?}, hrtimrst: {=bool:?} }}" , self . tim1rst () , self . tim8rst () , self . usart1rst () , self . usart6rst () , self . uart9rst () , self . usart10rst () , self . spi1rst () , self . spi4rst () , self . tim15rst () , self . tim16rst () , self . tim17rst () , self . spi5rst () , self . sai1rst () , self . sai2rst () , self . sai3rst () , self . dfsdm1rst () , self . hrtimrst ())
         }
     }
     #[doc = "RCC APB3 Clock Register"]
@@ -4995,7 +4340,6 @@ pub mod regs {
     pub struct Apb3enr(pub u32);
     impl Apb3enr {
         #[doc = "LTDC peripheral clock enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn ltdcen(&self) -> bool {
             let val = (self.0 >> 3usize) & 0x01;
@@ -5003,11 +4347,10 @@ pub mod regs {
         }
         #[doc = "LTDC peripheral clock enable"]
         #[inline(always)]
-        pub const fn set_ltdcen(&mut self, val: bool) {
+        pub fn set_ltdcen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
         }
         #[doc = "DSI Peripheral clocks enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn dsien(&self) -> bool {
             let val = (self.0 >> 4usize) & 0x01;
@@ -5015,11 +4358,10 @@ pub mod regs {
         }
         #[doc = "DSI Peripheral clocks enable"]
         #[inline(always)]
-        pub const fn set_dsien(&mut self, val: bool) {
+        pub fn set_dsien(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
         }
         #[doc = "WWDG1 Clock Enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn wwdg1en(&self) -> bool {
             let val = (self.0 >> 6usize) & 0x01;
@@ -5027,7 +4369,7 @@ pub mod regs {
         }
         #[doc = "WWDG1 Clock Enable"]
         #[inline(always)]
-        pub const fn set_wwdg1en(&mut self, val: bool) {
+        pub fn set_wwdg1en(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
         }
     }
@@ -5064,7 +4406,6 @@ pub mod regs {
     pub struct Apb3lpenr(pub u32);
     impl Apb3lpenr {
         #[doc = "LTDC peripheral clock enable during CSleep mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn ltdclpen(&self) -> bool {
             let val = (self.0 >> 3usize) & 0x01;
@@ -5072,11 +4413,10 @@ pub mod regs {
         }
         #[doc = "LTDC peripheral clock enable during CSleep mode"]
         #[inline(always)]
-        pub const fn set_ltdclpen(&mut self, val: bool) {
+        pub fn set_ltdclpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
         }
         #[doc = "DSI Peripheral Clock Enable During CSleep Mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn dsilpen(&self) -> bool {
             let val = (self.0 >> 4usize) & 0x01;
@@ -5084,11 +4424,10 @@ pub mod regs {
         }
         #[doc = "DSI Peripheral Clock Enable During CSleep Mode"]
         #[inline(always)]
-        pub const fn set_dsilpen(&mut self, val: bool) {
+        pub fn set_dsilpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
         }
         #[doc = "WWDG1 Clock Enable During CSleep Mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn wwdg1lpen(&self) -> bool {
             let val = (self.0 >> 6usize) & 0x01;
@@ -5096,7 +4435,7 @@ pub mod regs {
         }
         #[doc = "WWDG1 Clock Enable During CSleep Mode"]
         #[inline(always)]
-        pub const fn set_wwdg1lpen(&mut self, val: bool) {
+        pub fn set_wwdg1lpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
         }
     }
@@ -5133,7 +4472,6 @@ pub mod regs {
     pub struct Apb3rstr(pub u32);
     impl Apb3rstr {
         #[doc = "LTDC block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn ltdcrst(&self) -> bool {
             let val = (self.0 >> 3usize) & 0x01;
@@ -5141,11 +4479,10 @@ pub mod regs {
         }
         #[doc = "LTDC block reset"]
         #[inline(always)]
-        pub const fn set_ltdcrst(&mut self, val: bool) {
+        pub fn set_ltdcrst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
         }
         #[doc = "DSI block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn dsirst(&self) -> bool {
             let val = (self.0 >> 4usize) & 0x01;
@@ -5153,7 +4490,7 @@ pub mod regs {
         }
         #[doc = "DSI block reset"]
         #[inline(always)]
-        pub const fn set_dsirst(&mut self, val: bool) {
+        pub fn set_dsirst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
         }
     }
@@ -5188,7 +4525,6 @@ pub mod regs {
     pub struct Apb4enr(pub u32);
     impl Apb4enr {
         #[doc = "SYSCFG peripheral clock enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn syscfgen(&self) -> bool {
             let val = (self.0 >> 1usize) & 0x01;
@@ -5196,11 +4532,10 @@ pub mod regs {
         }
         #[doc = "SYSCFG peripheral clock enable"]
         #[inline(always)]
-        pub const fn set_syscfgen(&mut self, val: bool) {
+        pub fn set_syscfgen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
         }
         #[doc = "LPUART1 Peripheral Clocks Enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn lpuart1en(&self) -> bool {
             let val = (self.0 >> 3usize) & 0x01;
@@ -5208,11 +4543,10 @@ pub mod regs {
         }
         #[doc = "LPUART1 Peripheral Clocks Enable"]
         #[inline(always)]
-        pub const fn set_lpuart1en(&mut self, val: bool) {
+        pub fn set_lpuart1en(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
         }
         #[doc = "SPI6 Peripheral Clocks Enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn spi6en(&self) -> bool {
             let val = (self.0 >> 5usize) & 0x01;
@@ -5220,11 +4554,10 @@ pub mod regs {
         }
         #[doc = "SPI6 Peripheral Clocks Enable"]
         #[inline(always)]
-        pub const fn set_spi6en(&mut self, val: bool) {
+        pub fn set_spi6en(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
         }
         #[doc = "I2C4 Peripheral Clocks Enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn i2c4en(&self) -> bool {
             let val = (self.0 >> 7usize) & 0x01;
@@ -5232,11 +4565,10 @@ pub mod regs {
         }
         #[doc = "I2C4 Peripheral Clocks Enable"]
         #[inline(always)]
-        pub const fn set_i2c4en(&mut self, val: bool) {
+        pub fn set_i2c4en(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
         }
         #[doc = "LPTIM2 Peripheral Clocks Enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn lptim2en(&self) -> bool {
             let val = (self.0 >> 9usize) & 0x01;
@@ -5244,11 +4576,10 @@ pub mod regs {
         }
         #[doc = "LPTIM2 Peripheral Clocks Enable"]
         #[inline(always)]
-        pub const fn set_lptim2en(&mut self, val: bool) {
+        pub fn set_lptim2en(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
         }
         #[doc = "LPTIM3 Peripheral Clocks Enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn lptim3en(&self) -> bool {
             let val = (self.0 >> 10usize) & 0x01;
@@ -5256,11 +4587,10 @@ pub mod regs {
         }
         #[doc = "LPTIM3 Peripheral Clocks Enable"]
         #[inline(always)]
-        pub const fn set_lptim3en(&mut self, val: bool) {
+        pub fn set_lptim3en(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
         }
         #[doc = "LPTIM4 Peripheral Clocks Enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn lptim4en(&self) -> bool {
             let val = (self.0 >> 11usize) & 0x01;
@@ -5268,11 +4598,10 @@ pub mod regs {
         }
         #[doc = "LPTIM4 Peripheral Clocks Enable"]
         #[inline(always)]
-        pub const fn set_lptim4en(&mut self, val: bool) {
+        pub fn set_lptim4en(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
         }
         #[doc = "LPTIM5 Peripheral Clocks Enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn lptim5en(&self) -> bool {
             let val = (self.0 >> 12usize) & 0x01;
@@ -5280,11 +4609,10 @@ pub mod regs {
         }
         #[doc = "LPTIM5 Peripheral Clocks Enable"]
         #[inline(always)]
-        pub const fn set_lptim5en(&mut self, val: bool) {
+        pub fn set_lptim5en(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
         }
         #[doc = "DAC2 (containing one converter) peripheral clock enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn dac2en(&self) -> bool {
             let val = (self.0 >> 13usize) & 0x01;
@@ -5292,11 +4620,10 @@ pub mod regs {
         }
         #[doc = "DAC2 (containing one converter) peripheral clock enable"]
         #[inline(always)]
-        pub const fn set_dac2en(&mut self, val: bool) {
+        pub fn set_dac2en(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
         }
         #[doc = "COMP1/2 peripheral clock enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn comp12en(&self) -> bool {
             let val = (self.0 >> 14usize) & 0x01;
@@ -5304,11 +4631,10 @@ pub mod regs {
         }
         #[doc = "COMP1/2 peripheral clock enable"]
         #[inline(always)]
-        pub const fn set_comp12en(&mut self, val: bool) {
+        pub fn set_comp12en(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
         }
         #[doc = "VREF peripheral clock enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn vrefen(&self) -> bool {
             let val = (self.0 >> 15usize) & 0x01;
@@ -5316,11 +4642,10 @@ pub mod regs {
         }
         #[doc = "VREF peripheral clock enable"]
         #[inline(always)]
-        pub const fn set_vrefen(&mut self, val: bool) {
+        pub fn set_vrefen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
         }
         #[doc = "RTC APB Clock Enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn rtcapben(&self) -> bool {
             let val = (self.0 >> 16usize) & 0x01;
@@ -5328,11 +4653,10 @@ pub mod regs {
         }
         #[doc = "RTC APB Clock Enable"]
         #[inline(always)]
-        pub const fn set_rtcapben(&mut self, val: bool) {
+        pub fn set_rtcapben(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
         }
         #[doc = "SAI4 Peripheral Clocks Enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn sai4en(&self) -> bool {
             let val = (self.0 >> 21usize) & 0x01;
@@ -5340,11 +4664,10 @@ pub mod regs {
         }
         #[doc = "SAI4 Peripheral Clocks Enable"]
         #[inline(always)]
-        pub const fn set_sai4en(&mut self, val: bool) {
+        pub fn set_sai4en(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
         }
         #[doc = "Digital temperature sensor block enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn dtsen(&self) -> bool {
             let val = (self.0 >> 26usize) & 0x01;
@@ -5352,7 +4675,7 @@ pub mod regs {
         }
         #[doc = "Digital temperature sensor block enable"]
         #[inline(always)]
-        pub const fn set_dtsen(&mut self, val: bool) {
+        pub fn set_dtsen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 26usize)) | (((val as u32) & 0x01) << 26usize);
         }
     }
@@ -5385,24 +4708,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Apb4enr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Apb4enr {{ syscfgen: {=bool:?}, lpuart1en: {=bool:?}, spi6en: {=bool:?}, i2c4en: {=bool:?}, lptim2en: {=bool:?}, lptim3en: {=bool:?}, lptim4en: {=bool:?}, lptim5en: {=bool:?}, dac2en: {=bool:?}, comp12en: {=bool:?}, vrefen: {=bool:?}, rtcapben: {=bool:?}, sai4en: {=bool:?}, dtsen: {=bool:?} }}",
-                self.syscfgen(),
-                self.lpuart1en(),
-                self.spi6en(),
-                self.i2c4en(),
-                self.lptim2en(),
-                self.lptim3en(),
-                self.lptim4en(),
-                self.lptim5en(),
-                self.dac2en(),
-                self.comp12en(),
-                self.vrefen(),
-                self.rtcapben(),
-                self.sai4en(),
-                self.dtsen()
-            )
+            defmt :: write ! (f , "Apb4enr {{ syscfgen: {=bool:?}, lpuart1en: {=bool:?}, spi6en: {=bool:?}, i2c4en: {=bool:?}, lptim2en: {=bool:?}, lptim3en: {=bool:?}, lptim4en: {=bool:?}, lptim5en: {=bool:?}, dac2en: {=bool:?}, comp12en: {=bool:?}, vrefen: {=bool:?}, rtcapben: {=bool:?}, sai4en: {=bool:?}, dtsen: {=bool:?} }}" , self . syscfgen () , self . lpuart1en () , self . spi6en () , self . i2c4en () , self . lptim2en () , self . lptim3en () , self . lptim4en () , self . lptim5en () , self . dac2en () , self . comp12en () , self . vrefen () , self . rtcapben () , self . sai4en () , self . dtsen ())
         }
     }
     #[doc = "RCC APB4 Sleep Clock Register"]
@@ -5411,7 +4717,6 @@ pub mod regs {
     pub struct Apb4lpenr(pub u32);
     impl Apb4lpenr {
         #[doc = "SYSCFG peripheral clock enable during CSleep mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn syscfglpen(&self) -> bool {
             let val = (self.0 >> 1usize) & 0x01;
@@ -5419,11 +4724,10 @@ pub mod regs {
         }
         #[doc = "SYSCFG peripheral clock enable during CSleep mode"]
         #[inline(always)]
-        pub const fn set_syscfglpen(&mut self, val: bool) {
+        pub fn set_syscfglpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
         }
         #[doc = "LPUART1 Peripheral Clocks Enable During CSleep Mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn lpuart1lpen(&self) -> bool {
             let val = (self.0 >> 3usize) & 0x01;
@@ -5431,11 +4735,10 @@ pub mod regs {
         }
         #[doc = "LPUART1 Peripheral Clocks Enable During CSleep Mode"]
         #[inline(always)]
-        pub const fn set_lpuart1lpen(&mut self, val: bool) {
+        pub fn set_lpuart1lpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
         }
         #[doc = "SPI6 Peripheral Clocks Enable During CSleep Mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn spi6lpen(&self) -> bool {
             let val = (self.0 >> 5usize) & 0x01;
@@ -5443,11 +4746,10 @@ pub mod regs {
         }
         #[doc = "SPI6 Peripheral Clocks Enable During CSleep Mode"]
         #[inline(always)]
-        pub const fn set_spi6lpen(&mut self, val: bool) {
+        pub fn set_spi6lpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
         }
         #[doc = "I2C4 Peripheral Clocks Enable During CSleep Mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn i2c4lpen(&self) -> bool {
             let val = (self.0 >> 7usize) & 0x01;
@@ -5455,11 +4757,10 @@ pub mod regs {
         }
         #[doc = "I2C4 Peripheral Clocks Enable During CSleep Mode"]
         #[inline(always)]
-        pub const fn set_i2c4lpen(&mut self, val: bool) {
+        pub fn set_i2c4lpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
         }
         #[doc = "LPTIM2 Peripheral Clocks Enable During CSleep Mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn lptim2lpen(&self) -> bool {
             let val = (self.0 >> 9usize) & 0x01;
@@ -5467,11 +4768,10 @@ pub mod regs {
         }
         #[doc = "LPTIM2 Peripheral Clocks Enable During CSleep Mode"]
         #[inline(always)]
-        pub const fn set_lptim2lpen(&mut self, val: bool) {
+        pub fn set_lptim2lpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
         }
         #[doc = "LPTIM3 Peripheral Clocks Enable During CSleep Mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn lptim3lpen(&self) -> bool {
             let val = (self.0 >> 10usize) & 0x01;
@@ -5479,11 +4779,10 @@ pub mod regs {
         }
         #[doc = "LPTIM3 Peripheral Clocks Enable During CSleep Mode"]
         #[inline(always)]
-        pub const fn set_lptim3lpen(&mut self, val: bool) {
+        pub fn set_lptim3lpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
         }
         #[doc = "LPTIM4 Peripheral Clocks Enable During CSleep Mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn lptim4lpen(&self) -> bool {
             let val = (self.0 >> 11usize) & 0x01;
@@ -5491,11 +4790,10 @@ pub mod regs {
         }
         #[doc = "LPTIM4 Peripheral Clocks Enable During CSleep Mode"]
         #[inline(always)]
-        pub const fn set_lptim4lpen(&mut self, val: bool) {
+        pub fn set_lptim4lpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
         }
         #[doc = "LPTIM5 Peripheral Clocks Enable During CSleep Mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn lptim5lpen(&self) -> bool {
             let val = (self.0 >> 12usize) & 0x01;
@@ -5503,11 +4801,10 @@ pub mod regs {
         }
         #[doc = "LPTIM5 Peripheral Clocks Enable During CSleep Mode"]
         #[inline(always)]
-        pub const fn set_lptim5lpen(&mut self, val: bool) {
+        pub fn set_lptim5lpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
         }
         #[doc = "DAC2 (containing one converter) peripheral clock enable during CSleep mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn dac2lpen(&self) -> bool {
             let val = (self.0 >> 13usize) & 0x01;
@@ -5515,11 +4812,10 @@ pub mod regs {
         }
         #[doc = "DAC2 (containing one converter) peripheral clock enable during CSleep mode"]
         #[inline(always)]
-        pub const fn set_dac2lpen(&mut self, val: bool) {
+        pub fn set_dac2lpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
         }
         #[doc = "COMP1/2 peripheral clock enable during CSleep mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn comp12lpen(&self) -> bool {
             let val = (self.0 >> 14usize) & 0x01;
@@ -5527,11 +4823,10 @@ pub mod regs {
         }
         #[doc = "COMP1/2 peripheral clock enable during CSleep mode"]
         #[inline(always)]
-        pub const fn set_comp12lpen(&mut self, val: bool) {
+        pub fn set_comp12lpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
         }
         #[doc = "VREF peripheral clock enable during CSleep mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn vreflpen(&self) -> bool {
             let val = (self.0 >> 15usize) & 0x01;
@@ -5539,11 +4834,10 @@ pub mod regs {
         }
         #[doc = "VREF peripheral clock enable during CSleep mode"]
         #[inline(always)]
-        pub const fn set_vreflpen(&mut self, val: bool) {
+        pub fn set_vreflpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
         }
         #[doc = "RTC APB Clock Enable During CSleep Mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn rtcapblpen(&self) -> bool {
             let val = (self.0 >> 16usize) & 0x01;
@@ -5551,11 +4845,10 @@ pub mod regs {
         }
         #[doc = "RTC APB Clock Enable During CSleep Mode"]
         #[inline(always)]
-        pub const fn set_rtcapblpen(&mut self, val: bool) {
+        pub fn set_rtcapblpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
         }
         #[doc = "SAI4 Peripheral Clocks Enable During CSleep Mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn sai4lpen(&self) -> bool {
             let val = (self.0 >> 21usize) & 0x01;
@@ -5563,11 +4856,10 @@ pub mod regs {
         }
         #[doc = "SAI4 Peripheral Clocks Enable During CSleep Mode"]
         #[inline(always)]
-        pub const fn set_sai4lpen(&mut self, val: bool) {
+        pub fn set_sai4lpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
         }
         #[doc = "Digital temperature sensor block enable during CSleep Mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn dtslpen(&self) -> bool {
             let val = (self.0 >> 26usize) & 0x01;
@@ -5575,7 +4867,7 @@ pub mod regs {
         }
         #[doc = "Digital temperature sensor block enable during CSleep Mode"]
         #[inline(always)]
-        pub const fn set_dtslpen(&mut self, val: bool) {
+        pub fn set_dtslpen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 26usize)) | (((val as u32) & 0x01) << 26usize);
         }
     }
@@ -5608,24 +4900,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Apb4lpenr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Apb4lpenr {{ syscfglpen: {=bool:?}, lpuart1lpen: {=bool:?}, spi6lpen: {=bool:?}, i2c4lpen: {=bool:?}, lptim2lpen: {=bool:?}, lptim3lpen: {=bool:?}, lptim4lpen: {=bool:?}, lptim5lpen: {=bool:?}, dac2lpen: {=bool:?}, comp12lpen: {=bool:?}, vreflpen: {=bool:?}, rtcapblpen: {=bool:?}, sai4lpen: {=bool:?}, dtslpen: {=bool:?} }}",
-                self.syscfglpen(),
-                self.lpuart1lpen(),
-                self.spi6lpen(),
-                self.i2c4lpen(),
-                self.lptim2lpen(),
-                self.lptim3lpen(),
-                self.lptim4lpen(),
-                self.lptim5lpen(),
-                self.dac2lpen(),
-                self.comp12lpen(),
-                self.vreflpen(),
-                self.rtcapblpen(),
-                self.sai4lpen(),
-                self.dtslpen()
-            )
+            defmt :: write ! (f , "Apb4lpenr {{ syscfglpen: {=bool:?}, lpuart1lpen: {=bool:?}, spi6lpen: {=bool:?}, i2c4lpen: {=bool:?}, lptim2lpen: {=bool:?}, lptim3lpen: {=bool:?}, lptim4lpen: {=bool:?}, lptim5lpen: {=bool:?}, dac2lpen: {=bool:?}, comp12lpen: {=bool:?}, vreflpen: {=bool:?}, rtcapblpen: {=bool:?}, sai4lpen: {=bool:?}, dtslpen: {=bool:?} }}" , self . syscfglpen () , self . lpuart1lpen () , self . spi6lpen () , self . i2c4lpen () , self . lptim2lpen () , self . lptim3lpen () , self . lptim4lpen () , self . lptim5lpen () , self . dac2lpen () , self . comp12lpen () , self . vreflpen () , self . rtcapblpen () , self . sai4lpen () , self . dtslpen ())
         }
     }
     #[doc = "RCC APB4 Peripheral Reset Register"]
@@ -5634,7 +4909,6 @@ pub mod regs {
     pub struct Apb4rstr(pub u32);
     impl Apb4rstr {
         #[doc = "SYSCFG block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn syscfgrst(&self) -> bool {
             let val = (self.0 >> 1usize) & 0x01;
@@ -5642,11 +4916,10 @@ pub mod regs {
         }
         #[doc = "SYSCFG block reset"]
         #[inline(always)]
-        pub const fn set_syscfgrst(&mut self, val: bool) {
+        pub fn set_syscfgrst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
         }
         #[doc = "LPUART1 block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn lpuart1rst(&self) -> bool {
             let val = (self.0 >> 3usize) & 0x01;
@@ -5654,11 +4927,10 @@ pub mod regs {
         }
         #[doc = "LPUART1 block reset"]
         #[inline(always)]
-        pub const fn set_lpuart1rst(&mut self, val: bool) {
+        pub fn set_lpuart1rst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
         }
         #[doc = "SPI6 block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn spi6rst(&self) -> bool {
             let val = (self.0 >> 5usize) & 0x01;
@@ -5666,11 +4938,10 @@ pub mod regs {
         }
         #[doc = "SPI6 block reset"]
         #[inline(always)]
-        pub const fn set_spi6rst(&mut self, val: bool) {
+        pub fn set_spi6rst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
         }
         #[doc = "I2C4 block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn i2c4rst(&self) -> bool {
             let val = (self.0 >> 7usize) & 0x01;
@@ -5678,11 +4949,10 @@ pub mod regs {
         }
         #[doc = "I2C4 block reset"]
         #[inline(always)]
-        pub const fn set_i2c4rst(&mut self, val: bool) {
+        pub fn set_i2c4rst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
         }
         #[doc = "LPTIM2 block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn lptim2rst(&self) -> bool {
             let val = (self.0 >> 9usize) & 0x01;
@@ -5690,11 +4960,10 @@ pub mod regs {
         }
         #[doc = "LPTIM2 block reset"]
         #[inline(always)]
-        pub const fn set_lptim2rst(&mut self, val: bool) {
+        pub fn set_lptim2rst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
         }
         #[doc = "LPTIM3 block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn lptim3rst(&self) -> bool {
             let val = (self.0 >> 10usize) & 0x01;
@@ -5702,11 +4971,10 @@ pub mod regs {
         }
         #[doc = "LPTIM3 block reset"]
         #[inline(always)]
-        pub const fn set_lptim3rst(&mut self, val: bool) {
+        pub fn set_lptim3rst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
         }
         #[doc = "LPTIM4 block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn lptim4rst(&self) -> bool {
             let val = (self.0 >> 11usize) & 0x01;
@@ -5714,11 +4982,10 @@ pub mod regs {
         }
         #[doc = "LPTIM4 block reset"]
         #[inline(always)]
-        pub const fn set_lptim4rst(&mut self, val: bool) {
+        pub fn set_lptim4rst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
         }
         #[doc = "LPTIM5 block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn lptim5rst(&self) -> bool {
             let val = (self.0 >> 12usize) & 0x01;
@@ -5726,11 +4993,10 @@ pub mod regs {
         }
         #[doc = "LPTIM5 block reset"]
         #[inline(always)]
-        pub const fn set_lptim5rst(&mut self, val: bool) {
+        pub fn set_lptim5rst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
         }
         #[doc = "DAC2 (containing one converter) reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn dac2rst(&self) -> bool {
             let val = (self.0 >> 13usize) & 0x01;
@@ -5738,11 +5004,10 @@ pub mod regs {
         }
         #[doc = "DAC2 (containing one converter) reset"]
         #[inline(always)]
-        pub const fn set_dac2rst(&mut self, val: bool) {
+        pub fn set_dac2rst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
         }
         #[doc = "COMP12 Blocks Reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn comp12rst(&self) -> bool {
             let val = (self.0 >> 14usize) & 0x01;
@@ -5750,11 +5015,10 @@ pub mod regs {
         }
         #[doc = "COMP12 Blocks Reset"]
         #[inline(always)]
-        pub const fn set_comp12rst(&mut self, val: bool) {
+        pub fn set_comp12rst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
         }
         #[doc = "VREF block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn vrefrst(&self) -> bool {
             let val = (self.0 >> 15usize) & 0x01;
@@ -5762,11 +5026,10 @@ pub mod regs {
         }
         #[doc = "VREF block reset"]
         #[inline(always)]
-        pub const fn set_vrefrst(&mut self, val: bool) {
+        pub fn set_vrefrst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
         }
         #[doc = "SAI4 block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn sai4rst(&self) -> bool {
             let val = (self.0 >> 21usize) & 0x01;
@@ -5774,11 +5037,10 @@ pub mod regs {
         }
         #[doc = "SAI4 block reset"]
         #[inline(always)]
-        pub const fn set_sai4rst(&mut self, val: bool) {
+        pub fn set_sai4rst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
         }
         #[doc = "Digital temperature sensor block reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn dtsrst(&self) -> bool {
             let val = (self.0 >> 26usize) & 0x01;
@@ -5786,7 +5048,7 @@ pub mod regs {
         }
         #[doc = "Digital temperature sensor block reset"]
         #[inline(always)]
-        pub const fn set_dtsrst(&mut self, val: bool) {
+        pub fn set_dtsrst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 26usize)) | (((val as u32) & 0x01) << 26usize);
         }
     }
@@ -5818,23 +5080,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Apb4rstr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Apb4rstr {{ syscfgrst: {=bool:?}, lpuart1rst: {=bool:?}, spi6rst: {=bool:?}, i2c4rst: {=bool:?}, lptim2rst: {=bool:?}, lptim3rst: {=bool:?}, lptim4rst: {=bool:?}, lptim5rst: {=bool:?}, dac2rst: {=bool:?}, comp12rst: {=bool:?}, vrefrst: {=bool:?}, sai4rst: {=bool:?}, dtsrst: {=bool:?} }}",
-                self.syscfgrst(),
-                self.lpuart1rst(),
-                self.spi6rst(),
-                self.i2c4rst(),
-                self.lptim2rst(),
-                self.lptim3rst(),
-                self.lptim4rst(),
-                self.lptim5rst(),
-                self.dac2rst(),
-                self.comp12rst(),
-                self.vrefrst(),
-                self.sai4rst(),
-                self.dtsrst()
-            )
+            defmt :: write ! (f , "Apb4rstr {{ syscfgrst: {=bool:?}, lpuart1rst: {=bool:?}, spi6rst: {=bool:?}, i2c4rst: {=bool:?}, lptim2rst: {=bool:?}, lptim3rst: {=bool:?}, lptim4rst: {=bool:?}, lptim5rst: {=bool:?}, dac2rst: {=bool:?}, comp12rst: {=bool:?}, vrefrst: {=bool:?}, sai4rst: {=bool:?}, dtsrst: {=bool:?} }}" , self . syscfgrst () , self . lpuart1rst () , self . spi6rst () , self . i2c4rst () , self . lptim2rst () , self . lptim3rst () , self . lptim4rst () , self . lptim5rst () , self . dac2rst () , self . comp12rst () , self . vrefrst () , self . sai4rst () , self . dtsrst ())
         }
     }
     #[doc = "RCC Backup Domain Control Register"]
@@ -5843,7 +5089,6 @@ pub mod regs {
     pub struct Bdcr(pub u32);
     impl Bdcr {
         #[doc = "LSE oscillator enabled"]
-        #[must_use]
         #[inline(always)]
         pub const fn lseon(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -5851,11 +5096,10 @@ pub mod regs {
         }
         #[doc = "LSE oscillator enabled"]
         #[inline(always)]
-        pub const fn set_lseon(&mut self, val: bool) {
+        pub fn set_lseon(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "LSE oscillator ready"]
-        #[must_use]
         #[inline(always)]
         pub const fn lserdy(&self) -> bool {
             let val = (self.0 >> 1usize) & 0x01;
@@ -5863,11 +5107,10 @@ pub mod regs {
         }
         #[doc = "LSE oscillator ready"]
         #[inline(always)]
-        pub const fn set_lserdy(&mut self, val: bool) {
+        pub fn set_lserdy(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
         }
         #[doc = "LSE oscillator bypass"]
-        #[must_use]
         #[inline(always)]
         pub const fn lsebyp(&self) -> bool {
             let val = (self.0 >> 2usize) & 0x01;
@@ -5875,11 +5118,10 @@ pub mod regs {
         }
         #[doc = "LSE oscillator bypass"]
         #[inline(always)]
-        pub const fn set_lsebyp(&mut self, val: bool) {
+        pub fn set_lsebyp(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
         }
         #[doc = "LSE oscillator driving capability"]
-        #[must_use]
         #[inline(always)]
         pub const fn lsedrv(&self) -> super::vals::Lsedrv {
             let val = (self.0 >> 3usize) & 0x03;
@@ -5887,11 +5129,10 @@ pub mod regs {
         }
         #[doc = "LSE oscillator driving capability"]
         #[inline(always)]
-        pub const fn set_lsedrv(&mut self, val: super::vals::Lsedrv) {
+        pub fn set_lsedrv(&mut self, val: super::vals::Lsedrv) {
             self.0 = (self.0 & !(0x03 << 3usize)) | (((val.to_bits() as u32) & 0x03) << 3usize);
         }
         #[doc = "LSE clock security system enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn lsecsson(&self) -> bool {
             let val = (self.0 >> 5usize) & 0x01;
@@ -5899,11 +5140,10 @@ pub mod regs {
         }
         #[doc = "LSE clock security system enable"]
         #[inline(always)]
-        pub const fn set_lsecsson(&mut self, val: bool) {
+        pub fn set_lsecsson(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
         }
         #[doc = "LSE clock security system failure detection"]
-        #[must_use]
         #[inline(always)]
         pub const fn lsecssd(&self) -> bool {
             let val = (self.0 >> 6usize) & 0x01;
@@ -5911,11 +5151,10 @@ pub mod regs {
         }
         #[doc = "LSE clock security system failure detection"]
         #[inline(always)]
-        pub const fn set_lsecssd(&mut self, val: bool) {
+        pub fn set_lsecssd(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
         }
         #[doc = "RTC clock source selection"]
-        #[must_use]
         #[inline(always)]
         pub const fn rtcsel(&self) -> super::vals::Rtcsel {
             let val = (self.0 >> 8usize) & 0x03;
@@ -5923,11 +5162,10 @@ pub mod regs {
         }
         #[doc = "RTC clock source selection"]
         #[inline(always)]
-        pub const fn set_rtcsel(&mut self, val: super::vals::Rtcsel) {
+        pub fn set_rtcsel(&mut self, val: super::vals::Rtcsel) {
             self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u32) & 0x03) << 8usize);
         }
         #[doc = "RTC clock enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn rtcen(&self) -> bool {
             let val = (self.0 >> 15usize) & 0x01;
@@ -5935,11 +5173,10 @@ pub mod regs {
         }
         #[doc = "RTC clock enable"]
         #[inline(always)]
-        pub const fn set_rtcen(&mut self, val: bool) {
+        pub fn set_rtcen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
         }
         #[doc = "VSwitch domain software reset"]
-        #[must_use]
         #[inline(always)]
         pub const fn bdrst(&self) -> bool {
             let val = (self.0 >> 16usize) & 0x01;
@@ -5947,7 +5184,7 @@ pub mod regs {
         }
         #[doc = "VSwitch domain software reset"]
         #[inline(always)]
-        pub const fn set_bdrst(&mut self, val: bool) {
+        pub fn set_bdrst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
         }
     }
@@ -5975,19 +5212,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Bdcr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Bdcr {{ lseon: {=bool:?}, lserdy: {=bool:?}, lsebyp: {=bool:?}, lsedrv: {:?}, lsecsson: {=bool:?}, lsecssd: {=bool:?}, rtcsel: {:?}, rtcen: {=bool:?}, bdrst: {=bool:?} }}",
-                self.lseon(),
-                self.lserdy(),
-                self.lsebyp(),
-                self.lsedrv(),
-                self.lsecsson(),
-                self.lsecssd(),
-                self.rtcsel(),
-                self.rtcen(),
-                self.bdrst()
-            )
+            defmt :: write ! (f , "Bdcr {{ lseon: {=bool:?}, lserdy: {=bool:?}, lsebyp: {=bool:?}, lsedrv: {:?}, lsecsson: {=bool:?}, lsecssd: {=bool:?}, rtcsel: {:?}, rtcen: {=bool:?}, bdrst: {=bool:?} }}" , self . lseon () , self . lserdy () , self . lsebyp () , self . lsedrv () , self . lsecsson () , self . lsecssd () , self . rtcsel () , self . rtcen () , self . bdrst ())
         }
     }
     #[doc = "RCC Clock Configuration Register"]
@@ -5996,7 +5221,6 @@ pub mod regs {
     pub struct Cfgr(pub u32);
     impl Cfgr {
         #[doc = "System clock switch"]
-        #[must_use]
         #[inline(always)]
         pub const fn sw(&self) -> super::vals::Sw {
             let val = (self.0 >> 0usize) & 0x07;
@@ -6004,11 +5228,10 @@ pub mod regs {
         }
         #[doc = "System clock switch"]
         #[inline(always)]
-        pub const fn set_sw(&mut self, val: super::vals::Sw) {
+        pub fn set_sw(&mut self, val: super::vals::Sw) {
             self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
         }
         #[doc = "System clock switch status"]
-        #[must_use]
         #[inline(always)]
         pub const fn sws(&self) -> super::vals::Sw {
             let val = (self.0 >> 3usize) & 0x07;
@@ -6016,11 +5239,10 @@ pub mod regs {
         }
         #[doc = "System clock switch status"]
         #[inline(always)]
-        pub const fn set_sws(&mut self, val: super::vals::Sw) {
+        pub fn set_sws(&mut self, val: super::vals::Sw) {
             self.0 = (self.0 & !(0x07 << 3usize)) | (((val.to_bits() as u32) & 0x07) << 3usize);
         }
         #[doc = "System clock selection after a wake up from system Stop"]
-        #[must_use]
         #[inline(always)]
         pub const fn stopwuck(&self) -> super::vals::Stopwuck {
             let val = (self.0 >> 6usize) & 0x01;
@@ -6028,11 +5250,10 @@ pub mod regs {
         }
         #[doc = "System clock selection after a wake up from system Stop"]
         #[inline(always)]
-        pub const fn set_stopwuck(&mut self, val: super::vals::Stopwuck) {
+        pub fn set_stopwuck(&mut self, val: super::vals::Stopwuck) {
             self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
         }
         #[doc = "Kernel clock selection after a wake up from system Stop"]
-        #[must_use]
         #[inline(always)]
         pub const fn stopkerwuck(&self) -> super::vals::Stopwuck {
             let val = (self.0 >> 7usize) & 0x01;
@@ -6040,11 +5261,10 @@ pub mod regs {
         }
         #[doc = "Kernel clock selection after a wake up from system Stop"]
         #[inline(always)]
-        pub const fn set_stopkerwuck(&mut self, val: super::vals::Stopwuck) {
+        pub fn set_stopkerwuck(&mut self, val: super::vals::Stopwuck) {
             self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u32) & 0x01) << 7usize);
         }
         #[doc = "HSE division factor for RTC clock"]
-        #[must_use]
         #[inline(always)]
         pub const fn rtcpre(&self) -> u8 {
             let val = (self.0 >> 8usize) & 0x3f;
@@ -6052,11 +5272,10 @@ pub mod regs {
         }
         #[doc = "HSE division factor for RTC clock"]
         #[inline(always)]
-        pub const fn set_rtcpre(&mut self, val: u8) {
+        pub fn set_rtcpre(&mut self, val: u8) {
             self.0 = (self.0 & !(0x3f << 8usize)) | (((val as u32) & 0x3f) << 8usize);
         }
         #[doc = "High Resolution Timer clock prescaler selection"]
-        #[must_use]
         #[inline(always)]
         pub const fn hrtimsel(&self) -> super::vals::Hrtimsel {
             let val = (self.0 >> 14usize) & 0x01;
@@ -6064,11 +5283,10 @@ pub mod regs {
         }
         #[doc = "High Resolution Timer clock prescaler selection"]
         #[inline(always)]
-        pub const fn set_hrtimsel(&mut self, val: super::vals::Hrtimsel) {
+        pub fn set_hrtimsel(&mut self, val: super::vals::Hrtimsel) {
             self.0 = (self.0 & !(0x01 << 14usize)) | (((val.to_bits() as u32) & 0x01) << 14usize);
         }
         #[doc = "Timers clocks prescaler selection"]
-        #[must_use]
         #[inline(always)]
         pub const fn timpre(&self) -> super::vals::Timpre {
             let val = (self.0 >> 15usize) & 0x01;
@@ -6076,11 +5294,10 @@ pub mod regs {
         }
         #[doc = "Timers clocks prescaler selection"]
         #[inline(always)]
-        pub const fn set_timpre(&mut self, val: super::vals::Timpre) {
+        pub fn set_timpre(&mut self, val: super::vals::Timpre) {
             self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
         }
         #[doc = "MCO1 prescaler"]
-        #[must_use]
         #[inline(always)]
         pub const fn mco1pre(&self) -> super::vals::Mcopre {
             let val = (self.0 >> 18usize) & 0x0f;
@@ -6088,11 +5305,10 @@ pub mod regs {
         }
         #[doc = "MCO1 prescaler"]
         #[inline(always)]
-        pub const fn set_mco1pre(&mut self, val: super::vals::Mcopre) {
+        pub fn set_mco1pre(&mut self, val: super::vals::Mcopre) {
             self.0 = (self.0 & !(0x0f << 18usize)) | (((val.to_bits() as u32) & 0x0f) << 18usize);
         }
         #[doc = "Micro-controller clock output 1"]
-        #[must_use]
         #[inline(always)]
         pub const fn mco1sel(&self) -> super::vals::Mco1sel {
             let val = (self.0 >> 22usize) & 0x07;
@@ -6100,11 +5316,10 @@ pub mod regs {
         }
         #[doc = "Micro-controller clock output 1"]
         #[inline(always)]
-        pub const fn set_mco1sel(&mut self, val: super::vals::Mco1sel) {
+        pub fn set_mco1sel(&mut self, val: super::vals::Mco1sel) {
             self.0 = (self.0 & !(0x07 << 22usize)) | (((val.to_bits() as u32) & 0x07) << 22usize);
         }
         #[doc = "MCO2 prescaler"]
-        #[must_use]
         #[inline(always)]
         pub const fn mco2pre(&self) -> super::vals::Mcopre {
             let val = (self.0 >> 25usize) & 0x0f;
@@ -6112,11 +5327,10 @@ pub mod regs {
         }
         #[doc = "MCO2 prescaler"]
         #[inline(always)]
-        pub const fn set_mco2pre(&mut self, val: super::vals::Mcopre) {
+        pub fn set_mco2pre(&mut self, val: super::vals::Mcopre) {
             self.0 = (self.0 & !(0x0f << 25usize)) | (((val.to_bits() as u32) & 0x0f) << 25usize);
         }
         #[doc = "Micro-controller clock output 2"]
-        #[must_use]
         #[inline(always)]
         pub const fn mco2sel(&self) -> super::vals::Mco2sel {
             let val = (self.0 >> 29usize) & 0x07;
@@ -6124,7 +5338,7 @@ pub mod regs {
         }
         #[doc = "Micro-controller clock output 2"]
         #[inline(always)]
-        pub const fn set_mco2sel(&mut self, val: super::vals::Mco2sel) {
+        pub fn set_mco2sel(&mut self, val: super::vals::Mco2sel) {
             self.0 = (self.0 & !(0x07 << 29usize)) | (((val.to_bits() as u32) & 0x07) << 29usize);
         }
     }
@@ -6154,21 +5368,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Cfgr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Cfgr {{ sw: {:?}, sws: {:?}, stopwuck: {:?}, stopkerwuck: {:?}, rtcpre: {=u8:?}, hrtimsel: {:?}, timpre: {:?}, mco1pre: {:?}, mco1sel: {:?}, mco2pre: {:?}, mco2sel: {:?} }}",
-                self.sw(),
-                self.sws(),
-                self.stopwuck(),
-                self.stopkerwuck(),
-                self.rtcpre(),
-                self.hrtimsel(),
-                self.timpre(),
-                self.mco1pre(),
-                self.mco1sel(),
-                self.mco2pre(),
-                self.mco2sel()
-            )
+            defmt :: write ! (f , "Cfgr {{ sw: {:?}, sws: {:?}, stopwuck: {:?}, stopkerwuck: {:?}, rtcpre: {=u8:?}, hrtimsel: {:?}, timpre: {:?}, mco1pre: {:?}, mco1sel: {:?}, mco2pre: {:?}, mco2sel: {:?} }}" , self . sw () , self . sws () , self . stopwuck () , self . stopkerwuck () , self . rtcpre () , self . hrtimsel () , self . timpre () , self . mco1pre () , self . mco1sel () , self . mco2pre () , self . mco2sel ())
         }
     }
     #[doc = "RCC Clock Source Interrupt Clear Register"]
@@ -6177,7 +5377,6 @@ pub mod regs {
     pub struct Cicr(pub u32);
     impl Cicr {
         #[doc = "LSI ready Interrupt Clear"]
-        #[must_use]
         #[inline(always)]
         pub const fn lsirdyc(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -6185,11 +5384,10 @@ pub mod regs {
         }
         #[doc = "LSI ready Interrupt Clear"]
         #[inline(always)]
-        pub const fn set_lsirdyc(&mut self, val: bool) {
+        pub fn set_lsirdyc(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "LSE ready Interrupt Clear"]
-        #[must_use]
         #[inline(always)]
         pub const fn lserdyc(&self) -> bool {
             let val = (self.0 >> 1usize) & 0x01;
@@ -6197,11 +5395,10 @@ pub mod regs {
         }
         #[doc = "LSE ready Interrupt Clear"]
         #[inline(always)]
-        pub const fn set_lserdyc(&mut self, val: bool) {
+        pub fn set_lserdyc(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
         }
         #[doc = "HSI ready Interrupt Clear"]
-        #[must_use]
         #[inline(always)]
         pub const fn hsirdyc(&self) -> bool {
             let val = (self.0 >> 2usize) & 0x01;
@@ -6209,11 +5406,10 @@ pub mod regs {
         }
         #[doc = "HSI ready Interrupt Clear"]
         #[inline(always)]
-        pub const fn set_hsirdyc(&mut self, val: bool) {
+        pub fn set_hsirdyc(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
         }
         #[doc = "HSE ready Interrupt Clear"]
-        #[must_use]
         #[inline(always)]
         pub const fn hserdyc(&self) -> bool {
             let val = (self.0 >> 3usize) & 0x01;
@@ -6221,11 +5417,10 @@ pub mod regs {
         }
         #[doc = "HSE ready Interrupt Clear"]
         #[inline(always)]
-        pub const fn set_hserdyc(&mut self, val: bool) {
+        pub fn set_hserdyc(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
         }
         #[doc = "CSI ready Interrupt Clear"]
-        #[must_use]
         #[inline(always)]
         pub const fn hse_ready_interrupt_clear(&self) -> bool {
             let val = (self.0 >> 4usize) & 0x01;
@@ -6233,11 +5428,10 @@ pub mod regs {
         }
         #[doc = "CSI ready Interrupt Clear"]
         #[inline(always)]
-        pub const fn set_hse_ready_interrupt_clear(&mut self, val: bool) {
+        pub fn set_hse_ready_interrupt_clear(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
         }
         #[doc = "RC48 ready Interrupt Clear"]
-        #[must_use]
         #[inline(always)]
         pub const fn hsi48rdyc(&self) -> bool {
             let val = (self.0 >> 5usize) & 0x01;
@@ -6245,11 +5439,10 @@ pub mod regs {
         }
         #[doc = "RC48 ready Interrupt Clear"]
         #[inline(always)]
-        pub const fn set_hsi48rdyc(&mut self, val: bool) {
+        pub fn set_hsi48rdyc(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
         }
         #[doc = "PLL1 ready Interrupt Clear"]
-        #[must_use]
         #[inline(always)]
         pub const fn pllrdyc(&self, n: usize) -> bool {
             assert!(n < 3usize);
@@ -6259,13 +5452,12 @@ pub mod regs {
         }
         #[doc = "PLL1 ready Interrupt Clear"]
         #[inline(always)]
-        pub const fn set_pllrdyc(&mut self, n: usize, val: bool) {
+        pub fn set_pllrdyc(&mut self, n: usize, val: bool) {
             assert!(n < 3usize);
             let offs = 6usize + n * 1usize;
             self.0 = (self.0 & !(0x01 << offs)) | (((val as u32) & 0x01) << offs);
         }
         #[doc = "LSE clock security system Interrupt Clear"]
-        #[must_use]
         #[inline(always)]
         pub const fn lsecssc(&self) -> bool {
             let val = (self.0 >> 9usize) & 0x01;
@@ -6273,11 +5465,10 @@ pub mod regs {
         }
         #[doc = "LSE clock security system Interrupt Clear"]
         #[inline(always)]
-        pub const fn set_lsecssc(&mut self, val: bool) {
+        pub fn set_lsecssc(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
         }
         #[doc = "HSE clock security system Interrupt Clear"]
-        #[must_use]
         #[inline(always)]
         pub const fn hsecssc(&self) -> bool {
             let val = (self.0 >> 10usize) & 0x01;
@@ -6285,7 +5476,7 @@ pub mod regs {
         }
         #[doc = "HSE clock security system Interrupt Clear"]
         #[inline(always)]
-        pub const fn set_hsecssc(&mut self, val: bool) {
+        pub fn set_hsecssc(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
         }
     }
@@ -6315,21 +5506,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Cicr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Cicr {{ lsirdyc: {=bool:?}, lserdyc: {=bool:?}, hsirdyc: {=bool:?}, hserdyc: {=bool:?}, hse_ready_interrupt_clear: {=bool:?}, hsi48rdyc: {=bool:?}, pllrdyc[0]: {=bool:?}, pllrdyc[1]: {=bool:?}, pllrdyc[2]: {=bool:?}, lsecssc: {=bool:?}, hsecssc: {=bool:?} }}",
-                self.lsirdyc(),
-                self.lserdyc(),
-                self.hsirdyc(),
-                self.hserdyc(),
-                self.hse_ready_interrupt_clear(),
-                self.hsi48rdyc(),
-                self.pllrdyc(0usize),
-                self.pllrdyc(1usize),
-                self.pllrdyc(2usize),
-                self.lsecssc(),
-                self.hsecssc()
-            )
+            defmt :: write ! (f , "Cicr {{ lsirdyc: {=bool:?}, lserdyc: {=bool:?}, hsirdyc: {=bool:?}, hserdyc: {=bool:?}, hse_ready_interrupt_clear: {=bool:?}, hsi48rdyc: {=bool:?}, pllrdyc[0]: {=bool:?}, pllrdyc[1]: {=bool:?}, pllrdyc[2]: {=bool:?}, lsecssc: {=bool:?}, hsecssc: {=bool:?} }}" , self . lsirdyc () , self . lserdyc () , self . hsirdyc () , self . hserdyc () , self . hse_ready_interrupt_clear () , self . hsi48rdyc () , self . pllrdyc (0usize) , self . pllrdyc (1usize) , self . pllrdyc (2usize) , self . lsecssc () , self . hsecssc ())
         }
     }
     #[doc = "RCC Clock Source Interrupt Enable Register"]
@@ -6338,7 +5515,6 @@ pub mod regs {
     pub struct Cier(pub u32);
     impl Cier {
         #[doc = "LSI ready Interrupt Enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn lsirdyie(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -6346,11 +5522,10 @@ pub mod regs {
         }
         #[doc = "LSI ready Interrupt Enable"]
         #[inline(always)]
-        pub const fn set_lsirdyie(&mut self, val: bool) {
+        pub fn set_lsirdyie(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "LSE ready Interrupt Enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn lserdyie(&self) -> bool {
             let val = (self.0 >> 1usize) & 0x01;
@@ -6358,11 +5533,10 @@ pub mod regs {
         }
         #[doc = "LSE ready Interrupt Enable"]
         #[inline(always)]
-        pub const fn set_lserdyie(&mut self, val: bool) {
+        pub fn set_lserdyie(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
         }
         #[doc = "HSI ready Interrupt Enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn hsirdyie(&self) -> bool {
             let val = (self.0 >> 2usize) & 0x01;
@@ -6370,11 +5544,10 @@ pub mod regs {
         }
         #[doc = "HSI ready Interrupt Enable"]
         #[inline(always)]
-        pub const fn set_hsirdyie(&mut self, val: bool) {
+        pub fn set_hsirdyie(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
         }
         #[doc = "HSE ready Interrupt Enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn hserdyie(&self) -> bool {
             let val = (self.0 >> 3usize) & 0x01;
@@ -6382,11 +5555,10 @@ pub mod regs {
         }
         #[doc = "HSE ready Interrupt Enable"]
         #[inline(always)]
-        pub const fn set_hserdyie(&mut self, val: bool) {
+        pub fn set_hserdyie(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
         }
         #[doc = "CSI ready Interrupt Enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn csirdyie(&self) -> bool {
             let val = (self.0 >> 4usize) & 0x01;
@@ -6394,11 +5566,10 @@ pub mod regs {
         }
         #[doc = "CSI ready Interrupt Enable"]
         #[inline(always)]
-        pub const fn set_csirdyie(&mut self, val: bool) {
+        pub fn set_csirdyie(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
         }
         #[doc = "RC48 ready Interrupt Enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn hsi48rdyie(&self) -> bool {
             let val = (self.0 >> 5usize) & 0x01;
@@ -6406,11 +5577,10 @@ pub mod regs {
         }
         #[doc = "RC48 ready Interrupt Enable"]
         #[inline(always)]
-        pub const fn set_hsi48rdyie(&mut self, val: bool) {
+        pub fn set_hsi48rdyie(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
         }
         #[doc = "PLL1 ready Interrupt Enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn pllrdyie(&self, n: usize) -> bool {
             assert!(n < 3usize);
@@ -6420,13 +5590,12 @@ pub mod regs {
         }
         #[doc = "PLL1 ready Interrupt Enable"]
         #[inline(always)]
-        pub const fn set_pllrdyie(&mut self, n: usize, val: bool) {
+        pub fn set_pllrdyie(&mut self, n: usize, val: bool) {
             assert!(n < 3usize);
             let offs = 6usize + n * 1usize;
             self.0 = (self.0 & !(0x01 << offs)) | (((val as u32) & 0x01) << offs);
         }
         #[doc = "LSE clock security system Interrupt Enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn lsecssie(&self) -> bool {
             let val = (self.0 >> 9usize) & 0x01;
@@ -6434,7 +5603,7 @@ pub mod regs {
         }
         #[doc = "LSE clock security system Interrupt Enable"]
         #[inline(always)]
-        pub const fn set_lsecssie(&mut self, val: bool) {
+        pub fn set_lsecssie(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
         }
     }
@@ -6463,20 +5632,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Cier {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Cier {{ lsirdyie: {=bool:?}, lserdyie: {=bool:?}, hsirdyie: {=bool:?}, hserdyie: {=bool:?}, csirdyie: {=bool:?}, hsi48rdyie: {=bool:?}, pllrdyie[0]: {=bool:?}, pllrdyie[1]: {=bool:?}, pllrdyie[2]: {=bool:?}, lsecssie: {=bool:?} }}",
-                self.lsirdyie(),
-                self.lserdyie(),
-                self.hsirdyie(),
-                self.hserdyie(),
-                self.csirdyie(),
-                self.hsi48rdyie(),
-                self.pllrdyie(0usize),
-                self.pllrdyie(1usize),
-                self.pllrdyie(2usize),
-                self.lsecssie()
-            )
+            defmt :: write ! (f , "Cier {{ lsirdyie: {=bool:?}, lserdyie: {=bool:?}, hsirdyie: {=bool:?}, hserdyie: {=bool:?}, csirdyie: {=bool:?}, hsi48rdyie: {=bool:?}, pllrdyie[0]: {=bool:?}, pllrdyie[1]: {=bool:?}, pllrdyie[2]: {=bool:?}, lsecssie: {=bool:?} }}" , self . lsirdyie () , self . lserdyie () , self . hsirdyie () , self . hserdyie () , self . csirdyie () , self . hsi48rdyie () , self . pllrdyie (0usize) , self . pllrdyie (1usize) , self . pllrdyie (2usize) , self . lsecssie ())
         }
     }
     #[doc = "RCC Clock Source Interrupt Flag Register"]
@@ -6485,7 +5641,6 @@ pub mod regs {
     pub struct Cifr(pub u32);
     impl Cifr {
         #[doc = "LSI ready Interrupt Flag"]
-        #[must_use]
         #[inline(always)]
         pub const fn lsirdyf(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -6493,11 +5648,10 @@ pub mod regs {
         }
         #[doc = "LSI ready Interrupt Flag"]
         #[inline(always)]
-        pub const fn set_lsirdyf(&mut self, val: bool) {
+        pub fn set_lsirdyf(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "LSE ready Interrupt Flag"]
-        #[must_use]
         #[inline(always)]
         pub const fn lserdyf(&self) -> bool {
             let val = (self.0 >> 1usize) & 0x01;
@@ -6505,11 +5659,10 @@ pub mod regs {
         }
         #[doc = "LSE ready Interrupt Flag"]
         #[inline(always)]
-        pub const fn set_lserdyf(&mut self, val: bool) {
+        pub fn set_lserdyf(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
         }
         #[doc = "HSI ready Interrupt Flag"]
-        #[must_use]
         #[inline(always)]
         pub const fn hsirdyf(&self) -> bool {
             let val = (self.0 >> 2usize) & 0x01;
@@ -6517,11 +5670,10 @@ pub mod regs {
         }
         #[doc = "HSI ready Interrupt Flag"]
         #[inline(always)]
-        pub const fn set_hsirdyf(&mut self, val: bool) {
+        pub fn set_hsirdyf(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
         }
         #[doc = "HSE ready Interrupt Flag"]
-        #[must_use]
         #[inline(always)]
         pub const fn hserdyf(&self) -> bool {
             let val = (self.0 >> 3usize) & 0x01;
@@ -6529,11 +5681,10 @@ pub mod regs {
         }
         #[doc = "HSE ready Interrupt Flag"]
         #[inline(always)]
-        pub const fn set_hserdyf(&mut self, val: bool) {
+        pub fn set_hserdyf(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
         }
         #[doc = "CSI ready Interrupt Flag"]
-        #[must_use]
         #[inline(always)]
         pub const fn csirdyf(&self) -> bool {
             let val = (self.0 >> 4usize) & 0x01;
@@ -6541,11 +5692,10 @@ pub mod regs {
         }
         #[doc = "CSI ready Interrupt Flag"]
         #[inline(always)]
-        pub const fn set_csirdyf(&mut self, val: bool) {
+        pub fn set_csirdyf(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
         }
         #[doc = "RC48 ready Interrupt Flag"]
-        #[must_use]
         #[inline(always)]
         pub const fn hsi48rdyf(&self) -> bool {
             let val = (self.0 >> 5usize) & 0x01;
@@ -6553,11 +5703,10 @@ pub mod regs {
         }
         #[doc = "RC48 ready Interrupt Flag"]
         #[inline(always)]
-        pub const fn set_hsi48rdyf(&mut self, val: bool) {
+        pub fn set_hsi48rdyf(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
         }
         #[doc = "PLL1 ready Interrupt Flag"]
-        #[must_use]
         #[inline(always)]
         pub const fn pllrdyf(&self, n: usize) -> bool {
             assert!(n < 3usize);
@@ -6567,13 +5716,12 @@ pub mod regs {
         }
         #[doc = "PLL1 ready Interrupt Flag"]
         #[inline(always)]
-        pub const fn set_pllrdyf(&mut self, n: usize, val: bool) {
+        pub fn set_pllrdyf(&mut self, n: usize, val: bool) {
             assert!(n < 3usize);
             let offs = 6usize + n * 1usize;
             self.0 = (self.0 & !(0x01 << offs)) | (((val as u32) & 0x01) << offs);
         }
         #[doc = "LSE clock security system Interrupt Flag"]
-        #[must_use]
         #[inline(always)]
         pub const fn lsecssf(&self) -> bool {
             let val = (self.0 >> 9usize) & 0x01;
@@ -6581,11 +5729,10 @@ pub mod regs {
         }
         #[doc = "LSE clock security system Interrupt Flag"]
         #[inline(always)]
-        pub const fn set_lsecssf(&mut self, val: bool) {
+        pub fn set_lsecssf(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
         }
         #[doc = "HSE clock security system Interrupt Flag"]
-        #[must_use]
         #[inline(always)]
         pub const fn hsecssf(&self) -> bool {
             let val = (self.0 >> 10usize) & 0x01;
@@ -6593,7 +5740,7 @@ pub mod regs {
         }
         #[doc = "HSE clock security system Interrupt Flag"]
         #[inline(always)]
-        pub const fn set_hsecssf(&mut self, val: bool) {
+        pub fn set_hsecssf(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
         }
     }
@@ -6623,21 +5770,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Cifr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Cifr {{ lsirdyf: {=bool:?}, lserdyf: {=bool:?}, hsirdyf: {=bool:?}, hserdyf: {=bool:?}, csirdyf: {=bool:?}, hsi48rdyf: {=bool:?}, pllrdyf[0]: {=bool:?}, pllrdyf[1]: {=bool:?}, pllrdyf[2]: {=bool:?}, lsecssf: {=bool:?}, hsecssf: {=bool:?} }}",
-                self.lsirdyf(),
-                self.lserdyf(),
-                self.hsirdyf(),
-                self.hserdyf(),
-                self.csirdyf(),
-                self.hsi48rdyf(),
-                self.pllrdyf(0usize),
-                self.pllrdyf(1usize),
-                self.pllrdyf(2usize),
-                self.lsecssf(),
-                self.hsecssf()
-            )
+            defmt :: write ! (f , "Cifr {{ lsirdyf: {=bool:?}, lserdyf: {=bool:?}, hsirdyf: {=bool:?}, hserdyf: {=bool:?}, csirdyf: {=bool:?}, hsi48rdyf: {=bool:?}, pllrdyf[0]: {=bool:?}, pllrdyf[1]: {=bool:?}, pllrdyf[2]: {=bool:?}, lsecssf: {=bool:?}, hsecssf: {=bool:?} }}" , self . lsirdyf () , self . lserdyf () , self . hsirdyf () , self . hserdyf () , self . csirdyf () , self . hsi48rdyf () , self . pllrdyf (0usize) , self . pllrdyf (1usize) , self . pllrdyf (2usize) , self . lsecssf () , self . hsecssf ())
         }
     }
     #[doc = "clock control register"]
@@ -6646,7 +5779,6 @@ pub mod regs {
     pub struct Cr(pub u32);
     impl Cr {
         #[doc = "Internal high-speed clock enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn hsion(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -6654,11 +5786,10 @@ pub mod regs {
         }
         #[doc = "Internal high-speed clock enable"]
         #[inline(always)]
-        pub const fn set_hsion(&mut self, val: bool) {
+        pub fn set_hsion(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "High Speed Internal clock enable in Stop mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn hsikeron(&self) -> bool {
             let val = (self.0 >> 1usize) & 0x01;
@@ -6666,11 +5797,10 @@ pub mod regs {
         }
         #[doc = "High Speed Internal clock enable in Stop mode"]
         #[inline(always)]
-        pub const fn set_hsikeron(&mut self, val: bool) {
+        pub fn set_hsikeron(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
         }
         #[doc = "HSI clock ready flag"]
-        #[must_use]
         #[inline(always)]
         pub const fn hsirdy(&self) -> bool {
             let val = (self.0 >> 2usize) & 0x01;
@@ -6678,11 +5808,10 @@ pub mod regs {
         }
         #[doc = "HSI clock ready flag"]
         #[inline(always)]
-        pub const fn set_hsirdy(&mut self, val: bool) {
+        pub fn set_hsirdy(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
         }
         #[doc = "HSI clock divider"]
-        #[must_use]
         #[inline(always)]
         pub const fn hsidiv(&self) -> super::vals::Hsidiv {
             let val = (self.0 >> 3usize) & 0x03;
@@ -6690,11 +5819,10 @@ pub mod regs {
         }
         #[doc = "HSI clock divider"]
         #[inline(always)]
-        pub const fn set_hsidiv(&mut self, val: super::vals::Hsidiv) {
+        pub fn set_hsidiv(&mut self, val: super::vals::Hsidiv) {
             self.0 = (self.0 & !(0x03 << 3usize)) | (((val.to_bits() as u32) & 0x03) << 3usize);
         }
         #[doc = "HSI divider flag"]
-        #[must_use]
         #[inline(always)]
         pub const fn hsidivf(&self) -> bool {
             let val = (self.0 >> 5usize) & 0x01;
@@ -6702,11 +5830,10 @@ pub mod regs {
         }
         #[doc = "HSI divider flag"]
         #[inline(always)]
-        pub const fn set_hsidivf(&mut self, val: bool) {
+        pub fn set_hsidivf(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
         }
         #[doc = "CSI clock enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn csion(&self) -> bool {
             let val = (self.0 >> 7usize) & 0x01;
@@ -6714,11 +5841,10 @@ pub mod regs {
         }
         #[doc = "CSI clock enable"]
         #[inline(always)]
-        pub const fn set_csion(&mut self, val: bool) {
+        pub fn set_csion(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
         }
         #[doc = "CSI clock ready flag"]
-        #[must_use]
         #[inline(always)]
         pub const fn csirdy(&self) -> bool {
             let val = (self.0 >> 8usize) & 0x01;
@@ -6726,11 +5852,10 @@ pub mod regs {
         }
         #[doc = "CSI clock ready flag"]
         #[inline(always)]
-        pub const fn set_csirdy(&mut self, val: bool) {
+        pub fn set_csirdy(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
         }
         #[doc = "CSI clock enable in Stop mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn csikeron(&self) -> bool {
             let val = (self.0 >> 9usize) & 0x01;
@@ -6738,11 +5863,10 @@ pub mod regs {
         }
         #[doc = "CSI clock enable in Stop mode"]
         #[inline(always)]
-        pub const fn set_csikeron(&mut self, val: bool) {
+        pub fn set_csikeron(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
         }
         #[doc = "RC48 clock enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn hsi48on(&self) -> bool {
             let val = (self.0 >> 12usize) & 0x01;
@@ -6750,11 +5874,10 @@ pub mod regs {
         }
         #[doc = "RC48 clock enable"]
         #[inline(always)]
-        pub const fn set_hsi48on(&mut self, val: bool) {
+        pub fn set_hsi48on(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
         }
         #[doc = "RC48 clock ready flag"]
-        #[must_use]
         #[inline(always)]
         pub const fn hsi48rdy(&self) -> bool {
             let val = (self.0 >> 13usize) & 0x01;
@@ -6762,11 +5885,10 @@ pub mod regs {
         }
         #[doc = "RC48 clock ready flag"]
         #[inline(always)]
-        pub const fn set_hsi48rdy(&mut self, val: bool) {
+        pub fn set_hsi48rdy(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
         }
         #[doc = "D1 domain clocks ready flag"]
-        #[must_use]
         #[inline(always)]
         pub const fn d1ckrdy(&self) -> bool {
             let val = (self.0 >> 14usize) & 0x01;
@@ -6774,11 +5896,10 @@ pub mod regs {
         }
         #[doc = "D1 domain clocks ready flag"]
         #[inline(always)]
-        pub const fn set_d1ckrdy(&mut self, val: bool) {
+        pub fn set_d1ckrdy(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
         }
         #[doc = "D2 domain clocks ready flag"]
-        #[must_use]
         #[inline(always)]
         pub const fn d2ckrdy(&self) -> bool {
             let val = (self.0 >> 15usize) & 0x01;
@@ -6786,11 +5907,10 @@ pub mod regs {
         }
         #[doc = "D2 domain clocks ready flag"]
         #[inline(always)]
-        pub const fn set_d2ckrdy(&mut self, val: bool) {
+        pub fn set_d2ckrdy(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
         }
         #[doc = "HSE clock enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn hseon(&self) -> bool {
             let val = (self.0 >> 16usize) & 0x01;
@@ -6798,11 +5918,10 @@ pub mod regs {
         }
         #[doc = "HSE clock enable"]
         #[inline(always)]
-        pub const fn set_hseon(&mut self, val: bool) {
+        pub fn set_hseon(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
         }
         #[doc = "HSE clock ready flag"]
-        #[must_use]
         #[inline(always)]
         pub const fn hserdy(&self) -> bool {
             let val = (self.0 >> 17usize) & 0x01;
@@ -6810,11 +5929,10 @@ pub mod regs {
         }
         #[doc = "HSE clock ready flag"]
         #[inline(always)]
-        pub const fn set_hserdy(&mut self, val: bool) {
+        pub fn set_hserdy(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
         }
         #[doc = "HSE clock bypass"]
-        #[must_use]
         #[inline(always)]
         pub const fn hsebyp(&self) -> bool {
             let val = (self.0 >> 18usize) & 0x01;
@@ -6822,11 +5940,10 @@ pub mod regs {
         }
         #[doc = "HSE clock bypass"]
         #[inline(always)]
-        pub const fn set_hsebyp(&mut self, val: bool) {
+        pub fn set_hsebyp(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
         }
         #[doc = "HSE Clock Security System enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn hsecsson(&self) -> bool {
             let val = (self.0 >> 19usize) & 0x01;
@@ -6834,11 +5951,10 @@ pub mod regs {
         }
         #[doc = "HSE Clock Security System enable"]
         #[inline(always)]
-        pub const fn set_hsecsson(&mut self, val: bool) {
+        pub fn set_hsecsson(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
         }
         #[doc = "PLL1 enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn pllon(&self, n: usize) -> bool {
             assert!(n < 3usize);
@@ -6848,13 +5964,12 @@ pub mod regs {
         }
         #[doc = "PLL1 enable"]
         #[inline(always)]
-        pub const fn set_pllon(&mut self, n: usize, val: bool) {
+        pub fn set_pllon(&mut self, n: usize, val: bool) {
             assert!(n < 3usize);
             let offs = 24usize + n * 2usize;
             self.0 = (self.0 & !(0x01 << offs)) | (((val as u32) & 0x01) << offs);
         }
         #[doc = "PLL1 clock ready flag"]
-        #[must_use]
         #[inline(always)]
         pub const fn pllrdy(&self, n: usize) -> bool {
             assert!(n < 3usize);
@@ -6864,7 +5979,7 @@ pub mod regs {
         }
         #[doc = "PLL1 clock ready flag"]
         #[inline(always)]
-        pub const fn set_pllrdy(&mut self, n: usize, val: bool) {
+        pub fn set_pllrdy(&mut self, n: usize, val: bool) {
             assert!(n < 3usize);
             let offs = 25usize + n * 2usize;
             self.0 = (self.0 & !(0x01 << offs)) | (((val as u32) & 0x01) << offs);
@@ -6907,32 +6022,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Cr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Cr {{ hsion: {=bool:?}, hsikeron: {=bool:?}, hsirdy: {=bool:?}, hsidiv: {:?}, hsidivf: {=bool:?}, csion: {=bool:?}, csirdy: {=bool:?}, csikeron: {=bool:?}, hsi48on: {=bool:?}, hsi48rdy: {=bool:?}, d1ckrdy: {=bool:?}, d2ckrdy: {=bool:?}, hseon: {=bool:?}, hserdy: {=bool:?}, hsebyp: {=bool:?}, hsecsson: {=bool:?}, pllon[0]: {=bool:?}, pllon[1]: {=bool:?}, pllon[2]: {=bool:?}, pllrdy[0]: {=bool:?}, pllrdy[1]: {=bool:?}, pllrdy[2]: {=bool:?} }}",
-                self.hsion(),
-                self.hsikeron(),
-                self.hsirdy(),
-                self.hsidiv(),
-                self.hsidivf(),
-                self.csion(),
-                self.csirdy(),
-                self.csikeron(),
-                self.hsi48on(),
-                self.hsi48rdy(),
-                self.d1ckrdy(),
-                self.d2ckrdy(),
-                self.hseon(),
-                self.hserdy(),
-                self.hsebyp(),
-                self.hsecsson(),
-                self.pllon(0usize),
-                self.pllon(1usize),
-                self.pllon(2usize),
-                self.pllrdy(0usize),
-                self.pllrdy(1usize),
-                self.pllrdy(2usize)
-            )
+            defmt :: write ! (f , "Cr {{ hsion: {=bool:?}, hsikeron: {=bool:?}, hsirdy: {=bool:?}, hsidiv: {:?}, hsidivf: {=bool:?}, csion: {=bool:?}, csirdy: {=bool:?}, csikeron: {=bool:?}, hsi48on: {=bool:?}, hsi48rdy: {=bool:?}, d1ckrdy: {=bool:?}, d2ckrdy: {=bool:?}, hseon: {=bool:?}, hserdy: {=bool:?}, hsebyp: {=bool:?}, hsecsson: {=bool:?}, pllon[0]: {=bool:?}, pllon[1]: {=bool:?}, pllon[2]: {=bool:?}, pllrdy[0]: {=bool:?}, pllrdy[1]: {=bool:?}, pllrdy[2]: {=bool:?} }}" , self . hsion () , self . hsikeron () , self . hsirdy () , self . hsidiv () , self . hsidivf () , self . csion () , self . csirdy () , self . csikeron () , self . hsi48on () , self . hsi48rdy () , self . d1ckrdy () , self . d2ckrdy () , self . hseon () , self . hserdy () , self . hsebyp () , self . hsecsson () , self . pllon (0usize) , self . pllon (1usize) , self . pllon (2usize) , self . pllrdy (0usize) , self . pllrdy (1usize) , self . pllrdy (2usize))
         }
     }
     #[doc = "RCC Clock Recovery RC Register"]
@@ -6941,7 +6031,6 @@ pub mod regs {
     pub struct Crrcr(pub u32);
     impl Crrcr {
         #[doc = "Internal RC 48 MHz clock calibration"]
-        #[must_use]
         #[inline(always)]
         pub const fn hsi48cal(&self) -> u16 {
             let val = (self.0 >> 0usize) & 0x03ff;
@@ -6949,7 +6038,7 @@ pub mod regs {
         }
         #[doc = "Internal RC 48 MHz clock calibration"]
         #[inline(always)]
-        pub const fn set_hsi48cal(&mut self, val: u16) {
+        pub fn set_hsi48cal(&mut self, val: u16) {
             self.0 = (self.0 & !(0x03ff << 0usize)) | (((val as u32) & 0x03ff) << 0usize);
         }
     }
@@ -6976,7 +6065,6 @@ pub mod regs {
     pub struct Csicfgr(pub u32);
     impl Csicfgr {
         #[doc = "CSI clock calibration"]
-        #[must_use]
         #[inline(always)]
         pub const fn csical(&self) -> u16 {
             let val = (self.0 >> 0usize) & 0x01ff;
@@ -6984,11 +6072,10 @@ pub mod regs {
         }
         #[doc = "CSI clock calibration"]
         #[inline(always)]
-        pub const fn set_csical(&mut self, val: u16) {
+        pub fn set_csical(&mut self, val: u16) {
             self.0 = (self.0 & !(0x01ff << 0usize)) | (((val as u32) & 0x01ff) << 0usize);
         }
         #[doc = "CSI clock trimming"]
-        #[must_use]
         #[inline(always)]
         pub const fn csitrim(&self) -> u8 {
             let val = (self.0 >> 24usize) & 0x3f;
@@ -6996,7 +6083,7 @@ pub mod regs {
         }
         #[doc = "CSI clock trimming"]
         #[inline(always)]
-        pub const fn set_csitrim(&mut self, val: u8) {
+        pub fn set_csitrim(&mut self, val: u8) {
             self.0 = (self.0 & !(0x3f << 24usize)) | (((val as u32) & 0x3f) << 24usize);
         }
     }
@@ -7031,7 +6118,6 @@ pub mod regs {
     pub struct Csr(pub u32);
     impl Csr {
         #[doc = "LSI oscillator enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn lsion(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -7039,11 +6125,10 @@ pub mod regs {
         }
         #[doc = "LSI oscillator enable"]
         #[inline(always)]
-        pub const fn set_lsion(&mut self, val: bool) {
+        pub fn set_lsion(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "LSI oscillator ready"]
-        #[must_use]
         #[inline(always)]
         pub const fn lsirdy(&self) -> bool {
             let val = (self.0 >> 1usize) & 0x01;
@@ -7051,7 +6136,7 @@ pub mod regs {
         }
         #[doc = "LSI oscillator ready"]
         #[inline(always)]
-        pub const fn set_lsirdy(&mut self, val: bool) {
+        pub fn set_lsirdy(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
         }
     }
@@ -7086,7 +6171,6 @@ pub mod regs {
     pub struct D1ccipr(pub u32);
     impl D1ccipr {
         #[doc = "FMC kernel clock source selection"]
-        #[must_use]
         #[inline(always)]
         pub const fn fmcsel(&self) -> super::vals::Fmcsel {
             let val = (self.0 >> 0usize) & 0x03;
@@ -7094,11 +6178,10 @@ pub mod regs {
         }
         #[doc = "FMC kernel clock source selection"]
         #[inline(always)]
-        pub const fn set_fmcsel(&mut self, val: super::vals::Fmcsel) {
+        pub fn set_fmcsel(&mut self, val: super::vals::Fmcsel) {
             self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
         }
         #[doc = "OCTOSPI kernel clock source selection"]
-        #[must_use]
         #[inline(always)]
         pub const fn octospisel(&self) -> super::vals::Fmcsel {
             let val = (self.0 >> 4usize) & 0x03;
@@ -7106,11 +6189,10 @@ pub mod regs {
         }
         #[doc = "OCTOSPI kernel clock source selection"]
         #[inline(always)]
-        pub const fn set_octospisel(&mut self, val: super::vals::Fmcsel) {
+        pub fn set_octospisel(&mut self, val: super::vals::Fmcsel) {
             self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
         }
         #[doc = "SDMMC kernel clock source selection"]
-        #[must_use]
         #[inline(always)]
         pub const fn sdmmcsel(&self) -> super::vals::Sdmmcsel {
             let val = (self.0 >> 16usize) & 0x01;
@@ -7118,11 +6200,10 @@ pub mod regs {
         }
         #[doc = "SDMMC kernel clock source selection"]
         #[inline(always)]
-        pub const fn set_sdmmcsel(&mut self, val: super::vals::Sdmmcsel) {
+        pub fn set_sdmmcsel(&mut self, val: super::vals::Sdmmcsel) {
             self.0 = (self.0 & !(0x01 << 16usize)) | (((val.to_bits() as u32) & 0x01) << 16usize);
         }
         #[doc = "per_ck clock source selection"]
-        #[must_use]
         #[inline(always)]
         pub const fn persel(&self) -> super::vals::Persel {
             let val = (self.0 >> 28usize) & 0x03;
@@ -7130,7 +6211,7 @@ pub mod regs {
         }
         #[doc = "per_ck clock source selection"]
         #[inline(always)]
-        pub const fn set_persel(&mut self, val: super::vals::Persel) {
+        pub fn set_persel(&mut self, val: super::vals::Persel) {
             self.0 = (self.0 & !(0x03 << 28usize)) | (((val.to_bits() as u32) & 0x03) << 28usize);
         }
     }
@@ -7169,7 +6250,6 @@ pub mod regs {
     pub struct D1cfgr(pub u32);
     impl D1cfgr {
         #[doc = "D1 domain AHB prescaler"]
-        #[must_use]
         #[inline(always)]
         pub const fn hpre(&self) -> super::vals::Hpre {
             let val = (self.0 >> 0usize) & 0x0f;
@@ -7177,11 +6257,10 @@ pub mod regs {
         }
         #[doc = "D1 domain AHB prescaler"]
         #[inline(always)]
-        pub const fn set_hpre(&mut self, val: super::vals::Hpre) {
+        pub fn set_hpre(&mut self, val: super::vals::Hpre) {
             self.0 = (self.0 & !(0x0f << 0usize)) | (((val.to_bits() as u32) & 0x0f) << 0usize);
         }
         #[doc = "D1 domain APB3 prescaler"]
-        #[must_use]
         #[inline(always)]
         pub const fn d1ppre(&self) -> super::vals::Ppre {
             let val = (self.0 >> 4usize) & 0x07;
@@ -7189,11 +6268,10 @@ pub mod regs {
         }
         #[doc = "D1 domain APB3 prescaler"]
         #[inline(always)]
-        pub const fn set_d1ppre(&mut self, val: super::vals::Ppre) {
+        pub fn set_d1ppre(&mut self, val: super::vals::Ppre) {
             self.0 = (self.0 & !(0x07 << 4usize)) | (((val.to_bits() as u32) & 0x07) << 4usize);
         }
         #[doc = "D1 domain Core prescaler"]
-        #[must_use]
         #[inline(always)]
         pub const fn d1cpre(&self) -> super::vals::Hpre {
             let val = (self.0 >> 8usize) & 0x0f;
@@ -7201,7 +6279,7 @@ pub mod regs {
         }
         #[doc = "D1 domain Core prescaler"]
         #[inline(always)]
-        pub const fn set_d1cpre(&mut self, val: super::vals::Hpre) {
+        pub fn set_d1cpre(&mut self, val: super::vals::Hpre) {
             self.0 = (self.0 & !(0x0f << 8usize)) | (((val.to_bits() as u32) & 0x0f) << 8usize);
         }
     }
@@ -7238,7 +6316,6 @@ pub mod regs {
     pub struct D2ccip1r(pub u32);
     impl D2ccip1r {
         #[doc = "SAI1 and DFSDM1 kernel Aclk clock source selection"]
-        #[must_use]
         #[inline(always)]
         pub const fn sai1sel(&self) -> super::vals::Saisel {
             let val = (self.0 >> 0usize) & 0x07;
@@ -7246,11 +6323,10 @@ pub mod regs {
         }
         #[doc = "SAI1 and DFSDM1 kernel Aclk clock source selection"]
         #[inline(always)]
-        pub const fn set_sai1sel(&mut self, val: super::vals::Saisel) {
+        pub fn set_sai1sel(&mut self, val: super::vals::Saisel) {
             self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
         }
         #[doc = "SAI2 kernel clock source A source selection"]
-        #[must_use]
         #[inline(always)]
         pub const fn sai2asel(&self) -> super::vals::Saiasel {
             let val = (self.0 >> 6usize) & 0x07;
@@ -7258,11 +6334,10 @@ pub mod regs {
         }
         #[doc = "SAI2 kernel clock source A source selection"]
         #[inline(always)]
-        pub const fn set_sai2asel(&mut self, val: super::vals::Saiasel) {
+        pub fn set_sai2asel(&mut self, val: super::vals::Saiasel) {
             self.0 = (self.0 & !(0x07 << 6usize)) | (((val.to_bits() as u32) & 0x07) << 6usize);
         }
         #[doc = "SAI2 kernel clock source B source selection"]
-        #[must_use]
         #[inline(always)]
         pub const fn sai2bsel(&self) -> super::vals::Saiasel {
             let val = (self.0 >> 9usize) & 0x07;
@@ -7270,11 +6345,10 @@ pub mod regs {
         }
         #[doc = "SAI2 kernel clock source B source selection"]
         #[inline(always)]
-        pub const fn set_sai2bsel(&mut self, val: super::vals::Saiasel) {
+        pub fn set_sai2bsel(&mut self, val: super::vals::Saiasel) {
             self.0 = (self.0 & !(0x07 << 9usize)) | (((val.to_bits() as u32) & 0x07) << 9usize);
         }
         #[doc = "SPI/I2S1,2 and 3 kernel clock source selection"]
-        #[must_use]
         #[inline(always)]
         pub const fn spi123sel(&self) -> super::vals::Saisel {
             let val = (self.0 >> 12usize) & 0x07;
@@ -7282,11 +6356,10 @@ pub mod regs {
         }
         #[doc = "SPI/I2S1,2 and 3 kernel clock source selection"]
         #[inline(always)]
-        pub const fn set_spi123sel(&mut self, val: super::vals::Saisel) {
+        pub fn set_spi123sel(&mut self, val: super::vals::Saisel) {
             self.0 = (self.0 & !(0x07 << 12usize)) | (((val.to_bits() as u32) & 0x07) << 12usize);
         }
         #[doc = "SPI4 and 5 kernel clock source selection"]
-        #[must_use]
         #[inline(always)]
         pub const fn spi45sel(&self) -> super::vals::Spi45sel {
             let val = (self.0 >> 16usize) & 0x07;
@@ -7294,11 +6367,10 @@ pub mod regs {
         }
         #[doc = "SPI4 and 5 kernel clock source selection"]
         #[inline(always)]
-        pub const fn set_spi45sel(&mut self, val: super::vals::Spi45sel) {
+        pub fn set_spi45sel(&mut self, val: super::vals::Spi45sel) {
             self.0 = (self.0 & !(0x07 << 16usize)) | (((val.to_bits() as u32) & 0x07) << 16usize);
         }
         #[doc = "SPDIFRX kernel clock source selection"]
-        #[must_use]
         #[inline(always)]
         pub const fn spdifrxsel(&self) -> super::vals::Spdifrxsel {
             let val = (self.0 >> 20usize) & 0x03;
@@ -7306,11 +6378,10 @@ pub mod regs {
         }
         #[doc = "SPDIFRX kernel clock source selection"]
         #[inline(always)]
-        pub const fn set_spdifrxsel(&mut self, val: super::vals::Spdifrxsel) {
+        pub fn set_spdifrxsel(&mut self, val: super::vals::Spdifrxsel) {
             self.0 = (self.0 & !(0x03 << 20usize)) | (((val.to_bits() as u32) & 0x03) << 20usize);
         }
         #[doc = "DFSDM1 kernel Clk clock source selection"]
-        #[must_use]
         #[inline(always)]
         pub const fn dfsdm1sel(&self) -> super::vals::Dfsdmsel {
             let val = (self.0 >> 24usize) & 0x01;
@@ -7318,11 +6389,10 @@ pub mod regs {
         }
         #[doc = "DFSDM1 kernel Clk clock source selection"]
         #[inline(always)]
-        pub const fn set_dfsdm1sel(&mut self, val: super::vals::Dfsdmsel) {
+        pub fn set_dfsdm1sel(&mut self, val: super::vals::Dfsdmsel) {
             self.0 = (self.0 & !(0x01 << 24usize)) | (((val.to_bits() as u32) & 0x01) << 24usize);
         }
         #[doc = "FDCAN kernel clock source selection"]
-        #[must_use]
         #[inline(always)]
         pub const fn fdcansel(&self) -> super::vals::Fdcansel {
             let val = (self.0 >> 28usize) & 0x03;
@@ -7330,11 +6400,10 @@ pub mod regs {
         }
         #[doc = "FDCAN kernel clock source selection"]
         #[inline(always)]
-        pub const fn set_fdcansel(&mut self, val: super::vals::Fdcansel) {
+        pub fn set_fdcansel(&mut self, val: super::vals::Fdcansel) {
             self.0 = (self.0 & !(0x03 << 28usize)) | (((val.to_bits() as u32) & 0x03) << 28usize);
         }
         #[doc = "SWPMI kernel clock source selection"]
-        #[must_use]
         #[inline(always)]
         pub const fn swpmisel(&self) -> super::vals::Swpmisel {
             let val = (self.0 >> 31usize) & 0x01;
@@ -7342,7 +6411,7 @@ pub mod regs {
         }
         #[doc = "SWPMI kernel clock source selection"]
         #[inline(always)]
-        pub const fn set_swpmisel(&mut self, val: super::vals::Swpmisel) {
+        pub fn set_swpmisel(&mut self, val: super::vals::Swpmisel) {
             self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
         }
     }
@@ -7370,19 +6439,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for D2ccip1r {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "D2ccip1r {{ sai1sel: {:?}, sai2asel: {:?}, sai2bsel: {:?}, spi123sel: {:?}, spi45sel: {:?}, spdifrxsel: {:?}, dfsdm1sel: {:?}, fdcansel: {:?}, swpmisel: {:?} }}",
-                self.sai1sel(),
-                self.sai2asel(),
-                self.sai2bsel(),
-                self.spi123sel(),
-                self.spi45sel(),
-                self.spdifrxsel(),
-                self.dfsdm1sel(),
-                self.fdcansel(),
-                self.swpmisel()
-            )
+            defmt :: write ! (f , "D2ccip1r {{ sai1sel: {:?}, sai2asel: {:?}, sai2bsel: {:?}, spi123sel: {:?}, spi45sel: {:?}, spdifrxsel: {:?}, dfsdm1sel: {:?}, fdcansel: {:?}, swpmisel: {:?} }}" , self . sai1sel () , self . sai2asel () , self . sai2bsel () , self . spi123sel () , self . spi45sel () , self . spdifrxsel () , self . dfsdm1sel () , self . fdcansel () , self . swpmisel ())
         }
     }
     #[doc = "RCC Domain 2 Kernel Clock Configuration Register"]
@@ -7391,7 +6448,6 @@ pub mod regs {
     pub struct D2ccip2r(pub u32);
     impl D2ccip2r {
         #[doc = "USART2/3, UART4,5, 7/8 (APB1) kernel clock source selection"]
-        #[must_use]
         #[inline(always)]
         pub const fn usart234578sel(&self) -> super::vals::Usart234578sel {
             let val = (self.0 >> 0usize) & 0x07;
@@ -7399,11 +6455,10 @@ pub mod regs {
         }
         #[doc = "USART2/3, UART4,5, 7/8 (APB1) kernel clock source selection"]
         #[inline(always)]
-        pub const fn set_usart234578sel(&mut self, val: super::vals::Usart234578sel) {
+        pub fn set_usart234578sel(&mut self, val: super::vals::Usart234578sel) {
             self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
         }
         #[doc = "USART1, 6, 9 and 10 kernel clock source selection"]
-        #[must_use]
         #[inline(always)]
         pub const fn usart16910sel(&self) -> super::vals::Usart16910sel {
             let val = (self.0 >> 3usize) & 0x07;
@@ -7411,11 +6466,10 @@ pub mod regs {
         }
         #[doc = "USART1, 6, 9 and 10 kernel clock source selection"]
         #[inline(always)]
-        pub const fn set_usart16910sel(&mut self, val: super::vals::Usart16910sel) {
+        pub fn set_usart16910sel(&mut self, val: super::vals::Usart16910sel) {
             self.0 = (self.0 & !(0x07 << 3usize)) | (((val.to_bits() as u32) & 0x07) << 3usize);
         }
         #[doc = "RNG kernel clock source selection"]
-        #[must_use]
         #[inline(always)]
         pub const fn rngsel(&self) -> super::vals::Rngsel {
             let val = (self.0 >> 8usize) & 0x03;
@@ -7423,11 +6477,10 @@ pub mod regs {
         }
         #[doc = "RNG kernel clock source selection"]
         #[inline(always)]
-        pub const fn set_rngsel(&mut self, val: super::vals::Rngsel) {
+        pub fn set_rngsel(&mut self, val: super::vals::Rngsel) {
             self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u32) & 0x03) << 8usize);
         }
         #[doc = "I2C1,2,3 kernel clock source selection"]
-        #[must_use]
         #[inline(always)]
         pub const fn i2c1235sel(&self) -> super::vals::I2c1235sel {
             let val = (self.0 >> 12usize) & 0x03;
@@ -7435,11 +6488,10 @@ pub mod regs {
         }
         #[doc = "I2C1,2,3 kernel clock source selection"]
         #[inline(always)]
-        pub const fn set_i2c1235sel(&mut self, val: super::vals::I2c1235sel) {
+        pub fn set_i2c1235sel(&mut self, val: super::vals::I2c1235sel) {
             self.0 = (self.0 & !(0x03 << 12usize)) | (((val.to_bits() as u32) & 0x03) << 12usize);
         }
         #[doc = "USBOTG 1 and 2 kernel clock source selection"]
-        #[must_use]
         #[inline(always)]
         pub const fn usbsel(&self) -> super::vals::Usbsel {
             let val = (self.0 >> 20usize) & 0x03;
@@ -7447,11 +6499,10 @@ pub mod regs {
         }
         #[doc = "USBOTG 1 and 2 kernel clock source selection"]
         #[inline(always)]
-        pub const fn set_usbsel(&mut self, val: super::vals::Usbsel) {
+        pub fn set_usbsel(&mut self, val: super::vals::Usbsel) {
             self.0 = (self.0 & !(0x03 << 20usize)) | (((val.to_bits() as u32) & 0x03) << 20usize);
         }
         #[doc = "HDMI-CEC kernel clock source selection"]
-        #[must_use]
         #[inline(always)]
         pub const fn cecsel(&self) -> super::vals::Cecsel {
             let val = (self.0 >> 22usize) & 0x03;
@@ -7459,11 +6510,10 @@ pub mod regs {
         }
         #[doc = "HDMI-CEC kernel clock source selection"]
         #[inline(always)]
-        pub const fn set_cecsel(&mut self, val: super::vals::Cecsel) {
+        pub fn set_cecsel(&mut self, val: super::vals::Cecsel) {
             self.0 = (self.0 & !(0x03 << 22usize)) | (((val.to_bits() as u32) & 0x03) << 22usize);
         }
         #[doc = "LPTIM1 kernel clock source selection"]
-        #[must_use]
         #[inline(always)]
         pub const fn lptim1sel(&self) -> super::vals::Lptim1sel {
             let val = (self.0 >> 28usize) & 0x07;
@@ -7471,7 +6521,7 @@ pub mod regs {
         }
         #[doc = "LPTIM1 kernel clock source selection"]
         #[inline(always)]
-        pub const fn set_lptim1sel(&mut self, val: super::vals::Lptim1sel) {
+        pub fn set_lptim1sel(&mut self, val: super::vals::Lptim1sel) {
             self.0 = (self.0 & !(0x07 << 28usize)) | (((val.to_bits() as u32) & 0x07) << 28usize);
         }
     }
@@ -7497,17 +6547,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for D2ccip2r {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "D2ccip2r {{ usart234578sel: {:?}, usart16910sel: {:?}, rngsel: {:?}, i2c1235sel: {:?}, usbsel: {:?}, cecsel: {:?}, lptim1sel: {:?} }}",
-                self.usart234578sel(),
-                self.usart16910sel(),
-                self.rngsel(),
-                self.i2c1235sel(),
-                self.usbsel(),
-                self.cecsel(),
-                self.lptim1sel()
-            )
+            defmt :: write ! (f , "D2ccip2r {{ usart234578sel: {:?}, usart16910sel: {:?}, rngsel: {:?}, i2c1235sel: {:?}, usbsel: {:?}, cecsel: {:?}, lptim1sel: {:?} }}" , self . usart234578sel () , self . usart16910sel () , self . rngsel () , self . i2c1235sel () , self . usbsel () , self . cecsel () , self . lptim1sel ())
         }
     }
     #[doc = "RCC Domain 2 Clock Configuration Register"]
@@ -7516,7 +6556,6 @@ pub mod regs {
     pub struct D2cfgr(pub u32);
     impl D2cfgr {
         #[doc = "D2 domain APB1 prescaler"]
-        #[must_use]
         #[inline(always)]
         pub const fn d2ppre1(&self) -> super::vals::Ppre {
             let val = (self.0 >> 4usize) & 0x07;
@@ -7524,11 +6563,10 @@ pub mod regs {
         }
         #[doc = "D2 domain APB1 prescaler"]
         #[inline(always)]
-        pub const fn set_d2ppre1(&mut self, val: super::vals::Ppre) {
+        pub fn set_d2ppre1(&mut self, val: super::vals::Ppre) {
             self.0 = (self.0 & !(0x07 << 4usize)) | (((val.to_bits() as u32) & 0x07) << 4usize);
         }
         #[doc = "D2 domain APB2 prescaler"]
-        #[must_use]
         #[inline(always)]
         pub const fn d2ppre2(&self) -> super::vals::Ppre {
             let val = (self.0 >> 8usize) & 0x07;
@@ -7536,7 +6574,7 @@ pub mod regs {
         }
         #[doc = "D2 domain APB2 prescaler"]
         #[inline(always)]
-        pub const fn set_d2ppre2(&mut self, val: super::vals::Ppre) {
+        pub fn set_d2ppre2(&mut self, val: super::vals::Ppre) {
             self.0 = (self.0 & !(0x07 << 8usize)) | (((val.to_bits() as u32) & 0x07) << 8usize);
         }
     }
@@ -7571,7 +6609,6 @@ pub mod regs {
     pub struct D3amr(pub u32);
     impl D3amr {
         #[doc = "BDMA2 and DMAMUX Autonomous mode enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn bdma2amen(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -7579,11 +6616,10 @@ pub mod regs {
         }
         #[doc = "BDMA2 and DMAMUX Autonomous mode enable"]
         #[inline(always)]
-        pub const fn set_bdma2amen(&mut self, val: bool) {
+        pub fn set_bdma2amen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "BDMA and DMAMUX Autonomous mode enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn bdmaamen(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -7591,11 +6627,10 @@ pub mod regs {
         }
         #[doc = "BDMA and DMAMUX Autonomous mode enable"]
         #[inline(always)]
-        pub const fn set_bdmaamen(&mut self, val: bool) {
+        pub fn set_bdmaamen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "LPUART1 Autonomous mode enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn lpuart1amen(&self) -> bool {
             let val = (self.0 >> 3usize) & 0x01;
@@ -7603,11 +6638,10 @@ pub mod regs {
         }
         #[doc = "LPUART1 Autonomous mode enable"]
         #[inline(always)]
-        pub const fn set_lpuart1amen(&mut self, val: bool) {
+        pub fn set_lpuart1amen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
         }
         #[doc = "SPI6 Autonomous mode enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn spi6amen(&self) -> bool {
             let val = (self.0 >> 5usize) & 0x01;
@@ -7615,11 +6649,10 @@ pub mod regs {
         }
         #[doc = "SPI6 Autonomous mode enable"]
         #[inline(always)]
-        pub const fn set_spi6amen(&mut self, val: bool) {
+        pub fn set_spi6amen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
         }
         #[doc = "I2C4 Autonomous mode enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn i2c4amen(&self) -> bool {
             let val = (self.0 >> 7usize) & 0x01;
@@ -7627,11 +6660,10 @@ pub mod regs {
         }
         #[doc = "I2C4 Autonomous mode enable"]
         #[inline(always)]
-        pub const fn set_i2c4amen(&mut self, val: bool) {
+        pub fn set_i2c4amen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
         }
         #[doc = "LPTIM2 Autonomous mode enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn lptim2amen(&self) -> bool {
             let val = (self.0 >> 9usize) & 0x01;
@@ -7639,11 +6671,10 @@ pub mod regs {
         }
         #[doc = "LPTIM2 Autonomous mode enable"]
         #[inline(always)]
-        pub const fn set_lptim2amen(&mut self, val: bool) {
+        pub fn set_lptim2amen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
         }
         #[doc = "LPTIM3 Autonomous mode enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn lptim3amen(&self) -> bool {
             let val = (self.0 >> 10usize) & 0x01;
@@ -7651,11 +6682,10 @@ pub mod regs {
         }
         #[doc = "LPTIM3 Autonomous mode enable"]
         #[inline(always)]
-        pub const fn set_lptim3amen(&mut self, val: bool) {
+        pub fn set_lptim3amen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
         }
         #[doc = "LPTIM4 Autonomous mode enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn lptim4amen(&self) -> bool {
             let val = (self.0 >> 11usize) & 0x01;
@@ -7663,11 +6693,10 @@ pub mod regs {
         }
         #[doc = "LPTIM4 Autonomous mode enable"]
         #[inline(always)]
-        pub const fn set_lptim4amen(&mut self, val: bool) {
+        pub fn set_lptim4amen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
         }
         #[doc = "LPTIM5 Autonomous mode enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn lptim5amen(&self) -> bool {
             let val = (self.0 >> 12usize) & 0x01;
@@ -7675,11 +6704,10 @@ pub mod regs {
         }
         #[doc = "LPTIM5 Autonomous mode enable"]
         #[inline(always)]
-        pub const fn set_lptim5amen(&mut self, val: bool) {
+        pub fn set_lptim5amen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
         }
         #[doc = "DAC2 (containing one converter) Autonomous mode enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn dac2amen(&self) -> bool {
             let val = (self.0 >> 13usize) & 0x01;
@@ -7687,11 +6715,10 @@ pub mod regs {
         }
         #[doc = "DAC2 (containing one converter) Autonomous mode enable"]
         #[inline(always)]
-        pub const fn set_dac2amen(&mut self, val: bool) {
+        pub fn set_dac2amen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
         }
         #[doc = "COMP12 Autonomous mode enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn comp12amen(&self) -> bool {
             let val = (self.0 >> 14usize) & 0x01;
@@ -7699,11 +6726,10 @@ pub mod regs {
         }
         #[doc = "COMP12 Autonomous mode enable"]
         #[inline(always)]
-        pub const fn set_comp12amen(&mut self, val: bool) {
+        pub fn set_comp12amen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
         }
         #[doc = "VREF Autonomous mode enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn vrefamen(&self) -> bool {
             let val = (self.0 >> 15usize) & 0x01;
@@ -7711,11 +6737,10 @@ pub mod regs {
         }
         #[doc = "VREF Autonomous mode enable"]
         #[inline(always)]
-        pub const fn set_vrefamen(&mut self, val: bool) {
+        pub fn set_vrefamen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
         }
         #[doc = "RTC Autonomous mode enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn rtcamen(&self) -> bool {
             let val = (self.0 >> 16usize) & 0x01;
@@ -7723,11 +6748,10 @@ pub mod regs {
         }
         #[doc = "RTC Autonomous mode enable"]
         #[inline(always)]
-        pub const fn set_rtcamen(&mut self, val: bool) {
+        pub fn set_rtcamen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
         }
         #[doc = "CRC Autonomous mode enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn crcamen(&self) -> bool {
             let val = (self.0 >> 19usize) & 0x01;
@@ -7735,11 +6759,10 @@ pub mod regs {
         }
         #[doc = "CRC Autonomous mode enable"]
         #[inline(always)]
-        pub const fn set_crcamen(&mut self, val: bool) {
+        pub fn set_crcamen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
         }
         #[doc = "SAI4 Autonomous mode enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn sai4amen(&self) -> bool {
             let val = (self.0 >> 21usize) & 0x01;
@@ -7747,11 +6770,10 @@ pub mod regs {
         }
         #[doc = "SAI4 Autonomous mode enable"]
         #[inline(always)]
-        pub const fn set_sai4amen(&mut self, val: bool) {
+        pub fn set_sai4amen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
         }
         #[doc = "ADC3 Autonomous mode enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn adc3amen(&self) -> bool {
             let val = (self.0 >> 24usize) & 0x01;
@@ -7759,11 +6781,10 @@ pub mod regs {
         }
         #[doc = "ADC3 Autonomous mode enable"]
         #[inline(always)]
-        pub const fn set_adc3amen(&mut self, val: bool) {
+        pub fn set_adc3amen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
         }
         #[doc = "Digital temperature sensor Autonomous mode enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn dtsamen(&self) -> bool {
             let val = (self.0 >> 26usize) & 0x01;
@@ -7771,11 +6792,10 @@ pub mod regs {
         }
         #[doc = "Digital temperature sensor Autonomous mode enable"]
         #[inline(always)]
-        pub const fn set_dtsamen(&mut self, val: bool) {
+        pub fn set_dtsamen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 26usize)) | (((val as u32) & 0x01) << 26usize);
         }
         #[doc = "Backup RAM Autonomous mode enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn bkpsramamen(&self) -> bool {
             let val = (self.0 >> 28usize) & 0x01;
@@ -7783,11 +6803,10 @@ pub mod regs {
         }
         #[doc = "Backup RAM Autonomous mode enable"]
         #[inline(always)]
-        pub const fn set_bkpsramamen(&mut self, val: bool) {
+        pub fn set_bkpsramamen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
         }
         #[doc = "SRAM4 Autonomous mode enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn sram4amen(&self) -> bool {
             let val = (self.0 >> 29usize) & 0x01;
@@ -7795,7 +6814,7 @@ pub mod regs {
         }
         #[doc = "SRAM4 Autonomous mode enable"]
         #[inline(always)]
-        pub const fn set_sram4amen(&mut self, val: bool) {
+        pub fn set_sram4amen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
         }
     }
@@ -7833,29 +6852,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for D3amr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "D3amr {{ bdma2amen: {=bool:?}, bdmaamen: {=bool:?}, lpuart1amen: {=bool:?}, spi6amen: {=bool:?}, i2c4amen: {=bool:?}, lptim2amen: {=bool:?}, lptim3amen: {=bool:?}, lptim4amen: {=bool:?}, lptim5amen: {=bool:?}, dac2amen: {=bool:?}, comp12amen: {=bool:?}, vrefamen: {=bool:?}, rtcamen: {=bool:?}, crcamen: {=bool:?}, sai4amen: {=bool:?}, adc3amen: {=bool:?}, dtsamen: {=bool:?}, bkpsramamen: {=bool:?}, sram4amen: {=bool:?} }}",
-                self.bdma2amen(),
-                self.bdmaamen(),
-                self.lpuart1amen(),
-                self.spi6amen(),
-                self.i2c4amen(),
-                self.lptim2amen(),
-                self.lptim3amen(),
-                self.lptim4amen(),
-                self.lptim5amen(),
-                self.dac2amen(),
-                self.comp12amen(),
-                self.vrefamen(),
-                self.rtcamen(),
-                self.crcamen(),
-                self.sai4amen(),
-                self.adc3amen(),
-                self.dtsamen(),
-                self.bkpsramamen(),
-                self.sram4amen()
-            )
+            defmt :: write ! (f , "D3amr {{ bdma2amen: {=bool:?}, bdmaamen: {=bool:?}, lpuart1amen: {=bool:?}, spi6amen: {=bool:?}, i2c4amen: {=bool:?}, lptim2amen: {=bool:?}, lptim3amen: {=bool:?}, lptim4amen: {=bool:?}, lptim5amen: {=bool:?}, dac2amen: {=bool:?}, comp12amen: {=bool:?}, vrefamen: {=bool:?}, rtcamen: {=bool:?}, crcamen: {=bool:?}, sai4amen: {=bool:?}, adc3amen: {=bool:?}, dtsamen: {=bool:?}, bkpsramamen: {=bool:?}, sram4amen: {=bool:?} }}" , self . bdma2amen () , self . bdmaamen () , self . lpuart1amen () , self . spi6amen () , self . i2c4amen () , self . lptim2amen () , self . lptim3amen () , self . lptim4amen () , self . lptim5amen () , self . dac2amen () , self . comp12amen () , self . vrefamen () , self . rtcamen () , self . crcamen () , self . sai4amen () , self . adc3amen () , self . dtsamen () , self . bkpsramamen () , self . sram4amen ())
         }
     }
     #[doc = "RCC Domain 3 Kernel Clock Configuration Register"]
@@ -7864,7 +6861,6 @@ pub mod regs {
     pub struct D3ccipr(pub u32);
     impl D3ccipr {
         #[doc = "LPUART1 kernel clock source selection"]
-        #[must_use]
         #[inline(always)]
         pub const fn lpuart1sel(&self) -> super::vals::Lpuartsel {
             let val = (self.0 >> 0usize) & 0x07;
@@ -7872,11 +6868,10 @@ pub mod regs {
         }
         #[doc = "LPUART1 kernel clock source selection"]
         #[inline(always)]
-        pub const fn set_lpuart1sel(&mut self, val: super::vals::Lpuartsel) {
+        pub fn set_lpuart1sel(&mut self, val: super::vals::Lpuartsel) {
             self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
         }
         #[doc = "I2C4 kernel clock source selection"]
-        #[must_use]
         #[inline(always)]
         pub const fn i2c4sel(&self) -> super::vals::I2c4sel {
             let val = (self.0 >> 8usize) & 0x03;
@@ -7884,11 +6879,10 @@ pub mod regs {
         }
         #[doc = "I2C4 kernel clock source selection"]
         #[inline(always)]
-        pub const fn set_i2c4sel(&mut self, val: super::vals::I2c4sel) {
+        pub fn set_i2c4sel(&mut self, val: super::vals::I2c4sel) {
             self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u32) & 0x03) << 8usize);
         }
         #[doc = "LPTIM2 kernel clock source selection"]
-        #[must_use]
         #[inline(always)]
         pub const fn lptim2sel(&self) -> super::vals::Lptim2sel {
             let val = (self.0 >> 10usize) & 0x07;
@@ -7896,11 +6890,10 @@ pub mod regs {
         }
         #[doc = "LPTIM2 kernel clock source selection"]
         #[inline(always)]
-        pub const fn set_lptim2sel(&mut self, val: super::vals::Lptim2sel) {
+        pub fn set_lptim2sel(&mut self, val: super::vals::Lptim2sel) {
             self.0 = (self.0 & !(0x07 << 10usize)) | (((val.to_bits() as u32) & 0x07) << 10usize);
         }
         #[doc = "LPTIM3,4,5 kernel clock source selection"]
-        #[must_use]
         #[inline(always)]
         pub const fn lptim345sel(&self) -> super::vals::Lptim2sel {
             let val = (self.0 >> 13usize) & 0x07;
@@ -7908,11 +6901,10 @@ pub mod regs {
         }
         #[doc = "LPTIM3,4,5 kernel clock source selection"]
         #[inline(always)]
-        pub const fn set_lptim345sel(&mut self, val: super::vals::Lptim2sel) {
+        pub fn set_lptim345sel(&mut self, val: super::vals::Lptim2sel) {
             self.0 = (self.0 & !(0x07 << 13usize)) | (((val.to_bits() as u32) & 0x07) << 13usize);
         }
         #[doc = "SAR ADC kernel clock source selection"]
-        #[must_use]
         #[inline(always)]
         pub const fn adcsel(&self) -> super::vals::Adcsel {
             let val = (self.0 >> 16usize) & 0x03;
@@ -7920,11 +6912,10 @@ pub mod regs {
         }
         #[doc = "SAR ADC kernel clock source selection"]
         #[inline(always)]
-        pub const fn set_adcsel(&mut self, val: super::vals::Adcsel) {
+        pub fn set_adcsel(&mut self, val: super::vals::Adcsel) {
             self.0 = (self.0 & !(0x03 << 16usize)) | (((val.to_bits() as u32) & 0x03) << 16usize);
         }
         #[doc = "DFSDM2 kernel clock source selection"]
-        #[must_use]
         #[inline(always)]
         pub const fn dfsdm2sel(&self) -> bool {
             let val = (self.0 >> 27usize) & 0x01;
@@ -7932,11 +6923,10 @@ pub mod regs {
         }
         #[doc = "DFSDM2 kernel clock source selection"]
         #[inline(always)]
-        pub const fn set_dfsdm2sel(&mut self, val: bool) {
+        pub fn set_dfsdm2sel(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 27usize)) | (((val as u32) & 0x01) << 27usize);
         }
         #[doc = "SPI6 kernel clock source selection"]
-        #[must_use]
         #[inline(always)]
         pub const fn spi6sel(&self) -> super::vals::Spi6sel {
             let val = (self.0 >> 28usize) & 0x07;
@@ -7944,7 +6934,7 @@ pub mod regs {
         }
         #[doc = "SPI6 kernel clock source selection"]
         #[inline(always)]
-        pub const fn set_spi6sel(&mut self, val: super::vals::Spi6sel) {
+        pub fn set_spi6sel(&mut self, val: super::vals::Spi6sel) {
             self.0 = (self.0 & !(0x07 << 28usize)) | (((val.to_bits() as u32) & 0x07) << 28usize);
         }
     }
@@ -7970,17 +6960,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for D3ccipr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "D3ccipr {{ lpuart1sel: {:?}, i2c4sel: {:?}, lptim2sel: {:?}, lptim345sel: {:?}, adcsel: {:?}, dfsdm2sel: {=bool:?}, spi6sel: {:?} }}",
-                self.lpuart1sel(),
-                self.i2c4sel(),
-                self.lptim2sel(),
-                self.lptim345sel(),
-                self.adcsel(),
-                self.dfsdm2sel(),
-                self.spi6sel()
-            )
+            defmt :: write ! (f , "D3ccipr {{ lpuart1sel: {:?}, i2c4sel: {:?}, lptim2sel: {:?}, lptim345sel: {:?}, adcsel: {:?}, dfsdm2sel: {=bool:?}, spi6sel: {:?} }}" , self . lpuart1sel () , self . i2c4sel () , self . lptim2sel () , self . lptim345sel () , self . adcsel () , self . dfsdm2sel () , self . spi6sel ())
         }
     }
     #[doc = "RCC Domain 3 Clock Configuration Register"]
@@ -7989,7 +6969,6 @@ pub mod regs {
     pub struct D3cfgr(pub u32);
     impl D3cfgr {
         #[doc = "D3 domain APB4 prescaler"]
-        #[must_use]
         #[inline(always)]
         pub const fn d3ppre(&self) -> super::vals::Ppre {
             let val = (self.0 >> 4usize) & 0x07;
@@ -7997,7 +6976,7 @@ pub mod regs {
         }
         #[doc = "D3 domain APB4 prescaler"]
         #[inline(always)]
-        pub const fn set_d3ppre(&mut self, val: super::vals::Ppre) {
+        pub fn set_d3ppre(&mut self, val: super::vals::Ppre) {
             self.0 = (self.0 & !(0x07 << 4usize)) | (((val.to_bits() as u32) & 0x07) << 4usize);
         }
     }
@@ -8024,7 +7003,6 @@ pub mod regs {
     pub struct Gcr(pub u32);
     impl Gcr {
         #[doc = "WWDG1 reset scope control"]
-        #[must_use]
         #[inline(always)]
         pub const fn ww1rsc(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -8032,7 +7010,7 @@ pub mod regs {
         }
         #[doc = "WWDG1 reset scope control"]
         #[inline(always)]
-        pub const fn set_ww1rsc(&mut self, val: bool) {
+        pub fn set_ww1rsc(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
     }
@@ -8059,7 +7037,6 @@ pub mod regs {
     pub struct Hsicfgr(pub u32);
     impl Hsicfgr {
         #[doc = "HSI clock calibration"]
-        #[must_use]
         #[inline(always)]
         pub const fn hsical(&self) -> u16 {
             let val = (self.0 >> 0usize) & 0x0fff;
@@ -8067,11 +7044,10 @@ pub mod regs {
         }
         #[doc = "HSI clock calibration"]
         #[inline(always)]
-        pub const fn set_hsical(&mut self, val: u16) {
+        pub fn set_hsical(&mut self, val: u16) {
             self.0 = (self.0 & !(0x0fff << 0usize)) | (((val as u32) & 0x0fff) << 0usize);
         }
         #[doc = "HSI clock trimming"]
-        #[must_use]
         #[inline(always)]
         pub const fn hsitrim(&self) -> u8 {
             let val = (self.0 >> 24usize) & 0x7f;
@@ -8079,7 +7055,7 @@ pub mod regs {
         }
         #[doc = "HSI clock trimming"]
         #[inline(always)]
-        pub const fn set_hsitrim(&mut self, val: u8) {
+        pub fn set_hsitrim(&mut self, val: u8) {
             self.0 = (self.0 & !(0x7f << 24usize)) | (((val as u32) & 0x7f) << 24usize);
         }
     }
@@ -8114,7 +7090,6 @@ pub mod regs {
     pub struct Pllcfgr(pub u32);
     impl Pllcfgr {
         #[doc = "PLL1 fractional latch enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn pllfracen(&self, n: usize) -> bool {
             assert!(n < 3usize);
@@ -8124,13 +7099,12 @@ pub mod regs {
         }
         #[doc = "PLL1 fractional latch enable"]
         #[inline(always)]
-        pub const fn set_pllfracen(&mut self, n: usize, val: bool) {
+        pub fn set_pllfracen(&mut self, n: usize, val: bool) {
             assert!(n < 3usize);
             let offs = 0usize + n * 4usize;
             self.0 = (self.0 & !(0x01 << offs)) | (((val as u32) & 0x01) << offs);
         }
         #[doc = "PLL1 VCO selection"]
-        #[must_use]
         #[inline(always)]
         pub const fn pllvcosel(&self, n: usize) -> super::vals::Pllvcosel {
             assert!(n < 3usize);
@@ -8140,13 +7114,12 @@ pub mod regs {
         }
         #[doc = "PLL1 VCO selection"]
         #[inline(always)]
-        pub const fn set_pllvcosel(&mut self, n: usize, val: super::vals::Pllvcosel) {
+        pub fn set_pllvcosel(&mut self, n: usize, val: super::vals::Pllvcosel) {
             assert!(n < 3usize);
             let offs = 1usize + n * 4usize;
             self.0 = (self.0 & !(0x01 << offs)) | (((val.to_bits() as u32) & 0x01) << offs);
         }
         #[doc = "PLL1 input frequency range"]
-        #[must_use]
         #[inline(always)]
         pub const fn pllrge(&self, n: usize) -> super::vals::Pllrge {
             assert!(n < 3usize);
@@ -8156,13 +7129,12 @@ pub mod regs {
         }
         #[doc = "PLL1 input frequency range"]
         #[inline(always)]
-        pub const fn set_pllrge(&mut self, n: usize, val: super::vals::Pllrge) {
+        pub fn set_pllrge(&mut self, n: usize, val: super::vals::Pllrge) {
             assert!(n < 3usize);
             let offs = 2usize + n * 4usize;
             self.0 = (self.0 & !(0x03 << offs)) | (((val.to_bits() as u32) & 0x03) << offs);
         }
         #[doc = "PLL1 DIVP divider output enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn divpen(&self, n: usize) -> bool {
             assert!(n < 3usize);
@@ -8172,13 +7144,12 @@ pub mod regs {
         }
         #[doc = "PLL1 DIVP divider output enable"]
         #[inline(always)]
-        pub const fn set_divpen(&mut self, n: usize, val: bool) {
+        pub fn set_divpen(&mut self, n: usize, val: bool) {
             assert!(n < 3usize);
             let offs = 16usize + n * 3usize;
             self.0 = (self.0 & !(0x01 << offs)) | (((val as u32) & 0x01) << offs);
         }
         #[doc = "PLL1 DIVQ divider output enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn divqen(&self, n: usize) -> bool {
             assert!(n < 3usize);
@@ -8188,13 +7159,12 @@ pub mod regs {
         }
         #[doc = "PLL1 DIVQ divider output enable"]
         #[inline(always)]
-        pub const fn set_divqen(&mut self, n: usize, val: bool) {
+        pub fn set_divqen(&mut self, n: usize, val: bool) {
             assert!(n < 3usize);
             let offs = 17usize + n * 3usize;
             self.0 = (self.0 & !(0x01 << offs)) | (((val as u32) & 0x01) << offs);
         }
         #[doc = "PLL1 DIVR divider output enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn divren(&self, n: usize) -> bool {
             assert!(n < 3usize);
@@ -8204,7 +7174,7 @@ pub mod regs {
         }
         #[doc = "PLL1 DIVR divider output enable"]
         #[inline(always)]
-        pub const fn set_divren(&mut self, n: usize, val: bool) {
+        pub fn set_divren(&mut self, n: usize, val: bool) {
             assert!(n < 3usize);
             let offs = 18usize + n * 3usize;
             self.0 = (self.0 & !(0x01 << offs)) | (((val as u32) & 0x01) << offs);
@@ -8243,28 +7213,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Pllcfgr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Pllcfgr {{ pllfracen[0]: {=bool:?}, pllfracen[1]: {=bool:?}, pllfracen[2]: {=bool:?}, pllvcosel[0]: {:?}, pllvcosel[1]: {:?}, pllvcosel[2]: {:?}, pllrge[0]: {:?}, pllrge[1]: {:?}, pllrge[2]: {:?}, divpen[0]: {=bool:?}, divpen[1]: {=bool:?}, divpen[2]: {=bool:?}, divqen[0]: {=bool:?}, divqen[1]: {=bool:?}, divqen[2]: {=bool:?}, divren[0]: {=bool:?}, divren[1]: {=bool:?}, divren[2]: {=bool:?} }}",
-                self.pllfracen(0usize),
-                self.pllfracen(1usize),
-                self.pllfracen(2usize),
-                self.pllvcosel(0usize),
-                self.pllvcosel(1usize),
-                self.pllvcosel(2usize),
-                self.pllrge(0usize),
-                self.pllrge(1usize),
-                self.pllrge(2usize),
-                self.divpen(0usize),
-                self.divpen(1usize),
-                self.divpen(2usize),
-                self.divqen(0usize),
-                self.divqen(1usize),
-                self.divqen(2usize),
-                self.divren(0usize),
-                self.divren(1usize),
-                self.divren(2usize)
-            )
+            defmt :: write ! (f , "Pllcfgr {{ pllfracen[0]: {=bool:?}, pllfracen[1]: {=bool:?}, pllfracen[2]: {=bool:?}, pllvcosel[0]: {:?}, pllvcosel[1]: {:?}, pllvcosel[2]: {:?}, pllrge[0]: {:?}, pllrge[1]: {:?}, pllrge[2]: {:?}, divpen[0]: {=bool:?}, divpen[1]: {=bool:?}, divpen[2]: {=bool:?}, divqen[0]: {=bool:?}, divqen[1]: {=bool:?}, divqen[2]: {=bool:?}, divren[0]: {=bool:?}, divren[1]: {=bool:?}, divren[2]: {=bool:?} }}" , self . pllfracen (0usize) , self . pllfracen (1usize) , self . pllfracen (2usize) , self . pllvcosel (0usize) , self . pllvcosel (1usize) , self . pllvcosel (2usize) , self . pllrge (0usize) , self . pllrge (1usize) , self . pllrge (2usize) , self . divpen (0usize) , self . divpen (1usize) , self . divpen (2usize) , self . divqen (0usize) , self . divqen (1usize) , self . divqen (2usize) , self . divren (0usize) , self . divren (1usize) , self . divren (2usize))
         }
     }
     #[doc = "RCC PLLs Clock Source Selection Register"]
@@ -8273,7 +7222,6 @@ pub mod regs {
     pub struct Pllckselr(pub u32);
     impl Pllckselr {
         #[doc = "DIVMx and PLLs clock source selection"]
-        #[must_use]
         #[inline(always)]
         pub const fn pllsrc(&self) -> super::vals::Pllsrc {
             let val = (self.0 >> 0usize) & 0x03;
@@ -8281,11 +7229,10 @@ pub mod regs {
         }
         #[doc = "DIVMx and PLLs clock source selection"]
         #[inline(always)]
-        pub const fn set_pllsrc(&mut self, val: super::vals::Pllsrc) {
+        pub fn set_pllsrc(&mut self, val: super::vals::Pllsrc) {
             self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
         }
         #[doc = "Prescaler for PLL1"]
-        #[must_use]
         #[inline(always)]
         pub const fn divm(&self, n: usize) -> super::vals::Pllm {
             assert!(n < 3usize);
@@ -8295,7 +7242,7 @@ pub mod regs {
         }
         #[doc = "Prescaler for PLL1"]
         #[inline(always)]
-        pub const fn set_divm(&mut self, n: usize, val: super::vals::Pllm) {
+        pub fn set_divm(&mut self, n: usize, val: super::vals::Pllm) {
             assert!(n < 3usize);
             let offs = 4usize + n * 8usize;
             self.0 = (self.0 & !(0x3f << offs)) | (((val.to_bits() as u32) & 0x3f) << offs);
@@ -8336,7 +7283,6 @@ pub mod regs {
     pub struct Plldivr(pub u32);
     impl Plldivr {
         #[doc = "Multiplication factor for PLL1 VCO"]
-        #[must_use]
         #[inline(always)]
         pub const fn plln(&self) -> super::vals::Plln {
             let val = (self.0 >> 0usize) & 0x01ff;
@@ -8344,11 +7290,10 @@ pub mod regs {
         }
         #[doc = "Multiplication factor for PLL1 VCO"]
         #[inline(always)]
-        pub const fn set_plln(&mut self, val: super::vals::Plln) {
+        pub fn set_plln(&mut self, val: super::vals::Plln) {
             self.0 = (self.0 & !(0x01ff << 0usize)) | (((val.to_bits() as u32) & 0x01ff) << 0usize);
         }
         #[doc = "PLL DIVP division factor"]
-        #[must_use]
         #[inline(always)]
         pub const fn pllp(&self) -> super::vals::Plldiv {
             let val = (self.0 >> 9usize) & 0x7f;
@@ -8356,11 +7301,10 @@ pub mod regs {
         }
         #[doc = "PLL DIVP division factor"]
         #[inline(always)]
-        pub const fn set_pllp(&mut self, val: super::vals::Plldiv) {
+        pub fn set_pllp(&mut self, val: super::vals::Plldiv) {
             self.0 = (self.0 & !(0x7f << 9usize)) | (((val.to_bits() as u32) & 0x7f) << 9usize);
         }
         #[doc = "PLL DIVQ division factor"]
-        #[must_use]
         #[inline(always)]
         pub const fn pllq(&self) -> super::vals::Plldiv {
             let val = (self.0 >> 16usize) & 0x7f;
@@ -8368,11 +7312,10 @@ pub mod regs {
         }
         #[doc = "PLL DIVQ division factor"]
         #[inline(always)]
-        pub const fn set_pllq(&mut self, val: super::vals::Plldiv) {
+        pub fn set_pllq(&mut self, val: super::vals::Plldiv) {
             self.0 = (self.0 & !(0x7f << 16usize)) | (((val.to_bits() as u32) & 0x7f) << 16usize);
         }
         #[doc = "PLL DIVR division factor"]
-        #[must_use]
         #[inline(always)]
         pub const fn pllr(&self) -> super::vals::Plldiv {
             let val = (self.0 >> 24usize) & 0x7f;
@@ -8380,7 +7323,7 @@ pub mod regs {
         }
         #[doc = "PLL DIVR division factor"]
         #[inline(always)]
-        pub const fn set_pllr(&mut self, val: super::vals::Plldiv) {
+        pub fn set_pllr(&mut self, val: super::vals::Plldiv) {
             self.0 = (self.0 & !(0x7f << 24usize)) | (((val.to_bits() as u32) & 0x7f) << 24usize);
         }
     }
@@ -8419,7 +7362,6 @@ pub mod regs {
     pub struct Pllfracr(pub u32);
     impl Pllfracr {
         #[doc = "Fractional part of the multiplication factor for PLL VCO"]
-        #[must_use]
         #[inline(always)]
         pub const fn fracn(&self) -> u16 {
             let val = (self.0 >> 3usize) & 0x1fff;
@@ -8427,7 +7369,7 @@ pub mod regs {
         }
         #[doc = "Fractional part of the multiplication factor for PLL VCO"]
         #[inline(always)]
-        pub const fn set_fracn(&mut self, val: u16) {
+        pub fn set_fracn(&mut self, val: u16) {
             self.0 = (self.0 & !(0x1fff << 3usize)) | (((val as u32) & 0x1fff) << 3usize);
         }
     }
@@ -8454,7 +7396,6 @@ pub mod regs {
     pub struct Rsr(pub u32);
     impl Rsr {
         #[doc = "Remove reset flag"]
-        #[must_use]
         #[inline(always)]
         pub const fn rmvf(&self) -> bool {
             let val = (self.0 >> 16usize) & 0x01;
@@ -8462,11 +7403,10 @@ pub mod regs {
         }
         #[doc = "Remove reset flag"]
         #[inline(always)]
-        pub const fn set_rmvf(&mut self, val: bool) {
+        pub fn set_rmvf(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
         }
         #[doc = "CPU reset flag"]
-        #[must_use]
         #[inline(always)]
         pub const fn cpurstf(&self) -> bool {
             let val = (self.0 >> 17usize) & 0x01;
@@ -8474,11 +7414,10 @@ pub mod regs {
         }
         #[doc = "CPU reset flag"]
         #[inline(always)]
-        pub const fn set_cpurstf(&mut self, val: bool) {
+        pub fn set_cpurstf(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
         }
         #[doc = "D1 domain power switch reset flag"]
-        #[must_use]
         #[inline(always)]
         pub const fn d1rstf(&self) -> bool {
             let val = (self.0 >> 19usize) & 0x01;
@@ -8486,11 +7425,10 @@ pub mod regs {
         }
         #[doc = "D1 domain power switch reset flag"]
         #[inline(always)]
-        pub const fn set_d1rstf(&mut self, val: bool) {
+        pub fn set_d1rstf(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
         }
         #[doc = "D2 domain power switch reset flag"]
-        #[must_use]
         #[inline(always)]
         pub const fn d2rstf(&self) -> bool {
             let val = (self.0 >> 20usize) & 0x01;
@@ -8498,11 +7436,10 @@ pub mod regs {
         }
         #[doc = "D2 domain power switch reset flag"]
         #[inline(always)]
-        pub const fn set_d2rstf(&mut self, val: bool) {
+        pub fn set_d2rstf(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
         }
         #[doc = "BOR reset flag"]
-        #[must_use]
         #[inline(always)]
         pub const fn borrstf(&self) -> bool {
             let val = (self.0 >> 21usize) & 0x01;
@@ -8510,11 +7447,10 @@ pub mod regs {
         }
         #[doc = "BOR reset flag"]
         #[inline(always)]
-        pub const fn set_borrstf(&mut self, val: bool) {
+        pub fn set_borrstf(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
         }
         #[doc = "Pin reset flag (NRST)"]
-        #[must_use]
         #[inline(always)]
         pub const fn pinrstf(&self) -> bool {
             let val = (self.0 >> 22usize) & 0x01;
@@ -8522,11 +7458,10 @@ pub mod regs {
         }
         #[doc = "Pin reset flag (NRST)"]
         #[inline(always)]
-        pub const fn set_pinrstf(&mut self, val: bool) {
+        pub fn set_pinrstf(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
         }
         #[doc = "POR/PDR reset flag"]
-        #[must_use]
         #[inline(always)]
         pub const fn porrstf(&self) -> bool {
             let val = (self.0 >> 23usize) & 0x01;
@@ -8534,11 +7469,10 @@ pub mod regs {
         }
         #[doc = "POR/PDR reset flag"]
         #[inline(always)]
-        pub const fn set_porrstf(&mut self, val: bool) {
+        pub fn set_porrstf(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
         }
         #[doc = "System reset from CPU reset flag"]
-        #[must_use]
         #[inline(always)]
         pub const fn sftrstf(&self) -> bool {
             let val = (self.0 >> 24usize) & 0x01;
@@ -8546,11 +7480,10 @@ pub mod regs {
         }
         #[doc = "System reset from CPU reset flag"]
         #[inline(always)]
-        pub const fn set_sftrstf(&mut self, val: bool) {
+        pub fn set_sftrstf(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
         }
         #[doc = "Independent Watchdog reset flag"]
-        #[must_use]
         #[inline(always)]
         pub const fn iwdg1rstf(&self) -> bool {
             let val = (self.0 >> 26usize) & 0x01;
@@ -8558,11 +7491,10 @@ pub mod regs {
         }
         #[doc = "Independent Watchdog reset flag"]
         #[inline(always)]
-        pub const fn set_iwdg1rstf(&mut self, val: bool) {
+        pub fn set_iwdg1rstf(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 26usize)) | (((val as u32) & 0x01) << 26usize);
         }
         #[doc = "Window Watchdog reset flag"]
-        #[must_use]
         #[inline(always)]
         pub const fn wwdg1rstf(&self) -> bool {
             let val = (self.0 >> 28usize) & 0x01;
@@ -8570,11 +7502,10 @@ pub mod regs {
         }
         #[doc = "Window Watchdog reset flag"]
         #[inline(always)]
-        pub const fn set_wwdg1rstf(&mut self, val: bool) {
+        pub fn set_wwdg1rstf(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
         }
         #[doc = "Reset due to illegal D1 DStandby or CPU CStop flag"]
-        #[must_use]
         #[inline(always)]
         pub const fn lpwrrstf(&self) -> bool {
             let val = (self.0 >> 30usize) & 0x01;
@@ -8582,7 +7513,7 @@ pub mod regs {
         }
         #[doc = "Reset due to illegal D1 DStandby or CPU CStop flag"]
         #[inline(always)]
-        pub const fn set_lpwrrstf(&mut self, val: bool) {
+        pub fn set_lpwrrstf(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
         }
     }
@@ -8612,21 +7543,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Rsr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Rsr {{ rmvf: {=bool:?}, cpurstf: {=bool:?}, d1rstf: {=bool:?}, d2rstf: {=bool:?}, borrstf: {=bool:?}, pinrstf: {=bool:?}, porrstf: {=bool:?}, sftrstf: {=bool:?}, iwdg1rstf: {=bool:?}, wwdg1rstf: {=bool:?}, lpwrrstf: {=bool:?} }}",
-                self.rmvf(),
-                self.cpurstf(),
-                self.d1rstf(),
-                self.d2rstf(),
-                self.borrstf(),
-                self.pinrstf(),
-                self.porrstf(),
-                self.sftrstf(),
-                self.iwdg1rstf(),
-                self.wwdg1rstf(),
-                self.lpwrrstf()
-            )
+            defmt :: write ! (f , "Rsr {{ rmvf: {=bool:?}, cpurstf: {=bool:?}, d1rstf: {=bool:?}, d2rstf: {=bool:?}, borrstf: {=bool:?}, pinrstf: {=bool:?}, porrstf: {=bool:?}, sftrstf: {=bool:?}, iwdg1rstf: {=bool:?}, wwdg1rstf: {=bool:?}, lpwrrstf: {=bool:?} }}" , self . rmvf () , self . cpurstf () , self . d1rstf () , self . d2rstf () , self . borrstf () , self . pinrstf () , self . porrstf () , self . sftrstf () , self . iwdg1rstf () , self . wwdg1rstf () , self . lpwrrstf ())
         }
     }
 }
@@ -8636,11 +7553,11 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Adcsel {
         #[doc = "pll2_p selected as peripheral clock"]
-        Pll2P = 0x0,
+        PLL2_P = 0x0,
         #[doc = "pll3_r selected as peripheral clock"]
-        Pll3R = 0x01,
+        PLL3_R = 0x01,
         #[doc = "PER selected as peripheral clock"]
-        Per = 0x02,
+        PER = 0x02,
         _RESERVED_3 = 0x03,
     }
     impl Adcsel {
@@ -8670,11 +7587,11 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Cecsel {
         #[doc = "LSE selected as peripheral clock"]
-        Lse = 0x0,
+        LSE = 0x0,
         #[doc = "LSI selected as peripheral clock"]
-        Lsi = 0x01,
+        LSI = 0x01,
         #[doc = "csi_ker selected as peripheral clock"]
-        Csi = 0x02,
+        CSI = 0x02,
         _RESERVED_3 = 0x03,
     }
     impl Cecsel {
@@ -8704,9 +7621,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Dfsdmsel {
         #[doc = "rcc_pclk2 selected as peripheral clock"]
-        Pclk2 = 0x0,
+        PCLK2 = 0x0,
         #[doc = "System clock selected as peripheral clock"]
-        Sys = 0x01,
+        SYS = 0x01,
     }
     impl Dfsdmsel {
         #[inline(always)]
@@ -8735,11 +7652,11 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Fdcansel {
         #[doc = "HSE selected as peripheral clock"]
-        Hse = 0x0,
+        HSE = 0x0,
         #[doc = "pll1_q selected as peripheral clock"]
-        Pll1Q = 0x01,
+        PLL1_Q = 0x01,
         #[doc = "pll2_q selected as peripheral clock"]
-        Pll2Q = 0x02,
+        PLL2_Q = 0x02,
         _RESERVED_3 = 0x03,
     }
     impl Fdcansel {
@@ -8769,13 +7686,13 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Fmcsel {
         #[doc = "rcc_hclk3 selected as peripheral clock"]
-        Hclk3 = 0x0,
+        HCLK3 = 0x0,
         #[doc = "pll1_q selected as peripheral clock"]
-        Pll1Q = 0x01,
+        PLL1_Q = 0x01,
         #[doc = "pll2_r selected as peripheral clock"]
-        Pll2R = 0x02,
+        PLL2_R = 0x02,
         #[doc = "PER selected as peripheral clock"]
-        Per = 0x03,
+        PER = 0x03,
     }
     impl Fmcsel {
         #[inline(always)]
@@ -8804,7 +7721,7 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Hpre {
         #[doc = "sys_ck not divided"]
-        Div1 = 0x0,
+        DIV1 = 0x0,
         _RESERVED_1 = 0x01,
         _RESERVED_2 = 0x02,
         _RESERVED_3 = 0x03,
@@ -8813,21 +7730,21 @@ pub mod vals {
         _RESERVED_6 = 0x06,
         _RESERVED_7 = 0x07,
         #[doc = "sys_ck divided by 2"]
-        Div2 = 0x08,
+        DIV2 = 0x08,
         #[doc = "sys_ck divided by 4"]
-        Div4 = 0x09,
+        DIV4 = 0x09,
         #[doc = "sys_ck divided by 8"]
-        Div8 = 0x0a,
+        DIV8 = 0x0a,
         #[doc = "sys_ck divided by 16"]
-        Div16 = 0x0b,
+        DIV16 = 0x0b,
         #[doc = "sys_ck divided by 64"]
-        Div64 = 0x0c,
+        DIV64 = 0x0c,
         #[doc = "sys_ck divided by 128"]
-        Div128 = 0x0d,
+        DIV128 = 0x0d,
         #[doc = "sys_ck divided by 256"]
-        Div256 = 0x0e,
+        DIV256 = 0x0e,
         #[doc = "sys_ck divided by 512"]
-        Div512 = 0x0f,
+        DIV512 = 0x0f,
     }
     impl Hpre {
         #[inline(always)]
@@ -8856,9 +7773,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Hrtimsel {
         #[doc = "The HRTIM prescaler clock source is the same as other timers (rcc_timy_ker_ck)"]
-        TimyKer = 0x0,
+        TIMY_KER = 0x0,
         #[doc = "The HRTIM prescaler clock source is the CPU clock (c_ck)"]
-        CCk = 0x01,
+        C_CK = 0x01,
     }
     impl Hrtimsel {
         #[inline(always)]
@@ -8887,13 +7804,13 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Hsidiv {
         #[doc = "No division"]
-        Div1 = 0x0,
+        DIV1 = 0x0,
         #[doc = "Division by 2"]
-        Div2 = 0x01,
+        DIV2 = 0x01,
         #[doc = "Division by 4"]
-        Div4 = 0x02,
+        DIV4 = 0x02,
         #[doc = "Division by 8"]
-        Div8 = 0x03,
+        DIV8 = 0x03,
     }
     impl Hsidiv {
         #[inline(always)]
@@ -8922,13 +7839,13 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum I2c1235sel {
         #[doc = "rcc_pclk1 selected as peripheral clock"]
-        Pclk1 = 0x0,
+        PCLK1 = 0x0,
         #[doc = "pll3_r selected as peripheral clock"]
-        Pll3R = 0x01,
+        PLL3_R = 0x01,
         #[doc = "hsi_ker selected as peripheral clock"]
-        Hsi = 0x02,
+        HSI = 0x02,
         #[doc = "csi_ker selected as peripheral clock"]
-        Csi = 0x03,
+        CSI = 0x03,
     }
     impl I2c1235sel {
         #[inline(always)]
@@ -8957,13 +7874,13 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum I2c4sel {
         #[doc = "rcc_pclk4 selected as peripheral clock"]
-        Pclk4 = 0x0,
+        PCLK4 = 0x0,
         #[doc = "pll3_r selected as peripheral clock"]
-        Pll3R = 0x01,
+        PLL3_R = 0x01,
         #[doc = "hsi_ker selected as peripheral clock"]
-        Hsi = 0x02,
+        HSI = 0x02,
         #[doc = "csi_ker selected as peripheral clock"]
-        Csi = 0x03,
+        CSI = 0x03,
     }
     impl I2c4sel {
         #[inline(always)]
@@ -8992,17 +7909,17 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Lptim1sel {
         #[doc = "rcc_pclk1 selected as peripheral clock"]
-        Pclk1 = 0x0,
+        PCLK1 = 0x0,
         #[doc = "pll2_p selected as peripheral clock"]
-        Pll2P = 0x01,
+        PLL2_P = 0x01,
         #[doc = "pll3_r selected as peripheral clock"]
-        Pll3R = 0x02,
+        PLL3_R = 0x02,
         #[doc = "LSE selected as peripheral clock"]
-        Lse = 0x03,
+        LSE = 0x03,
         #[doc = "LSI selected as peripheral clock"]
-        Lsi = 0x04,
+        LSI = 0x04,
         #[doc = "PER selected as peripheral clock"]
-        Per = 0x05,
+        PER = 0x05,
         _RESERVED_6 = 0x06,
         _RESERVED_7 = 0x07,
     }
@@ -9033,17 +7950,17 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Lptim2sel {
         #[doc = "rcc_pclk4 selected as peripheral clock"]
-        Pclk4 = 0x0,
+        PCLK4 = 0x0,
         #[doc = "pll2_p selected as peripheral clock"]
-        Pll2P = 0x01,
+        PLL2_P = 0x01,
         #[doc = "pll3_r selected as peripheral clock"]
-        Pll3R = 0x02,
+        PLL3_R = 0x02,
         #[doc = "LSE selected as peripheral clock"]
-        Lse = 0x03,
+        LSE = 0x03,
         #[doc = "LSI selected as peripheral clock"]
-        Lsi = 0x04,
+        LSI = 0x04,
         #[doc = "PER selected as peripheral clock"]
-        Per = 0x05,
+        PER = 0x05,
         _RESERVED_6 = 0x06,
         _RESERVED_7 = 0x07,
     }
@@ -9074,17 +7991,17 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Lpuartsel {
         #[doc = "rcc_pclk_d4 selected as peripheral clock"]
-        Pclk4 = 0x0,
+        PCLK4 = 0x0,
         #[doc = "pll2_q selected as peripheral clock"]
-        Pll2Q = 0x01,
+        PLL2_Q = 0x01,
         #[doc = "pll3_q selected as peripheral clock"]
-        Pll3Q = 0x02,
+        PLL3_Q = 0x02,
         #[doc = "hsi_ker selected as peripheral clock"]
-        Hsi = 0x03,
+        HSI = 0x03,
         #[doc = "csi_ker selected as peripheral clock"]
-        Csi = 0x04,
+        CSI = 0x04,
         #[doc = "LSE selected as peripheral clock"]
-        Lse = 0x05,
+        LSE = 0x05,
         _RESERVED_6 = 0x06,
         _RESERVED_7 = 0x07,
     }
@@ -9115,13 +8032,13 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Lsedrv {
         #[doc = "Low driving capability"]
-        Low = 0x0,
+        LOW = 0x0,
         #[doc = "Medium low driving capability"]
-        MediumLow = 0x01,
+        MEDIUM_LOW = 0x01,
         #[doc = "Medium high driving capability"]
-        MediumHigh = 0x02,
+        MEDIUM_HIGH = 0x02,
         #[doc = "High driving capability"]
-        High = 0x03,
+        HIGH = 0x03,
     }
     impl Lsedrv {
         #[inline(always)]
@@ -9150,15 +8067,15 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Mco1sel {
         #[doc = "HSI selected for micro-controller clock output"]
-        Hsi = 0x0,
+        HSI = 0x0,
         #[doc = "LSE selected for micro-controller clock output"]
-        Lse = 0x01,
+        LSE = 0x01,
         #[doc = "HSE selected for micro-controller clock output"]
-        Hse = 0x02,
+        HSE = 0x02,
         #[doc = "pll1_q selected for micro-controller clock output"]
-        Pll1Q = 0x03,
+        PLL1_Q = 0x03,
         #[doc = "HSI48 selected for micro-controller clock output"]
-        Hsi48 = 0x04,
+        HSI48 = 0x04,
         _RESERVED_5 = 0x05,
         _RESERVED_6 = 0x06,
         _RESERVED_7 = 0x07,
@@ -9190,17 +8107,17 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Mco2sel {
         #[doc = "System clock selected for micro-controller clock output"]
-        Sys = 0x0,
+        SYS = 0x0,
         #[doc = "pll2_p selected for micro-controller clock output"]
-        Pll2P = 0x01,
+        PLL2_P = 0x01,
         #[doc = "HSE selected for micro-controller clock output"]
-        Hse = 0x02,
+        HSE = 0x02,
         #[doc = "pll1_p selected for micro-controller clock output"]
-        Pll1P = 0x03,
+        PLL1_P = 0x03,
         #[doc = "CSI selected for micro-controller clock output"]
-        Csi = 0x04,
+        CSI = 0x04,
         #[doc = "LSI selected for micro-controller clock output"]
-        Lsi = 0x05,
+        LSI = 0x05,
         _RESERVED_6 = 0x06,
         _RESERVED_7 = 0x07,
     }
@@ -9232,35 +8149,35 @@ pub mod vals {
     pub enum Mcopre {
         _RESERVED_0 = 0x0,
         #[doc = "Divide by 1"]
-        Div1 = 0x01,
+        DIV1 = 0x01,
         #[doc = "Divide by 2"]
-        Div2 = 0x02,
+        DIV2 = 0x02,
         #[doc = "Divide by 3"]
-        Div3 = 0x03,
+        DIV3 = 0x03,
         #[doc = "Divide by 4"]
-        Div4 = 0x04,
+        DIV4 = 0x04,
         #[doc = "Divide by 5"]
-        Div5 = 0x05,
+        DIV5 = 0x05,
         #[doc = "Divide by 6"]
-        Div6 = 0x06,
+        DIV6 = 0x06,
         #[doc = "Divide by 7"]
-        Div7 = 0x07,
+        DIV7 = 0x07,
         #[doc = "Divide by 8"]
-        Div8 = 0x08,
+        DIV8 = 0x08,
         #[doc = "Divide by 9"]
-        Div9 = 0x09,
+        DIV9 = 0x09,
         #[doc = "Divide by 10"]
-        Div10 = 0x0a,
+        DIV10 = 0x0a,
         #[doc = "Divide by 11"]
-        Div11 = 0x0b,
+        DIV11 = 0x0b,
         #[doc = "Divide by 12"]
-        Div12 = 0x0c,
+        DIV12 = 0x0c,
         #[doc = "Divide by 13"]
-        Div13 = 0x0d,
+        DIV13 = 0x0d,
         #[doc = "Divide by 14"]
-        Div14 = 0x0e,
+        DIV14 = 0x0e,
         #[doc = "Divide by 15"]
-        Div15 = 0x0f,
+        DIV15 = 0x0f,
     }
     impl Mcopre {
         #[inline(always)]
@@ -9289,11 +8206,11 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Persel {
         #[doc = "HSI selected as peripheral clock"]
-        Hsi = 0x0,
+        HSI = 0x0,
         #[doc = "CSI selected as peripheral clock"]
-        Csi = 0x01,
+        CSI = 0x01,
         #[doc = "HSE selected as peripheral clock"]
-        Hse = 0x02,
+        HSE = 0x02,
         _RESERVED_3 = 0x03,
     }
     impl Persel {
@@ -9322,134 +8239,134 @@ pub mod vals {
     #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Plldiv {
-        Div1 = 0x0,
-        Div2 = 0x01,
-        Div3 = 0x02,
-        Div4 = 0x03,
-        Div5 = 0x04,
-        Div6 = 0x05,
-        Div7 = 0x06,
-        Div8 = 0x07,
-        Div9 = 0x08,
-        Div10 = 0x09,
-        Div11 = 0x0a,
-        Div12 = 0x0b,
-        Div13 = 0x0c,
-        Div14 = 0x0d,
-        Div15 = 0x0e,
-        Div16 = 0x0f,
-        Div17 = 0x10,
-        Div18 = 0x11,
-        Div19 = 0x12,
-        Div20 = 0x13,
-        Div21 = 0x14,
-        Div22 = 0x15,
-        Div23 = 0x16,
-        Div24 = 0x17,
-        Div25 = 0x18,
-        Div26 = 0x19,
-        Div27 = 0x1a,
-        Div28 = 0x1b,
-        Div29 = 0x1c,
-        Div30 = 0x1d,
-        Div31 = 0x1e,
-        Div32 = 0x1f,
-        Div33 = 0x20,
-        Div34 = 0x21,
-        Div35 = 0x22,
-        Div36 = 0x23,
-        Div37 = 0x24,
-        Div38 = 0x25,
-        Div39 = 0x26,
-        Div40 = 0x27,
-        Div41 = 0x28,
-        Div42 = 0x29,
-        Div43 = 0x2a,
-        Div44 = 0x2b,
-        Div45 = 0x2c,
-        Div46 = 0x2d,
-        Div47 = 0x2e,
-        Div48 = 0x2f,
-        Div49 = 0x30,
-        Div50 = 0x31,
-        Div51 = 0x32,
-        Div52 = 0x33,
-        Div53 = 0x34,
-        Div54 = 0x35,
-        Div55 = 0x36,
-        Div56 = 0x37,
-        Div57 = 0x38,
-        Div58 = 0x39,
-        Div59 = 0x3a,
-        Div60 = 0x3b,
-        Div61 = 0x3c,
-        Div62 = 0x3d,
-        Div63 = 0x3e,
-        Div64 = 0x3f,
-        Div65 = 0x40,
-        Div66 = 0x41,
-        Div67 = 0x42,
-        Div68 = 0x43,
-        Div69 = 0x44,
-        Div70 = 0x45,
-        Div71 = 0x46,
-        Div72 = 0x47,
-        Div73 = 0x48,
-        Div74 = 0x49,
-        Div75 = 0x4a,
-        Div76 = 0x4b,
-        Div77 = 0x4c,
-        Div78 = 0x4d,
-        Div79 = 0x4e,
-        Div80 = 0x4f,
-        Div81 = 0x50,
-        Div82 = 0x51,
-        Div83 = 0x52,
-        Div84 = 0x53,
-        Div85 = 0x54,
-        Div86 = 0x55,
-        Div87 = 0x56,
-        Div88 = 0x57,
-        Div89 = 0x58,
-        Div90 = 0x59,
-        Div91 = 0x5a,
-        Div92 = 0x5b,
-        Div93 = 0x5c,
-        Div94 = 0x5d,
-        Div95 = 0x5e,
-        Div96 = 0x5f,
-        Div97 = 0x60,
-        Div98 = 0x61,
-        Div99 = 0x62,
-        Div100 = 0x63,
-        Div101 = 0x64,
-        Div102 = 0x65,
-        Div103 = 0x66,
-        Div104 = 0x67,
-        Div105 = 0x68,
-        Div106 = 0x69,
-        Div107 = 0x6a,
-        Div108 = 0x6b,
-        Div109 = 0x6c,
-        Div110 = 0x6d,
-        Div111 = 0x6e,
-        Div112 = 0x6f,
-        Div113 = 0x70,
-        Div114 = 0x71,
-        Div115 = 0x72,
-        Div116 = 0x73,
-        Div117 = 0x74,
-        Div118 = 0x75,
-        Div119 = 0x76,
-        Div120 = 0x77,
-        Div121 = 0x78,
-        Div122 = 0x79,
-        Div123 = 0x7a,
-        Div124 = 0x7b,
-        Div125 = 0x7c,
-        Div126 = 0x7d,
-        Div127 = 0x7e,
-        Div128 = 0x7f,
+        DIV1 = 0x0,
+        DIV2 = 0x01,
+        DIV3 = 0x02,
+        DIV4 = 0x03,
+        DIV5 = 0x04,
+        DIV6 = 0x05,
+        DIV7 = 0x06,
+        DIV8 = 0x07,
+        DIV9 = 0x08,
+        DIV10 = 0x09,
+        DIV11 = 0x0a,
+        DIV12 = 0x0b,
+        DIV13 = 0x0c,
+        DIV14 = 0x0d,
+        DIV15 = 0x0e,
+        DIV16 = 0x0f,
+        DIV17 = 0x10,
+        DIV18 = 0x11,
+        DIV19 = 0x12,
+        DIV20 = 0x13,
+        DIV21 = 0x14,
+        DIV22 = 0x15,
+        DIV23 = 0x16,
+        DIV24 = 0x17,
+        DIV25 = 0x18,
+        DIV26 = 0x19,
+        DIV27 = 0x1a,
+        DIV28 = 0x1b,
+        DIV29 = 0x1c,
+        DIV30 = 0x1d,
+        DIV31 = 0x1e,
+        DIV32 = 0x1f,
+        DIV33 = 0x20,
+        DIV34 = 0x21,
+        DIV35 = 0x22,
+        DIV36 = 0x23,
+        DIV37 = 0x24,
+        DIV38 = 0x25,
+        DIV39 = 0x26,
+        DIV40 = 0x27,
+        DIV41 = 0x28,
+        DIV42 = 0x29,
+        DIV43 = 0x2a,
+        DIV44 = 0x2b,
+        DIV45 = 0x2c,
+        DIV46 = 0x2d,
+        DIV47 = 0x2e,
+        DIV48 = 0x2f,
+        DIV49 = 0x30,
+        DIV50 = 0x31,
+        DIV51 = 0x32,
+        DIV52 = 0x33,
+        DIV53 = 0x34,
+        DIV54 = 0x35,
+        DIV55 = 0x36,
+        DIV56 = 0x37,
+        DIV57 = 0x38,
+        DIV58 = 0x39,
+        DIV59 = 0x3a,
+        DIV60 = 0x3b,
+        DIV61 = 0x3c,
+        DIV62 = 0x3d,
+        DIV63 = 0x3e,
+        DIV64 = 0x3f,
+        DIV65 = 0x40,
+        DIV66 = 0x41,
+        DIV67 = 0x42,
+        DIV68 = 0x43,
+        DIV69 = 0x44,
+        DIV70 = 0x45,
+        DIV71 = 0x46,
+        DIV72 = 0x47,
+        DIV73 = 0x48,
+        DIV74 = 0x49,
+        DIV75 = 0x4a,
+        DIV76 = 0x4b,
+        DIV77 = 0x4c,
+        DIV78 = 0x4d,
+        DIV79 = 0x4e,
+        DIV80 = 0x4f,
+        DIV81 = 0x50,
+        DIV82 = 0x51,
+        DIV83 = 0x52,
+        DIV84 = 0x53,
+        DIV85 = 0x54,
+        DIV86 = 0x55,
+        DIV87 = 0x56,
+        DIV88 = 0x57,
+        DIV89 = 0x58,
+        DIV90 = 0x59,
+        DIV91 = 0x5a,
+        DIV92 = 0x5b,
+        DIV93 = 0x5c,
+        DIV94 = 0x5d,
+        DIV95 = 0x5e,
+        DIV96 = 0x5f,
+        DIV97 = 0x60,
+        DIV98 = 0x61,
+        DIV99 = 0x62,
+        DIV100 = 0x63,
+        DIV101 = 0x64,
+        DIV102 = 0x65,
+        DIV103 = 0x66,
+        DIV104 = 0x67,
+        DIV105 = 0x68,
+        DIV106 = 0x69,
+        DIV107 = 0x6a,
+        DIV108 = 0x6b,
+        DIV109 = 0x6c,
+        DIV110 = 0x6d,
+        DIV111 = 0x6e,
+        DIV112 = 0x6f,
+        DIV113 = 0x70,
+        DIV114 = 0x71,
+        DIV115 = 0x72,
+        DIV116 = 0x73,
+        DIV117 = 0x74,
+        DIV118 = 0x75,
+        DIV119 = 0x76,
+        DIV120 = 0x77,
+        DIV121 = 0x78,
+        DIV122 = 0x79,
+        DIV123 = 0x7a,
+        DIV124 = 0x7b,
+        DIV125 = 0x7c,
+        DIV126 = 0x7d,
+        DIV127 = 0x7e,
+        DIV128 = 0x7f,
     }
     impl Plldiv {
         #[inline(always)]
@@ -9478,68 +8395,68 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Pllm {
         _RESERVED_0 = 0x0,
-        Div1 = 0x01,
-        Div2 = 0x02,
-        Div3 = 0x03,
-        Div4 = 0x04,
-        Div5 = 0x05,
-        Div6 = 0x06,
-        Div7 = 0x07,
-        Div8 = 0x08,
-        Div9 = 0x09,
-        Div10 = 0x0a,
-        Div11 = 0x0b,
-        Div12 = 0x0c,
-        Div13 = 0x0d,
-        Div14 = 0x0e,
-        Div15 = 0x0f,
-        Div16 = 0x10,
-        Div17 = 0x11,
-        Div18 = 0x12,
-        Div19 = 0x13,
-        Div20 = 0x14,
-        Div21 = 0x15,
-        Div22 = 0x16,
-        Div23 = 0x17,
-        Div24 = 0x18,
-        Div25 = 0x19,
-        Div26 = 0x1a,
-        Div27 = 0x1b,
-        Div28 = 0x1c,
-        Div29 = 0x1d,
-        Div30 = 0x1e,
-        Div31 = 0x1f,
-        Div32 = 0x20,
-        Div33 = 0x21,
-        Div34 = 0x22,
-        Div35 = 0x23,
-        Div36 = 0x24,
-        Div37 = 0x25,
-        Div38 = 0x26,
-        Div39 = 0x27,
-        Div40 = 0x28,
-        Div41 = 0x29,
-        Div42 = 0x2a,
-        Div43 = 0x2b,
-        Div44 = 0x2c,
-        Div45 = 0x2d,
-        Div46 = 0x2e,
-        Div47 = 0x2f,
-        Div48 = 0x30,
-        Div49 = 0x31,
-        Div50 = 0x32,
-        Div51 = 0x33,
-        Div52 = 0x34,
-        Div53 = 0x35,
-        Div54 = 0x36,
-        Div55 = 0x37,
-        Div56 = 0x38,
-        Div57 = 0x39,
-        Div58 = 0x3a,
-        Div59 = 0x3b,
-        Div60 = 0x3c,
-        Div61 = 0x3d,
-        Div62 = 0x3e,
+        DIV1 = 0x01,
+        DIV2 = 0x02,
+        DIV3 = 0x03,
+        DIV4 = 0x04,
+        DIV5 = 0x05,
+        DIV6 = 0x06,
+        DIV7 = 0x07,
+        DIV8 = 0x08,
+        DIV9 = 0x09,
+        DIV10 = 0x0a,
+        DIV11 = 0x0b,
+        DIV12 = 0x0c,
+        DIV13 = 0x0d,
+        DIV14 = 0x0e,
+        DIV15 = 0x0f,
+        DIV16 = 0x10,
+        DIV17 = 0x11,
+        DIV18 = 0x12,
+        DIV19 = 0x13,
+        DIV20 = 0x14,
+        DIV21 = 0x15,
+        DIV22 = 0x16,
+        DIV23 = 0x17,
+        DIV24 = 0x18,
+        DIV25 = 0x19,
+        DIV26 = 0x1a,
+        DIV27 = 0x1b,
+        DIV28 = 0x1c,
+        DIV29 = 0x1d,
+        DIV30 = 0x1e,
+        DIV31 = 0x1f,
+        DIV32 = 0x20,
+        DIV33 = 0x21,
+        DIV34 = 0x22,
+        DIV35 = 0x23,
+        DIV36 = 0x24,
+        DIV37 = 0x25,
+        DIV38 = 0x26,
+        DIV39 = 0x27,
+        DIV40 = 0x28,
+        DIV41 = 0x29,
+        DIV42 = 0x2a,
+        DIV43 = 0x2b,
+        DIV44 = 0x2c,
+        DIV45 = 0x2d,
+        DIV46 = 0x2e,
+        DIV47 = 0x2f,
+        DIV48 = 0x30,
+        DIV49 = 0x31,
+        DIV50 = 0x32,
+        DIV51 = 0x33,
+        DIV52 = 0x34,
+        DIV53 = 0x35,
+        DIV54 = 0x36,
+        DIV55 = 0x37,
+        DIV56 = 0x38,
+        DIV57 = 0x39,
+        DIV58 = 0x3a,
+        DIV59 = 0x3b,
+        DIV60 = 0x3c,
+        DIV61 = 0x3d,
+        DIV62 = 0x3e,
         _RESERVED_3f = 0x3f,
     }
     impl Pllm {
@@ -9571,515 +8488,515 @@ pub mod vals {
         _RESERVED_0 = 0x0,
         _RESERVED_1 = 0x01,
         _RESERVED_2 = 0x02,
-        Mul4 = 0x03,
-        Mul5 = 0x04,
-        Mul6 = 0x05,
-        Mul7 = 0x06,
-        Mul8 = 0x07,
-        Mul9 = 0x08,
-        Mul10 = 0x09,
-        Mul11 = 0x0a,
-        Mul12 = 0x0b,
-        Mul13 = 0x0c,
-        Mul14 = 0x0d,
-        Mul15 = 0x0e,
-        Mul16 = 0x0f,
-        Mul17 = 0x10,
-        Mul18 = 0x11,
-        Mul19 = 0x12,
-        Mul20 = 0x13,
-        Mul21 = 0x14,
-        Mul22 = 0x15,
-        Mul23 = 0x16,
-        Mul24 = 0x17,
-        Mul25 = 0x18,
-        Mul26 = 0x19,
-        Mul27 = 0x1a,
-        Mul28 = 0x1b,
-        Mul29 = 0x1c,
-        Mul30 = 0x1d,
-        Mul31 = 0x1e,
-        Mul32 = 0x1f,
-        Mul33 = 0x20,
-        Mul34 = 0x21,
-        Mul35 = 0x22,
-        Mul36 = 0x23,
-        Mul37 = 0x24,
-        Mul38 = 0x25,
-        Mul39 = 0x26,
-        Mul40 = 0x27,
-        Mul41 = 0x28,
-        Mul42 = 0x29,
-        Mul43 = 0x2a,
-        Mul44 = 0x2b,
-        Mul45 = 0x2c,
-        Mul46 = 0x2d,
-        Mul47 = 0x2e,
-        Mul48 = 0x2f,
-        Mul49 = 0x30,
-        Mul50 = 0x31,
-        Mul51 = 0x32,
-        Mul52 = 0x33,
-        Mul53 = 0x34,
-        Mul54 = 0x35,
-        Mul55 = 0x36,
-        Mul56 = 0x37,
-        Mul57 = 0x38,
-        Mul58 = 0x39,
-        Mul59 = 0x3a,
-        Mul60 = 0x3b,
-        Mul61 = 0x3c,
-        Mul62 = 0x3d,
-        Mul63 = 0x3e,
-        Mul64 = 0x3f,
-        Mul65 = 0x40,
-        Mul66 = 0x41,
-        Mul67 = 0x42,
-        Mul68 = 0x43,
-        Mul69 = 0x44,
-        Mul70 = 0x45,
-        Mul71 = 0x46,
-        Mul72 = 0x47,
-        Mul73 = 0x48,
-        Mul74 = 0x49,
-        Mul75 = 0x4a,
-        Mul76 = 0x4b,
-        Mul77 = 0x4c,
-        Mul78 = 0x4d,
-        Mul79 = 0x4e,
-        Mul80 = 0x4f,
-        Mul81 = 0x50,
-        Mul82 = 0x51,
-        Mul83 = 0x52,
-        Mul84 = 0x53,
-        Mul85 = 0x54,
-        Mul86 = 0x55,
-        Mul87 = 0x56,
-        Mul88 = 0x57,
-        Mul89 = 0x58,
-        Mul90 = 0x59,
-        Mul91 = 0x5a,
-        Mul92 = 0x5b,
-        Mul93 = 0x5c,
-        Mul94 = 0x5d,
-        Mul95 = 0x5e,
-        Mul96 = 0x5f,
-        Mul97 = 0x60,
-        Mul98 = 0x61,
-        Mul99 = 0x62,
-        Mul100 = 0x63,
-        Mul101 = 0x64,
-        Mul102 = 0x65,
-        Mul103 = 0x66,
-        Mul104 = 0x67,
-        Mul105 = 0x68,
-        Mul106 = 0x69,
-        Mul107 = 0x6a,
-        Mul108 = 0x6b,
-        Mul109 = 0x6c,
-        Mul110 = 0x6d,
-        Mul111 = 0x6e,
-        Mul112 = 0x6f,
-        Mul113 = 0x70,
-        Mul114 = 0x71,
-        Mul115 = 0x72,
-        Mul116 = 0x73,
-        Mul117 = 0x74,
-        Mul118 = 0x75,
-        Mul119 = 0x76,
-        Mul120 = 0x77,
-        Mul121 = 0x78,
-        Mul122 = 0x79,
-        Mul123 = 0x7a,
-        Mul124 = 0x7b,
-        Mul125 = 0x7c,
-        Mul126 = 0x7d,
-        Mul127 = 0x7e,
-        Mul128 = 0x7f,
-        Mul129 = 0x80,
-        Mul130 = 0x81,
-        Mul131 = 0x82,
-        Mul132 = 0x83,
-        Mul133 = 0x84,
-        Mul134 = 0x85,
-        Mul135 = 0x86,
-        Mul136 = 0x87,
-        Mul137 = 0x88,
-        Mul138 = 0x89,
-        Mul139 = 0x8a,
-        Mul140 = 0x8b,
-        Mul141 = 0x8c,
-        Mul142 = 0x8d,
-        Mul143 = 0x8e,
-        Mul144 = 0x8f,
-        Mul145 = 0x90,
-        Mul146 = 0x91,
-        Mul147 = 0x92,
-        Mul148 = 0x93,
-        Mul149 = 0x94,
-        Mul150 = 0x95,
-        Mul151 = 0x96,
-        Mul152 = 0x97,
-        Mul153 = 0x98,
-        Mul154 = 0x99,
-        Mul155 = 0x9a,
-        Mul156 = 0x9b,
-        Mul157 = 0x9c,
-        Mul158 = 0x9d,
-        Mul159 = 0x9e,
-        Mul160 = 0x9f,
-        Mul161 = 0xa0,
-        Mul162 = 0xa1,
-        Mul163 = 0xa2,
-        Mul164 = 0xa3,
-        Mul165 = 0xa4,
-        Mul166 = 0xa5,
-        Mul167 = 0xa6,
-        Mul168 = 0xa7,
-        Mul169 = 0xa8,
-        Mul170 = 0xa9,
-        Mul171 = 0xaa,
-        Mul172 = 0xab,
-        Mul173 = 0xac,
-        Mul174 = 0xad,
-        Mul175 = 0xae,
-        Mul176 = 0xaf,
-        Mul177 = 0xb0,
-        Mul178 = 0xb1,
-        Mul179 = 0xb2,
-        Mul180 = 0xb3,
-        Mul181 = 0xb4,
-        Mul182 = 0xb5,
-        Mul183 = 0xb6,
-        Mul184 = 0xb7,
-        Mul185 = 0xb8,
-        Mul186 = 0xb9,
-        Mul187 = 0xba,
-        Mul188 = 0xbb,
-        Mul189 = 0xbc,
-        Mul190 = 0xbd,
-        Mul191 = 0xbe,
-        Mul192 = 0xbf,
-        Mul193 = 0xc0,
-        Mul194 = 0xc1,
-        Mul195 = 0xc2,
-        Mul196 = 0xc3,
-        Mul197 = 0xc4,
-        Mul198 = 0xc5,
-        Mul199 = 0xc6,
-        Mul200 = 0xc7,
-        Mul201 = 0xc8,
-        Mul202 = 0xc9,
-        Mul203 = 0xca,
-        Mul204 = 0xcb,
-        Mul205 = 0xcc,
-        Mul206 = 0xcd,
-        Mul207 = 0xce,
-        Mul208 = 0xcf,
-        Mul209 = 0xd0,
-        Mul210 = 0xd1,
-        Mul211 = 0xd2,
-        Mul212 = 0xd3,
-        Mul213 = 0xd4,
-        Mul214 = 0xd5,
-        Mul215 = 0xd6,
-        Mul216 = 0xd7,
-        Mul217 = 0xd8,
-        Mul218 = 0xd9,
-        Mul219 = 0xda,
-        Mul220 = 0xdb,
-        Mul221 = 0xdc,
-        Mul222 = 0xdd,
-        Mul223 = 0xde,
-        Mul224 = 0xdf,
-        Mul225 = 0xe0,
-        Mul226 = 0xe1,
-        Mul227 = 0xe2,
-        Mul228 = 0xe3,
-        Mul229 = 0xe4,
-        Mul230 = 0xe5,
-        Mul231 = 0xe6,
-        Mul232 = 0xe7,
-        Mul233 = 0xe8,
-        Mul234 = 0xe9,
-        Mul235 = 0xea,
-        Mul236 = 0xeb,
-        Mul237 = 0xec,
-        Mul238 = 0xed,
-        Mul239 = 0xee,
-        Mul240 = 0xef,
-        Mul241 = 0xf0,
-        Mul242 = 0xf1,
-        Mul243 = 0xf2,
-        Mul244 = 0xf3,
-        Mul245 = 0xf4,
-        Mul246 = 0xf5,
-        Mul247 = 0xf6,
-        Mul248 = 0xf7,
-        Mul249 = 0xf8,
-        Mul250 = 0xf9,
-        Mul251 = 0xfa,
-        Mul252 = 0xfb,
-        Mul253 = 0xfc,
-        Mul254 = 0xfd,
-        Mul255 = 0xfe,
-        Mul256 = 0xff,
-        Mul257 = 0x0100,
-        Mul258 = 0x0101,
-        Mul259 = 0x0102,
-        Mul260 = 0x0103,
-        Mul261 = 0x0104,
-        Mul262 = 0x0105,
-        Mul263 = 0x0106,
-        Mul264 = 0x0107,
-        Mul265 = 0x0108,
-        Mul266 = 0x0109,
-        Mul267 = 0x010a,
-        Mul268 = 0x010b,
-        Mul269 = 0x010c,
-        Mul270 = 0x010d,
-        Mul271 = 0x010e,
-        Mul272 = 0x010f,
-        Mul273 = 0x0110,
-        Mul274 = 0x0111,
-        Mul275 = 0x0112,
-        Mul276 = 0x0113,
-        Mul277 = 0x0114,
-        Mul278 = 0x0115,
-        Mul279 = 0x0116,
-        Mul280 = 0x0117,
-        Mul281 = 0x0118,
-        Mul282 = 0x0119,
-        Mul283 = 0x011a,
-        Mul284 = 0x011b,
-        Mul285 = 0x011c,
-        Mul286 = 0x011d,
-        Mul287 = 0x011e,
-        Mul288 = 0x011f,
-        Mul289 = 0x0120,
-        Mul290 = 0x0121,
-        Mul291 = 0x0122,
-        Mul292 = 0x0123,
-        Mul293 = 0x0124,
-        Mul294 = 0x0125,
-        Mul295 = 0x0126,
-        Mul296 = 0x0127,
-        Mul297 = 0x0128,
-        Mul298 = 0x0129,
-        Mul299 = 0x012a,
-        Mul300 = 0x012b,
-        Mul301 = 0x012c,
-        Mul302 = 0x012d,
-        Mul303 = 0x012e,
-        Mul304 = 0x012f,
-        Mul305 = 0x0130,
-        Mul306 = 0x0131,
-        Mul307 = 0x0132,
-        Mul308 = 0x0133,
-        Mul309 = 0x0134,
-        Mul310 = 0x0135,
-        Mul311 = 0x0136,
-        Mul312 = 0x0137,
-        Mul313 = 0x0138,
-        Mul314 = 0x0139,
-        Mul315 = 0x013a,
-        Mul316 = 0x013b,
-        Mul317 = 0x013c,
-        Mul318 = 0x013d,
-        Mul319 = 0x013e,
-        Mul320 = 0x013f,
-        Mul321 = 0x0140,
-        Mul322 = 0x0141,
-        Mul323 = 0x0142,
-        Mul324 = 0x0143,
-        Mul325 = 0x0144,
-        Mul326 = 0x0145,
-        Mul327 = 0x0146,
-        Mul328 = 0x0147,
-        Mul329 = 0x0148,
-        Mul330 = 0x0149,
-        Mul331 = 0x014a,
-        Mul332 = 0x014b,
-        Mul333 = 0x014c,
-        Mul334 = 0x014d,
-        Mul335 = 0x014e,
-        Mul336 = 0x014f,
-        Mul337 = 0x0150,
-        Mul338 = 0x0151,
-        Mul339 = 0x0152,
-        Mul340 = 0x0153,
-        Mul341 = 0x0154,
-        Mul342 = 0x0155,
-        Mul343 = 0x0156,
-        Mul344 = 0x0157,
-        Mul345 = 0x0158,
-        Mul346 = 0x0159,
-        Mul347 = 0x015a,
-        Mul348 = 0x015b,
-        Mul349 = 0x015c,
-        Mul350 = 0x015d,
-        Mul351 = 0x015e,
-        Mul352 = 0x015f,
-        Mul353 = 0x0160,
-        Mul354 = 0x0161,
-        Mul355 = 0x0162,
-        Mul356 = 0x0163,
-        Mul357 = 0x0164,
-        Mul358 = 0x0165,
-        Mul359 = 0x0166,
-        Mul360 = 0x0167,
-        Mul361 = 0x0168,
-        Mul362 = 0x0169,
-        Mul363 = 0x016a,
-        Mul364 = 0x016b,
-        Mul365 = 0x016c,
-        Mul366 = 0x016d,
-        Mul367 = 0x016e,
-        Mul368 = 0x016f,
-        Mul369 = 0x0170,
-        Mul370 = 0x0171,
-        Mul371 = 0x0172,
-        Mul372 = 0x0173,
-        Mul373 = 0x0174,
-        Mul374 = 0x0175,
-        Mul375 = 0x0176,
-        Mul376 = 0x0177,
-        Mul377 = 0x0178,
-        Mul378 = 0x0179,
-        Mul379 = 0x017a,
-        Mul380 = 0x017b,
-        Mul381 = 0x017c,
-        Mul382 = 0x017d,
-        Mul383 = 0x017e,
-        Mul384 = 0x017f,
-        Mul385 = 0x0180,
-        Mul386 = 0x0181,
-        Mul387 = 0x0182,
-        Mul388 = 0x0183,
-        Mul389 = 0x0184,
-        Mul390 = 0x0185,
-        Mul391 = 0x0186,
-        Mul392 = 0x0187,
-        Mul393 = 0x0188,
-        Mul394 = 0x0189,
-        Mul395 = 0x018a,
-        Mul396 = 0x018b,
-        Mul397 = 0x018c,
-        Mul398 = 0x018d,
-        Mul399 = 0x018e,
-        Mul400 = 0x018f,
-        Mul401 = 0x0190,
-        Mul402 = 0x0191,
-        Mul403 = 0x0192,
-        Mul404 = 0x0193,
-        Mul405 = 0x0194,
-        Mul406 = 0x0195,
-        Mul407 = 0x0196,
-        Mul408 = 0x0197,
-        Mul409 = 0x0198,
-        Mul410 = 0x0199,
-        Mul411 = 0x019a,
-        Mul412 = 0x019b,
-        Mul413 = 0x019c,
-        Mul414 = 0x019d,
-        Mul415 = 0x019e,
-        Mul416 = 0x019f,
-        Mul417 = 0x01a0,
-        Mul418 = 0x01a1,
-        Mul419 = 0x01a2,
-        Mul420 = 0x01a3,
-        Mul421 = 0x01a4,
-        Mul422 = 0x01a5,
-        Mul423 = 0x01a6,
-        Mul424 = 0x01a7,
-        Mul425 = 0x01a8,
-        Mul426 = 0x01a9,
-        Mul427 = 0x01aa,
-        Mul428 = 0x01ab,
-        Mul429 = 0x01ac,
-        Mul430 = 0x01ad,
-        Mul431 = 0x01ae,
-        Mul432 = 0x01af,
-        Mul433 = 0x01b0,
-        Mul434 = 0x01b1,
-        Mul435 = 0x01b2,
-        Mul436 = 0x01b3,
-        Mul437 = 0x01b4,
-        Mul438 = 0x01b5,
-        Mul439 = 0x01b6,
-        Mul440 = 0x01b7,
-        Mul441 = 0x01b8,
-        Mul442 = 0x01b9,
-        Mul443 = 0x01ba,
-        Mul444 = 0x01bb,
-        Mul445 = 0x01bc,
-        Mul446 = 0x01bd,
-        Mul447 = 0x01be,
-        Mul448 = 0x01bf,
-        Mul449 = 0x01c0,
-        Mul450 = 0x01c1,
-        Mul451 = 0x01c2,
-        Mul452 = 0x01c3,
-        Mul453 = 0x01c4,
-        Mul454 = 0x01c5,
-        Mul455 = 0x01c6,
-        Mul456 = 0x01c7,
-        Mul457 = 0x01c8,
-        Mul458 = 0x01c9,
-        Mul459 = 0x01ca,
-        Mul460 = 0x01cb,
-        Mul461 = 0x01cc,
-        Mul462 = 0x01cd,
-        Mul463 = 0x01ce,
-        Mul464 = 0x01cf,
-        Mul465 = 0x01d0,
-        Mul466 = 0x01d1,
-        Mul467 = 0x01d2,
-        Mul468 = 0x01d3,
-        Mul469 = 0x01d4,
-        Mul470 = 0x01d5,
-        Mul471 = 0x01d6,
-        Mul472 = 0x01d7,
-        Mul473 = 0x01d8,
-        Mul474 = 0x01d9,
-        Mul475 = 0x01da,
-        Mul476 = 0x01db,
-        Mul477 = 0x01dc,
-        Mul478 = 0x01dd,
-        Mul479 = 0x01de,
-        Mul480 = 0x01df,
-        Mul481 = 0x01e0,
-        Mul482 = 0x01e1,
-        Mul483 = 0x01e2,
-        Mul484 = 0x01e3,
-        Mul485 = 0x01e4,
-        Mul486 = 0x01e5,
-        Mul487 = 0x01e6,
-        Mul488 = 0x01e7,
-        Mul489 = 0x01e8,
-        Mul490 = 0x01e9,
-        Mul491 = 0x01ea,
-        Mul492 = 0x01eb,
-        Mul493 = 0x01ec,
-        Mul494 = 0x01ed,
-        Mul495 = 0x01ee,
-        Mul496 = 0x01ef,
-        Mul497 = 0x01f0,
-        Mul498 = 0x01f1,
-        Mul499 = 0x01f2,
-        Mul500 = 0x01f3,
-        Mul501 = 0x01f4,
-        Mul502 = 0x01f5,
-        Mul503 = 0x01f6,
-        Mul504 = 0x01f7,
-        Mul505 = 0x01f8,
-        Mul506 = 0x01f9,
-        Mul507 = 0x01fa,
-        Mul508 = 0x01fb,
-        Mul509 = 0x01fc,
-        Mul510 = 0x01fd,
-        Mul511 = 0x01fe,
-        Mul512 = 0x01ff,
+        MUL4 = 0x03,
+        MUL5 = 0x04,
+        MUL6 = 0x05,
+        MUL7 = 0x06,
+        MUL8 = 0x07,
+        MUL9 = 0x08,
+        MUL10 = 0x09,
+        MUL11 = 0x0a,
+        MUL12 = 0x0b,
+        MUL13 = 0x0c,
+        MUL14 = 0x0d,
+        MUL15 = 0x0e,
+        MUL16 = 0x0f,
+        MUL17 = 0x10,
+        MUL18 = 0x11,
+        MUL19 = 0x12,
+        MUL20 = 0x13,
+        MUL21 = 0x14,
+        MUL22 = 0x15,
+        MUL23 = 0x16,
+        MUL24 = 0x17,
+        MUL25 = 0x18,
+        MUL26 = 0x19,
+        MUL27 = 0x1a,
+        MUL28 = 0x1b,
+        MUL29 = 0x1c,
+        MUL30 = 0x1d,
+        MUL31 = 0x1e,
+        MUL32 = 0x1f,
+        MUL33 = 0x20,
+        MUL34 = 0x21,
+        MUL35 = 0x22,
+        MUL36 = 0x23,
+        MUL37 = 0x24,
+        MUL38 = 0x25,
+        MUL39 = 0x26,
+        MUL40 = 0x27,
+        MUL41 = 0x28,
+        MUL42 = 0x29,
+        MUL43 = 0x2a,
+        MUL44 = 0x2b,
+        MUL45 = 0x2c,
+        MUL46 = 0x2d,
+        MUL47 = 0x2e,
+        MUL48 = 0x2f,
+        MUL49 = 0x30,
+        MUL50 = 0x31,
+        MUL51 = 0x32,
+        MUL52 = 0x33,
+        MUL53 = 0x34,
+        MUL54 = 0x35,
+        MUL55 = 0x36,
+        MUL56 = 0x37,
+        MUL57 = 0x38,
+        MUL58 = 0x39,
+        MUL59 = 0x3a,
+        MUL60 = 0x3b,
+        MUL61 = 0x3c,
+        MUL62 = 0x3d,
+        MUL63 = 0x3e,
+        MUL64 = 0x3f,
+        MUL65 = 0x40,
+        MUL66 = 0x41,
+        MUL67 = 0x42,
+        MUL68 = 0x43,
+        MUL69 = 0x44,
+        MUL70 = 0x45,
+        MUL71 = 0x46,
+        MUL72 = 0x47,
+        MUL73 = 0x48,
+        MUL74 = 0x49,
+        MUL75 = 0x4a,
+        MUL76 = 0x4b,
+        MUL77 = 0x4c,
+        MUL78 = 0x4d,
+        MUL79 = 0x4e,
+        MUL80 = 0x4f,
+        MUL81 = 0x50,
+        MUL82 = 0x51,
+        MUL83 = 0x52,
+        MUL84 = 0x53,
+        MUL85 = 0x54,
+        MUL86 = 0x55,
+        MUL87 = 0x56,
+        MUL88 = 0x57,
+        MUL89 = 0x58,
+        MUL90 = 0x59,
+        MUL91 = 0x5a,
+        MUL92 = 0x5b,
+        MUL93 = 0x5c,
+        MUL94 = 0x5d,
+        MUL95 = 0x5e,
+        MUL96 = 0x5f,
+        MUL97 = 0x60,
+        MUL98 = 0x61,
+        MUL99 = 0x62,
+        MUL100 = 0x63,
+        MUL101 = 0x64,
+        MUL102 = 0x65,
+        MUL103 = 0x66,
+        MUL104 = 0x67,
+        MUL105 = 0x68,
+        MUL106 = 0x69,
+        MUL107 = 0x6a,
+        MUL108 = 0x6b,
+        MUL109 = 0x6c,
+        MUL110 = 0x6d,
+        MUL111 = 0x6e,
+        MUL112 = 0x6f,
+        MUL113 = 0x70,
+        MUL114 = 0x71,
+        MUL115 = 0x72,
+        MUL116 = 0x73,
+        MUL117 = 0x74,
+        MUL118 = 0x75,
+        MUL119 = 0x76,
+        MUL120 = 0x77,
+        MUL121 = 0x78,
+        MUL122 = 0x79,
+        MUL123 = 0x7a,
+        MUL124 = 0x7b,
+        MUL125 = 0x7c,
+        MUL126 = 0x7d,
+        MUL127 = 0x7e,
+        MUL128 = 0x7f,
+        MUL129 = 0x80,
+        MUL130 = 0x81,
+        MUL131 = 0x82,
+        MUL132 = 0x83,
+        MUL133 = 0x84,
+        MUL134 = 0x85,
+        MUL135 = 0x86,
+        MUL136 = 0x87,
+        MUL137 = 0x88,
+        MUL138 = 0x89,
+        MUL139 = 0x8a,
+        MUL140 = 0x8b,
+        MUL141 = 0x8c,
+        MUL142 = 0x8d,
+        MUL143 = 0x8e,
+        MUL144 = 0x8f,
+        MUL145 = 0x90,
+        MUL146 = 0x91,
+        MUL147 = 0x92,
+        MUL148 = 0x93,
+        MUL149 = 0x94,
+        MUL150 = 0x95,
+        MUL151 = 0x96,
+        MUL152 = 0x97,
+        MUL153 = 0x98,
+        MUL154 = 0x99,
+        MUL155 = 0x9a,
+        MUL156 = 0x9b,
+        MUL157 = 0x9c,
+        MUL158 = 0x9d,
+        MUL159 = 0x9e,
+        MUL160 = 0x9f,
+        MUL161 = 0xa0,
+        MUL162 = 0xa1,
+        MUL163 = 0xa2,
+        MUL164 = 0xa3,
+        MUL165 = 0xa4,
+        MUL166 = 0xa5,
+        MUL167 = 0xa6,
+        MUL168 = 0xa7,
+        MUL169 = 0xa8,
+        MUL170 = 0xa9,
+        MUL171 = 0xaa,
+        MUL172 = 0xab,
+        MUL173 = 0xac,
+        MUL174 = 0xad,
+        MUL175 = 0xae,
+        MUL176 = 0xaf,
+        MUL177 = 0xb0,
+        MUL178 = 0xb1,
+        MUL179 = 0xb2,
+        MUL180 = 0xb3,
+        MUL181 = 0xb4,
+        MUL182 = 0xb5,
+        MUL183 = 0xb6,
+        MUL184 = 0xb7,
+        MUL185 = 0xb8,
+        MUL186 = 0xb9,
+        MUL187 = 0xba,
+        MUL188 = 0xbb,
+        MUL189 = 0xbc,
+        MUL190 = 0xbd,
+        MUL191 = 0xbe,
+        MUL192 = 0xbf,
+        MUL193 = 0xc0,
+        MUL194 = 0xc1,
+        MUL195 = 0xc2,
+        MUL196 = 0xc3,
+        MUL197 = 0xc4,
+        MUL198 = 0xc5,
+        MUL199 = 0xc6,
+        MUL200 = 0xc7,
+        MUL201 = 0xc8,
+        MUL202 = 0xc9,
+        MUL203 = 0xca,
+        MUL204 = 0xcb,
+        MUL205 = 0xcc,
+        MUL206 = 0xcd,
+        MUL207 = 0xce,
+        MUL208 = 0xcf,
+        MUL209 = 0xd0,
+        MUL210 = 0xd1,
+        MUL211 = 0xd2,
+        MUL212 = 0xd3,
+        MUL213 = 0xd4,
+        MUL214 = 0xd5,
+        MUL215 = 0xd6,
+        MUL216 = 0xd7,
+        MUL217 = 0xd8,
+        MUL218 = 0xd9,
+        MUL219 = 0xda,
+        MUL220 = 0xdb,
+        MUL221 = 0xdc,
+        MUL222 = 0xdd,
+        MUL223 = 0xde,
+        MUL224 = 0xdf,
+        MUL225 = 0xe0,
+        MUL226 = 0xe1,
+        MUL227 = 0xe2,
+        MUL228 = 0xe3,
+        MUL229 = 0xe4,
+        MUL230 = 0xe5,
+        MUL231 = 0xe6,
+        MUL232 = 0xe7,
+        MUL233 = 0xe8,
+        MUL234 = 0xe9,
+        MUL235 = 0xea,
+        MUL236 = 0xeb,
+        MUL237 = 0xec,
+        MUL238 = 0xed,
+        MUL239 = 0xee,
+        MUL240 = 0xef,
+        MUL241 = 0xf0,
+        MUL242 = 0xf1,
+        MUL243 = 0xf2,
+        MUL244 = 0xf3,
+        MUL245 = 0xf4,
+        MUL246 = 0xf5,
+        MUL247 = 0xf6,
+        MUL248 = 0xf7,
+        MUL249 = 0xf8,
+        MUL250 = 0xf9,
+        MUL251 = 0xfa,
+        MUL252 = 0xfb,
+        MUL253 = 0xfc,
+        MUL254 = 0xfd,
+        MUL255 = 0xfe,
+        MUL256 = 0xff,
+        MUL257 = 0x0100,
+        MUL258 = 0x0101,
+        MUL259 = 0x0102,
+        MUL260 = 0x0103,
+        MUL261 = 0x0104,
+        MUL262 = 0x0105,
+        MUL263 = 0x0106,
+        MUL264 = 0x0107,
+        MUL265 = 0x0108,
+        MUL266 = 0x0109,
+        MUL267 = 0x010a,
+        MUL268 = 0x010b,
+        MUL269 = 0x010c,
+        MUL270 = 0x010d,
+        MUL271 = 0x010e,
+        MUL272 = 0x010f,
+        MUL273 = 0x0110,
+        MUL274 = 0x0111,
+        MUL275 = 0x0112,
+        MUL276 = 0x0113,
+        MUL277 = 0x0114,
+        MUL278 = 0x0115,
+        MUL279 = 0x0116,
+        MUL280 = 0x0117,
+        MUL281 = 0x0118,
+        MUL282 = 0x0119,
+        MUL283 = 0x011a,
+        MUL284 = 0x011b,
+        MUL285 = 0x011c,
+        MUL286 = 0x011d,
+        MUL287 = 0x011e,
+        MUL288 = 0x011f,
+        MUL289 = 0x0120,
+        MUL290 = 0x0121,
+        MUL291 = 0x0122,
+        MUL292 = 0x0123,
+        MUL293 = 0x0124,
+        MUL294 = 0x0125,
+        MUL295 = 0x0126,
+        MUL296 = 0x0127,
+        MUL297 = 0x0128,
+        MUL298 = 0x0129,
+        MUL299 = 0x012a,
+        MUL300 = 0x012b,
+        MUL301 = 0x012c,
+        MUL302 = 0x012d,
+        MUL303 = 0x012e,
+        MUL304 = 0x012f,
+        MUL305 = 0x0130,
+        MUL306 = 0x0131,
+        MUL307 = 0x0132,
+        MUL308 = 0x0133,
+        MUL309 = 0x0134,
+        MUL310 = 0x0135,
+        MUL311 = 0x0136,
+        MUL312 = 0x0137,
+        MUL313 = 0x0138,
+        MUL314 = 0x0139,
+        MUL315 = 0x013a,
+        MUL316 = 0x013b,
+        MUL317 = 0x013c,
+        MUL318 = 0x013d,
+        MUL319 = 0x013e,
+        MUL320 = 0x013f,
+        MUL321 = 0x0140,
+        MUL322 = 0x0141,
+        MUL323 = 0x0142,
+        MUL324 = 0x0143,
+        MUL325 = 0x0144,
+        MUL326 = 0x0145,
+        MUL327 = 0x0146,
+        MUL328 = 0x0147,
+        MUL329 = 0x0148,
+        MUL330 = 0x0149,
+        MUL331 = 0x014a,
+        MUL332 = 0x014b,
+        MUL333 = 0x014c,
+        MUL334 = 0x014d,
+        MUL335 = 0x014e,
+        MUL336 = 0x014f,
+        MUL337 = 0x0150,
+        MUL338 = 0x0151,
+        MUL339 = 0x0152,
+        MUL340 = 0x0153,
+        MUL341 = 0x0154,
+        MUL342 = 0x0155,
+        MUL343 = 0x0156,
+        MUL344 = 0x0157,
+        MUL345 = 0x0158,
+        MUL346 = 0x0159,
+        MUL347 = 0x015a,
+        MUL348 = 0x015b,
+        MUL349 = 0x015c,
+        MUL350 = 0x015d,
+        MUL351 = 0x015e,
+        MUL352 = 0x015f,
+        MUL353 = 0x0160,
+        MUL354 = 0x0161,
+        MUL355 = 0x0162,
+        MUL356 = 0x0163,
+        MUL357 = 0x0164,
+        MUL358 = 0x0165,
+        MUL359 = 0x0166,
+        MUL360 = 0x0167,
+        MUL361 = 0x0168,
+        MUL362 = 0x0169,
+        MUL363 = 0x016a,
+        MUL364 = 0x016b,
+        MUL365 = 0x016c,
+        MUL366 = 0x016d,
+        MUL367 = 0x016e,
+        MUL368 = 0x016f,
+        MUL369 = 0x0170,
+        MUL370 = 0x0171,
+        MUL371 = 0x0172,
+        MUL372 = 0x0173,
+        MUL373 = 0x0174,
+        MUL374 = 0x0175,
+        MUL375 = 0x0176,
+        MUL376 = 0x0177,
+        MUL377 = 0x0178,
+        MUL378 = 0x0179,
+        MUL379 = 0x017a,
+        MUL380 = 0x017b,
+        MUL381 = 0x017c,
+        MUL382 = 0x017d,
+        MUL383 = 0x017e,
+        MUL384 = 0x017f,
+        MUL385 = 0x0180,
+        MUL386 = 0x0181,
+        MUL387 = 0x0182,
+        MUL388 = 0x0183,
+        MUL389 = 0x0184,
+        MUL390 = 0x0185,
+        MUL391 = 0x0186,
+        MUL392 = 0x0187,
+        MUL393 = 0x0188,
+        MUL394 = 0x0189,
+        MUL395 = 0x018a,
+        MUL396 = 0x018b,
+        MUL397 = 0x018c,
+        MUL398 = 0x018d,
+        MUL399 = 0x018e,
+        MUL400 = 0x018f,
+        MUL401 = 0x0190,
+        MUL402 = 0x0191,
+        MUL403 = 0x0192,
+        MUL404 = 0x0193,
+        MUL405 = 0x0194,
+        MUL406 = 0x0195,
+        MUL407 = 0x0196,
+        MUL408 = 0x0197,
+        MUL409 = 0x0198,
+        MUL410 = 0x0199,
+        MUL411 = 0x019a,
+        MUL412 = 0x019b,
+        MUL413 = 0x019c,
+        MUL414 = 0x019d,
+        MUL415 = 0x019e,
+        MUL416 = 0x019f,
+        MUL417 = 0x01a0,
+        MUL418 = 0x01a1,
+        MUL419 = 0x01a2,
+        MUL420 = 0x01a3,
+        MUL421 = 0x01a4,
+        MUL422 = 0x01a5,
+        MUL423 = 0x01a6,
+        MUL424 = 0x01a7,
+        MUL425 = 0x01a8,
+        MUL426 = 0x01a9,
+        MUL427 = 0x01aa,
+        MUL428 = 0x01ab,
+        MUL429 = 0x01ac,
+        MUL430 = 0x01ad,
+        MUL431 = 0x01ae,
+        MUL432 = 0x01af,
+        MUL433 = 0x01b0,
+        MUL434 = 0x01b1,
+        MUL435 = 0x01b2,
+        MUL436 = 0x01b3,
+        MUL437 = 0x01b4,
+        MUL438 = 0x01b5,
+        MUL439 = 0x01b6,
+        MUL440 = 0x01b7,
+        MUL441 = 0x01b8,
+        MUL442 = 0x01b9,
+        MUL443 = 0x01ba,
+        MUL444 = 0x01bb,
+        MUL445 = 0x01bc,
+        MUL446 = 0x01bd,
+        MUL447 = 0x01be,
+        MUL448 = 0x01bf,
+        MUL449 = 0x01c0,
+        MUL450 = 0x01c1,
+        MUL451 = 0x01c2,
+        MUL452 = 0x01c3,
+        MUL453 = 0x01c4,
+        MUL454 = 0x01c5,
+        MUL455 = 0x01c6,
+        MUL456 = 0x01c7,
+        MUL457 = 0x01c8,
+        MUL458 = 0x01c9,
+        MUL459 = 0x01ca,
+        MUL460 = 0x01cb,
+        MUL461 = 0x01cc,
+        MUL462 = 0x01cd,
+        MUL463 = 0x01ce,
+        MUL464 = 0x01cf,
+        MUL465 = 0x01d0,
+        MUL466 = 0x01d1,
+        MUL467 = 0x01d2,
+        MUL468 = 0x01d3,
+        MUL469 = 0x01d4,
+        MUL470 = 0x01d5,
+        MUL471 = 0x01d6,
+        MUL472 = 0x01d7,
+        MUL473 = 0x01d8,
+        MUL474 = 0x01d9,
+        MUL475 = 0x01da,
+        MUL476 = 0x01db,
+        MUL477 = 0x01dc,
+        MUL478 = 0x01dd,
+        MUL479 = 0x01de,
+        MUL480 = 0x01df,
+        MUL481 = 0x01e0,
+        MUL482 = 0x01e1,
+        MUL483 = 0x01e2,
+        MUL484 = 0x01e3,
+        MUL485 = 0x01e4,
+        MUL486 = 0x01e5,
+        MUL487 = 0x01e6,
+        MUL488 = 0x01e7,
+        MUL489 = 0x01e8,
+        MUL490 = 0x01e9,
+        MUL491 = 0x01ea,
+        MUL492 = 0x01eb,
+        MUL493 = 0x01ec,
+        MUL494 = 0x01ed,
+        MUL495 = 0x01ee,
+        MUL496 = 0x01ef,
+        MUL497 = 0x01f0,
+        MUL498 = 0x01f1,
+        MUL499 = 0x01f2,
+        MUL500 = 0x01f3,
+        MUL501 = 0x01f4,
+        MUL502 = 0x01f5,
+        MUL503 = 0x01f6,
+        MUL504 = 0x01f7,
+        MUL505 = 0x01f8,
+        MUL506 = 0x01f9,
+        MUL507 = 0x01fa,
+        MUL508 = 0x01fb,
+        MUL509 = 0x01fc,
+        MUL510 = 0x01fd,
+        MUL511 = 0x01fe,
+        MUL512 = 0x01ff,
     }
     impl Plln {
         #[inline(always)]
@@ -10108,13 +9025,13 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Pllrge {
         #[doc = "Frequency is between 1 and 2 MHz"]
-        Range1 = 0x0,
+        RANGE1 = 0x0,
         #[doc = "Frequency is between 2 and 4 MHz"]
-        Range2 = 0x01,
+        RANGE2 = 0x01,
         #[doc = "Frequency is between 4 and 8 MHz"]
-        Range4 = 0x02,
+        RANGE4 = 0x02,
         #[doc = "Frequency is between 8 and 16 MHz"]
-        Range8 = 0x03,
+        RANGE8 = 0x03,
     }
     impl Pllrge {
         #[inline(always)]
@@ -10143,13 +9060,13 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Pllsrc {
         #[doc = "HSI selected as PLL clock"]
-        Hsi = 0x0,
+        HSI = 0x0,
         #[doc = "CSI selected as PLL clock"]
-        Csi = 0x01,
+        CSI = 0x01,
         #[doc = "HSE selected as PLL clock"]
-        Hse = 0x02,
+        HSE = 0x02,
         #[doc = "No clock sent to DIVMx dividers and PLLs"]
-        Disable = 0x03,
+        DISABLE = 0x03,
     }
     impl Pllsrc {
         #[inline(always)]
@@ -10178,9 +9095,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Pllvcosel {
         #[doc = "VCO frequency range 192 to 836 MHz"]
-        WideVco = 0x0,
+        WIDE_VCO = 0x0,
         #[doc = "VCO frequency range 150 to 420 MHz"]
-        MediumVco = 0x01,
+        MEDIUM_VCO = 0x01,
     }
     impl Pllvcosel {
         #[inline(always)]
@@ -10209,18 +9126,18 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Ppre {
         #[doc = "rcc_hclk not divided"]
-        Div1 = 0x0,
+        DIV1 = 0x0,
         _RESERVED_1 = 0x01,
         _RESERVED_2 = 0x02,
         _RESERVED_3 = 0x03,
         #[doc = "rcc_hclk divided by 2"]
-        Div2 = 0x04,
+        DIV2 = 0x04,
         #[doc = "rcc_hclk divided by 4"]
-        Div4 = 0x05,
+        DIV4 = 0x05,
         #[doc = "rcc_hclk divided by 8"]
-        Div8 = 0x06,
+        DIV8 = 0x06,
         #[doc = "rcc_hclk divided by 16"]
-        Div16 = 0x07,
+        DIV16 = 0x07,
     }
     impl Ppre {
         #[inline(always)]
@@ -10249,13 +9166,13 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Rngsel {
         #[doc = "HSI48 selected as peripheral clock"]
-        Hsi48 = 0x0,
+        HSI48 = 0x0,
         #[doc = "pll1_q selected as peripheral clock"]
-        Pll1Q = 0x01,
+        PLL1_Q = 0x01,
         #[doc = "LSE selected as peripheral clock"]
-        Lse = 0x02,
+        LSE = 0x02,
         #[doc = "LSI selected as peripheral clock"]
-        Lsi = 0x03,
+        LSI = 0x03,
     }
     impl Rngsel {
         #[inline(always)]
@@ -10284,13 +9201,13 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Rtcsel {
         #[doc = "No clock"]
-        Disable = 0x0,
+        DISABLE = 0x0,
         #[doc = "LSE oscillator clock used as RTC clock"]
-        Lse = 0x01,
+        LSE = 0x01,
         #[doc = "LSI oscillator clock used as RTC clock"]
-        Lsi = 0x02,
+        LSI = 0x02,
         #[doc = "HSE oscillator clock divided by a prescaler used as RTC clock"]
-        Hse = 0x03,
+        HSE = 0x03,
     }
     impl Rtcsel {
         #[inline(always)]
@@ -10319,15 +9236,15 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Saiasel {
         #[doc = "pll1_q selected as peripheral clock"]
-        Pll1Q = 0x0,
+        PLL1_Q = 0x0,
         #[doc = "pll2_p selected as peripheral clock"]
-        Pll2P = 0x01,
+        PLL2_P = 0x01,
         #[doc = "pll3_p selected as peripheral clock"]
-        Pll3P = 0x02,
+        PLL3_P = 0x02,
         #[doc = "i2s_ckin selected as peripheral clock"]
-        I2sCkin = 0x03,
+        I2S_CKIN = 0x03,
         #[doc = "PER selected as peripheral clock"]
-        Per = 0x04,
+        PER = 0x04,
         _RESERVED_5 = 0x05,
         _RESERVED_6 = 0x06,
         _RESERVED_7 = 0x07,
@@ -10359,15 +9276,15 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Saisel {
         #[doc = "pll1_q selected as peripheral clock"]
-        Pll1Q = 0x0,
+        PLL1_Q = 0x0,
         #[doc = "pll2_p selected as peripheral clock"]
-        Pll2P = 0x01,
+        PLL2_P = 0x01,
         #[doc = "pll3_p selected as peripheral clock"]
-        Pll3P = 0x02,
+        PLL3_P = 0x02,
         #[doc = "I2S_CKIN selected as peripheral clock"]
-        I2sCkin = 0x03,
+        I2S_CKIN = 0x03,
         #[doc = "PER selected as peripheral clock"]
-        Per = 0x04,
+        PER = 0x04,
         _RESERVED_5 = 0x05,
         _RESERVED_6 = 0x06,
         _RESERVED_7 = 0x07,
@@ -10399,9 +9316,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Sdmmcsel {
         #[doc = "pll1_q selected as peripheral clock"]
-        Pll1Q = 0x0,
+        PLL1_Q = 0x0,
         #[doc = "pll2_r selected as peripheral clock"]
-        Pll2R = 0x01,
+        PLL2_R = 0x01,
     }
     impl Sdmmcsel {
         #[inline(always)]
@@ -10430,13 +9347,13 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Spdifrxsel {
         #[doc = "pll1_q selected as peripheral clock"]
-        Pll1Q = 0x0,
+        PLL1_Q = 0x0,
         #[doc = "pll2_r selected as peripheral clock"]
-        Pll2R = 0x01,
+        PLL2_R = 0x01,
         #[doc = "pll3_r selected as peripheral clock"]
-        Pll3R = 0x02,
+        PLL3_R = 0x02,
         #[doc = "hsi_ker selected as peripheral clock"]
-        Hsi = 0x03,
+        HSI = 0x03,
     }
     impl Spdifrxsel {
         #[inline(always)]
@@ -10465,17 +9382,17 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Spi45sel {
         #[doc = "APB2 clock selected as peripheral clock"]
-        Pclk2 = 0x0,
+        PCLK2 = 0x0,
         #[doc = "pll2_q selected as peripheral clock"]
-        Pll2Q = 0x01,
+        PLL2_Q = 0x01,
         #[doc = "pll3_q selected as peripheral clock"]
-        Pll3Q = 0x02,
+        PLL3_Q = 0x02,
         #[doc = "hsi_ker selected as peripheral clock"]
-        Hsi = 0x03,
+        HSI = 0x03,
         #[doc = "csi_ker selected as peripheral clock"]
-        Csi = 0x04,
+        CSI = 0x04,
         #[doc = "HSE selected as peripheral clock"]
-        Hse = 0x05,
+        HSE = 0x05,
         _RESERVED_6 = 0x06,
         _RESERVED_7 = 0x07,
     }
@@ -10506,17 +9423,17 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Spi6sel {
         #[doc = "rcc_pclk4 selected as peripheral clock"]
-        Pclk4 = 0x0,
+        PCLK4 = 0x0,
         #[doc = "pll2_q selected as peripheral clock"]
-        Pll2Q = 0x01,
+        PLL2_Q = 0x01,
         #[doc = "pll3_q selected as peripheral clock"]
-        Pll3Q = 0x02,
+        PLL3_Q = 0x02,
         #[doc = "hsi_ker selected as peripheral clock"]
-        Hsi = 0x03,
+        HSI = 0x03,
         #[doc = "csi_ker selected as peripheral clock"]
-        Csi = 0x04,
+        CSI = 0x04,
         #[doc = "HSE selected as peripheral clock"]
-        Hse = 0x05,
+        HSE = 0x05,
         _RESERVED_6 = 0x06,
         _RESERVED_7 = 0x07,
     }
@@ -10547,9 +9464,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Stopwuck {
         #[doc = "HSI selected as wake up clock from system Stop"]
-        Hsi = 0x0,
+        HSI = 0x0,
         #[doc = "CSI selected as wake up clock from system Stop"]
-        Csi = 0x01,
+        CSI = 0x01,
     }
     impl Stopwuck {
         #[inline(always)]
@@ -10578,13 +9495,13 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Sw {
         #[doc = "HSI selected as system clock"]
-        Hsi = 0x0,
+        HSI = 0x0,
         #[doc = "CSI selected as system clock"]
-        Csi = 0x01,
+        CSI = 0x01,
         #[doc = "HSE selected as system clock"]
-        Hse = 0x02,
+        HSE = 0x02,
         #[doc = "PLL1 selected as system clock"]
-        Pll1P = 0x03,
+        PLL1_P = 0x03,
         _RESERVED_4 = 0x04,
         _RESERVED_5 = 0x05,
         _RESERVED_6 = 0x06,
@@ -10617,9 +9534,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Swpmisel {
         #[doc = "pclk selected as peripheral clock"]
-        Pclk1 = 0x0,
+        PCLK1 = 0x0,
         #[doc = "hsi_ker selected as peripheral clock"]
-        Hsi = 0x01,
+        HSI = 0x01,
     }
     impl Swpmisel {
         #[inline(always)]
@@ -10648,9 +9565,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Timpre {
         #[doc = "Timer kernel clock equal to 2x pclk by default"]
-        DefaultX2 = 0x0,
+        DEFAULT_X2 = 0x0,
         #[doc = "Timer kernel clock equal to 4x pclk by default"]
-        DefaultX4 = 0x01,
+        DEFAULT_X4 = 0x01,
     }
     impl Timpre {
         #[inline(always)]
@@ -10679,17 +9596,17 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Usart16910sel {
         #[doc = "rcc_pclk2 selected as peripheral clock"]
-        Pclk2 = 0x0,
+        PCLK2 = 0x0,
         #[doc = "pll2_q selected as peripheral clock"]
-        Pll2Q = 0x01,
+        PLL2_Q = 0x01,
         #[doc = "pll3_q selected as peripheral clock"]
-        Pll3Q = 0x02,
+        PLL3_Q = 0x02,
         #[doc = "hsi_ker selected as peripheral clock"]
-        Hsi = 0x03,
+        HSI = 0x03,
         #[doc = "csi_ker selected as peripheral clock"]
-        Csi = 0x04,
+        CSI = 0x04,
         #[doc = "LSE selected as peripheral clock"]
-        Lse = 0x05,
+        LSE = 0x05,
         _RESERVED_6 = 0x06,
         _RESERVED_7 = 0x07,
     }
@@ -10720,17 +9637,17 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Usart234578sel {
         #[doc = "rcc_pclk1 selected as peripheral clock"]
-        Pclk1 = 0x0,
+        PCLK1 = 0x0,
         #[doc = "pll2_q selected as peripheral clock"]
-        Pll2Q = 0x01,
+        PLL2_Q = 0x01,
         #[doc = "pll3_q selected as peripheral clock"]
-        Pll3Q = 0x02,
+        PLL3_Q = 0x02,
         #[doc = "hsi_ker selected as peripheral clock"]
-        Hsi = 0x03,
+        HSI = 0x03,
         #[doc = "csi_ker selected as peripheral clock"]
-        Csi = 0x04,
+        CSI = 0x04,
         #[doc = "LSE selected as peripheral clock"]
-        Lse = 0x05,
+        LSE = 0x05,
         _RESERVED_6 = 0x06,
         _RESERVED_7 = 0x07,
     }
@@ -10761,13 +9678,13 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Usbsel {
         #[doc = "Disable the kernel clock"]
-        Disable = 0x0,
+        DISABLE = 0x0,
         #[doc = "pll1_q selected as peripheral clock"]
-        Pll1Q = 0x01,
+        PLL1_Q = 0x01,
         #[doc = "pll3_q selected as peripheral clock"]
-        Pll3Q = 0x02,
+        PLL3_Q = 0x02,
         #[doc = "HSI48 selected as peripheral clock"]
-        Hsi48 = 0x03,
+        HSI48 = 0x03,
     }
     impl Usbsel {
         #[inline(always)]

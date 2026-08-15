@@ -199,14 +199,14 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 1,
             variants: &[
                 EnumVariant {
-                    name: "StandbyMode",
-                    description: Some("Enter Standby mode when the CPU enters deepsleep"),
-                    value: 1,
-                },
-                EnumVariant {
-                    name: "StopMode",
+                    name: "STOP_MODE",
                     description: Some("Enter Stop mode when the CPU enters deepsleep"),
                     value: 0,
+                },
+                EnumVariant {
+                    name: "STANDBY_MODE",
+                    description: Some("Enter Standby mode when the CPU enters deepsleep"),
+                    value: 1,
                 },
             ],
         },
@@ -216,17 +216,17 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 2,
             variants: &[
                 EnumVariant {
-                    name: "Range1",
+                    name: "RANGE1",
                     description: Some("Range 1"),
                     value: 1,
                 },
                 EnumVariant {
-                    name: "Range2",
+                    name: "RANGE2",
                     description: Some("Range 2"),
                     value: 2,
                 },
                 EnumVariant {
-                    name: "Range3",
+                    name: "RANGE3",
                     description: Some("Range 3"),
                     value: 3,
                 },

@@ -248,7 +248,7 @@
                     ),
                 },
                 BlockItem {
-                    name: "edim_biss_ccdat_ax_0",
+                    name: "edim_biss_ccdatax_0",
                     description: None,
                     array: None,
                     byte_offset: 0x80,
@@ -257,13 +257,13 @@
                             access: Access::ReadWrite,
                             bit_size: 32,
                             fieldset: Some(
-                                "EdimBissCcdatAx",
+                                "EdimBissCcdatax",
                             ),
                         },
                     ),
                 },
                 BlockItem {
-                    name: "edim_biss_ccdat_ax_1",
+                    name: "edim_biss_ccdatax_1",
                     description: None,
                     array: None,
                     byte_offset: 0x84,
@@ -272,13 +272,13 @@
                             access: Access::ReadWrite,
                             bit_size: 32,
                             fieldset: Some(
-                                "EdimBissCcdatAx",
+                                "EdimBissCcdatax",
                             ),
                         },
                     ),
                 },
                 BlockItem {
-                    name: "edim_biss_ccdat_ax_2",
+                    name: "edim_biss_ccdatax_2",
                     description: None,
                     array: None,
                     byte_offset: 0x88,
@@ -287,13 +287,13 @@
                             access: Access::ReadWrite,
                             bit_size: 32,
                             fieldset: Some(
-                                "EdimBissCcdatAx",
+                                "EdimBissCcdatax",
                             ),
                         },
                     ),
                 },
                 BlockItem {
-                    name: "edim_biss_ccdat_ax_3",
+                    name: "edim_biss_ccdatax_3",
                     description: None,
                     array: None,
                     byte_offset: 0x8c,
@@ -302,13 +302,13 @@
                             access: Access::ReadWrite,
                             bit_size: 32,
                             fieldset: Some(
-                                "EdimBissCcdatAx",
+                                "EdimBissCcdatax",
                             ),
                         },
                     ),
                 },
                 BlockItem {
-                    name: "edim_biss_ccdat_ax_4",
+                    name: "edim_biss_ccdatax_4",
                     description: None,
                     array: None,
                     byte_offset: 0x90,
@@ -317,13 +317,13 @@
                             access: Access::ReadWrite,
                             bit_size: 32,
                             fieldset: Some(
-                                "EdimBissCcdatAx",
+                                "EdimBissCcdatax",
                             ),
                         },
                     ),
                 },
                 BlockItem {
-                    name: "edim_biss_ccdat_ax_5",
+                    name: "edim_biss_ccdatax_5",
                     description: None,
                     array: None,
                     byte_offset: 0x94,
@@ -332,13 +332,13 @@
                             access: Access::ReadWrite,
                             bit_size: 32,
                             fieldset: Some(
-                                "EdimBissCcdatAx",
+                                "EdimBissCcdatax",
                             ),
                         },
                     ),
                 },
                 BlockItem {
-                    name: "edim_biss_ccdat_ax_6",
+                    name: "edim_biss_ccdatax_6",
                     description: None,
                     array: None,
                     byte_offset: 0x98,
@@ -347,13 +347,13 @@
                             access: Access::ReadWrite,
                             bit_size: 32,
                             fieldset: Some(
-                                "EdimBissCcdatAx",
+                                "EdimBissCcdatax",
                             ),
                         },
                     ),
                 },
                 BlockItem {
-                    name: "edim_biss_ccdat_ax_7",
+                    name: "edim_biss_ccdatax_7",
                     description: None,
                     array: None,
                     byte_offset: 0x9c,
@@ -362,13 +362,13 @@
                             access: Access::ReadWrite,
                             bit_size: 32,
                             fieldset: Some(
-                                "EdimBissCcdatAx",
+                                "EdimBissCcdatax",
                             ),
                         },
                     ),
                 },
                 BlockItem {
-                    name: "edim_biss_ccdat_ax_8",
+                    name: "edim_biss_ccdatax_8",
                     description: None,
                     array: None,
                     byte_offset: 0xa0,
@@ -377,13 +377,13 @@
                             access: Access::ReadWrite,
                             bit_size: 32,
                             fieldset: Some(
-                                "EdimBissCcdatAx",
+                                "EdimBissCcdatax",
                             ),
                         },
                     ),
                 },
                 BlockItem {
-                    name: "edim_biss_ccdat_ax_9",
+                    name: "edim_biss_ccdatax_9",
                     description: None,
                     array: None,
                     byte_offset: 0xa4,
@@ -392,13 +392,13 @@
                             access: Access::ReadWrite,
                             bit_size: 32,
                             fieldset: Some(
-                                "EdimBissCcdatAx",
+                                "EdimBissCcdatax",
                             ),
                         },
                     ),
                 },
                 BlockItem {
-                    name: "edim_biss_ccdat_ax_10",
+                    name: "edim_biss_ccdatax_10",
                     description: None,
                     array: None,
                     byte_offset: 0xa8,
@@ -407,13 +407,13 @@
                             access: Access::ReadWrite,
                             bit_size: 32,
                             fieldset: Some(
-                                "EdimBissCcdatAx",
+                                "EdimBissCcdatax",
                             ),
                         },
                     ),
                 },
                 BlockItem {
-                    name: "edim_biss_ccdat_ax_11",
+                    name: "edim_biss_ccdatax_11",
                     description: None,
                     array: None,
                     byte_offset: 0xac,
@@ -422,13 +422,13 @@
                             access: Access::ReadWrite,
                             bit_size: 32,
                             fieldset: Some(
-                                "EdimBissCcdatAx",
+                                "EdimBissCcdatax",
                             ),
                         },
                     ),
                 },
                 BlockItem {
-                    name: "edim_biss_ccdat_ax_12",
+                    name: "edim_biss_ccdatax_12",
                     description: None,
                     array: None,
                     byte_offset: 0xb0,
@@ -437,13 +437,13 @@
                             access: Access::ReadWrite,
                             bit_size: 32,
                             fieldset: Some(
-                                "EdimBissCcdatAx",
+                                "EdimBissCcdatax",
                             ),
                         },
                     ),
                 },
                 BlockItem {
-                    name: "edim_biss_ccdat_ax_13",
+                    name: "edim_biss_ccdatax_13",
                     description: None,
                     array: None,
                     byte_offset: 0xb4,
@@ -452,13 +452,13 @@
                             access: Access::ReadWrite,
                             bit_size: 32,
                             fieldset: Some(
-                                "EdimBissCcdatAx",
+                                "EdimBissCcdatax",
                             ),
                         },
                     ),
                 },
                 BlockItem {
-                    name: "edim_biss_ccdat_ax_14",
+                    name: "edim_biss_ccdatax_14",
                     description: None,
                     array: None,
                     byte_offset: 0xb8,
@@ -467,13 +467,13 @@
                             access: Access::ReadWrite,
                             bit_size: 32,
                             fieldset: Some(
-                                "EdimBissCcdatAx",
+                                "EdimBissCcdatax",
                             ),
                         },
                     ),
                 },
                 BlockItem {
-                    name: "edim_biss_ccdat_ax_15",
+                    name: "edim_biss_ccdatax_15",
                     description: None,
                     array: None,
                     byte_offset: 0xbc,
@@ -482,7 +482,7 @@
                             access: Access::ReadWrite,
                             bit_size: 32,
                             fieldset: Some(
-                                "EdimBissCcdatAx",
+                                "EdimBissCcdatax",
                             ),
                         },
                     ),
@@ -747,13 +747,13 @@
     ],
     fieldsets: &[
         FieldSet {
-            name: "EdimBissCcdatAx",
+            name: "EdimBissCcdatax",
             extends: None,
             description: None,
             bit_size: 32,
             fields: &[
                 Field {
-                    name: "edim_biss_ccdat_ax_ccdata",
+                    name: "edim_biss_ccdatax_ccdata",
                     description: None,
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {

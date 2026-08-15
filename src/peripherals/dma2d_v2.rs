@@ -22,102 +22,102 @@ impl Dma2d {
     #[doc = "DMA2D control register"]
     #[inline(always)]
     pub const fn cr(self) -> crate::common::Reg<regs::Cr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0usize) as _) }
     }
     #[doc = "DMA2D interrupt status register"]
     #[inline(always)]
     pub const fn isr(self) -> crate::common::Reg<regs::Isr, crate::common::R> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x04usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x04usize) as _) }
     }
     #[doc = "DMA2D interrupt flag clear register"]
     #[inline(always)]
     pub const fn ifcr(self) -> crate::common::Reg<regs::Ifcr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x08usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x08usize) as _) }
     }
     #[doc = "DMA2D foreground memory address register"]
     #[inline(always)]
     pub const fn fgmar(self) -> crate::common::Reg<regs::Fgmar, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0cusize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0cusize) as _) }
     }
     #[doc = "DMA2D foreground offset register"]
     #[inline(always)]
     pub const fn fgor(self) -> crate::common::Reg<regs::Fgor, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x10usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x10usize) as _) }
     }
     #[doc = "DMA2D background memory address register"]
     #[inline(always)]
     pub const fn bgmar(self) -> crate::common::Reg<regs::Bgmar, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x14usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x14usize) as _) }
     }
     #[doc = "DMA2D background offset register"]
     #[inline(always)]
     pub const fn bgor(self) -> crate::common::Reg<regs::Bgor, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x18usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x18usize) as _) }
     }
     #[doc = "DMA2D foreground PFC (pixel format converter) control register"]
     #[inline(always)]
     pub const fn fgpfccr(self) -> crate::common::Reg<regs::Fgpfccr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x1cusize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x1cusize) as _) }
     }
     #[doc = "DMA2D foreground color register"]
     #[inline(always)]
     pub const fn fgcolr(self) -> crate::common::Reg<regs::Fgcolr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x20usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x20usize) as _) }
     }
     #[doc = "DMA2D background PFC (pixel format converter) control register"]
     #[inline(always)]
     pub const fn bgpfccr(self) -> crate::common::Reg<regs::Bgpfccr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x24usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x24usize) as _) }
     }
     #[doc = "DMA2D background color register"]
     #[inline(always)]
     pub const fn bgcolr(self) -> crate::common::Reg<regs::Bgcolr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x28usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x28usize) as _) }
     }
     #[doc = "DMA2D foreground CLUT memory address register"]
     #[inline(always)]
     pub const fn fgcmar(self) -> crate::common::Reg<regs::Fgcmar, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x2cusize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x2cusize) as _) }
     }
     #[doc = "DMA2D background CLUT memory address register"]
     #[inline(always)]
     pub const fn bgcmar(self) -> crate::common::Reg<regs::Bgcmar, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x30usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x30usize) as _) }
     }
     #[doc = "DMA2D output PFC (pixel format converter) control register"]
     #[inline(always)]
     pub const fn opfccr(self) -> crate::common::Reg<regs::Opfccr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x34usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x34usize) as _) }
     }
     #[doc = "DMA2D output color register"]
     #[inline(always)]
     pub const fn ocolr(self) -> crate::common::Reg<regs::Ocolr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x38usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x38usize) as _) }
     }
     #[doc = "DMA2D output memory address register"]
     #[inline(always)]
     pub const fn omar(self) -> crate::common::Reg<regs::Omar, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x3cusize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x3cusize) as _) }
     }
     #[doc = "DMA2D output offset register"]
     #[inline(always)]
     pub const fn oor(self) -> crate::common::Reg<regs::Oor, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x40usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x40usize) as _) }
     }
     #[doc = "DMA2D number of line register"]
     #[inline(always)]
     pub const fn nlr(self) -> crate::common::Reg<regs::Nlr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x44usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x44usize) as _) }
     }
     #[doc = "DMA2D line watermark register"]
     #[inline(always)]
     pub const fn lwr(self) -> crate::common::Reg<regs::Lwr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x48usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x48usize) as _) }
     }
     #[doc = "DMA2D AXI master timer configuration register"]
     #[inline(always)]
     pub const fn amtcr(self) -> crate::common::Reg<regs::Amtcr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x4cusize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x4cusize) as _) }
     }
 }
 pub mod regs {
@@ -127,7 +127,6 @@ pub mod regs {
     pub struct Amtcr(pub u32);
     impl Amtcr {
         #[doc = "Enable. Enables the dead time functionality."]
-        #[must_use]
         #[inline(always)]
         pub const fn en(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -135,11 +134,10 @@ pub mod regs {
         }
         #[doc = "Enable. Enables the dead time functionality."]
         #[inline(always)]
-        pub const fn set_en(&mut self, val: bool) {
+        pub fn set_en(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "Dead time. Dead time value in the AXI clock cycle inserted between two consecutive accesses on the AXI master port. These bits represent the minimum guaranteed number of cycles between two consecutive AXI accesses."]
-        #[must_use]
         #[inline(always)]
         pub const fn dt(&self) -> u8 {
             let val = (self.0 >> 8usize) & 0xff;
@@ -147,7 +145,7 @@ pub mod regs {
         }
         #[doc = "Dead time. Dead time value in the AXI clock cycle inserted between two consecutive accesses on the AXI master port. These bits represent the minimum guaranteed number of cycles between two consecutive AXI accesses."]
         #[inline(always)]
-        pub const fn set_dt(&mut self, val: u8) {
+        pub fn set_dt(&mut self, val: u8) {
             self.0 = (self.0 & !(0xff << 8usize)) | (((val as u32) & 0xff) << 8usize);
         }
     }
@@ -177,7 +175,6 @@ pub mod regs {
     pub struct Bgcmar(pub u32);
     impl Bgcmar {
         #[doc = "Memory address. Address of the data used for the CLUT address dedicated to the background image. This register can only be written when no transfer is on going. Once the CLUT transfer has started, this register is read-only. If the background CLUT format is 32-bit, the address must be 32-bit aligned."]
-        #[must_use]
         #[inline(always)]
         pub const fn ma(&self) -> u32 {
             let val = (self.0 >> 0usize) & 0xffff_ffff;
@@ -185,7 +182,7 @@ pub mod regs {
         }
         #[doc = "Memory address. Address of the data used for the CLUT address dedicated to the background image. This register can only be written when no transfer is on going. Once the CLUT transfer has started, this register is read-only. If the background CLUT format is 32-bit, the address must be 32-bit aligned."]
         #[inline(always)]
-        pub const fn set_ma(&mut self, val: u32) {
+        pub fn set_ma(&mut self, val: u32) {
             self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
         }
     }
@@ -212,7 +209,6 @@ pub mod regs {
     pub struct Bgcolr(pub u32);
     impl Bgcolr {
         #[doc = "Blue value. These bits define the blue value for the A4 or A8 mode of the background. These bits can only be written when data transfers are disabled. Once the transfer has started, they are read-only."]
-        #[must_use]
         #[inline(always)]
         pub const fn blue(&self) -> u8 {
             let val = (self.0 >> 0usize) & 0xff;
@@ -220,11 +216,10 @@ pub mod regs {
         }
         #[doc = "Blue value. These bits define the blue value for the A4 or A8 mode of the background. These bits can only be written when data transfers are disabled. Once the transfer has started, they are read-only."]
         #[inline(always)]
-        pub const fn set_blue(&mut self, val: u8) {
+        pub fn set_blue(&mut self, val: u8) {
             self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
         }
         #[doc = "Green value. These bits define the green value for the A4 or A8 mode of the background. These bits can only be written when data transfers are disabled. Once the transfer has started, they are read-only."]
-        #[must_use]
         #[inline(always)]
         pub const fn green(&self) -> u8 {
             let val = (self.0 >> 8usize) & 0xff;
@@ -232,11 +227,10 @@ pub mod regs {
         }
         #[doc = "Green value. These bits define the green value for the A4 or A8 mode of the background. These bits can only be written when data transfers are disabled. Once the transfer has started, they are read-only."]
         #[inline(always)]
-        pub const fn set_green(&mut self, val: u8) {
+        pub fn set_green(&mut self, val: u8) {
             self.0 = (self.0 & !(0xff << 8usize)) | (((val as u32) & 0xff) << 8usize);
         }
         #[doc = "Red value. These bits define the red value for the A4 or A8 mode of the background. These bits can only be written when data transfers are disabled. Once the transfer has started, they are read-only."]
-        #[must_use]
         #[inline(always)]
         pub const fn red(&self) -> u8 {
             let val = (self.0 >> 16usize) & 0xff;
@@ -244,7 +238,7 @@ pub mod regs {
         }
         #[doc = "Red value. These bits define the red value for the A4 or A8 mode of the background. These bits can only be written when data transfers are disabled. Once the transfer has started, they are read-only."]
         #[inline(always)]
-        pub const fn set_red(&mut self, val: u8) {
+        pub fn set_red(&mut self, val: u8) {
             self.0 = (self.0 & !(0xff << 16usize)) | (((val as u32) & 0xff) << 16usize);
         }
     }
@@ -281,7 +275,6 @@ pub mod regs {
     pub struct Bgmar(pub u32);
     impl Bgmar {
         #[doc = "Memory address. Address of the data used for the background image. This register can only be written when data transfers are disabled. Once a data transfer has started, this register is read-only. The address alignment must match the image format selected e.g. a 32-bit per pixel format must be 32-bit aligned, a 16-bit per pixel format must be 16-bit aligned and a 4-bit per pixel format must be 8-bit aligned."]
-        #[must_use]
         #[inline(always)]
         pub const fn ma(&self) -> u32 {
             let val = (self.0 >> 0usize) & 0xffff_ffff;
@@ -289,7 +282,7 @@ pub mod regs {
         }
         #[doc = "Memory address. Address of the data used for the background image. This register can only be written when data transfers are disabled. Once a data transfer has started, this register is read-only. The address alignment must match the image format selected e.g. a 32-bit per pixel format must be 32-bit aligned, a 16-bit per pixel format must be 16-bit aligned and a 4-bit per pixel format must be 8-bit aligned."]
         #[inline(always)]
-        pub const fn set_ma(&mut self, val: u32) {
+        pub fn set_ma(&mut self, val: u32) {
             self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
         }
     }
@@ -316,7 +309,6 @@ pub mod regs {
     pub struct Bgor(pub u32);
     impl Bgor {
         #[doc = "Line offset used for the background image (expressed in pixels (default) or bytes as per LOM in CR). This value is used for the address generation. It is added at the end of each line to determine the starting address of the next line. These bits can only be written when data transfers are disabled. Once data transfer has started, they become read-only. If the image format is 4-bit per pixel, the line offset must be even."]
-        #[must_use]
         #[inline(always)]
         pub const fn lo(&self) -> u16 {
             let val = (self.0 >> 0usize) & 0xffff;
@@ -324,7 +316,7 @@ pub mod regs {
         }
         #[doc = "Line offset used for the background image (expressed in pixels (default) or bytes as per LOM in CR). This value is used for the address generation. It is added at the end of each line to determine the starting address of the next line. These bits can only be written when data transfers are disabled. Once data transfer has started, they become read-only. If the image format is 4-bit per pixel, the line offset must be even."]
         #[inline(always)]
-        pub const fn set_lo(&mut self, val: u16) {
+        pub fn set_lo(&mut self, val: u16) {
             self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
         }
     }
@@ -351,7 +343,6 @@ pub mod regs {
     pub struct Bgpfccr(pub u32);
     impl Bgpfccr {
         #[doc = "Color mode. These bits define the color format of the foreground image. These bits can only be written when data transfers are disabled. Once the transfer has started, they are read-only. others: meaningless"]
-        #[must_use]
         #[inline(always)]
         pub const fn cm(&self) -> super::vals::BgpfccrCm {
             let val = (self.0 >> 0usize) & 0x0f;
@@ -359,11 +350,10 @@ pub mod regs {
         }
         #[doc = "Color mode. These bits define the color format of the foreground image. These bits can only be written when data transfers are disabled. Once the transfer has started, they are read-only. others: meaningless"]
         #[inline(always)]
-        pub const fn set_cm(&mut self, val: super::vals::BgpfccrCm) {
+        pub fn set_cm(&mut self, val: super::vals::BgpfccrCm) {
             self.0 = (self.0 & !(0x0f << 0usize)) | (((val.to_bits() as u32) & 0x0f) << 0usize);
         }
         #[doc = "CLUT (color lookup table) color mode. These bits define the color format of the CLUT. This register can only be written when the transfer is disabled. Once the CLUT transfer has started, this bit is read-only."]
-        #[must_use]
         #[inline(always)]
         pub const fn ccm(&self) -> super::vals::BgpfccrCcm {
             let val = (self.0 >> 4usize) & 0x01;
@@ -371,11 +361,10 @@ pub mod regs {
         }
         #[doc = "CLUT (color lookup table) color mode. These bits define the color format of the CLUT. This register can only be written when the transfer is disabled. Once the CLUT transfer has started, this bit is read-only."]
         #[inline(always)]
-        pub const fn set_ccm(&mut self, val: super::vals::BgpfccrCcm) {
+        pub fn set_ccm(&mut self, val: super::vals::BgpfccrCcm) {
             self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u32) & 0x01) << 4usize);
         }
         #[doc = "Start. This bit is set to start the automatic loading of the CLUT. This bit is automatically reset: ** at the end of the transfer ** when the transfer is aborted by the user application by setting the ABORT bit in the DMA2D_CR ** when a transfer error occurs ** when the transfer has not started due to a configuration error or another transfer operation already on going (data transfer or automatic BackGround CLUT transfer)."]
-        #[must_use]
         #[inline(always)]
         pub const fn start(&self) -> super::vals::BgpfccrStart {
             let val = (self.0 >> 5usize) & 0x01;
@@ -383,12 +372,11 @@ pub mod regs {
         }
         #[doc = "Start. This bit is set to start the automatic loading of the CLUT. This bit is automatically reset: ** at the end of the transfer ** when the transfer is aborted by the user application by setting the ABORT bit in the DMA2D_CR ** when a transfer error occurs ** when the transfer has not started due to a configuration error or another transfer operation already on going (data transfer or automatic BackGround CLUT transfer)."]
         #[inline(always)]
-        pub const fn set_start(&mut self, val: super::vals::BgpfccrStart) {
+        pub fn set_start(&mut self, val: super::vals::BgpfccrStart) {
             self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
         }
         #[doc = "CLUT size. These bits define the size of the CLUT used for the BG. Once the CLUT transfer has started, this field is read-only. The number of CLUT entries is equal to CS\\[7:0\\]
 + 1."]
-        #[must_use]
         #[inline(always)]
         pub const fn cs(&self) -> u8 {
             let val = (self.0 >> 8usize) & 0xff;
@@ -397,11 +385,10 @@ pub mod regs {
         #[doc = "CLUT size. These bits define the size of the CLUT used for the BG. Once the CLUT transfer has started, this field is read-only. The number of CLUT entries is equal to CS\\[7:0\\]
 + 1."]
         #[inline(always)]
-        pub const fn set_cs(&mut self, val: u8) {
+        pub fn set_cs(&mut self, val: u8) {
             self.0 = (self.0 & !(0xff << 8usize)) | (((val as u32) & 0xff) << 8usize);
         }
         #[doc = "Alpha mode. These bits define which alpha channel value to be used for the background image. These bits can only be written when data transfers are disabled. Once the transfer has started, they are read-only. others: meaningless"]
-        #[must_use]
         #[inline(always)]
         pub const fn am(&self) -> super::vals::BgpfccrAm {
             let val = (self.0 >> 16usize) & 0x03;
@@ -409,11 +396,10 @@ pub mod regs {
         }
         #[doc = "Alpha mode. These bits define which alpha channel value to be used for the background image. These bits can only be written when data transfers are disabled. Once the transfer has started, they are read-only. others: meaningless"]
         #[inline(always)]
-        pub const fn set_am(&mut self, val: super::vals::BgpfccrAm) {
+        pub fn set_am(&mut self, val: super::vals::BgpfccrAm) {
             self.0 = (self.0 & !(0x03 << 16usize)) | (((val.to_bits() as u32) & 0x03) << 16usize);
         }
         #[doc = "Alpha inverted. This bit inverts the alpha value. Once the transfer has started, this bit is read-only."]
-        #[must_use]
         #[inline(always)]
         pub const fn ai(&self) -> super::vals::BgpfccrAi {
             let val = (self.0 >> 20usize) & 0x01;
@@ -421,11 +407,10 @@ pub mod regs {
         }
         #[doc = "Alpha inverted. This bit inverts the alpha value. Once the transfer has started, this bit is read-only."]
         #[inline(always)]
-        pub const fn set_ai(&mut self, val: super::vals::BgpfccrAi) {
+        pub fn set_ai(&mut self, val: super::vals::BgpfccrAi) {
             self.0 = (self.0 & !(0x01 << 20usize)) | (((val.to_bits() as u32) & 0x01) << 20usize);
         }
         #[doc = "Red blue swap. This bit allows to swap the R and B to support BGR or ABGR color formats. Once the transfer has started, this bit is read-only."]
-        #[must_use]
         #[inline(always)]
         pub const fn rbs(&self) -> super::vals::BgpfccrRbs {
             let val = (self.0 >> 21usize) & 0x01;
@@ -433,11 +418,10 @@ pub mod regs {
         }
         #[doc = "Red blue swap. This bit allows to swap the R and B to support BGR or ABGR color formats. Once the transfer has started, this bit is read-only."]
         #[inline(always)]
-        pub const fn set_rbs(&mut self, val: super::vals::BgpfccrRbs) {
+        pub fn set_rbs(&mut self, val: super::vals::BgpfccrRbs) {
             self.0 = (self.0 & !(0x01 << 21usize)) | (((val.to_bits() as u32) & 0x01) << 21usize);
         }
         #[doc = "Alpha value. These bits define a fixed alpha channel value which can replace the original alpha value or be multiplied with the original alpha value according to the alpha mode selected with bits AM\\[1: 0\\]. These bits can only be written when data transfers are disabled. Once the transfer has started, they are read-only."]
-        #[must_use]
         #[inline(always)]
         pub const fn alpha(&self) -> u8 {
             let val = (self.0 >> 24usize) & 0xff;
@@ -445,7 +429,7 @@ pub mod regs {
         }
         #[doc = "Alpha value. These bits define a fixed alpha channel value which can replace the original alpha value or be multiplied with the original alpha value according to the alpha mode selected with bits AM\\[1: 0\\]. These bits can only be written when data transfers are disabled. Once the transfer has started, they are read-only."]
         #[inline(always)]
-        pub const fn set_alpha(&mut self, val: u8) {
+        pub fn set_alpha(&mut self, val: u8) {
             self.0 = (self.0 & !(0xff << 24usize)) | (((val as u32) & 0xff) << 24usize);
         }
     }
@@ -472,18 +456,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Bgpfccr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Bgpfccr {{ cm: {:?}, ccm: {:?}, start: {:?}, cs: {=u8:?}, am: {:?}, ai: {:?}, rbs: {:?}, alpha: {=u8:?} }}",
-                self.cm(),
-                self.ccm(),
-                self.start(),
-                self.cs(),
-                self.am(),
-                self.ai(),
-                self.rbs(),
-                self.alpha()
-            )
+            defmt :: write ! (f , "Bgpfccr {{ cm: {:?}, ccm: {:?}, start: {:?}, cs: {=u8:?}, am: {:?}, ai: {:?}, rbs: {:?}, alpha: {=u8:?} }}" , self . cm () , self . ccm () , self . start () , self . cs () , self . am () , self . ai () , self . rbs () , self . alpha ())
         }
     }
     #[doc = "DMA2D control register"]
@@ -492,7 +465,6 @@ pub mod regs {
     pub struct Cr(pub u32);
     impl Cr {
         #[doc = "Start. This bit can be used to launch the DMA2D according to the parameters loaded in the various configuration registers"]
-        #[must_use]
         #[inline(always)]
         pub const fn start(&self) -> super::vals::CrStart {
             let val = (self.0 >> 0usize) & 0x01;
@@ -500,11 +472,10 @@ pub mod regs {
         }
         #[doc = "Start. This bit can be used to launch the DMA2D according to the parameters loaded in the various configuration registers"]
         #[inline(always)]
-        pub const fn set_start(&mut self, val: super::vals::CrStart) {
+        pub fn set_start(&mut self, val: super::vals::CrStart) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
         }
         #[doc = "Suspend. This bit can be used to suspend the current transfer. This bit is set and reset by software. It is automatically reset by hardware when the START bit is reset."]
-        #[must_use]
         #[inline(always)]
         pub const fn susp(&self) -> bool {
             let val = (self.0 >> 1usize) & 0x01;
@@ -512,11 +483,10 @@ pub mod regs {
         }
         #[doc = "Suspend. This bit can be used to suspend the current transfer. This bit is set and reset by software. It is automatically reset by hardware when the START bit is reset."]
         #[inline(always)]
-        pub const fn set_susp(&mut self, val: bool) {
+        pub fn set_susp(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
         }
         #[doc = "Abort. This bit can be used to abort the current transfer. This bit is set by software and is automatically reset by hardware when the START bit is reset."]
-        #[must_use]
         #[inline(always)]
         pub const fn abort(&self) -> super::vals::Abort {
             let val = (self.0 >> 2usize) & 0x01;
@@ -524,11 +494,10 @@ pub mod regs {
         }
         #[doc = "Abort. This bit can be used to abort the current transfer. This bit is set by software and is automatically reset by hardware when the START bit is reset."]
         #[inline(always)]
-        pub const fn set_abort(&mut self, val: super::vals::Abort) {
+        pub fn set_abort(&mut self, val: super::vals::Abort) {
             self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
         }
         #[doc = "Line offset mode. This bit configures how the line offset is expressed (in pixels or bytes) for the foreground, background and output. This bit is set and cleared by software. It can not be modified while a transfer is ongoing."]
-        #[must_use]
         #[inline(always)]
         pub const fn lom(&self) -> super::vals::Lom {
             let val = (self.0 >> 6usize) & 0x01;
@@ -536,11 +505,10 @@ pub mod regs {
         }
         #[doc = "Line offset mode. This bit configures how the line offset is expressed (in pixels or bytes) for the foreground, background and output. This bit is set and cleared by software. It can not be modified while a transfer is ongoing."]
         #[inline(always)]
-        pub const fn set_lom(&mut self, val: super::vals::Lom) {
+        pub fn set_lom(&mut self, val: super::vals::Lom) {
             self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
         }
         #[doc = "Transfer error interrupt enable. This bit is set and cleared by software."]
-        #[must_use]
         #[inline(always)]
         pub const fn teie(&self) -> bool {
             let val = (self.0 >> 8usize) & 0x01;
@@ -548,11 +516,10 @@ pub mod regs {
         }
         #[doc = "Transfer error interrupt enable. This bit is set and cleared by software."]
         #[inline(always)]
-        pub const fn set_teie(&mut self, val: bool) {
+        pub fn set_teie(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
         }
         #[doc = "Transfer complete interrupt enable. This bit is set and cleared by software."]
-        #[must_use]
         #[inline(always)]
         pub const fn tcie(&self) -> bool {
             let val = (self.0 >> 9usize) & 0x01;
@@ -560,11 +527,10 @@ pub mod regs {
         }
         #[doc = "Transfer complete interrupt enable. This bit is set and cleared by software."]
         #[inline(always)]
-        pub const fn set_tcie(&mut self, val: bool) {
+        pub fn set_tcie(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
         }
         #[doc = "Transfer watermark interrupt enable. This bit is set and cleared by software."]
-        #[must_use]
         #[inline(always)]
         pub const fn twie(&self) -> bool {
             let val = (self.0 >> 10usize) & 0x01;
@@ -572,11 +538,10 @@ pub mod regs {
         }
         #[doc = "Transfer watermark interrupt enable. This bit is set and cleared by software."]
         #[inline(always)]
-        pub const fn set_twie(&mut self, val: bool) {
+        pub fn set_twie(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
         }
         #[doc = "CLUT access error interrupt enable. This bit is set and cleared by software."]
-        #[must_use]
         #[inline(always)]
         pub const fn caeie(&self) -> bool {
             let val = (self.0 >> 11usize) & 0x01;
@@ -584,11 +549,10 @@ pub mod regs {
         }
         #[doc = "CLUT access error interrupt enable. This bit is set and cleared by software."]
         #[inline(always)]
-        pub const fn set_caeie(&mut self, val: bool) {
+        pub fn set_caeie(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
         }
         #[doc = "CLUT transfer complete interrupt enable. This bit is set and cleared by software."]
-        #[must_use]
         #[inline(always)]
         pub const fn ctcie(&self) -> bool {
             let val = (self.0 >> 12usize) & 0x01;
@@ -596,11 +560,10 @@ pub mod regs {
         }
         #[doc = "CLUT transfer complete interrupt enable. This bit is set and cleared by software."]
         #[inline(always)]
-        pub const fn set_ctcie(&mut self, val: bool) {
+        pub fn set_ctcie(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
         }
         #[doc = "Configuration error interrupt enable. This bit is set and cleared by software."]
-        #[must_use]
         #[inline(always)]
         pub const fn ceie(&self) -> bool {
             let val = (self.0 >> 13usize) & 0x01;
@@ -608,11 +571,10 @@ pub mod regs {
         }
         #[doc = "Configuration error interrupt enable. This bit is set and cleared by software."]
         #[inline(always)]
-        pub const fn set_ceie(&mut self, val: bool) {
+        pub fn set_ceie(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
         }
         #[doc = "DMA2D mode This bit is set and cleared by software. It cannot be modified while a transfer is ongoing."]
-        #[must_use]
         #[inline(always)]
         pub const fn mode(&self) -> super::vals::Mode {
             let val = (self.0 >> 16usize) & 0x07;
@@ -620,7 +582,7 @@ pub mod regs {
         }
         #[doc = "DMA2D mode This bit is set and cleared by software. It cannot be modified while a transfer is ongoing."]
         #[inline(always)]
-        pub const fn set_mode(&mut self, val: super::vals::Mode) {
+        pub fn set_mode(&mut self, val: super::vals::Mode) {
             self.0 = (self.0 & !(0x07 << 16usize)) | (((val.to_bits() as u32) & 0x07) << 16usize);
         }
     }
@@ -650,21 +612,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Cr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Cr {{ start: {:?}, susp: {=bool:?}, abort: {:?}, lom: {:?}, teie: {=bool:?}, tcie: {=bool:?}, twie: {=bool:?}, caeie: {=bool:?}, ctcie: {=bool:?}, ceie: {=bool:?}, mode: {:?} }}",
-                self.start(),
-                self.susp(),
-                self.abort(),
-                self.lom(),
-                self.teie(),
-                self.tcie(),
-                self.twie(),
-                self.caeie(),
-                self.ctcie(),
-                self.ceie(),
-                self.mode()
-            )
+            defmt :: write ! (f , "Cr {{ start: {:?}, susp: {=bool:?}, abort: {:?}, lom: {:?}, teie: {=bool:?}, tcie: {=bool:?}, twie: {=bool:?}, caeie: {=bool:?}, ctcie: {=bool:?}, ceie: {=bool:?}, mode: {:?} }}" , self . start () , self . susp () , self . abort () , self . lom () , self . teie () , self . tcie () , self . twie () , self . caeie () , self . ctcie () , self . ceie () , self . mode ())
         }
     }
     #[doc = "DMA2D foreground CLUT memory address register"]
@@ -673,7 +621,6 @@ pub mod regs {
     pub struct Fgcmar(pub u32);
     impl Fgcmar {
         #[doc = "Memory Address. Address of the data used for the CLUT address dedicated to the foreground image. This register can only be written when no transfer is ongoing. Once the CLUT transfer has started, this register is read-only. If the foreground CLUT format is 32-bit, the address must be 32-bit aligned."]
-        #[must_use]
         #[inline(always)]
         pub const fn ma(&self) -> u32 {
             let val = (self.0 >> 0usize) & 0xffff_ffff;
@@ -681,7 +628,7 @@ pub mod regs {
         }
         #[doc = "Memory Address. Address of the data used for the CLUT address dedicated to the foreground image. This register can only be written when no transfer is ongoing. Once the CLUT transfer has started, this register is read-only. If the foreground CLUT format is 32-bit, the address must be 32-bit aligned."]
         #[inline(always)]
-        pub const fn set_ma(&mut self, val: u32) {
+        pub fn set_ma(&mut self, val: u32) {
             self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
         }
     }
@@ -708,7 +655,6 @@ pub mod regs {
     pub struct Fgcolr(pub u32);
     impl Fgcolr {
         #[doc = "Blue Value. These bits define the blue value for the A4 or A8 mode of the foreground image. They can only be written when data transfers are disabled. Once the transfer has started, They are read-only."]
-        #[must_use]
         #[inline(always)]
         pub const fn blue(&self) -> u8 {
             let val = (self.0 >> 0usize) & 0xff;
@@ -716,11 +662,10 @@ pub mod regs {
         }
         #[doc = "Blue Value. These bits define the blue value for the A4 or A8 mode of the foreground image. They can only be written when data transfers are disabled. Once the transfer has started, They are read-only."]
         #[inline(always)]
-        pub const fn set_blue(&mut self, val: u8) {
+        pub fn set_blue(&mut self, val: u8) {
             self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
         }
         #[doc = "Green Value. These bits define the green value for the A4 or A8 mode of the foreground image. They can only be written when data transfers are disabled. Once the transfer has started, They are read-only."]
-        #[must_use]
         #[inline(always)]
         pub const fn green(&self) -> u8 {
             let val = (self.0 >> 8usize) & 0xff;
@@ -728,11 +673,10 @@ pub mod regs {
         }
         #[doc = "Green Value. These bits define the green value for the A4 or A8 mode of the foreground image. They can only be written when data transfers are disabled. Once the transfer has started, They are read-only."]
         #[inline(always)]
-        pub const fn set_green(&mut self, val: u8) {
+        pub fn set_green(&mut self, val: u8) {
             self.0 = (self.0 & !(0xff << 8usize)) | (((val as u32) & 0xff) << 8usize);
         }
         #[doc = "Red Value. These bits define the red value for the A4 or A8 mode of the foreground image. They can only be written when data transfers are disabled. Once the transfer has started, they are read-only."]
-        #[must_use]
         #[inline(always)]
         pub const fn red(&self) -> u8 {
             let val = (self.0 >> 16usize) & 0xff;
@@ -740,7 +684,7 @@ pub mod regs {
         }
         #[doc = "Red Value. These bits define the red value for the A4 or A8 mode of the foreground image. They can only be written when data transfers are disabled. Once the transfer has started, they are read-only."]
         #[inline(always)]
-        pub const fn set_red(&mut self, val: u8) {
+        pub fn set_red(&mut self, val: u8) {
             self.0 = (self.0 & !(0xff << 16usize)) | (((val as u32) & 0xff) << 16usize);
         }
     }
@@ -777,7 +721,6 @@ pub mod regs {
     pub struct Fgmar(pub u32);
     impl Fgmar {
         #[doc = "Memory address. Address of the data used for the foreground image. This register can only be written when data transfers are disabled. Once the data transfer has started, this register is read-only. The address alignment must match the image format selected e.g. a 32-bit per pixel format must be 32-bit aligned, a 16-bit per pixel format must be 16-bit aligned and a 4-bit per pixel format must be 8-bit aligned."]
-        #[must_use]
         #[inline(always)]
         pub const fn ma(&self) -> u32 {
             let val = (self.0 >> 0usize) & 0xffff_ffff;
@@ -785,7 +728,7 @@ pub mod regs {
         }
         #[doc = "Memory address. Address of the data used for the foreground image. This register can only be written when data transfers are disabled. Once the data transfer has started, this register is read-only. The address alignment must match the image format selected e.g. a 32-bit per pixel format must be 32-bit aligned, a 16-bit per pixel format must be 16-bit aligned and a 4-bit per pixel format must be 8-bit aligned."]
         #[inline(always)]
-        pub const fn set_ma(&mut self, val: u32) {
+        pub fn set_ma(&mut self, val: u32) {
             self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
         }
     }
@@ -812,7 +755,6 @@ pub mod regs {
     pub struct Fgor(pub u32);
     impl Fgor {
         #[doc = "Line offset. Line offset used for the foreground expressed in pixel. This value is used to generate the address. It is added at the end of each line to determine the starting address of the next line. These bits can only be written when data transfers are disabled. Once a data transfer has started, they become read-only. If the image format is 4-bit per pixel, the line offset must be even."]
-        #[must_use]
         #[inline(always)]
         pub const fn lo(&self) -> u16 {
             let val = (self.0 >> 0usize) & 0xffff;
@@ -820,7 +762,7 @@ pub mod regs {
         }
         #[doc = "Line offset. Line offset used for the foreground expressed in pixel. This value is used to generate the address. It is added at the end of each line to determine the starting address of the next line. These bits can only be written when data transfers are disabled. Once a data transfer has started, they become read-only. If the image format is 4-bit per pixel, the line offset must be even."]
         #[inline(always)]
-        pub const fn set_lo(&mut self, val: u16) {
+        pub fn set_lo(&mut self, val: u16) {
             self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
         }
     }
@@ -847,7 +789,6 @@ pub mod regs {
     pub struct Fgpfccr(pub u32);
     impl Fgpfccr {
         #[doc = "Color mode. These bits define the color format of the foreground image. They can only be written when data transfers are disabled. Once the transfer has started, they are read-only. others: meaningless"]
-        #[must_use]
         #[inline(always)]
         pub const fn cm(&self) -> super::vals::FgpfccrCm {
             let val = (self.0 >> 0usize) & 0x0f;
@@ -855,11 +796,10 @@ pub mod regs {
         }
         #[doc = "Color mode. These bits define the color format of the foreground image. They can only be written when data transfers are disabled. Once the transfer has started, they are read-only. others: meaningless"]
         #[inline(always)]
-        pub const fn set_cm(&mut self, val: super::vals::FgpfccrCm) {
+        pub fn set_cm(&mut self, val: super::vals::FgpfccrCm) {
             self.0 = (self.0 & !(0x0f << 0usize)) | (((val.to_bits() as u32) & 0x0f) << 0usize);
         }
         #[doc = "CLUT color mode. This bit defines the color format of the CLUT. It can only be written when the transfer is disabled. Once the CLUT transfer has started, this bit is read-only."]
-        #[must_use]
         #[inline(always)]
         pub const fn ccm(&self) -> super::vals::FgpfccrCcm {
             let val = (self.0 >> 4usize) & 0x01;
@@ -867,11 +807,10 @@ pub mod regs {
         }
         #[doc = "CLUT color mode. This bit defines the color format of the CLUT. It can only be written when the transfer is disabled. Once the CLUT transfer has started, this bit is read-only."]
         #[inline(always)]
-        pub const fn set_ccm(&mut self, val: super::vals::FgpfccrCcm) {
+        pub fn set_ccm(&mut self, val: super::vals::FgpfccrCcm) {
             self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u32) & 0x01) << 4usize);
         }
         #[doc = "Start. This bit can be set to start the automatic loading of the CLUT. It is automatically reset: ** at the end of the transfer ** when the transfer is aborted by the user application by setting the ABORT bit in DMA2D_CR ** when a transfer error occurs ** when the transfer has not started due to a configuration error or another transfer operation already ongoing (data transfer or automatic background CLUT transfer)."]
-        #[must_use]
         #[inline(always)]
         pub const fn start(&self) -> super::vals::FgpfccrStart {
             let val = (self.0 >> 5usize) & 0x01;
@@ -879,12 +818,11 @@ pub mod regs {
         }
         #[doc = "Start. This bit can be set to start the automatic loading of the CLUT. It is automatically reset: ** at the end of the transfer ** when the transfer is aborted by the user application by setting the ABORT bit in DMA2D_CR ** when a transfer error occurs ** when the transfer has not started due to a configuration error or another transfer operation already ongoing (data transfer or automatic background CLUT transfer)."]
         #[inline(always)]
-        pub const fn set_start(&mut self, val: super::vals::FgpfccrStart) {
+        pub fn set_start(&mut self, val: super::vals::FgpfccrStart) {
             self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
         }
         #[doc = "CLUT size. These bits define the size of the CLUT used for the foreground image. Once the CLUT transfer has started, this field is read-only. The number of CLUT entries is equal to CS\\[7:0\\]
 + 1."]
-        #[must_use]
         #[inline(always)]
         pub const fn cs(&self) -> u8 {
             let val = (self.0 >> 8usize) & 0xff;
@@ -893,11 +831,10 @@ pub mod regs {
         #[doc = "CLUT size. These bits define the size of the CLUT used for the foreground image. Once the CLUT transfer has started, this field is read-only. The number of CLUT entries is equal to CS\\[7:0\\]
 + 1."]
         #[inline(always)]
-        pub const fn set_cs(&mut self, val: u8) {
+        pub fn set_cs(&mut self, val: u8) {
             self.0 = (self.0 & !(0xff << 8usize)) | (((val as u32) & 0xff) << 8usize);
         }
         #[doc = "Alpha mode. These bits select the alpha channel value to be used for the foreground image. They can only be written data the transfer are disabled. Once the transfer has started, they become read-only. other configurations are meaningless"]
-        #[must_use]
         #[inline(always)]
         pub const fn am(&self) -> super::vals::FgpfccrAm {
             let val = (self.0 >> 16usize) & 0x03;
@@ -905,11 +842,10 @@ pub mod regs {
         }
         #[doc = "Alpha mode. These bits select the alpha channel value to be used for the foreground image. They can only be written data the transfer are disabled. Once the transfer has started, they become read-only. other configurations are meaningless"]
         #[inline(always)]
-        pub const fn set_am(&mut self, val: super::vals::FgpfccrAm) {
+        pub fn set_am(&mut self, val: super::vals::FgpfccrAm) {
             self.0 = (self.0 & !(0x03 << 16usize)) | (((val.to_bits() as u32) & 0x03) << 16usize);
         }
         #[doc = "Chroma Sub-Sampling. These bits define the chroma sub-sampling mode for YCbCr color mode. Once the transfer has started, these bits are read-only. others: meaningless"]
-        #[must_use]
         #[inline(always)]
         pub const fn css(&self) -> u8 {
             let val = (self.0 >> 18usize) & 0x03;
@@ -917,11 +853,10 @@ pub mod regs {
         }
         #[doc = "Chroma Sub-Sampling. These bits define the chroma sub-sampling mode for YCbCr color mode. Once the transfer has started, these bits are read-only. others: meaningless"]
         #[inline(always)]
-        pub const fn set_css(&mut self, val: u8) {
+        pub fn set_css(&mut self, val: u8) {
             self.0 = (self.0 & !(0x03 << 18usize)) | (((val as u32) & 0x03) << 18usize);
         }
         #[doc = "Alpha inverted. This bit inverts the alpha value. Once the transfer has started, this bit is read-only."]
-        #[must_use]
         #[inline(always)]
         pub const fn ai(&self) -> super::vals::FgpfccrAi {
             let val = (self.0 >> 20usize) & 0x01;
@@ -929,11 +864,10 @@ pub mod regs {
         }
         #[doc = "Alpha inverted. This bit inverts the alpha value. Once the transfer has started, this bit is read-only."]
         #[inline(always)]
-        pub const fn set_ai(&mut self, val: super::vals::FgpfccrAi) {
+        pub fn set_ai(&mut self, val: super::vals::FgpfccrAi) {
             self.0 = (self.0 & !(0x01 << 20usize)) | (((val.to_bits() as u32) & 0x01) << 20usize);
         }
         #[doc = "Red blue swap. This bit allows to swap the R and B to support BGR or ABGR color formats. Once the transfer has started, this bit is read-only."]
-        #[must_use]
         #[inline(always)]
         pub const fn rbs(&self) -> super::vals::FgpfccrRbs {
             let val = (self.0 >> 21usize) & 0x01;
@@ -941,12 +875,11 @@ pub mod regs {
         }
         #[doc = "Red blue swap. This bit allows to swap the R and B to support BGR or ABGR color formats. Once the transfer has started, this bit is read-only."]
         #[inline(always)]
-        pub const fn set_rbs(&mut self, val: super::vals::FgpfccrRbs) {
+        pub fn set_rbs(&mut self, val: super::vals::FgpfccrRbs) {
             self.0 = (self.0 & !(0x01 << 21usize)) | (((val.to_bits() as u32) & 0x01) << 21usize);
         }
         #[doc = "Alpha value. These bits define a fixed alpha channel value which can replace the original alpha value or be multiplied by the original alpha value according to the alpha mode selected through the AM\\[1:0\\]
 bits. These bits can only be written when data transfers are disabled. Once a transfer has started, they become read-only."]
-        #[must_use]
         #[inline(always)]
         pub const fn alpha(&self) -> u8 {
             let val = (self.0 >> 24usize) & 0xff;
@@ -955,7 +888,7 @@ bits. These bits can only be written when data transfers are disabled. Once a tr
         #[doc = "Alpha value. These bits define a fixed alpha channel value which can replace the original alpha value or be multiplied by the original alpha value according to the alpha mode selected through the AM\\[1:0\\]
 bits. These bits can only be written when data transfers are disabled. Once a transfer has started, they become read-only."]
         #[inline(always)]
-        pub const fn set_alpha(&mut self, val: u8) {
+        pub fn set_alpha(&mut self, val: u8) {
             self.0 = (self.0 & !(0xff << 24usize)) | (((val as u32) & 0xff) << 24usize);
         }
     }
@@ -983,19 +916,7 @@ bits. These bits can only be written when data transfers are disabled. Once a tr
     #[cfg(feature = "defmt")]
     impl defmt::Format for Fgpfccr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Fgpfccr {{ cm: {:?}, ccm: {:?}, start: {:?}, cs: {=u8:?}, am: {:?}, css: {=u8:?}, ai: {:?}, rbs: {:?}, alpha: {=u8:?} }}",
-                self.cm(),
-                self.ccm(),
-                self.start(),
-                self.cs(),
-                self.am(),
-                self.css(),
-                self.ai(),
-                self.rbs(),
-                self.alpha()
-            )
+            defmt :: write ! (f , "Fgpfccr {{ cm: {:?}, ccm: {:?}, start: {:?}, cs: {=u8:?}, am: {:?}, css: {=u8:?}, ai: {:?}, rbs: {:?}, alpha: {=u8:?} }}" , self . cm () , self . ccm () , self . start () , self . cs () , self . am () , self . css () , self . ai () , self . rbs () , self . alpha ())
         }
     }
     #[doc = "DMA2D interrupt flag clear register"]
@@ -1004,7 +925,6 @@ bits. These bits can only be written when data transfers are disabled. Once a tr
     pub struct Ifcr(pub u32);
     impl Ifcr {
         #[doc = "Clear transfer error interrupt flag. Programming this bit to 1 clears the TEIF flag in the DMA2D_ISR register"]
-        #[must_use]
         #[inline(always)]
         pub const fn cteif(&self) -> super::vals::Cteif {
             let val = (self.0 >> 0usize) & 0x01;
@@ -1012,11 +932,10 @@ bits. These bits can only be written when data transfers are disabled. Once a tr
         }
         #[doc = "Clear transfer error interrupt flag. Programming this bit to 1 clears the TEIF flag in the DMA2D_ISR register"]
         #[inline(always)]
-        pub const fn set_cteif(&mut self, val: super::vals::Cteif) {
+        pub fn set_cteif(&mut self, val: super::vals::Cteif) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
         }
         #[doc = "Clear transfer complete interrupt flag. Programming this bit to 1 clears the TCIF flag in the DMA2D_ISR register"]
-        #[must_use]
         #[inline(always)]
         pub const fn ctcif(&self) -> super::vals::Ctcif {
             let val = (self.0 >> 1usize) & 0x01;
@@ -1024,11 +943,10 @@ bits. These bits can only be written when data transfers are disabled. Once a tr
         }
         #[doc = "Clear transfer complete interrupt flag. Programming this bit to 1 clears the TCIF flag in the DMA2D_ISR register"]
         #[inline(always)]
-        pub const fn set_ctcif(&mut self, val: super::vals::Ctcif) {
+        pub fn set_ctcif(&mut self, val: super::vals::Ctcif) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
         }
         #[doc = "Clear transfer watermark interrupt flag. Programming this bit to 1 clears the TWIF flag in the DMA2D_ISR register"]
-        #[must_use]
         #[inline(always)]
         pub const fn ctwif(&self) -> super::vals::Ctwif {
             let val = (self.0 >> 2usize) & 0x01;
@@ -1036,11 +954,10 @@ bits. These bits can only be written when data transfers are disabled. Once a tr
         }
         #[doc = "Clear transfer watermark interrupt flag. Programming this bit to 1 clears the TWIF flag in the DMA2D_ISR register"]
         #[inline(always)]
-        pub const fn set_ctwif(&mut self, val: super::vals::Ctwif) {
+        pub fn set_ctwif(&mut self, val: super::vals::Ctwif) {
             self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
         }
         #[doc = "Clear CLUT access error interrupt flag. Programming this bit to 1 clears the CAEIF flag in the DMA2D_ISR register"]
-        #[must_use]
         #[inline(always)]
         pub const fn caecif(&self) -> super::vals::Caecif {
             let val = (self.0 >> 3usize) & 0x01;
@@ -1048,11 +965,10 @@ bits. These bits can only be written when data transfers are disabled. Once a tr
         }
         #[doc = "Clear CLUT access error interrupt flag. Programming this bit to 1 clears the CAEIF flag in the DMA2D_ISR register"]
         #[inline(always)]
-        pub const fn set_caecif(&mut self, val: super::vals::Caecif) {
+        pub fn set_caecif(&mut self, val: super::vals::Caecif) {
             self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
         }
         #[doc = "Clear CLUT transfer complete interrupt flag. Programming this bit to 1 clears the CTCIF flag in the DMA2D_ISR register"]
-        #[must_use]
         #[inline(always)]
         pub const fn cctcif(&self) -> super::vals::Cctcif {
             let val = (self.0 >> 4usize) & 0x01;
@@ -1060,11 +976,10 @@ bits. These bits can only be written when data transfers are disabled. Once a tr
         }
         #[doc = "Clear CLUT transfer complete interrupt flag. Programming this bit to 1 clears the CTCIF flag in the DMA2D_ISR register"]
         #[inline(always)]
-        pub const fn set_cctcif(&mut self, val: super::vals::Cctcif) {
+        pub fn set_cctcif(&mut self, val: super::vals::Cctcif) {
             self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u32) & 0x01) << 4usize);
         }
         #[doc = "Clear configuration error interrupt flag. Programming this bit to 1 clears the CEIF flag in the DMA2D_ISR register"]
-        #[must_use]
         #[inline(always)]
         pub const fn cceif(&self) -> super::vals::Cceif {
             let val = (self.0 >> 5usize) & 0x01;
@@ -1072,7 +987,7 @@ bits. These bits can only be written when data transfers are disabled. Once a tr
         }
         #[doc = "Clear configuration error interrupt flag. Programming this bit to 1 clears the CEIF flag in the DMA2D_ISR register"]
         #[inline(always)]
-        pub const fn set_cceif(&mut self, val: super::vals::Cceif) {
+        pub fn set_cceif(&mut self, val: super::vals::Cceif) {
             self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
         }
     }
@@ -1115,7 +1030,6 @@ bits. These bits can only be written when data transfers are disabled. Once a tr
     pub struct Isr(pub u32);
     impl Isr {
         #[doc = "Transfer error interrupt flag. This bit is set when an error occurs during a DMA transfer (data transfer or automatic CLUT loading)."]
-        #[must_use]
         #[inline(always)]
         pub const fn teif(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -1123,11 +1037,10 @@ bits. These bits can only be written when data transfers are disabled. Once a tr
         }
         #[doc = "Transfer error interrupt flag. This bit is set when an error occurs during a DMA transfer (data transfer or automatic CLUT loading)."]
         #[inline(always)]
-        pub const fn set_teif(&mut self, val: bool) {
+        pub fn set_teif(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "Transfer complete interrupt flag. This bit is set when a DMA2D transfer operation is complete (data transfer only)."]
-        #[must_use]
         #[inline(always)]
         pub const fn tcif(&self) -> bool {
             let val = (self.0 >> 1usize) & 0x01;
@@ -1135,11 +1048,10 @@ bits. These bits can only be written when data transfers are disabled. Once a tr
         }
         #[doc = "Transfer complete interrupt flag. This bit is set when a DMA2D transfer operation is complete (data transfer only)."]
         #[inline(always)]
-        pub const fn set_tcif(&mut self, val: bool) {
+        pub fn set_tcif(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
         }
         #[doc = "Transfer watermark interrupt flag. This bit is set when the last pixel of the watermarked line has been transferred."]
-        #[must_use]
         #[inline(always)]
         pub const fn twif(&self) -> bool {
             let val = (self.0 >> 2usize) & 0x01;
@@ -1147,11 +1059,10 @@ bits. These bits can only be written when data transfers are disabled. Once a tr
         }
         #[doc = "Transfer watermark interrupt flag. This bit is set when the last pixel of the watermarked line has been transferred."]
         #[inline(always)]
-        pub const fn set_twif(&mut self, val: bool) {
+        pub fn set_twif(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
         }
         #[doc = "CLUT access error interrupt flag. This bit is set when the CPU accesses the CLUT while the CLUT is being automatically copied from a system memory to the internal DMA2D."]
-        #[must_use]
         #[inline(always)]
         pub const fn caeif(&self) -> bool {
             let val = (self.0 >> 3usize) & 0x01;
@@ -1159,11 +1070,10 @@ bits. These bits can only be written when data transfers are disabled. Once a tr
         }
         #[doc = "CLUT access error interrupt flag. This bit is set when the CPU accesses the CLUT while the CLUT is being automatically copied from a system memory to the internal DMA2D."]
         #[inline(always)]
-        pub const fn set_caeif(&mut self, val: bool) {
+        pub fn set_caeif(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
         }
         #[doc = "CLUT transfer complete interrupt flag. This bit is set when the CLUT copy from a system memory area to the internal DMA2D memory is complete."]
-        #[must_use]
         #[inline(always)]
         pub const fn ctcif(&self) -> bool {
             let val = (self.0 >> 4usize) & 0x01;
@@ -1171,11 +1081,10 @@ bits. These bits can only be written when data transfers are disabled. Once a tr
         }
         #[doc = "CLUT transfer complete interrupt flag. This bit is set when the CLUT copy from a system memory area to the internal DMA2D memory is complete."]
         #[inline(always)]
-        pub const fn set_ctcif(&mut self, val: bool) {
+        pub fn set_ctcif(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
         }
         #[doc = "Configuration error interrupt flag. This bit is set when the START bit of DMA2D_CR, DMA2DFGPFCCR or DMA2D_BGPFCCR is set and a wrong configuration has been programmed."]
-        #[must_use]
         #[inline(always)]
         pub const fn ceif(&self) -> bool {
             let val = (self.0 >> 5usize) & 0x01;
@@ -1183,7 +1092,7 @@ bits. These bits can only be written when data transfers are disabled. Once a tr
         }
         #[doc = "Configuration error interrupt flag. This bit is set when the START bit of DMA2D_CR, DMA2DFGPFCCR or DMA2D_BGPFCCR is set and a wrong configuration has been programmed."]
         #[inline(always)]
-        pub const fn set_ceif(&mut self, val: bool) {
+        pub fn set_ceif(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
         }
     }
@@ -1208,16 +1117,7 @@ bits. These bits can only be written when data transfers are disabled. Once a tr
     #[cfg(feature = "defmt")]
     impl defmt::Format for Isr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Isr {{ teif: {=bool:?}, tcif: {=bool:?}, twif: {=bool:?}, caeif: {=bool:?}, ctcif: {=bool:?}, ceif: {=bool:?} }}",
-                self.teif(),
-                self.tcif(),
-                self.twif(),
-                self.caeif(),
-                self.ctcif(),
-                self.ceif()
-            )
+            defmt :: write ! (f , "Isr {{ teif: {=bool:?}, tcif: {=bool:?}, twif: {=bool:?}, caeif: {=bool:?}, ctcif: {=bool:?}, ceif: {=bool:?} }}" , self . teif () , self . tcif () , self . twif () , self . caeif () , self . ctcif () , self . ceif ())
         }
     }
     #[doc = "DMA2D line watermark register"]
@@ -1226,7 +1126,6 @@ bits. These bits can only be written when data transfers are disabled. Once a tr
     pub struct Lwr(pub u32);
     impl Lwr {
         #[doc = "Line watermark. These bits allow to configure the line watermark for interrupt generation. An interrupt is raised when the last pixel of the watermarked line has been transferred. These bits can only be written when data transfers are disabled. Once the transfer has started, they are read-only."]
-        #[must_use]
         #[inline(always)]
         pub const fn lw(&self) -> u16 {
             let val = (self.0 >> 0usize) & 0xffff;
@@ -1234,7 +1133,7 @@ bits. These bits can only be written when data transfers are disabled. Once a tr
         }
         #[doc = "Line watermark. These bits allow to configure the line watermark for interrupt generation. An interrupt is raised when the last pixel of the watermarked line has been transferred. These bits can only be written when data transfers are disabled. Once the transfer has started, they are read-only."]
         #[inline(always)]
-        pub const fn set_lw(&mut self, val: u16) {
+        pub fn set_lw(&mut self, val: u16) {
             self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
         }
     }
@@ -1261,7 +1160,6 @@ bits. These bits can only be written when data transfers are disabled. Once a tr
     pub struct Nlr(pub u32);
     impl Nlr {
         #[doc = "Number of lines. Number of lines of the area to be transferred. These bits can only be written when data transfers are disabled. Once the transfer has started, they are read-only."]
-        #[must_use]
         #[inline(always)]
         pub const fn nl(&self) -> u16 {
             let val = (self.0 >> 0usize) & 0xffff;
@@ -1269,11 +1167,10 @@ bits. These bits can only be written when data transfers are disabled. Once a tr
         }
         #[doc = "Number of lines. Number of lines of the area to be transferred. These bits can only be written when data transfers are disabled. Once the transfer has started, they are read-only."]
         #[inline(always)]
-        pub const fn set_nl(&mut self, val: u16) {
+        pub fn set_nl(&mut self, val: u16) {
             self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
         }
         #[doc = "Pixel per lines. Number of pixels per lines of the area to be transferred. These bits can only be written when data transfers are disabled. Once the transfer has started, they are read-only. If any of the input image format is 4-bit per pixel, pixel per lines must be even."]
-        #[must_use]
         #[inline(always)]
         pub const fn pl(&self) -> u16 {
             let val = (self.0 >> 16usize) & 0x3fff;
@@ -1281,7 +1178,7 @@ bits. These bits can only be written when data transfers are disabled. Once a tr
         }
         #[doc = "Pixel per lines. Number of pixels per lines of the area to be transferred. These bits can only be written when data transfers are disabled. Once the transfer has started, they are read-only. If any of the input image format is 4-bit per pixel, pixel per lines must be even."]
         #[inline(always)]
-        pub const fn set_pl(&mut self, val: u16) {
+        pub fn set_pl(&mut self, val: u16) {
             self.0 = (self.0 & !(0x3fff << 16usize)) | (((val as u32) & 0x3fff) << 16usize);
         }
     }
@@ -1311,7 +1208,6 @@ bits. These bits can only be written when data transfers are disabled. Once a tr
     pub struct Ocolr(pub u32);
     impl Ocolr {
         #[doc = "Color. Color in the format specified by color mode in OPFCCR (16, 24 or 32 bits). These bits can only be written when data transfers are disabled. Once the transfer has started, they are read-only."]
-        #[must_use]
         #[inline(always)]
         pub const fn color(&self) -> u32 {
             let val = (self.0 >> 0usize) & 0xffff_ffff;
@@ -1319,7 +1215,7 @@ bits. These bits can only be written when data transfers are disabled. Once a tr
         }
         #[doc = "Color. Color in the format specified by color mode in OPFCCR (16, 24 or 32 bits). These bits can only be written when data transfers are disabled. Once the transfer has started, they are read-only."]
         #[inline(always)]
-        pub const fn set_color(&mut self, val: u32) {
+        pub fn set_color(&mut self, val: u32) {
             self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
         }
     }
@@ -1346,7 +1242,6 @@ bits. These bits can only be written when data transfers are disabled. Once a tr
     pub struct Omar(pub u32);
     impl Omar {
         #[doc = "Memory Address. Address of the data used for the output FIFO. These bits can only be written when data transfers are disabled. Once the transfer has started, they are read-only. The address alignment must match the image format selected e.g. a 32-bit per pixel format must be 32-bit aligned and a 16-bit per pixel format must be 16-bit aligned."]
-        #[must_use]
         #[inline(always)]
         pub const fn ma(&self) -> u32 {
             let val = (self.0 >> 0usize) & 0xffff_ffff;
@@ -1354,7 +1249,7 @@ bits. These bits can only be written when data transfers are disabled. Once a tr
         }
         #[doc = "Memory Address. Address of the data used for the output FIFO. These bits can only be written when data transfers are disabled. Once the transfer has started, they are read-only. The address alignment must match the image format selected e.g. a 32-bit per pixel format must be 32-bit aligned and a 16-bit per pixel format must be 16-bit aligned."]
         #[inline(always)]
-        pub const fn set_ma(&mut self, val: u32) {
+        pub fn set_ma(&mut self, val: u32) {
             self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
         }
     }
@@ -1381,7 +1276,6 @@ bits. These bits can only be written when data transfers are disabled. Once a tr
     pub struct Oor(pub u32);
     impl Oor {
         #[doc = "Line offset. Line offset used for the output (expressed in pixels). This value is used for the address generation. It is added at the end of each line to determine the starting address of the next line. These bits can only be written when data transfers are disabled. Once the transfer has started, they are read-only."]
-        #[must_use]
         #[inline(always)]
         pub const fn lo(&self) -> u16 {
             let val = (self.0 >> 0usize) & 0xffff;
@@ -1389,7 +1283,7 @@ bits. These bits can only be written when data transfers are disabled. Once a tr
         }
         #[doc = "Line offset. Line offset used for the output (expressed in pixels). This value is used for the address generation. It is added at the end of each line to determine the starting address of the next line. These bits can only be written when data transfers are disabled. Once the transfer has started, they are read-only."]
         #[inline(always)]
-        pub const fn set_lo(&mut self, val: u16) {
+        pub fn set_lo(&mut self, val: u16) {
             self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
         }
     }
@@ -1416,7 +1310,6 @@ bits. These bits can only be written when data transfers are disabled. Once a tr
     pub struct Opfccr(pub u32);
     impl Opfccr {
         #[doc = "Color mode. These bits define the color format of the output image. These bits can only be written when data transfers are disabled. Once the transfer has started, they are read-only. others: meaningless"]
-        #[must_use]
         #[inline(always)]
         pub const fn cm(&self) -> super::vals::OpfccrCm {
             let val = (self.0 >> 0usize) & 0x07;
@@ -1424,11 +1317,10 @@ bits. These bits can only be written when data transfers are disabled. Once a tr
         }
         #[doc = "Color mode. These bits define the color format of the output image. These bits can only be written when data transfers are disabled. Once the transfer has started, they are read-only. others: meaningless"]
         #[inline(always)]
-        pub const fn set_cm(&mut self, val: super::vals::OpfccrCm) {
+        pub fn set_cm(&mut self, val: super::vals::OpfccrCm) {
             self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
         }
         #[doc = "Swap Bytes"]
-        #[must_use]
         #[inline(always)]
         pub const fn sb(&self) -> super::vals::Sb {
             let val = (self.0 >> 8usize) & 0x01;
@@ -1436,11 +1328,10 @@ bits. These bits can only be written when data transfers are disabled. Once a tr
         }
         #[doc = "Swap Bytes"]
         #[inline(always)]
-        pub const fn set_sb(&mut self, val: super::vals::Sb) {
+        pub fn set_sb(&mut self, val: super::vals::Sb) {
             self.0 = (self.0 & !(0x01 << 8usize)) | (((val.to_bits() as u32) & 0x01) << 8usize);
         }
         #[doc = "Alpha inverted. This bit inverts the alpha value. Once the transfer has started, this bit is read-only."]
-        #[must_use]
         #[inline(always)]
         pub const fn ai(&self) -> super::vals::OpfccrAi {
             let val = (self.0 >> 20usize) & 0x01;
@@ -1448,11 +1339,10 @@ bits. These bits can only be written when data transfers are disabled. Once a tr
         }
         #[doc = "Alpha inverted. This bit inverts the alpha value. Once the transfer has started, this bit is read-only."]
         #[inline(always)]
-        pub const fn set_ai(&mut self, val: super::vals::OpfccrAi) {
+        pub fn set_ai(&mut self, val: super::vals::OpfccrAi) {
             self.0 = (self.0 & !(0x01 << 20usize)) | (((val.to_bits() as u32) & 0x01) << 20usize);
         }
         #[doc = "Red blue swap. This bit allows to swap the R and B to support BGR or ABGR color formats. Once the transfer has started, this bit is read-only."]
-        #[must_use]
         #[inline(always)]
         pub const fn rbs(&self) -> super::vals::OpfccrRbs {
             let val = (self.0 >> 21usize) & 0x01;
@@ -1460,7 +1350,7 @@ bits. These bits can only be written when data transfers are disabled. Once a tr
         }
         #[doc = "Red blue swap. This bit allows to swap the R and B to support BGR or ABGR color formats. Once the transfer has started, this bit is read-only."]
         #[inline(always)]
-        pub const fn set_rbs(&mut self, val: super::vals::OpfccrRbs) {
+        pub fn set_rbs(&mut self, val: super::vals::OpfccrRbs) {
             self.0 = (self.0 & !(0x01 << 21usize)) | (((val.to_bits() as u32) & 0x01) << 21usize);
         }
     }
@@ -1501,7 +1391,7 @@ pub mod vals {
     pub enum Abort {
         _RESERVED_0 = 0x0,
         #[doc = "Transfer abort requested"]
-        AbortRequest = 0x01,
+        ABORT_REQUEST = 0x01,
     }
     impl Abort {
         #[inline(always)]
@@ -1530,9 +1420,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum BgpfccrAi {
         #[doc = "Regular alpha"]
-        RegularAlpha = 0x0,
+        REGULAR_ALPHA = 0x0,
         #[doc = "Inverted alpha"]
-        InvertedAlpha = 0x01,
+        INVERTED_ALPHA = 0x01,
     }
     impl BgpfccrAi {
         #[inline(always)]
@@ -1561,11 +1451,11 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum BgpfccrAm {
         #[doc = "No modification of alpha channel"]
-        NoModify = 0x0,
+        NO_MODIFY = 0x0,
         #[doc = "Replace with value in ALPHA\\[7:0\\]"]
-        Replace = 0x01,
+        REPLACE = 0x01,
         #[doc = "Multiply with value in ALPHA\\[7:0\\]"]
-        Multiply = 0x02,
+        MULTIPLY = 0x02,
         _RESERVED_3 = 0x03,
     }
     impl BgpfccrAm {
@@ -1595,9 +1485,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum BgpfccrCcm {
         #[doc = "CLUT color format ARGB8888"]
-        Argb8888 = 0x0,
+        ARGB8888 = 0x0,
         #[doc = "CLUT color format RGB888"]
-        Rgb888 = 0x01,
+        RGB888 = 0x01,
     }
     impl BgpfccrCcm {
         #[inline(always)]
@@ -1626,21 +1516,21 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum BgpfccrCm {
         #[doc = "Color mode ARGB8888"]
-        Argb8888 = 0x0,
+        ARGB8888 = 0x0,
         #[doc = "Color mode RGB888"]
-        Rgb888 = 0x01,
+        RGB888 = 0x01,
         #[doc = "Color mode RGB565"]
-        Rgb565 = 0x02,
+        RGB565 = 0x02,
         #[doc = "Color mode ARGB1555"]
-        Argb1555 = 0x03,
+        ARGB1555 = 0x03,
         #[doc = "Color mode ARGB4444"]
-        Argb4444 = 0x04,
+        ARGB4444 = 0x04,
         #[doc = "Color mode L8"]
         L8 = 0x05,
         #[doc = "Color mode AL44"]
-        Al44 = 0x06,
+        AL44 = 0x06,
         #[doc = "Color mode AL88"]
-        Al88 = 0x07,
+        AL88 = 0x07,
         #[doc = "Color mode L4"]
         L4 = 0x08,
         #[doc = "Color mode A8"]
@@ -1680,9 +1570,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum BgpfccrRbs {
         #[doc = "No red blue swap (RGB or ARGB)"]
-        Regular = 0x0,
+        REGULAR = 0x0,
         #[doc = "Red blue swap (BGR or ABGR)"]
-        Swap = 0x01,
+        SWAP = 0x01,
     }
     impl BgpfccrRbs {
         #[inline(always)]
@@ -1712,7 +1602,7 @@ pub mod vals {
     pub enum BgpfccrStart {
         _RESERVED_0 = 0x0,
         #[doc = "Start the automatic loading of the CLUT"]
-        Start = 0x01,
+        START = 0x01,
     }
     impl BgpfccrStart {
         #[inline(always)]
@@ -1742,7 +1632,7 @@ pub mod vals {
     pub enum Caecif {
         _RESERVED_0 = 0x0,
         #[doc = "Clear the CAEIF flag in the ISR register"]
-        Clear = 0x01,
+        CLEAR = 0x01,
     }
     impl Caecif {
         #[inline(always)]
@@ -1772,7 +1662,7 @@ pub mod vals {
     pub enum Cceif {
         _RESERVED_0 = 0x0,
         #[doc = "Clear the CEIF flag in the ISR register"]
-        Clear = 0x01,
+        CLEAR = 0x01,
     }
     impl Cceif {
         #[inline(always)]
@@ -1802,7 +1692,7 @@ pub mod vals {
     pub enum Cctcif {
         _RESERVED_0 = 0x0,
         #[doc = "Clear the CTCIF flag in the ISR register"]
-        Clear = 0x01,
+        CLEAR = 0x01,
     }
     impl Cctcif {
         #[inline(always)]
@@ -1832,7 +1722,7 @@ pub mod vals {
     pub enum CrStart {
         _RESERVED_0 = 0x0,
         #[doc = "Launch the DMA2D"]
-        Start = 0x01,
+        START = 0x01,
     }
     impl CrStart {
         #[inline(always)]
@@ -1862,7 +1752,7 @@ pub mod vals {
     pub enum Ctcif {
         _RESERVED_0 = 0x0,
         #[doc = "Clear the TCIF flag in the ISR register"]
-        Clear = 0x01,
+        CLEAR = 0x01,
     }
     impl Ctcif {
         #[inline(always)]
@@ -1892,7 +1782,7 @@ pub mod vals {
     pub enum Cteif {
         _RESERVED_0 = 0x0,
         #[doc = "Clear the TEIF flag in the ISR register"]
-        Clear = 0x01,
+        CLEAR = 0x01,
     }
     impl Cteif {
         #[inline(always)]
@@ -1922,7 +1812,7 @@ pub mod vals {
     pub enum Ctwif {
         _RESERVED_0 = 0x0,
         #[doc = "Clear the TWIF flag in the ISR register"]
-        Clear = 0x01,
+        CLEAR = 0x01,
     }
     impl Ctwif {
         #[inline(always)]
@@ -1951,9 +1841,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum FgpfccrAi {
         #[doc = "Regular alpha"]
-        RegularAlpha = 0x0,
+        REGULAR_ALPHA = 0x0,
         #[doc = "Inverted alpha"]
-        InvertedAlpha = 0x01,
+        INVERTED_ALPHA = 0x01,
     }
     impl FgpfccrAi {
         #[inline(always)]
@@ -1982,11 +1872,11 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum FgpfccrAm {
         #[doc = "No modification of alpha channel"]
-        NoModify = 0x0,
+        NO_MODIFY = 0x0,
         #[doc = "Replace with value in ALPHA\\[7:0\\]"]
-        Replace = 0x01,
+        REPLACE = 0x01,
         #[doc = "Multiply with value in ALPHA\\[7:0\\]"]
-        Multiply = 0x02,
+        MULTIPLY = 0x02,
         _RESERVED_3 = 0x03,
     }
     impl FgpfccrAm {
@@ -2016,9 +1906,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum FgpfccrCcm {
         #[doc = "CLUT color format ARGB8888"]
-        Argb8888 = 0x0,
+        ARGB8888 = 0x0,
         #[doc = "CLUT color format RGB888"]
-        Rgb888 = 0x01,
+        RGB888 = 0x01,
     }
     impl FgpfccrCcm {
         #[inline(always)]
@@ -2047,21 +1937,21 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum FgpfccrCm {
         #[doc = "Color mode ARGB8888"]
-        Argb8888 = 0x0,
+        ARGB8888 = 0x0,
         #[doc = "Color mode RGB888"]
-        Rgb888 = 0x01,
+        RGB888 = 0x01,
         #[doc = "Color mode RGB565"]
-        Rgb565 = 0x02,
+        RGB565 = 0x02,
         #[doc = "Color mode ARGB1555"]
-        Argb1555 = 0x03,
+        ARGB1555 = 0x03,
         #[doc = "Color mode ARGB4444"]
-        Argb4444 = 0x04,
+        ARGB4444 = 0x04,
         #[doc = "Color mode L8"]
         L8 = 0x05,
         #[doc = "Color mode AL44"]
-        Al44 = 0x06,
+        AL44 = 0x06,
         #[doc = "Color mode AL88"]
-        Al88 = 0x07,
+        AL88 = 0x07,
         #[doc = "Color mode L4"]
         L4 = 0x08,
         #[doc = "Color mode A8"]
@@ -2069,7 +1959,7 @@ pub mod vals {
         #[doc = "Color mode A4"]
         A4 = 0x0a,
         #[doc = "Color mode YCbCr"]
-        YCbCr = 0x0b,
+        YCB_CR = 0x0b,
         _RESERVED_c = 0x0c,
         _RESERVED_d = 0x0d,
         _RESERVED_e = 0x0e,
@@ -2102,9 +1992,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum FgpfccrRbs {
         #[doc = "No red blue swap (RGB or ARGB)"]
-        Regular = 0x0,
+        REGULAR = 0x0,
         #[doc = "red blue swap (BGR or ABGR)"]
-        Swap = 0x01,
+        SWAP = 0x01,
     }
     impl FgpfccrRbs {
         #[inline(always)]
@@ -2134,7 +2024,7 @@ pub mod vals {
     pub enum FgpfccrStart {
         _RESERVED_0 = 0x0,
         #[doc = "Start the automatic loading of the CLUT"]
-        Start = 0x01,
+        START = 0x01,
     }
     impl FgpfccrStart {
         #[inline(always)]
@@ -2163,9 +2053,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Lom {
         #[doc = "Line offsets expressed in pixels"]
-        Pixels = 0x0,
+        PIXELS = 0x0,
         #[doc = "Line offsets expressed in bytes"]
-        Bytes = 0x01,
+        BYTES = 0x01,
     }
     impl Lom {
         #[inline(always)]
@@ -2194,17 +2084,17 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Mode {
         #[doc = "Memory-to-memory (FG fetch only)"]
-        MemoryToMemory = 0x0,
+        MEMORY_TO_MEMORY = 0x0,
         #[doc = "Memory-to-memory with PFC (pixel format converter) (FG fetch only with FG PFC active)"]
-        MemoryToMemoryPfc = 0x01,
+        MEMORY_TO_MEMORY_PFC = 0x01,
         #[doc = "Memory-to-memory with blending (FG and BG fetch with PFC and blending)"]
-        MemoryToMemoryPfcBlending = 0x02,
+        MEMORY_TO_MEMORY_PFCBLENDING = 0x02,
         #[doc = "Register-to-memory (no FG nor BG, only output stage active)"]
-        RegisterToMemory = 0x03,
+        REGISTER_TO_MEMORY = 0x03,
         #[doc = "Memory-to-memory with blending and fixed color FG (BG fetch only with FG and BG PFC active)"]
-        MemoryToMemoryPfcBlendingFixedColorFg = 0x04,
+        MEMORY_TO_MEMORY_PFCBLENDING_FIXED_COLOR_FG = 0x04,
         #[doc = "Memory-to-memory with blending and fixed color BG (FG fetch only with FG and BG PFC active)"]
-        MemoryToMemoryPfcBlendingFixedColorBg = 0x05,
+        MEMORY_TO_MEMORY_PFCBLENDING_FIXED_COLOR_BG = 0x05,
         _RESERVED_6 = 0x06,
         _RESERVED_7 = 0x07,
     }
@@ -2235,9 +2125,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum OpfccrAi {
         #[doc = "Regular alpha"]
-        RegularAlpha = 0x0,
+        REGULAR_ALPHA = 0x0,
         #[doc = "Inverted alpha"]
-        InvertedAlpha = 0x01,
+        INVERTED_ALPHA = 0x01,
     }
     impl OpfccrAi {
         #[inline(always)]
@@ -2266,15 +2156,15 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum OpfccrCm {
         #[doc = "ARGB8888"]
-        Argb8888 = 0x0,
+        ARGB8888 = 0x0,
         #[doc = "RGB888"]
-        Rgb888 = 0x01,
+        RGB888 = 0x01,
         #[doc = "RGB565"]
-        Rgb565 = 0x02,
+        RGB565 = 0x02,
         #[doc = "ARGB1555"]
-        Argb1555 = 0x03,
+        ARGB1555 = 0x03,
         #[doc = "ARGB4444"]
-        Argb4444 = 0x04,
+        ARGB4444 = 0x04,
         _RESERVED_5 = 0x05,
         _RESERVED_6 = 0x06,
         _RESERVED_7 = 0x07,
@@ -2306,9 +2196,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum OpfccrRbs {
         #[doc = "No red blue swap (RGB or ARGB)"]
-        Regular = 0x0,
+        REGULAR = 0x0,
         #[doc = "Red blue swap (BGR or ABGR)"]
-        Swap = 0x01,
+        SWAP = 0x01,
     }
     impl OpfccrRbs {
         #[inline(always)]
@@ -2337,9 +2227,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Sb {
         #[doc = "Regular byte order"]
-        Regular = 0x0,
+        REGULAR = 0x0,
         #[doc = "Bytes are swapped two by two"]
-        SwapBytes = 0x01,
+        SWAP_BYTES = 0x01,
     }
     impl Sb {
         #[inline(always)]
