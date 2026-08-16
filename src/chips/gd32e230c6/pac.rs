@@ -161,7 +161,7 @@ pub const I2C2: gdi2c08b9ac71f::I2c0 = unsafe { gdi2c08b9ac71f::I2c0::from_ptr(0
 pub const PWR: pwr::Pwr = unsafe { pwr::Pwr::from_ptr(0x4000_7000usize as _) };
 pub const SYSCFG: syscfg::Syscfg = unsafe { syscfg::Syscfg::from_ptr(0x4001_0000usize as _) };
 pub const CMP: gdcmpfe28bbad::Cmp = unsafe { gdcmpfe28bbad::Cmp::from_ptr(0x4001_001cusize as _) };
-pub const EXTI: gdexti83469f4a::Exti = unsafe { gdexti83469f4a::Exti::from_ptr(0x4001_0400usize as _) };
+pub const EXTI: exti::Exti = unsafe { exti::Exti::from_ptr(0x4001_0400usize as _) };
 pub const ADC1: gdadc47519d73::Adc = unsafe { gdadc47519d73::Adc::from_ptr(0x4001_2400usize as _) };
 pub const TIM1: timer::TimAdv = unsafe { timer::TimAdv::from_ptr(0x4001_2c00usize as _) };
 pub const SPI1: gdspi0e52b5b99::Spi0 = unsafe { gdspi0e52b5b99::Spi0::from_ptr(0x4001_3000usize as _) };
@@ -187,6 +187,8 @@ pub use Interrupt as interrupt;
 pub use cortex_m_rt::interrupt;
 #[path = "../../peripherals/bdma_v1.rs"]
 pub mod bdma;
+#[path = "../../peripherals/exti_gd396c6dd7493e.rs"]
+pub mod exti;
 #[path = "../../peripherals/flash_f0.rs"]
 pub mod flash;
 #[path = "../../peripherals/gdadc47519d73_v1.rs"]
@@ -197,8 +199,6 @@ pub mod gdcmpfe28bbad;
 pub mod gdcrc8a4036fe;
 #[path = "../../peripherals/gddbgmcu751e9bc8_v1.rs"]
 pub mod gddbgmcu751e9bc8;
-#[path = "../../peripherals/gdexti83469f4a_v1.rs"]
-pub mod gdexti83469f4a;
 #[path = "../../peripherals/gdgpioc88586c6c_v1.rs"]
 pub mod gdgpioc88586c6c;
 #[path = "../../peripherals/gdgpiof41ef0f55_v1.rs"]

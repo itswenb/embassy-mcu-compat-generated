@@ -3,16 +3,16 @@
                     pub(crate) static REGISTERS: IR = IR {
     blocks: &[
         Block {
-            name: "Spi0",
+            name: "Timer13",
             extends: None,
             description: Some(
-                "Serial peripheral interface",
+                "General-purpose-timers",
             ),
             items: &[
                 BlockItem {
                     name: "ctl0",
                     description: Some(
-                        "control register 0",
+                        "control register 1",
                     ),
                     array: None,
                     byte_offset: 0x0,
@@ -27,43 +27,9 @@
                     ),
                 },
                 BlockItem {
-                    name: "ctl1",
+                    name: "dmainten",
                     description: Some(
-                        "control register 1",
-                    ),
-                    array: None,
-                    byte_offset: 0x4,
-                    inner: BlockItemInner::Register(
-                        Register {
-                            access: Access::ReadWrite,
-                            bit_size: 32,
-                            fieldset: Some(
-                                "Ctl1",
-                            ),
-                        },
-                    ),
-                },
-                BlockItem {
-                    name: "stat",
-                    description: Some(
-                        "status register",
-                    ),
-                    array: None,
-                    byte_offset: 0x8,
-                    inner: BlockItemInner::Register(
-                        Register {
-                            access: Access::ReadWrite,
-                            bit_size: 32,
-                            fieldset: Some(
-                                "Stat",
-                            ),
-                        },
-                    ),
-                },
-                BlockItem {
-                    name: "data",
-                    description: Some(
-                        "data register",
+                        "DMA/Interrupt enable register",
                     ),
                     array: None,
                     byte_offset: 0xc,
@@ -72,15 +38,15 @@
                             access: Access::ReadWrite,
                             bit_size: 32,
                             fieldset: Some(
-                                "Data",
+                                "Dmainten",
                             ),
                         },
                     ),
                 },
                 BlockItem {
-                    name: "cpcpoly",
+                    name: "intf",
                     description: Some(
-                        "CRC polynomial register",
+                        "interrupt flag register",
                     ),
                     array: None,
                     byte_offset: 0x10,
@@ -89,66 +55,66 @@
                             access: Access::ReadWrite,
                             bit_size: 32,
                             fieldset: Some(
-                                "Cpcpoly",
+                                "Intf",
                             ),
                         },
                     ),
                 },
                 BlockItem {
-                    name: "rcrc",
+                    name: "swevg",
                     description: Some(
-                        "RX CRC register",
+                        "event generation register",
                     ),
                     array: None,
                     byte_offset: 0x14,
                     inner: BlockItemInner::Register(
                         Register {
-                            access: Access::Read,
+                            access: Access::Write,
                             bit_size: 32,
                             fieldset: Some(
-                                "Rcrc",
+                                "Swevg",
                             ),
                         },
                     ),
                 },
                 BlockItem {
-                    name: "tcrc",
+                    name: "chctl0_input",
                     description: Some(
-                        "TX CRC register",
+                        "capture/compare mode register (input mode)",
                     ),
                     array: None,
                     byte_offset: 0x18,
                     inner: BlockItemInner::Register(
                         Register {
-                            access: Access::Read,
+                            access: Access::ReadWrite,
                             bit_size: 32,
                             fieldset: Some(
-                                "Tcrc",
+                                "Chctl0Input",
                             ),
                         },
                     ),
                 },
                 BlockItem {
-                    name: "i2sctl",
+                    name: "chctl0_output",
                     description: Some(
-                        "I2S configuration register",
+                        "capture/compare mode register (output mode)",
                     ),
                     array: None,
-                    byte_offset: 0x1c,
+                    byte_offset: 0x18,
                     inner: BlockItemInner::Register(
                         Register {
                             access: Access::ReadWrite,
                             bit_size: 32,
                             fieldset: Some(
-                                "I2sctl",
+                                "Chctl0Output",
                             ),
                         },
                     ),
                 },
                 BlockItem {
-                    name: "i2spsc",
+                    name: "chctl2",
                     description: Some(
-                        "I2S prescaler register",
+                        "capture/compare enable register",
                     ),
                     array: None,
                     byte_offset: 0x20,
@@ -157,24 +123,109 @@
                             access: Access::ReadWrite,
                             bit_size: 32,
                             fieldset: Some(
-                                "I2spsc",
+                                "Chctl2",
                             ),
                         },
                     ),
                 },
                 BlockItem {
-                    name: "qctl",
+                    name: "cnt",
                     description: Some(
-                        "SPI quad wird control register",
+                        "counter",
                     ),
                     array: None,
-                    byte_offset: 0x80,
+                    byte_offset: 0x24,
                     inner: BlockItemInner::Register(
                         Register {
                             access: Access::ReadWrite,
                             bit_size: 32,
                             fieldset: Some(
-                                "Qctl",
+                                "Cnt",
+                            ),
+                        },
+                    ),
+                },
+                BlockItem {
+                    name: "psc",
+                    description: Some(
+                        "prescaler",
+                    ),
+                    array: None,
+                    byte_offset: 0x28,
+                    inner: BlockItemInner::Register(
+                        Register {
+                            access: Access::ReadWrite,
+                            bit_size: 32,
+                            fieldset: Some(
+                                "Psc",
+                            ),
+                        },
+                    ),
+                },
+                BlockItem {
+                    name: "car",
+                    description: Some(
+                        "auto-reload register",
+                    ),
+                    array: None,
+                    byte_offset: 0x2c,
+                    inner: BlockItemInner::Register(
+                        Register {
+                            access: Access::ReadWrite,
+                            bit_size: 32,
+                            fieldset: Some(
+                                "Car",
+                            ),
+                        },
+                    ),
+                },
+                BlockItem {
+                    name: "ch0cv",
+                    description: Some(
+                        "capture/compare register 0",
+                    ),
+                    array: None,
+                    byte_offset: 0x34,
+                    inner: BlockItemInner::Register(
+                        Register {
+                            access: Access::ReadWrite,
+                            bit_size: 32,
+                            fieldset: Some(
+                                "Ch0cv",
+                            ),
+                        },
+                    ),
+                },
+                BlockItem {
+                    name: "irmp",
+                    description: Some(
+                        "channel input remap register",
+                    ),
+                    array: None,
+                    byte_offset: 0x50,
+                    inner: BlockItemInner::Register(
+                        Register {
+                            access: Access::ReadWrite,
+                            bit_size: 32,
+                            fieldset: Some(
+                                "Irmp",
+                            ),
+                        },
+                    ),
+                },
+                BlockItem {
+                    name: "cfg",
+                    description: Some(
+                        "configuration register",
+                    ),
+                    array: None,
+                    byte_offset: 0xfc,
+                    inner: BlockItemInner::Register(
+                        Register {
+                            access: Access::ReadWrite,
+                            bit_size: 32,
+                            fieldset: Some(
+                                "Cfg",
                             ),
                         },
                     ),
@@ -184,17 +235,259 @@
     ],
     fieldsets: &[
         FieldSet {
-            name: "Cpcpoly",
+            name: "Car",
             extends: None,
             description: Some(
-                "CRC polynomial register",
+                "auto-reload register",
             ),
             bit_size: 32,
             fields: &[
                 Field {
-                    name: "cpr",
+                    name: "carl",
                     description: Some(
-                        "CRC polynomial register",
+                        "Auto-reload value",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 0,
+                        },
+                    ),
+                    bit_size: 16,
+                    array: None,
+                    enumm: None,
+                },
+            ],
+        },
+        FieldSet {
+            name: "Cfg",
+            extends: None,
+            description: Some(
+                "configuration register",
+            ),
+            bit_size: 32,
+            fields: &[
+                Field {
+                    name: "chvsel",
+                    description: Some(
+                        "Write CHxVAL register selection",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 1,
+                        },
+                    ),
+                    bit_size: 1,
+                    array: None,
+                    enumm: None,
+                },
+            ],
+        },
+        FieldSet {
+            name: "Ch0cv",
+            extends: None,
+            description: Some(
+                "capture/compare register 0",
+            ),
+            bit_size: 32,
+            fields: &[
+                Field {
+                    name: "ch0val",
+                    description: Some(
+                        "Capture/Compare 1 value",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 0,
+                        },
+                    ),
+                    bit_size: 16,
+                    array: None,
+                    enumm: None,
+                },
+            ],
+        },
+        FieldSet {
+            name: "Chctl0Input",
+            extends: None,
+            description: Some(
+                "capture/compare mode register (input mode)",
+            ),
+            bit_size: 32,
+            fields: &[
+                Field {
+                    name: "ch0ms",
+                    description: Some(
+                        "Capture/Compare 0 selection",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 0,
+                        },
+                    ),
+                    bit_size: 2,
+                    array: None,
+                    enumm: None,
+                },
+                Field {
+                    name: "ch0cappsc",
+                    description: Some(
+                        "Input capture 0 prescaler",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 2,
+                        },
+                    ),
+                    bit_size: 2,
+                    array: None,
+                    enumm: None,
+                },
+                Field {
+                    name: "ch0capflt",
+                    description: Some(
+                        "Input capture 0 filter",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 4,
+                        },
+                    ),
+                    bit_size: 4,
+                    array: None,
+                    enumm: None,
+                },
+            ],
+        },
+        FieldSet {
+            name: "Chctl0Output",
+            extends: None,
+            description: Some(
+                "capture/compare mode register (output mode)",
+            ),
+            bit_size: 32,
+            fields: &[
+                Field {
+                    name: "ch0ms",
+                    description: Some(
+                        "Capture/Compare 0 selection",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 0,
+                        },
+                    ),
+                    bit_size: 2,
+                    array: None,
+                    enumm: None,
+                },
+                Field {
+                    name: "ch0comfen",
+                    description: Some(
+                        "Output compare 0 fast enable",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 2,
+                        },
+                    ),
+                    bit_size: 1,
+                    array: None,
+                    enumm: None,
+                },
+                Field {
+                    name: "ch0comsen",
+                    description: Some(
+                        "Output Compare 0 preload enable",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 3,
+                        },
+                    ),
+                    bit_size: 1,
+                    array: None,
+                    enumm: None,
+                },
+                Field {
+                    name: "ch0comctl",
+                    description: Some(
+                        "Output Compare 0 mode",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 4,
+                        },
+                    ),
+                    bit_size: 3,
+                    array: None,
+                    enumm: None,
+                },
+            ],
+        },
+        FieldSet {
+            name: "Chctl2",
+            extends: None,
+            description: Some(
+                "capture/compare enable register",
+            ),
+            bit_size: 32,
+            fields: &[
+                Field {
+                    name: "ch0en",
+                    description: Some(
+                        "Capture/Compare 1 output enable",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 0,
+                        },
+                    ),
+                    bit_size: 1,
+                    array: None,
+                    enumm: None,
+                },
+                Field {
+                    name: "ch0p",
+                    description: Some(
+                        "Capture/Compare 0 output Polarity",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 1,
+                        },
+                    ),
+                    bit_size: 1,
+                    array: None,
+                    enumm: None,
+                },
+                Field {
+                    name: "ch0np",
+                    description: Some(
+                        "Capture/Compare 0 output Polarity",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 3,
+                        },
+                    ),
+                    bit_size: 1,
+                    array: None,
+                    enumm: None,
+                },
+            ],
+        },
+        FieldSet {
+            name: "Cnt",
+            extends: None,
+            description: Some(
+                "counter",
+            ),
+            bit_size: 32,
+            fields: &[
+                Field {
+                    name: "cnt",
+                    description: Some(
+                        "counter value",
                     ),
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
@@ -211,220 +504,14 @@
             name: "Ctl0",
             extends: None,
             description: Some(
-                "control register 0",
-            ),
-            bit_size: 32,
-            fields: &[
-                Field {
-                    name: "ckph",
-                    description: Some(
-                        "Clock Phase Selection",
-                    ),
-                    bit_offset: BitOffset::Regular(
-                        RegularBitOffset {
-                            offset: 0,
-                        },
-                    ),
-                    bit_size: 1,
-                    array: None,
-                    enumm: None,
-                },
-                Field {
-                    name: "ckpl",
-                    description: Some(
-                        "Clock Polarity Selection",
-                    ),
-                    bit_offset: BitOffset::Regular(
-                        RegularBitOffset {
-                            offset: 1,
-                        },
-                    ),
-                    bit_size: 1,
-                    array: None,
-                    enumm: None,
-                },
-                Field {
-                    name: "mstmod",
-                    description: Some(
-                        "Master Mode Enable",
-                    ),
-                    bit_offset: BitOffset::Regular(
-                        RegularBitOffset {
-                            offset: 2,
-                        },
-                    ),
-                    bit_size: 1,
-                    array: None,
-                    enumm: None,
-                },
-                Field {
-                    name: "psc",
-                    description: Some(
-                        "Master Clock Prescaler Selection",
-                    ),
-                    bit_offset: BitOffset::Regular(
-                        RegularBitOffset {
-                            offset: 3,
-                        },
-                    ),
-                    bit_size: 3,
-                    array: None,
-                    enumm: None,
-                },
-                Field {
-                    name: "spien",
-                    description: Some(
-                        "SPI enable",
-                    ),
-                    bit_offset: BitOffset::Regular(
-                        RegularBitOffset {
-                            offset: 6,
-                        },
-                    ),
-                    bit_size: 1,
-                    array: None,
-                    enumm: None,
-                },
-                Field {
-                    name: "lf",
-                    description: Some(
-                        "LSB First Mode",
-                    ),
-                    bit_offset: BitOffset::Regular(
-                        RegularBitOffset {
-                            offset: 7,
-                        },
-                    ),
-                    bit_size: 1,
-                    array: None,
-                    enumm: None,
-                },
-                Field {
-                    name: "swnss",
-                    description: Some(
-                        "NSS Pin Selection In NSS Software Mode",
-                    ),
-                    bit_offset: BitOffset::Regular(
-                        RegularBitOffset {
-                            offset: 8,
-                        },
-                    ),
-                    bit_size: 1,
-                    array: None,
-                    enumm: None,
-                },
-                Field {
-                    name: "swnssen",
-                    description: Some(
-                        "NSS Software Mode Selection",
-                    ),
-                    bit_offset: BitOffset::Regular(
-                        RegularBitOffset {
-                            offset: 9,
-                        },
-                    ),
-                    bit_size: 1,
-                    array: None,
-                    enumm: None,
-                },
-                Field {
-                    name: "ro",
-                    description: Some(
-                        "Receive only",
-                    ),
-                    bit_offset: BitOffset::Regular(
-                        RegularBitOffset {
-                            offset: 10,
-                        },
-                    ),
-                    bit_size: 1,
-                    array: None,
-                    enumm: None,
-                },
-                Field {
-                    name: "ff16",
-                    description: Some(
-                        "Data frame format",
-                    ),
-                    bit_offset: BitOffset::Regular(
-                        RegularBitOffset {
-                            offset: 11,
-                        },
-                    ),
-                    bit_size: 1,
-                    array: None,
-                    enumm: None,
-                },
-                Field {
-                    name: "crcnt",
-                    description: Some(
-                        "CRC transfer next",
-                    ),
-                    bit_offset: BitOffset::Regular(
-                        RegularBitOffset {
-                            offset: 12,
-                        },
-                    ),
-                    bit_size: 1,
-                    array: None,
-                    enumm: None,
-                },
-                Field {
-                    name: "crcen",
-                    description: Some(
-                        "Hardware CRC calculation enable",
-                    ),
-                    bit_offset: BitOffset::Regular(
-                        RegularBitOffset {
-                            offset: 13,
-                        },
-                    ),
-                    bit_size: 1,
-                    array: None,
-                    enumm: None,
-                },
-                Field {
-                    name: "bdoen",
-                    description: Some(
-                        "Bidirectional Transmit output enable",
-                    ),
-                    bit_offset: BitOffset::Regular(
-                        RegularBitOffset {
-                            offset: 14,
-                        },
-                    ),
-                    bit_size: 1,
-                    array: None,
-                    enumm: None,
-                },
-                Field {
-                    name: "bden",
-                    description: Some(
-                        "Bidirectional enable",
-                    ),
-                    bit_offset: BitOffset::Regular(
-                        RegularBitOffset {
-                            offset: 15,
-                        },
-                    ),
-                    bit_size: 1,
-                    array: None,
-                    enumm: None,
-                },
-            ],
-        },
-        FieldSet {
-            name: "Ctl1",
-            extends: None,
-            description: Some(
                 "control register 1",
             ),
             bit_size: 32,
             fields: &[
                 Field {
-                    name: "dmaren",
+                    name: "cen",
                     description: Some(
-                        "Rx buffer DMA enable",
+                        "Counter enable",
                     ),
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
@@ -436,9 +523,9 @@
                     enumm: None,
                 },
                 Field {
-                    name: "dmaten",
+                    name: "updis",
                     description: Some(
-                        "Tx buffer DMA enable",
+                        "Update disable",
                     ),
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
@@ -450,9 +537,9 @@
                     enumm: None,
                 },
                 Field {
-                    name: "nssdrv",
+                    name: "ups",
                     description: Some(
-                        "NSS output enable",
+                        "Update request source",
                     ),
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
@@ -464,65 +551,9 @@
                     enumm: None,
                 },
                 Field {
-                    name: "nssp",
+                    name: "arse",
                     description: Some(
-                        "SPI NSS Pulse Mode Enable",
-                    ),
-                    bit_offset: BitOffset::Regular(
-                        RegularBitOffset {
-                            offset: 3,
-                        },
-                    ),
-                    bit_size: 1,
-                    array: None,
-                    enumm: None,
-                },
-                Field {
-                    name: "tmod",
-                    description: Some(
-                        "SPI TI Mode Enable",
-                    ),
-                    bit_offset: BitOffset::Regular(
-                        RegularBitOffset {
-                            offset: 4,
-                        },
-                    ),
-                    bit_size: 1,
-                    array: None,
-                    enumm: None,
-                },
-                Field {
-                    name: "errie",
-                    description: Some(
-                        "Error interrupt enable",
-                    ),
-                    bit_offset: BitOffset::Regular(
-                        RegularBitOffset {
-                            offset: 5,
-                        },
-                    ),
-                    bit_size: 1,
-                    array: None,
-                    enumm: None,
-                },
-                Field {
-                    name: "rbneie",
-                    description: Some(
-                        "Receive Buffer Not Empty Interrupt Enable",
-                    ),
-                    bit_offset: BitOffset::Regular(
-                        RegularBitOffset {
-                            offset: 6,
-                        },
-                    ),
-                    bit_size: 1,
-                    array: None,
-                    enumm: None,
-                },
-                Field {
-                    name: "tbeie",
-                    description: Some(
-                        "Transmit Buffer Empty Interrupt Enable",
+                        "Auto-reload preload enable",
                     ),
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
@@ -533,44 +564,34 @@
                     array: None,
                     enumm: None,
                 },
-            ],
-        },
-        FieldSet {
-            name: "Data",
-            extends: None,
-            description: Some(
-                "data register",
-            ),
-            bit_size: 32,
-            fields: &[
                 Field {
-                    name: "data",
+                    name: "ckdiv",
                     description: Some(
-                        "Data register",
+                        "Clock division",
                     ),
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
-                            offset: 0,
+                            offset: 8,
                         },
                     ),
-                    bit_size: 16,
+                    bit_size: 2,
                     array: None,
                     enumm: None,
                 },
             ],
         },
         FieldSet {
-            name: "I2sctl",
+            name: "Dmainten",
             extends: None,
             description: Some(
-                "I2S configuration register",
+                "DMA/Interrupt enable register",
             ),
             bit_size: 32,
             fields: &[
                 Field {
-                    name: "chlen",
+                    name: "upie",
                     description: Some(
-                        "Channel length (number of bits per audio channel)",
+                        "Update interrupt enable",
                     ),
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
@@ -582,99 +603,15 @@
                     enumm: None,
                 },
                 Field {
-                    name: "dtlen",
+                    name: "ch0ie",
                     description: Some(
-                        "Data length to be transferred",
+                        "Capture/Compare 0 interrupt enable",
                     ),
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
                             offset: 1,
                         },
                     ),
-                    bit_size: 2,
-                    array: None,
-                    enumm: None,
-                },
-                Field {
-                    name: "ckpl",
-                    description: Some(
-                        "Idle state clock polarity",
-                    ),
-                    bit_offset: BitOffset::Regular(
-                        RegularBitOffset {
-                            offset: 3,
-                        },
-                    ),
-                    bit_size: 1,
-                    array: None,
-                    enumm: None,
-                },
-                Field {
-                    name: "i2sstd",
-                    description: Some(
-                        "I2S standard selection",
-                    ),
-                    bit_offset: BitOffset::Regular(
-                        RegularBitOffset {
-                            offset: 4,
-                        },
-                    ),
-                    bit_size: 2,
-                    array: None,
-                    enumm: None,
-                },
-                Field {
-                    name: "pcmsmod",
-                    description: Some(
-                        "PCM frame synchronization",
-                    ),
-                    bit_offset: BitOffset::Regular(
-                        RegularBitOffset {
-                            offset: 7,
-                        },
-                    ),
-                    bit_size: 1,
-                    array: None,
-                    enumm: None,
-                },
-                Field {
-                    name: "i2sopmod",
-                    description: Some(
-                        "I2S configuration mode",
-                    ),
-                    bit_offset: BitOffset::Regular(
-                        RegularBitOffset {
-                            offset: 8,
-                        },
-                    ),
-                    bit_size: 2,
-                    array: None,
-                    enumm: None,
-                },
-                Field {
-                    name: "i2sen",
-                    description: Some(
-                        "I2S Enable",
-                    ),
-                    bit_offset: BitOffset::Regular(
-                        RegularBitOffset {
-                            offset: 10,
-                        },
-                    ),
-                    bit_size: 1,
-                    array: None,
-                    enumm: None,
-                },
-                Field {
-                    name: "i2ssel",
-                    description: Some(
-                        "I2S mode selection",
-                    ),
-                    bit_offset: BitOffset::Regular(
-                        RegularBitOffset {
-                            offset: 11,
-                        },
-                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -682,35 +619,21 @@
             ],
         },
         FieldSet {
-            name: "I2spsc",
+            name: "Intf",
             extends: None,
             description: Some(
-                "I2S prescaler register",
+                "interrupt flag register",
             ),
             bit_size: 32,
             fields: &[
                 Field {
-                    name: "div",
+                    name: "upif",
                     description: Some(
-                        "Dividing factor for the prescaler",
+                        "Update interrupt flag",
                     ),
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
                             offset: 0,
-                        },
-                    ),
-                    bit_size: 8,
-                    array: None,
-                    enumm: None,
-                },
-                Field {
-                    name: "of",
-                    description: Some(
-                        "Odd factor for the prescaler",
-                    ),
-                    bit_offset: BitOffset::Regular(
-                        RegularBitOffset {
-                            offset: 8,
                         },
                     ),
                     bit_size: 1,
@@ -718,9 +641,23 @@
                     enumm: None,
                 },
                 Field {
-                    name: "mckoen",
+                    name: "ch0if",
                     description: Some(
-                        "I2S_MCK output enable",
+                        "Capture/compare 0 interrupt flag",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 1,
+                        },
+                    ),
+                    bit_size: 1,
+                    array: None,
+                    enumm: None,
+                },
+                Field {
+                    name: "ch0of",
+                    description: Some(
+                        "Capture/Compare 0 overcapture flag",
                     ),
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
@@ -734,69 +671,41 @@
             ],
         },
         FieldSet {
-            name: "Qctl",
+            name: "Irmp",
             extends: None,
             description: Some(
-                "SPI quad wird control register",
+                "channel input remap register",
             ),
             bit_size: 32,
             fields: &[
                 Field {
-                    name: "qmod",
+                    name: "ci0_rmp",
                     description: Some(
-                        "Quad wire mode enable",
+                        "Timer input 0 remap",
                     ),
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
                             offset: 0,
                         },
                     ),
-                    bit_size: 1,
-                    array: None,
-                    enumm: None,
-                },
-                Field {
-                    name: "qrd",
-                    description: Some(
-                        "Quad wire read select",
-                    ),
-                    bit_offset: BitOffset::Regular(
-                        RegularBitOffset {
-                            offset: 1,
-                        },
-                    ),
-                    bit_size: 1,
-                    array: None,
-                    enumm: None,
-                },
-                Field {
-                    name: "io23_drv",
-                    description: Some(
-                        "Drive IO2 and IO3 enable",
-                    ),
-                    bit_offset: BitOffset::Regular(
-                        RegularBitOffset {
-                            offset: 2,
-                        },
-                    ),
-                    bit_size: 1,
+                    bit_size: 2,
                     array: None,
                     enumm: None,
                 },
             ],
         },
         FieldSet {
-            name: "Rcrc",
+            name: "Psc",
             extends: None,
             description: Some(
-                "RX CRC register",
+                "prescaler",
             ),
             bit_size: 32,
             fields: &[
                 Field {
-                    name: "rcr",
+                    name: "psc",
                     description: Some(
-                        "RX RCR register",
+                        "Prescaler value",
                     ),
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
@@ -810,17 +719,17 @@
             ],
         },
         FieldSet {
-            name: "Stat",
+            name: "Swevg",
             extends: None,
             description: Some(
-                "status register",
+                "event generation register",
             ),
             bit_size: 32,
             fields: &[
                 Field {
-                    name: "rbne",
+                    name: "upg",
                     description: Some(
-                        "Receive Buffer Not Empty",
+                        "Update generation",
                     ),
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
@@ -832,9 +741,9 @@
                     enumm: None,
                 },
                 Field {
-                    name: "tbe",
+                    name: "ch0g",
                     description: Some(
-                        "Transmit Buffer Empty",
+                        "Capture/compare 0 generation",
                     ),
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
@@ -842,128 +751,6 @@
                         },
                     ),
                     bit_size: 1,
-                    array: None,
-                    enumm: None,
-                },
-                Field {
-                    name: "i2sch",
-                    description: Some(
-                        "I2S channel side",
-                    ),
-                    bit_offset: BitOffset::Regular(
-                        RegularBitOffset {
-                            offset: 2,
-                        },
-                    ),
-                    bit_size: 1,
-                    array: None,
-                    enumm: None,
-                },
-                Field {
-                    name: "txurerr",
-                    description: Some(
-                        "Transmission underrun error bit",
-                    ),
-                    bit_offset: BitOffset::Regular(
-                        RegularBitOffset {
-                            offset: 3,
-                        },
-                    ),
-                    bit_size: 1,
-                    array: None,
-                    enumm: None,
-                },
-                Field {
-                    name: "crcerr",
-                    description: Some(
-                        "SPI CRC Error Bit",
-                    ),
-                    bit_offset: BitOffset::Regular(
-                        RegularBitOffset {
-                            offset: 4,
-                        },
-                    ),
-                    bit_size: 1,
-                    array: None,
-                    enumm: None,
-                },
-                Field {
-                    name: "conferr",
-                    description: Some(
-                        "SPI Configuration error",
-                    ),
-                    bit_offset: BitOffset::Regular(
-                        RegularBitOffset {
-                            offset: 5,
-                        },
-                    ),
-                    bit_size: 1,
-                    array: None,
-                    enumm: None,
-                },
-                Field {
-                    name: "rxorerr",
-                    description: Some(
-                        "Reception Overrun Error Bit",
-                    ),
-                    bit_offset: BitOffset::Regular(
-                        RegularBitOffset {
-                            offset: 6,
-                        },
-                    ),
-                    bit_size: 1,
-                    array: None,
-                    enumm: None,
-                },
-                Field {
-                    name: "trans",
-                    description: Some(
-                        "Transmitting On-going Bit",
-                    ),
-                    bit_offset: BitOffset::Regular(
-                        RegularBitOffset {
-                            offset: 7,
-                        },
-                    ),
-                    bit_size: 1,
-                    array: None,
-                    enumm: None,
-                },
-                Field {
-                    name: "ferr",
-                    description: Some(
-                        "Format Error",
-                    ),
-                    bit_offset: BitOffset::Regular(
-                        RegularBitOffset {
-                            offset: 8,
-                        },
-                    ),
-                    bit_size: 1,
-                    array: None,
-                    enumm: None,
-                },
-            ],
-        },
-        FieldSet {
-            name: "Tcrc",
-            extends: None,
-            description: Some(
-                "TX CRC register",
-            ),
-            bit_size: 32,
-            fields: &[
-                Field {
-                    name: "tcr",
-                    description: Some(
-                        "Tx CRC register",
-                    ),
-                    bit_offset: BitOffset::Regular(
-                        RegularBitOffset {
-                            offset: 0,
-                        },
-                    ),
-                    bit_size: 16,
                     array: None,
                     enumm: None,
                 },
@@ -972,4 +759,3 @@
     ],
     enums: &[],
 };
-                

@@ -1080,6 +1080,30 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
                 interrupt: "EXTI1",
             },
             PeripheralInterrupt {
+                signal: "EXTI10",
+                interrupt: "EXTI15_10",
+            },
+            PeripheralInterrupt {
+                signal: "EXTI11",
+                interrupt: "EXTI15_10",
+            },
+            PeripheralInterrupt {
+                signal: "EXTI12",
+                interrupt: "EXTI15_10",
+            },
+            PeripheralInterrupt {
+                signal: "EXTI13",
+                interrupt: "EXTI15_10",
+            },
+            PeripheralInterrupt {
+                signal: "EXTI14",
+                interrupt: "EXTI15_10",
+            },
+            PeripheralInterrupt {
+                signal: "EXTI15",
+                interrupt: "EXTI15_10",
+            },
+            PeripheralInterrupt {
                 signal: "EXTI2",
                 interrupt: "EXTI2",
             },
@@ -1090,6 +1114,26 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
             PeripheralInterrupt {
                 signal: "EXTI4",
                 interrupt: "EXTI4",
+            },
+            PeripheralInterrupt {
+                signal: "EXTI5",
+                interrupt: "EXTI9_5",
+            },
+            PeripheralInterrupt {
+                signal: "EXTI6",
+                interrupt: "EXTI9_5",
+            },
+            PeripheralInterrupt {
+                signal: "EXTI7",
+                interrupt: "EXTI9_5",
+            },
+            PeripheralInterrupt {
+                signal: "EXTI8",
+                interrupt: "EXTI9_5",
+            },
+            PeripheralInterrupt {
+                signal: "EXTI9",
+                interrupt: "EXTI9_5",
             },
         ],
         afio: None,
@@ -8440,7 +8484,7 @@ pub(crate) static INTERRUPTS: &[Interrupt] = &[
         number: 18,
     },
     Interrupt {
-        name: "EXTI5_9",
+        name: "EXTI9_5",
         number: 23,
     },
     Interrupt {
@@ -8508,7 +8552,7 @@ pub(crate) static INTERRUPTS: &[Interrupt] = &[
         number: 39,
     },
     Interrupt {
-        name: "EXTI10_15",
+        name: "EXTI15_10",
         number: 40,
     },
     Interrupt {

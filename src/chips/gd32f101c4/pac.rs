@@ -47,8 +47,8 @@ pub enum Interrupt {
     CAN0_RX1 = 21,
     #[doc = "22 - CAN0_SCE"]
     CAN0_SCE = 22,
-    #[doc = "23 - EXTI5_9"]
-    EXTI5_9 = 23,
+    #[doc = "23 - EXTI9_5"]
+    EXTI9_5 = 23,
     #[doc = "24 - TIM1_BRK"]
     TIM1_BRK = 24,
     #[doc = "25 - TIM1_UP"]
@@ -81,8 +81,8 @@ pub enum Interrupt {
     USART2 = 38,
     #[doc = "39 - USART3"]
     USART3 = 39,
-    #[doc = "40 - EXTI10_15"]
-    EXTI10_15 = 40,
+    #[doc = "40 - EXTI15_10"]
+    EXTI15_10 = 40,
     #[doc = "41 - RTC_ALARM"]
     RTC_ALARM = 41,
     #[doc = "42 - USBD_WKUP"]
@@ -122,7 +122,7 @@ mod _vectors {
         fn USBD_LP_CAN0_RX0();
         fn CAN0_RX1();
         fn CAN0_SCE();
-        fn EXTI5_9();
+        fn EXTI9_5();
         fn TIM1_BRK();
         fn TIM1_UP();
         fn TIM1_TRG_COM();
@@ -139,7 +139,7 @@ mod _vectors {
         fn USART1();
         fn USART2();
         fn USART3();
-        fn EXTI10_15();
+        fn EXTI15_10();
         fn RTC_ALARM();
         fn USBD_WKUP();
         fn FMC();
@@ -192,7 +192,7 @@ mod _vectors {
         },
         Vector { _handler: CAN0_RX1 },
         Vector { _handler: CAN0_SCE },
-        Vector { _handler: EXTI5_9 },
+        Vector { _handler: EXTI9_5 },
         Vector { _handler: TIM1_BRK },
         Vector { _handler: TIM1_UP },
         Vector { _handler: TIM1_TRG_COM },
@@ -209,7 +209,7 @@ mod _vectors {
         Vector { _handler: USART1 },
         Vector { _handler: USART2 },
         Vector { _handler: USART3 },
-        Vector { _handler: EXTI10_15 },
+        Vector { _handler: EXTI15_10 },
         Vector { _handler: RTC_ALARM },
         Vector { _handler: USBD_WKUP },
         Vector { _reserved: 0 },
@@ -229,15 +229,15 @@ pub const IWDG: iwdg::Iwdg = unsafe { iwdg::Iwdg::from_ptr(0x4000_3000usize as _
 pub const SPI2: spi::Spi = unsafe { spi::Spi::from_ptr(0x4000_3800usize as _) };
 pub const USART2: gdusart08d85785f::Usart0 = unsafe { gdusart08d85785f::Usart0::from_ptr(0x4000_4400usize as _) };
 pub const USART3: gdusart08d85785f::Usart0 = unsafe { gdusart08d85785f::Usart0::from_ptr(0x4000_4800usize as _) };
-pub const I2C1: gdi2c08f648655::I2c0 = unsafe { gdi2c08f648655::I2c0::from_ptr(0x4000_5400usize as _) };
-pub const I2C2: gdi2c08f648655::I2c0 = unsafe { gdi2c08f648655::I2c0::from_ptr(0x4000_5800usize as _) };
+pub const I2C1: i2c::I2c = unsafe { i2c::I2c::from_ptr(0x4000_5400usize as _) };
+pub const I2C2: i2c::I2c = unsafe { i2c::I2c::from_ptr(0x4000_5800usize as _) };
 pub const USBD: gdusbd3a06bc1e::Usbd = unsafe { gdusbd3a06bc1e::Usbd::from_ptr(0x4000_5c00usize as _) };
 pub const CAN: gdcand17d981d::Can = unsafe { gdcand17d981d::Can::from_ptr(0x4000_6400usize as _) };
 pub const BKP: bkp::Bkp = unsafe { bkp::Bkp::from_ptr(0x4000_6c00usize as _) };
 pub const PWR: pwr::Pwr = unsafe { pwr::Pwr::from_ptr(0x4000_7000usize as _) };
 pub const DAC1: gddac4621750f::Dac = unsafe { gddac4621750f::Dac::from_ptr(0x4000_7400usize as _) };
 pub const AFIO: afio::Afio = unsafe { afio::Afio::from_ptr(0x4001_0000usize as _) };
-pub const EXTI: gdexti11a1be47::Exti = unsafe { gdexti11a1be47::Exti::from_ptr(0x4001_0400usize as _) };
+pub const EXTI: exti::Exti = unsafe { exti::Exti::from_ptr(0x4001_0400usize as _) };
 pub const GPIOA: gpio::Gpio = unsafe { gpio::Gpio::from_ptr(0x4001_0800usize as _) };
 pub const GPIOB: gpio::Gpio = unsafe { gpio::Gpio::from_ptr(0x4001_0c00usize as _) };
 pub const GPIOC: gpio::Gpio = unsafe { gpio::Gpio::from_ptr(0x4001_1000usize as _) };
@@ -271,6 +271,8 @@ pub mod bdma;
 pub mod bkp;
 #[path = "../../peripherals/crc_v1.rs"]
 pub mod crc;
+#[path = "../../peripherals/exti_gdbeb972624ea3.rs"]
+pub mod exti;
 #[path = "../../peripherals/flash_f1.rs"]
 pub mod flash;
 #[path = "../../peripherals/gdadc0dda18ebe_v1.rs"]
@@ -285,18 +287,16 @@ pub mod gddac4621750f;
 pub mod gddbg40666257;
 #[path = "../../peripherals/gdexmc61eab9d1_v1.rs"]
 pub mod gdexmc61eab9d1;
-#[path = "../../peripherals/gdexti11a1be47_v1.rs"]
-pub mod gdexti11a1be47;
 #[path = "../../peripherals/gdgpioa979b0f67_v1.rs"]
 pub mod gdgpioa979b0f67;
-#[path = "../../peripherals/gdi2c08f648655_v1.rs"]
-pub mod gdi2c08f648655;
 #[path = "../../peripherals/gdusart08d85785f_v1.rs"]
 pub mod gdusart08d85785f;
 #[path = "../../peripherals/gdusbd3a06bc1e_v1.rs"]
 pub mod gdusbd3a06bc1e;
 #[path = "../../peripherals/gpio_v1.rs"]
 pub mod gpio;
+#[path = "../../peripherals/i2c_v1_gd87a4c48e1698.rs"]
+pub mod i2c;
 #[path = "../../peripherals/iwdg_v1.rs"]
 pub mod iwdg;
 #[path = "../../peripherals/pwr_f1.rs"]

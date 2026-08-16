@@ -10,103 +10,145 @@
             ),
             items: &[
                 BlockItem {
-                    name: "inten",
+                    name: "imr",
                     description: Some(
                         "Interrupt enable register (EXTI_INTEN)",
                     ),
-                    array: None,
+                    array: Some(
+                        Array::Regular(
+                            RegularArray {
+                                len: 1,
+                                stride: 32,
+                            },
+                        ),
+                    ),
                     byte_offset: 0x0,
                     inner: BlockItemInner::Register(
                         Register {
                             access: Access::ReadWrite,
                             bit_size: 32,
                             fieldset: Some(
-                                "Inten",
+                                "Lines",
                             ),
                         },
                     ),
                 },
                 BlockItem {
-                    name: "even",
+                    name: "emr",
                     description: Some(
                         "Event enable register (EXTI_EVEN)",
                     ),
-                    array: None,
+                    array: Some(
+                        Array::Regular(
+                            RegularArray {
+                                len: 1,
+                                stride: 32,
+                            },
+                        ),
+                    ),
                     byte_offset: 0x4,
                     inner: BlockItemInner::Register(
                         Register {
                             access: Access::ReadWrite,
                             bit_size: 32,
                             fieldset: Some(
-                                "Even",
+                                "Lines",
                             ),
                         },
                     ),
                 },
                 BlockItem {
-                    name: "rten",
+                    name: "rtsr",
                     description: Some(
                         "Rising Edge Trigger Enable register (EXTI_RTEN)",
                     ),
-                    array: None,
+                    array: Some(
+                        Array::Regular(
+                            RegularArray {
+                                len: 1,
+                                stride: 32,
+                            },
+                        ),
+                    ),
                     byte_offset: 0x8,
                     inner: BlockItemInner::Register(
                         Register {
                             access: Access::ReadWrite,
                             bit_size: 32,
                             fieldset: Some(
-                                "Rten",
+                                "Lines",
                             ),
                         },
                     ),
                 },
                 BlockItem {
-                    name: "ften",
+                    name: "ftsr",
                     description: Some(
                         "Falling Egde Trigger Enable register (EXTI_FTEN)",
                     ),
-                    array: None,
+                    array: Some(
+                        Array::Regular(
+                            RegularArray {
+                                len: 1,
+                                stride: 32,
+                            },
+                        ),
+                    ),
                     byte_offset: 0xc,
                     inner: BlockItemInner::Register(
                         Register {
                             access: Access::ReadWrite,
                             bit_size: 32,
                             fieldset: Some(
-                                "Ften",
+                                "Lines",
                             ),
                         },
                     ),
                 },
                 BlockItem {
-                    name: "swiev",
+                    name: "swier",
                     description: Some(
                         "Software interrupt event register (EXTI_SWIEV)",
                     ),
-                    array: None,
+                    array: Some(
+                        Array::Regular(
+                            RegularArray {
+                                len: 1,
+                                stride: 32,
+                            },
+                        ),
+                    ),
                     byte_offset: 0x10,
                     inner: BlockItemInner::Register(
                         Register {
                             access: Access::ReadWrite,
                             bit_size: 32,
                             fieldset: Some(
-                                "Swiev",
+                                "Lines",
                             ),
                         },
                     ),
                 },
                 BlockItem {
-                    name: "pd",
+                    name: "pr",
                     description: Some(
                         "Pending register (EXTI_PD)",
                     ),
-                    array: None,
+                    array: Some(
+                        Array::Regular(
+                            RegularArray {
+                                len: 1,
+                                stride: 32,
+                            },
+                        ),
+                    ),
                     byte_offset: 0x14,
                     inner: BlockItemInner::Register(
                         Register {
                             access: Access::ReadWrite,
                             bit_size: 32,
                             fieldset: Some(
-                                "Pd",
+                                "Lines",
                             ),
                         },
                     ),
@@ -1238,6 +1280,35 @@
             ],
         },
         FieldSet {
+            name: "Lines",
+            extends: None,
+            description: None,
+            bit_size: 32,
+            fields: &[
+                Field {
+                    name: "line",
+                    description: Some(
+                        "EXTI line",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 0,
+                        },
+                    ),
+                    bit_size: 1,
+                    array: Some(
+                        Array::Regular(
+                            RegularArray {
+                                len: 20,
+                                stride: 1,
+                            },
+                        ),
+                    ),
+                    enumm: None,
+                },
+            ],
+        },
+        FieldSet {
             name: "Pd",
             extends: None,
             description: Some(
@@ -2194,4 +2265,3 @@
     ],
     enums: &[],
 };
-                

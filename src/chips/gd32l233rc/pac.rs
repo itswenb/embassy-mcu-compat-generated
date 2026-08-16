@@ -85,10 +85,10 @@ pub enum Interrupt {
     RTC_ALARM = 41,
     #[doc = "42 - USBD_WKUP"]
     USBD_WKUP = 42,
-    #[doc = "43 - EXTI5_9"]
-    EXTI5_9 = 43,
-    #[doc = "47 - EXTI10_15"]
-    EXTI10_15 = 47,
+    #[doc = "43 - EXTI9_5"]
+    EXTI9_5 = 43,
+    #[doc = "47 - EXTI15_10"]
+    EXTI15_10 = 47,
     #[doc = "55 - DMAMUX1"]
     DMAMUX1 = 55,
     #[doc = "56 - CMP0"]
@@ -169,8 +169,8 @@ mod _vectors {
         fn I2C3_ER();
         fn RTC_ALARM();
         fn USBD_WKUP();
-        fn EXTI5_9();
-        fn EXTI10_15();
+        fn EXTI9_5();
+        fn EXTI15_10();
         fn DMAMUX1();
         fn CMP0();
         fn CMP1();
@@ -250,11 +250,11 @@ mod _vectors {
         Vector { _handler: I2C3_ER },
         Vector { _handler: RTC_ALARM },
         Vector { _handler: USBD_WKUP },
-        Vector { _handler: EXTI5_9 },
+        Vector { _handler: EXTI9_5 },
         Vector { _reserved: 0 },
         Vector { _reserved: 0 },
         Vector { _reserved: 0 },
-        Vector { _handler: EXTI10_15 },
+        Vector { _handler: EXTI15_10 },
         Vector { _reserved: 0 },
         Vector { _reserved: 0 },
         Vector { _reserved: 0 },

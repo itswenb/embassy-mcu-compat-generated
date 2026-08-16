@@ -10,103 +10,145 @@
             ),
             items: &[
                 BlockItem {
-                    name: "inten",
+                    name: "imr",
                     description: Some(
                         "Interrupt enable register (EXTI_INTEN)",
                     ),
-                    array: None,
+                    array: Some(
+                        Array::Regular(
+                            RegularArray {
+                                len: 1,
+                                stride: 32,
+                            },
+                        ),
+                    ),
                     byte_offset: 0x0,
                     inner: BlockItemInner::Register(
                         Register {
                             access: Access::ReadWrite,
                             bit_size: 32,
                             fieldset: Some(
-                                "Inten",
+                                "Lines",
                             ),
                         },
                     ),
                 },
                 BlockItem {
-                    name: "even",
+                    name: "emr",
                     description: Some(
                         "Event enable register (EXTI_EVEN)",
                     ),
-                    array: None,
+                    array: Some(
+                        Array::Regular(
+                            RegularArray {
+                                len: 1,
+                                stride: 32,
+                            },
+                        ),
+                    ),
                     byte_offset: 0x4,
                     inner: BlockItemInner::Register(
                         Register {
                             access: Access::ReadWrite,
                             bit_size: 32,
                             fieldset: Some(
-                                "Even",
+                                "Lines",
                             ),
                         },
                     ),
                 },
                 BlockItem {
-                    name: "rten",
+                    name: "rtsr",
                     description: Some(
                         "Rising Edge Trigger Enable register (EXTI_RTEN)",
                     ),
-                    array: None,
+                    array: Some(
+                        Array::Regular(
+                            RegularArray {
+                                len: 1,
+                                stride: 32,
+                            },
+                        ),
+                    ),
                     byte_offset: 0x8,
                     inner: BlockItemInner::Register(
                         Register {
                             access: Access::ReadWrite,
                             bit_size: 32,
                             fieldset: Some(
-                                "Rten",
+                                "Lines",
                             ),
                         },
                     ),
                 },
                 BlockItem {
-                    name: "ften",
+                    name: "ftsr",
                     description: Some(
                         "Falling Egde Trigger Enable register (EXTI_FTEN)",
                     ),
-                    array: None,
+                    array: Some(
+                        Array::Regular(
+                            RegularArray {
+                                len: 1,
+                                stride: 32,
+                            },
+                        ),
+                    ),
                     byte_offset: 0xc,
                     inner: BlockItemInner::Register(
                         Register {
                             access: Access::ReadWrite,
                             bit_size: 32,
                             fieldset: Some(
-                                "Ften",
+                                "Lines",
                             ),
                         },
                     ),
                 },
                 BlockItem {
-                    name: "swiev",
+                    name: "swier",
                     description: Some(
                         "Software interrupt event register (EXTI_SWIEV)",
                     ),
-                    array: None,
+                    array: Some(
+                        Array::Regular(
+                            RegularArray {
+                                len: 1,
+                                stride: 32,
+                            },
+                        ),
+                    ),
                     byte_offset: 0x10,
                     inner: BlockItemInner::Register(
                         Register {
                             access: Access::ReadWrite,
                             bit_size: 32,
                             fieldset: Some(
-                                "Swiev",
+                                "Lines",
                             ),
                         },
                     ),
                 },
                 BlockItem {
-                    name: "pd",
+                    name: "pr",
                     description: Some(
                         "Pending register (EXTI_PD)",
                     ),
-                    array: None,
+                    array: Some(
+                        Array::Regular(
+                            RegularArray {
+                                len: 1,
+                                stride: 32,
+                            },
+                        ),
+                    ),
                     byte_offset: 0x14,
                     inner: BlockItemInner::Register(
                         Register {
                             access: Access::ReadWrite,
                             bit_size: 32,
                             fieldset: Some(
-                                "Pd",
+                                "Lines",
                             ),
                         },
                     ),
@@ -403,48 +445,6 @@
                     array: None,
                     enumm: None,
                 },
-                Field {
-                    name: "even20",
-                    description: Some(
-                        "Enable Event on line 20",
-                    ),
-                    bit_offset: BitOffset::Regular(
-                        RegularBitOffset {
-                            offset: 20,
-                        },
-                    ),
-                    bit_size: 1,
-                    array: None,
-                    enumm: None,
-                },
-                Field {
-                    name: "even21",
-                    description: Some(
-                        "Enable Event on line 21",
-                    ),
-                    bit_offset: BitOffset::Regular(
-                        RegularBitOffset {
-                            offset: 21,
-                        },
-                    ),
-                    bit_size: 1,
-                    array: None,
-                    enumm: None,
-                },
-                Field {
-                    name: "even22",
-                    description: Some(
-                        "Enable Event on line 22",
-                    ),
-                    bit_offset: BitOffset::Regular(
-                        RegularBitOffset {
-                            offset: 22,
-                        },
-                    ),
-                    bit_size: 1,
-                    array: None,
-                    enumm: None,
-                },
             ],
         },
         FieldSet {
@@ -729,48 +729,6 @@
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
                             offset: 19,
-                        },
-                    ),
-                    bit_size: 1,
-                    array: None,
-                    enumm: None,
-                },
-                Field {
-                    name: "ften20",
-                    description: Some(
-                        "Falling edge trigger enable of line 20",
-                    ),
-                    bit_offset: BitOffset::Regular(
-                        RegularBitOffset {
-                            offset: 20,
-                        },
-                    ),
-                    bit_size: 1,
-                    array: None,
-                    enumm: None,
-                },
-                Field {
-                    name: "ften21",
-                    description: Some(
-                        "Falling edge trigger enable of line 21",
-                    ),
-                    bit_offset: BitOffset::Regular(
-                        RegularBitOffset {
-                            offset: 21,
-                        },
-                    ),
-                    bit_size: 1,
-                    array: None,
-                    enumm: None,
-                },
-                Field {
-                    name: "ften22",
-                    description: Some(
-                        "Falling edge trigger enable of line 22",
-                    ),
-                    bit_offset: BitOffset::Regular(
-                        RegularBitOffset {
-                            offset: 22,
                         },
                     ),
                     bit_size: 1,
@@ -1067,46 +1025,33 @@
                     array: None,
                     enumm: None,
                 },
+            ],
+        },
+        FieldSet {
+            name: "Lines",
+            extends: None,
+            description: None,
+            bit_size: 32,
+            fields: &[
                 Field {
-                    name: "inten20",
+                    name: "line",
                     description: Some(
-                        "Enable Interrupt on line 20",
+                        "EXTI line",
                     ),
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
-                            offset: 20,
+                            offset: 0,
                         },
                     ),
                     bit_size: 1,
-                    array: None,
-                    enumm: None,
-                },
-                Field {
-                    name: "inten21",
-                    description: Some(
-                        "Enable Interrupt on line 21",
+                    array: Some(
+                        Array::Regular(
+                            RegularArray {
+                                len: 20,
+                                stride: 1,
+                            },
+                        ),
                     ),
-                    bit_offset: BitOffset::Regular(
-                        RegularBitOffset {
-                            offset: 21,
-                        },
-                    ),
-                    bit_size: 1,
-                    array: None,
-                    enumm: None,
-                },
-                Field {
-                    name: "inten22",
-                    description: Some(
-                        "Enable Interrupt on line 22",
-                    ),
-                    bit_offset: BitOffset::Regular(
-                        RegularBitOffset {
-                            offset: 22,
-                        },
-                    ),
-                    bit_size: 1,
-                    array: None,
                     enumm: None,
                 },
             ],
@@ -1393,48 +1338,6 @@
                     bit_offset: BitOffset::Regular(
                         RegularBitOffset {
                             offset: 19,
-                        },
-                    ),
-                    bit_size: 1,
-                    array: None,
-                    enumm: None,
-                },
-                Field {
-                    name: "pd20",
-                    description: Some(
-                        "Interrupt pending status of line 20",
-                    ),
-                    bit_offset: BitOffset::Regular(
-                        RegularBitOffset {
-                            offset: 20,
-                        },
-                    ),
-                    bit_size: 1,
-                    array: None,
-                    enumm: None,
-                },
-                Field {
-                    name: "pd21",
-                    description: Some(
-                        "Interrupt pending status of line 21",
-                    ),
-                    bit_offset: BitOffset::Regular(
-                        RegularBitOffset {
-                            offset: 21,
-                        },
-                    ),
-                    bit_size: 1,
-                    array: None,
-                    enumm: None,
-                },
-                Field {
-                    name: "pd22",
-                    description: Some(
-                        "Interrupt pending status of line 22",
-                    ),
-                    bit_offset: BitOffset::Regular(
-                        RegularBitOffset {
-                            offset: 22,
                         },
                     ),
                     bit_size: 1,
@@ -1731,48 +1634,6 @@
                     array: None,
                     enumm: None,
                 },
-                Field {
-                    name: "rten20",
-                    description: Some(
-                        "Rising edge trigger enable of line 20",
-                    ),
-                    bit_offset: BitOffset::Regular(
-                        RegularBitOffset {
-                            offset: 20,
-                        },
-                    ),
-                    bit_size: 1,
-                    array: None,
-                    enumm: None,
-                },
-                Field {
-                    name: "rten21",
-                    description: Some(
-                        "Rising edge trigger enable of line 21",
-                    ),
-                    bit_offset: BitOffset::Regular(
-                        RegularBitOffset {
-                            offset: 21,
-                        },
-                    ),
-                    bit_size: 1,
-                    array: None,
-                    enumm: None,
-                },
-                Field {
-                    name: "rten22",
-                    description: Some(
-                        "Rising edge trigger enable of line 22",
-                    ),
-                    bit_offset: BitOffset::Regular(
-                        RegularBitOffset {
-                            offset: 22,
-                        },
-                    ),
-                    bit_size: 1,
-                    array: None,
-                    enumm: None,
-                },
             ],
         },
         FieldSet {
@@ -2063,51 +1924,8 @@
                     array: None,
                     enumm: None,
                 },
-                Field {
-                    name: "swiev20",
-                    description: Some(
-                        "Interrupt/Event software trigger on line 20",
-                    ),
-                    bit_offset: BitOffset::Regular(
-                        RegularBitOffset {
-                            offset: 20,
-                        },
-                    ),
-                    bit_size: 1,
-                    array: None,
-                    enumm: None,
-                },
-                Field {
-                    name: "swiev21",
-                    description: Some(
-                        "Interrupt/Event software trigger on line 21",
-                    ),
-                    bit_offset: BitOffset::Regular(
-                        RegularBitOffset {
-                            offset: 21,
-                        },
-                    ),
-                    bit_size: 1,
-                    array: None,
-                    enumm: None,
-                },
-                Field {
-                    name: "swiev22",
-                    description: Some(
-                        "Interrupt/Event software trigger on line 22",
-                    ),
-                    bit_offset: BitOffset::Regular(
-                        RegularBitOffset {
-                            offset: 22,
-                        },
-                    ),
-                    bit_size: 1,
-                    array: None,
-                    enumm: None,
-                },
             ],
         },
     ],
     enums: &[],
 };
-                

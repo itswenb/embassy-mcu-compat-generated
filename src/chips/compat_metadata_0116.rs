@@ -302,7 +302,52 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
         pins: &[],
         dma_channels: &[],
         triggers: &[],
-        interrupts: &[],
+        interrupts: &[
+            PeripheralInterrupt {
+                signal: "EXTI10",
+                interrupt: "EXTI15_10",
+            },
+            PeripheralInterrupt {
+                signal: "EXTI11",
+                interrupt: "EXTI15_10",
+            },
+            PeripheralInterrupt {
+                signal: "EXTI12",
+                interrupt: "EXTI15_10",
+            },
+            PeripheralInterrupt {
+                signal: "EXTI13",
+                interrupt: "EXTI15_10",
+            },
+            PeripheralInterrupt {
+                signal: "EXTI14",
+                interrupt: "EXTI15_10",
+            },
+            PeripheralInterrupt {
+                signal: "EXTI15",
+                interrupt: "EXTI15_10",
+            },
+            PeripheralInterrupt {
+                signal: "EXTI5",
+                interrupt: "EXTI9_5",
+            },
+            PeripheralInterrupt {
+                signal: "EXTI6",
+                interrupt: "EXTI9_5",
+            },
+            PeripheralInterrupt {
+                signal: "EXTI7",
+                interrupt: "EXTI9_5",
+            },
+            PeripheralInterrupt {
+                signal: "EXTI8",
+                interrupt: "EXTI9_5",
+            },
+            PeripheralInterrupt {
+                signal: "EXTI9",
+                interrupt: "EXTI9_5",
+            },
+        ],
         afio: None,
     },
     Peripheral {
@@ -1997,11 +2042,11 @@ pub(crate) static INTERRUPTS: &[Interrupt] = &[
         number: 42,
     },
     Interrupt {
-        name: "EXTI5_9",
+        name: "EXTI9_5",
         number: 43,
     },
     Interrupt {
-        name: "EXTI10_15",
+        name: "EXTI15_10",
         number: 47,
     },
     Interrupt {

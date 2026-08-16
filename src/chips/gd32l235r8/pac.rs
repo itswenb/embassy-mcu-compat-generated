@@ -85,16 +85,16 @@ pub enum Interrupt {
     RTC_ALARM = 41,
     #[doc = "42 - USBD_WKUP"]
     USBD_WKUP = 42,
-    #[doc = "43 - EXTI5_9"]
-    EXTI5_9 = 43,
+    #[doc = "43 - EXTI9_5"]
+    EXTI9_5 = 43,
     #[doc = "44 - TIM1_TRG_COM_UP_BRK"]
     TIM1_TRG_COM_UP_BRK = 44,
     #[doc = "45 - TIM1_CC"]
     TIM1_CC = 45,
     #[doc = "46 - TIM15"]
     TIM15 = 46,
-    #[doc = "47 - EXTI10_15"]
-    EXTI10_15 = 47,
+    #[doc = "47 - EXTI15_10"]
+    EXTI15_10 = 47,
     #[doc = "48 - TIM41"]
     TIM41 = 48,
     #[doc = "49 - CAN_RX1"]
@@ -187,11 +187,11 @@ mod _vectors {
         fn I2C3_ER();
         fn RTC_ALARM();
         fn USBD_WKUP();
-        fn EXTI5_9();
+        fn EXTI9_5();
         fn TIM1_TRG_COM_UP_BRK();
         fn TIM1_CC();
         fn TIM15();
-        fn EXTI10_15();
+        fn EXTI15_10();
         fn TIM41();
         fn CAN_RX1();
         fn CAN_EWMC();
@@ -281,13 +281,13 @@ mod _vectors {
         Vector { _handler: I2C3_ER },
         Vector { _handler: RTC_ALARM },
         Vector { _handler: USBD_WKUP },
-        Vector { _handler: EXTI5_9 },
+        Vector { _handler: EXTI9_5 },
         Vector {
             _handler: TIM1_TRG_COM_UP_BRK,
         },
         Vector { _handler: TIM1_CC },
         Vector { _handler: TIM15 },
-        Vector { _handler: EXTI10_15 },
+        Vector { _handler: EXTI15_10 },
         Vector { _handler: TIM41 },
         Vector { _handler: CAN_RX1 },
         Vector { _handler: CAN_EWMC },

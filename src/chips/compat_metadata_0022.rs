@@ -150,10 +150,10 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
         name: "EXTI",
         address: 0x40010400,
         registers: Some(PeripheralRegisters {
-            kind: "gdexti83469f4a",
-            version: "v1",
+            kind: "exti",
+            version: "gd396c6dd7493e",
             block: "EXTI",
-            ir: &gdexti83469f4a::REGISTERS,
+            ir: &exti::REGISTERS,
         }),
         rcc: None,
         pins: &[],
@@ -2065,6 +2065,8 @@ pub(crate) static PINS: &[Pin] = &[
 ];
 #[path = "../registers/bdma_v1.rs"]
 pub mod bdma;
+#[path = "../registers/exti_gd396c6dd7493e.rs"]
+pub mod exti;
 #[path = "../registers/flash_f0.rs"]
 pub mod flash;
 #[path = "../registers/gdadc47519d73_v1.rs"]
@@ -2075,8 +2077,6 @@ pub mod gdcmpfe28bbad;
 pub mod gdcrc8a4036fe;
 #[path = "../registers/gddbgmcu751e9bc8_v1.rs"]
 pub mod gddbgmcu751e9bc8;
-#[path = "../registers/gdexti83469f4a_v1.rs"]
-pub mod gdexti83469f4a;
 #[path = "../registers/gdgpioc88586c6c_v1.rs"]
 pub mod gdgpioc88586c6c;
 #[path = "../registers/gdgpiof41ef0f55_v1.rs"]

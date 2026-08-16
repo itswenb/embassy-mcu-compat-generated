@@ -47,8 +47,8 @@ pub enum Interrupt {
     CAN0_RX1 = 21,
     #[doc = "22 - CAN0_SCE"]
     CAN0_SCE = 22,
-    #[doc = "23 - EXTI5_9"]
-    EXTI5_9 = 23,
+    #[doc = "23 - EXTI9_5"]
+    EXTI9_5 = 23,
     #[doc = "24 - TIM1_BRK_TIM9"]
     TIM1_BRK_TIM9 = 24,
     #[doc = "25 - TIM1_UP_TIM10"]
@@ -81,8 +81,8 @@ pub enum Interrupt {
     USART2 = 38,
     #[doc = "39 - USART3"]
     USART3 = 39,
-    #[doc = "40 - EXTI10_15"]
-    EXTI10_15 = 40,
+    #[doc = "40 - EXTI15_10"]
+    EXTI15_10 = 40,
     #[doc = "41 - RTC_ALARM"]
     RTC_ALARM = 41,
     #[doc = "42 - USBD_WKUP"]
@@ -154,7 +154,7 @@ mod _vectors {
         fn USBD_LP_CAN0_RX0();
         fn CAN0_RX1();
         fn CAN0_SCE();
-        fn EXTI5_9();
+        fn EXTI9_5();
         fn TIM1_BRK_TIM9();
         fn TIM1_UP_TIM10();
         fn TIM1_TRG_COM_TIM11();
@@ -171,7 +171,7 @@ mod _vectors {
         fn USART1();
         fn USART2();
         fn USART3();
-        fn EXTI10_15();
+        fn EXTI15_10();
         fn RTC_ALARM();
         fn USBD_WKUP();
         fn TIM8_BRK_TIM12();
@@ -240,7 +240,7 @@ mod _vectors {
         },
         Vector { _handler: CAN0_RX1 },
         Vector { _handler: CAN0_SCE },
-        Vector { _handler: EXTI5_9 },
+        Vector { _handler: EXTI9_5 },
         Vector {
             _handler: TIM1_BRK_TIM9,
         },
@@ -263,7 +263,7 @@ mod _vectors {
         Vector { _handler: USART1 },
         Vector { _handler: USART2 },
         Vector { _handler: USART3 },
-        Vector { _handler: EXTI10_15 },
+        Vector { _handler: EXTI15_10 },
         Vector { _handler: RTC_ALARM },
         Vector { _handler: USBD_WKUP },
         Vector {
@@ -317,15 +317,15 @@ pub const USART2: gdusart08d85785f::Usart0 = unsafe { gdusart08d85785f::Usart0::
 pub const USART3: gdusart08d85785f::Usart0 = unsafe { gdusart08d85785f::Usart0::from_ptr(0x4000_4800usize as _) };
 pub const UART4: gduart35ffe463f::Uart3 = unsafe { gduart35ffe463f::Uart3::from_ptr(0x4000_4c00usize as _) };
 pub const UART5: gduart35ffe463f::Uart3 = unsafe { gduart35ffe463f::Uart3::from_ptr(0x4000_5000usize as _) };
-pub const I2C1: gdi2c04ef67d64::I2c0 = unsafe { gdi2c04ef67d64::I2c0::from_ptr(0x4000_5400usize as _) };
-pub const I2C2: gdi2c04ef67d64::I2c0 = unsafe { gdi2c04ef67d64::I2c0::from_ptr(0x4000_5800usize as _) };
+pub const I2C1: i2c::I2c = unsafe { i2c::I2c::from_ptr(0x4000_5400usize as _) };
+pub const I2C2: i2c::I2c = unsafe { i2c::I2c::from_ptr(0x4000_5800usize as _) };
 pub const USBD: gdusbd3a06bc1e::Usbd = unsafe { gdusbd3a06bc1e::Usbd::from_ptr(0x4000_5c00usize as _) };
 pub const CAN: gdcand17d981d::Can = unsafe { gdcand17d981d::Can::from_ptr(0x4000_6400usize as _) };
 pub const BKP: bkp::Bkp = unsafe { bkp::Bkp::from_ptr(0x4000_6c00usize as _) };
 pub const PWR: pwr::Pwr = unsafe { pwr::Pwr::from_ptr(0x4000_7000usize as _) };
 pub const DAC1: dac::Dac = unsafe { dac::Dac::from_ptr(0x4000_7400usize as _) };
 pub const AFIO: afio::Afio = unsafe { afio::Afio::from_ptr(0x4001_0000usize as _) };
-pub const EXTI: gdexti11a1be47::Exti = unsafe { gdexti11a1be47::Exti::from_ptr(0x4001_0400usize as _) };
+pub const EXTI: exti::Exti = unsafe { exti::Exti::from_ptr(0x4001_0400usize as _) };
 pub const GPIOA: gpio::Gpio = unsafe { gpio::Gpio::from_ptr(0x4001_0800usize as _) };
 pub const GPIOB: gpio::Gpio = unsafe { gpio::Gpio::from_ptr(0x4001_0c00usize as _) };
 pub const GPIOC: gpio::Gpio = unsafe { gpio::Gpio::from_ptr(0x4001_1000usize as _) };
@@ -368,6 +368,8 @@ pub mod bkp;
 pub mod crc;
 #[path = "../../peripherals/dac_v1.rs"]
 pub mod dac;
+#[path = "../../peripherals/exti_gdbeb972624ea3.rs"]
+pub mod exti;
 #[path = "../../peripherals/flash_f1.rs"]
 pub mod flash;
 #[path = "../../peripherals/gdadc0dda18ebe_v1.rs"]
@@ -380,10 +382,6 @@ pub mod gdcand17d981d;
 pub mod gddbg40666257;
 #[path = "../../peripherals/gdexmc61eab9d1_v1.rs"]
 pub mod gdexmc61eab9d1;
-#[path = "../../peripherals/gdexti11a1be47_v1.rs"]
-pub mod gdexti11a1be47;
-#[path = "../../peripherals/gdi2c04ef67d64_v1.rs"]
-pub mod gdi2c04ef67d64;
 #[path = "../../peripherals/gduart35ffe463f_v1.rs"]
 pub mod gduart35ffe463f;
 #[path = "../../peripherals/gdusart08d85785f_v1.rs"]
@@ -392,6 +390,8 @@ pub mod gdusart08d85785f;
 pub mod gdusbd3a06bc1e;
 #[path = "../../peripherals/gpio_v1.rs"]
 pub mod gpio;
+#[path = "../../peripherals/i2c_v1_gd87a4c48e1698.rs"]
+pub mod i2c;
 #[path = "../../peripherals/iwdg_v1.rs"]
 pub mod iwdg;
 #[path = "../../peripherals/pwr_f1.rs"]

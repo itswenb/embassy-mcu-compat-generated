@@ -6,13 +6,68 @@ pub static METADATA: Metadata = Metadata {
     line: "GD32A490",
     memory: &[&[
         MemoryRegion {
-            name: "BANK_1",
+            name: "BANK_1_REGION_1",
             kind: MemoryRegionKind::Flash,
             address: 0x8000000,
-            size: 2097152,
+            size: 65536,
             settings: Some(FlashSettings {
-                erase_size: 0,
-                write_size: 4,
+                erase_size: 16384,
+                write_size: 1,
+                erase_value: 255,
+            }),
+        },
+        MemoryRegion {
+            name: "BANK_1_REGION_2",
+            kind: MemoryRegionKind::Flash,
+            address: 0x8010000,
+            size: 65536,
+            settings: Some(FlashSettings {
+                erase_size: 65536,
+                write_size: 1,
+                erase_value: 255,
+            }),
+        },
+        MemoryRegion {
+            name: "BANK_1_REGION_3",
+            kind: MemoryRegionKind::Flash,
+            address: 0x8020000,
+            size: 917504,
+            settings: Some(FlashSettings {
+                erase_size: 131072,
+                write_size: 1,
+                erase_value: 255,
+            }),
+        },
+        MemoryRegion {
+            name: "BANK_2_REGION_1",
+            kind: MemoryRegionKind::Flash,
+            address: 0x8100000,
+            size: 65536,
+            settings: Some(FlashSettings {
+                erase_size: 16384,
+                write_size: 1,
+                erase_value: 255,
+            }),
+        },
+        MemoryRegion {
+            name: "BANK_2_REGION_2",
+            kind: MemoryRegionKind::Flash,
+            address: 0x8110000,
+            size: 65536,
+            settings: Some(FlashSettings {
+                erase_size: 65536,
+                write_size: 1,
+                erase_value: 255,
+            }),
+        },
+        MemoryRegion {
+            name: "BANK_2_REGION_3",
+            kind: MemoryRegionKind::Flash,
+            address: 0x8120000,
+            size: 917504,
+            settings: Some(FlashSettings {
+                erase_size: 131072,
+                write_size: 1,
                 erase_value: 255,
             }),
         },

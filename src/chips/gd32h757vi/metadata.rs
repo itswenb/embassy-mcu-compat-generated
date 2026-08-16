@@ -18,7 +18,7 @@ pub static METADATA: Metadata = Metadata {
             address: 0x8000000,
             size: 2097152,
             settings: Some(FlashSettings {
-                erase_size: 0,
+                erase_size: 4096,
                 write_size: 4,
                 erase_value: 255,
             }),

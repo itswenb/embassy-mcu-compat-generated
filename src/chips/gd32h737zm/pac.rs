@@ -39,8 +39,8 @@ pub enum Interrupt {
     DMA1_CHANNEL6 = 17,
     #[doc = "18 - ADC1_2"]
     ADC1_2 = 18,
-    #[doc = "23 - EXTI5_9"]
-    EXTI5_9 = 23,
+    #[doc = "23 - EXTI9_5"]
+    EXTI9_5 = 23,
     #[doc = "24 - TIM1_BRK"]
     TIM1_BRK = 24,
     #[doc = "25 - TIM1_UP"]
@@ -73,8 +73,8 @@ pub enum Interrupt {
     USART2 = 38,
     #[doc = "39 - USART3"]
     USART3 = 39,
-    #[doc = "40 - EXTI10_15"]
-    EXTI10_15 = 40,
+    #[doc = "40 - EXTI15_10"]
+    EXTI15_10 = 40,
     #[doc = "41 - RTC_ALARM"]
     RTC_ALARM = 41,
     #[doc = "43 - TIM8_BRK"]
@@ -356,7 +356,7 @@ mod _vectors {
         fn DMA1_CHANNEL5();
         fn DMA1_CHANNEL6();
         fn ADC1_2();
-        fn EXTI5_9();
+        fn EXTI9_5();
         fn TIM1_BRK();
         fn TIM1_UP();
         fn TIM1_TRG_COM();
@@ -373,7 +373,7 @@ mod _vectors {
         fn USART1();
         fn USART2();
         fn USART3();
-        fn EXTI10_15();
+        fn EXTI15_10();
         fn RTC_ALARM();
         fn TIM8_BRK();
         fn TIM8_UP();
@@ -549,7 +549,7 @@ mod _vectors {
         Vector { _reserved: 0 },
         Vector { _reserved: 0 },
         Vector { _reserved: 0 },
-        Vector { _handler: EXTI5_9 },
+        Vector { _handler: EXTI9_5 },
         Vector { _handler: TIM1_BRK },
         Vector { _handler: TIM1_UP },
         Vector { _handler: TIM1_TRG_COM },
@@ -566,7 +566,7 @@ mod _vectors {
         Vector { _handler: USART1 },
         Vector { _handler: USART2 },
         Vector { _handler: USART3 },
-        Vector { _handler: EXTI10_15 },
+        Vector { _handler: EXTI15_10 },
         Vector { _handler: RTC_ALARM },
         Vector { _reserved: 0 },
         Vector { _handler: TIM8_BRK },

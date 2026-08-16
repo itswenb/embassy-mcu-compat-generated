@@ -492,10 +492,10 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
         name: "EXTI",
         address: 0x40010400,
         registers: Some(PeripheralRegisters {
-            kind: "gdexti11a1be47",
-            version: "v1",
+            kind: "exti",
+            version: "gdbeb972624ea3",
             block: "EXTI",
-            ir: &gdexti11a1be47::REGISTERS,
+            ir: &exti::REGISTERS,
         }),
         rcc: None,
         pins: &[],
@@ -511,6 +511,30 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
                 interrupt: "EXTI1",
             },
             PeripheralInterrupt {
+                signal: "EXTI10",
+                interrupt: "EXTI15_10",
+            },
+            PeripheralInterrupt {
+                signal: "EXTI11",
+                interrupt: "EXTI15_10",
+            },
+            PeripheralInterrupt {
+                signal: "EXTI12",
+                interrupt: "EXTI15_10",
+            },
+            PeripheralInterrupt {
+                signal: "EXTI13",
+                interrupt: "EXTI15_10",
+            },
+            PeripheralInterrupt {
+                signal: "EXTI14",
+                interrupt: "EXTI15_10",
+            },
+            PeripheralInterrupt {
+                signal: "EXTI15",
+                interrupt: "EXTI15_10",
+            },
+            PeripheralInterrupt {
                 signal: "EXTI2",
                 interrupt: "EXTI2",
             },
@@ -521,6 +545,26 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
             PeripheralInterrupt {
                 signal: "EXTI4",
                 interrupt: "EXTI4",
+            },
+            PeripheralInterrupt {
+                signal: "EXTI5",
+                interrupt: "EXTI9_5",
+            },
+            PeripheralInterrupt {
+                signal: "EXTI6",
+                interrupt: "EXTI9_5",
+            },
+            PeripheralInterrupt {
+                signal: "EXTI7",
+                interrupt: "EXTI9_5",
+            },
+            PeripheralInterrupt {
+                signal: "EXTI8",
+                interrupt: "EXTI9_5",
+            },
+            PeripheralInterrupt {
+                signal: "EXTI9",
+                interrupt: "EXTI9_5",
             },
         ],
         afio: None,
@@ -1095,12 +1139,24 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
         name: "I2C1",
         address: 0x40005400,
         registers: Some(PeripheralRegisters {
-            kind: "gdi2c08f648655",
+            kind: "i2c",
             version: "v1",
-            block: "I2C0",
-            ir: &gdi2c08f648655::REGISTERS,
+            block: "I2C",
+            ir: &i2c::REGISTERS,
         }),
-        rcc: None,
+        rcc: Some(PeripheralRcc {
+            bus_clock: "PCLK1",
+            kernel_clock: Clock("PCLK1"),
+            enable: Some(PeripheralRccRegister {
+                register: "APB1ENR",
+                field: "I2C1EN",
+            }),
+            reset: Some(PeripheralRccRegister {
+                register: "APB1RSTR",
+                field: "I2C1RST",
+            }),
+            stop_mode: StopMode::Stop1,
+        }),
         pins: &[
             PeripheralPin {
                 pin: "PB5",
@@ -1157,18 +1213,43 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
                 interrupt: "I2C1_EV",
             },
         ],
-        afio: None,
+        afio: Some(PeripheralAfio {
+            register: "MAPR",
+            field: "I2C1_REMAP",
+            values: &[
+                PeripheralAfioValue {
+                    value: 0,
+                    pins: &["PB6", "PB7"],
+                },
+                PeripheralAfioValue {
+                    value: 1,
+                    pins: &["PB8", "PB9"],
+                },
+            ],
+        }),
     },
     Peripheral {
         name: "I2C2",
         address: 0x40005800,
         registers: Some(PeripheralRegisters {
-            kind: "gdi2c08f648655",
+            kind: "i2c",
             version: "v1",
-            block: "I2C0",
-            ir: &gdi2c08f648655::REGISTERS,
+            block: "I2C",
+            ir: &i2c::REGISTERS,
         }),
-        rcc: None,
+        rcc: Some(PeripheralRcc {
+            bus_clock: "PCLK1",
+            kernel_clock: Clock("PCLK1"),
+            enable: Some(PeripheralRccRegister {
+                register: "APB1ENR",
+                field: "I2C2EN",
+            }),
+            reset: Some(PeripheralRccRegister {
+                register: "APB1RSTR",
+                field: "I2C2RST",
+            }),
+            stop_mode: StopMode::Stop1,
+        }),
         pins: &[
             PeripheralPin {
                 pin: "PB10",
@@ -3140,7 +3221,7 @@ pub(crate) static INTERRUPTS: &[Interrupt] = &[
         number: 22,
     },
     Interrupt {
-        name: "EXTI5_9",
+        name: "EXTI9_5",
         number: 23,
     },
     Interrupt {
@@ -3208,7 +3289,7 @@ pub(crate) static INTERRUPTS: &[Interrupt] = &[
         number: 39,
     },
     Interrupt {
-        name: "EXTI10_15",
+        name: "EXTI15_10",
         number: 40,
     },
     Interrupt {
@@ -3522,6 +3603,8 @@ pub mod bkp;
 pub mod crc;
 #[path = "../registers/dac_v1.rs"]
 pub mod dac;
+#[path = "../registers/exti_gdbeb972624ea3.rs"]
+pub mod exti;
 #[path = "../registers/flash_f1.rs"]
 pub mod flash;
 #[path = "../registers/gdadc0dda18ebe_v1.rs"]
@@ -3544,10 +3627,6 @@ pub mod gdenetmsc9217fdbd;
 pub mod gdenetptpf491bb9d;
 #[path = "../registers/gdexmc61eab9d1_v1.rs"]
 pub mod gdexmc61eab9d1;
-#[path = "../registers/gdexti11a1be47_v1.rs"]
-pub mod gdexti11a1be47;
-#[path = "../registers/gdi2c08f648655_v1.rs"]
-pub mod gdi2c08f648655;
 #[path = "../registers/gdtimer0e084a927_v1.rs"]
 pub mod gdtimer0e084a927;
 #[path = "../registers/gduart35ffe463f_v1.rs"]
@@ -3564,6 +3643,8 @@ pub mod gdusbfshost6fa885e5;
 pub mod gdusbfspwrclk2ac667f0;
 #[path = "../registers/gpio_v1.rs"]
 pub mod gpio;
+#[path = "../registers/i2c_v1_gd87a4c48e1698.rs"]
+pub mod i2c;
 #[path = "../registers/iwdg_v1.rs"]
 pub mod iwdg;
 #[path = "../registers/pwr_f1.rs"]
