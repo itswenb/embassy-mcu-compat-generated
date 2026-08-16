@@ -58,7 +58,7 @@ jobs:
             2>riscv-error.log; then
             exit 1
           fi
-          grep -q "是 RISC-V 型号，不能通过 embassy-stm32 使用" riscv-error.log
+          grep -q "未知 EMBASSY_MCU_COMPAT_CHIP=gd32vf103c8" riscv-error.log
 
       - name: 编译全量 PAC 代表目标
         run: |
