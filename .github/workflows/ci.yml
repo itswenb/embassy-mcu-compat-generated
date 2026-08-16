@@ -63,26 +63,26 @@ jobs:
       - name: 编译全量 PAC 代表目标
         run: |
           cargo check \
-            -p mcu-metapac \
+            --manifest-path mcu-metapac/Cargo.toml \
             --target thumbv7m-none-eabi \
             --features pac,metadata,gd32f103c8
           cargo check \
-            -p mcu-metapac \
+            --manifest-path mcu-metapac/Cargo.toml \
             --target thumbv7em-none-eabihf \
             --features pac,metadata,gd32a103cb
           cargo check \
-            -p mcu-metapac \
+            --manifest-path mcu-metapac/Cargo.toml \
             --target thumbv8m.base-none-eabi \
             --features pac,metadata,gd32c211ex
           cargo check \
-            -p mcu-metapac \
+            --manifest-path mcu-metapac/Cargo.toml \
             --target thumbv8m.main-none-eabihf \
             --features pac,metadata,gd32a503cb
           cargo check \
-            -p mcu-metapac \
+            --manifest-path mcu-metapac/Cargo.toml \
             --target riscv32imac-unknown-none-elf \
             --features pac,metadata,gd32vf103c8
           cargo check \
-            -p mcu-metapac \
+            --manifest-path mcu-metapac/Cargo.toml \
             --target riscv32imafc-unknown-none-elf \
             --features pac,metadata,gd32vw553hi
