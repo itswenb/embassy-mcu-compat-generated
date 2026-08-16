@@ -23,32 +23,32 @@ impl Gpio {
     #[inline(always)]
     pub const fn cr(self, n: usize) -> crate::common::Reg<regs::Cr, crate::common::RW> {
         assert!(n < 2usize);
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0usize + n * 4usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0usize + n * 4usize) as _) }
     }
     #[doc = "Port input data register (GPIOn_IDR)"]
     #[inline(always)]
     pub const fn idr(self) -> crate::common::Reg<regs::Idr, crate::common::R> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x08usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x08usize) as _) }
     }
     #[doc = "Port output data register (GPIOn_ODR)"]
     #[inline(always)]
     pub const fn odr(self) -> crate::common::Reg<regs::Odr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0cusize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0cusize) as _) }
     }
     #[doc = "Port bit set/reset register (GPIOn_BSRR)"]
     #[inline(always)]
     pub const fn bsrr(self) -> crate::common::Reg<regs::Bsrr, crate::common::W> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x10usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x10usize) as _) }
     }
     #[doc = "Port bit reset register (GPIOn_BRR)"]
     #[inline(always)]
     pub const fn brr(self) -> crate::common::Reg<regs::Brr, crate::common::W> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x14usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x14usize) as _) }
     }
     #[doc = "Port configuration lock register"]
     #[inline(always)]
     pub const fn lckr(self) -> crate::common::Reg<regs::Lckr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x18usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x18usize) as _) }
     }
 }
 pub mod regs {
@@ -58,7 +58,6 @@ pub mod regs {
     pub struct Brr(pub u32);
     impl Brr {
         #[doc = "Reset bit"]
-        #[must_use]
         #[inline(always)]
         pub const fn br(&self, n: usize) -> bool {
             assert!(n < 16usize);
@@ -68,7 +67,7 @@ pub mod regs {
         }
         #[doc = "Reset bit"]
         #[inline(always)]
-        pub const fn set_br(&mut self, n: usize, val: bool) {
+        pub fn set_br(&mut self, n: usize, val: bool) {
             assert!(n < 16usize);
             let offs = 0usize + n * 1usize;
             self.0 = (self.0 & !(0x01 << offs)) | (((val as u32) & 0x01) << offs);
@@ -105,26 +104,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Brr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Brr {{ br[0]: {=bool:?}, br[1]: {=bool:?}, br[2]: {=bool:?}, br[3]: {=bool:?}, br[4]: {=bool:?}, br[5]: {=bool:?}, br[6]: {=bool:?}, br[7]: {=bool:?}, br[8]: {=bool:?}, br[9]: {=bool:?}, br[10]: {=bool:?}, br[11]: {=bool:?}, br[12]: {=bool:?}, br[13]: {=bool:?}, br[14]: {=bool:?}, br[15]: {=bool:?} }}",
-                self.br(0usize),
-                self.br(1usize),
-                self.br(2usize),
-                self.br(3usize),
-                self.br(4usize),
-                self.br(5usize),
-                self.br(6usize),
-                self.br(7usize),
-                self.br(8usize),
-                self.br(9usize),
-                self.br(10usize),
-                self.br(11usize),
-                self.br(12usize),
-                self.br(13usize),
-                self.br(14usize),
-                self.br(15usize)
-            )
+            defmt :: write ! (f , "Brr {{ br[0]: {=bool:?}, br[1]: {=bool:?}, br[2]: {=bool:?}, br[3]: {=bool:?}, br[4]: {=bool:?}, br[5]: {=bool:?}, br[6]: {=bool:?}, br[7]: {=bool:?}, br[8]: {=bool:?}, br[9]: {=bool:?}, br[10]: {=bool:?}, br[11]: {=bool:?}, br[12]: {=bool:?}, br[13]: {=bool:?}, br[14]: {=bool:?}, br[15]: {=bool:?} }}" , self . br (0usize) , self . br (1usize) , self . br (2usize) , self . br (3usize) , self . br (4usize) , self . br (5usize) , self . br (6usize) , self . br (7usize) , self . br (8usize) , self . br (9usize) , self . br (10usize) , self . br (11usize) , self . br (12usize) , self . br (13usize) , self . br (14usize) , self . br (15usize))
         }
     }
     #[doc = "Port bit set/reset register (GPIOn_BSRR)"]
@@ -133,7 +113,6 @@ pub mod regs {
     pub struct Bsrr(pub u32);
     impl Bsrr {
         #[doc = "Set bit"]
-        #[must_use]
         #[inline(always)]
         pub const fn bs(&self, n: usize) -> bool {
             assert!(n < 16usize);
@@ -143,13 +122,12 @@ pub mod regs {
         }
         #[doc = "Set bit"]
         #[inline(always)]
-        pub const fn set_bs(&mut self, n: usize, val: bool) {
+        pub fn set_bs(&mut self, n: usize, val: bool) {
             assert!(n < 16usize);
             let offs = 0usize + n * 1usize;
             self.0 = (self.0 & !(0x01 << offs)) | (((val as u32) & 0x01) << offs);
         }
         #[doc = "Reset bit"]
-        #[must_use]
         #[inline(always)]
         pub const fn br(&self, n: usize) -> bool {
             assert!(n < 16usize);
@@ -159,7 +137,7 @@ pub mod regs {
         }
         #[doc = "Reset bit"]
         #[inline(always)]
-        pub const fn set_br(&mut self, n: usize, val: bool) {
+        pub fn set_br(&mut self, n: usize, val: bool) {
             assert!(n < 16usize);
             let offs = 16usize + n * 1usize;
             self.0 = (self.0 & !(0x01 << offs)) | (((val as u32) & 0x01) << offs);
@@ -212,42 +190,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Bsrr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Bsrr {{ bs[0]: {=bool:?}, bs[1]: {=bool:?}, bs[2]: {=bool:?}, bs[3]: {=bool:?}, bs[4]: {=bool:?}, bs[5]: {=bool:?}, bs[6]: {=bool:?}, bs[7]: {=bool:?}, bs[8]: {=bool:?}, bs[9]: {=bool:?}, bs[10]: {=bool:?}, bs[11]: {=bool:?}, bs[12]: {=bool:?}, bs[13]: {=bool:?}, bs[14]: {=bool:?}, bs[15]: {=bool:?}, br[0]: {=bool:?}, br[1]: {=bool:?}, br[2]: {=bool:?}, br[3]: {=bool:?}, br[4]: {=bool:?}, br[5]: {=bool:?}, br[6]: {=bool:?}, br[7]: {=bool:?}, br[8]: {=bool:?}, br[9]: {=bool:?}, br[10]: {=bool:?}, br[11]: {=bool:?}, br[12]: {=bool:?}, br[13]: {=bool:?}, br[14]: {=bool:?}, br[15]: {=bool:?} }}",
-                self.bs(0usize),
-                self.bs(1usize),
-                self.bs(2usize),
-                self.bs(3usize),
-                self.bs(4usize),
-                self.bs(5usize),
-                self.bs(6usize),
-                self.bs(7usize),
-                self.bs(8usize),
-                self.bs(9usize),
-                self.bs(10usize),
-                self.bs(11usize),
-                self.bs(12usize),
-                self.bs(13usize),
-                self.bs(14usize),
-                self.bs(15usize),
-                self.br(0usize),
-                self.br(1usize),
-                self.br(2usize),
-                self.br(3usize),
-                self.br(4usize),
-                self.br(5usize),
-                self.br(6usize),
-                self.br(7usize),
-                self.br(8usize),
-                self.br(9usize),
-                self.br(10usize),
-                self.br(11usize),
-                self.br(12usize),
-                self.br(13usize),
-                self.br(14usize),
-                self.br(15usize)
-            )
+            defmt :: write ! (f , "Bsrr {{ bs[0]: {=bool:?}, bs[1]: {=bool:?}, bs[2]: {=bool:?}, bs[3]: {=bool:?}, bs[4]: {=bool:?}, bs[5]: {=bool:?}, bs[6]: {=bool:?}, bs[7]: {=bool:?}, bs[8]: {=bool:?}, bs[9]: {=bool:?}, bs[10]: {=bool:?}, bs[11]: {=bool:?}, bs[12]: {=bool:?}, bs[13]: {=bool:?}, bs[14]: {=bool:?}, bs[15]: {=bool:?}, br[0]: {=bool:?}, br[1]: {=bool:?}, br[2]: {=bool:?}, br[3]: {=bool:?}, br[4]: {=bool:?}, br[5]: {=bool:?}, br[6]: {=bool:?}, br[7]: {=bool:?}, br[8]: {=bool:?}, br[9]: {=bool:?}, br[10]: {=bool:?}, br[11]: {=bool:?}, br[12]: {=bool:?}, br[13]: {=bool:?}, br[14]: {=bool:?}, br[15]: {=bool:?} }}" , self . bs (0usize) , self . bs (1usize) , self . bs (2usize) , self . bs (3usize) , self . bs (4usize) , self . bs (5usize) , self . bs (6usize) , self . bs (7usize) , self . bs (8usize) , self . bs (9usize) , self . bs (10usize) , self . bs (11usize) , self . bs (12usize) , self . bs (13usize) , self . bs (14usize) , self . bs (15usize) , self . br (0usize) , self . br (1usize) , self . br (2usize) , self . br (3usize) , self . br (4usize) , self . br (5usize) , self . br (6usize) , self . br (7usize) , self . br (8usize) , self . br (9usize) , self . br (10usize) , self . br (11usize) , self . br (12usize) , self . br (13usize) , self . br (14usize) , self . br (15usize))
         }
     }
     #[doc = "Port configuration register (GPIOn_CRx)"]
@@ -256,7 +199,6 @@ pub mod regs {
     pub struct Cr(pub u32);
     impl Cr {
         #[doc = "Port n mode bits"]
-        #[must_use]
         #[inline(always)]
         pub const fn mode(&self, n: usize) -> super::vals::Mode {
             assert!(n < 8usize);
@@ -266,13 +208,12 @@ pub mod regs {
         }
         #[doc = "Port n mode bits"]
         #[inline(always)]
-        pub const fn set_mode(&mut self, n: usize, val: super::vals::Mode) {
+        pub fn set_mode(&mut self, n: usize, val: super::vals::Mode) {
             assert!(n < 8usize);
             let offs = 0usize + n * 4usize;
             self.0 = (self.0 & !(0x03 << offs)) | (((val.to_bits() as u32) & 0x03) << offs);
         }
         #[doc = "Port n configuration bits, for input mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn cnf_in(&self, n: usize) -> super::vals::CnfIn {
             assert!(n < 8usize);
@@ -282,13 +223,12 @@ pub mod regs {
         }
         #[doc = "Port n configuration bits, for input mode"]
         #[inline(always)]
-        pub const fn set_cnf_in(&mut self, n: usize, val: super::vals::CnfIn) {
+        pub fn set_cnf_in(&mut self, n: usize, val: super::vals::CnfIn) {
             assert!(n < 8usize);
             let offs = 2usize + n * 4usize;
             self.0 = (self.0 & !(0x03 << offs)) | (((val.to_bits() as u32) & 0x03) << offs);
         }
         #[doc = "Port n configuration bits, for output mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn cnf_out(&self, n: usize) -> super::vals::CnfOut {
             assert!(n < 8usize);
@@ -298,7 +238,7 @@ pub mod regs {
         }
         #[doc = "Port n configuration bits, for output mode"]
         #[inline(always)]
-        pub const fn set_cnf_out(&mut self, n: usize, val: super::vals::CnfOut) {
+        pub fn set_cnf_out(&mut self, n: usize, val: super::vals::CnfOut) {
             assert!(n < 8usize);
             let offs = 2usize + n * 4usize;
             self.0 = (self.0 & !(0x03 << offs)) | (((val.to_bits() as u32) & 0x03) << offs);
@@ -343,34 +283,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Cr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Cr {{ mode[0]: {:?}, mode[1]: {:?}, mode[2]: {:?}, mode[3]: {:?}, mode[4]: {:?}, mode[5]: {:?}, mode[6]: {:?}, mode[7]: {:?}, cnf_in[0]: {:?}, cnf_in[1]: {:?}, cnf_in[2]: {:?}, cnf_in[3]: {:?}, cnf_in[4]: {:?}, cnf_in[5]: {:?}, cnf_in[6]: {:?}, cnf_in[7]: {:?}, cnf_out[0]: {:?}, cnf_out[1]: {:?}, cnf_out[2]: {:?}, cnf_out[3]: {:?}, cnf_out[4]: {:?}, cnf_out[5]: {:?}, cnf_out[6]: {:?}, cnf_out[7]: {:?} }}",
-                self.mode(0usize),
-                self.mode(1usize),
-                self.mode(2usize),
-                self.mode(3usize),
-                self.mode(4usize),
-                self.mode(5usize),
-                self.mode(6usize),
-                self.mode(7usize),
-                self.cnf_in(0usize),
-                self.cnf_in(1usize),
-                self.cnf_in(2usize),
-                self.cnf_in(3usize),
-                self.cnf_in(4usize),
-                self.cnf_in(5usize),
-                self.cnf_in(6usize),
-                self.cnf_in(7usize),
-                self.cnf_out(0usize),
-                self.cnf_out(1usize),
-                self.cnf_out(2usize),
-                self.cnf_out(3usize),
-                self.cnf_out(4usize),
-                self.cnf_out(5usize),
-                self.cnf_out(6usize),
-                self.cnf_out(7usize)
-            )
+            defmt :: write ! (f , "Cr {{ mode[0]: {:?}, mode[1]: {:?}, mode[2]: {:?}, mode[3]: {:?}, mode[4]: {:?}, mode[5]: {:?}, mode[6]: {:?}, mode[7]: {:?}, cnf_in[0]: {:?}, cnf_in[1]: {:?}, cnf_in[2]: {:?}, cnf_in[3]: {:?}, cnf_in[4]: {:?}, cnf_in[5]: {:?}, cnf_in[6]: {:?}, cnf_in[7]: {:?}, cnf_out[0]: {:?}, cnf_out[1]: {:?}, cnf_out[2]: {:?}, cnf_out[3]: {:?}, cnf_out[4]: {:?}, cnf_out[5]: {:?}, cnf_out[6]: {:?}, cnf_out[7]: {:?} }}" , self . mode (0usize) , self . mode (1usize) , self . mode (2usize) , self . mode (3usize) , self . mode (4usize) , self . mode (5usize) , self . mode (6usize) , self . mode (7usize) , self . cnf_in (0usize) , self . cnf_in (1usize) , self . cnf_in (2usize) , self . cnf_in (3usize) , self . cnf_in (4usize) , self . cnf_in (5usize) , self . cnf_in (6usize) , self . cnf_in (7usize) , self . cnf_out (0usize) , self . cnf_out (1usize) , self . cnf_out (2usize) , self . cnf_out (3usize) , self . cnf_out (4usize) , self . cnf_out (5usize) , self . cnf_out (6usize) , self . cnf_out (7usize))
         }
     }
     #[doc = "Port input data register (GPIOn_IDR)"]
@@ -379,7 +292,6 @@ pub mod regs {
     pub struct Idr(pub u32);
     impl Idr {
         #[doc = "Port input data"]
-        #[must_use]
         #[inline(always)]
         pub const fn idr(&self, n: usize) -> super::vals::Idr {
             assert!(n < 16usize);
@@ -389,7 +301,7 @@ pub mod regs {
         }
         #[doc = "Port input data"]
         #[inline(always)]
-        pub const fn set_idr(&mut self, n: usize, val: super::vals::Idr) {
+        pub fn set_idr(&mut self, n: usize, val: super::vals::Idr) {
             assert!(n < 16usize);
             let offs = 0usize + n * 1usize;
             self.0 = (self.0 & !(0x01 << offs)) | (((val.to_bits() as u32) & 0x01) << offs);
@@ -426,26 +338,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Idr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Idr {{ idr[0]: {:?}, idr[1]: {:?}, idr[2]: {:?}, idr[3]: {:?}, idr[4]: {:?}, idr[5]: {:?}, idr[6]: {:?}, idr[7]: {:?}, idr[8]: {:?}, idr[9]: {:?}, idr[10]: {:?}, idr[11]: {:?}, idr[12]: {:?}, idr[13]: {:?}, idr[14]: {:?}, idr[15]: {:?} }}",
-                self.idr(0usize),
-                self.idr(1usize),
-                self.idr(2usize),
-                self.idr(3usize),
-                self.idr(4usize),
-                self.idr(5usize),
-                self.idr(6usize),
-                self.idr(7usize),
-                self.idr(8usize),
-                self.idr(9usize),
-                self.idr(10usize),
-                self.idr(11usize),
-                self.idr(12usize),
-                self.idr(13usize),
-                self.idr(14usize),
-                self.idr(15usize)
-            )
+            defmt :: write ! (f , "Idr {{ idr[0]: {:?}, idr[1]: {:?}, idr[2]: {:?}, idr[3]: {:?}, idr[4]: {:?}, idr[5]: {:?}, idr[6]: {:?}, idr[7]: {:?}, idr[8]: {:?}, idr[9]: {:?}, idr[10]: {:?}, idr[11]: {:?}, idr[12]: {:?}, idr[13]: {:?}, idr[14]: {:?}, idr[15]: {:?} }}" , self . idr (0usize) , self . idr (1usize) , self . idr (2usize) , self . idr (3usize) , self . idr (4usize) , self . idr (5usize) , self . idr (6usize) , self . idr (7usize) , self . idr (8usize) , self . idr (9usize) , self . idr (10usize) , self . idr (11usize) , self . idr (12usize) , self . idr (13usize) , self . idr (14usize) , self . idr (15usize))
         }
     }
     #[doc = "Port configuration lock register"]
@@ -454,7 +347,6 @@ pub mod regs {
     pub struct Lckr(pub u32);
     impl Lckr {
         #[doc = "Port configuration locked"]
-        #[must_use]
         #[inline(always)]
         pub const fn lck(&self, n: usize) -> bool {
             assert!(n < 16usize);
@@ -464,13 +356,12 @@ pub mod regs {
         }
         #[doc = "Port configuration locked"]
         #[inline(always)]
-        pub const fn set_lck(&mut self, n: usize, val: bool) {
+        pub fn set_lck(&mut self, n: usize, val: bool) {
             assert!(n < 16usize);
             let offs = 0usize + n * 1usize;
             self.0 = (self.0 & !(0x01 << offs)) | (((val as u32) & 0x01) << offs);
         }
         #[doc = "Port configuration lock key active"]
-        #[must_use]
         #[inline(always)]
         pub const fn lckk(&self) -> bool {
             let val = (self.0 >> 16usize) & 0x01;
@@ -478,7 +369,7 @@ pub mod regs {
         }
         #[doc = "Port configuration lock key active"]
         #[inline(always)]
-        pub const fn set_lckk(&mut self, val: bool) {
+        pub fn set_lckk(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
         }
     }
@@ -514,27 +405,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Lckr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Lckr {{ lck[0]: {=bool:?}, lck[1]: {=bool:?}, lck[2]: {=bool:?}, lck[3]: {=bool:?}, lck[4]: {=bool:?}, lck[5]: {=bool:?}, lck[6]: {=bool:?}, lck[7]: {=bool:?}, lck[8]: {=bool:?}, lck[9]: {=bool:?}, lck[10]: {=bool:?}, lck[11]: {=bool:?}, lck[12]: {=bool:?}, lck[13]: {=bool:?}, lck[14]: {=bool:?}, lck[15]: {=bool:?}, lckk: {=bool:?} }}",
-                self.lck(0usize),
-                self.lck(1usize),
-                self.lck(2usize),
-                self.lck(3usize),
-                self.lck(4usize),
-                self.lck(5usize),
-                self.lck(6usize),
-                self.lck(7usize),
-                self.lck(8usize),
-                self.lck(9usize),
-                self.lck(10usize),
-                self.lck(11usize),
-                self.lck(12usize),
-                self.lck(13usize),
-                self.lck(14usize),
-                self.lck(15usize),
-                self.lckk()
-            )
+            defmt :: write ! (f , "Lckr {{ lck[0]: {=bool:?}, lck[1]: {=bool:?}, lck[2]: {=bool:?}, lck[3]: {=bool:?}, lck[4]: {=bool:?}, lck[5]: {=bool:?}, lck[6]: {=bool:?}, lck[7]: {=bool:?}, lck[8]: {=bool:?}, lck[9]: {=bool:?}, lck[10]: {=bool:?}, lck[11]: {=bool:?}, lck[12]: {=bool:?}, lck[13]: {=bool:?}, lck[14]: {=bool:?}, lck[15]: {=bool:?}, lckk: {=bool:?} }}" , self . lck (0usize) , self . lck (1usize) , self . lck (2usize) , self . lck (3usize) , self . lck (4usize) , self . lck (5usize) , self . lck (6usize) , self . lck (7usize) , self . lck (8usize) , self . lck (9usize) , self . lck (10usize) , self . lck (11usize) , self . lck (12usize) , self . lck (13usize) , self . lck (14usize) , self . lck (15usize) , self . lckk ())
         }
     }
     #[doc = "Port output data register (GPIOn_ODR)"]
@@ -543,7 +414,6 @@ pub mod regs {
     pub struct Odr(pub u32);
     impl Odr {
         #[doc = "Port output data"]
-        #[must_use]
         #[inline(always)]
         pub const fn odr(&self, n: usize) -> super::vals::Odr {
             assert!(n < 16usize);
@@ -553,7 +423,7 @@ pub mod regs {
         }
         #[doc = "Port output data"]
         #[inline(always)]
-        pub const fn set_odr(&mut self, n: usize, val: super::vals::Odr) {
+        pub fn set_odr(&mut self, n: usize, val: super::vals::Odr) {
             assert!(n < 16usize);
             let offs = 0usize + n * 1usize;
             self.0 = (self.0 & !(0x01 << offs)) | (((val.to_bits() as u32) & 0x01) << offs);
@@ -590,26 +460,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Odr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Odr {{ odr[0]: {:?}, odr[1]: {:?}, odr[2]: {:?}, odr[3]: {:?}, odr[4]: {:?}, odr[5]: {:?}, odr[6]: {:?}, odr[7]: {:?}, odr[8]: {:?}, odr[9]: {:?}, odr[10]: {:?}, odr[11]: {:?}, odr[12]: {:?}, odr[13]: {:?}, odr[14]: {:?}, odr[15]: {:?} }}",
-                self.odr(0usize),
-                self.odr(1usize),
-                self.odr(2usize),
-                self.odr(3usize),
-                self.odr(4usize),
-                self.odr(5usize),
-                self.odr(6usize),
-                self.odr(7usize),
-                self.odr(8usize),
-                self.odr(9usize),
-                self.odr(10usize),
-                self.odr(11usize),
-                self.odr(12usize),
-                self.odr(13usize),
-                self.odr(14usize),
-                self.odr(15usize)
-            )
+            defmt :: write ! (f , "Odr {{ odr[0]: {:?}, odr[1]: {:?}, odr[2]: {:?}, odr[3]: {:?}, odr[4]: {:?}, odr[5]: {:?}, odr[6]: {:?}, odr[7]: {:?}, odr[8]: {:?}, odr[9]: {:?}, odr[10]: {:?}, odr[11]: {:?}, odr[12]: {:?}, odr[13]: {:?}, odr[14]: {:?}, odr[15]: {:?} }}" , self . odr (0usize) , self . odr (1usize) , self . odr (2usize) , self . odr (3usize) , self . odr (4usize) , self . odr (5usize) , self . odr (6usize) , self . odr (7usize) , self . odr (8usize) , self . odr (9usize) , self . odr (10usize) , self . odr (11usize) , self . odr (12usize) , self . odr (13usize) , self . odr (14usize) , self . odr (15usize))
         }
     }
 }
@@ -619,11 +470,11 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum CnfIn {
         #[doc = "Analog mode"]
-        Analog = 0x0,
+        ANALOG = 0x0,
         #[doc = "Floating input (reset state)"]
-        Floating = 0x01,
+        FLOATING = 0x01,
         #[doc = "Input with pull-up/pull-down"]
-        Pull = 0x02,
+        PULL = 0x02,
         _RESERVED_3 = 0x03,
     }
     impl CnfIn {
@@ -653,13 +504,13 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum CnfOut {
         #[doc = "Push-Pull mode"]
-        PushPull = 0x0,
+        PUSH_PULL = 0x0,
         #[doc = "Open Drain-Mode"]
-        OpenDrain = 0x01,
+        OPEN_DRAIN = 0x01,
         #[doc = "Alternate Function Push-Pull Mode"]
-        AltPushPull = 0x02,
+        ALT_PUSH_PULL = 0x02,
         #[doc = "Alternate Function Open-Drain Mode"]
-        AltOpenDrain = 0x03,
+        ALT_OPEN_DRAIN = 0x03,
     }
     impl CnfOut {
         #[inline(always)]
@@ -688,9 +539,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Idr {
         #[doc = "Input is logic low"]
-        Low = 0x0,
+        LOW = 0x0,
         #[doc = "Input is logic high"]
-        High = 0x01,
+        HIGH = 0x01,
     }
     impl Idr {
         #[inline(always)]
@@ -719,13 +570,13 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Mode {
         #[doc = "Input mode (reset state)"]
-        Input = 0x0,
+        INPUT = 0x0,
         #[doc = "Output mode 10 MHz"]
-        Output10mhz = 0x01,
+        OUTPUT10MHZ = 0x01,
         #[doc = "Output mode 2 MHz"]
-        Output2mhz = 0x02,
+        OUTPUT2MHZ = 0x02,
         #[doc = "Output mode 50 MHz"]
-        Output50mhz = 0x03,
+        OUTPUT50MHZ = 0x03,
     }
     impl Mode {
         #[inline(always)]
@@ -754,9 +605,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Odr {
         #[doc = "Set output to logic low"]
-        Low = 0x0,
+        LOW = 0x0,
         #[doc = "Set output to logic high"]
-        High = 0x01,
+        HIGH = 0x01,
     }
     impl Odr {
         #[inline(always)]

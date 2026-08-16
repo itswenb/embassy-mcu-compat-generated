@@ -666,17 +666,17 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 3,
             variants: &[
                 EnumVariant {
-                    name: "Ws0",
+                    name: "WS0",
                     description: Some("Zero wait states"),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "Ws1",
+                    name: "WS1",
                     description: Some("One wait state"),
                     value: 1,
                 },
                 EnumVariant {
-                    name: "Ws2",
+                    name: "WS2",
                     description: Some("Two wait states"),
                     value: 2,
                 },
@@ -688,17 +688,17 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 8,
             variants: &[
                 EnumVariant {
-                    name: "Level0",
+                    name: "LEVEL_0",
                     description: Some("Read protection not active"),
                     value: 170,
                 },
                 EnumVariant {
-                    name: "Level1",
+                    name: "LEVEL_1",
                     description: Some("Memories read protection active"),
                     value: 187,
                 },
                 EnumVariant {
-                    name: "Level2",
+                    name: "LEVEL_2",
                     description: Some("Chip read protection active"),
                     value: 204,
                 },

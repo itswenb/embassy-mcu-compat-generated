@@ -119,44 +119,44 @@ pub(crate) static REGISTERS: IR = IR {
         bit_size: 3,
         variants: &[
             EnumVariant {
-                name: "Div1",
+                name: "DIV1",
                 description: Some("Counter clock (PCLK1 div 4096) div 1"),
                 value: 0,
             },
             EnumVariant {
-                name: "Div128",
-                description: Some("Counter clock (PCLK1 div 4096) div 128"),
-                value: 7,
-            },
-            EnumVariant {
-                name: "Div16",
-                description: Some("Counter clock (PCLK1 div 4096) div 16"),
-                value: 4,
-            },
-            EnumVariant {
-                name: "Div2",
+                name: "DIV2",
                 description: Some("Counter clock (PCLK1 div 4096) div 2"),
                 value: 1,
             },
             EnumVariant {
-                name: "Div32",
-                description: Some("Counter clock (PCLK1 div 4096) div 32"),
-                value: 5,
-            },
-            EnumVariant {
-                name: "Div4",
+                name: "DIV4",
                 description: Some("Counter clock (PCLK1 div 4096) div 4"),
                 value: 2,
             },
             EnumVariant {
-                name: "Div64",
+                name: "DIV8",
+                description: Some("Counter clock (PCLK1 div 4096) div 8"),
+                value: 3,
+            },
+            EnumVariant {
+                name: "DIV16",
+                description: Some("Counter clock (PCLK1 div 4096) div 16"),
+                value: 4,
+            },
+            EnumVariant {
+                name: "DIV32",
+                description: Some("Counter clock (PCLK1 div 4096) div 32"),
+                value: 5,
+            },
+            EnumVariant {
+                name: "DIV64",
                 description: Some("Counter clock (PCLK1 div 4096) div 64"),
                 value: 6,
             },
             EnumVariant {
-                name: "Div8",
-                description: Some("Counter clock (PCLK1 div 4096) div 8"),
-                value: 3,
+                name: "DIV128",
+                description: Some("Counter clock (PCLK1 div 4096) div 128"),
+                value: 7,
             },
         ],
     }],

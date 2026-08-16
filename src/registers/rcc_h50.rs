@@ -1,479 +1,770 @@
 
 use crate::metadata::ir::*;
 pub(crate) static REGISTERS: IR = IR {
-    blocks: &[Block {
-        name: "Rcc",
-        extends: None,
-        description: Some("Reset and clock controller"),
-        items: &[
-            BlockItem {
-                name: "cr",
-                description: Some("RCC clock control register"),
-                array: None,
-                byte_offset: 0x0,
-                inner: BlockItemInner::Register(Register {
-                    access: Access::ReadWrite,
-                    bit_size: 32,
-                    fieldset: Some("Cr"),
-                }),
-            },
-            BlockItem {
-                name: "hsicfgr",
-                description: Some("RCC HSI calibration register"),
-                array: None,
-                byte_offset: 0x10,
-                inner: BlockItemInner::Register(Register {
-                    access: Access::ReadWrite,
-                    bit_size: 32,
-                    fieldset: Some("Hsicfgr"),
-                }),
-            },
-            BlockItem {
-                name: "crrcr",
-                description: Some("RCC clock recovery RC register"),
-                array: None,
-                byte_offset: 0x14,
-                inner: BlockItemInner::Register(Register {
-                    access: Access::ReadWrite,
-                    bit_size: 32,
-                    fieldset: Some("Crrcr"),
-                }),
-            },
-            BlockItem {
-                name: "csicfgr",
-                description: Some("RCC CSI calibration register"),
-                array: None,
-                byte_offset: 0x18,
-                inner: BlockItemInner::Register(Register {
-                    access: Access::ReadWrite,
-                    bit_size: 32,
-                    fieldset: Some("Csicfgr"),
-                }),
-            },
-            BlockItem {
-                name: "cfgr",
-                description: Some("RCC clock configuration register"),
-                array: None,
-                byte_offset: 0x1c,
-                inner: BlockItemInner::Register(Register {
-                    access: Access::ReadWrite,
-                    bit_size: 32,
-                    fieldset: Some("Cfgr"),
-                }),
-            },
-            BlockItem {
-                name: "cfgr2",
-                description: Some("RCC CPU domain clock configuration register 2"),
-                array: None,
-                byte_offset: 0x20,
-                inner: BlockItemInner::Register(Register {
-                    access: Access::ReadWrite,
-                    bit_size: 32,
-                    fieldset: Some("Cfgr2"),
-                }),
-            },
-            BlockItem {
-                name: "pllcfgr",
-                description: Some("RCC PLL clock source selection register"),
-                array: Some(Array::Regular(RegularArray { len: 2, stride: 4 })),
-                byte_offset: 0x28,
-                inner: BlockItemInner::Register(Register {
-                    access: Access::ReadWrite,
-                    bit_size: 32,
-                    fieldset: Some("Pllcfgr"),
-                }),
-            },
-            BlockItem {
-                name: "plldivr",
-                description: Some("RCC PLL1 dividers register"),
-                array: Some(Array::Regular(RegularArray { len: 2, stride: 8 })),
-                byte_offset: 0x34,
-                inner: BlockItemInner::Register(Register {
-                    access: Access::ReadWrite,
-                    bit_size: 32,
-                    fieldset: Some("Plldivr"),
-                }),
-            },
-            BlockItem {
-                name: "pllfracr",
-                description: Some("RCC PLL1 fractional divider register"),
-                array: Some(Array::Regular(RegularArray { len: 2, stride: 8 })),
-                byte_offset: 0x38,
-                inner: BlockItemInner::Register(Register {
-                    access: Access::ReadWrite,
-                    bit_size: 32,
-                    fieldset: Some("Pllfracr"),
-                }),
-            },
-            BlockItem {
-                name: "cier",
-                description: Some("RCC clock source interrupt enable register"),
-                array: None,
-                byte_offset: 0x50,
-                inner: BlockItemInner::Register(Register {
-                    access: Access::ReadWrite,
-                    bit_size: 32,
-                    fieldset: Some("Cier"),
-                }),
-            },
-            BlockItem {
-                name: "cifr",
-                description: Some("RCC clock source interrupt flag register"),
-                array: None,
-                byte_offset: 0x54,
-                inner: BlockItemInner::Register(Register {
-                    access: Access::ReadWrite,
-                    bit_size: 32,
-                    fieldset: Some("Cifr"),
-                }),
-            },
-            BlockItem {
-                name: "cicr",
-                description: Some("RCC clock source interrupt clear register"),
-                array: None,
-                byte_offset: 0x58,
-                inner: BlockItemInner::Register(Register {
-                    access: Access::ReadWrite,
-                    bit_size: 32,
-                    fieldset: Some("Cicr"),
-                }),
-            },
-            BlockItem {
-                name: "ahb1rstr",
-                description: Some("RCC AHB1 reset register"),
-                array: None,
-                byte_offset: 0x60,
-                inner: BlockItemInner::Register(Register {
-                    access: Access::ReadWrite,
-                    bit_size: 32,
-                    fieldset: Some("Ahb1rstr"),
-                }),
-            },
-            BlockItem {
-                name: "ahb2rstr",
-                description: Some("RCC AHB2 peripheral reset register"),
-                array: None,
-                byte_offset: 0x64,
-                inner: BlockItemInner::Register(Register {
-                    access: Access::ReadWrite,
-                    bit_size: 32,
-                    fieldset: Some("Ahb2rstr"),
-                }),
-            },
-            BlockItem {
-                name: "apb1lrstr",
-                description: Some("RCC APB1 peripheral low reset register"),
-                array: None,
-                byte_offset: 0x74,
-                inner: BlockItemInner::Register(Register {
-                    access: Access::ReadWrite,
-                    bit_size: 32,
-                    fieldset: Some("Apb1lrstr"),
-                }),
-            },
-            BlockItem {
-                name: "apb1hrstr",
-                description: Some("RCC APB1 peripheral high reset register"),
-                array: None,
-                byte_offset: 0x78,
-                inner: BlockItemInner::Register(Register {
-                    access: Access::ReadWrite,
-                    bit_size: 32,
-                    fieldset: Some("Apb1hrstr"),
-                }),
-            },
-            BlockItem {
-                name: "apb2rstr",
-                description: Some("RCC APB2 peripheral reset register"),
-                array: None,
-                byte_offset: 0x7c,
-                inner: BlockItemInner::Register(Register {
-                    access: Access::ReadWrite,
-                    bit_size: 32,
-                    fieldset: Some("Apb2rstr"),
-                }),
-            },
-            BlockItem {
-                name: "apb3rstr",
-                description: Some("RCC APB3 peripheral reset register"),
-                array: None,
-                byte_offset: 0x80,
-                inner: BlockItemInner::Register(Register {
-                    access: Access::ReadWrite,
-                    bit_size: 32,
-                    fieldset: Some("Apb3rstr"),
-                }),
-            },
-            BlockItem {
-                name: "ahb1enr",
-                description: Some("RCC AHB1 peripherals clock register"),
-                array: None,
-                byte_offset: 0x88,
-                inner: BlockItemInner::Register(Register {
-                    access: Access::ReadWrite,
-                    bit_size: 32,
-                    fieldset: Some("Ahb1enr"),
-                }),
-            },
-            BlockItem {
-                name: "ahb2enr",
-                description: Some("RCC AHB2 peripheral clock register"),
-                array: None,
-                byte_offset: 0x8c,
-                inner: BlockItemInner::Register(Register {
-                    access: Access::ReadWrite,
-                    bit_size: 32,
-                    fieldset: Some("Ahb2enr"),
-                }),
-            },
-            BlockItem {
-                name: "apb1lenr",
-                description: Some("RCC APB1 peripheral clock register"),
-                array: None,
-                byte_offset: 0x9c,
-                inner: BlockItemInner::Register(Register {
-                    access: Access::ReadWrite,
-                    bit_size: 32,
-                    fieldset: Some("Apb1lenr"),
-                }),
-            },
-            BlockItem {
-                name: "apb1henr",
-                description: Some("RCC APB1 peripheral clock register"),
-                array: None,
-                byte_offset: 0xa0,
-                inner: BlockItemInner::Register(Register {
-                    access: Access::ReadWrite,
-                    bit_size: 32,
-                    fieldset: Some("Apb1henr"),
-                }),
-            },
-            BlockItem {
-                name: "apb2enr",
-                description: Some("RCC APB2 peripheral clock register"),
-                array: None,
-                byte_offset: 0xa4,
-                inner: BlockItemInner::Register(Register {
-                    access: Access::ReadWrite,
-                    bit_size: 32,
-                    fieldset: Some("Apb2enr"),
-                }),
-            },
-            BlockItem {
-                name: "apb3enr",
-                description: Some("RCC APB3 peripheral clock register"),
-                array: None,
-                byte_offset: 0xa8,
-                inner: BlockItemInner::Register(Register {
-                    access: Access::ReadWrite,
-                    bit_size: 32,
-                    fieldset: Some("Apb3enr"),
-                }),
-            },
-            BlockItem {
-                name: "ahb1lpenr",
-                description: Some("RCC AHB1 sleep clock register"),
-                array: None,
-                byte_offset: 0xb0,
-                inner: BlockItemInner::Register(Register {
-                    access: Access::ReadWrite,
-                    bit_size: 32,
-                    fieldset: Some("Ahb1lpenr"),
-                }),
-            },
-            BlockItem {
-                name: "ahb2lpenr",
-                description: Some("RCC AHB2 sleep clock register"),
-                array: None,
-                byte_offset: 0xb4,
-                inner: BlockItemInner::Register(Register {
-                    access: Access::ReadWrite,
-                    bit_size: 32,
-                    fieldset: Some("Ahb2lpenr"),
-                }),
-            },
-            BlockItem {
-                name: "apb1llpenr",
-                description: Some("RCC APB1 sleep clock register"),
-                array: None,
-                byte_offset: 0xc4,
-                inner: BlockItemInner::Register(Register {
-                    access: Access::ReadWrite,
-                    bit_size: 32,
-                    fieldset: Some("Apb1llpenr"),
-                }),
-            },
-            BlockItem {
-                name: "apb1hlpenr",
-                description: Some("RCC APB1 sleep clock register"),
-                array: None,
-                byte_offset: 0xc8,
-                inner: BlockItemInner::Register(Register {
-                    access: Access::ReadWrite,
-                    bit_size: 32,
-                    fieldset: Some("Apb1hlpenr"),
-                }),
-            },
-            BlockItem {
-                name: "apb2lpenr",
-                description: Some("RCC APB2 sleep clock register"),
-                array: None,
-                byte_offset: 0xcc,
-                inner: BlockItemInner::Register(Register {
-                    access: Access::ReadWrite,
-                    bit_size: 32,
-                    fieldset: Some("Apb2lpenr"),
-                }),
-            },
-            BlockItem {
-                name: "apb3lpenr",
-                description: Some("RCC APB3 sleep clock register"),
-                array: None,
-                byte_offset: 0xd0,
-                inner: BlockItemInner::Register(Register {
-                    access: Access::ReadWrite,
-                    bit_size: 32,
-                    fieldset: Some("Apb3lpenr"),
-                }),
-            },
-            BlockItem {
-                name: "ccipr1",
-                description: Some("RCC kernel clock configuration register"),
-                array: None,
-                byte_offset: 0xd8,
-                inner: BlockItemInner::Register(Register {
-                    access: Access::ReadWrite,
-                    bit_size: 32,
-                    fieldset: Some("Ccipr1"),
-                }),
-            },
-            BlockItem {
-                name: "ccipr2",
-                description: Some("RCC kernel clock configuration register"),
-                array: None,
-                byte_offset: 0xdc,
-                inner: BlockItemInner::Register(Register {
-                    access: Access::ReadWrite,
-                    bit_size: 32,
-                    fieldset: Some("Ccipr2"),
-                }),
-            },
-            BlockItem {
-                name: "ccipr3",
-                description: Some("RCC kernel clock configuration register"),
-                array: None,
-                byte_offset: 0xe0,
-                inner: BlockItemInner::Register(Register {
-                    access: Access::ReadWrite,
-                    bit_size: 32,
-                    fieldset: Some("Ccipr3"),
-                }),
-            },
-            BlockItem {
-                name: "ccipr4",
-                description: Some("RCC kernel clock configuration register"),
-                array: None,
-                byte_offset: 0xe4,
-                inner: BlockItemInner::Register(Register {
-                    access: Access::ReadWrite,
-                    bit_size: 32,
-                    fieldset: Some("Ccipr4"),
-                }),
-            },
-            BlockItem {
-                name: "ccipr5",
-                description: Some("RCC kernel clock configuration register"),
-                array: None,
-                byte_offset: 0xe8,
-                inner: BlockItemInner::Register(Register {
-                    access: Access::ReadWrite,
-                    bit_size: 32,
-                    fieldset: Some("Ccipr5"),
-                }),
-            },
-            BlockItem {
-                name: "bdcr",
-                description: Some("RCC Backup domain control register"),
-                array: None,
-                byte_offset: 0xf0,
-                inner: BlockItemInner::Register(Register {
-                    access: Access::ReadWrite,
-                    bit_size: 32,
-                    fieldset: Some("Bdcr"),
-                }),
-            },
-            BlockItem {
-                name: "rsr",
-                description: Some("RCC reset status register"),
-                array: None,
-                byte_offset: 0xf4,
-                inner: BlockItemInner::Register(Register {
-                    access: Access::ReadWrite,
-                    bit_size: 32,
-                    fieldset: Some("Rsr"),
-                }),
-            },
-        ],
-    }],
+    blocks: &[
+        Block {
+            name: "Rcc",
+            extends: None,
+            description: Some(
+                "Reset and clock controller",
+            ),
+            items: &[
+                BlockItem {
+                    name: "cr",
+                    description: Some(
+                        "RCC clock control register",
+                    ),
+                    array: None,
+                    byte_offset: 0x0,
+                    inner: BlockItemInner::Register(
+                        Register {
+                            access: Access::ReadWrite,
+                            bit_size: 32,
+                            fieldset: Some(
+                                "Cr",
+                            ),
+                        },
+                    ),
+                },
+                BlockItem {
+                    name: "hsicfgr",
+                    description: Some(
+                        "RCC HSI calibration register",
+                    ),
+                    array: None,
+                    byte_offset: 0x10,
+                    inner: BlockItemInner::Register(
+                        Register {
+                            access: Access::ReadWrite,
+                            bit_size: 32,
+                            fieldset: Some(
+                                "Hsicfgr",
+                            ),
+                        },
+                    ),
+                },
+                BlockItem {
+                    name: "crrcr",
+                    description: Some(
+                        "RCC clock recovery RC register",
+                    ),
+                    array: None,
+                    byte_offset: 0x14,
+                    inner: BlockItemInner::Register(
+                        Register {
+                            access: Access::ReadWrite,
+                            bit_size: 32,
+                            fieldset: Some(
+                                "Crrcr",
+                            ),
+                        },
+                    ),
+                },
+                BlockItem {
+                    name: "csicfgr",
+                    description: Some(
+                        "RCC CSI calibration register",
+                    ),
+                    array: None,
+                    byte_offset: 0x18,
+                    inner: BlockItemInner::Register(
+                        Register {
+                            access: Access::ReadWrite,
+                            bit_size: 32,
+                            fieldset: Some(
+                                "Csicfgr",
+                            ),
+                        },
+                    ),
+                },
+                BlockItem {
+                    name: "cfgr",
+                    description: Some(
+                        "RCC clock configuration register",
+                    ),
+                    array: None,
+                    byte_offset: 0x1c,
+                    inner: BlockItemInner::Register(
+                        Register {
+                            access: Access::ReadWrite,
+                            bit_size: 32,
+                            fieldset: Some(
+                                "Cfgr",
+                            ),
+                        },
+                    ),
+                },
+                BlockItem {
+                    name: "cfgr2",
+                    description: Some(
+                        "RCC CPU domain clock configuration register 2",
+                    ),
+                    array: None,
+                    byte_offset: 0x20,
+                    inner: BlockItemInner::Register(
+                        Register {
+                            access: Access::ReadWrite,
+                            bit_size: 32,
+                            fieldset: Some(
+                                "Cfgr2",
+                            ),
+                        },
+                    ),
+                },
+                BlockItem {
+                    name: "pllcfgr",
+                    description: Some(
+                        "RCC PLL clock source selection register",
+                    ),
+                    array: Some(
+                        Array::Regular(
+                            RegularArray {
+                                len: 2,
+                                stride: 4,
+                            },
+                        ),
+                    ),
+                    byte_offset: 0x28,
+                    inner: BlockItemInner::Register(
+                        Register {
+                            access: Access::ReadWrite,
+                            bit_size: 32,
+                            fieldset: Some(
+                                "Pllcfgr",
+                            ),
+                        },
+                    ),
+                },
+                BlockItem {
+                    name: "plldivr",
+                    description: Some(
+                        "RCC PLL1 dividers register",
+                    ),
+                    array: Some(
+                        Array::Regular(
+                            RegularArray {
+                                len: 2,
+                                stride: 8,
+                            },
+                        ),
+                    ),
+                    byte_offset: 0x34,
+                    inner: BlockItemInner::Register(
+                        Register {
+                            access: Access::ReadWrite,
+                            bit_size: 32,
+                            fieldset: Some(
+                                "Plldivr",
+                            ),
+                        },
+                    ),
+                },
+                BlockItem {
+                    name: "pllfracr",
+                    description: Some(
+                        "RCC PLL1 fractional divider register",
+                    ),
+                    array: Some(
+                        Array::Regular(
+                            RegularArray {
+                                len: 2,
+                                stride: 8,
+                            },
+                        ),
+                    ),
+                    byte_offset: 0x38,
+                    inner: BlockItemInner::Register(
+                        Register {
+                            access: Access::ReadWrite,
+                            bit_size: 32,
+                            fieldset: Some(
+                                "Pllfracr",
+                            ),
+                        },
+                    ),
+                },
+                BlockItem {
+                    name: "cier",
+                    description: Some(
+                        "RCC clock source interrupt enable register",
+                    ),
+                    array: None,
+                    byte_offset: 0x50,
+                    inner: BlockItemInner::Register(
+                        Register {
+                            access: Access::ReadWrite,
+                            bit_size: 32,
+                            fieldset: Some(
+                                "Cier",
+                            ),
+                        },
+                    ),
+                },
+                BlockItem {
+                    name: "cifr",
+                    description: Some(
+                        "RCC clock source interrupt flag register",
+                    ),
+                    array: None,
+                    byte_offset: 0x54,
+                    inner: BlockItemInner::Register(
+                        Register {
+                            access: Access::ReadWrite,
+                            bit_size: 32,
+                            fieldset: Some(
+                                "Cifr",
+                            ),
+                        },
+                    ),
+                },
+                BlockItem {
+                    name: "cicr",
+                    description: Some(
+                        "RCC clock source interrupt clear register",
+                    ),
+                    array: None,
+                    byte_offset: 0x58,
+                    inner: BlockItemInner::Register(
+                        Register {
+                            access: Access::ReadWrite,
+                            bit_size: 32,
+                            fieldset: Some(
+                                "Cicr",
+                            ),
+                        },
+                    ),
+                },
+                BlockItem {
+                    name: "ahb1rstr",
+                    description: Some(
+                        "RCC AHB1 reset register",
+                    ),
+                    array: None,
+                    byte_offset: 0x60,
+                    inner: BlockItemInner::Register(
+                        Register {
+                            access: Access::ReadWrite,
+                            bit_size: 32,
+                            fieldset: Some(
+                                "Ahb1rstr",
+                            ),
+                        },
+                    ),
+                },
+                BlockItem {
+                    name: "ahb2rstr",
+                    description: Some(
+                        "RCC AHB2 peripheral reset register",
+                    ),
+                    array: None,
+                    byte_offset: 0x64,
+                    inner: BlockItemInner::Register(
+                        Register {
+                            access: Access::ReadWrite,
+                            bit_size: 32,
+                            fieldset: Some(
+                                "Ahb2rstr",
+                            ),
+                        },
+                    ),
+                },
+                BlockItem {
+                    name: "apb1lrstr",
+                    description: Some(
+                        "RCC APB1 peripheral low reset register",
+                    ),
+                    array: None,
+                    byte_offset: 0x74,
+                    inner: BlockItemInner::Register(
+                        Register {
+                            access: Access::ReadWrite,
+                            bit_size: 32,
+                            fieldset: Some(
+                                "Apb1lrstr",
+                            ),
+                        },
+                    ),
+                },
+                BlockItem {
+                    name: "apb1hrstr",
+                    description: Some(
+                        "RCC APB1 peripheral high reset register",
+                    ),
+                    array: None,
+                    byte_offset: 0x78,
+                    inner: BlockItemInner::Register(
+                        Register {
+                            access: Access::ReadWrite,
+                            bit_size: 32,
+                            fieldset: Some(
+                                "Apb1hrstr",
+                            ),
+                        },
+                    ),
+                },
+                BlockItem {
+                    name: "apb2rstr",
+                    description: Some(
+                        "RCC APB2 peripheral reset register",
+                    ),
+                    array: None,
+                    byte_offset: 0x7c,
+                    inner: BlockItemInner::Register(
+                        Register {
+                            access: Access::ReadWrite,
+                            bit_size: 32,
+                            fieldset: Some(
+                                "Apb2rstr",
+                            ),
+                        },
+                    ),
+                },
+                BlockItem {
+                    name: "apb3rstr",
+                    description: Some(
+                        "RCC APB3 peripheral reset register",
+                    ),
+                    array: None,
+                    byte_offset: 0x80,
+                    inner: BlockItemInner::Register(
+                        Register {
+                            access: Access::ReadWrite,
+                            bit_size: 32,
+                            fieldset: Some(
+                                "Apb3rstr",
+                            ),
+                        },
+                    ),
+                },
+                BlockItem {
+                    name: "ahb1enr",
+                    description: Some(
+                        "RCC AHB1 peripherals clock register",
+                    ),
+                    array: None,
+                    byte_offset: 0x88,
+                    inner: BlockItemInner::Register(
+                        Register {
+                            access: Access::ReadWrite,
+                            bit_size: 32,
+                            fieldset: Some(
+                                "Ahb1enr",
+                            ),
+                        },
+                    ),
+                },
+                BlockItem {
+                    name: "ahb2enr",
+                    description: Some(
+                        "RCC AHB2 peripheral clock register",
+                    ),
+                    array: None,
+                    byte_offset: 0x8c,
+                    inner: BlockItemInner::Register(
+                        Register {
+                            access: Access::ReadWrite,
+                            bit_size: 32,
+                            fieldset: Some(
+                                "Ahb2enr",
+                            ),
+                        },
+                    ),
+                },
+                BlockItem {
+                    name: "apb1lenr",
+                    description: Some(
+                        "RCC APB1 peripheral clock register",
+                    ),
+                    array: None,
+                    byte_offset: 0x9c,
+                    inner: BlockItemInner::Register(
+                        Register {
+                            access: Access::ReadWrite,
+                            bit_size: 32,
+                            fieldset: Some(
+                                "Apb1lenr",
+                            ),
+                        },
+                    ),
+                },
+                BlockItem {
+                    name: "apb1henr",
+                    description: Some(
+                        "RCC APB1 peripheral clock register",
+                    ),
+                    array: None,
+                    byte_offset: 0xa0,
+                    inner: BlockItemInner::Register(
+                        Register {
+                            access: Access::ReadWrite,
+                            bit_size: 32,
+                            fieldset: Some(
+                                "Apb1henr",
+                            ),
+                        },
+                    ),
+                },
+                BlockItem {
+                    name: "apb2enr",
+                    description: Some(
+                        "RCC APB2 peripheral clock register",
+                    ),
+                    array: None,
+                    byte_offset: 0xa4,
+                    inner: BlockItemInner::Register(
+                        Register {
+                            access: Access::ReadWrite,
+                            bit_size: 32,
+                            fieldset: Some(
+                                "Apb2enr",
+                            ),
+                        },
+                    ),
+                },
+                BlockItem {
+                    name: "apb3enr",
+                    description: Some(
+                        "RCC APB3 peripheral clock register",
+                    ),
+                    array: None,
+                    byte_offset: 0xa8,
+                    inner: BlockItemInner::Register(
+                        Register {
+                            access: Access::ReadWrite,
+                            bit_size: 32,
+                            fieldset: Some(
+                                "Apb3enr",
+                            ),
+                        },
+                    ),
+                },
+                BlockItem {
+                    name: "ahb1lpenr",
+                    description: Some(
+                        "RCC AHB1 sleep clock register",
+                    ),
+                    array: None,
+                    byte_offset: 0xb0,
+                    inner: BlockItemInner::Register(
+                        Register {
+                            access: Access::ReadWrite,
+                            bit_size: 32,
+                            fieldset: Some(
+                                "Ahb1lpenr",
+                            ),
+                        },
+                    ),
+                },
+                BlockItem {
+                    name: "ahb2lpenr",
+                    description: Some(
+                        "RCC AHB2 sleep clock register",
+                    ),
+                    array: None,
+                    byte_offset: 0xb4,
+                    inner: BlockItemInner::Register(
+                        Register {
+                            access: Access::ReadWrite,
+                            bit_size: 32,
+                            fieldset: Some(
+                                "Ahb2lpenr",
+                            ),
+                        },
+                    ),
+                },
+                BlockItem {
+                    name: "apb1llpenr",
+                    description: Some(
+                        "RCC APB1 sleep clock register",
+                    ),
+                    array: None,
+                    byte_offset: 0xc4,
+                    inner: BlockItemInner::Register(
+                        Register {
+                            access: Access::ReadWrite,
+                            bit_size: 32,
+                            fieldset: Some(
+                                "Apb1llpenr",
+                            ),
+                        },
+                    ),
+                },
+                BlockItem {
+                    name: "apb1hlpenr",
+                    description: Some(
+                        "RCC APB1 sleep clock register",
+                    ),
+                    array: None,
+                    byte_offset: 0xc8,
+                    inner: BlockItemInner::Register(
+                        Register {
+                            access: Access::ReadWrite,
+                            bit_size: 32,
+                            fieldset: Some(
+                                "Apb1hlpenr",
+                            ),
+                        },
+                    ),
+                },
+                BlockItem {
+                    name: "apb2lpenr",
+                    description: Some(
+                        "RCC APB2 sleep clock register",
+                    ),
+                    array: None,
+                    byte_offset: 0xcc,
+                    inner: BlockItemInner::Register(
+                        Register {
+                            access: Access::ReadWrite,
+                            bit_size: 32,
+                            fieldset: Some(
+                                "Apb2lpenr",
+                            ),
+                        },
+                    ),
+                },
+                BlockItem {
+                    name: "apb3lpenr",
+                    description: Some(
+                        "RCC APB3 sleep clock register",
+                    ),
+                    array: None,
+                    byte_offset: 0xd0,
+                    inner: BlockItemInner::Register(
+                        Register {
+                            access: Access::ReadWrite,
+                            bit_size: 32,
+                            fieldset: Some(
+                                "Apb3lpenr",
+                            ),
+                        },
+                    ),
+                },
+                BlockItem {
+                    name: "ccipr1",
+                    description: Some(
+                        "RCC kernel clock configuration register",
+                    ),
+                    array: None,
+                    byte_offset: 0xd8,
+                    inner: BlockItemInner::Register(
+                        Register {
+                            access: Access::ReadWrite,
+                            bit_size: 32,
+                            fieldset: Some(
+                                "Ccipr1",
+                            ),
+                        },
+                    ),
+                },
+                BlockItem {
+                    name: "ccipr2",
+                    description: Some(
+                        "RCC kernel clock configuration register",
+                    ),
+                    array: None,
+                    byte_offset: 0xdc,
+                    inner: BlockItemInner::Register(
+                        Register {
+                            access: Access::ReadWrite,
+                            bit_size: 32,
+                            fieldset: Some(
+                                "Ccipr2",
+                            ),
+                        },
+                    ),
+                },
+                BlockItem {
+                    name: "ccipr3",
+                    description: Some(
+                        "RCC kernel clock configuration register",
+                    ),
+                    array: None,
+                    byte_offset: 0xe0,
+                    inner: BlockItemInner::Register(
+                        Register {
+                            access: Access::ReadWrite,
+                            bit_size: 32,
+                            fieldset: Some(
+                                "Ccipr3",
+                            ),
+                        },
+                    ),
+                },
+                BlockItem {
+                    name: "ccipr4",
+                    description: Some(
+                        "RCC kernel clock configuration register",
+                    ),
+                    array: None,
+                    byte_offset: 0xe4,
+                    inner: BlockItemInner::Register(
+                        Register {
+                            access: Access::ReadWrite,
+                            bit_size: 32,
+                            fieldset: Some(
+                                "Ccipr4",
+                            ),
+                        },
+                    ),
+                },
+                BlockItem {
+                    name: "ccipr5",
+                    description: Some(
+                        "RCC kernel clock configuration register",
+                    ),
+                    array: None,
+                    byte_offset: 0xe8,
+                    inner: BlockItemInner::Register(
+                        Register {
+                            access: Access::ReadWrite,
+                            bit_size: 32,
+                            fieldset: Some(
+                                "Ccipr5",
+                            ),
+                        },
+                    ),
+                },
+                BlockItem {
+                    name: "bdcr",
+                    description: Some(
+                        "RCC Backup domain control register",
+                    ),
+                    array: None,
+                    byte_offset: 0xf0,
+                    inner: BlockItemInner::Register(
+                        Register {
+                            access: Access::ReadWrite,
+                            bit_size: 32,
+                            fieldset: Some(
+                                "Bdcr",
+                            ),
+                        },
+                    ),
+                },
+                BlockItem {
+                    name: "rsr",
+                    description: Some(
+                        "RCC reset status register",
+                    ),
+                    array: None,
+                    byte_offset: 0xf4,
+                    inner: BlockItemInner::Register(
+                        Register {
+                            access: Access::ReadWrite,
+                            bit_size: 32,
+                            fieldset: Some(
+                                "Rsr",
+                            ),
+                        },
+                    ),
+                },
+            ],
+        },
+    ],
     fieldsets: &[
         FieldSet {
             name: "Ahb1enr",
             extends: None,
-            description: Some("RCC AHB1 peripherals clock register"),
+            description: Some(
+                "RCC AHB1 peripherals clock register",
+            ),
             bit_size: 32,
             fields: &[
                 Field {
                     name: "gpdma1en",
-                    description: Some("GPDMA1 clock enable\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 0 }),
+                    description: Some(
+                        "GPDMA1 clock enable\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 0,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "gpdma2en",
-                    description: Some("GPDMA2 clock enable\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 1 }),
+                    description: Some(
+                        "GPDMA2 clock enable\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 1,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "flitfen",
-                    description: Some("Flash interface clock enable\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 8 }),
+                    description: Some(
+                        "Flash interface clock enable\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 8,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "crcen",
-                    description: Some("CRC clock enable\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 12 }),
+                    description: Some(
+                        "CRC clock enable\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 12,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "ramcfgen",
-                    description: Some("RAMCFG clock enable\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 17 }),
+                    description: Some(
+                        "RAMCFG clock enable\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 17,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "bkpramen",
-                    description: Some("BKPRAM clock enable\r Set and reset by software"),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 28 }),
+                    description: Some(
+                        "BKPRAM clock enable\r Set and reset by software",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 28,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "sram1en",
-                    description: Some("SRAM1 clock enable\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 31 }),
+                    description: Some(
+                        "SRAM1 clock enable\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 31,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -483,21 +774,35 @@ pub(crate) static REGISTERS: IR = IR {
         FieldSet {
             name: "Ahb1lpenr",
             extends: None,
-            description: Some("RCC AHB1 sleep clock register"),
+            description: Some(
+                "RCC AHB1 sleep clock register",
+            ),
             bit_size: 32,
             fields: &[
                 Field {
                     name: "gpdma1lpen",
-                    description: Some("GPDMA1 clock enable during sleep mode\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 0 }),
+                    description: Some(
+                        "GPDMA1 clock enable during sleep mode\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 0,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "gpdma2lpen",
-                    description: Some("GPDMA2 clock enable during sleep mode\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 1 }),
+                    description: Some(
+                        "GPDMA2 clock enable during sleep mode\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 1,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -507,47 +812,81 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "Flash interface (FLITF) clock enable during sleep mode\r Set and reset by software.",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 8 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 8,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "crclpen",
-                    description: Some("CRC clock enable during sleep mode\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 12 }),
+                    description: Some(
+                        "CRC clock enable during sleep mode\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 12,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "ramcfglpen",
-                    description: Some("RAMCFG clock enable during sleep mode\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 17 }),
+                    description: Some(
+                        "RAMCFG clock enable during sleep mode\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 17,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "bkpramlpen",
-                    description: Some("BKPRAM clock enable during sleep mode\r Set and reset by software"),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 28 }),
+                    description: Some(
+                        "BKPRAM clock enable during sleep mode\r Set and reset by software",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 28,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "icachelpen",
-                    description: Some("ICACHE clock enable during sleep mode\r Set and reset by software"),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 29 }),
+                    description: Some(
+                        "ICACHE clock enable during sleep mode\r Set and reset by software",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 29,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "sram1lpen",
-                    description: Some("SRAM1 clock enable during sleep mode\r Set and reset by software"),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 31 }),
+                    description: Some(
+                        "SRAM1 clock enable during sleep mode\r Set and reset by software",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 31,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -557,37 +896,63 @@ pub(crate) static REGISTERS: IR = IR {
         FieldSet {
             name: "Ahb1rstr",
             extends: None,
-            description: Some("RCC AHB1 reset register"),
+            description: Some(
+                "RCC AHB1 reset register",
+            ),
             bit_size: 32,
             fields: &[
                 Field {
                     name: "gpdma1rst",
-                    description: Some("GPDMA1 block reset\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 0 }),
+                    description: Some(
+                        "GPDMA1 block reset\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 0,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "gpdma2rst",
-                    description: Some("GPDMA2 block reset\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 1 }),
+                    description: Some(
+                        "GPDMA2 block reset\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 1,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "crcrst",
-                    description: Some("CRC block reset Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 12 }),
+                    description: Some(
+                        "CRC block reset Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 12,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "ramcfgrst",
-                    description: Some("RAMCFG block reset\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 17 }),
+                    description: Some(
+                        "RAMCFG block reset\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 17,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -597,85 +962,147 @@ pub(crate) static REGISTERS: IR = IR {
         FieldSet {
             name: "Ahb2enr",
             extends: None,
-            description: Some("RCC AHB2 peripheral clock register"),
+            description: Some(
+                "RCC AHB2 peripheral clock register",
+            ),
             bit_size: 32,
             fields: &[
                 Field {
                     name: "gpioaen",
-                    description: Some("GPIOA clock enable\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 0 }),
+                    description: Some(
+                        "GPIOA clock enable\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 0,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "gpioben",
-                    description: Some("GPIOB clock enable\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 1 }),
+                    description: Some(
+                        "GPIOB clock enable\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 1,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "gpiocen",
-                    description: Some("GPIOC clock enable\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 2 }),
+                    description: Some(
+                        "GPIOC clock enable\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 2,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "gpioden",
-                    description: Some("GPIOD clock enable\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 3 }),
+                    description: Some(
+                        "GPIOD clock enable\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 3,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "gpiohen",
-                    description: Some("GPIOH clock enable\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 7 }),
+                    description: Some(
+                        "GPIOH clock enable\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 7,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "adc1en",
-                    description: Some("ADC1 peripherals clock enabled\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 10 }),
+                    description: Some(
+                        "ADC1 peripherals clock enabled\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 10,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "dac1en",
-                    description: Some("DAC clock enable\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 11 }),
+                    description: Some(
+                        "DAC clock enable\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 11,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "hashen",
-                    description: Some("HASH clock enable\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 17 }),
+                    description: Some(
+                        "HASH clock enable\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 17,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "rngen",
-                    description: Some("RNG clock enable\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 18 }),
+                    description: Some(
+                        "RNG clock enable\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 18,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "sram2en",
-                    description: Some("SRAM2 clock enable\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 30 }),
+                    description: Some(
+                        "SRAM2 clock enable\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 30,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -685,85 +1112,147 @@ pub(crate) static REGISTERS: IR = IR {
         FieldSet {
             name: "Ahb2lpenr",
             extends: None,
-            description: Some("RCC AHB2 sleep clock register"),
+            description: Some(
+                "RCC AHB2 sleep clock register",
+            ),
             bit_size: 32,
             fields: &[
                 Field {
                     name: "gpioalpen",
-                    description: Some("GPIOA clock enable during sleep mode\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 0 }),
+                    description: Some(
+                        "GPIOA clock enable during sleep mode\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 0,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "gpioblpen",
-                    description: Some("GPIOB clock enable during sleep mode\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 1 }),
+                    description: Some(
+                        "GPIOB clock enable during sleep mode\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 1,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "gpioclpen",
-                    description: Some("GPIOC clock enable during sleep mode\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 2 }),
+                    description: Some(
+                        "GPIOC clock enable during sleep mode\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 2,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "gpiodlpen",
-                    description: Some("GPIOD clock enable during sleep mode\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 3 }),
+                    description: Some(
+                        "GPIOD clock enable during sleep mode\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 3,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "gpiohlpen",
-                    description: Some("GPIOH clock enable during sleep mode\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 7 }),
+                    description: Some(
+                        "GPIOH clock enable during sleep mode\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 7,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "adc1lpen",
-                    description: Some("ADC1 peripherals clock enable during sleep mode\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 10 }),
+                    description: Some(
+                        "ADC1 peripherals clock enable during sleep mode\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 10,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "dac1lpen",
-                    description: Some("DAC clock enable during sleep mode\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 11 }),
+                    description: Some(
+                        "DAC clock enable during sleep mode\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 11,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "hashlpen",
-                    description: Some("HASH clock enable during sleep mode\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 17 }),
+                    description: Some(
+                        "HASH clock enable during sleep mode\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 17,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "rnglpen",
-                    description: Some("RNG clock enable during sleep mode\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 18 }),
+                    description: Some(
+                        "RNG clock enable during sleep mode\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 18,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "sram2lpen",
-                    description: Some("SRAM2 clock enable during sleep mode\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 30 }),
+                    description: Some(
+                        "SRAM2 clock enable during sleep mode\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 30,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -773,77 +1262,133 @@ pub(crate) static REGISTERS: IR = IR {
         FieldSet {
             name: "Ahb2rstr",
             extends: None,
-            description: Some("RCC AHB2 peripheral reset register"),
+            description: Some(
+                "RCC AHB2 peripheral reset register",
+            ),
             bit_size: 32,
             fields: &[
                 Field {
                     name: "gpioarst",
-                    description: Some("GPIOA block reset\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 0 }),
+                    description: Some(
+                        "GPIOA block reset\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 0,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "gpiobrst",
-                    description: Some("GPIOB block reset\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 1 }),
+                    description: Some(
+                        "GPIOB block reset\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 1,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "gpiocrst",
-                    description: Some("GPIOC block reset\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 2 }),
+                    description: Some(
+                        "GPIOC block reset\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 2,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "gpiodrst",
-                    description: Some("GPIOD block reset\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 3 }),
+                    description: Some(
+                        "GPIOD block reset\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 3,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "gpiohrst",
-                    description: Some("GPIOH block reset\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 7 }),
+                    description: Some(
+                        "GPIOH block reset\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 7,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "adc1rst",
-                    description: Some("ADC1 block reset\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 10 }),
+                    description: Some(
+                        "ADC1 block reset\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 10,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "dac1rst",
-                    description: Some("DAC block reset\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 11 }),
+                    description: Some(
+                        "DAC block reset\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 11,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "hashrst",
-                    description: Some("HASH block reset\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 17 }),
+                    description: Some(
+                        "HASH block reset\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 17,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "rngrst",
-                    description: Some("RNG block reset\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 18 }),
+                    description: Some(
+                        "RNG block reset\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 18,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -853,29 +1398,49 @@ pub(crate) static REGISTERS: IR = IR {
         FieldSet {
             name: "Apb1henr",
             extends: None,
-            description: Some("RCC APB1 peripheral clock register"),
+            description: Some(
+                "RCC APB1 peripheral clock register",
+            ),
             bit_size: 32,
             fields: &[
                 Field {
                     name: "dtsen",
-                    description: Some("DTS clock enable\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 3 }),
+                    description: Some(
+                        "DTS clock enable\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 3,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "lptim2en",
-                    description: Some("LPTIM2 clock enable\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 5 }),
+                    description: Some(
+                        "LPTIM2 clock enable\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 5,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "fdcan12en",
-                    description: Some("FDCAN1 peripheral clock enable\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 9 }),
+                    description: Some(
+                        "FDCAN1 peripheral clock enable\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 9,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -885,29 +1450,49 @@ pub(crate) static REGISTERS: IR = IR {
         FieldSet {
             name: "Apb1hlpenr",
             extends: None,
-            description: Some("RCC APB1 sleep clock register"),
+            description: Some(
+                "RCC APB1 sleep clock register",
+            ),
             bit_size: 32,
             fields: &[
                 Field {
                     name: "dtslpen",
-                    description: Some("DTS clock enable during sleep mode\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 3 }),
+                    description: Some(
+                        "DTS clock enable during sleep mode\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 3,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "lptim2lpen",
-                    description: Some("LPTIM2 clock enable during sleep mode\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 5 }),
+                    description: Some(
+                        "LPTIM2 clock enable during sleep mode\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 5,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "fdcan12lpen",
-                    description: Some("FDCAN1 peripheral clock enable during sleep mode\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 9 }),
+                    description: Some(
+                        "FDCAN1 peripheral clock enable during sleep mode\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 9,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -917,29 +1502,49 @@ pub(crate) static REGISTERS: IR = IR {
         FieldSet {
             name: "Apb1hrstr",
             extends: None,
-            description: Some("RCC APB1 peripheral high reset register"),
+            description: Some(
+                "RCC APB1 peripheral high reset register",
+            ),
             bit_size: 32,
             fields: &[
                 Field {
                     name: "dtsrst",
-                    description: Some("DTS block reset\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 3 }),
+                    description: Some(
+                        "DTS block reset\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 3,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "lptim2rst",
-                    description: Some("LPTIM2 block reset\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 5 }),
+                    description: Some(
+                        "LPTIM2 block reset\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 5,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "fdcan12rst",
-                    description: Some("FDCAN1 block reset\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 9 }),
+                    description: Some(
+                        "FDCAN1 block reset\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 9,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -949,125 +1554,217 @@ pub(crate) static REGISTERS: IR = IR {
         FieldSet {
             name: "Apb1lenr",
             extends: None,
-            description: Some("RCC APB1 peripheral clock register"),
+            description: Some(
+                "RCC APB1 peripheral clock register",
+            ),
             bit_size: 32,
             fields: &[
                 Field {
                     name: "tim2en",
-                    description: Some("TIM2 clock enable\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 0 }),
+                    description: Some(
+                        "TIM2 clock enable\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 0,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "tim3en",
-                    description: Some("TIM3 clock enable\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 1 }),
+                    description: Some(
+                        "TIM3 clock enable\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 1,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "tim6en",
-                    description: Some("TIM6 clock enable\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 4 }),
+                    description: Some(
+                        "TIM6 clock enable\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 4,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "tim7en",
-                    description: Some("TIM7 clock enable\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 5 }),
+                    description: Some(
+                        "TIM7 clock enable\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 5,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "wwdgen",
-                    description: Some("WWDG clock enable\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 11 }),
+                    description: Some(
+                        "WWDG clock enable\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 11,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "opampen",
-                    description: Some("OPAMP clock enable\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 13 }),
+                    description: Some(
+                        "OPAMP clock enable\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 13,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "spi2en",
-                    description: Some("SPI2 clock enable\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 14 }),
+                    description: Some(
+                        "SPI2 clock enable\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 14,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "spi3en",
-                    description: Some("SPI3 clock enable\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 15 }),
+                    description: Some(
+                        "SPI3 clock enable\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 15,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "compen",
-                    description: Some("COMP clock enable\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 16 }),
+                    description: Some(
+                        "COMP clock enable\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 16,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "usart2en",
-                    description: Some("USART2 clock enable\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 17 }),
+                    description: Some(
+                        "USART2 clock enable\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 17,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "usart3en",
-                    description: Some("USART3 clock enable\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 18 }),
+                    description: Some(
+                        "USART3 clock enable\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 18,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "i2c1en",
-                    description: Some("I2C1 clock enable\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 21 }),
+                    description: Some(
+                        "I2C1 clock enable\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 21,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "i2c2en",
-                    description: Some("I2C2 clock enable\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 22 }),
+                    description: Some(
+                        "I2C2 clock enable\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 22,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "i3c1en",
-                    description: Some("I3C1 clock enable\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 23 }),
+                    description: Some(
+                        "I3C1 clock enable\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 23,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "crsen",
-                    description: Some("CRS clock enable\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 24 }),
+                    description: Some(
+                        "CRS clock enable\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 24,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -1077,125 +1774,217 @@ pub(crate) static REGISTERS: IR = IR {
         FieldSet {
             name: "Apb1llpenr",
             extends: None,
-            description: Some("RCC APB1 sleep clock register"),
+            description: Some(
+                "RCC APB1 sleep clock register",
+            ),
             bit_size: 32,
             fields: &[
                 Field {
                     name: "tim2lpen",
-                    description: Some("TIM2 clock enable during sleep mode\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 0 }),
+                    description: Some(
+                        "TIM2 clock enable during sleep mode\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 0,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "tim3lpen",
-                    description: Some("TIM3 clock enable during sleep mode\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 1 }),
+                    description: Some(
+                        "TIM3 clock enable during sleep mode\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 1,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "tim6lpen",
-                    description: Some("TIM6 clock enable during sleep mode\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 4 }),
+                    description: Some(
+                        "TIM6 clock enable during sleep mode\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 4,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "tim7lpen",
-                    description: Some("TIM7 clock enable during sleep mode\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 5 }),
+                    description: Some(
+                        "TIM7 clock enable during sleep mode\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 5,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "wwdglpen",
-                    description: Some("WWDG clock enable during sleep mode\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 11 }),
+                    description: Some(
+                        "WWDG clock enable during sleep mode\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 11,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "opamplpen",
-                    description: Some("OPAMP clock enable during sleep mode\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 13 }),
+                    description: Some(
+                        "OPAMP clock enable during sleep mode\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 13,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "spi2lpen",
-                    description: Some("SPI2 clock enable during sleep mode\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 14 }),
+                    description: Some(
+                        "SPI2 clock enable during sleep mode\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 14,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "spi3lpen",
-                    description: Some("SPI3 clock enable during sleep mode\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 15 }),
+                    description: Some(
+                        "SPI3 clock enable during sleep mode\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 15,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "complpen",
-                    description: Some("COMP clock enable during sleep mode\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 16 }),
+                    description: Some(
+                        "COMP clock enable during sleep mode\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 16,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "usart2lpen",
-                    description: Some("USART2 clock enable during sleep mode\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 17 }),
+                    description: Some(
+                        "USART2 clock enable during sleep mode\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 17,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "usart3lpen",
-                    description: Some("USART3 clock enable during sleep mode\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 18 }),
+                    description: Some(
+                        "USART3 clock enable during sleep mode\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 18,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "i2c1lpen",
-                    description: Some("I2C1 clock enable during sleep mode\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 21 }),
+                    description: Some(
+                        "I2C1 clock enable during sleep mode\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 21,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "i2c2lpen",
-                    description: Some("I2C2 clock enable during sleep mode\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 22 }),
+                    description: Some(
+                        "I2C2 clock enable during sleep mode\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 22,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "i3c1lpen",
-                    description: Some("I3C1 clock enable during sleep mode\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 23 }),
+                    description: Some(
+                        "I3C1 clock enable during sleep mode\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 23,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "crslpen",
-                    description: Some("CRS clock enable during sleep mode\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 24 }),
+                    description: Some(
+                        "CRS clock enable during sleep mode\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 24,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -1205,117 +1994,203 @@ pub(crate) static REGISTERS: IR = IR {
         FieldSet {
             name: "Apb1lrstr",
             extends: None,
-            description: Some("RCC APB1 peripheral low reset register"),
+            description: Some(
+                "RCC APB1 peripheral low reset register",
+            ),
             bit_size: 32,
             fields: &[
                 Field {
                     name: "tim2rst",
-                    description: Some("TIM2 block reset\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 0 }),
+                    description: Some(
+                        "TIM2 block reset\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 0,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "tim3rst",
-                    description: Some("TIM3 block reset\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 1 }),
+                    description: Some(
+                        "TIM3 block reset\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 1,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "tim6rst",
-                    description: Some("TIM6 block reset\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 4 }),
+                    description: Some(
+                        "TIM6 block reset\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 4,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "tim7rst",
-                    description: Some("TIM7 block reset\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 5 }),
+                    description: Some(
+                        "TIM7 block reset\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 5,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "opamprst",
-                    description: Some("OPAMP block reset\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 13 }),
+                    description: Some(
+                        "OPAMP block reset\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 13,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "spi2rst",
-                    description: Some("SPI2 block reset\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 14 }),
+                    description: Some(
+                        "SPI2 block reset\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 14,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "spi3rst",
-                    description: Some("SPI3 block reset\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 15 }),
+                    description: Some(
+                        "SPI3 block reset\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 15,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "comprst",
-                    description: Some("COMP block reset\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 16 }),
+                    description: Some(
+                        "COMP block reset\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 16,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "usart2rst",
-                    description: Some("USART2 block reset\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 17 }),
+                    description: Some(
+                        "USART2 block reset\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 17,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "usart3rst",
-                    description: Some("USART3 block reset\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 18 }),
+                    description: Some(
+                        "USART3 block reset\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 18,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "i2c1rst",
-                    description: Some("I2C1 block reset\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 21 }),
+                    description: Some(
+                        "I2C1 block reset\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 21,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "i2c2rst",
-                    description: Some("I2C2 block reset\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 22 }),
+                    description: Some(
+                        "I2C2 block reset\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 22,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "i3c1rst",
-                    description: Some("I3C1 block reset\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 23 }),
+                    description: Some(
+                        "I3C1 block reset\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 23,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "crsrst",
-                    description: Some("CRS block reset\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 24 }),
+                    description: Some(
+                        "CRS block reset\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 24,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -1325,37 +2200,63 @@ pub(crate) static REGISTERS: IR = IR {
         FieldSet {
             name: "Apb2enr",
             extends: None,
-            description: Some("RCC APB2 peripheral clock register"),
+            description: Some(
+                "RCC APB2 peripheral clock register",
+            ),
             bit_size: 32,
             fields: &[
                 Field {
                     name: "tim1en",
-                    description: Some("TIM1 clock enable\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 11 }),
+                    description: Some(
+                        "TIM1 clock enable\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 11,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "spi1en",
-                    description: Some("SPI1 clock enable\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 12 }),
+                    description: Some(
+                        "SPI1 clock enable\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 12,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "usart1en",
-                    description: Some("USART1 clock enable\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 14 }),
+                    description: Some(
+                        "USART1 clock enable\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 14,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "usben",
-                    description: Some("USB clock enable\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 24 }),
+                    description: Some(
+                        "USB clock enable\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 24,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -1365,37 +2266,63 @@ pub(crate) static REGISTERS: IR = IR {
         FieldSet {
             name: "Apb2lpenr",
             extends: None,
-            description: Some("RCC APB2 sleep clock register"),
+            description: Some(
+                "RCC APB2 sleep clock register",
+            ),
             bit_size: 32,
             fields: &[
                 Field {
                     name: "tim1lpen",
-                    description: Some("TIM1 clock enable during sleep mode\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 11 }),
+                    description: Some(
+                        "TIM1 clock enable during sleep mode\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 11,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "spi1lpen",
-                    description: Some("SPI1 clock enable during sleep mode\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 12 }),
+                    description: Some(
+                        "SPI1 clock enable during sleep mode\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 12,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "usart1lpen",
-                    description: Some("USART1 clock enable during sleep mode\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 14 }),
+                    description: Some(
+                        "USART1 clock enable during sleep mode\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 14,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "usblpen",
-                    description: Some("USB clock enable during sleep mode\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 24 }),
+                    description: Some(
+                        "USB clock enable during sleep mode\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 24,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -1405,37 +2332,63 @@ pub(crate) static REGISTERS: IR = IR {
         FieldSet {
             name: "Apb2rstr",
             extends: None,
-            description: Some("RCC APB2 peripheral reset register"),
+            description: Some(
+                "RCC APB2 peripheral reset register",
+            ),
             bit_size: 32,
             fields: &[
                 Field {
                     name: "tim1rst",
-                    description: Some("TIM1 block reset\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 11 }),
+                    description: Some(
+                        "TIM1 block reset\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 11,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "spi1rst",
-                    description: Some("SPI1 block reset\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 12 }),
+                    description: Some(
+                        "SPI1 block reset\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 12,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "usart1rst",
-                    description: Some("USART1 block reset\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 14 }),
+                    description: Some(
+                        "USART1 block reset\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 14,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "usbrst",
-                    description: Some("USB block reset\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 24 }),
+                    description: Some(
+                        "USB block reset\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 24,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -1445,53 +2398,91 @@ pub(crate) static REGISTERS: IR = IR {
         FieldSet {
             name: "Apb3enr",
             extends: None,
-            description: Some("RCC APB3 peripheral clock register"),
+            description: Some(
+                "RCC APB3 peripheral clock register",
+            ),
             bit_size: 32,
             fields: &[
                 Field {
                     name: "syscfgen",
-                    description: Some("SBS clock enable\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 1 }),
+                    description: Some(
+                        "SBS clock enable\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 1,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "lpuart1en",
-                    description: Some("LPUART1 clock enable\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 6 }),
+                    description: Some(
+                        "LPUART1 clock enable\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 6,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "i3c2en",
-                    description: Some("I3C2EN clock enable\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 9 }),
+                    description: Some(
+                        "I3C2EN clock enable\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 9,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "lptim1en",
-                    description: Some("LPTIM1 clock enable\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 11 }),
+                    description: Some(
+                        "LPTIM1 clock enable\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 11,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "vrefen",
-                    description: Some("VREF clock enable\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 20 }),
+                    description: Some(
+                        "VREF clock enable\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 20,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "rtcapben",
-                    description: Some("RTC APB interface clock enable\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 21 }),
+                    description: Some(
+                        "RTC APB interface clock enable\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 21,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -1501,53 +2492,91 @@ pub(crate) static REGISTERS: IR = IR {
         FieldSet {
             name: "Apb3lpenr",
             extends: None,
-            description: Some("RCC APB3 sleep clock register"),
+            description: Some(
+                "RCC APB3 sleep clock register",
+            ),
             bit_size: 32,
             fields: &[
                 Field {
                     name: "syscfglpen",
-                    description: Some("SBS clock enable during sleep mode\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 1 }),
+                    description: Some(
+                        "SBS clock enable during sleep mode\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 1,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "lpuart1lpen",
-                    description: Some("LPUART1 clock enable during sleep mode\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 6 }),
+                    description: Some(
+                        "LPUART1 clock enable during sleep mode\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 6,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "i3c2lpen",
-                    description: Some("I3C2 clock enable during sleep mode\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 9 }),
+                    description: Some(
+                        "I3C2 clock enable during sleep mode\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 9,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "lptim1lpen",
-                    description: Some("LPTIM1 clock enable during sleep mode\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 11 }),
+                    description: Some(
+                        "LPTIM1 clock enable during sleep mode\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 11,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "vreflpen",
-                    description: Some("VREF clock enable during sleep mode\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 20 }),
+                    description: Some(
+                        "VREF clock enable during sleep mode\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 20,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "rtcapblpen",
-                    description: Some("RTC APB interface clock enable during sleep mode\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 21 }),
+                    description: Some(
+                        "RTC APB interface clock enable during sleep mode\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 21,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -1557,45 +2586,77 @@ pub(crate) static REGISTERS: IR = IR {
         FieldSet {
             name: "Apb3rstr",
             extends: None,
-            description: Some("RCC APB3 peripheral reset register"),
+            description: Some(
+                "RCC APB3 peripheral reset register",
+            ),
             bit_size: 32,
             fields: &[
                 Field {
                     name: "syscfgrst",
-                    description: Some("SBS block reset\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 1 }),
+                    description: Some(
+                        "SBS block reset\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 1,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "lpuart1rst",
-                    description: Some("LPUART1 block reset\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 6 }),
+                    description: Some(
+                        "LPUART1 block reset\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 6,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "i3c2rst",
-                    description: Some("I3C2RST block reset\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 9 }),
+                    description: Some(
+                        "I3C2RST block reset\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 9,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "lptim1rst",
-                    description: Some("LPTIM1 block reset\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 11 }),
+                    description: Some(
+                        "LPTIM1 block reset\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 11,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "vrefrst",
-                    description: Some("VREF block reset\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 20 }),
+                    description: Some(
+                        "VREF block reset\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 20,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -1605,13 +2666,21 @@ pub(crate) static REGISTERS: IR = IR {
         FieldSet {
             name: "Bdcr",
             extends: None,
-            description: Some("RCC Backup domain control register"),
+            description: Some(
+                "RCC Backup domain control register",
+            ),
             bit_size: 32,
             fields: &[
                 Field {
                     name: "lseon",
-                    description: Some("LSE oscillator enabled\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 0 }),
+                    description: Some(
+                        "LSE oscillator enabled\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 0,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -1621,7 +2690,11 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "LSE oscillator ready\r Set and reset by hardware to indicate when the LSE is stable.\r This bit needs 6 cycles of lse_ck clock to fall down after LSEON has been set to 0.",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 1 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 1,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -1631,7 +2704,11 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "LSE oscillator bypass\r Set and reset by software to bypass oscillator in debug mode. This bit must not be written when the LSE is enabled (by LSEON) or ready (LSERDY = 1)",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 2 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 2,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -1641,17 +2718,27 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "LSE oscillator driving capability\r Set by software to select the driving capability of the LSE oscillator.\r These bit can be written only if LSE oscillator is disabled (LSEON = 0 and LSERDY = 0).",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 3 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 3,
+                        },
+                    ),
                     bit_size: 2,
                     array: None,
-                    enumm: Some("Lsedrv"),
+                    enumm: Some(
+                        "Lsedrv",
+                    ),
                 },
                 Field {
                     name: "lsecsson",
                     description: Some(
                         "LSE clock security system enable\r Set by software to enable the clock security system on 32 kHz oscillator.\r LSECSSON must be enabled after LSE is enabled (LSEON enabled) and ready (LSERDY set by hardware) and after RTCSEL is selected.\r Once enabled, this bit cannot be disabled, except after a LSE failure detection (LSECSSD = 1). In that case the software must disable LSECSSON.",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 5 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 5,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -1661,7 +2748,11 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "LSE clock security system failure detection\r Set by hardware to indicate when a failure has been detected by the clock security system on the external 32 kHz oscillator.",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 6 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 6,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -1671,57 +2762,101 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "low-speed external clock type in bypass mode\r Set and reset by software to select the external clock type (analog or digital).\r The external clock must be enabled with the LSEON bit, to be used by the device.\r The LSEEXT bit can be written only if the LSE oscillator is disabled.",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 7 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 7,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
-                    enumm: Some("Lseext"),
+                    enumm: Some(
+                        "Lseext",
+                    ),
                 },
                 Field {
                     name: "rtcsel",
                     description: Some(
                         "RTC clock source selection\r Set by software to select the clock source for the RTC.\r These bits can be written only one time (except in case of failure detection on LSE).\r These bits must be written before LSECSSON is enabled.\r The VSWRST bit can be used to reset them, then it can be written one time again.\r If HSE is selected as RTC clock, this clock is lost when the system is in Stop mode or in case of a pin reset (NRST).",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 8 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 8,
+                        },
+                    ),
                     bit_size: 2,
                     array: None,
-                    enumm: Some("Rtcsel"),
+                    enumm: Some(
+                        "Rtcsel",
+                    ),
                 },
                 Field {
                     name: "rtcen",
-                    description: Some("RTC clock enable\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 15 }),
+                    description: Some(
+                        "RTC clock enable\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 15,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "vswrst",
-                    description: Some("VSwitch domain software reset\r Set and reset by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 16 }),
+                    description: Some(
+                        "VSwitch domain software reset\r Set and reset by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 16,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "lscoen",
-                    description: Some("Low-speed clock output (LSCO) enable\r Set and cleared by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 24 }),
+                    description: Some(
+                        "Low-speed clock output (LSCO) enable\r Set and cleared by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 24,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
                 },
                 Field {
                     name: "lscosel",
-                    description: Some("Low-speed clock output selection\r Set and cleared by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 25 }),
+                    description: Some(
+                        "Low-speed clock output selection\r Set and cleared by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 25,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
-                    enumm: Some("Lscosel"),
+                    enumm: Some(
+                        "Lscosel",
+                    ),
                 },
                 Field {
                     name: "lsion",
-                    description: Some("LSI oscillator enable\r Set and cleared by software."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 26 }),
+                    description: Some(
+                        "LSI oscillator enable\r Set and cleared by software.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 26,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -1731,7 +2866,11 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "LSI oscillator ready\r Set and cleared by hardware to indicate when the LSI oscillator is stable.\r After the LSION bit is cleared, LSIRDY goes low after three internal low-speed oscillator clock cycles.\r This bit is set when the LSI is used by IWDG or RTC, even if LSION = 0.",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 27 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 27,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -1741,7 +2880,9 @@ pub(crate) static REGISTERS: IR = IR {
         FieldSet {
             name: "Ccipr1",
             extends: None,
-            description: Some("RCC kernel clock configuration register"),
+            description: Some(
+                "RCC kernel clock configuration register",
+            ),
             bit_size: 32,
             fields: &[
                 Field {
@@ -1749,47 +2890,73 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "USART1 kernel clock source selection\r Set and reset by software.\r others: reserved, the kernel clock is disabled",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 0 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 0,
+                        },
+                    ),
                     bit_size: 3,
                     array: None,
-                    enumm: Some("Usart1sel"),
+                    enumm: Some(
+                        "Usart1sel",
+                    ),
                 },
                 Field {
                     name: "usart2sel",
                     description: Some(
                         "USART2 kernel clock source selection\r Set and reset by software.\r others: reserved, the kernel clock is disabled",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 3 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 3,
+                        },
+                    ),
                     bit_size: 3,
                     array: None,
-                    enumm: Some("Usartsel"),
+                    enumm: Some(
+                        "Usartsel",
+                    ),
                 },
                 Field {
                     name: "usart3sel",
                     description: Some(
                         "USART3 kernel clock source selection\r Set and reset by software.\r others: reserved, the kernel clock is disabled",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 6 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 6,
+                        },
+                    ),
                     bit_size: 3,
                     array: None,
-                    enumm: Some("Usartsel"),
+                    enumm: Some(
+                        "Usartsel",
+                    ),
                 },
                 Field {
                     name: "timicsel",
                     description: Some(
                         "TIM2, TIM3 and LPTIM2 input capture source selection\r Set and reset by software.",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 31 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 31,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
-                    enumm: Some("Timicsel"),
+                    enumm: Some(
+                        "Timicsel",
+                    ),
                 },
             ],
         },
         FieldSet {
             name: "Ccipr2",
             extends: None,
-            description: Some("RCC kernel clock configuration register"),
+            description: Some(
+                "RCC kernel clock configuration register",
+            ),
             bit_size: 32,
             fields: &[
                 Field {
@@ -1797,27 +2964,41 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "LPTIM1 kernel clock source selection\r others: reserved, the kernel clock is disabled",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 8 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 8,
+                        },
+                    ),
                     bit_size: 3,
                     array: None,
-                    enumm: Some("Lptim1sel"),
+                    enumm: Some(
+                        "Lptim1sel",
+                    ),
                 },
                 Field {
                     name: "lptim2sel",
                     description: Some(
                         "LPTIM2 kernel clock source selection\r others: reserved, the kernel clock is disabled",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 12 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 12,
+                        },
+                    ),
                     bit_size: 3,
                     array: None,
-                    enumm: Some("Lptim2sel"),
+                    enumm: Some(
+                        "Lptim2sel",
+                    ),
                 },
             ],
         },
         FieldSet {
             name: "Ccipr3",
             extends: None,
-            description: Some("RCC kernel clock configuration register"),
+            description: Some(
+                "RCC kernel clock configuration register",
+            ),
             bit_size: 32,
             fields: &[
                 Field {
@@ -1825,47 +3006,73 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "SPI1 kernel clock source selection\r Set and reset by software.\r others: reserved, the kernel clock is disabled",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 0 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 0,
+                        },
+                    ),
                     bit_size: 3,
                     array: None,
-                    enumm: Some("Spisel"),
+                    enumm: Some(
+                        "Spisel",
+                    ),
                 },
                 Field {
                     name: "spi2sel",
                     description: Some(
                         "SPI2 kernel clock source selection\r Set and reset by software.\r others: reserved, the kernel clock is disabled",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 3 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 3,
+                        },
+                    ),
                     bit_size: 3,
                     array: None,
-                    enumm: Some("Spisel"),
+                    enumm: Some(
+                        "Spisel",
+                    ),
                 },
                 Field {
                     name: "spi3sel",
                     description: Some(
                         "SPI3 kernel clock source selection\r Set and reset by software.\r others: reserved, the kernel clock is disabled",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 6 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 6,
+                        },
+                    ),
                     bit_size: 3,
                     array: None,
-                    enumm: Some("Spisel"),
+                    enumm: Some(
+                        "Spisel",
+                    ),
                 },
                 Field {
                     name: "lpuart1sel",
                     description: Some(
                         "LPUART1 kernel clock source selection\r others: reserved, the kernel clock is disabled",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 24 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 24,
+                        },
+                    ),
                     bit_size: 3,
                     array: None,
-                    enumm: Some("Lpuartsel"),
+                    enumm: Some(
+                        "Lpuartsel",
+                    ),
                 },
             ],
         },
         FieldSet {
             name: "Ccipr4",
             extends: None,
-            description: Some("RCC kernel clock configuration register"),
+            description: Some(
+                "RCC kernel clock configuration register",
+            ),
             bit_size: 32,
             fields: &[
                 Field {
@@ -1873,57 +3080,105 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "SYSTICK clock source selection\r Note: rcc_hclk frequency must be four times higher than\r lsi_ker_ck/lse_ck (period (LSI/LSE) ≥ 4 * period (HCLK).",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 2 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 2,
+                        },
+                    ),
                     bit_size: 2,
                     array: None,
-                    enumm: Some("Systicksel"),
+                    enumm: Some(
+                        "Systicksel",
+                    ),
                 },
                 Field {
                     name: "usbsel",
-                    description: Some("USB kernel clock source selection"),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 4 }),
+                    description: Some(
+                        "USB kernel clock source selection",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 4,
+                        },
+                    ),
                     bit_size: 2,
                     array: None,
-                    enumm: Some("Usbsel"),
+                    enumm: Some(
+                        "Usbsel",
+                    ),
                 },
                 Field {
                     name: "i2c1sel",
-                    description: Some("I2C1 kernel clock source selection"),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 16 }),
+                    description: Some(
+                        "I2C1 kernel clock source selection",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 16,
+                        },
+                    ),
                     bit_size: 2,
                     array: None,
-                    enumm: Some("I2csel"),
+                    enumm: Some(
+                        "I2csel",
+                    ),
                 },
                 Field {
                     name: "i2c2sel",
-                    description: Some("I2C2 kernel clock source selection"),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 18 }),
+                    description: Some(
+                        "I2C2 kernel clock source selection",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 18,
+                        },
+                    ),
                     bit_size: 2,
                     array: None,
-                    enumm: Some("I2csel"),
+                    enumm: Some(
+                        "I2csel",
+                    ),
                 },
                 Field {
                     name: "i3c1sel",
-                    description: Some("I3C1 kernel clock source selection"),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 24 }),
+                    description: Some(
+                        "I3C1 kernel clock source selection",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 24,
+                        },
+                    ),
                     bit_size: 2,
                     array: None,
-                    enumm: Some("I2csel"),
+                    enumm: Some(
+                        "I2csel",
+                    ),
                 },
                 Field {
                     name: "i3c2sel",
-                    description: Some("I3C2 kernel clock source selection"),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 26 }),
+                    description: Some(
+                        "I3C2 kernel clock source selection",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 26,
+                        },
+                    ),
                     bit_size: 2,
                     array: None,
-                    enumm: Some("I3c2sel"),
+                    enumm: Some(
+                        "I3c2sel",
+                    ),
                 },
             ],
         },
         FieldSet {
             name: "Ccipr5",
             extends: None,
-            description: Some("RCC kernel clock configuration register"),
+            description: Some(
+                "RCC kernel clock configuration register",
+            ),
             bit_size: 32,
             fields: &[
                 Field {
@@ -1931,49 +3186,89 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "ADC and DAC kernel clock source selection\r others: reserved, the kernel clock is disabled",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 0 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 0,
+                        },
+                    ),
                     bit_size: 3,
                     array: None,
-                    enumm: Some("Adcdacsel"),
+                    enumm: Some(
+                        "Adcdacsel",
+                    ),
                 },
                 Field {
                     name: "dacholdsel",
-                    description: Some("DAC hold clock"),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 3 }),
+                    description: Some(
+                        "DAC hold clock",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 3,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
-                    enumm: Some("Dacholdsel"),
+                    enumm: Some(
+                        "Dacholdsel",
+                    ),
                 },
                 Field {
                     name: "rngsel",
-                    description: Some("RNG kernel clock source selection"),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 4 }),
+                    description: Some(
+                        "RNG kernel clock source selection",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 4,
+                        },
+                    ),
                     bit_size: 2,
                     array: None,
-                    enumm: Some("Rngsel"),
+                    enumm: Some(
+                        "Rngsel",
+                    ),
                 },
                 Field {
                     name: "fdcan12sel",
-                    description: Some("FDCAN1 kernel clock source selection"),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 8 }),
+                    description: Some(
+                        "FDCAN1 kernel clock source selection",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 8,
+                        },
+                    ),
                     bit_size: 2,
                     array: None,
-                    enumm: Some("Fdcansel"),
+                    enumm: Some(
+                        "Fdcansel",
+                    ),
                 },
                 Field {
                     name: "persel",
-                    description: Some("per_ck clock source selection"),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 30 }),
+                    description: Some(
+                        "per_ck clock source selection",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 30,
+                        },
+                    ),
                     bit_size: 2,
                     array: None,
-                    enumm: Some("Persel"),
+                    enumm: Some(
+                        "Persel",
+                    ),
                 },
             ],
         },
         FieldSet {
             name: "Cfgr",
             extends: None,
-            description: Some("RCC clock configuration register"),
+            description: Some(
+                "RCC clock configuration register",
+            ),
             bit_size: 32,
             fields: &[
                 Field {
@@ -1981,47 +3276,75 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "system clock and trace clock switch\r Set and reset by software to select system clock and trace clock sources (sys_ck).\r Set by hardware in order to:\r -\tforce the selection of the HSI or CSI (depending on STOPWUCK selection) when leaving a system Stop mode\r -\tforce the selection of the HSI in case of failure of the HSE when used directly or indirectly as system clock\r others: reserved",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 0 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 0,
+                        },
+                    ),
                     bit_size: 3,
                     array: None,
-                    enumm: Some("Sw"),
+                    enumm: Some(
+                        "Sw",
+                    ),
                 },
                 Field {
                     name: "sws",
                     description: Some(
                         "system clock switch status\r Set and reset by hardware to indicate which clock source is used as system clock. 000: HSI used as system clock (hsi_ck) (default after reset).\r others: reserved",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 3 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 3,
+                        },
+                    ),
                     bit_size: 3,
                     array: None,
-                    enumm: Some("Sw"),
+                    enumm: Some(
+                        "Sw",
+                    ),
                 },
                 Field {
                     name: "stopwuck",
                     description: Some(
                         "system clock selection after a wakeup from system Stop\r Set and reset by software to select the system wakeup clock from system Stop.\r The selected clock is also used as emergency clock for the clock security system (CSS) on HSE. 0: HSI selected as wakeup clock from system Stop (default after reset)\r STOPWUCK must not be modified when CSS is enabled (by HSECSSON bit) and the system clock is HSE (SWS = 10) or a switch on HSE is requested (SW =10).",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 6 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 6,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
-                    enumm: Some("Stopwuck"),
+                    enumm: Some(
+                        "Stopwuck",
+                    ),
                 },
                 Field {
                     name: "stopkerwuck",
                     description: Some(
                         "kernel clock selection after a wakeup from system Stop\r Set and reset by software to select the kernel wakeup clock from system Stop.",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 7 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 7,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
-                    enumm: Some("Stopkerwuck"),
+                    enumm: Some(
+                        "Stopkerwuck",
+                    ),
                 },
                 Field {
                     name: "rtcpre",
                     description: Some(
                         "HSE division factor for RTC clock\r Set and cleared by software to divide the HSE to generate a clock for RTC.\r Caution: The software must set these bits correctly to ensure that the clock supplied to the RTC is lower than 1 MHz. These bits must be configured if needed before selecting the RTC clock source.\r ...",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 8 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 8,
+                        },
+                    ),
                     bit_size: 6,
                     array: None,
                     enumm: None,
@@ -2031,57 +3354,89 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "timers clocks prescaler selection\r This bit is set and reset by software to control the clock frequency of all the timers connected to APB1 and APB2 domains.",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 15 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 15,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
-                    enumm: Some("Timpre"),
+                    enumm: Some(
+                        "Timpre",
+                    ),
                 },
                 Field {
                     name: "mco1pre",
                     description: Some(
                         "MCO1 prescaler\r Set and cleared by software to configure the prescaler of the MCO1. Modification of this prescaler may generate glitches on MCO1. It is highly recommended to change this prescaler only after reset, before enabling the external oscillators and the PLLs.\r ...",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 18 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 18,
+                        },
+                    ),
                     bit_size: 4,
                     array: None,
-                    enumm: Some("Mcopre"),
+                    enumm: Some(
+                        "Mcopre",
+                    ),
                 },
                 Field {
                     name: "mco1sel",
                     description: Some(
                         "Microcontroller clock output 1\r Set and cleared by software. Clock source selection may generate glitches on MCO1.\r It is highly recommended to configure these bits only after reset, before enabling the external oscillators and the PLLs.\r others: reserved",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 22 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 22,
+                        },
+                    ),
                     bit_size: 3,
                     array: None,
-                    enumm: Some("Mco1sel"),
+                    enumm: Some(
+                        "Mco1sel",
+                    ),
                 },
                 Field {
                     name: "mco2pre",
                     description: Some(
                         "MCO2 prescaler\r Set and cleared by software to configure the prescaler of the MCO2. Modification of this prescaler may generate glitches on MCO2. It is highly recommended to change this prescaler only after reset, before enabling the external oscillators and the PLLs.\r ...",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 25 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 25,
+                        },
+                    ),
                     bit_size: 4,
                     array: None,
-                    enumm: Some("Mcopre"),
+                    enumm: Some(
+                        "Mcopre",
+                    ),
                 },
                 Field {
                     name: "mco2sel",
                     description: Some(
                         "microcontroller clock output 2\r Set and cleared by software. Clock source selection may generate glitches on MCO2.\r It is highly recommended to configure these bits only after reset, before enabling the external oscillators and the PLLs.\r others: reserved",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 29 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 29,
+                        },
+                    ),
                     bit_size: 3,
                     array: None,
-                    enumm: Some("Mco2sel"),
+                    enumm: Some(
+                        "Mco2sel",
+                    ),
                 },
             ],
         },
         FieldSet {
             name: "Cfgr2",
             extends: None,
-            description: Some("RCC CPU domain clock configuration register 2"),
+            description: Some(
+                "RCC CPU domain clock configuration register 2",
+            ),
             bit_size: 32,
             fields: &[
                 Field {
@@ -2089,47 +3444,75 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "AHB prescaler\r Set and reset by software to control the division factor of rcc_hclk. Changing\r this division ratio has an impact on the frequency of all bus matrix clocks\r 0xxx: rcc_hclk = sys_ck (default after reset)",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 0 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 0,
+                        },
+                    ),
                     bit_size: 4,
                     array: None,
-                    enumm: Some("Hpre"),
+                    enumm: Some(
+                        "Hpre",
+                    ),
                 },
                 Field {
                     name: "ppre1",
                     description: Some(
                         "APB low-speed prescaler (APB1)\r Set and reset by software to control the division factor of rcc_pclk1.\r The clock is divided by the new prescaler factor from 1 to 16 cycles of rcc_hclk after PPRE write.\r 0xx: rcc_pclk1 = rcc_hclk1 (default after reset)",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 4 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 4,
+                        },
+                    ),
                     bit_size: 3,
                     array: None,
-                    enumm: Some("Ppre"),
+                    enumm: Some(
+                        "Ppre",
+                    ),
                 },
                 Field {
                     name: "ppre2",
                     description: Some(
                         "APB high-speed prescaler (APB2)\r Set and reset by software to control APB high-speed clocks division factor.\r The clocks are divided with the new prescaler factor from 1 to 16 APB cycles after PPRE2 write.\r 0xx: rcc_pclk2 = rcc_hclk1",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 8 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 8,
+                        },
+                    ),
                     bit_size: 3,
                     array: None,
-                    enumm: Some("Ppre"),
+                    enumm: Some(
+                        "Ppre",
+                    ),
                 },
                 Field {
                     name: "ppre3",
                     description: Some(
                         "APB low-speed prescaler (APB3)\r Set and reset by software to control APB low-speed clocks division factor.\r The clocks are divided with the new prescaler factor from 1 to 16 APB cycles after PPRE3 write.\r 0xx: rcc_pclk3 = rcc_hclk1",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 12 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 12,
+                        },
+                    ),
                     bit_size: 3,
                     array: None,
-                    enumm: Some("Ppre"),
+                    enumm: Some(
+                        "Ppre",
+                    ),
                 },
                 Field {
                     name: "ahb1dis",
                     description: Some(
                         "AHB1 clock disable\r This bit can be set in order to further reduce power consumption, when none of the AHB1\r peripherals from RCC_AHB1ENR are used and when their clocks are disabled in\r RCC_AHB1ENR. When this bit is set, all the AHB1 peripherals clocks from\r RCC_AHB1ENR are off.\r enable control bits",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 16 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 16,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -2139,7 +3522,11 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "AHB2 clock disable\r This bit can be set in order to further reduce power consumption, when none of the AHB2\r peripherals from RCC_AHB2ENR are used and when their clocks are disabled in\r RCC_AHB2ENR. When this bit is set, all the AHB2 peripherals clocks from\r RCC_AHB2ENR are off.\r enable control bits",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 17 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 17,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -2149,7 +3536,11 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "AHB4 clock disable\r This bit can be set in order to further reduce power consumption, when none of the AHB4\r peripherals from RCC_AHB4ENR are used and when their clocks are disabled in\r RCC_AHB4ENR. When this bit is set, all the AHB4 peripherals clocks from\r RCC_AHB4ENR are off.\r enable control bits",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 19 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 19,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -2159,7 +3550,11 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "APB1 clock disable value\r This bit can be set in order to further reduce power consumption, when none of the APB1\r peripherals (except IWDG) are used and when their clocks are disabled in RCC_APB1ENR.\r When this bit is set, all the APB1 peripherals clocks are off, except for IWDG.\r control bits",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 20 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 20,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -2169,7 +3564,11 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "APB2 clock disable value\r This bit can be set in order to further reduce power consumption, when none of the APB2\r peripherals are used and when their clocks are disabled in RCC_APB2ENR. When this bit is\r set, all the APB2 peripherals clocks are off.\r control bits",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 21 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 21,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -2179,7 +3578,11 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "APB3 clock disable value.Set and cleared by software\r This bit can be set in order to further reduce power consumption, when none of the APB3\r peripherals are used and when their clocks are disabled in RCC_APB3ENR. When this bit is\r set, all the APB3 peripherals clocks are off.\r control bits",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 22 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 22,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -2189,7 +3592,9 @@ pub(crate) static REGISTERS: IR = IR {
         FieldSet {
             name: "Cicr",
             extends: None,
-            description: Some("RCC clock source interrupt clear register"),
+            description: Some(
+                "RCC clock source interrupt clear register",
+            ),
             bit_size: 32,
             fields: &[
                 Field {
@@ -2197,7 +3602,11 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "LSI ready interrupt clear\r Set by software to clear LSIRDYF.\r Reset by hardware when clear done.",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 0 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 0,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -2207,7 +3616,11 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "LSE ready interrupt clear\r Set by software to clear LSERDYF.\r Reset by hardware when clear done.",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 1 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 1,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -2217,7 +3630,11 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "HSI ready interrupt clear\r Set by software to clear CSIRDYF.\r Reset by hardware when clear done.",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 2 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 2,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -2227,7 +3644,11 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "HSI ready interrupt clear\r Set by software to clear HSIRDYF.\r Reset by hardware when clear done.",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 3 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 3,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -2237,7 +3658,11 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "HSE ready interrupt clear\r Set by software to clear HSERDYF.\r Reset by hardware when clear done.",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 4 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 4,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -2247,7 +3672,11 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "HSI48 ready interrupt clear\r Set by software to clear HSI48RDYF.\r Reset by hardware when clear done.",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 5 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 5,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -2257,9 +3686,20 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "PLL1 ready interrupt clear\r Set by software to clear PLL1RDYF.\r Reset by hardware when clear done.",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 6 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 6,
+                        },
+                    ),
                     bit_size: 1,
-                    array: Some(Array::Regular(RegularArray { len: 2, stride: 1 })),
+                    array: Some(
+                        Array::Regular(
+                            RegularArray {
+                                len: 2,
+                                stride: 1,
+                            },
+                        ),
+                    ),
                     enumm: None,
                 },
                 Field {
@@ -2267,7 +3707,11 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "HSE clock security system interrupt clear\r Set by software to clear HSECSSF.\r Reset by hardware when clear done.",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 10 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 10,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -2277,7 +3721,9 @@ pub(crate) static REGISTERS: IR = IR {
         FieldSet {
             name: "Cier",
             extends: None,
-            description: Some("RCC clock source interrupt enable register"),
+            description: Some(
+                "RCC clock source interrupt enable register",
+            ),
             bit_size: 32,
             fields: &[
                 Field {
@@ -2285,7 +3731,11 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "LSI ready interrupt enable\r Set and reset by software to enable/disable interrupt caused by the LSI oscillator stabilization.",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 0 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 0,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -2295,7 +3745,11 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "LSE ready interrupt enable\r Set and reset by software to enable/disable interrupt caused by the LSE oscillator stabilization.",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 1 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 1,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -2305,7 +3759,11 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "CSI ready interrupt enable\r Set and reset by software to enable/disable interrupt caused by the CSI oscillator stabilization.",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 2 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 2,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -2315,7 +3773,11 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "HSI ready interrupt enable\r Set and reset by software to enable/disable interrupt caused by the HSI oscillator stabilization.",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 3 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 3,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -2325,7 +3787,11 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "HSE ready interrupt enable\r Set and reset by software to enable/disable interrupt caused by the HSE oscillator stabilization.",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 4 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 4,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -2335,7 +3801,11 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "HSI48 ready interrupt enable\r Set and reset by software to enable/disable interrupt caused by the HSI48 oscillator stabilization.",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 5 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 5,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -2345,9 +3815,20 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "PLL1 ready interrupt enable\r Set and reset by software to enable/disable interrupt caused by PLL1 lock.",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 6 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 6,
+                        },
+                    ),
                     bit_size: 1,
-                    array: Some(Array::Regular(RegularArray { len: 2, stride: 1 })),
+                    array: Some(
+                        Array::Regular(
+                            RegularArray {
+                                len: 2,
+                                stride: 1,
+                            },
+                        ),
+                    ),
                     enumm: None,
                 },
             ],
@@ -2355,7 +3836,9 @@ pub(crate) static REGISTERS: IR = IR {
         FieldSet {
             name: "Cifr",
             extends: None,
-            description: Some("RCC clock source interrupt flag register"),
+            description: Some(
+                "RCC clock source interrupt flag register",
+            ),
             bit_size: 32,
             fields: &[
                 Field {
@@ -2363,7 +3846,11 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "LSI ready interrupt flag\r Reset by software by writing LSIRDYC bit.\r Set by hardware when the LSI clock becomes stable and LSIRDYIE is set.",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 0 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 0,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -2373,7 +3860,11 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "LSE ready interrupt flag\r Reset by software by writing LSERDYC bit.\r Set by hardware when the LSE clock becomes stable and LSERDYIE is set.",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 1 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 1,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -2383,7 +3874,11 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "CSI ready interrupt flag\r Reset by software by writing CSIRDYC bit.\r Set by hardware when the CSI clock becomes stable and CSIRDYIE is set.",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 2 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 2,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -2393,7 +3888,11 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "HSI ready interrupt flag\r Reset by software by writing HSIRDYC bit.\r Set by hardware when the HSI clock becomes stable and HSIRDYIE is set.",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 3 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 3,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -2403,7 +3902,11 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "HSE ready interrupt flag\r Reset by software by writing HSERDYC bit.\r Set by hardware when the HSE clock becomes stable and HSERDYIE is set.",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 4 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 4,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -2413,7 +3916,11 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "HSI48 ready interrupt flag\r Reset by software by writing HSI48RDYC bit.\r Set by hardware when the HSI48 clock becomes stable and HSI48RDYIE is set.",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 5 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 5,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -2423,9 +3930,20 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "PLL1 ready interrupt flag\r Reset by software by writing PLL1RDYC bit.\r Set by hardware when the PLL1 locks and PLL1RDYIE is set.",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 6 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 6,
+                        },
+                    ),
                     bit_size: 1,
-                    array: Some(Array::Regular(RegularArray { len: 2, stride: 1 })),
+                    array: Some(
+                        Array::Regular(
+                            RegularArray {
+                                len: 2,
+                                stride: 1,
+                            },
+                        ),
+                    ),
                     enumm: None,
                 },
                 Field {
@@ -2433,7 +3951,11 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "HSE clock security system interrupt flag\r Reset by software by writing HSECSSC bit.\r Set by hardware in case of HSE clock failure.",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 10 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 10,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -2443,7 +3965,9 @@ pub(crate) static REGISTERS: IR = IR {
         FieldSet {
             name: "Cr",
             extends: None,
-            description: Some("RCC clock control register"),
+            description: Some(
+                "RCC clock control register",
+            ),
             bit_size: 32,
             fields: &[
                 Field {
@@ -2451,7 +3975,11 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "HSI clock enable\r Set and cleared by software.\r Set by hardware to force the HSI to ON when the product leaves Stop mode, if STOPWUCK = 1 or STOPKERWUCK = 1.\r Set by hardware to force the HSI to ON when the product leaves Standby mode or in case of a failure of the HSE which is used as the system clock source.\r This bit cannot be cleared if the HSI is used directly (via SW mux) as system clock, or if the HSI is selected as reference clock for PLL1 with PLL1 enabled (PLL1ON bit set to 1).",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 0 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 0,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -2461,7 +3989,11 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "HSI clock ready flag\r Set by hardware to indicate that the HSI oscillator is stable.",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 1 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 1,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -2471,7 +4003,11 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "HSI clock enable in Stop mode\r Set and reset by software to force the HSI to ON, even in Stop mode, in order to be quickly available as kernel clock for peripherals. This bit has no effect on the value of HSION.",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 2 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 2,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -2481,17 +4017,27 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "HSI clock divider\r Set and reset by software.\r These bits allow selecting a division ratio in order to configure the wanted HSI clock frequency. The\r HSIDIV cannot be changed if the HSI is selected as reference clock for at least one enabled PLL (PLLxON bit set to 1). In that case, the new HSIDIV value is ignored.",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 3 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 3,
+                        },
+                    ),
                     bit_size: 2,
                     array: None,
-                    enumm: Some("Hsidiv"),
+                    enumm: Some(
+                        "Hsidiv",
+                    ),
                 },
                 Field {
                     name: "hsidivf",
                     description: Some(
                         "HSI divider flag\r Set and reset by hardware.\r As a write operation to HSIDIV has not an immediate effect on the frequency, this flag indicates the\r current status of the HSI divider. HSIDIVF goes immediately to 0 when HSIDIV value is changed, and is set back to 1 when the output frequency matches the value programmed into HSIDIV.",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 5 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 5,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -2501,7 +4047,11 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "CSI clock enable\r Set and reset by software to enable/disable CSI clock for system and/or peripheral.\r Set by hardware to force the CSI to ON when the system leaves Stop mode, if STOPWUCK = 1 or STOPKERWUCK = 1.\r This bit cannot be cleared if the CSI is used directly (via SW mux) as system clock, or if the CSI is selected as reference clock for PLL1 with PLL1 enabled (PLL1ON bit set to 1).",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 8 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 8,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -2511,7 +4061,11 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "CSI clock ready flag\r Set by hardware to indicate that the CSI oscillator is stable. This bit is activated only if the RC is enabled by CSION (it is not activated if the CSI is enabled by CSIKERON or by a peripheral request).",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 9 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 9,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -2521,7 +4075,11 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "CSI clock enable in Stop mode\r Set and reset by software to force the CSI to ON, even in Stop mode, in order to be quickly available as kernel clock for some peripherals. This bit has no effect on the value of CSION.",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 10 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 10,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -2531,7 +4089,11 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "HSI48 clock enable\r Set by software and cleared by software or by the hardware when the system enters to Stop\r or Standby mode.",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 12 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 12,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -2541,7 +4103,11 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "HSI48 clock ready flag\r Set by hardware to indicate that the HSI48 oscillator is stable.",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 13 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 13,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -2551,7 +4117,11 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "HSE clock enable\r Set and cleared by software.\r Cleared by hardware to stop the HSE when entering Stop or Standby mode.\r This bit cannot be cleared if the HSE is used directly (via SW mux) as system clock, or if the\r HSE is selected as reference clock for PLL1 with PLL1 enabled (PLL1ON bit set to 1).",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 16 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 16,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -2561,7 +4131,11 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "HSE clock ready flag\r Set by hardware to indicate that the HSE oscillator is stable.",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 17 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 17,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -2571,7 +4145,11 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "HSE clock bypass\r Set and cleared by software to bypass the oscillator with an external clock. The external clock must be enabled with the HSEON bit to be used by the device.\r The HSEBYP bit can be written only if the HSE oscillator is disabled.",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 18 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 18,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -2581,7 +4159,11 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "HSE clock security system enable\r Set by software to enable clock security system on HSE.\r This bit is “set only” (disabled by a system reset or when the system enters in Standby mode). When HSECSSON is set, the clock detector is enabled by hardware when the HSE is ready and disabled by hardware if an oscillator failure is detected.",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 19 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 19,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -2591,27 +4173,57 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "external high speed clock type in Bypass mode\r Set and reset by software to select the external clock type (analog or digital).\r The external clock must be enabled with the HSEON bit to be used by the device. The HSEEXT bit can be written only if the HSE oscillator is disabled.",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 20 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 20,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
-                    enumm: Some("Hseext"),
+                    enumm: Some(
+                        "Hseext",
+                    ),
                 },
                 Field {
                     name: "pllon",
                     description: Some(
                         "PLL1 enable\r Set and cleared by software to enable PLL1.\r Cleared by hardware when entering Stop or Standby mode. Note that the hardware prevents\r writing this bit to 0, if the PLL1 output is used as the system clock.",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 24 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 24,
+                        },
+                    ),
                     bit_size: 1,
-                    array: Some(Array::Regular(RegularArray { len: 2, stride: 2 })),
+                    array: Some(
+                        Array::Regular(
+                            RegularArray {
+                                len: 2,
+                                stride: 2,
+                            },
+                        ),
+                    ),
                     enumm: None,
                 },
                 Field {
                     name: "pllrdy",
-                    description: Some("PLL1 clock ready flag\r Set by hardware to indicate that the PLL1 is locked."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 25 }),
+                    description: Some(
+                        "PLL1 clock ready flag\r Set by hardware to indicate that the PLL1 is locked.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 25,
+                        },
+                    ),
                     bit_size: 1,
-                    array: Some(Array::Regular(RegularArray { len: 2, stride: 2 })),
+                    array: Some(
+                        Array::Regular(
+                            RegularArray {
+                                len: 2,
+                                stride: 2,
+                            },
+                        ),
+                    ),
                     enumm: None,
                 },
             ],
@@ -2619,23 +4231,33 @@ pub(crate) static REGISTERS: IR = IR {
         FieldSet {
             name: "Crrcr",
             extends: None,
-            description: Some("RCC clock recovery RC register"),
+            description: Some(
+                "RCC clock recovery RC register",
+            ),
             bit_size: 32,
-            fields: &[Field {
-                name: "hsi48cal",
-                description: Some(
-                    "Internal RC 48 MHz clock calibration\r Set by hardware by option-byte loading during system reset NRESET. Read-only.",
-                ),
-                bit_offset: BitOffset::Regular(RegularBitOffset { offset: 0 }),
-                bit_size: 10,
-                array: None,
-                enumm: None,
-            }],
+            fields: &[
+                Field {
+                    name: "hsi48cal",
+                    description: Some(
+                        "Internal RC 48 MHz clock calibration\r Set by hardware by option-byte loading during system reset NRESET. Read-only.",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 0,
+                        },
+                    ),
+                    bit_size: 10,
+                    array: None,
+                    enumm: None,
+                },
+            ],
         },
         FieldSet {
             name: "Csicfgr",
             extends: None,
-            description: Some("RCC CSI calibration register"),
+            description: Some(
+                "RCC CSI calibration register",
+            ),
             bit_size: 32,
             fields: &[
                 Field {
@@ -2643,7 +4265,11 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "CSI clock calibration\r Set by hardware by option byte loading during system reset NRESET. Adjusted by software through trimming bits CSITRIM.\r This field represents the sum of engineering option byte calibration value and CSITRIM bits value.",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 0 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 0,
+                        },
+                    ),
                     bit_size: 8,
                     array: None,
                     enumm: None,
@@ -2653,7 +4279,11 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "CSI clock trimming\r Set by software to adjust calibration.\r CSITRIM field is added to the engineering option bytes loaded during reset phase (FLASH_CSI_OPT) in order to form the calibration trimming value.\r CSICAL = CSITRIM + FLASH_CSI_OPT.\r Note: The reset value of the field is 0x20.",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 16 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 16,
+                        },
+                    ),
                     bit_size: 6,
                     array: None,
                     enumm: None,
@@ -2663,7 +4293,9 @@ pub(crate) static REGISTERS: IR = IR {
         FieldSet {
             name: "Hsicfgr",
             extends: None,
-            description: Some("RCC HSI calibration register"),
+            description: Some(
+                "RCC HSI calibration register",
+            ),
             bit_size: 32,
             fields: &[
                 Field {
@@ -2671,7 +4303,11 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "HSI clock calibration\r Set by hardware by option byte loading during system reset nreset. Adjusted by software through trimming bits HSITRIM.\r This field represents the sum of engineering option byte calibration value and HSITRIM bits value.",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 0 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 0,
+                        },
+                    ),
                     bit_size: 12,
                     array: None,
                     enumm: None,
@@ -2681,7 +4317,11 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "HSI clock trimming\r Set by software to adjust calibration.\r HSITRIM field is added to the engineering option bytes loaded during reset phase (FLASH_HSI_OPT) in order to form the calibration trimming value.\r HSICAL = HSITRIM + FLASH_HSI_OPT.\r After a change of HSITRIM it takes one system clock cycle before the new HSITRIM value is updated\r Note: The reset value of the field is 0x40.",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 16 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 16,
+                        },
+                    ),
                     bit_size: 7,
                     array: None,
                     enumm: None,
@@ -2691,7 +4331,9 @@ pub(crate) static REGISTERS: IR = IR {
         FieldSet {
             name: "Pllcfgr",
             extends: None,
-            description: Some("RCC PLL clock source selection register"),
+            description: Some(
+                "RCC PLL clock source selection register",
+            ),
             bit_size: 32,
             fields: &[
                 Field {
@@ -2699,27 +4341,43 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "DIVMx and PLLs clock source selection\r Set and reset by software to select the PLL clock source. These bits can be written only when all PLLs are disabled.\r In order to save power, when no PLL is used, the value of PLL1SRC must be set to '00'. 00: no clock send to DIVMx divider and PLLs (default after reset).",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 0 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 0,
+                        },
+                    ),
                     bit_size: 2,
                     array: None,
-                    enumm: Some("Pllsrc"),
+                    enumm: Some(
+                        "Pllsrc",
+                    ),
                 },
                 Field {
                     name: "pllrge",
                     description: Some(
                         "PLL1 input frequency range\r Set and reset by software to select the proper reference frequency range used for PLL1. This bit must be written before enabling the PLL1.",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 2 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 2,
+                        },
+                    ),
                     bit_size: 2,
                     array: None,
-                    enumm: Some("Pllrge"),
+                    enumm: Some(
+                        "Pllrge",
+                    ),
                 },
                 Field {
                     name: "pllfracen",
                     description: Some(
                         "PLL1 fractional latch enable\r Set and reset by software to latch the content of FRACN1 into the sigma-delta modulator.\r In order to latch the FRACN1 value into the sigma-delta modulator, PLL1FRACEN must be set to 0, then set to 1. The transition 0 to 1 transfers the content of FRACN1 into the modulator.",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 4 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 4,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -2729,27 +4387,43 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "PLL1 VCO selection\r Set and reset by software to select the proper VCO frequency range used for PLL1. This bit must be written before enabling the PLL1.",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 5 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 5,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
-                    enumm: Some("Pllvcosel"),
+                    enumm: Some(
+                        "Pllvcosel",
+                    ),
                 },
                 Field {
                     name: "divm",
                     description: Some(
                         "prescaler for PLL1\r Set and cleared by software to configure the prescaler of the PLL1.\r The hardware does not allow any modification of this prescaler when PLL1 is enabled (PLL1ON = 1 or PLL1RDY = 1).\r In order to save power when PLL1 is not used, the value of DIVM1 must be set to 0.\r ...\r ...",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 8 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 8,
+                        },
+                    ),
                     bit_size: 6,
                     array: None,
-                    enumm: Some("Pllm"),
+                    enumm: Some(
+                        "Pllm",
+                    ),
                 },
                 Field {
                     name: "pllpen",
                     description: Some(
                         "PLL1 DIVP divider output enable\r Set and reset by software to enable the pll1_p_ck output of the PLL1.\r This bit can be written only when the PLL1 is disabled (PLL1ON = 0 and PLL1RDY = 0).\r In order to save power, when the pll1_p_ck output of the PLL1 is not used, the pll1_p_ck must be disabled.",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 16 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 16,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -2759,7 +4433,11 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "PLL1 DIVQ divider output enable\r Set and reset by software to enable the pll1_q_ck output of the PLL1.\r In order to save power, when the pll1_q_ck output of the PLL1 is not used, the pll1_q_ck must be disabled.\r This bit can be written only when the PLL1 is disabled (PLL1ON = 0 and PLL1RDY = 0).",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 17 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 17,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -2769,7 +4447,11 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "PLL1 DIVR divider output enable\r Set and reset by software to enable the pll1_r_ck output of the PLL1.\r To save power, DIVR1EN and DIVR1 bits must be set to 0 when the pll1_r_ck is not used. This bit can be written only when the PLL1 is disabled (PLL1ON = 0 and PLL1RDY = 0).",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 18 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 18,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -2779,7 +4461,9 @@ pub(crate) static REGISTERS: IR = IR {
         FieldSet {
             name: "Plldivr",
             extends: None,
-            description: Some("RCC PLL1 dividers register"),
+            description: Some(
+                "RCC PLL1 dividers register",
+            ),
             bit_size: 32,
             fields: &[
                 Field {
@@ -2787,63 +4471,97 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "Multiplication factor for PLL1VCO\r Set and reset by software to control the multiplication factor of the VCO.\r These bits can be written only when the PLL is disabled (PLL1ON = 0 and PLL1RDY = 0).\r ...\r ...\r Others: reserved",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 0 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 0,
+                        },
+                    ),
                     bit_size: 9,
                     array: None,
-                    enumm: Some("Plln"),
+                    enumm: Some(
+                        "Plln",
+                    ),
                 },
                 Field {
                     name: "pllp",
                     description: Some(
                         "PLL1 DIVP division factor\r Set and reset by software to control the frequency of the pll1_p_ck clock.\r These bits can be written only when the PLL1 is disabled (PLL1ON = 0 and PLL1RDY = 0).\r Note that odd division factors are not allowed.\r ...",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 9 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 9,
+                        },
+                    ),
                     bit_size: 7,
                     array: None,
-                    enumm: Some("Plldiv"),
+                    enumm: Some(
+                        "Plldiv",
+                    ),
                 },
                 Field {
                     name: "pllq",
                     description: Some(
                         "PLL1 DIVQ division factor\r Set and reset by software to control the frequency of the pll1_q_ck clock.\r These bits can be written only when the PLL1 is disabled (PLL1ON = 0 and PLL1RDY = 0).\r ...",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 16 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 16,
+                        },
+                    ),
                     bit_size: 7,
                     array: None,
-                    enumm: Some("Plldiv"),
+                    enumm: Some(
+                        "Plldiv",
+                    ),
                 },
                 Field {
                     name: "pllr",
                     description: Some(
                         "PLL1 DIVR division factor\r Set and reset by software to control the frequency of the pll1_r_ck clock.\r These bits can be written only when the PLL1 is disabled (PLL1ON = 0 and PLL1RDY = 0).\r ...",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 24 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 24,
+                        },
+                    ),
                     bit_size: 7,
                     array: None,
-                    enumm: Some("Plldiv"),
+                    enumm: Some(
+                        "Plldiv",
+                    ),
                 },
             ],
         },
         FieldSet {
             name: "Pllfracr",
             extends: None,
-            description: Some("RCC PLL1 fractional divider register"),
+            description: Some(
+                "RCC PLL1 fractional divider register",
+            ),
             bit_size: 32,
-            fields: &[Field {
-                name: "pllfracn",
-                description: Some(
-                    "fractional part of the multiplication factor for PLL1 VCO\r Set and reset by software to control the fractional part of the multiplication factor of the VCO. These bits can be written at any time, allowing dynamic fine-tuning of the PLL1 VCO.\r The software must set correctly these bits to insure that the VCO output frequency is between its valid frequency range, that is:\r * 128 to 560 MHz if PLL1VCOSEL = 0\r * \t150 to 420 MHz if PLL1VCOSEL = 1\r VCO output frequency = Fref1_ck x (PLL1N + (PLL1FRACN / 213)), with\r * \tPLL1N between 8 and 420\r * \tPLL1FRACN can be between 0 and 213- 1\r * \tThe input frequency Fref1_ck must be between 1 and 16 MHz.\r To change the PLL1FRACN value on-the-fly even if the PLL is enabled, the application must proceed as follows:\r * \tSet the bit PLL1FRACEN to 0\r * \tWrite the new fractional value into PLL1FRACN\r * \tSet the bit PLL1FRACEN to 1",
-                ),
-                bit_offset: BitOffset::Regular(RegularBitOffset { offset: 3 }),
-                bit_size: 13,
-                array: None,
-                enumm: None,
-            }],
+            fields: &[
+                Field {
+                    name: "pllfracn",
+                    description: Some(
+                        "fractional part of the multiplication factor for PLL1 VCO\r Set and reset by software to control the fractional part of the multiplication factor of the VCO. These bits can be written at any time, allowing dynamic fine-tuning of the PLL1 VCO.\r The software must set correctly these bits to insure that the VCO output frequency is between its valid frequency range, that is:\r * 128 to 560 MHz if PLL1VCOSEL = 0\r * \t150 to 420 MHz if PLL1VCOSEL = 1\r VCO output frequency = Fref1_ck x (PLL1N + (PLL1FRACN / 213)), with\r * \tPLL1N between 8 and 420\r * \tPLL1FRACN can be between 0 and 213- 1\r * \tThe input frequency Fref1_ck must be between 1 and 16 MHz.\r To change the PLL1FRACN value on-the-fly even if the PLL is enabled, the application must proceed as follows:\r * \tSet the bit PLL1FRACEN to 0\r * \tWrite the new fractional value into PLL1FRACN\r * \tSet the bit PLL1FRACEN to 1",
+                    ),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 3,
+                        },
+                    ),
+                    bit_size: 13,
+                    array: None,
+                    enumm: None,
+                },
+            ],
         },
         FieldSet {
             name: "Rsr",
             extends: None,
-            description: Some("RCC reset status register"),
+            description: Some(
+                "RCC reset status register",
+            ),
             bit_size: 32,
             fields: &[
                 Field {
@@ -2851,7 +4569,11 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "remove reset flag\r Set and reset by software to reset the value of the reset flags.",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 23 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 23,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -2861,7 +4583,11 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "pin reset flag (NRST)\r Reset by software by writing the RMVF bit.\r Set by hardware when a reset from pin occurs.",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 26 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 26,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -2871,7 +4597,11 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "BOR reset flag\r Reset by software by writing the RMVF bit.\r Set by hardware when a BOR reset occurs (pwr_bor_rst).",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 27 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 27,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -2881,7 +4611,11 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "system reset from CPU reset flag\r Reset by software by writing the RMVF bit.\r Set by hardware when the system reset is due to CPU.The CPU can generate a system reset by writing SYSRESETREQ bit of AIRCR register of the core M33.",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 28 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 28,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -2891,7 +4625,11 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "independent watchdog reset flag\r Reset by software by writing the RMVF bit.\r Set by hardware when an independent watchdog reset occurs.",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 29 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 29,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -2901,7 +4639,11 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "window watchdog reset flag\r Reset by software by writing the RMVF bit.\r Set by hardware when a window watchdog reset occurs.",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 30 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 30,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -2911,7 +4653,11 @@ pub(crate) static REGISTERS: IR = IR {
                     description: Some(
                         "Low-power reset flag\r Set by hardware when a reset occurs due to Stop or Standby mode entry, whereas the corresponding nRST_STOP, nRST_STBY option bit is cleared.\r Cleared by writing to the RMVF bit.",
                     ),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 31 }),
+                    bit_offset: BitOffset::Regular(
+                        RegularBitOffset {
+                            offset: 31,
+                        },
+                    ),
                     bit_size: 1,
                     array: None,
                     enumm: None,
@@ -2926,34 +4672,46 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 3,
             variants: &[
                 EnumVariant {
-                    name: "Csi",
-                    description: Some("csi_ker_ck selected as kernel clock"),
-                    value: 5,
-                },
-                EnumVariant {
-                    name: "Hclk2",
-                    description: Some("rcc_hclk selected as kernel clock (default after reset)"),
+                    name: "HCLK2",
+                    description: Some(
+                        "rcc_hclk selected as kernel clock (default after reset)",
+                    ),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "Hse",
-                    description: Some("hse_ck selected as kernel clock"),
-                    value: 3,
+                    name: "SYS",
+                    description: Some(
+                        "sys_ck selected as kernel clock",
+                    ),
+                    value: 1,
                 },
                 EnumVariant {
-                    name: "Hsi",
-                    description: Some("hsi_ker_ck selected as kernel clock"),
-                    value: 4,
-                },
-                EnumVariant {
-                    name: "Pll2R",
-                    description: Some("pll2_r_ck selected as kernel clock"),
+                    name: "PLL2_R",
+                    description: Some(
+                        "pll2_r_ck selected as kernel clock",
+                    ),
                     value: 2,
                 },
                 EnumVariant {
-                    name: "Sys",
-                    description: Some("sys_ck selected as kernel clock"),
-                    value: 1,
+                    name: "HSE",
+                    description: Some(
+                        "hse_ck selected as kernel clock",
+                    ),
+                    value: 3,
+                },
+                EnumVariant {
+                    name: "HSI",
+                    description: Some(
+                        "hsi_ker_ck selected as kernel clock",
+                    ),
+                    value: 4,
+                },
+                EnumVariant {
+                    name: "CSI",
+                    description: Some(
+                        "csi_ker_ck selected as kernel clock",
+                    ),
+                    value: 5,
                 },
             ],
         },
@@ -2963,13 +4721,17 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 1,
             variants: &[
                 EnumVariant {
-                    name: "DacHold",
-                    description: Some("dac_hold_ck selected as kernel clock (default after reset)"),
+                    name: "DAC_HOLD",
+                    description: Some(
+                        "dac_hold_ck selected as kernel clock (default after reset)",
+                    ),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "DacHold2",
-                    description: Some("dac_hold_ck selected as kernel clock"),
+                    name: "DAC_HOLD_2",
+                    description: Some(
+                        "dac_hold_ck selected as kernel clock",
+                    ),
                     value: 1,
                 },
             ],
@@ -2980,18 +4742,24 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 2,
             variants: &[
                 EnumVariant {
-                    name: "Hse",
-                    description: Some("hse_ck selected as kernel clock (default after reset)"),
+                    name: "HSE",
+                    description: Some(
+                        "hse_ck selected as kernel clock (default after reset)",
+                    ),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "Pll1Q",
-                    description: Some("pll1_q_ck selected as kernel clock"),
+                    name: "PLL1_Q",
+                    description: Some(
+                        "pll1_q_ck selected as kernel clock",
+                    ),
                     value: 1,
                 },
                 EnumVariant {
-                    name: "Pll2Q",
-                    description: Some("pll2_q_ck selected as kernel clock"),
+                    name: "PLL2_Q",
+                    description: Some(
+                        "pll2_q_ck selected as kernel clock",
+                    ),
                     value: 2,
                 },
             ],
@@ -3002,49 +4770,67 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 4,
             variants: &[
                 EnumVariant {
-                    name: "Div1",
-                    description: Some("sys_ck not divided"),
+                    name: "DIV1",
+                    description: Some(
+                        "sys_ck not divided",
+                    ),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "Div128",
-                    description: Some("sys_ck divided by 128"),
-                    value: 13,
-                },
-                EnumVariant {
-                    name: "Div16",
-                    description: Some("sys_ck divided by 16"),
-                    value: 11,
-                },
-                EnumVariant {
-                    name: "Div2",
-                    description: Some("sys_ck divided by 2"),
+                    name: "DIV2",
+                    description: Some(
+                        "sys_ck divided by 2",
+                    ),
                     value: 8,
                 },
                 EnumVariant {
-                    name: "Div256",
-                    description: Some("sys_ck divided by 256"),
-                    value: 14,
-                },
-                EnumVariant {
-                    name: "Div4",
-                    description: Some("sys_ck divided by 4"),
+                    name: "DIV4",
+                    description: Some(
+                        "sys_ck divided by 4",
+                    ),
                     value: 9,
                 },
                 EnumVariant {
-                    name: "Div512",
-                    description: Some("sys_ck divided by 512"),
-                    value: 15,
+                    name: "DIV8",
+                    description: Some(
+                        "sys_ck divided by 8",
+                    ),
+                    value: 10,
                 },
                 EnumVariant {
-                    name: "Div64",
-                    description: Some("sys_ck divided by 64"),
+                    name: "DIV16",
+                    description: Some(
+                        "sys_ck divided by 16",
+                    ),
+                    value: 11,
+                },
+                EnumVariant {
+                    name: "DIV64",
+                    description: Some(
+                        "sys_ck divided by 64",
+                    ),
                     value: 12,
                 },
                 EnumVariant {
-                    name: "Div8",
-                    description: Some("sys_ck divided by 8"),
-                    value: 10,
+                    name: "DIV128",
+                    description: Some(
+                        "sys_ck divided by 128",
+                    ),
+                    value: 13,
+                },
+                EnumVariant {
+                    name: "DIV256",
+                    description: Some(
+                        "sys_ck divided by 256",
+                    ),
+                    value: 14,
+                },
+                EnumVariant {
+                    name: "DIV512",
+                    description: Some(
+                        "sys_ck divided by 512",
+                    ),
+                    value: 15,
                 },
             ],
         },
@@ -3054,13 +4840,17 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 1,
             variants: &[
                 EnumVariant {
-                    name: "Analog",
-                    description: Some("HSE in analog mode (default after reset)"),
+                    name: "ANALOG",
+                    description: Some(
+                        "HSE in analog mode (default after reset)",
+                    ),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "Digital",
-                    description: Some("HSE in digital mode"),
+                    name: "DIGITAL",
+                    description: Some(
+                        "HSE in digital mode",
+                    ),
                     value: 1,
                 },
             ],
@@ -3071,23 +4861,31 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 2,
             variants: &[
                 EnumVariant {
-                    name: "Div1",
-                    description: Some("No division"),
+                    name: "DIV1",
+                    description: Some(
+                        "No division",
+                    ),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "Div2",
-                    description: Some("Division by 2"),
+                    name: "DIV2",
+                    description: Some(
+                        "Division by 2",
+                    ),
                     value: 1,
                 },
                 EnumVariant {
-                    name: "Div4",
-                    description: Some("Division by 4"),
+                    name: "DIV4",
+                    description: Some(
+                        "Division by 4",
+                    ),
                     value: 2,
                 },
                 EnumVariant {
-                    name: "Div8",
-                    description: Some("Division by 8"),
+                    name: "DIV8",
+                    description: Some(
+                        "Division by 8",
+                    ),
                     value: 3,
                 },
             ],
@@ -3098,24 +4896,32 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 2,
             variants: &[
                 EnumVariant {
-                    name: "Csi",
-                    description: Some("csi_ker selected as peripheral clock"),
-                    value: 3,
-                },
-                EnumVariant {
-                    name: "Hsi",
-                    description: Some("hsi_ker selected as peripheral clock"),
-                    value: 2,
-                },
-                EnumVariant {
-                    name: "Pclk1",
-                    description: Some("rcc_pclk1 selected as peripheral clock"),
+                    name: "PCLK1",
+                    description: Some(
+                        "rcc_pclk1 selected as peripheral clock",
+                    ),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "Pll3R",
-                    description: Some("pll3_r selected as peripheral clock"),
+                    name: "PLL3_R",
+                    description: Some(
+                        "pll3_r selected as peripheral clock",
+                    ),
                     value: 1,
+                },
+                EnumVariant {
+                    name: "HSI",
+                    description: Some(
+                        "hsi_ker selected as peripheral clock",
+                    ),
+                    value: 2,
+                },
+                EnumVariant {
+                    name: "CSI",
+                    description: Some(
+                        "csi_ker selected as peripheral clock",
+                    ),
+                    value: 3,
                 },
             ],
         },
@@ -3125,24 +4931,32 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 2,
             variants: &[
                 EnumVariant {
-                    name: "Csi",
-                    description: Some("csi_ker selected as peripheral clock"),
-                    value: 3,
-                },
-                EnumVariant {
-                    name: "Hsi",
-                    description: Some("hsi_ker selected as peripheral clock"),
-                    value: 2,
-                },
-                EnumVariant {
-                    name: "Pclk3",
-                    description: Some("rcc_pclk3 selected as peripheral clock"),
+                    name: "PCLK3",
+                    description: Some(
+                        "rcc_pclk3 selected as peripheral clock",
+                    ),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "Pll3R",
-                    description: Some("pll3_r selected as peripheral clock"),
+                    name: "PLL3_R",
+                    description: Some(
+                        "pll3_r selected as peripheral clock",
+                    ),
                     value: 1,
+                },
+                EnumVariant {
+                    name: "HSI",
+                    description: Some(
+                        "hsi_ker selected as peripheral clock",
+                    ),
+                    value: 2,
+                },
+                EnumVariant {
+                    name: "CSI",
+                    description: Some(
+                        "csi_ker selected as peripheral clock",
+                    ),
+                    value: 3,
                 },
             ],
         },
@@ -3152,29 +4966,39 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 3,
             variants: &[
                 EnumVariant {
-                    name: "Lse",
-                    description: Some("LSE selected as peripheral clock"),
-                    value: 3,
-                },
-                EnumVariant {
-                    name: "Lsi",
-                    description: Some("LSI selected as peripheral clock"),
-                    value: 4,
-                },
-                EnumVariant {
-                    name: "Pclk3",
-                    description: Some("rcc_pclk3 selected as peripheral clock"),
+                    name: "PCLK3",
+                    description: Some(
+                        "rcc_pclk3 selected as peripheral clock",
+                    ),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "Per",
-                    description: Some("PER selected as peripheral clock"),
-                    value: 5,
+                    name: "PLL2_P",
+                    description: Some(
+                        "pll2_p selected as peripheral clock",
+                    ),
+                    value: 1,
                 },
                 EnumVariant {
-                    name: "Pll2P",
-                    description: Some("pll2_p selected as peripheral clock"),
-                    value: 1,
+                    name: "LSE",
+                    description: Some(
+                        "LSE selected as peripheral clock",
+                    ),
+                    value: 3,
+                },
+                EnumVariant {
+                    name: "LSI",
+                    description: Some(
+                        "LSI selected as peripheral clock",
+                    ),
+                    value: 4,
+                },
+                EnumVariant {
+                    name: "PER",
+                    description: Some(
+                        "PER selected as peripheral clock",
+                    ),
+                    value: 5,
                 },
             ],
         },
@@ -3184,29 +5008,39 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 3,
             variants: &[
                 EnumVariant {
-                    name: "Lse",
-                    description: Some("LSE selected as peripheral clock"),
-                    value: 3,
-                },
-                EnumVariant {
-                    name: "Lsi",
-                    description: Some("LSI selected as peripheral clock"),
-                    value: 4,
-                },
-                EnumVariant {
-                    name: "Pclk1",
-                    description: Some("rcc_pclk1 selected as peripheral clock"),
+                    name: "PCLK1",
+                    description: Some(
+                        "rcc_pclk1 selected as peripheral clock",
+                    ),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "Per",
-                    description: Some("PER selected as peripheral clock"),
-                    value: 5,
+                    name: "PLL2_P",
+                    description: Some(
+                        "pll2_p selected as peripheral clock",
+                    ),
+                    value: 1,
                 },
                 EnumVariant {
-                    name: "Pll2P",
-                    description: Some("pll2_p selected as peripheral clock"),
-                    value: 1,
+                    name: "LSE",
+                    description: Some(
+                        "LSE selected as peripheral clock",
+                    ),
+                    value: 3,
+                },
+                EnumVariant {
+                    name: "LSI",
+                    description: Some(
+                        "LSI selected as peripheral clock",
+                    ),
+                    value: 4,
+                },
+                EnumVariant {
+                    name: "PER",
+                    description: Some(
+                        "PER selected as peripheral clock",
+                    ),
+                    value: 5,
                 },
             ],
         },
@@ -3216,29 +5050,39 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 3,
             variants: &[
                 EnumVariant {
-                    name: "Csi",
-                    description: Some("csi_ker_ck selected as kernel clock"),
-                    value: 4,
-                },
-                EnumVariant {
-                    name: "Hsi",
-                    description: Some("hsi_ker_ck selected as kernel clock"),
-                    value: 3,
-                },
-                EnumVariant {
-                    name: "Lse",
-                    description: Some("lse_ck selected as kernel clock"),
-                    value: 5,
-                },
-                EnumVariant {
-                    name: "Pclk3",
-                    description: Some("rcc_pclk3 selected as kernel clock (default after reset)"),
+                    name: "PCLK3",
+                    description: Some(
+                        "rcc_pclk3 selected as kernel clock (default after reset)",
+                    ),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "Pll2Q",
-                    description: Some("pll2_q_ck selected as kernel clock"),
+                    name: "PLL2_Q",
+                    description: Some(
+                        "pll2_q_ck selected as kernel clock",
+                    ),
                     value: 1,
+                },
+                EnumVariant {
+                    name: "HSI",
+                    description: Some(
+                        "hsi_ker_ck selected as kernel clock",
+                    ),
+                    value: 3,
+                },
+                EnumVariant {
+                    name: "CSI",
+                    description: Some(
+                        "csi_ker_ck selected as kernel clock",
+                    ),
+                    value: 4,
+                },
+                EnumVariant {
+                    name: "LSE",
+                    description: Some(
+                        "lse_ck selected as kernel clock",
+                    ),
+                    value: 5,
                 },
             ],
         },
@@ -3248,14 +5092,18 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 1,
             variants: &[
                 EnumVariant {
-                    name: "Lse",
-                    description: Some("LSE clock selected"),
-                    value: 1,
+                    name: "LSI",
+                    description: Some(
+                        "LSI clock selected",
+                    ),
+                    value: 0,
                 },
                 EnumVariant {
-                    name: "Lsi",
-                    description: Some("LSI clock selected"),
-                    value: 0,
+                    name: "LSE",
+                    description: Some(
+                        "LSE clock selected",
+                    ),
+                    value: 1,
                 },
             ],
         },
@@ -3265,24 +5113,32 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 2,
             variants: &[
                 EnumVariant {
-                    name: "High",
-                    description: Some("High driving capability"),
-                    value: 3,
-                },
-                EnumVariant {
-                    name: "Low",
-                    description: Some("Low driving capability"),
+                    name: "LOW",
+                    description: Some(
+                        "Low driving capability",
+                    ),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "MediumHigh",
-                    description: Some("Medium high driving capability"),
+                    name: "MEDIUM_LOW",
+                    description: Some(
+                        "Medium low driving capability",
+                    ),
+                    value: 1,
+                },
+                EnumVariant {
+                    name: "MEDIUM_HIGH",
+                    description: Some(
+                        "Medium high driving capability",
+                    ),
                     value: 2,
                 },
                 EnumVariant {
-                    name: "MediumLow",
-                    description: Some("Medium low driving capability"),
-                    value: 1,
+                    name: "HIGH",
+                    description: Some(
+                        "High driving capability",
+                    ),
+                    value: 3,
                 },
             ],
         },
@@ -3292,13 +5148,17 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 1,
             variants: &[
                 EnumVariant {
-                    name: "Analog",
-                    description: Some("LSE in analog mode (default after Backup domain reset)"),
+                    name: "ANALOG",
+                    description: Some(
+                        "LSE in analog mode (default after Backup domain reset)",
+                    ),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "Digital",
-                    description: Some("LSE in digital mode (do not use if RTC is active)."),
+                    name: "DIGITAL",
+                    description: Some(
+                        "LSE in digital mode (do not use if RTC is active).",
+                    ),
                     value: 1,
                 },
             ],
@@ -3309,29 +5169,39 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 3,
             variants: &[
                 EnumVariant {
-                    name: "Hse",
-                    description: Some("HSE selected for micro-controller clock output"),
-                    value: 2,
-                },
-                EnumVariant {
-                    name: "Hsi",
-                    description: Some("HSI selected for micro-controller clock output"),
+                    name: "HSI",
+                    description: Some(
+                        "HSI selected for micro-controller clock output",
+                    ),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "Hsi48",
-                    description: Some("HSI48 selected for micro-controller clock output"),
-                    value: 4,
-                },
-                EnumVariant {
-                    name: "Lse",
-                    description: Some("LSE selected for micro-controller clock output"),
+                    name: "LSE",
+                    description: Some(
+                        "LSE selected for micro-controller clock output",
+                    ),
                     value: 1,
                 },
                 EnumVariant {
-                    name: "Pll1Q",
-                    description: Some("pll1_q selected for micro-controller clock output"),
+                    name: "HSE",
+                    description: Some(
+                        "HSE selected for micro-controller clock output",
+                    ),
+                    value: 2,
+                },
+                EnumVariant {
+                    name: "PLL1_Q",
+                    description: Some(
+                        "pll1_q selected for micro-controller clock output",
+                    ),
                     value: 3,
+                },
+                EnumVariant {
+                    name: "HSI48",
+                    description: Some(
+                        "HSI48 selected for micro-controller clock output",
+                    ),
+                    value: 4,
                 },
             ],
         },
@@ -3341,34 +5211,46 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 3,
             variants: &[
                 EnumVariant {
-                    name: "Csi",
-                    description: Some("CSI selected for micro-controller clock output"),
-                    value: 4,
+                    name: "SYS",
+                    description: Some(
+                        "System clock selected for micro-controller clock output",
+                    ),
+                    value: 0,
                 },
                 EnumVariant {
-                    name: "Hse",
-                    description: Some("HSE selected for micro-controller clock output"),
-                    value: 2,
-                },
-                EnumVariant {
-                    name: "Lsi",
-                    description: Some("LSI selected for micro-controller clock output"),
-                    value: 5,
-                },
-                EnumVariant {
-                    name: "Pll1P",
-                    description: Some("pll1_p selected for micro-controller clock output"),
-                    value: 3,
-                },
-                EnumVariant {
-                    name: "Pll2P",
-                    description: Some("pll2_p selected for micro-controller clock output"),
+                    name: "PLL2_P",
+                    description: Some(
+                        "pll2_p selected for micro-controller clock output",
+                    ),
                     value: 1,
                 },
                 EnumVariant {
-                    name: "Sys",
-                    description: Some("System clock selected for micro-controller clock output"),
-                    value: 0,
+                    name: "HSE",
+                    description: Some(
+                        "HSE selected for micro-controller clock output",
+                    ),
+                    value: 2,
+                },
+                EnumVariant {
+                    name: "PLL1_P",
+                    description: Some(
+                        "pll1_p selected for micro-controller clock output",
+                    ),
+                    value: 3,
+                },
+                EnumVariant {
+                    name: "CSI",
+                    description: Some(
+                        "CSI selected for micro-controller clock output",
+                    ),
+                    value: 4,
+                },
+                EnumVariant {
+                    name: "LSI",
+                    description: Some(
+                        "LSI selected for micro-controller clock output",
+                    ),
+                    value: 5,
                 },
             ],
         },
@@ -3378,79 +5260,109 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 4,
             variants: &[
                 EnumVariant {
-                    name: "Div1",
-                    description: Some("Divide by 1"),
+                    name: "DIV1",
+                    description: Some(
+                        "Divide by 1",
+                    ),
                     value: 1,
                 },
                 EnumVariant {
-                    name: "Div10",
-                    description: Some("Divide by 10"),
-                    value: 10,
-                },
-                EnumVariant {
-                    name: "Div11",
-                    description: Some("Divide by 11"),
-                    value: 11,
-                },
-                EnumVariant {
-                    name: "Div12",
-                    description: Some("Divide by 12"),
-                    value: 12,
-                },
-                EnumVariant {
-                    name: "Div13",
-                    description: Some("Divide by 13"),
-                    value: 13,
-                },
-                EnumVariant {
-                    name: "Div14",
-                    description: Some("Divide by 14"),
-                    value: 14,
-                },
-                EnumVariant {
-                    name: "Div15",
-                    description: Some("Divide by 15"),
-                    value: 15,
-                },
-                EnumVariant {
-                    name: "Div2",
-                    description: Some("Divide by 2"),
+                    name: "DIV2",
+                    description: Some(
+                        "Divide by 2",
+                    ),
                     value: 2,
                 },
                 EnumVariant {
-                    name: "Div3",
-                    description: Some("Divide by 3"),
+                    name: "DIV3",
+                    description: Some(
+                        "Divide by 3",
+                    ),
                     value: 3,
                 },
                 EnumVariant {
-                    name: "Div4",
-                    description: Some("Divide by 4"),
+                    name: "DIV4",
+                    description: Some(
+                        "Divide by 4",
+                    ),
                     value: 4,
                 },
                 EnumVariant {
-                    name: "Div5",
-                    description: Some("Divide by 5"),
+                    name: "DIV5",
+                    description: Some(
+                        "Divide by 5",
+                    ),
                     value: 5,
                 },
                 EnumVariant {
-                    name: "Div6",
-                    description: Some("Divide by 6"),
+                    name: "DIV6",
+                    description: Some(
+                        "Divide by 6",
+                    ),
                     value: 6,
                 },
                 EnumVariant {
-                    name: "Div7",
-                    description: Some("Divide by 7"),
+                    name: "DIV7",
+                    description: Some(
+                        "Divide by 7",
+                    ),
                     value: 7,
                 },
                 EnumVariant {
-                    name: "Div8",
-                    description: Some("Divide by 8"),
+                    name: "DIV8",
+                    description: Some(
+                        "Divide by 8",
+                    ),
                     value: 8,
                 },
                 EnumVariant {
-                    name: "Div9",
-                    description: Some("Divide by 9"),
+                    name: "DIV9",
+                    description: Some(
+                        "Divide by 9",
+                    ),
                     value: 9,
+                },
+                EnumVariant {
+                    name: "DIV10",
+                    description: Some(
+                        "Divide by 10",
+                    ),
+                    value: 10,
+                },
+                EnumVariant {
+                    name: "DIV11",
+                    description: Some(
+                        "Divide by 11",
+                    ),
+                    value: 11,
+                },
+                EnumVariant {
+                    name: "DIV12",
+                    description: Some(
+                        "Divide by 12",
+                    ),
+                    value: 12,
+                },
+                EnumVariant {
+                    name: "DIV13",
+                    description: Some(
+                        "Divide by 13",
+                    ),
+                    value: 13,
+                },
+                EnumVariant {
+                    name: "DIV14",
+                    description: Some(
+                        "Divide by 14",
+                    ),
+                    value: 14,
+                },
+                EnumVariant {
+                    name: "DIV15",
+                    description: Some(
+                        "Divide by 15",
+                    ),
+                    value: 15,
                 },
             ],
         },
@@ -3460,19 +5372,25 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 2,
             variants: &[
                 EnumVariant {
-                    name: "Csi",
-                    description: Some("csi_ker_ck selected as kernel clock"),
+                    name: "HSI",
+                    description: Some(
+                        "hsi_ker_ck selected as kernel clock (default after reset)",
+                    ),
+                    value: 0,
+                },
+                EnumVariant {
+                    name: "CSI",
+                    description: Some(
+                        "csi_ker_ck selected as kernel clock",
+                    ),
                     value: 1,
                 },
                 EnumVariant {
-                    name: "Hse",
-                    description: Some("hse_ck selected as kernel clock"),
+                    name: "HSE",
+                    description: Some(
+                        "hse_ck selected as kernel clock",
+                    ),
                     value: 2,
-                },
-                EnumVariant {
-                    name: "Hsi",
-                    description: Some("hsi_ker_ck selected as kernel clock (default after reset)"),
-                    value: 0,
                 },
             ],
         },
@@ -3482,644 +5400,644 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 7,
             variants: &[
                 EnumVariant {
-                    name: "Div1",
+                    name: "DIV1",
                     description: None,
                     value: 0,
                 },
                 EnumVariant {
-                    name: "Div10",
-                    description: None,
-                    value: 9,
-                },
-                EnumVariant {
-                    name: "Div100",
-                    description: None,
-                    value: 99,
-                },
-                EnumVariant {
-                    name: "Div101",
-                    description: None,
-                    value: 100,
-                },
-                EnumVariant {
-                    name: "Div102",
-                    description: None,
-                    value: 101,
-                },
-                EnumVariant {
-                    name: "Div103",
-                    description: None,
-                    value: 102,
-                },
-                EnumVariant {
-                    name: "Div104",
-                    description: None,
-                    value: 103,
-                },
-                EnumVariant {
-                    name: "Div105",
-                    description: None,
-                    value: 104,
-                },
-                EnumVariant {
-                    name: "Div106",
-                    description: None,
-                    value: 105,
-                },
-                EnumVariant {
-                    name: "Div107",
-                    description: None,
-                    value: 106,
-                },
-                EnumVariant {
-                    name: "Div108",
-                    description: None,
-                    value: 107,
-                },
-                EnumVariant {
-                    name: "Div109",
-                    description: None,
-                    value: 108,
-                },
-                EnumVariant {
-                    name: "Div11",
-                    description: None,
-                    value: 10,
-                },
-                EnumVariant {
-                    name: "Div110",
-                    description: None,
-                    value: 109,
-                },
-                EnumVariant {
-                    name: "Div111",
-                    description: None,
-                    value: 110,
-                },
-                EnumVariant {
-                    name: "Div112",
-                    description: None,
-                    value: 111,
-                },
-                EnumVariant {
-                    name: "Div113",
-                    description: None,
-                    value: 112,
-                },
-                EnumVariant {
-                    name: "Div114",
-                    description: None,
-                    value: 113,
-                },
-                EnumVariant {
-                    name: "Div115",
-                    description: None,
-                    value: 114,
-                },
-                EnumVariant {
-                    name: "Div116",
-                    description: None,
-                    value: 115,
-                },
-                EnumVariant {
-                    name: "Div117",
-                    description: None,
-                    value: 116,
-                },
-                EnumVariant {
-                    name: "Div118",
-                    description: None,
-                    value: 117,
-                },
-                EnumVariant {
-                    name: "Div119",
-                    description: None,
-                    value: 118,
-                },
-                EnumVariant {
-                    name: "Div12",
-                    description: None,
-                    value: 11,
-                },
-                EnumVariant {
-                    name: "Div120",
-                    description: None,
-                    value: 119,
-                },
-                EnumVariant {
-                    name: "Div121",
-                    description: None,
-                    value: 120,
-                },
-                EnumVariant {
-                    name: "Div122",
-                    description: None,
-                    value: 121,
-                },
-                EnumVariant {
-                    name: "Div123",
-                    description: None,
-                    value: 122,
-                },
-                EnumVariant {
-                    name: "Div124",
-                    description: None,
-                    value: 123,
-                },
-                EnumVariant {
-                    name: "Div125",
-                    description: None,
-                    value: 124,
-                },
-                EnumVariant {
-                    name: "Div126",
-                    description: None,
-                    value: 125,
-                },
-                EnumVariant {
-                    name: "Div127",
-                    description: None,
-                    value: 126,
-                },
-                EnumVariant {
-                    name: "Div128",
-                    description: None,
-                    value: 127,
-                },
-                EnumVariant {
-                    name: "Div13",
-                    description: None,
-                    value: 12,
-                },
-                EnumVariant {
-                    name: "Div14",
-                    description: None,
-                    value: 13,
-                },
-                EnumVariant {
-                    name: "Div15",
-                    description: None,
-                    value: 14,
-                },
-                EnumVariant {
-                    name: "Div16",
-                    description: None,
-                    value: 15,
-                },
-                EnumVariant {
-                    name: "Div17",
-                    description: None,
-                    value: 16,
-                },
-                EnumVariant {
-                    name: "Div18",
-                    description: None,
-                    value: 17,
-                },
-                EnumVariant {
-                    name: "Div19",
-                    description: None,
-                    value: 18,
-                },
-                EnumVariant {
-                    name: "Div2",
+                    name: "DIV2",
                     description: None,
                     value: 1,
                 },
                 EnumVariant {
-                    name: "Div20",
-                    description: None,
-                    value: 19,
-                },
-                EnumVariant {
-                    name: "Div21",
-                    description: None,
-                    value: 20,
-                },
-                EnumVariant {
-                    name: "Div22",
-                    description: None,
-                    value: 21,
-                },
-                EnumVariant {
-                    name: "Div23",
-                    description: None,
-                    value: 22,
-                },
-                EnumVariant {
-                    name: "Div24",
-                    description: None,
-                    value: 23,
-                },
-                EnumVariant {
-                    name: "Div25",
-                    description: None,
-                    value: 24,
-                },
-                EnumVariant {
-                    name: "Div26",
-                    description: None,
-                    value: 25,
-                },
-                EnumVariant {
-                    name: "Div27",
-                    description: None,
-                    value: 26,
-                },
-                EnumVariant {
-                    name: "Div28",
-                    description: None,
-                    value: 27,
-                },
-                EnumVariant {
-                    name: "Div29",
-                    description: None,
-                    value: 28,
-                },
-                EnumVariant {
-                    name: "Div3",
+                    name: "DIV3",
                     description: None,
                     value: 2,
                 },
                 EnumVariant {
-                    name: "Div30",
-                    description: None,
-                    value: 29,
-                },
-                EnumVariant {
-                    name: "Div31",
-                    description: None,
-                    value: 30,
-                },
-                EnumVariant {
-                    name: "Div32",
-                    description: None,
-                    value: 31,
-                },
-                EnumVariant {
-                    name: "Div33",
-                    description: None,
-                    value: 32,
-                },
-                EnumVariant {
-                    name: "Div34",
-                    description: None,
-                    value: 33,
-                },
-                EnumVariant {
-                    name: "Div35",
-                    description: None,
-                    value: 34,
-                },
-                EnumVariant {
-                    name: "Div36",
-                    description: None,
-                    value: 35,
-                },
-                EnumVariant {
-                    name: "Div37",
-                    description: None,
-                    value: 36,
-                },
-                EnumVariant {
-                    name: "Div38",
-                    description: None,
-                    value: 37,
-                },
-                EnumVariant {
-                    name: "Div39",
-                    description: None,
-                    value: 38,
-                },
-                EnumVariant {
-                    name: "Div4",
+                    name: "DIV4",
                     description: None,
                     value: 3,
                 },
                 EnumVariant {
-                    name: "Div40",
-                    description: None,
-                    value: 39,
-                },
-                EnumVariant {
-                    name: "Div41",
-                    description: None,
-                    value: 40,
-                },
-                EnumVariant {
-                    name: "Div42",
-                    description: None,
-                    value: 41,
-                },
-                EnumVariant {
-                    name: "Div43",
-                    description: None,
-                    value: 42,
-                },
-                EnumVariant {
-                    name: "Div44",
-                    description: None,
-                    value: 43,
-                },
-                EnumVariant {
-                    name: "Div45",
-                    description: None,
-                    value: 44,
-                },
-                EnumVariant {
-                    name: "Div46",
-                    description: None,
-                    value: 45,
-                },
-                EnumVariant {
-                    name: "Div47",
-                    description: None,
-                    value: 46,
-                },
-                EnumVariant {
-                    name: "Div48",
-                    description: None,
-                    value: 47,
-                },
-                EnumVariant {
-                    name: "Div49",
-                    description: None,
-                    value: 48,
-                },
-                EnumVariant {
-                    name: "Div5",
+                    name: "DIV5",
                     description: None,
                     value: 4,
                 },
                 EnumVariant {
-                    name: "Div50",
-                    description: None,
-                    value: 49,
-                },
-                EnumVariant {
-                    name: "Div51",
-                    description: None,
-                    value: 50,
-                },
-                EnumVariant {
-                    name: "Div52",
-                    description: None,
-                    value: 51,
-                },
-                EnumVariant {
-                    name: "Div53",
-                    description: None,
-                    value: 52,
-                },
-                EnumVariant {
-                    name: "Div54",
-                    description: None,
-                    value: 53,
-                },
-                EnumVariant {
-                    name: "Div55",
-                    description: None,
-                    value: 54,
-                },
-                EnumVariant {
-                    name: "Div56",
-                    description: None,
-                    value: 55,
-                },
-                EnumVariant {
-                    name: "Div57",
-                    description: None,
-                    value: 56,
-                },
-                EnumVariant {
-                    name: "Div58",
-                    description: None,
-                    value: 57,
-                },
-                EnumVariant {
-                    name: "Div59",
-                    description: None,
-                    value: 58,
-                },
-                EnumVariant {
-                    name: "Div6",
+                    name: "DIV6",
                     description: None,
                     value: 5,
                 },
                 EnumVariant {
-                    name: "Div60",
-                    description: None,
-                    value: 59,
-                },
-                EnumVariant {
-                    name: "Div61",
-                    description: None,
-                    value: 60,
-                },
-                EnumVariant {
-                    name: "Div62",
-                    description: None,
-                    value: 61,
-                },
-                EnumVariant {
-                    name: "Div63",
-                    description: None,
-                    value: 62,
-                },
-                EnumVariant {
-                    name: "Div64",
-                    description: None,
-                    value: 63,
-                },
-                EnumVariant {
-                    name: "Div65",
-                    description: None,
-                    value: 64,
-                },
-                EnumVariant {
-                    name: "Div66",
-                    description: None,
-                    value: 65,
-                },
-                EnumVariant {
-                    name: "Div67",
-                    description: None,
-                    value: 66,
-                },
-                EnumVariant {
-                    name: "Div68",
-                    description: None,
-                    value: 67,
-                },
-                EnumVariant {
-                    name: "Div69",
-                    description: None,
-                    value: 68,
-                },
-                EnumVariant {
-                    name: "Div7",
+                    name: "DIV7",
                     description: None,
                     value: 6,
                 },
                 EnumVariant {
-                    name: "Div70",
-                    description: None,
-                    value: 69,
-                },
-                EnumVariant {
-                    name: "Div71",
-                    description: None,
-                    value: 70,
-                },
-                EnumVariant {
-                    name: "Div72",
-                    description: None,
-                    value: 71,
-                },
-                EnumVariant {
-                    name: "Div73",
-                    description: None,
-                    value: 72,
-                },
-                EnumVariant {
-                    name: "Div74",
-                    description: None,
-                    value: 73,
-                },
-                EnumVariant {
-                    name: "Div75",
-                    description: None,
-                    value: 74,
-                },
-                EnumVariant {
-                    name: "Div76",
-                    description: None,
-                    value: 75,
-                },
-                EnumVariant {
-                    name: "Div77",
-                    description: None,
-                    value: 76,
-                },
-                EnumVariant {
-                    name: "Div78",
-                    description: None,
-                    value: 77,
-                },
-                EnumVariant {
-                    name: "Div79",
-                    description: None,
-                    value: 78,
-                },
-                EnumVariant {
-                    name: "Div8",
+                    name: "DIV8",
                     description: None,
                     value: 7,
                 },
                 EnumVariant {
-                    name: "Div80",
-                    description: None,
-                    value: 79,
-                },
-                EnumVariant {
-                    name: "Div81",
-                    description: None,
-                    value: 80,
-                },
-                EnumVariant {
-                    name: "Div82",
-                    description: None,
-                    value: 81,
-                },
-                EnumVariant {
-                    name: "Div83",
-                    description: None,
-                    value: 82,
-                },
-                EnumVariant {
-                    name: "Div84",
-                    description: None,
-                    value: 83,
-                },
-                EnumVariant {
-                    name: "Div85",
-                    description: None,
-                    value: 84,
-                },
-                EnumVariant {
-                    name: "Div86",
-                    description: None,
-                    value: 85,
-                },
-                EnumVariant {
-                    name: "Div87",
-                    description: None,
-                    value: 86,
-                },
-                EnumVariant {
-                    name: "Div88",
-                    description: None,
-                    value: 87,
-                },
-                EnumVariant {
-                    name: "Div89",
-                    description: None,
-                    value: 88,
-                },
-                EnumVariant {
-                    name: "Div9",
+                    name: "DIV9",
                     description: None,
                     value: 8,
                 },
                 EnumVariant {
-                    name: "Div90",
+                    name: "DIV10",
+                    description: None,
+                    value: 9,
+                },
+                EnumVariant {
+                    name: "DIV11",
+                    description: None,
+                    value: 10,
+                },
+                EnumVariant {
+                    name: "DIV12",
+                    description: None,
+                    value: 11,
+                },
+                EnumVariant {
+                    name: "DIV13",
+                    description: None,
+                    value: 12,
+                },
+                EnumVariant {
+                    name: "DIV14",
+                    description: None,
+                    value: 13,
+                },
+                EnumVariant {
+                    name: "DIV15",
+                    description: None,
+                    value: 14,
+                },
+                EnumVariant {
+                    name: "DIV16",
+                    description: None,
+                    value: 15,
+                },
+                EnumVariant {
+                    name: "DIV17",
+                    description: None,
+                    value: 16,
+                },
+                EnumVariant {
+                    name: "DIV18",
+                    description: None,
+                    value: 17,
+                },
+                EnumVariant {
+                    name: "DIV19",
+                    description: None,
+                    value: 18,
+                },
+                EnumVariant {
+                    name: "DIV20",
+                    description: None,
+                    value: 19,
+                },
+                EnumVariant {
+                    name: "DIV21",
+                    description: None,
+                    value: 20,
+                },
+                EnumVariant {
+                    name: "DIV22",
+                    description: None,
+                    value: 21,
+                },
+                EnumVariant {
+                    name: "DIV23",
+                    description: None,
+                    value: 22,
+                },
+                EnumVariant {
+                    name: "DIV24",
+                    description: None,
+                    value: 23,
+                },
+                EnumVariant {
+                    name: "DIV25",
+                    description: None,
+                    value: 24,
+                },
+                EnumVariant {
+                    name: "DIV26",
+                    description: None,
+                    value: 25,
+                },
+                EnumVariant {
+                    name: "DIV27",
+                    description: None,
+                    value: 26,
+                },
+                EnumVariant {
+                    name: "DIV28",
+                    description: None,
+                    value: 27,
+                },
+                EnumVariant {
+                    name: "DIV29",
+                    description: None,
+                    value: 28,
+                },
+                EnumVariant {
+                    name: "DIV30",
+                    description: None,
+                    value: 29,
+                },
+                EnumVariant {
+                    name: "DIV31",
+                    description: None,
+                    value: 30,
+                },
+                EnumVariant {
+                    name: "DIV32",
+                    description: None,
+                    value: 31,
+                },
+                EnumVariant {
+                    name: "DIV33",
+                    description: None,
+                    value: 32,
+                },
+                EnumVariant {
+                    name: "DIV34",
+                    description: None,
+                    value: 33,
+                },
+                EnumVariant {
+                    name: "DIV35",
+                    description: None,
+                    value: 34,
+                },
+                EnumVariant {
+                    name: "DIV36",
+                    description: None,
+                    value: 35,
+                },
+                EnumVariant {
+                    name: "DIV37",
+                    description: None,
+                    value: 36,
+                },
+                EnumVariant {
+                    name: "DIV38",
+                    description: None,
+                    value: 37,
+                },
+                EnumVariant {
+                    name: "DIV39",
+                    description: None,
+                    value: 38,
+                },
+                EnumVariant {
+                    name: "DIV40",
+                    description: None,
+                    value: 39,
+                },
+                EnumVariant {
+                    name: "DIV41",
+                    description: None,
+                    value: 40,
+                },
+                EnumVariant {
+                    name: "DIV42",
+                    description: None,
+                    value: 41,
+                },
+                EnumVariant {
+                    name: "DIV43",
+                    description: None,
+                    value: 42,
+                },
+                EnumVariant {
+                    name: "DIV44",
+                    description: None,
+                    value: 43,
+                },
+                EnumVariant {
+                    name: "DIV45",
+                    description: None,
+                    value: 44,
+                },
+                EnumVariant {
+                    name: "DIV46",
+                    description: None,
+                    value: 45,
+                },
+                EnumVariant {
+                    name: "DIV47",
+                    description: None,
+                    value: 46,
+                },
+                EnumVariant {
+                    name: "DIV48",
+                    description: None,
+                    value: 47,
+                },
+                EnumVariant {
+                    name: "DIV49",
+                    description: None,
+                    value: 48,
+                },
+                EnumVariant {
+                    name: "DIV50",
+                    description: None,
+                    value: 49,
+                },
+                EnumVariant {
+                    name: "DIV51",
+                    description: None,
+                    value: 50,
+                },
+                EnumVariant {
+                    name: "DIV52",
+                    description: None,
+                    value: 51,
+                },
+                EnumVariant {
+                    name: "DIV53",
+                    description: None,
+                    value: 52,
+                },
+                EnumVariant {
+                    name: "DIV54",
+                    description: None,
+                    value: 53,
+                },
+                EnumVariant {
+                    name: "DIV55",
+                    description: None,
+                    value: 54,
+                },
+                EnumVariant {
+                    name: "DIV56",
+                    description: None,
+                    value: 55,
+                },
+                EnumVariant {
+                    name: "DIV57",
+                    description: None,
+                    value: 56,
+                },
+                EnumVariant {
+                    name: "DIV58",
+                    description: None,
+                    value: 57,
+                },
+                EnumVariant {
+                    name: "DIV59",
+                    description: None,
+                    value: 58,
+                },
+                EnumVariant {
+                    name: "DIV60",
+                    description: None,
+                    value: 59,
+                },
+                EnumVariant {
+                    name: "DIV61",
+                    description: None,
+                    value: 60,
+                },
+                EnumVariant {
+                    name: "DIV62",
+                    description: None,
+                    value: 61,
+                },
+                EnumVariant {
+                    name: "DIV63",
+                    description: None,
+                    value: 62,
+                },
+                EnumVariant {
+                    name: "DIV64",
+                    description: None,
+                    value: 63,
+                },
+                EnumVariant {
+                    name: "DIV65",
+                    description: None,
+                    value: 64,
+                },
+                EnumVariant {
+                    name: "DIV66",
+                    description: None,
+                    value: 65,
+                },
+                EnumVariant {
+                    name: "DIV67",
+                    description: None,
+                    value: 66,
+                },
+                EnumVariant {
+                    name: "DIV68",
+                    description: None,
+                    value: 67,
+                },
+                EnumVariant {
+                    name: "DIV69",
+                    description: None,
+                    value: 68,
+                },
+                EnumVariant {
+                    name: "DIV70",
+                    description: None,
+                    value: 69,
+                },
+                EnumVariant {
+                    name: "DIV71",
+                    description: None,
+                    value: 70,
+                },
+                EnumVariant {
+                    name: "DIV72",
+                    description: None,
+                    value: 71,
+                },
+                EnumVariant {
+                    name: "DIV73",
+                    description: None,
+                    value: 72,
+                },
+                EnumVariant {
+                    name: "DIV74",
+                    description: None,
+                    value: 73,
+                },
+                EnumVariant {
+                    name: "DIV75",
+                    description: None,
+                    value: 74,
+                },
+                EnumVariant {
+                    name: "DIV76",
+                    description: None,
+                    value: 75,
+                },
+                EnumVariant {
+                    name: "DIV77",
+                    description: None,
+                    value: 76,
+                },
+                EnumVariant {
+                    name: "DIV78",
+                    description: None,
+                    value: 77,
+                },
+                EnumVariant {
+                    name: "DIV79",
+                    description: None,
+                    value: 78,
+                },
+                EnumVariant {
+                    name: "DIV80",
+                    description: None,
+                    value: 79,
+                },
+                EnumVariant {
+                    name: "DIV81",
+                    description: None,
+                    value: 80,
+                },
+                EnumVariant {
+                    name: "DIV82",
+                    description: None,
+                    value: 81,
+                },
+                EnumVariant {
+                    name: "DIV83",
+                    description: None,
+                    value: 82,
+                },
+                EnumVariant {
+                    name: "DIV84",
+                    description: None,
+                    value: 83,
+                },
+                EnumVariant {
+                    name: "DIV85",
+                    description: None,
+                    value: 84,
+                },
+                EnumVariant {
+                    name: "DIV86",
+                    description: None,
+                    value: 85,
+                },
+                EnumVariant {
+                    name: "DIV87",
+                    description: None,
+                    value: 86,
+                },
+                EnumVariant {
+                    name: "DIV88",
+                    description: None,
+                    value: 87,
+                },
+                EnumVariant {
+                    name: "DIV89",
+                    description: None,
+                    value: 88,
+                },
+                EnumVariant {
+                    name: "DIV90",
                     description: None,
                     value: 89,
                 },
                 EnumVariant {
-                    name: "Div91",
+                    name: "DIV91",
                     description: None,
                     value: 90,
                 },
                 EnumVariant {
-                    name: "Div92",
+                    name: "DIV92",
                     description: None,
                     value: 91,
                 },
                 EnumVariant {
-                    name: "Div93",
+                    name: "DIV93",
                     description: None,
                     value: 92,
                 },
                 EnumVariant {
-                    name: "Div94",
+                    name: "DIV94",
                     description: None,
                     value: 93,
                 },
                 EnumVariant {
-                    name: "Div95",
+                    name: "DIV95",
                     description: None,
                     value: 94,
                 },
                 EnumVariant {
-                    name: "Div96",
+                    name: "DIV96",
                     description: None,
                     value: 95,
                 },
                 EnumVariant {
-                    name: "Div97",
+                    name: "DIV97",
                     description: None,
                     value: 96,
                 },
                 EnumVariant {
-                    name: "Div98",
+                    name: "DIV98",
                     description: None,
                     value: 97,
                 },
                 EnumVariant {
-                    name: "Div99",
+                    name: "DIV99",
                     description: None,
                     value: 98,
+                },
+                EnumVariant {
+                    name: "DIV100",
+                    description: None,
+                    value: 99,
+                },
+                EnumVariant {
+                    name: "DIV101",
+                    description: None,
+                    value: 100,
+                },
+                EnumVariant {
+                    name: "DIV102",
+                    description: None,
+                    value: 101,
+                },
+                EnumVariant {
+                    name: "DIV103",
+                    description: None,
+                    value: 102,
+                },
+                EnumVariant {
+                    name: "DIV104",
+                    description: None,
+                    value: 103,
+                },
+                EnumVariant {
+                    name: "DIV105",
+                    description: None,
+                    value: 104,
+                },
+                EnumVariant {
+                    name: "DIV106",
+                    description: None,
+                    value: 105,
+                },
+                EnumVariant {
+                    name: "DIV107",
+                    description: None,
+                    value: 106,
+                },
+                EnumVariant {
+                    name: "DIV108",
+                    description: None,
+                    value: 107,
+                },
+                EnumVariant {
+                    name: "DIV109",
+                    description: None,
+                    value: 108,
+                },
+                EnumVariant {
+                    name: "DIV110",
+                    description: None,
+                    value: 109,
+                },
+                EnumVariant {
+                    name: "DIV111",
+                    description: None,
+                    value: 110,
+                },
+                EnumVariant {
+                    name: "DIV112",
+                    description: None,
+                    value: 111,
+                },
+                EnumVariant {
+                    name: "DIV113",
+                    description: None,
+                    value: 112,
+                },
+                EnumVariant {
+                    name: "DIV114",
+                    description: None,
+                    value: 113,
+                },
+                EnumVariant {
+                    name: "DIV115",
+                    description: None,
+                    value: 114,
+                },
+                EnumVariant {
+                    name: "DIV116",
+                    description: None,
+                    value: 115,
+                },
+                EnumVariant {
+                    name: "DIV117",
+                    description: None,
+                    value: 116,
+                },
+                EnumVariant {
+                    name: "DIV118",
+                    description: None,
+                    value: 117,
+                },
+                EnumVariant {
+                    name: "DIV119",
+                    description: None,
+                    value: 118,
+                },
+                EnumVariant {
+                    name: "DIV120",
+                    description: None,
+                    value: 119,
+                },
+                EnumVariant {
+                    name: "DIV121",
+                    description: None,
+                    value: 120,
+                },
+                EnumVariant {
+                    name: "DIV122",
+                    description: None,
+                    value: 121,
+                },
+                EnumVariant {
+                    name: "DIV123",
+                    description: None,
+                    value: 122,
+                },
+                EnumVariant {
+                    name: "DIV124",
+                    description: None,
+                    value: 123,
+                },
+                EnumVariant {
+                    name: "DIV125",
+                    description: None,
+                    value: 124,
+                },
+                EnumVariant {
+                    name: "DIV126",
+                    description: None,
+                    value: 125,
+                },
+                EnumVariant {
+                    name: "DIV127",
+                    description: None,
+                    value: 126,
+                },
+                EnumVariant {
+                    name: "DIV128",
+                    description: None,
+                    value: 127,
                 },
             ],
         },
@@ -4129,314 +6047,314 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 6,
             variants: &[
                 EnumVariant {
-                    name: "Div1",
+                    name: "DIV1",
                     description: None,
                     value: 1,
                 },
                 EnumVariant {
-                    name: "Div10",
-                    description: None,
-                    value: 10,
-                },
-                EnumVariant {
-                    name: "Div11",
-                    description: None,
-                    value: 11,
-                },
-                EnumVariant {
-                    name: "Div12",
-                    description: None,
-                    value: 12,
-                },
-                EnumVariant {
-                    name: "Div13",
-                    description: None,
-                    value: 13,
-                },
-                EnumVariant {
-                    name: "Div14",
-                    description: None,
-                    value: 14,
-                },
-                EnumVariant {
-                    name: "Div15",
-                    description: None,
-                    value: 15,
-                },
-                EnumVariant {
-                    name: "Div16",
-                    description: None,
-                    value: 16,
-                },
-                EnumVariant {
-                    name: "Div17",
-                    description: None,
-                    value: 17,
-                },
-                EnumVariant {
-                    name: "Div18",
-                    description: None,
-                    value: 18,
-                },
-                EnumVariant {
-                    name: "Div19",
-                    description: None,
-                    value: 19,
-                },
-                EnumVariant {
-                    name: "Div2",
+                    name: "DIV2",
                     description: None,
                     value: 2,
                 },
                 EnumVariant {
-                    name: "Div20",
-                    description: None,
-                    value: 20,
-                },
-                EnumVariant {
-                    name: "Div21",
-                    description: None,
-                    value: 21,
-                },
-                EnumVariant {
-                    name: "Div22",
-                    description: None,
-                    value: 22,
-                },
-                EnumVariant {
-                    name: "Div23",
-                    description: None,
-                    value: 23,
-                },
-                EnumVariant {
-                    name: "Div24",
-                    description: None,
-                    value: 24,
-                },
-                EnumVariant {
-                    name: "Div25",
-                    description: None,
-                    value: 25,
-                },
-                EnumVariant {
-                    name: "Div26",
-                    description: None,
-                    value: 26,
-                },
-                EnumVariant {
-                    name: "Div27",
-                    description: None,
-                    value: 27,
-                },
-                EnumVariant {
-                    name: "Div28",
-                    description: None,
-                    value: 28,
-                },
-                EnumVariant {
-                    name: "Div29",
-                    description: None,
-                    value: 29,
-                },
-                EnumVariant {
-                    name: "Div3",
+                    name: "DIV3",
                     description: None,
                     value: 3,
                 },
                 EnumVariant {
-                    name: "Div30",
-                    description: None,
-                    value: 30,
-                },
-                EnumVariant {
-                    name: "Div31",
-                    description: None,
-                    value: 31,
-                },
-                EnumVariant {
-                    name: "Div32",
-                    description: None,
-                    value: 32,
-                },
-                EnumVariant {
-                    name: "Div33",
-                    description: None,
-                    value: 33,
-                },
-                EnumVariant {
-                    name: "Div34",
-                    description: None,
-                    value: 34,
-                },
-                EnumVariant {
-                    name: "Div35",
-                    description: None,
-                    value: 35,
-                },
-                EnumVariant {
-                    name: "Div36",
-                    description: None,
-                    value: 36,
-                },
-                EnumVariant {
-                    name: "Div37",
-                    description: None,
-                    value: 37,
-                },
-                EnumVariant {
-                    name: "Div38",
-                    description: None,
-                    value: 38,
-                },
-                EnumVariant {
-                    name: "Div39",
-                    description: None,
-                    value: 39,
-                },
-                EnumVariant {
-                    name: "Div4",
+                    name: "DIV4",
                     description: None,
                     value: 4,
                 },
                 EnumVariant {
-                    name: "Div40",
-                    description: None,
-                    value: 40,
-                },
-                EnumVariant {
-                    name: "Div41",
-                    description: None,
-                    value: 41,
-                },
-                EnumVariant {
-                    name: "Div42",
-                    description: None,
-                    value: 42,
-                },
-                EnumVariant {
-                    name: "Div43",
-                    description: None,
-                    value: 43,
-                },
-                EnumVariant {
-                    name: "Div44",
-                    description: None,
-                    value: 44,
-                },
-                EnumVariant {
-                    name: "Div45",
-                    description: None,
-                    value: 45,
-                },
-                EnumVariant {
-                    name: "Div46",
-                    description: None,
-                    value: 46,
-                },
-                EnumVariant {
-                    name: "Div47",
-                    description: None,
-                    value: 47,
-                },
-                EnumVariant {
-                    name: "Div48",
-                    description: None,
-                    value: 48,
-                },
-                EnumVariant {
-                    name: "Div49",
-                    description: None,
-                    value: 49,
-                },
-                EnumVariant {
-                    name: "Div5",
+                    name: "DIV5",
                     description: None,
                     value: 5,
                 },
                 EnumVariant {
-                    name: "Div50",
-                    description: None,
-                    value: 50,
-                },
-                EnumVariant {
-                    name: "Div51",
-                    description: None,
-                    value: 51,
-                },
-                EnumVariant {
-                    name: "Div52",
-                    description: None,
-                    value: 52,
-                },
-                EnumVariant {
-                    name: "Div53",
-                    description: None,
-                    value: 53,
-                },
-                EnumVariant {
-                    name: "Div54",
-                    description: None,
-                    value: 54,
-                },
-                EnumVariant {
-                    name: "Div55",
-                    description: None,
-                    value: 55,
-                },
-                EnumVariant {
-                    name: "Div56",
-                    description: None,
-                    value: 56,
-                },
-                EnumVariant {
-                    name: "Div57",
-                    description: None,
-                    value: 57,
-                },
-                EnumVariant {
-                    name: "Div58",
-                    description: None,
-                    value: 58,
-                },
-                EnumVariant {
-                    name: "Div59",
-                    description: None,
-                    value: 59,
-                },
-                EnumVariant {
-                    name: "Div6",
+                    name: "DIV6",
                     description: None,
                     value: 6,
                 },
                 EnumVariant {
-                    name: "Div60",
-                    description: None,
-                    value: 60,
-                },
-                EnumVariant {
-                    name: "Div61",
-                    description: None,
-                    value: 61,
-                },
-                EnumVariant {
-                    name: "Div62",
-                    description: None,
-                    value: 62,
-                },
-                EnumVariant {
-                    name: "Div7",
+                    name: "DIV7",
                     description: None,
                     value: 7,
                 },
                 EnumVariant {
-                    name: "Div8",
+                    name: "DIV8",
                     description: None,
                     value: 8,
                 },
                 EnumVariant {
-                    name: "Div9",
+                    name: "DIV9",
                     description: None,
                     value: 9,
+                },
+                EnumVariant {
+                    name: "DIV10",
+                    description: None,
+                    value: 10,
+                },
+                EnumVariant {
+                    name: "DIV11",
+                    description: None,
+                    value: 11,
+                },
+                EnumVariant {
+                    name: "DIV12",
+                    description: None,
+                    value: 12,
+                },
+                EnumVariant {
+                    name: "DIV13",
+                    description: None,
+                    value: 13,
+                },
+                EnumVariant {
+                    name: "DIV14",
+                    description: None,
+                    value: 14,
+                },
+                EnumVariant {
+                    name: "DIV15",
+                    description: None,
+                    value: 15,
+                },
+                EnumVariant {
+                    name: "DIV16",
+                    description: None,
+                    value: 16,
+                },
+                EnumVariant {
+                    name: "DIV17",
+                    description: None,
+                    value: 17,
+                },
+                EnumVariant {
+                    name: "DIV18",
+                    description: None,
+                    value: 18,
+                },
+                EnumVariant {
+                    name: "DIV19",
+                    description: None,
+                    value: 19,
+                },
+                EnumVariant {
+                    name: "DIV20",
+                    description: None,
+                    value: 20,
+                },
+                EnumVariant {
+                    name: "DIV21",
+                    description: None,
+                    value: 21,
+                },
+                EnumVariant {
+                    name: "DIV22",
+                    description: None,
+                    value: 22,
+                },
+                EnumVariant {
+                    name: "DIV23",
+                    description: None,
+                    value: 23,
+                },
+                EnumVariant {
+                    name: "DIV24",
+                    description: None,
+                    value: 24,
+                },
+                EnumVariant {
+                    name: "DIV25",
+                    description: None,
+                    value: 25,
+                },
+                EnumVariant {
+                    name: "DIV26",
+                    description: None,
+                    value: 26,
+                },
+                EnumVariant {
+                    name: "DIV27",
+                    description: None,
+                    value: 27,
+                },
+                EnumVariant {
+                    name: "DIV28",
+                    description: None,
+                    value: 28,
+                },
+                EnumVariant {
+                    name: "DIV29",
+                    description: None,
+                    value: 29,
+                },
+                EnumVariant {
+                    name: "DIV30",
+                    description: None,
+                    value: 30,
+                },
+                EnumVariant {
+                    name: "DIV31",
+                    description: None,
+                    value: 31,
+                },
+                EnumVariant {
+                    name: "DIV32",
+                    description: None,
+                    value: 32,
+                },
+                EnumVariant {
+                    name: "DIV33",
+                    description: None,
+                    value: 33,
+                },
+                EnumVariant {
+                    name: "DIV34",
+                    description: None,
+                    value: 34,
+                },
+                EnumVariant {
+                    name: "DIV35",
+                    description: None,
+                    value: 35,
+                },
+                EnumVariant {
+                    name: "DIV36",
+                    description: None,
+                    value: 36,
+                },
+                EnumVariant {
+                    name: "DIV37",
+                    description: None,
+                    value: 37,
+                },
+                EnumVariant {
+                    name: "DIV38",
+                    description: None,
+                    value: 38,
+                },
+                EnumVariant {
+                    name: "DIV39",
+                    description: None,
+                    value: 39,
+                },
+                EnumVariant {
+                    name: "DIV40",
+                    description: None,
+                    value: 40,
+                },
+                EnumVariant {
+                    name: "DIV41",
+                    description: None,
+                    value: 41,
+                },
+                EnumVariant {
+                    name: "DIV42",
+                    description: None,
+                    value: 42,
+                },
+                EnumVariant {
+                    name: "DIV43",
+                    description: None,
+                    value: 43,
+                },
+                EnumVariant {
+                    name: "DIV44",
+                    description: None,
+                    value: 44,
+                },
+                EnumVariant {
+                    name: "DIV45",
+                    description: None,
+                    value: 45,
+                },
+                EnumVariant {
+                    name: "DIV46",
+                    description: None,
+                    value: 46,
+                },
+                EnumVariant {
+                    name: "DIV47",
+                    description: None,
+                    value: 47,
+                },
+                EnumVariant {
+                    name: "DIV48",
+                    description: None,
+                    value: 48,
+                },
+                EnumVariant {
+                    name: "DIV49",
+                    description: None,
+                    value: 49,
+                },
+                EnumVariant {
+                    name: "DIV50",
+                    description: None,
+                    value: 50,
+                },
+                EnumVariant {
+                    name: "DIV51",
+                    description: None,
+                    value: 51,
+                },
+                EnumVariant {
+                    name: "DIV52",
+                    description: None,
+                    value: 52,
+                },
+                EnumVariant {
+                    name: "DIV53",
+                    description: None,
+                    value: 53,
+                },
+                EnumVariant {
+                    name: "DIV54",
+                    description: None,
+                    value: 54,
+                },
+                EnumVariant {
+                    name: "DIV55",
+                    description: None,
+                    value: 55,
+                },
+                EnumVariant {
+                    name: "DIV56",
+                    description: None,
+                    value: 56,
+                },
+                EnumVariant {
+                    name: "DIV57",
+                    description: None,
+                    value: 57,
+                },
+                EnumVariant {
+                    name: "DIV58",
+                    description: None,
+                    value: 58,
+                },
+                EnumVariant {
+                    name: "DIV59",
+                    description: None,
+                    value: 59,
+                },
+                EnumVariant {
+                    name: "DIV60",
+                    description: None,
+                    value: 60,
+                },
+                EnumVariant {
+                    name: "DIV61",
+                    description: None,
+                    value: 61,
+                },
+                EnumVariant {
+                    name: "DIV62",
+                    description: None,
+                    value: 62,
                 },
             ],
         },
@@ -4446,2549 +6364,2549 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 9,
             variants: &[
                 EnumVariant {
-                    name: "Mul10",
-                    description: None,
-                    value: 9,
-                },
-                EnumVariant {
-                    name: "Mul100",
-                    description: None,
-                    value: 99,
-                },
-                EnumVariant {
-                    name: "Mul101",
-                    description: None,
-                    value: 100,
-                },
-                EnumVariant {
-                    name: "Mul102",
-                    description: None,
-                    value: 101,
-                },
-                EnumVariant {
-                    name: "Mul103",
-                    description: None,
-                    value: 102,
-                },
-                EnumVariant {
-                    name: "Mul104",
-                    description: None,
-                    value: 103,
-                },
-                EnumVariant {
-                    name: "Mul105",
-                    description: None,
-                    value: 104,
-                },
-                EnumVariant {
-                    name: "Mul106",
-                    description: None,
-                    value: 105,
-                },
-                EnumVariant {
-                    name: "Mul107",
-                    description: None,
-                    value: 106,
-                },
-                EnumVariant {
-                    name: "Mul108",
-                    description: None,
-                    value: 107,
-                },
-                EnumVariant {
-                    name: "Mul109",
-                    description: None,
-                    value: 108,
-                },
-                EnumVariant {
-                    name: "Mul11",
-                    description: None,
-                    value: 10,
-                },
-                EnumVariant {
-                    name: "Mul110",
-                    description: None,
-                    value: 109,
-                },
-                EnumVariant {
-                    name: "Mul111",
-                    description: None,
-                    value: 110,
-                },
-                EnumVariant {
-                    name: "Mul112",
-                    description: None,
-                    value: 111,
-                },
-                EnumVariant {
-                    name: "Mul113",
-                    description: None,
-                    value: 112,
-                },
-                EnumVariant {
-                    name: "Mul114",
-                    description: None,
-                    value: 113,
-                },
-                EnumVariant {
-                    name: "Mul115",
-                    description: None,
-                    value: 114,
-                },
-                EnumVariant {
-                    name: "Mul116",
-                    description: None,
-                    value: 115,
-                },
-                EnumVariant {
-                    name: "Mul117",
-                    description: None,
-                    value: 116,
-                },
-                EnumVariant {
-                    name: "Mul118",
-                    description: None,
-                    value: 117,
-                },
-                EnumVariant {
-                    name: "Mul119",
-                    description: None,
-                    value: 118,
-                },
-                EnumVariant {
-                    name: "Mul12",
-                    description: None,
-                    value: 11,
-                },
-                EnumVariant {
-                    name: "Mul120",
-                    description: None,
-                    value: 119,
-                },
-                EnumVariant {
-                    name: "Mul121",
-                    description: None,
-                    value: 120,
-                },
-                EnumVariant {
-                    name: "Mul122",
-                    description: None,
-                    value: 121,
-                },
-                EnumVariant {
-                    name: "Mul123",
-                    description: None,
-                    value: 122,
-                },
-                EnumVariant {
-                    name: "Mul124",
-                    description: None,
-                    value: 123,
-                },
-                EnumVariant {
-                    name: "Mul125",
-                    description: None,
-                    value: 124,
-                },
-                EnumVariant {
-                    name: "Mul126",
-                    description: None,
-                    value: 125,
-                },
-                EnumVariant {
-                    name: "Mul127",
-                    description: None,
-                    value: 126,
-                },
-                EnumVariant {
-                    name: "Mul128",
-                    description: None,
-                    value: 127,
-                },
-                EnumVariant {
-                    name: "Mul129",
-                    description: None,
-                    value: 128,
-                },
-                EnumVariant {
-                    name: "Mul13",
-                    description: None,
-                    value: 12,
-                },
-                EnumVariant {
-                    name: "Mul130",
-                    description: None,
-                    value: 129,
-                },
-                EnumVariant {
-                    name: "Mul131",
-                    description: None,
-                    value: 130,
-                },
-                EnumVariant {
-                    name: "Mul132",
-                    description: None,
-                    value: 131,
-                },
-                EnumVariant {
-                    name: "Mul133",
-                    description: None,
-                    value: 132,
-                },
-                EnumVariant {
-                    name: "Mul134",
-                    description: None,
-                    value: 133,
-                },
-                EnumVariant {
-                    name: "Mul135",
-                    description: None,
-                    value: 134,
-                },
-                EnumVariant {
-                    name: "Mul136",
-                    description: None,
-                    value: 135,
-                },
-                EnumVariant {
-                    name: "Mul137",
-                    description: None,
-                    value: 136,
-                },
-                EnumVariant {
-                    name: "Mul138",
-                    description: None,
-                    value: 137,
-                },
-                EnumVariant {
-                    name: "Mul139",
-                    description: None,
-                    value: 138,
-                },
-                EnumVariant {
-                    name: "Mul14",
-                    description: None,
-                    value: 13,
-                },
-                EnumVariant {
-                    name: "Mul140",
-                    description: None,
-                    value: 139,
-                },
-                EnumVariant {
-                    name: "Mul141",
-                    description: None,
-                    value: 140,
-                },
-                EnumVariant {
-                    name: "Mul142",
-                    description: None,
-                    value: 141,
-                },
-                EnumVariant {
-                    name: "Mul143",
-                    description: None,
-                    value: 142,
-                },
-                EnumVariant {
-                    name: "Mul144",
-                    description: None,
-                    value: 143,
-                },
-                EnumVariant {
-                    name: "Mul145",
-                    description: None,
-                    value: 144,
-                },
-                EnumVariant {
-                    name: "Mul146",
-                    description: None,
-                    value: 145,
-                },
-                EnumVariant {
-                    name: "Mul147",
-                    description: None,
-                    value: 146,
-                },
-                EnumVariant {
-                    name: "Mul148",
-                    description: None,
-                    value: 147,
-                },
-                EnumVariant {
-                    name: "Mul149",
-                    description: None,
-                    value: 148,
-                },
-                EnumVariant {
-                    name: "Mul15",
-                    description: None,
-                    value: 14,
-                },
-                EnumVariant {
-                    name: "Mul150",
-                    description: None,
-                    value: 149,
-                },
-                EnumVariant {
-                    name: "Mul151",
-                    description: None,
-                    value: 150,
-                },
-                EnumVariant {
-                    name: "Mul152",
-                    description: None,
-                    value: 151,
-                },
-                EnumVariant {
-                    name: "Mul153",
-                    description: None,
-                    value: 152,
-                },
-                EnumVariant {
-                    name: "Mul154",
-                    description: None,
-                    value: 153,
-                },
-                EnumVariant {
-                    name: "Mul155",
-                    description: None,
-                    value: 154,
-                },
-                EnumVariant {
-                    name: "Mul156",
-                    description: None,
-                    value: 155,
-                },
-                EnumVariant {
-                    name: "Mul157",
-                    description: None,
-                    value: 156,
-                },
-                EnumVariant {
-                    name: "Mul158",
-                    description: None,
-                    value: 157,
-                },
-                EnumVariant {
-                    name: "Mul159",
-                    description: None,
-                    value: 158,
-                },
-                EnumVariant {
-                    name: "Mul16",
-                    description: None,
-                    value: 15,
-                },
-                EnumVariant {
-                    name: "Mul160",
-                    description: None,
-                    value: 159,
-                },
-                EnumVariant {
-                    name: "Mul161",
-                    description: None,
-                    value: 160,
-                },
-                EnumVariant {
-                    name: "Mul162",
-                    description: None,
-                    value: 161,
-                },
-                EnumVariant {
-                    name: "Mul163",
-                    description: None,
-                    value: 162,
-                },
-                EnumVariant {
-                    name: "Mul164",
-                    description: None,
-                    value: 163,
-                },
-                EnumVariant {
-                    name: "Mul165",
-                    description: None,
-                    value: 164,
-                },
-                EnumVariant {
-                    name: "Mul166",
-                    description: None,
-                    value: 165,
-                },
-                EnumVariant {
-                    name: "Mul167",
-                    description: None,
-                    value: 166,
-                },
-                EnumVariant {
-                    name: "Mul168",
-                    description: None,
-                    value: 167,
-                },
-                EnumVariant {
-                    name: "Mul169",
-                    description: None,
-                    value: 168,
-                },
-                EnumVariant {
-                    name: "Mul17",
-                    description: None,
-                    value: 16,
-                },
-                EnumVariant {
-                    name: "Mul170",
-                    description: None,
-                    value: 169,
-                },
-                EnumVariant {
-                    name: "Mul171",
-                    description: None,
-                    value: 170,
-                },
-                EnumVariant {
-                    name: "Mul172",
-                    description: None,
-                    value: 171,
-                },
-                EnumVariant {
-                    name: "Mul173",
-                    description: None,
-                    value: 172,
-                },
-                EnumVariant {
-                    name: "Mul174",
-                    description: None,
-                    value: 173,
-                },
-                EnumVariant {
-                    name: "Mul175",
-                    description: None,
-                    value: 174,
-                },
-                EnumVariant {
-                    name: "Mul176",
-                    description: None,
-                    value: 175,
-                },
-                EnumVariant {
-                    name: "Mul177",
-                    description: None,
-                    value: 176,
-                },
-                EnumVariant {
-                    name: "Mul178",
-                    description: None,
-                    value: 177,
-                },
-                EnumVariant {
-                    name: "Mul179",
-                    description: None,
-                    value: 178,
-                },
-                EnumVariant {
-                    name: "Mul18",
-                    description: None,
-                    value: 17,
-                },
-                EnumVariant {
-                    name: "Mul180",
-                    description: None,
-                    value: 179,
-                },
-                EnumVariant {
-                    name: "Mul181",
-                    description: None,
-                    value: 180,
-                },
-                EnumVariant {
-                    name: "Mul182",
-                    description: None,
-                    value: 181,
-                },
-                EnumVariant {
-                    name: "Mul183",
-                    description: None,
-                    value: 182,
-                },
-                EnumVariant {
-                    name: "Mul184",
-                    description: None,
-                    value: 183,
-                },
-                EnumVariant {
-                    name: "Mul185",
-                    description: None,
-                    value: 184,
-                },
-                EnumVariant {
-                    name: "Mul186",
-                    description: None,
-                    value: 185,
-                },
-                EnumVariant {
-                    name: "Mul187",
-                    description: None,
-                    value: 186,
-                },
-                EnumVariant {
-                    name: "Mul188",
-                    description: None,
-                    value: 187,
-                },
-                EnumVariant {
-                    name: "Mul189",
-                    description: None,
-                    value: 188,
-                },
-                EnumVariant {
-                    name: "Mul19",
-                    description: None,
-                    value: 18,
-                },
-                EnumVariant {
-                    name: "Mul190",
-                    description: None,
-                    value: 189,
-                },
-                EnumVariant {
-                    name: "Mul191",
-                    description: None,
-                    value: 190,
-                },
-                EnumVariant {
-                    name: "Mul192",
-                    description: None,
-                    value: 191,
-                },
-                EnumVariant {
-                    name: "Mul193",
-                    description: None,
-                    value: 192,
-                },
-                EnumVariant {
-                    name: "Mul194",
-                    description: None,
-                    value: 193,
-                },
-                EnumVariant {
-                    name: "Mul195",
-                    description: None,
-                    value: 194,
-                },
-                EnumVariant {
-                    name: "Mul196",
-                    description: None,
-                    value: 195,
-                },
-                EnumVariant {
-                    name: "Mul197",
-                    description: None,
-                    value: 196,
-                },
-                EnumVariant {
-                    name: "Mul198",
-                    description: None,
-                    value: 197,
-                },
-                EnumVariant {
-                    name: "Mul199",
-                    description: None,
-                    value: 198,
-                },
-                EnumVariant {
-                    name: "Mul20",
-                    description: None,
-                    value: 19,
-                },
-                EnumVariant {
-                    name: "Mul200",
-                    description: None,
-                    value: 199,
-                },
-                EnumVariant {
-                    name: "Mul201",
-                    description: None,
-                    value: 200,
-                },
-                EnumVariant {
-                    name: "Mul202",
-                    description: None,
-                    value: 201,
-                },
-                EnumVariant {
-                    name: "Mul203",
-                    description: None,
-                    value: 202,
-                },
-                EnumVariant {
-                    name: "Mul204",
-                    description: None,
-                    value: 203,
-                },
-                EnumVariant {
-                    name: "Mul205",
-                    description: None,
-                    value: 204,
-                },
-                EnumVariant {
-                    name: "Mul206",
-                    description: None,
-                    value: 205,
-                },
-                EnumVariant {
-                    name: "Mul207",
-                    description: None,
-                    value: 206,
-                },
-                EnumVariant {
-                    name: "Mul208",
-                    description: None,
-                    value: 207,
-                },
-                EnumVariant {
-                    name: "Mul209",
-                    description: None,
-                    value: 208,
-                },
-                EnumVariant {
-                    name: "Mul21",
-                    description: None,
-                    value: 20,
-                },
-                EnumVariant {
-                    name: "Mul210",
-                    description: None,
-                    value: 209,
-                },
-                EnumVariant {
-                    name: "Mul211",
-                    description: None,
-                    value: 210,
-                },
-                EnumVariant {
-                    name: "Mul212",
-                    description: None,
-                    value: 211,
-                },
-                EnumVariant {
-                    name: "Mul213",
-                    description: None,
-                    value: 212,
-                },
-                EnumVariant {
-                    name: "Mul214",
-                    description: None,
-                    value: 213,
-                },
-                EnumVariant {
-                    name: "Mul215",
-                    description: None,
-                    value: 214,
-                },
-                EnumVariant {
-                    name: "Mul216",
-                    description: None,
-                    value: 215,
-                },
-                EnumVariant {
-                    name: "Mul217",
-                    description: None,
-                    value: 216,
-                },
-                EnumVariant {
-                    name: "Mul218",
-                    description: None,
-                    value: 217,
-                },
-                EnumVariant {
-                    name: "Mul219",
-                    description: None,
-                    value: 218,
-                },
-                EnumVariant {
-                    name: "Mul22",
-                    description: None,
-                    value: 21,
-                },
-                EnumVariant {
-                    name: "Mul220",
-                    description: None,
-                    value: 219,
-                },
-                EnumVariant {
-                    name: "Mul221",
-                    description: None,
-                    value: 220,
-                },
-                EnumVariant {
-                    name: "Mul222",
-                    description: None,
-                    value: 221,
-                },
-                EnumVariant {
-                    name: "Mul223",
-                    description: None,
-                    value: 222,
-                },
-                EnumVariant {
-                    name: "Mul224",
-                    description: None,
-                    value: 223,
-                },
-                EnumVariant {
-                    name: "Mul225",
-                    description: None,
-                    value: 224,
-                },
-                EnumVariant {
-                    name: "Mul226",
-                    description: None,
-                    value: 225,
-                },
-                EnumVariant {
-                    name: "Mul227",
-                    description: None,
-                    value: 226,
-                },
-                EnumVariant {
-                    name: "Mul228",
-                    description: None,
-                    value: 227,
-                },
-                EnumVariant {
-                    name: "Mul229",
-                    description: None,
-                    value: 228,
-                },
-                EnumVariant {
-                    name: "Mul23",
-                    description: None,
-                    value: 22,
-                },
-                EnumVariant {
-                    name: "Mul230",
-                    description: None,
-                    value: 229,
-                },
-                EnumVariant {
-                    name: "Mul231",
-                    description: None,
-                    value: 230,
-                },
-                EnumVariant {
-                    name: "Mul232",
-                    description: None,
-                    value: 231,
-                },
-                EnumVariant {
-                    name: "Mul233",
-                    description: None,
-                    value: 232,
-                },
-                EnumVariant {
-                    name: "Mul234",
-                    description: None,
-                    value: 233,
-                },
-                EnumVariant {
-                    name: "Mul235",
-                    description: None,
-                    value: 234,
-                },
-                EnumVariant {
-                    name: "Mul236",
-                    description: None,
-                    value: 235,
-                },
-                EnumVariant {
-                    name: "Mul237",
-                    description: None,
-                    value: 236,
-                },
-                EnumVariant {
-                    name: "Mul238",
-                    description: None,
-                    value: 237,
-                },
-                EnumVariant {
-                    name: "Mul239",
-                    description: None,
-                    value: 238,
-                },
-                EnumVariant {
-                    name: "Mul24",
-                    description: None,
-                    value: 23,
-                },
-                EnumVariant {
-                    name: "Mul240",
-                    description: None,
-                    value: 239,
-                },
-                EnumVariant {
-                    name: "Mul241",
-                    description: None,
-                    value: 240,
-                },
-                EnumVariant {
-                    name: "Mul242",
-                    description: None,
-                    value: 241,
-                },
-                EnumVariant {
-                    name: "Mul243",
-                    description: None,
-                    value: 242,
-                },
-                EnumVariant {
-                    name: "Mul244",
-                    description: None,
-                    value: 243,
-                },
-                EnumVariant {
-                    name: "Mul245",
-                    description: None,
-                    value: 244,
-                },
-                EnumVariant {
-                    name: "Mul246",
-                    description: None,
-                    value: 245,
-                },
-                EnumVariant {
-                    name: "Mul247",
-                    description: None,
-                    value: 246,
-                },
-                EnumVariant {
-                    name: "Mul248",
-                    description: None,
-                    value: 247,
-                },
-                EnumVariant {
-                    name: "Mul249",
-                    description: None,
-                    value: 248,
-                },
-                EnumVariant {
-                    name: "Mul25",
-                    description: None,
-                    value: 24,
-                },
-                EnumVariant {
-                    name: "Mul250",
-                    description: None,
-                    value: 249,
-                },
-                EnumVariant {
-                    name: "Mul251",
-                    description: None,
-                    value: 250,
-                },
-                EnumVariant {
-                    name: "Mul252",
-                    description: None,
-                    value: 251,
-                },
-                EnumVariant {
-                    name: "Mul253",
-                    description: None,
-                    value: 252,
-                },
-                EnumVariant {
-                    name: "Mul254",
-                    description: None,
-                    value: 253,
-                },
-                EnumVariant {
-                    name: "Mul255",
-                    description: None,
-                    value: 254,
-                },
-                EnumVariant {
-                    name: "Mul256",
-                    description: None,
-                    value: 255,
-                },
-                EnumVariant {
-                    name: "Mul257",
-                    description: None,
-                    value: 256,
-                },
-                EnumVariant {
-                    name: "Mul258",
-                    description: None,
-                    value: 257,
-                },
-                EnumVariant {
-                    name: "Mul259",
-                    description: None,
-                    value: 258,
-                },
-                EnumVariant {
-                    name: "Mul26",
-                    description: None,
-                    value: 25,
-                },
-                EnumVariant {
-                    name: "Mul260",
-                    description: None,
-                    value: 259,
-                },
-                EnumVariant {
-                    name: "Mul261",
-                    description: None,
-                    value: 260,
-                },
-                EnumVariant {
-                    name: "Mul262",
-                    description: None,
-                    value: 261,
-                },
-                EnumVariant {
-                    name: "Mul263",
-                    description: None,
-                    value: 262,
-                },
-                EnumVariant {
-                    name: "Mul264",
-                    description: None,
-                    value: 263,
-                },
-                EnumVariant {
-                    name: "Mul265",
-                    description: None,
-                    value: 264,
-                },
-                EnumVariant {
-                    name: "Mul266",
-                    description: None,
-                    value: 265,
-                },
-                EnumVariant {
-                    name: "Mul267",
-                    description: None,
-                    value: 266,
-                },
-                EnumVariant {
-                    name: "Mul268",
-                    description: None,
-                    value: 267,
-                },
-                EnumVariant {
-                    name: "Mul269",
-                    description: None,
-                    value: 268,
-                },
-                EnumVariant {
-                    name: "Mul27",
-                    description: None,
-                    value: 26,
-                },
-                EnumVariant {
-                    name: "Mul270",
-                    description: None,
-                    value: 269,
-                },
-                EnumVariant {
-                    name: "Mul271",
-                    description: None,
-                    value: 270,
-                },
-                EnumVariant {
-                    name: "Mul272",
-                    description: None,
-                    value: 271,
-                },
-                EnumVariant {
-                    name: "Mul273",
-                    description: None,
-                    value: 272,
-                },
-                EnumVariant {
-                    name: "Mul274",
-                    description: None,
-                    value: 273,
-                },
-                EnumVariant {
-                    name: "Mul275",
-                    description: None,
-                    value: 274,
-                },
-                EnumVariant {
-                    name: "Mul276",
-                    description: None,
-                    value: 275,
-                },
-                EnumVariant {
-                    name: "Mul277",
-                    description: None,
-                    value: 276,
-                },
-                EnumVariant {
-                    name: "Mul278",
-                    description: None,
-                    value: 277,
-                },
-                EnumVariant {
-                    name: "Mul279",
-                    description: None,
-                    value: 278,
-                },
-                EnumVariant {
-                    name: "Mul28",
-                    description: None,
-                    value: 27,
-                },
-                EnumVariant {
-                    name: "Mul280",
-                    description: None,
-                    value: 279,
-                },
-                EnumVariant {
-                    name: "Mul281",
-                    description: None,
-                    value: 280,
-                },
-                EnumVariant {
-                    name: "Mul282",
-                    description: None,
-                    value: 281,
-                },
-                EnumVariant {
-                    name: "Mul283",
-                    description: None,
-                    value: 282,
-                },
-                EnumVariant {
-                    name: "Mul284",
-                    description: None,
-                    value: 283,
-                },
-                EnumVariant {
-                    name: "Mul285",
-                    description: None,
-                    value: 284,
-                },
-                EnumVariant {
-                    name: "Mul286",
-                    description: None,
-                    value: 285,
-                },
-                EnumVariant {
-                    name: "Mul287",
-                    description: None,
-                    value: 286,
-                },
-                EnumVariant {
-                    name: "Mul288",
-                    description: None,
-                    value: 287,
-                },
-                EnumVariant {
-                    name: "Mul289",
-                    description: None,
-                    value: 288,
-                },
-                EnumVariant {
-                    name: "Mul29",
-                    description: None,
-                    value: 28,
-                },
-                EnumVariant {
-                    name: "Mul290",
-                    description: None,
-                    value: 289,
-                },
-                EnumVariant {
-                    name: "Mul291",
-                    description: None,
-                    value: 290,
-                },
-                EnumVariant {
-                    name: "Mul292",
-                    description: None,
-                    value: 291,
-                },
-                EnumVariant {
-                    name: "Mul293",
-                    description: None,
-                    value: 292,
-                },
-                EnumVariant {
-                    name: "Mul294",
-                    description: None,
-                    value: 293,
-                },
-                EnumVariant {
-                    name: "Mul295",
-                    description: None,
-                    value: 294,
-                },
-                EnumVariant {
-                    name: "Mul296",
-                    description: None,
-                    value: 295,
-                },
-                EnumVariant {
-                    name: "Mul297",
-                    description: None,
-                    value: 296,
-                },
-                EnumVariant {
-                    name: "Mul298",
-                    description: None,
-                    value: 297,
-                },
-                EnumVariant {
-                    name: "Mul299",
-                    description: None,
-                    value: 298,
-                },
-                EnumVariant {
-                    name: "Mul30",
-                    description: None,
-                    value: 29,
-                },
-                EnumVariant {
-                    name: "Mul300",
-                    description: None,
-                    value: 299,
-                },
-                EnumVariant {
-                    name: "Mul301",
-                    description: None,
-                    value: 300,
-                },
-                EnumVariant {
-                    name: "Mul302",
-                    description: None,
-                    value: 301,
-                },
-                EnumVariant {
-                    name: "Mul303",
-                    description: None,
-                    value: 302,
-                },
-                EnumVariant {
-                    name: "Mul304",
-                    description: None,
-                    value: 303,
-                },
-                EnumVariant {
-                    name: "Mul305",
-                    description: None,
-                    value: 304,
-                },
-                EnumVariant {
-                    name: "Mul306",
-                    description: None,
-                    value: 305,
-                },
-                EnumVariant {
-                    name: "Mul307",
-                    description: None,
-                    value: 306,
-                },
-                EnumVariant {
-                    name: "Mul308",
-                    description: None,
-                    value: 307,
-                },
-                EnumVariant {
-                    name: "Mul309",
-                    description: None,
-                    value: 308,
-                },
-                EnumVariant {
-                    name: "Mul31",
-                    description: None,
-                    value: 30,
-                },
-                EnumVariant {
-                    name: "Mul310",
-                    description: None,
-                    value: 309,
-                },
-                EnumVariant {
-                    name: "Mul311",
-                    description: None,
-                    value: 310,
-                },
-                EnumVariant {
-                    name: "Mul312",
-                    description: None,
-                    value: 311,
-                },
-                EnumVariant {
-                    name: "Mul313",
-                    description: None,
-                    value: 312,
-                },
-                EnumVariant {
-                    name: "Mul314",
-                    description: None,
-                    value: 313,
-                },
-                EnumVariant {
-                    name: "Mul315",
-                    description: None,
-                    value: 314,
-                },
-                EnumVariant {
-                    name: "Mul316",
-                    description: None,
-                    value: 315,
-                },
-                EnumVariant {
-                    name: "Mul317",
-                    description: None,
-                    value: 316,
-                },
-                EnumVariant {
-                    name: "Mul318",
-                    description: None,
-                    value: 317,
-                },
-                EnumVariant {
-                    name: "Mul319",
-                    description: None,
-                    value: 318,
-                },
-                EnumVariant {
-                    name: "Mul32",
-                    description: None,
-                    value: 31,
-                },
-                EnumVariant {
-                    name: "Mul320",
-                    description: None,
-                    value: 319,
-                },
-                EnumVariant {
-                    name: "Mul321",
-                    description: None,
-                    value: 320,
-                },
-                EnumVariant {
-                    name: "Mul322",
-                    description: None,
-                    value: 321,
-                },
-                EnumVariant {
-                    name: "Mul323",
-                    description: None,
-                    value: 322,
-                },
-                EnumVariant {
-                    name: "Mul324",
-                    description: None,
-                    value: 323,
-                },
-                EnumVariant {
-                    name: "Mul325",
-                    description: None,
-                    value: 324,
-                },
-                EnumVariant {
-                    name: "Mul326",
-                    description: None,
-                    value: 325,
-                },
-                EnumVariant {
-                    name: "Mul327",
-                    description: None,
-                    value: 326,
-                },
-                EnumVariant {
-                    name: "Mul328",
-                    description: None,
-                    value: 327,
-                },
-                EnumVariant {
-                    name: "Mul329",
-                    description: None,
-                    value: 328,
-                },
-                EnumVariant {
-                    name: "Mul33",
-                    description: None,
-                    value: 32,
-                },
-                EnumVariant {
-                    name: "Mul330",
-                    description: None,
-                    value: 329,
-                },
-                EnumVariant {
-                    name: "Mul331",
-                    description: None,
-                    value: 330,
-                },
-                EnumVariant {
-                    name: "Mul332",
-                    description: None,
-                    value: 331,
-                },
-                EnumVariant {
-                    name: "Mul333",
-                    description: None,
-                    value: 332,
-                },
-                EnumVariant {
-                    name: "Mul334",
-                    description: None,
-                    value: 333,
-                },
-                EnumVariant {
-                    name: "Mul335",
-                    description: None,
-                    value: 334,
-                },
-                EnumVariant {
-                    name: "Mul336",
-                    description: None,
-                    value: 335,
-                },
-                EnumVariant {
-                    name: "Mul337",
-                    description: None,
-                    value: 336,
-                },
-                EnumVariant {
-                    name: "Mul338",
-                    description: None,
-                    value: 337,
-                },
-                EnumVariant {
-                    name: "Mul339",
-                    description: None,
-                    value: 338,
-                },
-                EnumVariant {
-                    name: "Mul34",
-                    description: None,
-                    value: 33,
-                },
-                EnumVariant {
-                    name: "Mul340",
-                    description: None,
-                    value: 339,
-                },
-                EnumVariant {
-                    name: "Mul341",
-                    description: None,
-                    value: 340,
-                },
-                EnumVariant {
-                    name: "Mul342",
-                    description: None,
-                    value: 341,
-                },
-                EnumVariant {
-                    name: "Mul343",
-                    description: None,
-                    value: 342,
-                },
-                EnumVariant {
-                    name: "Mul344",
-                    description: None,
-                    value: 343,
-                },
-                EnumVariant {
-                    name: "Mul345",
-                    description: None,
-                    value: 344,
-                },
-                EnumVariant {
-                    name: "Mul346",
-                    description: None,
-                    value: 345,
-                },
-                EnumVariant {
-                    name: "Mul347",
-                    description: None,
-                    value: 346,
-                },
-                EnumVariant {
-                    name: "Mul348",
-                    description: None,
-                    value: 347,
-                },
-                EnumVariant {
-                    name: "Mul349",
-                    description: None,
-                    value: 348,
-                },
-                EnumVariant {
-                    name: "Mul35",
-                    description: None,
-                    value: 34,
-                },
-                EnumVariant {
-                    name: "Mul350",
-                    description: None,
-                    value: 349,
-                },
-                EnumVariant {
-                    name: "Mul351",
-                    description: None,
-                    value: 350,
-                },
-                EnumVariant {
-                    name: "Mul352",
-                    description: None,
-                    value: 351,
-                },
-                EnumVariant {
-                    name: "Mul353",
-                    description: None,
-                    value: 352,
-                },
-                EnumVariant {
-                    name: "Mul354",
-                    description: None,
-                    value: 353,
-                },
-                EnumVariant {
-                    name: "Mul355",
-                    description: None,
-                    value: 354,
-                },
-                EnumVariant {
-                    name: "Mul356",
-                    description: None,
-                    value: 355,
-                },
-                EnumVariant {
-                    name: "Mul357",
-                    description: None,
-                    value: 356,
-                },
-                EnumVariant {
-                    name: "Mul358",
-                    description: None,
-                    value: 357,
-                },
-                EnumVariant {
-                    name: "Mul359",
-                    description: None,
-                    value: 358,
-                },
-                EnumVariant {
-                    name: "Mul36",
-                    description: None,
-                    value: 35,
-                },
-                EnumVariant {
-                    name: "Mul360",
-                    description: None,
-                    value: 359,
-                },
-                EnumVariant {
-                    name: "Mul361",
-                    description: None,
-                    value: 360,
-                },
-                EnumVariant {
-                    name: "Mul362",
-                    description: None,
-                    value: 361,
-                },
-                EnumVariant {
-                    name: "Mul363",
-                    description: None,
-                    value: 362,
-                },
-                EnumVariant {
-                    name: "Mul364",
-                    description: None,
-                    value: 363,
-                },
-                EnumVariant {
-                    name: "Mul365",
-                    description: None,
-                    value: 364,
-                },
-                EnumVariant {
-                    name: "Mul366",
-                    description: None,
-                    value: 365,
-                },
-                EnumVariant {
-                    name: "Mul367",
-                    description: None,
-                    value: 366,
-                },
-                EnumVariant {
-                    name: "Mul368",
-                    description: None,
-                    value: 367,
-                },
-                EnumVariant {
-                    name: "Mul369",
-                    description: None,
-                    value: 368,
-                },
-                EnumVariant {
-                    name: "Mul37",
-                    description: None,
-                    value: 36,
-                },
-                EnumVariant {
-                    name: "Mul370",
-                    description: None,
-                    value: 369,
-                },
-                EnumVariant {
-                    name: "Mul371",
-                    description: None,
-                    value: 370,
-                },
-                EnumVariant {
-                    name: "Mul372",
-                    description: None,
-                    value: 371,
-                },
-                EnumVariant {
-                    name: "Mul373",
-                    description: None,
-                    value: 372,
-                },
-                EnumVariant {
-                    name: "Mul374",
-                    description: None,
-                    value: 373,
-                },
-                EnumVariant {
-                    name: "Mul375",
-                    description: None,
-                    value: 374,
-                },
-                EnumVariant {
-                    name: "Mul376",
-                    description: None,
-                    value: 375,
-                },
-                EnumVariant {
-                    name: "Mul377",
-                    description: None,
-                    value: 376,
-                },
-                EnumVariant {
-                    name: "Mul378",
-                    description: None,
-                    value: 377,
-                },
-                EnumVariant {
-                    name: "Mul379",
-                    description: None,
-                    value: 378,
-                },
-                EnumVariant {
-                    name: "Mul38",
-                    description: None,
-                    value: 37,
-                },
-                EnumVariant {
-                    name: "Mul380",
-                    description: None,
-                    value: 379,
-                },
-                EnumVariant {
-                    name: "Mul381",
-                    description: None,
-                    value: 380,
-                },
-                EnumVariant {
-                    name: "Mul382",
-                    description: None,
-                    value: 381,
-                },
-                EnumVariant {
-                    name: "Mul383",
-                    description: None,
-                    value: 382,
-                },
-                EnumVariant {
-                    name: "Mul384",
-                    description: None,
-                    value: 383,
-                },
-                EnumVariant {
-                    name: "Mul385",
-                    description: None,
-                    value: 384,
-                },
-                EnumVariant {
-                    name: "Mul386",
-                    description: None,
-                    value: 385,
-                },
-                EnumVariant {
-                    name: "Mul387",
-                    description: None,
-                    value: 386,
-                },
-                EnumVariant {
-                    name: "Mul388",
-                    description: None,
-                    value: 387,
-                },
-                EnumVariant {
-                    name: "Mul389",
-                    description: None,
-                    value: 388,
-                },
-                EnumVariant {
-                    name: "Mul39",
-                    description: None,
-                    value: 38,
-                },
-                EnumVariant {
-                    name: "Mul390",
-                    description: None,
-                    value: 389,
-                },
-                EnumVariant {
-                    name: "Mul391",
-                    description: None,
-                    value: 390,
-                },
-                EnumVariant {
-                    name: "Mul392",
-                    description: None,
-                    value: 391,
-                },
-                EnumVariant {
-                    name: "Mul393",
-                    description: None,
-                    value: 392,
-                },
-                EnumVariant {
-                    name: "Mul394",
-                    description: None,
-                    value: 393,
-                },
-                EnumVariant {
-                    name: "Mul395",
-                    description: None,
-                    value: 394,
-                },
-                EnumVariant {
-                    name: "Mul396",
-                    description: None,
-                    value: 395,
-                },
-                EnumVariant {
-                    name: "Mul397",
-                    description: None,
-                    value: 396,
-                },
-                EnumVariant {
-                    name: "Mul398",
-                    description: None,
-                    value: 397,
-                },
-                EnumVariant {
-                    name: "Mul399",
-                    description: None,
-                    value: 398,
-                },
-                EnumVariant {
-                    name: "Mul4",
+                    name: "MUL4",
                     description: None,
                     value: 3,
                 },
                 EnumVariant {
-                    name: "Mul40",
-                    description: None,
-                    value: 39,
-                },
-                EnumVariant {
-                    name: "Mul400",
-                    description: None,
-                    value: 399,
-                },
-                EnumVariant {
-                    name: "Mul401",
-                    description: None,
-                    value: 400,
-                },
-                EnumVariant {
-                    name: "Mul402",
-                    description: None,
-                    value: 401,
-                },
-                EnumVariant {
-                    name: "Mul403",
-                    description: None,
-                    value: 402,
-                },
-                EnumVariant {
-                    name: "Mul404",
-                    description: None,
-                    value: 403,
-                },
-                EnumVariant {
-                    name: "Mul405",
-                    description: None,
-                    value: 404,
-                },
-                EnumVariant {
-                    name: "Mul406",
-                    description: None,
-                    value: 405,
-                },
-                EnumVariant {
-                    name: "Mul407",
-                    description: None,
-                    value: 406,
-                },
-                EnumVariant {
-                    name: "Mul408",
-                    description: None,
-                    value: 407,
-                },
-                EnumVariant {
-                    name: "Mul409",
-                    description: None,
-                    value: 408,
-                },
-                EnumVariant {
-                    name: "Mul41",
-                    description: None,
-                    value: 40,
-                },
-                EnumVariant {
-                    name: "Mul410",
-                    description: None,
-                    value: 409,
-                },
-                EnumVariant {
-                    name: "Mul411",
-                    description: None,
-                    value: 410,
-                },
-                EnumVariant {
-                    name: "Mul412",
-                    description: None,
-                    value: 411,
-                },
-                EnumVariant {
-                    name: "Mul413",
-                    description: None,
-                    value: 412,
-                },
-                EnumVariant {
-                    name: "Mul414",
-                    description: None,
-                    value: 413,
-                },
-                EnumVariant {
-                    name: "Mul415",
-                    description: None,
-                    value: 414,
-                },
-                EnumVariant {
-                    name: "Mul416",
-                    description: None,
-                    value: 415,
-                },
-                EnumVariant {
-                    name: "Mul417",
-                    description: None,
-                    value: 416,
-                },
-                EnumVariant {
-                    name: "Mul418",
-                    description: None,
-                    value: 417,
-                },
-                EnumVariant {
-                    name: "Mul419",
-                    description: None,
-                    value: 418,
-                },
-                EnumVariant {
-                    name: "Mul42",
-                    description: None,
-                    value: 41,
-                },
-                EnumVariant {
-                    name: "Mul420",
-                    description: None,
-                    value: 419,
-                },
-                EnumVariant {
-                    name: "Mul421",
-                    description: None,
-                    value: 420,
-                },
-                EnumVariant {
-                    name: "Mul422",
-                    description: None,
-                    value: 421,
-                },
-                EnumVariant {
-                    name: "Mul423",
-                    description: None,
-                    value: 422,
-                },
-                EnumVariant {
-                    name: "Mul424",
-                    description: None,
-                    value: 423,
-                },
-                EnumVariant {
-                    name: "Mul425",
-                    description: None,
-                    value: 424,
-                },
-                EnumVariant {
-                    name: "Mul426",
-                    description: None,
-                    value: 425,
-                },
-                EnumVariant {
-                    name: "Mul427",
-                    description: None,
-                    value: 426,
-                },
-                EnumVariant {
-                    name: "Mul428",
-                    description: None,
-                    value: 427,
-                },
-                EnumVariant {
-                    name: "Mul429",
-                    description: None,
-                    value: 428,
-                },
-                EnumVariant {
-                    name: "Mul43",
-                    description: None,
-                    value: 42,
-                },
-                EnumVariant {
-                    name: "Mul430",
-                    description: None,
-                    value: 429,
-                },
-                EnumVariant {
-                    name: "Mul431",
-                    description: None,
-                    value: 430,
-                },
-                EnumVariant {
-                    name: "Mul432",
-                    description: None,
-                    value: 431,
-                },
-                EnumVariant {
-                    name: "Mul433",
-                    description: None,
-                    value: 432,
-                },
-                EnumVariant {
-                    name: "Mul434",
-                    description: None,
-                    value: 433,
-                },
-                EnumVariant {
-                    name: "Mul435",
-                    description: None,
-                    value: 434,
-                },
-                EnumVariant {
-                    name: "Mul436",
-                    description: None,
-                    value: 435,
-                },
-                EnumVariant {
-                    name: "Mul437",
-                    description: None,
-                    value: 436,
-                },
-                EnumVariant {
-                    name: "Mul438",
-                    description: None,
-                    value: 437,
-                },
-                EnumVariant {
-                    name: "Mul439",
-                    description: None,
-                    value: 438,
-                },
-                EnumVariant {
-                    name: "Mul44",
-                    description: None,
-                    value: 43,
-                },
-                EnumVariant {
-                    name: "Mul440",
-                    description: None,
-                    value: 439,
-                },
-                EnumVariant {
-                    name: "Mul441",
-                    description: None,
-                    value: 440,
-                },
-                EnumVariant {
-                    name: "Mul442",
-                    description: None,
-                    value: 441,
-                },
-                EnumVariant {
-                    name: "Mul443",
-                    description: None,
-                    value: 442,
-                },
-                EnumVariant {
-                    name: "Mul444",
-                    description: None,
-                    value: 443,
-                },
-                EnumVariant {
-                    name: "Mul445",
-                    description: None,
-                    value: 444,
-                },
-                EnumVariant {
-                    name: "Mul446",
-                    description: None,
-                    value: 445,
-                },
-                EnumVariant {
-                    name: "Mul447",
-                    description: None,
-                    value: 446,
-                },
-                EnumVariant {
-                    name: "Mul448",
-                    description: None,
-                    value: 447,
-                },
-                EnumVariant {
-                    name: "Mul449",
-                    description: None,
-                    value: 448,
-                },
-                EnumVariant {
-                    name: "Mul45",
-                    description: None,
-                    value: 44,
-                },
-                EnumVariant {
-                    name: "Mul450",
-                    description: None,
-                    value: 449,
-                },
-                EnumVariant {
-                    name: "Mul451",
-                    description: None,
-                    value: 450,
-                },
-                EnumVariant {
-                    name: "Mul452",
-                    description: None,
-                    value: 451,
-                },
-                EnumVariant {
-                    name: "Mul453",
-                    description: None,
-                    value: 452,
-                },
-                EnumVariant {
-                    name: "Mul454",
-                    description: None,
-                    value: 453,
-                },
-                EnumVariant {
-                    name: "Mul455",
-                    description: None,
-                    value: 454,
-                },
-                EnumVariant {
-                    name: "Mul456",
-                    description: None,
-                    value: 455,
-                },
-                EnumVariant {
-                    name: "Mul457",
-                    description: None,
-                    value: 456,
-                },
-                EnumVariant {
-                    name: "Mul458",
-                    description: None,
-                    value: 457,
-                },
-                EnumVariant {
-                    name: "Mul459",
-                    description: None,
-                    value: 458,
-                },
-                EnumVariant {
-                    name: "Mul46",
-                    description: None,
-                    value: 45,
-                },
-                EnumVariant {
-                    name: "Mul460",
-                    description: None,
-                    value: 459,
-                },
-                EnumVariant {
-                    name: "Mul461",
-                    description: None,
-                    value: 460,
-                },
-                EnumVariant {
-                    name: "Mul462",
-                    description: None,
-                    value: 461,
-                },
-                EnumVariant {
-                    name: "Mul463",
-                    description: None,
-                    value: 462,
-                },
-                EnumVariant {
-                    name: "Mul464",
-                    description: None,
-                    value: 463,
-                },
-                EnumVariant {
-                    name: "Mul465",
-                    description: None,
-                    value: 464,
-                },
-                EnumVariant {
-                    name: "Mul466",
-                    description: None,
-                    value: 465,
-                },
-                EnumVariant {
-                    name: "Mul467",
-                    description: None,
-                    value: 466,
-                },
-                EnumVariant {
-                    name: "Mul468",
-                    description: None,
-                    value: 467,
-                },
-                EnumVariant {
-                    name: "Mul469",
-                    description: None,
-                    value: 468,
-                },
-                EnumVariant {
-                    name: "Mul47",
-                    description: None,
-                    value: 46,
-                },
-                EnumVariant {
-                    name: "Mul470",
-                    description: None,
-                    value: 469,
-                },
-                EnumVariant {
-                    name: "Mul471",
-                    description: None,
-                    value: 470,
-                },
-                EnumVariant {
-                    name: "Mul472",
-                    description: None,
-                    value: 471,
-                },
-                EnumVariant {
-                    name: "Mul473",
-                    description: None,
-                    value: 472,
-                },
-                EnumVariant {
-                    name: "Mul474",
-                    description: None,
-                    value: 473,
-                },
-                EnumVariant {
-                    name: "Mul475",
-                    description: None,
-                    value: 474,
-                },
-                EnumVariant {
-                    name: "Mul476",
-                    description: None,
-                    value: 475,
-                },
-                EnumVariant {
-                    name: "Mul477",
-                    description: None,
-                    value: 476,
-                },
-                EnumVariant {
-                    name: "Mul478",
-                    description: None,
-                    value: 477,
-                },
-                EnumVariant {
-                    name: "Mul479",
-                    description: None,
-                    value: 478,
-                },
-                EnumVariant {
-                    name: "Mul48",
-                    description: None,
-                    value: 47,
-                },
-                EnumVariant {
-                    name: "Mul480",
-                    description: None,
-                    value: 479,
-                },
-                EnumVariant {
-                    name: "Mul481",
-                    description: None,
-                    value: 480,
-                },
-                EnumVariant {
-                    name: "Mul482",
-                    description: None,
-                    value: 481,
-                },
-                EnumVariant {
-                    name: "Mul483",
-                    description: None,
-                    value: 482,
-                },
-                EnumVariant {
-                    name: "Mul484",
-                    description: None,
-                    value: 483,
-                },
-                EnumVariant {
-                    name: "Mul485",
-                    description: None,
-                    value: 484,
-                },
-                EnumVariant {
-                    name: "Mul486",
-                    description: None,
-                    value: 485,
-                },
-                EnumVariant {
-                    name: "Mul487",
-                    description: None,
-                    value: 486,
-                },
-                EnumVariant {
-                    name: "Mul488",
-                    description: None,
-                    value: 487,
-                },
-                EnumVariant {
-                    name: "Mul489",
-                    description: None,
-                    value: 488,
-                },
-                EnumVariant {
-                    name: "Mul49",
-                    description: None,
-                    value: 48,
-                },
-                EnumVariant {
-                    name: "Mul490",
-                    description: None,
-                    value: 489,
-                },
-                EnumVariant {
-                    name: "Mul491",
-                    description: None,
-                    value: 490,
-                },
-                EnumVariant {
-                    name: "Mul492",
-                    description: None,
-                    value: 491,
-                },
-                EnumVariant {
-                    name: "Mul493",
-                    description: None,
-                    value: 492,
-                },
-                EnumVariant {
-                    name: "Mul494",
-                    description: None,
-                    value: 493,
-                },
-                EnumVariant {
-                    name: "Mul495",
-                    description: None,
-                    value: 494,
-                },
-                EnumVariant {
-                    name: "Mul496",
-                    description: None,
-                    value: 495,
-                },
-                EnumVariant {
-                    name: "Mul497",
-                    description: None,
-                    value: 496,
-                },
-                EnumVariant {
-                    name: "Mul498",
-                    description: None,
-                    value: 497,
-                },
-                EnumVariant {
-                    name: "Mul499",
-                    description: None,
-                    value: 498,
-                },
-                EnumVariant {
-                    name: "Mul5",
+                    name: "MUL5",
                     description: None,
                     value: 4,
                 },
                 EnumVariant {
-                    name: "Mul50",
-                    description: None,
-                    value: 49,
-                },
-                EnumVariant {
-                    name: "Mul500",
-                    description: None,
-                    value: 499,
-                },
-                EnumVariant {
-                    name: "Mul501",
-                    description: None,
-                    value: 500,
-                },
-                EnumVariant {
-                    name: "Mul502",
-                    description: None,
-                    value: 501,
-                },
-                EnumVariant {
-                    name: "Mul503",
-                    description: None,
-                    value: 502,
-                },
-                EnumVariant {
-                    name: "Mul504",
-                    description: None,
-                    value: 503,
-                },
-                EnumVariant {
-                    name: "Mul505",
-                    description: None,
-                    value: 504,
-                },
-                EnumVariant {
-                    name: "Mul506",
-                    description: None,
-                    value: 505,
-                },
-                EnumVariant {
-                    name: "Mul507",
-                    description: None,
-                    value: 506,
-                },
-                EnumVariant {
-                    name: "Mul508",
-                    description: None,
-                    value: 507,
-                },
-                EnumVariant {
-                    name: "Mul509",
-                    description: None,
-                    value: 508,
-                },
-                EnumVariant {
-                    name: "Mul51",
-                    description: None,
-                    value: 50,
-                },
-                EnumVariant {
-                    name: "Mul510",
-                    description: None,
-                    value: 509,
-                },
-                EnumVariant {
-                    name: "Mul511",
-                    description: None,
-                    value: 510,
-                },
-                EnumVariant {
-                    name: "Mul512",
-                    description: None,
-                    value: 511,
-                },
-                EnumVariant {
-                    name: "Mul52",
-                    description: None,
-                    value: 51,
-                },
-                EnumVariant {
-                    name: "Mul53",
-                    description: None,
-                    value: 52,
-                },
-                EnumVariant {
-                    name: "Mul54",
-                    description: None,
-                    value: 53,
-                },
-                EnumVariant {
-                    name: "Mul55",
-                    description: None,
-                    value: 54,
-                },
-                EnumVariant {
-                    name: "Mul56",
-                    description: None,
-                    value: 55,
-                },
-                EnumVariant {
-                    name: "Mul57",
-                    description: None,
-                    value: 56,
-                },
-                EnumVariant {
-                    name: "Mul58",
-                    description: None,
-                    value: 57,
-                },
-                EnumVariant {
-                    name: "Mul59",
-                    description: None,
-                    value: 58,
-                },
-                EnumVariant {
-                    name: "Mul6",
+                    name: "MUL6",
                     description: None,
                     value: 5,
                 },
                 EnumVariant {
-                    name: "Mul60",
-                    description: None,
-                    value: 59,
-                },
-                EnumVariant {
-                    name: "Mul61",
-                    description: None,
-                    value: 60,
-                },
-                EnumVariant {
-                    name: "Mul62",
-                    description: None,
-                    value: 61,
-                },
-                EnumVariant {
-                    name: "Mul63",
-                    description: None,
-                    value: 62,
-                },
-                EnumVariant {
-                    name: "Mul64",
-                    description: None,
-                    value: 63,
-                },
-                EnumVariant {
-                    name: "Mul65",
-                    description: None,
-                    value: 64,
-                },
-                EnumVariant {
-                    name: "Mul66",
-                    description: None,
-                    value: 65,
-                },
-                EnumVariant {
-                    name: "Mul67",
-                    description: None,
-                    value: 66,
-                },
-                EnumVariant {
-                    name: "Mul68",
-                    description: None,
-                    value: 67,
-                },
-                EnumVariant {
-                    name: "Mul69",
-                    description: None,
-                    value: 68,
-                },
-                EnumVariant {
-                    name: "Mul7",
+                    name: "MUL7",
                     description: None,
                     value: 6,
                 },
                 EnumVariant {
-                    name: "Mul70",
-                    description: None,
-                    value: 69,
-                },
-                EnumVariant {
-                    name: "Mul71",
-                    description: None,
-                    value: 70,
-                },
-                EnumVariant {
-                    name: "Mul72",
-                    description: None,
-                    value: 71,
-                },
-                EnumVariant {
-                    name: "Mul73",
-                    description: None,
-                    value: 72,
-                },
-                EnumVariant {
-                    name: "Mul74",
-                    description: None,
-                    value: 73,
-                },
-                EnumVariant {
-                    name: "Mul75",
-                    description: None,
-                    value: 74,
-                },
-                EnumVariant {
-                    name: "Mul76",
-                    description: None,
-                    value: 75,
-                },
-                EnumVariant {
-                    name: "Mul77",
-                    description: None,
-                    value: 76,
-                },
-                EnumVariant {
-                    name: "Mul78",
-                    description: None,
-                    value: 77,
-                },
-                EnumVariant {
-                    name: "Mul79",
-                    description: None,
-                    value: 78,
-                },
-                EnumVariant {
-                    name: "Mul8",
+                    name: "MUL8",
                     description: None,
                     value: 7,
                 },
                 EnumVariant {
-                    name: "Mul80",
-                    description: None,
-                    value: 79,
-                },
-                EnumVariant {
-                    name: "Mul81",
-                    description: None,
-                    value: 80,
-                },
-                EnumVariant {
-                    name: "Mul82",
-                    description: None,
-                    value: 81,
-                },
-                EnumVariant {
-                    name: "Mul83",
-                    description: None,
-                    value: 82,
-                },
-                EnumVariant {
-                    name: "Mul84",
-                    description: None,
-                    value: 83,
-                },
-                EnumVariant {
-                    name: "Mul85",
-                    description: None,
-                    value: 84,
-                },
-                EnumVariant {
-                    name: "Mul86",
-                    description: None,
-                    value: 85,
-                },
-                EnumVariant {
-                    name: "Mul87",
-                    description: None,
-                    value: 86,
-                },
-                EnumVariant {
-                    name: "Mul88",
-                    description: None,
-                    value: 87,
-                },
-                EnumVariant {
-                    name: "Mul89",
-                    description: None,
-                    value: 88,
-                },
-                EnumVariant {
-                    name: "Mul9",
+                    name: "MUL9",
                     description: None,
                     value: 8,
                 },
                 EnumVariant {
-                    name: "Mul90",
+                    name: "MUL10",
+                    description: None,
+                    value: 9,
+                },
+                EnumVariant {
+                    name: "MUL11",
+                    description: None,
+                    value: 10,
+                },
+                EnumVariant {
+                    name: "MUL12",
+                    description: None,
+                    value: 11,
+                },
+                EnumVariant {
+                    name: "MUL13",
+                    description: None,
+                    value: 12,
+                },
+                EnumVariant {
+                    name: "MUL14",
+                    description: None,
+                    value: 13,
+                },
+                EnumVariant {
+                    name: "MUL15",
+                    description: None,
+                    value: 14,
+                },
+                EnumVariant {
+                    name: "MUL16",
+                    description: None,
+                    value: 15,
+                },
+                EnumVariant {
+                    name: "MUL17",
+                    description: None,
+                    value: 16,
+                },
+                EnumVariant {
+                    name: "MUL18",
+                    description: None,
+                    value: 17,
+                },
+                EnumVariant {
+                    name: "MUL19",
+                    description: None,
+                    value: 18,
+                },
+                EnumVariant {
+                    name: "MUL20",
+                    description: None,
+                    value: 19,
+                },
+                EnumVariant {
+                    name: "MUL21",
+                    description: None,
+                    value: 20,
+                },
+                EnumVariant {
+                    name: "MUL22",
+                    description: None,
+                    value: 21,
+                },
+                EnumVariant {
+                    name: "MUL23",
+                    description: None,
+                    value: 22,
+                },
+                EnumVariant {
+                    name: "MUL24",
+                    description: None,
+                    value: 23,
+                },
+                EnumVariant {
+                    name: "MUL25",
+                    description: None,
+                    value: 24,
+                },
+                EnumVariant {
+                    name: "MUL26",
+                    description: None,
+                    value: 25,
+                },
+                EnumVariant {
+                    name: "MUL27",
+                    description: None,
+                    value: 26,
+                },
+                EnumVariant {
+                    name: "MUL28",
+                    description: None,
+                    value: 27,
+                },
+                EnumVariant {
+                    name: "MUL29",
+                    description: None,
+                    value: 28,
+                },
+                EnumVariant {
+                    name: "MUL30",
+                    description: None,
+                    value: 29,
+                },
+                EnumVariant {
+                    name: "MUL31",
+                    description: None,
+                    value: 30,
+                },
+                EnumVariant {
+                    name: "MUL32",
+                    description: None,
+                    value: 31,
+                },
+                EnumVariant {
+                    name: "MUL33",
+                    description: None,
+                    value: 32,
+                },
+                EnumVariant {
+                    name: "MUL34",
+                    description: None,
+                    value: 33,
+                },
+                EnumVariant {
+                    name: "MUL35",
+                    description: None,
+                    value: 34,
+                },
+                EnumVariant {
+                    name: "MUL36",
+                    description: None,
+                    value: 35,
+                },
+                EnumVariant {
+                    name: "MUL37",
+                    description: None,
+                    value: 36,
+                },
+                EnumVariant {
+                    name: "MUL38",
+                    description: None,
+                    value: 37,
+                },
+                EnumVariant {
+                    name: "MUL39",
+                    description: None,
+                    value: 38,
+                },
+                EnumVariant {
+                    name: "MUL40",
+                    description: None,
+                    value: 39,
+                },
+                EnumVariant {
+                    name: "MUL41",
+                    description: None,
+                    value: 40,
+                },
+                EnumVariant {
+                    name: "MUL42",
+                    description: None,
+                    value: 41,
+                },
+                EnumVariant {
+                    name: "MUL43",
+                    description: None,
+                    value: 42,
+                },
+                EnumVariant {
+                    name: "MUL44",
+                    description: None,
+                    value: 43,
+                },
+                EnumVariant {
+                    name: "MUL45",
+                    description: None,
+                    value: 44,
+                },
+                EnumVariant {
+                    name: "MUL46",
+                    description: None,
+                    value: 45,
+                },
+                EnumVariant {
+                    name: "MUL47",
+                    description: None,
+                    value: 46,
+                },
+                EnumVariant {
+                    name: "MUL48",
+                    description: None,
+                    value: 47,
+                },
+                EnumVariant {
+                    name: "MUL49",
+                    description: None,
+                    value: 48,
+                },
+                EnumVariant {
+                    name: "MUL50",
+                    description: None,
+                    value: 49,
+                },
+                EnumVariant {
+                    name: "MUL51",
+                    description: None,
+                    value: 50,
+                },
+                EnumVariant {
+                    name: "MUL52",
+                    description: None,
+                    value: 51,
+                },
+                EnumVariant {
+                    name: "MUL53",
+                    description: None,
+                    value: 52,
+                },
+                EnumVariant {
+                    name: "MUL54",
+                    description: None,
+                    value: 53,
+                },
+                EnumVariant {
+                    name: "MUL55",
+                    description: None,
+                    value: 54,
+                },
+                EnumVariant {
+                    name: "MUL56",
+                    description: None,
+                    value: 55,
+                },
+                EnumVariant {
+                    name: "MUL57",
+                    description: None,
+                    value: 56,
+                },
+                EnumVariant {
+                    name: "MUL58",
+                    description: None,
+                    value: 57,
+                },
+                EnumVariant {
+                    name: "MUL59",
+                    description: None,
+                    value: 58,
+                },
+                EnumVariant {
+                    name: "MUL60",
+                    description: None,
+                    value: 59,
+                },
+                EnumVariant {
+                    name: "MUL61",
+                    description: None,
+                    value: 60,
+                },
+                EnumVariant {
+                    name: "MUL62",
+                    description: None,
+                    value: 61,
+                },
+                EnumVariant {
+                    name: "MUL63",
+                    description: None,
+                    value: 62,
+                },
+                EnumVariant {
+                    name: "MUL64",
+                    description: None,
+                    value: 63,
+                },
+                EnumVariant {
+                    name: "MUL65",
+                    description: None,
+                    value: 64,
+                },
+                EnumVariant {
+                    name: "MUL66",
+                    description: None,
+                    value: 65,
+                },
+                EnumVariant {
+                    name: "MUL67",
+                    description: None,
+                    value: 66,
+                },
+                EnumVariant {
+                    name: "MUL68",
+                    description: None,
+                    value: 67,
+                },
+                EnumVariant {
+                    name: "MUL69",
+                    description: None,
+                    value: 68,
+                },
+                EnumVariant {
+                    name: "MUL70",
+                    description: None,
+                    value: 69,
+                },
+                EnumVariant {
+                    name: "MUL71",
+                    description: None,
+                    value: 70,
+                },
+                EnumVariant {
+                    name: "MUL72",
+                    description: None,
+                    value: 71,
+                },
+                EnumVariant {
+                    name: "MUL73",
+                    description: None,
+                    value: 72,
+                },
+                EnumVariant {
+                    name: "MUL74",
+                    description: None,
+                    value: 73,
+                },
+                EnumVariant {
+                    name: "MUL75",
+                    description: None,
+                    value: 74,
+                },
+                EnumVariant {
+                    name: "MUL76",
+                    description: None,
+                    value: 75,
+                },
+                EnumVariant {
+                    name: "MUL77",
+                    description: None,
+                    value: 76,
+                },
+                EnumVariant {
+                    name: "MUL78",
+                    description: None,
+                    value: 77,
+                },
+                EnumVariant {
+                    name: "MUL79",
+                    description: None,
+                    value: 78,
+                },
+                EnumVariant {
+                    name: "MUL80",
+                    description: None,
+                    value: 79,
+                },
+                EnumVariant {
+                    name: "MUL81",
+                    description: None,
+                    value: 80,
+                },
+                EnumVariant {
+                    name: "MUL82",
+                    description: None,
+                    value: 81,
+                },
+                EnumVariant {
+                    name: "MUL83",
+                    description: None,
+                    value: 82,
+                },
+                EnumVariant {
+                    name: "MUL84",
+                    description: None,
+                    value: 83,
+                },
+                EnumVariant {
+                    name: "MUL85",
+                    description: None,
+                    value: 84,
+                },
+                EnumVariant {
+                    name: "MUL86",
+                    description: None,
+                    value: 85,
+                },
+                EnumVariant {
+                    name: "MUL87",
+                    description: None,
+                    value: 86,
+                },
+                EnumVariant {
+                    name: "MUL88",
+                    description: None,
+                    value: 87,
+                },
+                EnumVariant {
+                    name: "MUL89",
+                    description: None,
+                    value: 88,
+                },
+                EnumVariant {
+                    name: "MUL90",
                     description: None,
                     value: 89,
                 },
                 EnumVariant {
-                    name: "Mul91",
+                    name: "MUL91",
                     description: None,
                     value: 90,
                 },
                 EnumVariant {
-                    name: "Mul92",
+                    name: "MUL92",
                     description: None,
                     value: 91,
                 },
                 EnumVariant {
-                    name: "Mul93",
+                    name: "MUL93",
                     description: None,
                     value: 92,
                 },
                 EnumVariant {
-                    name: "Mul94",
+                    name: "MUL94",
                     description: None,
                     value: 93,
                 },
                 EnumVariant {
-                    name: "Mul95",
+                    name: "MUL95",
                     description: None,
                     value: 94,
                 },
                 EnumVariant {
-                    name: "Mul96",
+                    name: "MUL96",
                     description: None,
                     value: 95,
                 },
                 EnumVariant {
-                    name: "Mul97",
+                    name: "MUL97",
                     description: None,
                     value: 96,
                 },
                 EnumVariant {
-                    name: "Mul98",
+                    name: "MUL98",
                     description: None,
                     value: 97,
                 },
                 EnumVariant {
-                    name: "Mul99",
+                    name: "MUL99",
                     description: None,
                     value: 98,
+                },
+                EnumVariant {
+                    name: "MUL100",
+                    description: None,
+                    value: 99,
+                },
+                EnumVariant {
+                    name: "MUL101",
+                    description: None,
+                    value: 100,
+                },
+                EnumVariant {
+                    name: "MUL102",
+                    description: None,
+                    value: 101,
+                },
+                EnumVariant {
+                    name: "MUL103",
+                    description: None,
+                    value: 102,
+                },
+                EnumVariant {
+                    name: "MUL104",
+                    description: None,
+                    value: 103,
+                },
+                EnumVariant {
+                    name: "MUL105",
+                    description: None,
+                    value: 104,
+                },
+                EnumVariant {
+                    name: "MUL106",
+                    description: None,
+                    value: 105,
+                },
+                EnumVariant {
+                    name: "MUL107",
+                    description: None,
+                    value: 106,
+                },
+                EnumVariant {
+                    name: "MUL108",
+                    description: None,
+                    value: 107,
+                },
+                EnumVariant {
+                    name: "MUL109",
+                    description: None,
+                    value: 108,
+                },
+                EnumVariant {
+                    name: "MUL110",
+                    description: None,
+                    value: 109,
+                },
+                EnumVariant {
+                    name: "MUL111",
+                    description: None,
+                    value: 110,
+                },
+                EnumVariant {
+                    name: "MUL112",
+                    description: None,
+                    value: 111,
+                },
+                EnumVariant {
+                    name: "MUL113",
+                    description: None,
+                    value: 112,
+                },
+                EnumVariant {
+                    name: "MUL114",
+                    description: None,
+                    value: 113,
+                },
+                EnumVariant {
+                    name: "MUL115",
+                    description: None,
+                    value: 114,
+                },
+                EnumVariant {
+                    name: "MUL116",
+                    description: None,
+                    value: 115,
+                },
+                EnumVariant {
+                    name: "MUL117",
+                    description: None,
+                    value: 116,
+                },
+                EnumVariant {
+                    name: "MUL118",
+                    description: None,
+                    value: 117,
+                },
+                EnumVariant {
+                    name: "MUL119",
+                    description: None,
+                    value: 118,
+                },
+                EnumVariant {
+                    name: "MUL120",
+                    description: None,
+                    value: 119,
+                },
+                EnumVariant {
+                    name: "MUL121",
+                    description: None,
+                    value: 120,
+                },
+                EnumVariant {
+                    name: "MUL122",
+                    description: None,
+                    value: 121,
+                },
+                EnumVariant {
+                    name: "MUL123",
+                    description: None,
+                    value: 122,
+                },
+                EnumVariant {
+                    name: "MUL124",
+                    description: None,
+                    value: 123,
+                },
+                EnumVariant {
+                    name: "MUL125",
+                    description: None,
+                    value: 124,
+                },
+                EnumVariant {
+                    name: "MUL126",
+                    description: None,
+                    value: 125,
+                },
+                EnumVariant {
+                    name: "MUL127",
+                    description: None,
+                    value: 126,
+                },
+                EnumVariant {
+                    name: "MUL128",
+                    description: None,
+                    value: 127,
+                },
+                EnumVariant {
+                    name: "MUL129",
+                    description: None,
+                    value: 128,
+                },
+                EnumVariant {
+                    name: "MUL130",
+                    description: None,
+                    value: 129,
+                },
+                EnumVariant {
+                    name: "MUL131",
+                    description: None,
+                    value: 130,
+                },
+                EnumVariant {
+                    name: "MUL132",
+                    description: None,
+                    value: 131,
+                },
+                EnumVariant {
+                    name: "MUL133",
+                    description: None,
+                    value: 132,
+                },
+                EnumVariant {
+                    name: "MUL134",
+                    description: None,
+                    value: 133,
+                },
+                EnumVariant {
+                    name: "MUL135",
+                    description: None,
+                    value: 134,
+                },
+                EnumVariant {
+                    name: "MUL136",
+                    description: None,
+                    value: 135,
+                },
+                EnumVariant {
+                    name: "MUL137",
+                    description: None,
+                    value: 136,
+                },
+                EnumVariant {
+                    name: "MUL138",
+                    description: None,
+                    value: 137,
+                },
+                EnumVariant {
+                    name: "MUL139",
+                    description: None,
+                    value: 138,
+                },
+                EnumVariant {
+                    name: "MUL140",
+                    description: None,
+                    value: 139,
+                },
+                EnumVariant {
+                    name: "MUL141",
+                    description: None,
+                    value: 140,
+                },
+                EnumVariant {
+                    name: "MUL142",
+                    description: None,
+                    value: 141,
+                },
+                EnumVariant {
+                    name: "MUL143",
+                    description: None,
+                    value: 142,
+                },
+                EnumVariant {
+                    name: "MUL144",
+                    description: None,
+                    value: 143,
+                },
+                EnumVariant {
+                    name: "MUL145",
+                    description: None,
+                    value: 144,
+                },
+                EnumVariant {
+                    name: "MUL146",
+                    description: None,
+                    value: 145,
+                },
+                EnumVariant {
+                    name: "MUL147",
+                    description: None,
+                    value: 146,
+                },
+                EnumVariant {
+                    name: "MUL148",
+                    description: None,
+                    value: 147,
+                },
+                EnumVariant {
+                    name: "MUL149",
+                    description: None,
+                    value: 148,
+                },
+                EnumVariant {
+                    name: "MUL150",
+                    description: None,
+                    value: 149,
+                },
+                EnumVariant {
+                    name: "MUL151",
+                    description: None,
+                    value: 150,
+                },
+                EnumVariant {
+                    name: "MUL152",
+                    description: None,
+                    value: 151,
+                },
+                EnumVariant {
+                    name: "MUL153",
+                    description: None,
+                    value: 152,
+                },
+                EnumVariant {
+                    name: "MUL154",
+                    description: None,
+                    value: 153,
+                },
+                EnumVariant {
+                    name: "MUL155",
+                    description: None,
+                    value: 154,
+                },
+                EnumVariant {
+                    name: "MUL156",
+                    description: None,
+                    value: 155,
+                },
+                EnumVariant {
+                    name: "MUL157",
+                    description: None,
+                    value: 156,
+                },
+                EnumVariant {
+                    name: "MUL158",
+                    description: None,
+                    value: 157,
+                },
+                EnumVariant {
+                    name: "MUL159",
+                    description: None,
+                    value: 158,
+                },
+                EnumVariant {
+                    name: "MUL160",
+                    description: None,
+                    value: 159,
+                },
+                EnumVariant {
+                    name: "MUL161",
+                    description: None,
+                    value: 160,
+                },
+                EnumVariant {
+                    name: "MUL162",
+                    description: None,
+                    value: 161,
+                },
+                EnumVariant {
+                    name: "MUL163",
+                    description: None,
+                    value: 162,
+                },
+                EnumVariant {
+                    name: "MUL164",
+                    description: None,
+                    value: 163,
+                },
+                EnumVariant {
+                    name: "MUL165",
+                    description: None,
+                    value: 164,
+                },
+                EnumVariant {
+                    name: "MUL166",
+                    description: None,
+                    value: 165,
+                },
+                EnumVariant {
+                    name: "MUL167",
+                    description: None,
+                    value: 166,
+                },
+                EnumVariant {
+                    name: "MUL168",
+                    description: None,
+                    value: 167,
+                },
+                EnumVariant {
+                    name: "MUL169",
+                    description: None,
+                    value: 168,
+                },
+                EnumVariant {
+                    name: "MUL170",
+                    description: None,
+                    value: 169,
+                },
+                EnumVariant {
+                    name: "MUL171",
+                    description: None,
+                    value: 170,
+                },
+                EnumVariant {
+                    name: "MUL172",
+                    description: None,
+                    value: 171,
+                },
+                EnumVariant {
+                    name: "MUL173",
+                    description: None,
+                    value: 172,
+                },
+                EnumVariant {
+                    name: "MUL174",
+                    description: None,
+                    value: 173,
+                },
+                EnumVariant {
+                    name: "MUL175",
+                    description: None,
+                    value: 174,
+                },
+                EnumVariant {
+                    name: "MUL176",
+                    description: None,
+                    value: 175,
+                },
+                EnumVariant {
+                    name: "MUL177",
+                    description: None,
+                    value: 176,
+                },
+                EnumVariant {
+                    name: "MUL178",
+                    description: None,
+                    value: 177,
+                },
+                EnumVariant {
+                    name: "MUL179",
+                    description: None,
+                    value: 178,
+                },
+                EnumVariant {
+                    name: "MUL180",
+                    description: None,
+                    value: 179,
+                },
+                EnumVariant {
+                    name: "MUL181",
+                    description: None,
+                    value: 180,
+                },
+                EnumVariant {
+                    name: "MUL182",
+                    description: None,
+                    value: 181,
+                },
+                EnumVariant {
+                    name: "MUL183",
+                    description: None,
+                    value: 182,
+                },
+                EnumVariant {
+                    name: "MUL184",
+                    description: None,
+                    value: 183,
+                },
+                EnumVariant {
+                    name: "MUL185",
+                    description: None,
+                    value: 184,
+                },
+                EnumVariant {
+                    name: "MUL186",
+                    description: None,
+                    value: 185,
+                },
+                EnumVariant {
+                    name: "MUL187",
+                    description: None,
+                    value: 186,
+                },
+                EnumVariant {
+                    name: "MUL188",
+                    description: None,
+                    value: 187,
+                },
+                EnumVariant {
+                    name: "MUL189",
+                    description: None,
+                    value: 188,
+                },
+                EnumVariant {
+                    name: "MUL190",
+                    description: None,
+                    value: 189,
+                },
+                EnumVariant {
+                    name: "MUL191",
+                    description: None,
+                    value: 190,
+                },
+                EnumVariant {
+                    name: "MUL192",
+                    description: None,
+                    value: 191,
+                },
+                EnumVariant {
+                    name: "MUL193",
+                    description: None,
+                    value: 192,
+                },
+                EnumVariant {
+                    name: "MUL194",
+                    description: None,
+                    value: 193,
+                },
+                EnumVariant {
+                    name: "MUL195",
+                    description: None,
+                    value: 194,
+                },
+                EnumVariant {
+                    name: "MUL196",
+                    description: None,
+                    value: 195,
+                },
+                EnumVariant {
+                    name: "MUL197",
+                    description: None,
+                    value: 196,
+                },
+                EnumVariant {
+                    name: "MUL198",
+                    description: None,
+                    value: 197,
+                },
+                EnumVariant {
+                    name: "MUL199",
+                    description: None,
+                    value: 198,
+                },
+                EnumVariant {
+                    name: "MUL200",
+                    description: None,
+                    value: 199,
+                },
+                EnumVariant {
+                    name: "MUL201",
+                    description: None,
+                    value: 200,
+                },
+                EnumVariant {
+                    name: "MUL202",
+                    description: None,
+                    value: 201,
+                },
+                EnumVariant {
+                    name: "MUL203",
+                    description: None,
+                    value: 202,
+                },
+                EnumVariant {
+                    name: "MUL204",
+                    description: None,
+                    value: 203,
+                },
+                EnumVariant {
+                    name: "MUL205",
+                    description: None,
+                    value: 204,
+                },
+                EnumVariant {
+                    name: "MUL206",
+                    description: None,
+                    value: 205,
+                },
+                EnumVariant {
+                    name: "MUL207",
+                    description: None,
+                    value: 206,
+                },
+                EnumVariant {
+                    name: "MUL208",
+                    description: None,
+                    value: 207,
+                },
+                EnumVariant {
+                    name: "MUL209",
+                    description: None,
+                    value: 208,
+                },
+                EnumVariant {
+                    name: "MUL210",
+                    description: None,
+                    value: 209,
+                },
+                EnumVariant {
+                    name: "MUL211",
+                    description: None,
+                    value: 210,
+                },
+                EnumVariant {
+                    name: "MUL212",
+                    description: None,
+                    value: 211,
+                },
+                EnumVariant {
+                    name: "MUL213",
+                    description: None,
+                    value: 212,
+                },
+                EnumVariant {
+                    name: "MUL214",
+                    description: None,
+                    value: 213,
+                },
+                EnumVariant {
+                    name: "MUL215",
+                    description: None,
+                    value: 214,
+                },
+                EnumVariant {
+                    name: "MUL216",
+                    description: None,
+                    value: 215,
+                },
+                EnumVariant {
+                    name: "MUL217",
+                    description: None,
+                    value: 216,
+                },
+                EnumVariant {
+                    name: "MUL218",
+                    description: None,
+                    value: 217,
+                },
+                EnumVariant {
+                    name: "MUL219",
+                    description: None,
+                    value: 218,
+                },
+                EnumVariant {
+                    name: "MUL220",
+                    description: None,
+                    value: 219,
+                },
+                EnumVariant {
+                    name: "MUL221",
+                    description: None,
+                    value: 220,
+                },
+                EnumVariant {
+                    name: "MUL222",
+                    description: None,
+                    value: 221,
+                },
+                EnumVariant {
+                    name: "MUL223",
+                    description: None,
+                    value: 222,
+                },
+                EnumVariant {
+                    name: "MUL224",
+                    description: None,
+                    value: 223,
+                },
+                EnumVariant {
+                    name: "MUL225",
+                    description: None,
+                    value: 224,
+                },
+                EnumVariant {
+                    name: "MUL226",
+                    description: None,
+                    value: 225,
+                },
+                EnumVariant {
+                    name: "MUL227",
+                    description: None,
+                    value: 226,
+                },
+                EnumVariant {
+                    name: "MUL228",
+                    description: None,
+                    value: 227,
+                },
+                EnumVariant {
+                    name: "MUL229",
+                    description: None,
+                    value: 228,
+                },
+                EnumVariant {
+                    name: "MUL230",
+                    description: None,
+                    value: 229,
+                },
+                EnumVariant {
+                    name: "MUL231",
+                    description: None,
+                    value: 230,
+                },
+                EnumVariant {
+                    name: "MUL232",
+                    description: None,
+                    value: 231,
+                },
+                EnumVariant {
+                    name: "MUL233",
+                    description: None,
+                    value: 232,
+                },
+                EnumVariant {
+                    name: "MUL234",
+                    description: None,
+                    value: 233,
+                },
+                EnumVariant {
+                    name: "MUL235",
+                    description: None,
+                    value: 234,
+                },
+                EnumVariant {
+                    name: "MUL236",
+                    description: None,
+                    value: 235,
+                },
+                EnumVariant {
+                    name: "MUL237",
+                    description: None,
+                    value: 236,
+                },
+                EnumVariant {
+                    name: "MUL238",
+                    description: None,
+                    value: 237,
+                },
+                EnumVariant {
+                    name: "MUL239",
+                    description: None,
+                    value: 238,
+                },
+                EnumVariant {
+                    name: "MUL240",
+                    description: None,
+                    value: 239,
+                },
+                EnumVariant {
+                    name: "MUL241",
+                    description: None,
+                    value: 240,
+                },
+                EnumVariant {
+                    name: "MUL242",
+                    description: None,
+                    value: 241,
+                },
+                EnumVariant {
+                    name: "MUL243",
+                    description: None,
+                    value: 242,
+                },
+                EnumVariant {
+                    name: "MUL244",
+                    description: None,
+                    value: 243,
+                },
+                EnumVariant {
+                    name: "MUL245",
+                    description: None,
+                    value: 244,
+                },
+                EnumVariant {
+                    name: "MUL246",
+                    description: None,
+                    value: 245,
+                },
+                EnumVariant {
+                    name: "MUL247",
+                    description: None,
+                    value: 246,
+                },
+                EnumVariant {
+                    name: "MUL248",
+                    description: None,
+                    value: 247,
+                },
+                EnumVariant {
+                    name: "MUL249",
+                    description: None,
+                    value: 248,
+                },
+                EnumVariant {
+                    name: "MUL250",
+                    description: None,
+                    value: 249,
+                },
+                EnumVariant {
+                    name: "MUL251",
+                    description: None,
+                    value: 250,
+                },
+                EnumVariant {
+                    name: "MUL252",
+                    description: None,
+                    value: 251,
+                },
+                EnumVariant {
+                    name: "MUL253",
+                    description: None,
+                    value: 252,
+                },
+                EnumVariant {
+                    name: "MUL254",
+                    description: None,
+                    value: 253,
+                },
+                EnumVariant {
+                    name: "MUL255",
+                    description: None,
+                    value: 254,
+                },
+                EnumVariant {
+                    name: "MUL256",
+                    description: None,
+                    value: 255,
+                },
+                EnumVariant {
+                    name: "MUL257",
+                    description: None,
+                    value: 256,
+                },
+                EnumVariant {
+                    name: "MUL258",
+                    description: None,
+                    value: 257,
+                },
+                EnumVariant {
+                    name: "MUL259",
+                    description: None,
+                    value: 258,
+                },
+                EnumVariant {
+                    name: "MUL260",
+                    description: None,
+                    value: 259,
+                },
+                EnumVariant {
+                    name: "MUL261",
+                    description: None,
+                    value: 260,
+                },
+                EnumVariant {
+                    name: "MUL262",
+                    description: None,
+                    value: 261,
+                },
+                EnumVariant {
+                    name: "MUL263",
+                    description: None,
+                    value: 262,
+                },
+                EnumVariant {
+                    name: "MUL264",
+                    description: None,
+                    value: 263,
+                },
+                EnumVariant {
+                    name: "MUL265",
+                    description: None,
+                    value: 264,
+                },
+                EnumVariant {
+                    name: "MUL266",
+                    description: None,
+                    value: 265,
+                },
+                EnumVariant {
+                    name: "MUL267",
+                    description: None,
+                    value: 266,
+                },
+                EnumVariant {
+                    name: "MUL268",
+                    description: None,
+                    value: 267,
+                },
+                EnumVariant {
+                    name: "MUL269",
+                    description: None,
+                    value: 268,
+                },
+                EnumVariant {
+                    name: "MUL270",
+                    description: None,
+                    value: 269,
+                },
+                EnumVariant {
+                    name: "MUL271",
+                    description: None,
+                    value: 270,
+                },
+                EnumVariant {
+                    name: "MUL272",
+                    description: None,
+                    value: 271,
+                },
+                EnumVariant {
+                    name: "MUL273",
+                    description: None,
+                    value: 272,
+                },
+                EnumVariant {
+                    name: "MUL274",
+                    description: None,
+                    value: 273,
+                },
+                EnumVariant {
+                    name: "MUL275",
+                    description: None,
+                    value: 274,
+                },
+                EnumVariant {
+                    name: "MUL276",
+                    description: None,
+                    value: 275,
+                },
+                EnumVariant {
+                    name: "MUL277",
+                    description: None,
+                    value: 276,
+                },
+                EnumVariant {
+                    name: "MUL278",
+                    description: None,
+                    value: 277,
+                },
+                EnumVariant {
+                    name: "MUL279",
+                    description: None,
+                    value: 278,
+                },
+                EnumVariant {
+                    name: "MUL280",
+                    description: None,
+                    value: 279,
+                },
+                EnumVariant {
+                    name: "MUL281",
+                    description: None,
+                    value: 280,
+                },
+                EnumVariant {
+                    name: "MUL282",
+                    description: None,
+                    value: 281,
+                },
+                EnumVariant {
+                    name: "MUL283",
+                    description: None,
+                    value: 282,
+                },
+                EnumVariant {
+                    name: "MUL284",
+                    description: None,
+                    value: 283,
+                },
+                EnumVariant {
+                    name: "MUL285",
+                    description: None,
+                    value: 284,
+                },
+                EnumVariant {
+                    name: "MUL286",
+                    description: None,
+                    value: 285,
+                },
+                EnumVariant {
+                    name: "MUL287",
+                    description: None,
+                    value: 286,
+                },
+                EnumVariant {
+                    name: "MUL288",
+                    description: None,
+                    value: 287,
+                },
+                EnumVariant {
+                    name: "MUL289",
+                    description: None,
+                    value: 288,
+                },
+                EnumVariant {
+                    name: "MUL290",
+                    description: None,
+                    value: 289,
+                },
+                EnumVariant {
+                    name: "MUL291",
+                    description: None,
+                    value: 290,
+                },
+                EnumVariant {
+                    name: "MUL292",
+                    description: None,
+                    value: 291,
+                },
+                EnumVariant {
+                    name: "MUL293",
+                    description: None,
+                    value: 292,
+                },
+                EnumVariant {
+                    name: "MUL294",
+                    description: None,
+                    value: 293,
+                },
+                EnumVariant {
+                    name: "MUL295",
+                    description: None,
+                    value: 294,
+                },
+                EnumVariant {
+                    name: "MUL296",
+                    description: None,
+                    value: 295,
+                },
+                EnumVariant {
+                    name: "MUL297",
+                    description: None,
+                    value: 296,
+                },
+                EnumVariant {
+                    name: "MUL298",
+                    description: None,
+                    value: 297,
+                },
+                EnumVariant {
+                    name: "MUL299",
+                    description: None,
+                    value: 298,
+                },
+                EnumVariant {
+                    name: "MUL300",
+                    description: None,
+                    value: 299,
+                },
+                EnumVariant {
+                    name: "MUL301",
+                    description: None,
+                    value: 300,
+                },
+                EnumVariant {
+                    name: "MUL302",
+                    description: None,
+                    value: 301,
+                },
+                EnumVariant {
+                    name: "MUL303",
+                    description: None,
+                    value: 302,
+                },
+                EnumVariant {
+                    name: "MUL304",
+                    description: None,
+                    value: 303,
+                },
+                EnumVariant {
+                    name: "MUL305",
+                    description: None,
+                    value: 304,
+                },
+                EnumVariant {
+                    name: "MUL306",
+                    description: None,
+                    value: 305,
+                },
+                EnumVariant {
+                    name: "MUL307",
+                    description: None,
+                    value: 306,
+                },
+                EnumVariant {
+                    name: "MUL308",
+                    description: None,
+                    value: 307,
+                },
+                EnumVariant {
+                    name: "MUL309",
+                    description: None,
+                    value: 308,
+                },
+                EnumVariant {
+                    name: "MUL310",
+                    description: None,
+                    value: 309,
+                },
+                EnumVariant {
+                    name: "MUL311",
+                    description: None,
+                    value: 310,
+                },
+                EnumVariant {
+                    name: "MUL312",
+                    description: None,
+                    value: 311,
+                },
+                EnumVariant {
+                    name: "MUL313",
+                    description: None,
+                    value: 312,
+                },
+                EnumVariant {
+                    name: "MUL314",
+                    description: None,
+                    value: 313,
+                },
+                EnumVariant {
+                    name: "MUL315",
+                    description: None,
+                    value: 314,
+                },
+                EnumVariant {
+                    name: "MUL316",
+                    description: None,
+                    value: 315,
+                },
+                EnumVariant {
+                    name: "MUL317",
+                    description: None,
+                    value: 316,
+                },
+                EnumVariant {
+                    name: "MUL318",
+                    description: None,
+                    value: 317,
+                },
+                EnumVariant {
+                    name: "MUL319",
+                    description: None,
+                    value: 318,
+                },
+                EnumVariant {
+                    name: "MUL320",
+                    description: None,
+                    value: 319,
+                },
+                EnumVariant {
+                    name: "MUL321",
+                    description: None,
+                    value: 320,
+                },
+                EnumVariant {
+                    name: "MUL322",
+                    description: None,
+                    value: 321,
+                },
+                EnumVariant {
+                    name: "MUL323",
+                    description: None,
+                    value: 322,
+                },
+                EnumVariant {
+                    name: "MUL324",
+                    description: None,
+                    value: 323,
+                },
+                EnumVariant {
+                    name: "MUL325",
+                    description: None,
+                    value: 324,
+                },
+                EnumVariant {
+                    name: "MUL326",
+                    description: None,
+                    value: 325,
+                },
+                EnumVariant {
+                    name: "MUL327",
+                    description: None,
+                    value: 326,
+                },
+                EnumVariant {
+                    name: "MUL328",
+                    description: None,
+                    value: 327,
+                },
+                EnumVariant {
+                    name: "MUL329",
+                    description: None,
+                    value: 328,
+                },
+                EnumVariant {
+                    name: "MUL330",
+                    description: None,
+                    value: 329,
+                },
+                EnumVariant {
+                    name: "MUL331",
+                    description: None,
+                    value: 330,
+                },
+                EnumVariant {
+                    name: "MUL332",
+                    description: None,
+                    value: 331,
+                },
+                EnumVariant {
+                    name: "MUL333",
+                    description: None,
+                    value: 332,
+                },
+                EnumVariant {
+                    name: "MUL334",
+                    description: None,
+                    value: 333,
+                },
+                EnumVariant {
+                    name: "MUL335",
+                    description: None,
+                    value: 334,
+                },
+                EnumVariant {
+                    name: "MUL336",
+                    description: None,
+                    value: 335,
+                },
+                EnumVariant {
+                    name: "MUL337",
+                    description: None,
+                    value: 336,
+                },
+                EnumVariant {
+                    name: "MUL338",
+                    description: None,
+                    value: 337,
+                },
+                EnumVariant {
+                    name: "MUL339",
+                    description: None,
+                    value: 338,
+                },
+                EnumVariant {
+                    name: "MUL340",
+                    description: None,
+                    value: 339,
+                },
+                EnumVariant {
+                    name: "MUL341",
+                    description: None,
+                    value: 340,
+                },
+                EnumVariant {
+                    name: "MUL342",
+                    description: None,
+                    value: 341,
+                },
+                EnumVariant {
+                    name: "MUL343",
+                    description: None,
+                    value: 342,
+                },
+                EnumVariant {
+                    name: "MUL344",
+                    description: None,
+                    value: 343,
+                },
+                EnumVariant {
+                    name: "MUL345",
+                    description: None,
+                    value: 344,
+                },
+                EnumVariant {
+                    name: "MUL346",
+                    description: None,
+                    value: 345,
+                },
+                EnumVariant {
+                    name: "MUL347",
+                    description: None,
+                    value: 346,
+                },
+                EnumVariant {
+                    name: "MUL348",
+                    description: None,
+                    value: 347,
+                },
+                EnumVariant {
+                    name: "MUL349",
+                    description: None,
+                    value: 348,
+                },
+                EnumVariant {
+                    name: "MUL350",
+                    description: None,
+                    value: 349,
+                },
+                EnumVariant {
+                    name: "MUL351",
+                    description: None,
+                    value: 350,
+                },
+                EnumVariant {
+                    name: "MUL352",
+                    description: None,
+                    value: 351,
+                },
+                EnumVariant {
+                    name: "MUL353",
+                    description: None,
+                    value: 352,
+                },
+                EnumVariant {
+                    name: "MUL354",
+                    description: None,
+                    value: 353,
+                },
+                EnumVariant {
+                    name: "MUL355",
+                    description: None,
+                    value: 354,
+                },
+                EnumVariant {
+                    name: "MUL356",
+                    description: None,
+                    value: 355,
+                },
+                EnumVariant {
+                    name: "MUL357",
+                    description: None,
+                    value: 356,
+                },
+                EnumVariant {
+                    name: "MUL358",
+                    description: None,
+                    value: 357,
+                },
+                EnumVariant {
+                    name: "MUL359",
+                    description: None,
+                    value: 358,
+                },
+                EnumVariant {
+                    name: "MUL360",
+                    description: None,
+                    value: 359,
+                },
+                EnumVariant {
+                    name: "MUL361",
+                    description: None,
+                    value: 360,
+                },
+                EnumVariant {
+                    name: "MUL362",
+                    description: None,
+                    value: 361,
+                },
+                EnumVariant {
+                    name: "MUL363",
+                    description: None,
+                    value: 362,
+                },
+                EnumVariant {
+                    name: "MUL364",
+                    description: None,
+                    value: 363,
+                },
+                EnumVariant {
+                    name: "MUL365",
+                    description: None,
+                    value: 364,
+                },
+                EnumVariant {
+                    name: "MUL366",
+                    description: None,
+                    value: 365,
+                },
+                EnumVariant {
+                    name: "MUL367",
+                    description: None,
+                    value: 366,
+                },
+                EnumVariant {
+                    name: "MUL368",
+                    description: None,
+                    value: 367,
+                },
+                EnumVariant {
+                    name: "MUL369",
+                    description: None,
+                    value: 368,
+                },
+                EnumVariant {
+                    name: "MUL370",
+                    description: None,
+                    value: 369,
+                },
+                EnumVariant {
+                    name: "MUL371",
+                    description: None,
+                    value: 370,
+                },
+                EnumVariant {
+                    name: "MUL372",
+                    description: None,
+                    value: 371,
+                },
+                EnumVariant {
+                    name: "MUL373",
+                    description: None,
+                    value: 372,
+                },
+                EnumVariant {
+                    name: "MUL374",
+                    description: None,
+                    value: 373,
+                },
+                EnumVariant {
+                    name: "MUL375",
+                    description: None,
+                    value: 374,
+                },
+                EnumVariant {
+                    name: "MUL376",
+                    description: None,
+                    value: 375,
+                },
+                EnumVariant {
+                    name: "MUL377",
+                    description: None,
+                    value: 376,
+                },
+                EnumVariant {
+                    name: "MUL378",
+                    description: None,
+                    value: 377,
+                },
+                EnumVariant {
+                    name: "MUL379",
+                    description: None,
+                    value: 378,
+                },
+                EnumVariant {
+                    name: "MUL380",
+                    description: None,
+                    value: 379,
+                },
+                EnumVariant {
+                    name: "MUL381",
+                    description: None,
+                    value: 380,
+                },
+                EnumVariant {
+                    name: "MUL382",
+                    description: None,
+                    value: 381,
+                },
+                EnumVariant {
+                    name: "MUL383",
+                    description: None,
+                    value: 382,
+                },
+                EnumVariant {
+                    name: "MUL384",
+                    description: None,
+                    value: 383,
+                },
+                EnumVariant {
+                    name: "MUL385",
+                    description: None,
+                    value: 384,
+                },
+                EnumVariant {
+                    name: "MUL386",
+                    description: None,
+                    value: 385,
+                },
+                EnumVariant {
+                    name: "MUL387",
+                    description: None,
+                    value: 386,
+                },
+                EnumVariant {
+                    name: "MUL388",
+                    description: None,
+                    value: 387,
+                },
+                EnumVariant {
+                    name: "MUL389",
+                    description: None,
+                    value: 388,
+                },
+                EnumVariant {
+                    name: "MUL390",
+                    description: None,
+                    value: 389,
+                },
+                EnumVariant {
+                    name: "MUL391",
+                    description: None,
+                    value: 390,
+                },
+                EnumVariant {
+                    name: "MUL392",
+                    description: None,
+                    value: 391,
+                },
+                EnumVariant {
+                    name: "MUL393",
+                    description: None,
+                    value: 392,
+                },
+                EnumVariant {
+                    name: "MUL394",
+                    description: None,
+                    value: 393,
+                },
+                EnumVariant {
+                    name: "MUL395",
+                    description: None,
+                    value: 394,
+                },
+                EnumVariant {
+                    name: "MUL396",
+                    description: None,
+                    value: 395,
+                },
+                EnumVariant {
+                    name: "MUL397",
+                    description: None,
+                    value: 396,
+                },
+                EnumVariant {
+                    name: "MUL398",
+                    description: None,
+                    value: 397,
+                },
+                EnumVariant {
+                    name: "MUL399",
+                    description: None,
+                    value: 398,
+                },
+                EnumVariant {
+                    name: "MUL400",
+                    description: None,
+                    value: 399,
+                },
+                EnumVariant {
+                    name: "MUL401",
+                    description: None,
+                    value: 400,
+                },
+                EnumVariant {
+                    name: "MUL402",
+                    description: None,
+                    value: 401,
+                },
+                EnumVariant {
+                    name: "MUL403",
+                    description: None,
+                    value: 402,
+                },
+                EnumVariant {
+                    name: "MUL404",
+                    description: None,
+                    value: 403,
+                },
+                EnumVariant {
+                    name: "MUL405",
+                    description: None,
+                    value: 404,
+                },
+                EnumVariant {
+                    name: "MUL406",
+                    description: None,
+                    value: 405,
+                },
+                EnumVariant {
+                    name: "MUL407",
+                    description: None,
+                    value: 406,
+                },
+                EnumVariant {
+                    name: "MUL408",
+                    description: None,
+                    value: 407,
+                },
+                EnumVariant {
+                    name: "MUL409",
+                    description: None,
+                    value: 408,
+                },
+                EnumVariant {
+                    name: "MUL410",
+                    description: None,
+                    value: 409,
+                },
+                EnumVariant {
+                    name: "MUL411",
+                    description: None,
+                    value: 410,
+                },
+                EnumVariant {
+                    name: "MUL412",
+                    description: None,
+                    value: 411,
+                },
+                EnumVariant {
+                    name: "MUL413",
+                    description: None,
+                    value: 412,
+                },
+                EnumVariant {
+                    name: "MUL414",
+                    description: None,
+                    value: 413,
+                },
+                EnumVariant {
+                    name: "MUL415",
+                    description: None,
+                    value: 414,
+                },
+                EnumVariant {
+                    name: "MUL416",
+                    description: None,
+                    value: 415,
+                },
+                EnumVariant {
+                    name: "MUL417",
+                    description: None,
+                    value: 416,
+                },
+                EnumVariant {
+                    name: "MUL418",
+                    description: None,
+                    value: 417,
+                },
+                EnumVariant {
+                    name: "MUL419",
+                    description: None,
+                    value: 418,
+                },
+                EnumVariant {
+                    name: "MUL420",
+                    description: None,
+                    value: 419,
+                },
+                EnumVariant {
+                    name: "MUL421",
+                    description: None,
+                    value: 420,
+                },
+                EnumVariant {
+                    name: "MUL422",
+                    description: None,
+                    value: 421,
+                },
+                EnumVariant {
+                    name: "MUL423",
+                    description: None,
+                    value: 422,
+                },
+                EnumVariant {
+                    name: "MUL424",
+                    description: None,
+                    value: 423,
+                },
+                EnumVariant {
+                    name: "MUL425",
+                    description: None,
+                    value: 424,
+                },
+                EnumVariant {
+                    name: "MUL426",
+                    description: None,
+                    value: 425,
+                },
+                EnumVariant {
+                    name: "MUL427",
+                    description: None,
+                    value: 426,
+                },
+                EnumVariant {
+                    name: "MUL428",
+                    description: None,
+                    value: 427,
+                },
+                EnumVariant {
+                    name: "MUL429",
+                    description: None,
+                    value: 428,
+                },
+                EnumVariant {
+                    name: "MUL430",
+                    description: None,
+                    value: 429,
+                },
+                EnumVariant {
+                    name: "MUL431",
+                    description: None,
+                    value: 430,
+                },
+                EnumVariant {
+                    name: "MUL432",
+                    description: None,
+                    value: 431,
+                },
+                EnumVariant {
+                    name: "MUL433",
+                    description: None,
+                    value: 432,
+                },
+                EnumVariant {
+                    name: "MUL434",
+                    description: None,
+                    value: 433,
+                },
+                EnumVariant {
+                    name: "MUL435",
+                    description: None,
+                    value: 434,
+                },
+                EnumVariant {
+                    name: "MUL436",
+                    description: None,
+                    value: 435,
+                },
+                EnumVariant {
+                    name: "MUL437",
+                    description: None,
+                    value: 436,
+                },
+                EnumVariant {
+                    name: "MUL438",
+                    description: None,
+                    value: 437,
+                },
+                EnumVariant {
+                    name: "MUL439",
+                    description: None,
+                    value: 438,
+                },
+                EnumVariant {
+                    name: "MUL440",
+                    description: None,
+                    value: 439,
+                },
+                EnumVariant {
+                    name: "MUL441",
+                    description: None,
+                    value: 440,
+                },
+                EnumVariant {
+                    name: "MUL442",
+                    description: None,
+                    value: 441,
+                },
+                EnumVariant {
+                    name: "MUL443",
+                    description: None,
+                    value: 442,
+                },
+                EnumVariant {
+                    name: "MUL444",
+                    description: None,
+                    value: 443,
+                },
+                EnumVariant {
+                    name: "MUL445",
+                    description: None,
+                    value: 444,
+                },
+                EnumVariant {
+                    name: "MUL446",
+                    description: None,
+                    value: 445,
+                },
+                EnumVariant {
+                    name: "MUL447",
+                    description: None,
+                    value: 446,
+                },
+                EnumVariant {
+                    name: "MUL448",
+                    description: None,
+                    value: 447,
+                },
+                EnumVariant {
+                    name: "MUL449",
+                    description: None,
+                    value: 448,
+                },
+                EnumVariant {
+                    name: "MUL450",
+                    description: None,
+                    value: 449,
+                },
+                EnumVariant {
+                    name: "MUL451",
+                    description: None,
+                    value: 450,
+                },
+                EnumVariant {
+                    name: "MUL452",
+                    description: None,
+                    value: 451,
+                },
+                EnumVariant {
+                    name: "MUL453",
+                    description: None,
+                    value: 452,
+                },
+                EnumVariant {
+                    name: "MUL454",
+                    description: None,
+                    value: 453,
+                },
+                EnumVariant {
+                    name: "MUL455",
+                    description: None,
+                    value: 454,
+                },
+                EnumVariant {
+                    name: "MUL456",
+                    description: None,
+                    value: 455,
+                },
+                EnumVariant {
+                    name: "MUL457",
+                    description: None,
+                    value: 456,
+                },
+                EnumVariant {
+                    name: "MUL458",
+                    description: None,
+                    value: 457,
+                },
+                EnumVariant {
+                    name: "MUL459",
+                    description: None,
+                    value: 458,
+                },
+                EnumVariant {
+                    name: "MUL460",
+                    description: None,
+                    value: 459,
+                },
+                EnumVariant {
+                    name: "MUL461",
+                    description: None,
+                    value: 460,
+                },
+                EnumVariant {
+                    name: "MUL462",
+                    description: None,
+                    value: 461,
+                },
+                EnumVariant {
+                    name: "MUL463",
+                    description: None,
+                    value: 462,
+                },
+                EnumVariant {
+                    name: "MUL464",
+                    description: None,
+                    value: 463,
+                },
+                EnumVariant {
+                    name: "MUL465",
+                    description: None,
+                    value: 464,
+                },
+                EnumVariant {
+                    name: "MUL466",
+                    description: None,
+                    value: 465,
+                },
+                EnumVariant {
+                    name: "MUL467",
+                    description: None,
+                    value: 466,
+                },
+                EnumVariant {
+                    name: "MUL468",
+                    description: None,
+                    value: 467,
+                },
+                EnumVariant {
+                    name: "MUL469",
+                    description: None,
+                    value: 468,
+                },
+                EnumVariant {
+                    name: "MUL470",
+                    description: None,
+                    value: 469,
+                },
+                EnumVariant {
+                    name: "MUL471",
+                    description: None,
+                    value: 470,
+                },
+                EnumVariant {
+                    name: "MUL472",
+                    description: None,
+                    value: 471,
+                },
+                EnumVariant {
+                    name: "MUL473",
+                    description: None,
+                    value: 472,
+                },
+                EnumVariant {
+                    name: "MUL474",
+                    description: None,
+                    value: 473,
+                },
+                EnumVariant {
+                    name: "MUL475",
+                    description: None,
+                    value: 474,
+                },
+                EnumVariant {
+                    name: "MUL476",
+                    description: None,
+                    value: 475,
+                },
+                EnumVariant {
+                    name: "MUL477",
+                    description: None,
+                    value: 476,
+                },
+                EnumVariant {
+                    name: "MUL478",
+                    description: None,
+                    value: 477,
+                },
+                EnumVariant {
+                    name: "MUL479",
+                    description: None,
+                    value: 478,
+                },
+                EnumVariant {
+                    name: "MUL480",
+                    description: None,
+                    value: 479,
+                },
+                EnumVariant {
+                    name: "MUL481",
+                    description: None,
+                    value: 480,
+                },
+                EnumVariant {
+                    name: "MUL482",
+                    description: None,
+                    value: 481,
+                },
+                EnumVariant {
+                    name: "MUL483",
+                    description: None,
+                    value: 482,
+                },
+                EnumVariant {
+                    name: "MUL484",
+                    description: None,
+                    value: 483,
+                },
+                EnumVariant {
+                    name: "MUL485",
+                    description: None,
+                    value: 484,
+                },
+                EnumVariant {
+                    name: "MUL486",
+                    description: None,
+                    value: 485,
+                },
+                EnumVariant {
+                    name: "MUL487",
+                    description: None,
+                    value: 486,
+                },
+                EnumVariant {
+                    name: "MUL488",
+                    description: None,
+                    value: 487,
+                },
+                EnumVariant {
+                    name: "MUL489",
+                    description: None,
+                    value: 488,
+                },
+                EnumVariant {
+                    name: "MUL490",
+                    description: None,
+                    value: 489,
+                },
+                EnumVariant {
+                    name: "MUL491",
+                    description: None,
+                    value: 490,
+                },
+                EnumVariant {
+                    name: "MUL492",
+                    description: None,
+                    value: 491,
+                },
+                EnumVariant {
+                    name: "MUL493",
+                    description: None,
+                    value: 492,
+                },
+                EnumVariant {
+                    name: "MUL494",
+                    description: None,
+                    value: 493,
+                },
+                EnumVariant {
+                    name: "MUL495",
+                    description: None,
+                    value: 494,
+                },
+                EnumVariant {
+                    name: "MUL496",
+                    description: None,
+                    value: 495,
+                },
+                EnumVariant {
+                    name: "MUL497",
+                    description: None,
+                    value: 496,
+                },
+                EnumVariant {
+                    name: "MUL498",
+                    description: None,
+                    value: 497,
+                },
+                EnumVariant {
+                    name: "MUL499",
+                    description: None,
+                    value: 498,
+                },
+                EnumVariant {
+                    name: "MUL500",
+                    description: None,
+                    value: 499,
+                },
+                EnumVariant {
+                    name: "MUL501",
+                    description: None,
+                    value: 500,
+                },
+                EnumVariant {
+                    name: "MUL502",
+                    description: None,
+                    value: 501,
+                },
+                EnumVariant {
+                    name: "MUL503",
+                    description: None,
+                    value: 502,
+                },
+                EnumVariant {
+                    name: "MUL504",
+                    description: None,
+                    value: 503,
+                },
+                EnumVariant {
+                    name: "MUL505",
+                    description: None,
+                    value: 504,
+                },
+                EnumVariant {
+                    name: "MUL506",
+                    description: None,
+                    value: 505,
+                },
+                EnumVariant {
+                    name: "MUL507",
+                    description: None,
+                    value: 506,
+                },
+                EnumVariant {
+                    name: "MUL508",
+                    description: None,
+                    value: 507,
+                },
+                EnumVariant {
+                    name: "MUL509",
+                    description: None,
+                    value: 508,
+                },
+                EnumVariant {
+                    name: "MUL510",
+                    description: None,
+                    value: 509,
+                },
+                EnumVariant {
+                    name: "MUL511",
+                    description: None,
+                    value: 510,
+                },
+                EnumVariant {
+                    name: "MUL512",
+                    description: None,
+                    value: 511,
                 },
             ],
         },
@@ -6998,23 +8916,31 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 2,
             variants: &[
                 EnumVariant {
-                    name: "Range1",
-                    description: Some("Frequency is between 1 and 2 MHz"),
+                    name: "RANGE1",
+                    description: Some(
+                        "Frequency is between 1 and 2 MHz",
+                    ),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "Range2",
-                    description: Some("Frequency is between 2 and 4 MHz"),
+                    name: "RANGE2",
+                    description: Some(
+                        "Frequency is between 2 and 4 MHz",
+                    ),
                     value: 1,
                 },
                 EnumVariant {
-                    name: "Range4",
-                    description: Some("Frequency is between 4 and 8 MHz"),
+                    name: "RANGE4",
+                    description: Some(
+                        "Frequency is between 4 and 8 MHz",
+                    ),
                     value: 2,
                 },
                 EnumVariant {
-                    name: "Range8",
-                    description: Some("Frequency is between 8 and 16 MHz"),
+                    name: "RANGE8",
+                    description: Some(
+                        "Frequency is between 8 and 16 MHz",
+                    ),
                     value: 3,
                 },
             ],
@@ -7025,24 +8951,32 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 2,
             variants: &[
                 EnumVariant {
-                    name: "Csi",
-                    description: Some("CSI selected as PLL clock (csi_ck)"),
-                    value: 2,
-                },
-                EnumVariant {
-                    name: "Disable",
-                    description: Some("no clock send to DIVMx divider and PLLs (default after reset)"),
+                    name: "DISABLE",
+                    description: Some(
+                        "no clock send to DIVMx divider and PLLs (default after reset)",
+                    ),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "Hse",
-                    description: Some("HSE selected as PLL clock (hse_ck)"),
-                    value: 3,
+                    name: "HSI",
+                    description: Some(
+                        "HSI selected as PLL clock (hsi_ck)",
+                    ),
+                    value: 1,
                 },
                 EnumVariant {
-                    name: "Hsi",
-                    description: Some("HSI selected as PLL clock (hsi_ck)"),
-                    value: 1,
+                    name: "CSI",
+                    description: Some(
+                        "CSI selected as PLL clock (csi_ck)",
+                    ),
+                    value: 2,
+                },
+                EnumVariant {
+                    name: "HSE",
+                    description: Some(
+                        "HSE selected as PLL clock (hse_ck)",
+                    ),
+                    value: 3,
                 },
             ],
         },
@@ -7052,14 +8986,18 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 1,
             variants: &[
                 EnumVariant {
-                    name: "MediumVco",
-                    description: Some("VCO frequency range 150 to 420 MHz"),
-                    value: 1,
+                    name: "WIDE_VCO",
+                    description: Some(
+                        "VCO frequency range 192 to 836 MHz",
+                    ),
+                    value: 0,
                 },
                 EnumVariant {
-                    name: "WideVco",
-                    description: Some("VCO frequency range 192 to 836 MHz"),
-                    value: 0,
+                    name: "MEDIUM_VCO",
+                    description: Some(
+                        "VCO frequency range 150 to 420 MHz",
+                    ),
+                    value: 1,
                 },
             ],
         },
@@ -7069,29 +9007,39 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 3,
             variants: &[
                 EnumVariant {
-                    name: "Div1",
-                    description: Some("rcc_pclk3 = rcc_hclk1 / 1"),
+                    name: "DIV1",
+                    description: Some(
+                        "rcc_pclk3 = rcc_hclk1 / 1",
+                    ),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "Div16",
-                    description: Some("rcc_pclk3 = rcc_hclk1 / 16"),
-                    value: 7,
-                },
-                EnumVariant {
-                    name: "Div2",
-                    description: Some("rcc_pclk3 = rcc_hclk1 / 2"),
+                    name: "DIV2",
+                    description: Some(
+                        "rcc_pclk3 = rcc_hclk1 / 2",
+                    ),
                     value: 4,
                 },
                 EnumVariant {
-                    name: "Div4",
-                    description: Some("rcc_pclk3 = rcc_hclk1 / 4"),
+                    name: "DIV4",
+                    description: Some(
+                        "rcc_pclk3 = rcc_hclk1 / 4",
+                    ),
                     value: 5,
                 },
                 EnumVariant {
-                    name: "Div8",
-                    description: Some("rcc_pclk3 = rcc_hclk1 / 8"),
+                    name: "DIV8",
+                    description: Some(
+                        "rcc_pclk3 = rcc_hclk1 / 8",
+                    ),
                     value: 6,
+                },
+                EnumVariant {
+                    name: "DIV16",
+                    description: Some(
+                        "rcc_pclk3 = rcc_hclk1 / 16",
+                    ),
+                    value: 7,
                 },
             ],
         },
@@ -7101,24 +9049,32 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 2,
             variants: &[
                 EnumVariant {
-                    name: "Hsi48",
-                    description: Some("hsi48_ker_ck selected as kernel clock (default after reset)"),
+                    name: "HSI48",
+                    description: Some(
+                        "hsi48_ker_ck selected as kernel clock (default after reset)",
+                    ),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "Lse",
-                    description: Some("lse_ck selected as kernel clock"),
+                    name: "PLL1_Q",
+                    description: Some(
+                        "pll1_q_ck selected as kernel clock",
+                    ),
+                    value: 1,
+                },
+                EnumVariant {
+                    name: "LSE",
+                    description: Some(
+                        "lse_ck selected as kernel clock",
+                    ),
                     value: 2,
                 },
                 EnumVariant {
-                    name: "Lsi",
-                    description: Some("lsi_ker_ck selected as kernel clock"),
+                    name: "LSI",
+                    description: Some(
+                        "lsi_ker_ck selected as kernel clock",
+                    ),
                     value: 3,
-                },
-                EnumVariant {
-                    name: "Pll1Q",
-                    description: Some("pll1_q_ck selected as kernel clock"),
-                    value: 1,
                 },
             ],
         },
@@ -7128,24 +9084,32 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 2,
             variants: &[
                 EnumVariant {
-                    name: "Disable",
-                    description: Some("no clock (default after Backup domain reset)"),
+                    name: "DISABLE",
+                    description: Some(
+                        "no clock (default after Backup domain reset)",
+                    ),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "HseDivRtcpre",
-                    description: Some("HSE divided by RTCPRE value selected as RTC clock"),
-                    value: 3,
-                },
-                EnumVariant {
-                    name: "Lse",
-                    description: Some("LSE selected as RTC clock"),
+                    name: "LSE",
+                    description: Some(
+                        "LSE selected as RTC clock",
+                    ),
                     value: 1,
                 },
                 EnumVariant {
-                    name: "Lsi",
-                    description: Some("LSI selected as RTC clock"),
+                    name: "LSI",
+                    description: Some(
+                        "LSI selected as RTC clock",
+                    ),
                     value: 2,
+                },
+                EnumVariant {
+                    name: "HSE_DIV_RTCPRE",
+                    description: Some(
+                        "HSE divided by RTCPRE value selected as RTC clock",
+                    ),
+                    value: 3,
                 },
             ],
         },
@@ -7155,24 +9119,32 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 3,
             variants: &[
                 EnumVariant {
-                    name: "Audioclk",
-                    description: Some("hsi_ker selected as peripheral clock"),
-                    value: 3,
-                },
-                EnumVariant {
-                    name: "Per",
-                    description: Some("csi_ker selected as peripheral clock"),
-                    value: 4,
-                },
-                EnumVariant {
-                    name: "Pll1Q",
-                    description: Some("pll1_q selected as peripheral clock"),
+                    name: "PLL1_Q",
+                    description: Some(
+                        "pll1_q selected as peripheral clock",
+                    ),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "Pll2P",
-                    description: Some("pll2_p selected as peripheral clock"),
+                    name: "PLL2_P",
+                    description: Some(
+                        "pll2_p selected as peripheral clock",
+                    ),
                     value: 1,
+                },
+                EnumVariant {
+                    name: "AUDIOCLK",
+                    description: Some(
+                        "hsi_ker selected as peripheral clock",
+                    ),
+                    value: 3,
+                },
+                EnumVariant {
+                    name: "PER",
+                    description: Some(
+                        "csi_ker selected as peripheral clock",
+                    ),
+                    value: 4,
                 },
             ],
         },
@@ -7182,14 +9154,18 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 1,
             variants: &[
                 EnumVariant {
-                    name: "Csi",
-                    description: Some("CSI selected as wakeup clock from system Stop"),
-                    value: 1,
+                    name: "HSI",
+                    description: Some(
+                        "HSI selected as wakeup clock from system Stop (default after reset)",
+                    ),
+                    value: 0,
                 },
                 EnumVariant {
-                    name: "Hsi",
-                    description: Some("HSI selected as wakeup clock from system Stop (default after reset)"),
-                    value: 0,
+                    name: "CSI",
+                    description: Some(
+                        "CSI selected as wakeup clock from system Stop",
+                    ),
+                    value: 1,
                 },
             ],
         },
@@ -7197,11 +9173,15 @@ pub(crate) static REGISTERS: IR = IR {
             name: "Stopwuck",
             description: None,
             bit_size: 1,
-            variants: &[EnumVariant {
-                name: "Csi",
-                description: Some("CSI selected as wakeup clock from system Stop"),
-                value: 1,
-            }],
+            variants: &[
+                EnumVariant {
+                    name: "CSI",
+                    description: Some(
+                        "CSI selected as wakeup clock from system Stop",
+                    ),
+                    value: 1,
+                },
+            ],
         },
         Enum {
             name: "Sw",
@@ -7209,23 +9189,31 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 3,
             variants: &[
                 EnumVariant {
-                    name: "Csi",
-                    description: Some("CSI selected as system clock"),
-                    value: 1,
-                },
-                EnumVariant {
-                    name: "Hse",
-                    description: Some("HSE selected as system clock"),
-                    value: 2,
-                },
-                EnumVariant {
-                    name: "Hsi",
-                    description: Some("HSI selected as system clock"),
+                    name: "HSI",
+                    description: Some(
+                        "HSI selected as system clock",
+                    ),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "Pll1P",
-                    description: Some("PLL1 selected as system clock"),
+                    name: "CSI",
+                    description: Some(
+                        "CSI selected as system clock",
+                    ),
+                    value: 1,
+                },
+                EnumVariant {
+                    name: "HSE",
+                    description: Some(
+                        "HSE selected as system clock",
+                    ),
+                    value: 2,
+                },
+                EnumVariant {
+                    name: "PLL1_P",
+                    description: Some(
+                        "PLL1 selected as system clock",
+                    ),
                     value: 3,
                 },
             ],
@@ -7236,19 +9224,25 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 2,
             variants: &[
                 EnumVariant {
-                    name: "Hclk1Div8",
-                    description: Some("rcc_hclk/8 selected as clock source (default after reset)"),
+                    name: "HCLK1_DIV_8",
+                    description: Some(
+                        "rcc_hclk/8 selected as clock source (default after reset)",
+                    ),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "Lse",
-                    description: Some("lse_ck[1] selected as clock source"),
-                    value: 2,
+                    name: "LSI",
+                    description: Some(
+                        "lsi_ker_ck[1] selected as clock source",
+                    ),
+                    value: 1,
                 },
                 EnumVariant {
-                    name: "Lsi",
-                    description: Some("lsi_ker_ck[1] selected as clock source"),
-                    value: 1,
+                    name: "LSE",
+                    description: Some(
+                        "lse_ck[1] selected as clock source",
+                    ),
+                    value: 2,
                 },
             ],
         },
@@ -7258,12 +9252,14 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 1,
             variants: &[
                 EnumVariant {
-                    name: "B0x0",
-                    description: Some("No internal clock available for timers input capture (default after reset)"),
+                    name: "B_0X0",
+                    description: Some(
+                        "No internal clock available for timers input capture (default after reset)",
+                    ),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "B0x1",
+                    name: "B_0X1",
                     description: Some(
                         "hsi_ker_ck/1024, hsi_ker_ck/8 and csi_ker_ck/128 selected for timers input capture",
                     ),
@@ -7277,14 +9273,14 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 1,
             variants: &[
                 EnumVariant {
-                    name: "DefaultX2",
+                    name: "DEFAULT_X2",
                     description: Some(
                         "The timers kernel clock is equal to rcc_hclk1 if PPRE1 or PPRE2 corresponds to a division by 1 or 2, else it is equal to 2 x Frcc_pclk1 or 2 x Frcc_pclk2 (default after reset)",
                     ),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "DefaultX4",
+                    name: "DEFAULT_X4",
                     description: Some(
                         "The timers kernel clock is equal to 2 x Frcc_pclk1 or 2 x Frcc_pclk2 if PPRE1 or PPRE2 corresponds to a division by 1, 2 or 4, else it is equal to 4 x Frcc_pclk1 or 4 x Frcc_pclk2",
                     ),
@@ -7298,29 +9294,39 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 3,
             variants: &[
                 EnumVariant {
-                    name: "Csi",
-                    description: Some("csi_ker selected as peripheral clock"),
-                    value: 4,
-                },
-                EnumVariant {
-                    name: "Hsi",
-                    description: Some("hsi_ker selected as peripheral clock"),
-                    value: 3,
-                },
-                EnumVariant {
-                    name: "Lse",
-                    description: Some("LSE selected as peripheral clock"),
-                    value: 5,
-                },
-                EnumVariant {
-                    name: "Pclk2",
-                    description: Some("rcc_pclk2 selected as peripheral clock"),
+                    name: "PCLK2",
+                    description: Some(
+                        "rcc_pclk2 selected as peripheral clock",
+                    ),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "Pll2Q",
-                    description: Some("pll2_q selected as peripheral clock"),
+                    name: "PLL2_Q",
+                    description: Some(
+                        "pll2_q selected as peripheral clock",
+                    ),
                     value: 1,
+                },
+                EnumVariant {
+                    name: "HSI",
+                    description: Some(
+                        "hsi_ker selected as peripheral clock",
+                    ),
+                    value: 3,
+                },
+                EnumVariant {
+                    name: "CSI",
+                    description: Some(
+                        "csi_ker selected as peripheral clock",
+                    ),
+                    value: 4,
+                },
+                EnumVariant {
+                    name: "LSE",
+                    description: Some(
+                        "LSE selected as peripheral clock",
+                    ),
+                    value: 5,
                 },
             ],
         },
@@ -7330,29 +9336,39 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 3,
             variants: &[
                 EnumVariant {
-                    name: "Csi",
-                    description: Some("csi_ker selected as peripheral clock"),
-                    value: 4,
-                },
-                EnumVariant {
-                    name: "Hsi",
-                    description: Some("hsi_ker selected as peripheral clock"),
-                    value: 3,
-                },
-                EnumVariant {
-                    name: "Lse",
-                    description: Some("LSE selected as peripheral clock"),
-                    value: 5,
-                },
-                EnumVariant {
-                    name: "Pclk1",
-                    description: Some("rcc_pclk2 selected as peripheral clock"),
+                    name: "PCLK1",
+                    description: Some(
+                        "rcc_pclk2 selected as peripheral clock",
+                    ),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "Pll2Q",
-                    description: Some("pll2_q selected as peripheral clock"),
+                    name: "PLL2_Q",
+                    description: Some(
+                        "pll2_q selected as peripheral clock",
+                    ),
                     value: 1,
+                },
+                EnumVariant {
+                    name: "HSI",
+                    description: Some(
+                        "hsi_ker selected as peripheral clock",
+                    ),
+                    value: 3,
+                },
+                EnumVariant {
+                    name: "CSI",
+                    description: Some(
+                        "csi_ker selected as peripheral clock",
+                    ),
+                    value: 4,
+                },
+                EnumVariant {
+                    name: "LSE",
+                    description: Some(
+                        "LSE selected as peripheral clock",
+                    ),
+                    value: 5,
                 },
             ],
         },
@@ -7362,19 +9378,25 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 2,
             variants: &[
                 EnumVariant {
-                    name: "Disable",
-                    description: Some("Disable the kernel clock"),
+                    name: "DISABLE",
+                    description: Some(
+                        "Disable the kernel clock",
+                    ),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "Hsi48",
-                    description: Some("HSI48 selected as peripheral clock"),
-                    value: 3,
+                    name: "PLL1_Q",
+                    description: Some(
+                        "pll1_q selected as peripheral clock",
+                    ),
+                    value: 1,
                 },
                 EnumVariant {
-                    name: "Pll1Q",
-                    description: Some("pll1_q selected as peripheral clock"),
-                    value: 1,
+                    name: "HSI48",
+                    description: Some(
+                        "HSI48 selected as peripheral clock",
+                    ),
+                    value: 3,
                 },
             ],
         },

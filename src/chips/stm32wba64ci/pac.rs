@@ -373,8 +373,6 @@ mod _vectors {
 }
 pub const DESIG: desig::Desig = unsafe { desig::Desig::from_ptr(0x0bfa_0500usize as _) };
 pub const UID: uid::Uid = unsafe { uid::Uid::from_ptr(0x0bfa_0700usize as _) };
-pub const TS_CAL1: tscal::Tscal = unsafe { tscal::Tscal::from_ptr(0x0bfa_0710usize as _) };
-pub const TS_CAL2: tscal::Tscal = unsafe { tscal::Tscal::from_ptr(0x0bfa_0742usize as _) };
 pub const VREFINTCAL: vrefintcal::Vrefintcal = unsafe { vrefintcal::Vrefintcal::from_ptr(0x0bfa_07a4usize as _) };
 pub const TIM2: timer::TimGp32 = unsafe { timer::TimGp32::from_ptr(0x4000_0000usize as _) };
 pub const TIM3: timer::TimGp16 = unsafe { timer::TimGp16::from_ptr(0x4000_0400usize as _) };
@@ -400,10 +398,6 @@ pub const TSC: tsc::Tsc = unsafe { tsc::Tsc::from_ptr(0x4002_4000usize as _) };
 pub const RAMCFG: ramcfg::Ramcfg = unsafe { ramcfg::Ramcfg::from_ptr(0x4002_6000usize as _) };
 pub const ICACHE: icache::Icache = unsafe { icache::Icache::from_ptr(0x4003_0400usize as _) };
 pub const GTZC: gtzc::GtzcTzsc = unsafe { gtzc::GtzcTzsc::from_ptr(0x4003_2400usize as _) };
-pub const GTZC_TZSC: gtzc::GtzcTzsc = unsafe { gtzc::GtzcTzsc::from_ptr(0x4003_2400usize as _) };
-pub const GTZC_MPCBB1: gtzc::Mpcbb = unsafe { gtzc::Mpcbb::from_ptr(0x4003_2c00usize as _) };
-pub const GTZC_MPCBB2: gtzc::Mpcbb = unsafe { gtzc::Mpcbb::from_ptr(0x4003_3000usize as _) };
-pub const GTZC_MPCBB6: gtzc::Mpcbb = unsafe { gtzc::Mpcbb::from_ptr(0x4003_4000usize as _) };
 pub const GPIOA: gpio::Gpio = unsafe { gpio::Gpio::from_ptr(0x4202_0000usize as _) };
 pub const GPIOB: gpio::Gpio = unsafe { gpio::Gpio::from_ptr(0x4202_0400usize as _) };
 pub const GPIOC: gpio::Gpio = unsafe { gpio::Gpio::from_ptr(0x4202_0800usize as _) };
@@ -414,7 +408,7 @@ pub const AES: aes::Aes = unsafe { aes::Aes::from_ptr(0x420c_0000usize as _) };
 pub const HASH: hash::Hash = unsafe { hash::Hash::from_ptr(0x420c_0400usize as _) };
 pub const RNG: rng::Rng = unsafe { rng::Rng::from_ptr(0x420c_0800usize as _) };
 pub const SAES: saes::Saes = unsafe { saes::Saes::from_ptr(0x420c_0c00usize as _) };
-pub const HSEM: hsem::Hsem = unsafe { hsem::Hsem::from_ptr(0x420c_1c00usize as _) };
+pub const HSEM: *mut () = 0x420c_1c00usize as _;
 pub const PKA: pka::Pka = unsafe { pka::Pka::from_ptr(0x420c_2000usize as _) };
 pub const SYSCFG: syscfg::Syscfg = unsafe { syscfg::Syscfg::from_ptr(0x4600_0400usize as _) };
 pub const SPI3: spi::Spi = unsafe { spi::Spi::from_ptr(0x4600_2000usize as _) };
@@ -429,15 +423,14 @@ pub const RCC: rcc::Rcc = unsafe { rcc::Rcc::from_ptr(0x4602_0c00usize as _) };
 pub const ADC4: adc::Adc4 = unsafe { adc::Adc4::from_ptr(0x4602_1000usize as _) };
 pub const ADC4_COMMON: adccommon::AdcCommon = unsafe { adccommon::AdcCommon::from_ptr(0x4602_1308usize as _) };
 pub const EXTI: exti::Exti = unsafe { exti::Exti::from_ptr(0x4602_2000usize as _) };
-pub const GTZC_TZIC: gtzc::Tzic = unsafe { gtzc::Tzic::from_ptr(0x5003_2800usize as _) };
 pub const DBGMCU: dbgmcu::Dbgmcu = unsafe { dbgmcu::Dbgmcu::from_ptr(0xe004_4000usize as _) };
 #[doc = r" Number available in the NVIC for configuring priority"]
 #[cfg(feature = "rt")]
 pub const NVIC_PRIO_BITS: u8 = 4;
 #[cfg(feature = "rt")]
-pub use Interrupt as interrupt;
-#[cfg(feature = "rt")]
 pub use cortex_m_rt::interrupt;
+#[cfg(feature = "rt")]
+pub use Interrupt as interrupt;
 #[path = "../../peripherals/adc_wba.rs"]
 pub mod adc;
 #[path = "../../peripherals/adccommon_v3.rs"]
@@ -464,8 +457,6 @@ pub mod gpio;
 pub mod gtzc;
 #[path = "../../peripherals/hash_v4.rs"]
 pub mod hash;
-#[path = "../../peripherals/hsem_wba.rs"]
-pub mod hsem;
 #[path = "../../peripherals/i2c_v2.rs"]
 pub mod i2c;
 #[path = "../../peripherals/icache_v1_4crr.rs"]
@@ -502,8 +493,6 @@ pub mod tamp;
 pub mod timer;
 #[path = "../../peripherals/tsc_v1.rs"]
 pub mod tsc;
-#[path = "../../peripherals/tscal_v1.rs"]
-pub mod tscal;
 #[path = "../../peripherals/uid_v1.rs"]
 pub mod uid;
 #[path = "../../peripherals/usart_v4.rs"]

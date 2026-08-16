@@ -357,22 +357,22 @@ pub(crate) static REGISTERS: IR = IR {
         bit_size: 4,
         variants: &[
             EnumVariant {
-                name: "Cpu",
+                name: "B_0X2",
                 description: Some("parity error detected on CPU access."),
                 value: 2,
             },
             EnumVariant {
-                name: "Debugger",
+                name: "B_0X3",
                 description: Some("parity error detected on Debugger access."),
                 value: 3,
             },
             EnumVariant {
-                name: "DmaPort0",
-                description: Some("parity error detected on DMA master port 0 access."),
+                name: "B_0X6",
+                description: Some("parity error detected on DMA master port o access."),
                 value: 6,
             },
             EnumVariant {
-                name: "DmaPort1",
+                name: "B_0X7",
                 description: Some("parity error detected on DMA master port 1 access."),
                 value: 7,
             },

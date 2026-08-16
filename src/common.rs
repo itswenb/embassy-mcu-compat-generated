@@ -68,18 +68,20 @@ impl<T: Copy, A: Write> Reg<T, A> {
 
 impl<T: Default + Copy, A: Write> Reg<T, A> {
     #[inline(always)]
-    pub fn write(&self, f: impl FnOnce(&mut T)) {
+    pub fn write<R>(&self, f: impl FnOnce(&mut T) -> R) -> R {
         let mut val = Default::default();
-        f(&mut val);
+        let res = f(&mut val);
         self.write_value(val);
+        res
     }
 }
 
 impl<T: Copy, A: Read + Write> Reg<T, A> {
     #[inline(always)]
-    pub fn modify(&self, f: impl FnOnce(&mut T)) {
+    pub fn modify<R>(&self, f: impl FnOnce(&mut T) -> R) -> R {
         let mut val = self.read();
-        f(&mut val);
+        let res = f(&mut val);
         self.write_value(val);
+        res
     }
 }

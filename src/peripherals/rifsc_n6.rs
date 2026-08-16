@@ -22,42 +22,42 @@ impl Rifsc {
     #[doc = "RIFSC RISC slave control register."]
     #[inline(always)]
     pub const fn risc_cr(self) -> crate::common::Reg<regs::RiscCr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0usize) as _) }
     }
     #[doc = "RIFSC RISC slave security configuration register."]
     #[inline(always)]
     pub const fn risc_seccfgr(self, n: usize) -> crate::common::Reg<regs::Cfgr, crate::common::RW> {
         assert!(n < 6usize);
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x10usize + n * 4usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x10usize + n * 4usize) as _) }
     }
     #[doc = "RIFSC RISC slave privilege configuration register."]
     #[inline(always)]
     pub const fn risc_privcfgr(self, n: usize) -> crate::common::Reg<regs::Cfgr, crate::common::RW> {
         assert!(n < 6usize);
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x30usize + n * 4usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x30usize + n * 4usize) as _) }
     }
     #[doc = "RIFSC RISC slave resource configuration lock register."]
     #[inline(always)]
     pub const fn risc_rcfglockr(self, n: usize) -> crate::common::Reg<regs::Cfgr, crate::common::RW> {
         assert!(n < 6usize);
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x50usize + n * 4usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x50usize + n * 4usize) as _) }
     }
     #[doc = "RIFSC RIMC master control register."]
     #[inline(always)]
     pub const fn rimc_cr(self) -> crate::common::Reg<regs::RimcCr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0c00usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0c00usize) as _) }
     }
     #[doc = "RIFSC RIMC master attribute register."]
     #[inline(always)]
     pub const fn rimc_attr(self, n: usize) -> crate::common::Reg<regs::RimcAttr, crate::common::RW> {
-        assert!(n < 13usize);
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0c10usize + n * 4usize) as _) }
+        assert!(n < 12usize);
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0c10usize + n * 4usize) as _) }
     }
     #[doc = "RIFSC peripheral protection status register."]
     #[inline(always)]
     pub const fn ppsr(self, n: usize) -> crate::common::Reg<regs::Cfgr, crate::common::R> {
         assert!(n < 6usize);
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0fb0usize + n * 4usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0fb0usize + n * 4usize) as _) }
     }
 }
 pub mod regs {
@@ -67,7 +67,6 @@ pub mod regs {
     pub struct Cfgr(pub u32);
     impl Cfgr {
         #[doc = "Configuration bit for peripheral N."]
-        #[must_use]
         #[inline(always)]
         pub const fn cfg(&self, n: usize) -> bool {
             assert!(n < 32usize);
@@ -77,7 +76,7 @@ pub mod regs {
         }
         #[doc = "Configuration bit for peripheral N."]
         #[inline(always)]
-        pub const fn set_cfg(&mut self, n: usize, val: bool) {
+        pub fn set_cfg(&mut self, n: usize, val: bool) {
             assert!(n < 32usize);
             let offs = 0usize + n * 1usize;
             self.0 = (self.0 & !(0x01 << offs)) | (((val as u32) & 0x01) << offs);
@@ -130,42 +129,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Cfgr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Cfgr {{ cfg[0]: {=bool:?}, cfg[1]: {=bool:?}, cfg[2]: {=bool:?}, cfg[3]: {=bool:?}, cfg[4]: {=bool:?}, cfg[5]: {=bool:?}, cfg[6]: {=bool:?}, cfg[7]: {=bool:?}, cfg[8]: {=bool:?}, cfg[9]: {=bool:?}, cfg[10]: {=bool:?}, cfg[11]: {=bool:?}, cfg[12]: {=bool:?}, cfg[13]: {=bool:?}, cfg[14]: {=bool:?}, cfg[15]: {=bool:?}, cfg[16]: {=bool:?}, cfg[17]: {=bool:?}, cfg[18]: {=bool:?}, cfg[19]: {=bool:?}, cfg[20]: {=bool:?}, cfg[21]: {=bool:?}, cfg[22]: {=bool:?}, cfg[23]: {=bool:?}, cfg[24]: {=bool:?}, cfg[25]: {=bool:?}, cfg[26]: {=bool:?}, cfg[27]: {=bool:?}, cfg[28]: {=bool:?}, cfg[29]: {=bool:?}, cfg[30]: {=bool:?}, cfg[31]: {=bool:?} }}",
-                self.cfg(0usize),
-                self.cfg(1usize),
-                self.cfg(2usize),
-                self.cfg(3usize),
-                self.cfg(4usize),
-                self.cfg(5usize),
-                self.cfg(6usize),
-                self.cfg(7usize),
-                self.cfg(8usize),
-                self.cfg(9usize),
-                self.cfg(10usize),
-                self.cfg(11usize),
-                self.cfg(12usize),
-                self.cfg(13usize),
-                self.cfg(14usize),
-                self.cfg(15usize),
-                self.cfg(16usize),
-                self.cfg(17usize),
-                self.cfg(18usize),
-                self.cfg(19usize),
-                self.cfg(20usize),
-                self.cfg(21usize),
-                self.cfg(22usize),
-                self.cfg(23usize),
-                self.cfg(24usize),
-                self.cfg(25usize),
-                self.cfg(26usize),
-                self.cfg(27usize),
-                self.cfg(28usize),
-                self.cfg(29usize),
-                self.cfg(30usize),
-                self.cfg(31usize)
-            )
+            defmt :: write ! (f , "Cfgr {{ cfg[0]: {=bool:?}, cfg[1]: {=bool:?}, cfg[2]: {=bool:?}, cfg[3]: {=bool:?}, cfg[4]: {=bool:?}, cfg[5]: {=bool:?}, cfg[6]: {=bool:?}, cfg[7]: {=bool:?}, cfg[8]: {=bool:?}, cfg[9]: {=bool:?}, cfg[10]: {=bool:?}, cfg[11]: {=bool:?}, cfg[12]: {=bool:?}, cfg[13]: {=bool:?}, cfg[14]: {=bool:?}, cfg[15]: {=bool:?}, cfg[16]: {=bool:?}, cfg[17]: {=bool:?}, cfg[18]: {=bool:?}, cfg[19]: {=bool:?}, cfg[20]: {=bool:?}, cfg[21]: {=bool:?}, cfg[22]: {=bool:?}, cfg[23]: {=bool:?}, cfg[24]: {=bool:?}, cfg[25]: {=bool:?}, cfg[26]: {=bool:?}, cfg[27]: {=bool:?}, cfg[28]: {=bool:?}, cfg[29]: {=bool:?}, cfg[30]: {=bool:?}, cfg[31]: {=bool:?} }}" , self . cfg (0usize) , self . cfg (1usize) , self . cfg (2usize) , self . cfg (3usize) , self . cfg (4usize) , self . cfg (5usize) , self . cfg (6usize) , self . cfg (7usize) , self . cfg (8usize) , self . cfg (9usize) , self . cfg (10usize) , self . cfg (11usize) , self . cfg (12usize) , self . cfg (13usize) , self . cfg (14usize) , self . cfg (15usize) , self . cfg (16usize) , self . cfg (17usize) , self . cfg (18usize) , self . cfg (19usize) , self . cfg (20usize) , self . cfg (21usize) , self . cfg (22usize) , self . cfg (23usize) , self . cfg (24usize) , self . cfg (25usize) , self . cfg (26usize) , self . cfg (27usize) , self . cfg (28usize) , self . cfg (29usize) , self . cfg (30usize) , self . cfg (31usize))
         }
     }
     #[doc = "RIFSC RIMC master attribute register."]
@@ -174,7 +138,6 @@ pub mod regs {
     pub struct RimcAttr(pub u32);
     impl RimcAttr {
         #[doc = "Master compartment ID."]
-        #[must_use]
         #[inline(always)]
         pub const fn mcid(&self) -> u8 {
             let val = (self.0 >> 4usize) & 0x07;
@@ -182,11 +145,10 @@ pub mod regs {
         }
         #[doc = "Master compartment ID."]
         #[inline(always)]
-        pub const fn set_mcid(&mut self, val: u8) {
+        pub fn set_mcid(&mut self, val: u8) {
             self.0 = (self.0 & !(0x07 << 4usize)) | (((val as u32) & 0x07) << 4usize);
         }
         #[doc = "Master secure attribute."]
-        #[must_use]
         #[inline(always)]
         pub const fn msec(&self) -> bool {
             let val = (self.0 >> 8usize) & 0x01;
@@ -194,11 +156,10 @@ pub mod regs {
         }
         #[doc = "Master secure attribute."]
         #[inline(always)]
-        pub const fn set_msec(&mut self, val: bool) {
+        pub fn set_msec(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
         }
         #[doc = "Master privilege attribute."]
-        #[must_use]
         #[inline(always)]
         pub const fn mpriv(&self) -> bool {
             let val = (self.0 >> 9usize) & 0x01;
@@ -206,11 +167,10 @@ pub mod regs {
         }
         #[doc = "Master privilege attribute."]
         #[inline(always)]
-        pub const fn set_mpriv(&mut self, val: bool) {
+        pub fn set_mpriv(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
         }
         #[doc = "Master lock. When set, this master attribute register cannot be modified."]
-        #[must_use]
         #[inline(always)]
         pub const fn mlock(&self) -> bool {
             let val = (self.0 >> 16usize) & 0x01;
@@ -218,7 +178,7 @@ pub mod regs {
         }
         #[doc = "Master lock. When set, this master attribute register cannot be modified."]
         #[inline(always)]
-        pub const fn set_mlock(&mut self, val: bool) {
+        pub fn set_mlock(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
         }
     }
@@ -257,7 +217,6 @@ pub mod regs {
     pub struct RimcCr(pub u32);
     impl RimcCr {
         #[doc = "Global lock. When set, all writes to RIFSC RIMC registers are ignored."]
-        #[must_use]
         #[inline(always)]
         pub const fn glock(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -265,11 +224,10 @@ pub mod regs {
         }
         #[doc = "Global lock. When set, all writes to RIFSC RIMC registers are ignored."]
         #[inline(always)]
-        pub const fn set_glock(&mut self, val: bool) {
+        pub fn set_glock(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "Debug access port compartment ID."]
-        #[must_use]
         #[inline(always)]
         pub const fn dapcid(&self) -> u8 {
             let val = (self.0 >> 8usize) & 0x07;
@@ -277,7 +235,7 @@ pub mod regs {
         }
         #[doc = "Debug access port compartment ID."]
         #[inline(always)]
-        pub const fn set_dapcid(&mut self, val: u8) {
+        pub fn set_dapcid(&mut self, val: u8) {
             self.0 = (self.0 & !(0x07 << 8usize)) | (((val as u32) & 0x07) << 8usize);
         }
     }
@@ -312,7 +270,6 @@ pub mod regs {
     pub struct RiscCr(pub u32);
     impl RiscCr {
         #[doc = "Global lock. When set, all writes to RIFSC RISC registers are ignored."]
-        #[must_use]
         #[inline(always)]
         pub const fn glock(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -320,7 +277,7 @@ pub mod regs {
         }
         #[doc = "Global lock. When set, all writes to RIFSC RISC registers are ignored."]
         #[inline(always)]
-        pub const fn set_glock(&mut self, val: bool) {
+        pub fn set_glock(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
     }

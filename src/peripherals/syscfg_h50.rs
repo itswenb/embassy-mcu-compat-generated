@@ -22,67 +22,67 @@ impl Syscfg {
     #[doc = "SBS temporal isolation control register"]
     #[inline(always)]
     pub const fn hdplcr(self) -> crate::common::Reg<regs::Hdplcr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x10usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x10usize) as _) }
     }
     #[doc = "SBS temporal isolation status register"]
     #[inline(always)]
     pub const fn hdplsr(self) -> crate::common::Reg<regs::Hdplsr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x14usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x14usize) as _) }
     }
     #[doc = "SBS debug control register"]
     #[inline(always)]
     pub const fn dbgcr(self) -> crate::common::Reg<regs::Dbgcr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x20usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x20usize) as _) }
     }
     #[doc = "SBS debug lock register"]
     #[inline(always)]
     pub const fn dbglockr(self) -> crate::common::Reg<regs::Dbglockr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x24usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x24usize) as _) }
     }
     #[doc = "SBS product mode and configuration register"]
     #[inline(always)]
     pub const fn pmcr(self) -> crate::common::Reg<regs::Pmcr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0100usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0100usize) as _) }
     }
     #[doc = "SBS FPU interrupt mask register"]
     #[inline(always)]
     pub const fn fpuimr(self) -> crate::common::Reg<regs::Fpuimr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0104usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0104usize) as _) }
     }
     #[doc = "SBS memory erase status register"]
     #[inline(always)]
     pub const fn mesr(self) -> crate::common::Reg<regs::Mesr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0108usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0108usize) as _) }
     }
     #[doc = "SBS compensation cell for I/Os control and status register"]
     #[inline(always)]
     pub const fn cccsr(self) -> crate::common::Reg<regs::Cccsr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0110usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0110usize) as _) }
     }
     #[doc = "SBS compensation cell for I/Os value register"]
     #[inline(always)]
     pub const fn ccvalr(self) -> crate::common::Reg<regs::Ccvalr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0114usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0114usize) as _) }
     }
     #[doc = "SBS compensation cell for I/Os software code register"]
     #[inline(always)]
     pub const fn ccswcr(self) -> crate::common::Reg<regs::Ccswcr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0118usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0118usize) as _) }
     }
     #[doc = "SBS Class B register"]
     #[inline(always)]
     pub const fn cfgr2(self) -> crate::common::Reg<regs::Cfgr2, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0120usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0120usize) as _) }
     }
     #[doc = "SBS CPU lock register"]
     #[inline(always)]
     pub const fn cnslckr(self) -> crate::common::Reg<regs::Cnslckr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0144usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0144usize) as _) }
     }
     #[doc = "SBS flift ECC NMI mask register"]
     #[inline(always)]
     pub const fn eccnmir(self) -> crate::common::Reg<regs::Eccnmir, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x014cusize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x014cusize) as _) }
     }
 }
 pub mod regs {
@@ -92,7 +92,6 @@ pub mod regs {
     pub struct Cccsr(pub u32);
     impl Cccsr {
         #[doc = "enable compensation cell for VDDIO power rail This bit enables the I/O compensation cell."]
-        #[must_use]
         #[inline(always)]
         pub const fn en(&self, n: usize) -> bool {
             assert!(n < 2usize);
@@ -102,13 +101,12 @@ pub mod regs {
         }
         #[doc = "enable compensation cell for VDDIO power rail This bit enables the I/O compensation cell."]
         #[inline(always)]
-        pub const fn set_en(&mut self, n: usize, val: bool) {
+        pub fn set_en(&mut self, n: usize, val: bool) {
             assert!(n < 2usize);
             let offs = 0usize + n * 2usize;
             self.0 = (self.0 & !(0x01 << offs)) | (((val as u32) & 0x01) << offs);
         }
         #[doc = "code selection for VDDIO power rail (reset value set to 1) This bit selects the code to be applied for the I/O compensation cell."]
-        #[must_use]
         #[inline(always)]
         pub const fn cs(&self, n: usize) -> super::vals::Cs {
             assert!(n < 2usize);
@@ -118,13 +116,12 @@ pub mod regs {
         }
         #[doc = "code selection for VDDIO power rail (reset value set to 1) This bit selects the code to be applied for the I/O compensation cell."]
         #[inline(always)]
-        pub const fn set_cs(&mut self, n: usize, val: super::vals::Cs) {
+        pub fn set_cs(&mut self, n: usize, val: super::vals::Cs) {
             assert!(n < 2usize);
             let offs = 1usize + n * 2usize;
             self.0 = (self.0 & !(0x01 << offs)) | (((val.to_bits() as u32) & 0x01) << offs);
         }
         #[doc = "VDDIO compensation cell ready flag This bit provides the status of the compensation cell."]
-        #[must_use]
         #[inline(always)]
         pub const fn rdy(&self, n: usize) -> bool {
             assert!(n < 2usize);
@@ -134,7 +131,7 @@ pub mod regs {
         }
         #[doc = "VDDIO compensation cell ready flag This bit provides the status of the compensation cell."]
         #[inline(always)]
-        pub const fn set_rdy(&mut self, n: usize, val: bool) {
+        pub fn set_rdy(&mut self, n: usize, val: bool) {
             assert!(n < 2usize);
             let offs = 8usize + n * 1usize;
             self.0 = (self.0 & !(0x01 << offs)) | (((val as u32) & 0x01) << offs);
@@ -161,16 +158,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Cccsr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Cccsr {{ en[0]: {=bool:?}, en[1]: {=bool:?}, cs[0]: {:?}, cs[1]: {:?}, rdy[0]: {=bool:?}, rdy[1]: {=bool:?} }}",
-                self.en(0usize),
-                self.en(1usize),
-                self.cs(0usize),
-                self.cs(1usize),
-                self.rdy(0usize),
-                self.rdy(1usize)
-            )
+            defmt :: write ! (f , "Cccsr {{ en[0]: {=bool:?}, en[1]: {=bool:?}, cs[0]: {:?}, cs[1]: {:?}, rdy[0]: {=bool:?}, rdy[1]: {=bool:?} }}" , self . en (0usize) , self . en (1usize) , self . cs (0usize) , self . cs (1usize) , self . rdy (0usize) , self . rdy (1usize))
         }
     }
     #[doc = "SBS compensation cell for I/Os software code register"]
@@ -179,7 +167,6 @@ pub mod regs {
     pub struct Ccswcr(pub u32);
     impl Ccswcr {
         #[doc = "NMOS compensation code for VDD power rails This bitfield is written by software to define an I/O compensation cell code for NMOS transistors of the VDD power rail. This code is applied to the I/O when CS1 is set in SBS_CCSR."]
-        #[must_use]
         #[inline(always)]
         pub const fn sw_ansrc1(&self) -> u8 {
             let val = (self.0 >> 0usize) & 0x0f;
@@ -187,11 +174,10 @@ pub mod regs {
         }
         #[doc = "NMOS compensation code for VDD power rails This bitfield is written by software to define an I/O compensation cell code for NMOS transistors of the VDD power rail. This code is applied to the I/O when CS1 is set in SBS_CCSR."]
         #[inline(always)]
-        pub const fn set_sw_ansrc1(&mut self, val: u8) {
+        pub fn set_sw_ansrc1(&mut self, val: u8) {
             self.0 = (self.0 & !(0x0f << 0usize)) | (((val as u32) & 0x0f) << 0usize);
         }
         #[doc = "PMOS compensation code for the VDD power rails This bitfield is written by software to define an I/O compensation cell code for PMOS transistors of the VDDIO power rail. This code is applied to the I/O when CS1 is set in SBS_CCSR."]
-        #[must_use]
         #[inline(always)]
         pub const fn sw_apsrc1(&self) -> u8 {
             let val = (self.0 >> 4usize) & 0x0f;
@@ -199,11 +185,10 @@ pub mod regs {
         }
         #[doc = "PMOS compensation code for the VDD power rails This bitfield is written by software to define an I/O compensation cell code for PMOS transistors of the VDDIO power rail. This code is applied to the I/O when CS1 is set in SBS_CCSR."]
         #[inline(always)]
-        pub const fn set_sw_apsrc1(&mut self, val: u8) {
+        pub fn set_sw_apsrc1(&mut self, val: u8) {
             self.0 = (self.0 & !(0x0f << 4usize)) | (((val as u32) & 0x0f) << 4usize);
         }
         #[doc = "NMOS compensation code for VDDIO power rails This bitfield is written by software to define an I/O compensation cell code for NMOS transistors of the VDD power rail. This code is applied to the I/O when CS2 is set in SBS_CCSR."]
-        #[must_use]
         #[inline(always)]
         pub const fn sw_ansrc2(&self) -> u8 {
             let val = (self.0 >> 8usize) & 0x0f;
@@ -211,11 +196,10 @@ pub mod regs {
         }
         #[doc = "NMOS compensation code for VDDIO power rails This bitfield is written by software to define an I/O compensation cell code for NMOS transistors of the VDD power rail. This code is applied to the I/O when CS2 is set in SBS_CCSR."]
         #[inline(always)]
-        pub const fn set_sw_ansrc2(&mut self, val: u8) {
+        pub fn set_sw_ansrc2(&mut self, val: u8) {
             self.0 = (self.0 & !(0x0f << 8usize)) | (((val as u32) & 0x0f) << 8usize);
         }
         #[doc = "PMOS compensation code for the V<sub>DDIO</sub> power rails This bitfield is written by software to define an I/O compensation cell code for PMOS transistors of the VDDIO power rail. This code is applied to the I/O when CS2 is set in SBS_CCSR."]
-        #[must_use]
         #[inline(always)]
         pub const fn sw_apsrc2(&self) -> u8 {
             let val = (self.0 >> 12usize) & 0x0f;
@@ -223,7 +207,7 @@ pub mod regs {
         }
         #[doc = "PMOS compensation code for the V<sub>DDIO</sub> power rails This bitfield is written by software to define an I/O compensation cell code for PMOS transistors of the VDDIO power rail. This code is applied to the I/O when CS2 is set in SBS_CCSR."]
         #[inline(always)]
-        pub const fn set_sw_apsrc2(&mut self, val: u8) {
+        pub fn set_sw_apsrc2(&mut self, val: u8) {
             self.0 = (self.0 & !(0x0f << 12usize)) | (((val as u32) & 0x0f) << 12usize);
         }
     }
@@ -262,7 +246,6 @@ pub mod regs {
     pub struct Ccvalr(pub u32);
     impl Ccvalr {
         #[doc = "compensation value for the NMOS transistor This value is provided by the cell and must be interpreted by the processor to compensate the slew rate in the functional range."]
-        #[must_use]
         #[inline(always)]
         pub const fn ansrc1(&self) -> u8 {
             let val = (self.0 >> 0usize) & 0x0f;
@@ -270,11 +253,10 @@ pub mod regs {
         }
         #[doc = "compensation value for the NMOS transistor This value is provided by the cell and must be interpreted by the processor to compensate the slew rate in the functional range."]
         #[inline(always)]
-        pub const fn set_ansrc1(&mut self, val: u8) {
+        pub fn set_ansrc1(&mut self, val: u8) {
             self.0 = (self.0 & !(0x0f << 0usize)) | (((val as u32) & 0x0f) << 0usize);
         }
         #[doc = "compensation value for the PMOS transistor This value is provided by the cell and must be interpreted by the processor to compensate the slew rate in the functional range."]
-        #[must_use]
         #[inline(always)]
         pub const fn apsrc1(&self) -> u8 {
             let val = (self.0 >> 4usize) & 0x0f;
@@ -282,11 +264,10 @@ pub mod regs {
         }
         #[doc = "compensation value for the PMOS transistor This value is provided by the cell and must be interpreted by the processor to compensate the slew rate in the functional range."]
         #[inline(always)]
-        pub const fn set_apsrc1(&mut self, val: u8) {
+        pub fn set_apsrc1(&mut self, val: u8) {
             self.0 = (self.0 & !(0x0f << 4usize)) | (((val as u32) & 0x0f) << 4usize);
         }
         #[doc = "Compensation value for the NMOS transistor This value is provided by the cell and must be interpreted by the processor to compensate the slew rate in the functional range."]
-        #[must_use]
         #[inline(always)]
         pub const fn ansrc2(&self) -> u8 {
             let val = (self.0 >> 8usize) & 0x0f;
@@ -294,11 +275,10 @@ pub mod regs {
         }
         #[doc = "Compensation value for the NMOS transistor This value is provided by the cell and must be interpreted by the processor to compensate the slew rate in the functional range."]
         #[inline(always)]
-        pub const fn set_ansrc2(&mut self, val: u8) {
+        pub fn set_ansrc2(&mut self, val: u8) {
             self.0 = (self.0 & !(0x0f << 8usize)) | (((val as u32) & 0x0f) << 8usize);
         }
         #[doc = "compensation value for the PMOS transistor This value is provided by the cell and must be interpreted by the processor to compensate the slew rate in the functional range."]
-        #[must_use]
         #[inline(always)]
         pub const fn apsrc2(&self) -> u8 {
             let val = (self.0 >> 12usize) & 0x0f;
@@ -306,7 +286,7 @@ pub mod regs {
         }
         #[doc = "compensation value for the PMOS transistor This value is provided by the cell and must be interpreted by the processor to compensate the slew rate in the functional range."]
         #[inline(always)]
-        pub const fn set_apsrc2(&mut self, val: u8) {
+        pub fn set_apsrc2(&mut self, val: u8) {
             self.0 = (self.0 & !(0x0f << 12usize)) | (((val as u32) & 0x0f) << 12usize);
         }
     }
@@ -345,7 +325,6 @@ pub mod regs {
     pub struct Cfgr2(pub u32);
     impl Cfgr2 {
         #[doc = "core lockup lock This bit is set by software and cleared only by a system reset. It can be used to enable and lock the lockup (HardFault) output of Cortex-M33 with TIM1 break inputs."]
-        #[must_use]
         #[inline(always)]
         pub const fn cll(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -353,11 +332,10 @@ pub mod regs {
         }
         #[doc = "core lockup lock This bit is set by software and cleared only by a system reset. It can be used to enable and lock the lockup (HardFault) output of Cortex-M33 with TIM1 break inputs."]
         #[inline(always)]
-        pub const fn set_cll(&mut self, val: bool) {
+        pub fn set_cll(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "SRAM ECC error lock This bit is set by software and cleared only by a system reset. It can be used to enable and lock the SRAM double ECC error signal with break input of TIM1."]
-        #[must_use]
         #[inline(always)]
         pub const fn sel(&self) -> bool {
             let val = (self.0 >> 1usize) & 0x01;
@@ -365,11 +343,10 @@ pub mod regs {
         }
         #[doc = "SRAM ECC error lock This bit is set by software and cleared only by a system reset. It can be used to enable and lock the SRAM double ECC error signal with break input of TIM1."]
         #[inline(always)]
-        pub const fn set_sel(&mut self, val: bool) {
+        pub fn set_sel(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
         }
         #[doc = "PVD lock This bit is set by software and cleared only by a system reset. It can be used to enable and lock the PVD connection with TIM1 break inputs."]
-        #[must_use]
         #[inline(always)]
         pub const fn pvdl(&self) -> bool {
             let val = (self.0 >> 2usize) & 0x01;
@@ -377,11 +354,10 @@ pub mod regs {
         }
         #[doc = "PVD lock This bit is set by software and cleared only by a system reset. It can be used to enable and lock the PVD connection with TIM1 break inputs."]
         #[inline(always)]
-        pub const fn set_pvdl(&mut self, val: bool) {
+        pub fn set_pvdl(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
         }
         #[doc = "ECC lock This bit is set and cleared by software. It can be used to enable and lock the Flash memory double ECC error with break input of TIM1."]
-        #[must_use]
         #[inline(always)]
         pub const fn eccl(&self) -> bool {
             let val = (self.0 >> 3usize) & 0x01;
@@ -389,7 +365,7 @@ pub mod regs {
         }
         #[doc = "ECC lock This bit is set and cleared by software. It can be used to enable and lock the Flash memory double ECC error with break input of TIM1."]
         #[inline(always)]
-        pub const fn set_eccl(&mut self, val: bool) {
+        pub fn set_eccl(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
         }
     }
@@ -428,7 +404,6 @@ pub mod regs {
     pub struct Cnslckr(pub u32);
     impl Cnslckr {
         #[doc = "VTOR_NS register lock This bit is set by software and cleared only by a system reset."]
-        #[must_use]
         #[inline(always)]
         pub const fn locknsvtor(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -436,11 +411,10 @@ pub mod regs {
         }
         #[doc = "VTOR_NS register lock This bit is set by software and cleared only by a system reset."]
         #[inline(always)]
-        pub const fn set_locknsvtor(&mut self, val: bool) {
+        pub fn set_locknsvtor(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "MPU register lock This bit is set by software and cleared only by a system reset. When set, this bit disables write access to MPU_CTRL_NS, MPU_RNR_NS and MPU_RBAR_NS registers."]
-        #[must_use]
         #[inline(always)]
         pub const fn locknsmpu(&self) -> bool {
             let val = (self.0 >> 1usize) & 0x01;
@@ -448,7 +422,7 @@ pub mod regs {
         }
         #[doc = "MPU register lock This bit is set by software and cleared only by a system reset. When set, this bit disables write access to MPU_CTRL_NS, MPU_RNR_NS and MPU_RBAR_NS registers."]
         #[inline(always)]
-        pub const fn set_locknsmpu(&mut self, val: bool) {
+        pub fn set_locknsmpu(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
         }
     }
@@ -483,7 +457,6 @@ pub mod regs {
     pub struct Dbgcr(pub u32);
     impl Dbgcr {
         #[doc = "access port unlock Write 0xB4 to this bitfield to open the device access port."]
-        #[must_use]
         #[inline(always)]
         pub const fn ap_unlock(&self) -> u8 {
             let val = (self.0 >> 0usize) & 0xff;
@@ -491,11 +464,10 @@ pub mod regs {
         }
         #[doc = "access port unlock Write 0xB4 to this bitfield to open the device access port."]
         #[inline(always)]
-        pub const fn set_ap_unlock(&mut self, val: u8) {
+        pub fn set_ap_unlock(&mut self, val: u8) {
             self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
         }
         #[doc = "debug unlock when DBG_AUTH_HDPL is reached Write 0xB4 to this bitfield to open the debug when HDPL in SBS_HDPLSR equals to DBG_AUTH_HDPL in this register."]
-        #[must_use]
         #[inline(always)]
         pub const fn dbg_unlock(&self) -> u8 {
             let val = (self.0 >> 8usize) & 0xff;
@@ -503,11 +475,10 @@ pub mod regs {
         }
         #[doc = "debug unlock when DBG_AUTH_HDPL is reached Write 0xB4 to this bitfield to open the debug when HDPL in SBS_HDPLSR equals to DBG_AUTH_HDPL in this register."]
         #[inline(always)]
-        pub const fn set_dbg_unlock(&mut self, val: u8) {
+        pub fn set_dbg_unlock(&mut self, val: u8) {
             self.0 = (self.0 & !(0xff << 8usize)) | (((val as u32) & 0xff) << 8usize);
         }
         #[doc = "authenticated debug temporal isolation level Writing to this bitfield defines at which HDPL the authenticated debug opens. Note: Writing any other values is ignored. Reading any other value means the debug never opens."]
-        #[must_use]
         #[inline(always)]
         pub const fn dbg_auth_hdpl(&self) -> super::vals::DbgAuthHdpl {
             let val = (self.0 >> 16usize) & 0xff;
@@ -515,7 +486,7 @@ pub mod regs {
         }
         #[doc = "authenticated debug temporal isolation level Writing to this bitfield defines at which HDPL the authenticated debug opens. Note: Writing any other values is ignored. Reading any other value means the debug never opens."]
         #[inline(always)]
-        pub const fn set_dbg_auth_hdpl(&mut self, val: super::vals::DbgAuthHdpl) {
+        pub fn set_dbg_auth_hdpl(&mut self, val: super::vals::DbgAuthHdpl) {
             self.0 = (self.0 & !(0xff << 16usize)) | (((val.to_bits() as u32) & 0xff) << 16usize);
         }
     }
@@ -552,7 +523,6 @@ pub mod regs {
     pub struct Dbglockr(pub u32);
     impl Dbglockr {
         #[doc = "debug configuration lock Reading this bitfield returns 0x6A if the bitfield value is different from 0xB4. 0xC3 is the recommended value to lock the debug configuration using this bitfield. Other: Writes to SBS_DBGCR ignored"]
-        #[must_use]
         #[inline(always)]
         pub const fn dbgcfg_lock(&self) -> super::vals::DbgcfgLock {
             let val = (self.0 >> 0usize) & 0xff;
@@ -560,7 +530,7 @@ pub mod regs {
         }
         #[doc = "debug configuration lock Reading this bitfield returns 0x6A if the bitfield value is different from 0xB4. 0xC3 is the recommended value to lock the debug configuration using this bitfield. Other: Writes to SBS_DBGCR ignored"]
         #[inline(always)]
-        pub const fn set_dbgcfg_lock(&mut self, val: super::vals::DbgcfgLock) {
+        pub fn set_dbgcfg_lock(&mut self, val: super::vals::DbgcfgLock) {
             self.0 = (self.0 & !(0xff << 0usize)) | (((val.to_bits() as u32) & 0xff) << 0usize);
         }
     }
@@ -589,7 +559,6 @@ pub mod regs {
     pub struct Eccnmir(pub u32);
     impl Eccnmir {
         #[doc = "NMI behavior setup when a double ECC error occurs on flitf data part"]
-        #[must_use]
         #[inline(always)]
         pub const fn eccnmi_mask_en(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -597,7 +566,7 @@ pub mod regs {
         }
         #[doc = "NMI behavior setup when a double ECC error occurs on flitf data part"]
         #[inline(always)]
-        pub const fn set_eccnmi_mask_en(&mut self, val: bool) {
+        pub fn set_eccnmi_mask_en(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
     }
@@ -626,7 +595,6 @@ pub mod regs {
     pub struct Fpuimr(pub u32);
     impl Fpuimr {
         #[doc = "FPU interrupt enable Set and cleared by software to enable the Cortex-M33 FPU interrupts FPU_IE\\[5\\]: inexact interrupt enable (interrupt disabled at reset) FPU_IE\\[4\\]: input abnormal interrupt enable FPU_IE\\[3\\]: overflow interrupt enable FPU_IE\\[2\\]: underflow interrupt enable FPU_IE\\[1\\]: divide-by-zero interrupt enable FPU_IE\\[0\\]: invalid operation interrupt enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn fpu_ie(&self) -> u8 {
             let val = (self.0 >> 0usize) & 0x3f;
@@ -634,7 +602,7 @@ pub mod regs {
         }
         #[doc = "FPU interrupt enable Set and cleared by software to enable the Cortex-M33 FPU interrupts FPU_IE\\[5\\]: inexact interrupt enable (interrupt disabled at reset) FPU_IE\\[4\\]: input abnormal interrupt enable FPU_IE\\[3\\]: overflow interrupt enable FPU_IE\\[2\\]: underflow interrupt enable FPU_IE\\[1\\]: divide-by-zero interrupt enable FPU_IE\\[0\\]: invalid operation interrupt enable"]
         #[inline(always)]
-        pub const fn set_fpu_ie(&mut self, val: u8) {
+        pub fn set_fpu_ie(&mut self, val: u8) {
             self.0 = (self.0 & !(0x3f << 0usize)) | (((val as u32) & 0x3f) << 0usize);
         }
     }
@@ -661,7 +629,6 @@ pub mod regs {
     pub struct Hdplcr(pub u32);
     impl Hdplcr {
         #[doc = "increment HDPL value Other: all other values allow a HDPL level increment."]
-        #[must_use]
         #[inline(always)]
         pub const fn incr_hdpl(&self) -> super::vals::IncrHdpl {
             let val = (self.0 >> 0usize) & 0xff;
@@ -669,7 +636,7 @@ pub mod regs {
         }
         #[doc = "increment HDPL value Other: all other values allow a HDPL level increment."]
         #[inline(always)]
-        pub const fn set_incr_hdpl(&mut self, val: super::vals::IncrHdpl) {
+        pub fn set_incr_hdpl(&mut self, val: super::vals::IncrHdpl) {
             self.0 = (self.0 & !(0xff << 0usize)) | (((val.to_bits() as u32) & 0xff) << 0usize);
         }
     }
@@ -696,7 +663,6 @@ pub mod regs {
     pub struct Hdplsr(pub u32);
     impl Hdplsr {
         #[doc = "temporal isolation level This bitfield returns the current temporal isolation level."]
-        #[must_use]
         #[inline(always)]
         pub const fn hdpl(&self) -> super::vals::Hdpl {
             let val = (self.0 >> 0usize) & 0xff;
@@ -704,7 +670,7 @@ pub mod regs {
         }
         #[doc = "temporal isolation level This bitfield returns the current temporal isolation level."]
         #[inline(always)]
-        pub const fn set_hdpl(&mut self, val: super::vals::Hdpl) {
+        pub fn set_hdpl(&mut self, val: super::vals::Hdpl) {
             self.0 = (self.0 & !(0xff << 0usize)) | (((val.to_bits() as u32) & 0xff) << 0usize);
         }
     }
@@ -731,7 +697,6 @@ pub mod regs {
     pub struct Mesr(pub u32);
     impl Mesr {
         #[doc = "erase after reset status This bit shows the status of the protection for SRAM2, BKPRAM, ICACHE, ICACHE. It is set by hardware and reset by software"]
-        #[must_use]
         #[inline(always)]
         pub const fn mclr(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -739,11 +704,10 @@ pub mod regs {
         }
         #[doc = "erase after reset status This bit shows the status of the protection for SRAM2, BKPRAM, ICACHE, ICACHE. It is set by hardware and reset by software"]
         #[inline(always)]
-        pub const fn set_mclr(&mut self, val: bool) {
+        pub fn set_mclr(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "end-of-erase status for ICACHE This bit shows the status of the protection for ICACHE. It is set by hardware and reset by software."]
-        #[must_use]
         #[inline(always)]
         pub const fn ipmee(&self) -> bool {
             let val = (self.0 >> 16usize) & 0x01;
@@ -751,7 +715,7 @@ pub mod regs {
         }
         #[doc = "end-of-erase status for ICACHE This bit shows the status of the protection for ICACHE. It is set by hardware and reset by software."]
         #[inline(always)]
-        pub const fn set_ipmee(&mut self, val: bool) {
+        pub fn set_ipmee(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
         }
     }
@@ -786,7 +750,6 @@ pub mod regs {
     pub struct Pmcr(pub u32);
     impl Pmcr {
         #[doc = "booster enable Set this bit to reduce the total harmonic distortion of the analog switch when the processor supply is below 2.7 V. The booster can be activated to guaranty AC performance on analog switch when the supply is below 2.7 V. When the booster is activated, the analog switch performances are the same as with the full voltage range."]
-        #[must_use]
         #[inline(always)]
         pub const fn boosten(&self) -> bool {
             let val = (self.0 >> 8usize) & 0x01;
@@ -794,11 +757,10 @@ pub mod regs {
         }
         #[doc = "booster enable Set this bit to reduce the total harmonic distortion of the analog switch when the processor supply is below 2.7 V. The booster can be activated to guaranty AC performance on analog switch when the supply is below 2.7 V. When the booster is activated, the analog switch performances are the same as with the full voltage range."]
         #[inline(always)]
-        pub const fn set_boosten(&mut self, val: bool) {
+        pub fn set_boosten(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
         }
         #[doc = "booster V<sub>DD</sub> selection Note: Booster must not be used when V<sub>DDA</sub> < 2.7 V, but V<sub>DD</sub> > 2.7 V (add current consumption). Note: When both V<sub>DD</sub> < 2.7 V and V<sub>DDA</sub> < 2.7 V, booster is needed to get full AC performances from I/O analog switches."]
-        #[must_use]
         #[inline(always)]
         pub const fn boostvddsel(&self) -> bool {
             let val = (self.0 >> 9usize) & 0x01;
@@ -806,11 +768,10 @@ pub mod regs {
         }
         #[doc = "booster V<sub>DD</sub> selection Note: Booster must not be used when V<sub>DDA</sub> < 2.7 V, but V<sub>DD</sub> > 2.7 V (add current consumption). Note: When both V<sub>DD</sub> < 2.7 V and V<sub>DDA</sub> < 2.7 V, booster is needed to get full AC performances from I/O analog switches."]
         #[inline(always)]
-        pub const fn set_boostvddsel(&mut self, val: bool) {
+        pub fn set_boostvddsel(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
         }
         #[doc = "Fast-mode Plus command on PB(6)"]
-        #[must_use]
         #[inline(always)]
         pub const fn pb6_fmplus(&self) -> bool {
             let val = (self.0 >> 16usize) & 0x01;
@@ -818,11 +779,10 @@ pub mod regs {
         }
         #[doc = "Fast-mode Plus command on PB(6)"]
         #[inline(always)]
-        pub const fn set_pb6_fmplus(&mut self, val: bool) {
+        pub fn set_pb6_fmplus(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
         }
         #[doc = "Fast-mode Plus command on PB(7)"]
-        #[must_use]
         #[inline(always)]
         pub const fn pb7_fmplus(&self) -> bool {
             let val = (self.0 >> 17usize) & 0x01;
@@ -830,11 +790,10 @@ pub mod regs {
         }
         #[doc = "Fast-mode Plus command on PB(7)"]
         #[inline(always)]
-        pub const fn set_pb7_fmplus(&mut self, val: bool) {
+        pub fn set_pb7_fmplus(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
         }
         #[doc = "Fast-mode Plus command on PB(8)"]
-        #[must_use]
         #[inline(always)]
         pub const fn pb8_fmplus(&self) -> bool {
             let val = (self.0 >> 18usize) & 0x01;
@@ -842,7 +801,7 @@ pub mod regs {
         }
         #[doc = "Fast-mode Plus command on PB(8)"]
         #[inline(always)]
-        pub const fn set_pb8_fmplus(&mut self, val: bool) {
+        pub fn set_pb8_fmplus(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
         }
     }
@@ -866,15 +825,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Pmcr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Pmcr {{ boosten: {=bool:?}, boostvddsel: {=bool:?}, pb6_fmplus: {=bool:?}, pb7_fmplus: {=bool:?}, pb8_fmplus: {=bool:?} }}",
-                self.boosten(),
-                self.boostvddsel(),
-                self.pb6_fmplus(),
-                self.pb7_fmplus(),
-                self.pb8_fmplus()
-            )
+            defmt :: write ! (f , "Pmcr {{ boosten: {=bool:?}, boostvddsel: {=bool:?}, pb6_fmplus: {=bool:?}, pb7_fmplus: {=bool:?}, pb8_fmplus: {=bool:?} }}" , self . boosten () , self . boostvddsel () , self . pb6_fmplus () , self . pb7_fmplus () , self . pb8_fmplus ())
         }
     }
 }
@@ -884,9 +835,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Cs {
         #[doc = "Code from the cell (available in SBS_CCVR)"]
-        Cell = 0x0,
+        CELL = 0x0,
         #[doc = "Code from SBS_CCCR"]
-        Software = 0x01,
+        SOFTWARE = 0x01,
     }
     impl Cs {
         #[inline(always)]
@@ -915,11 +866,11 @@ pub mod vals {
     pub struct DbgAuthHdpl(u8);
     impl DbgAuthHdpl {
         #[doc = "HDPL1"]
-        pub const B0x51: Self = Self(0x51);
+        pub const B_0X51: Self = Self(0x51);
         #[doc = "HDPL3"]
-        pub const B0x6f: Self = Self(0x6f);
+        pub const B_0X6F: Self = Self(0x6f);
         #[doc = "HDPL2"]
-        pub const B0x8a: Self = Self(0x8a);
+        pub const B_0X8A: Self = Self(0x8a);
     }
     impl DbgAuthHdpl {
         pub const fn from_bits(val: u8) -> DbgAuthHdpl {
@@ -932,9 +883,9 @@ pub mod vals {
     impl core::fmt::Debug for DbgAuthHdpl {
         fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
             match self.0 {
-                0x51 => f.write_str("B0x51"),
-                0x6f => f.write_str("B0x6f"),
-                0x8a => f.write_str("B0x8a"),
+                0x51 => f.write_str("B_0X51"),
+                0x6f => f.write_str("B_0X6F"),
+                0x8a => f.write_str("B_0X8A"),
                 other => core::write!(f, "0x{:02X}", other),
             }
         }
@@ -943,9 +894,9 @@ pub mod vals {
     impl defmt::Format for DbgAuthHdpl {
         fn format(&self, f: defmt::Formatter) {
             match self.0 {
-                0x51 => defmt::write!(f, "B0x51"),
-                0x6f => defmt::write!(f, "B0x6f"),
-                0x8a => defmt::write!(f, "B0x8a"),
+                0x51 => defmt::write!(f, "B_0X51"),
+                0x6f => defmt::write!(f, "B_0X6F"),
+                0x8a => defmt::write!(f, "B_0X8A"),
                 other => defmt::write!(f, "0x{:02X}", other),
             }
         }
@@ -967,7 +918,7 @@ pub mod vals {
     pub struct DbgcfgLock(u8);
     impl DbgcfgLock {
         #[doc = "Writes to SBS_DBGCR allowed (default)"]
-        pub const B0xB4: Self = Self(0xb4);
+        pub const B_0X_B4: Self = Self(0xb4);
     }
     impl DbgcfgLock {
         pub const fn from_bits(val: u8) -> DbgcfgLock {
@@ -980,7 +931,7 @@ pub mod vals {
     impl core::fmt::Debug for DbgcfgLock {
         fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
             match self.0 {
-                0xb4 => f.write_str("B0xB4"),
+                0xb4 => f.write_str("B_0X_B4"),
                 other => core::write!(f, "0x{:02X}", other),
             }
         }
@@ -989,7 +940,7 @@ pub mod vals {
     impl defmt::Format for DbgcfgLock {
         fn format(&self, f: defmt::Formatter) {
             match self.0 {
-                0xb4 => defmt::write!(f, "B0xB4"),
+                0xb4 => defmt::write!(f, "B_0X_B4"),
                 other => defmt::write!(f, "0x{:02X}", other),
             }
         }
@@ -1011,13 +962,13 @@ pub mod vals {
     pub struct Hdpl(u8);
     impl Hdpl {
         #[doc = "HDPL1, iRoT"]
-        pub const B0x51: Self = Self(0x51);
+        pub const B_0X51: Self = Self(0x51);
         #[doc = "HDPL3, application"]
-        pub const B0x6f: Self = Self(0x6f);
+        pub const B_0X6F: Self = Self(0x6f);
         #[doc = "HDPL2, uRoT"]
-        pub const B0x8a: Self = Self(0x8a);
+        pub const B_0X8A: Self = Self(0x8a);
         #[doc = "HDPL0, RSS"]
-        pub const B0xB4: Self = Self(0xb4);
+        pub const B_0X_B4: Self = Self(0xb4);
     }
     impl Hdpl {
         pub const fn from_bits(val: u8) -> Hdpl {
@@ -1030,10 +981,10 @@ pub mod vals {
     impl core::fmt::Debug for Hdpl {
         fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
             match self.0 {
-                0x51 => f.write_str("B0x51"),
-                0x6f => f.write_str("B0x6f"),
-                0x8a => f.write_str("B0x8a"),
-                0xb4 => f.write_str("B0xB4"),
+                0x51 => f.write_str("B_0X51"),
+                0x6f => f.write_str("B_0X6F"),
+                0x8a => f.write_str("B_0X8A"),
+                0xb4 => f.write_str("B_0X_B4"),
                 other => core::write!(f, "0x{:02X}", other),
             }
         }
@@ -1042,10 +993,10 @@ pub mod vals {
     impl defmt::Format for Hdpl {
         fn format(&self, f: defmt::Formatter) {
             match self.0 {
-                0x51 => defmt::write!(f, "B0x51"),
-                0x6f => defmt::write!(f, "B0x6f"),
-                0x8a => defmt::write!(f, "B0x8a"),
-                0xb4 => defmt::write!(f, "B0xB4"),
+                0x51 => defmt::write!(f, "B_0X51"),
+                0x6f => defmt::write!(f, "B_0X6F"),
+                0x8a => defmt::write!(f, "B_0X8A"),
+                0xb4 => defmt::write!(f, "B_0X_B4"),
                 other => defmt::write!(f, "0x{:02X}", other),
             }
         }
@@ -1067,9 +1018,9 @@ pub mod vals {
     pub struct IncrHdpl(u8);
     impl IncrHdpl {
         #[doc = "recommended value to increment HDPL level by one"]
-        pub const B0x6a: Self = Self(0x6a);
+        pub const B_0X6A: Self = Self(0x6a);
         #[doc = "no increment"]
-        pub const B0xB4: Self = Self(0xb4);
+        pub const B_0X_B4: Self = Self(0xb4);
     }
     impl IncrHdpl {
         pub const fn from_bits(val: u8) -> IncrHdpl {
@@ -1082,8 +1033,8 @@ pub mod vals {
     impl core::fmt::Debug for IncrHdpl {
         fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
             match self.0 {
-                0x6a => f.write_str("B0x6a"),
-                0xb4 => f.write_str("B0xB4"),
+                0x6a => f.write_str("B_0X6A"),
+                0xb4 => f.write_str("B_0X_B4"),
                 other => core::write!(f, "0x{:02X}", other),
             }
         }
@@ -1092,8 +1043,8 @@ pub mod vals {
     impl defmt::Format for IncrHdpl {
         fn format(&self, f: defmt::Formatter) {
             match self.0 {
-                0x6a => defmt::write!(f, "B0x6a"),
-                0xb4 => defmt::write!(f, "B0xB4"),
+                0x6a => defmt::write!(f, "B_0X6A"),
+                0xb4 => defmt::write!(f, "B_0X_B4"),
                 other => defmt::write!(f, "0x{:02X}", other),
             }
         }

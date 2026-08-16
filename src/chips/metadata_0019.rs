@@ -1036,10 +1036,6 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
                 interrupt: "RTC",
             },
             PeripheralInterrupt {
-                signal: "TIMESTAMP",
-                interrupt: "RTC",
-            },
-            PeripheralInterrupt {
                 signal: "WKUP",
                 interrupt: "RTC",
             },
@@ -1921,18 +1917,6 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
                 interrupt: "TIM14",
             },
             PeripheralInterrupt {
-                signal: "DIR",
-                interrupt: "TIM14",
-            },
-            PeripheralInterrupt {
-                signal: "ER",
-                interrupt: "TIM14",
-            },
-            PeripheralInterrupt {
-                signal: "IDX",
-                interrupt: "TIM14",
-            },
-            PeripheralInterrupt {
                 signal: "TRG",
                 interrupt: "TIM14",
             },
@@ -2086,18 +2070,6 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
                 interrupt: "TIM15",
             },
             PeripheralInterrupt {
-                signal: "DIR",
-                interrupt: "TIM15",
-            },
-            PeripheralInterrupt {
-                signal: "ER",
-                interrupt: "TIM15",
-            },
-            PeripheralInterrupt {
-                signal: "IDX",
-                interrupt: "TIM15",
-            },
-            PeripheralInterrupt {
                 signal: "TRG",
                 interrupt: "TIM15",
             },
@@ -2218,18 +2190,6 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
                 interrupt: "TIM16",
             },
             PeripheralInterrupt {
-                signal: "DIR",
-                interrupt: "TIM16",
-            },
-            PeripheralInterrupt {
-                signal: "ER",
-                interrupt: "TIM16",
-            },
-            PeripheralInterrupt {
-                signal: "IDX",
-                interrupt: "TIM16",
-            },
-            PeripheralInterrupt {
                 signal: "TRG",
                 interrupt: "TIM16",
             },
@@ -2347,18 +2307,6 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
             },
             PeripheralInterrupt {
                 signal: "COM",
-                interrupt: "TIM17",
-            },
-            PeripheralInterrupt {
-                signal: "DIR",
-                interrupt: "TIM17",
-            },
-            PeripheralInterrupt {
-                signal: "ER",
-                interrupt: "TIM17",
-            },
-            PeripheralInterrupt {
-                signal: "IDX",
                 interrupt: "TIM17",
             },
             PeripheralInterrupt {
@@ -2543,18 +2491,6 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
             },
             PeripheralInterrupt {
                 signal: "COM",
-                interrupt: "TIM2",
-            },
-            PeripheralInterrupt {
-                signal: "DIR",
-                interrupt: "TIM2",
-            },
-            PeripheralInterrupt {
-                signal: "ER",
-                interrupt: "TIM2",
-            },
-            PeripheralInterrupt {
-                signal: "IDX",
                 interrupt: "TIM2",
             },
             PeripheralInterrupt {
@@ -2792,18 +2728,6 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
                 interrupt: "TIM3",
             },
             PeripheralInterrupt {
-                signal: "DIR",
-                interrupt: "TIM3",
-            },
-            PeripheralInterrupt {
-                signal: "ER",
-                interrupt: "TIM3",
-            },
-            PeripheralInterrupt {
-                signal: "IDX",
-                interrupt: "TIM3",
-            },
-            PeripheralInterrupt {
                 signal: "TRG",
                 interrupt: "TIM3",
             },
@@ -2812,22 +2736,6 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
                 interrupt: "TIM3",
             },
         ],
-        afio: None,
-    },
-    Peripheral {
-        name: "TS_CAL1",
-        address: 0x1fff7568,
-        registers: Some(PeripheralRegisters {
-            kind: "tscal",
-            version: "v1",
-            block: "TSCAL",
-            ir: &tscal::REGISTERS,
-        }),
-        rcc: None,
-        pins: &[],
-        dma_channels: &[],
-        triggers: &[],
-        interrupts: &[],
         afio: None,
     },
     Peripheral {
@@ -3702,7 +3610,6 @@ pub(crate) static DMA_CHANNELS: &[DmaChannel] = &[
         channel: 0,
         dmamux: Some("DMAMUX1"),
         dmamux_channel: Some(0),
-        supports_2d: None,
     },
     DmaChannel {
         name: "DMA1_CH2",
@@ -3710,7 +3617,6 @@ pub(crate) static DMA_CHANNELS: &[DmaChannel] = &[
         channel: 1,
         dmamux: Some("DMAMUX1"),
         dmamux_channel: Some(1),
-        supports_2d: None,
     },
     DmaChannel {
         name: "DMA1_CH3",
@@ -3718,7 +3624,6 @@ pub(crate) static DMA_CHANNELS: &[DmaChannel] = &[
         channel: 2,
         dmamux: Some("DMAMUX1"),
         dmamux_channel: Some(2),
-        supports_2d: None,
     },
     DmaChannel {
         name: "DMA1_CH4",
@@ -3726,7 +3631,6 @@ pub(crate) static DMA_CHANNELS: &[DmaChannel] = &[
         channel: 3,
         dmamux: Some("DMAMUX1"),
         dmamux_channel: Some(3),
-        supports_2d: None,
     },
     DmaChannel {
         name: "DMA1_CH5",
@@ -3734,7 +3638,6 @@ pub(crate) static DMA_CHANNELS: &[DmaChannel] = &[
         channel: 4,
         dmamux: Some("DMAMUX1"),
         dmamux_channel: Some(4),
-        supports_2d: None,
     },
     DmaChannel {
         name: "DMA1_CH6",
@@ -3742,7 +3645,6 @@ pub(crate) static DMA_CHANNELS: &[DmaChannel] = &[
         channel: 5,
         dmamux: Some("DMAMUX1"),
         dmamux_channel: Some(5),
-        supports_2d: None,
     },
     DmaChannel {
         name: "DMA1_CH7",
@@ -3750,7 +3652,6 @@ pub(crate) static DMA_CHANNELS: &[DmaChannel] = &[
         channel: 6,
         dmamux: Some("DMAMUX1"),
         dmamux_channel: Some(6),
-        supports_2d: None,
     },
 ];
 pub(crate) static PINS: &[Pin] = &[
@@ -3850,8 +3751,6 @@ pub mod spi;
 pub mod syscfg;
 #[path = "../registers/timer_v3.rs"]
 pub mod timer;
-#[path = "../registers/tscal_v1.rs"]
-pub mod tscal;
 #[path = "../registers/uid_v1.rs"]
 pub mod uid;
 #[path = "../registers/usart_v4.rs"]

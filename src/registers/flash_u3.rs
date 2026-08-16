@@ -392,14 +392,14 @@ pub(crate) static REGISTERS: IR = IR {
                 }),
             },
             BlockItem {
-                name: "sechdp_ex_tr",
+                name: "sechdpex_tr",
                 description: Some("FLASH HDP extension register."),
                 array: None,
                 byte_offset: 0xc8,
                 inner: BlockItemInner::Register(Register {
                     access: Access::ReadWrite,
                     bit_size: 32,
-                    fieldset: Some("SechdpExTr"),
+                    fieldset: Some("SechdpexTr"),
                 }),
             },
             BlockItem {
@@ -5665,30 +5665,6 @@ pub(crate) static REGISTERS: IR = IR {
             ],
         },
         FieldSet {
-            name: "SechdpExTr",
-            extends: None,
-            description: Some("FLASH HDP extension register."),
-            bit_size: 32,
-            fields: &[
-                Field {
-                    name: "hdp1_ex_t",
-                    description: Some("HDP area extension in 4-Kbyte pages in bank 1."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 0 }),
-                    bit_size: 8,
-                    array: None,
-                    enumm: None,
-                },
-                Field {
-                    name: "hdp2_ex_t",
-                    description: Some("HDP area extension in 4-Kbyte pages in bank 2."),
-                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 16 }),
-                    bit_size: 8,
-                    array: None,
-                    enumm: None,
-                },
-            ],
-        },
-        FieldSet {
             name: "Sechdpcr",
             extends: None,
             description: Some("FLASH secure HDP control register."),
@@ -5722,6 +5698,30 @@ pub(crate) static REGISTERS: IR = IR {
                     name: "hdp2ex_t_accdis",
                     description: Some("HDP2 extension area access disable."),
                     bit_offset: BitOffset::Regular(RegularBitOffset { offset: 24 }),
+                    bit_size: 8,
+                    array: None,
+                    enumm: None,
+                },
+            ],
+        },
+        FieldSet {
+            name: "SechdpexTr",
+            extends: None,
+            description: Some("FLASH HDP extension register."),
+            bit_size: 32,
+            fields: &[
+                Field {
+                    name: "hdp1_ex_t",
+                    description: Some("HDP area extension in 4-Kbyte pages in bank 1."),
+                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 0 }),
+                    bit_size: 8,
+                    array: None,
+                    enumm: None,
+                },
+                Field {
+                    name: "hdp2_ex_t",
+                    description: Some("HDP area extension in 4-Kbyte pages in bank 2."),
+                    bit_offset: BitOffset::Regular(RegularBitOffset { offset: 16 }),
                     bit_size: 8,
                     array: None,
                     enumm: None,
@@ -6174,27 +6174,27 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 3,
             variants: &[
                 EnumVariant {
-                    name: "Level0",
+                    name: "LEVEL0",
                     description: Some("BOR level 0 (reset level threshold around 1."),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "Level1",
+                    name: "LEVEL1",
                     description: Some("BOR level 1 (reset level threshold around 2."),
                     value: 1,
                 },
                 EnumVariant {
-                    name: "Level2",
+                    name: "LEVEL2",
                     description: Some("BOR level 2 (reset level threshold around 2."),
                     value: 2,
                 },
                 EnumVariant {
-                    name: "Level3",
+                    name: "LEVEL3",
                     description: Some("BOR level 3 (reset level threshold around 2."),
                     value: 3,
                 },
                 EnumVariant {
-                    name: "Level4",
+                    name: "LEVEL4",
                     description: Some("BOR level 4 (reset level threshold around 2."),
                     value: 4,
                 },
@@ -6206,39 +6206,39 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 3,
             variants: &[
                 EnumVariant {
-                    name: "BankEraseInt",
-                    description: Some("Bank erase operation interrupted."),
-                    value: 4,
-                },
-                EnumVariant {
-                    name: "BurstWrInt",
-                    description: Some("Burst write operation interrupted."),
-                    value: 2,
-                },
-                EnumVariant {
-                    name: "MassEraseInt",
-                    description: Some("Mass erase operation interrupted."),
-                    value: 5,
-                },
-                EnumVariant {
-                    name: "NoFlashInt",
+                    name: "NO_FLASH_INT",
                     description: Some("No flash operation interrupted by previous reset."),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "OptChangeInt",
-                    description: Some("Option change operation interrupted."),
-                    value: 6,
+                    name: "SINGLE_WR_INT",
+                    description: Some("Single write operation interrupted."),
+                    value: 1,
                 },
                 EnumVariant {
-                    name: "PgEraseInt",
+                    name: "BURST_WR_INT",
+                    description: Some("Burst write operation interrupted."),
+                    value: 2,
+                },
+                EnumVariant {
+                    name: "PG_ERASE_INT",
                     description: Some("Page erase operation interrupted."),
                     value: 3,
                 },
                 EnumVariant {
-                    name: "SingleWrInt",
-                    description: Some("Single write operation interrupted."),
-                    value: 1,
+                    name: "BANK_ERASE_INT",
+                    description: Some("Bank erase operation interrupted."),
+                    value: 4,
+                },
+                EnumVariant {
+                    name: "MASS_ERASE_INT",
+                    description: Some("Mass erase operation interrupted."),
+                    value: 5,
+                },
+                EnumVariant {
+                    name: "OPT_CHANGE_INT",
+                    description: Some("Option change operation interrupted."),
+                    value: 6,
                 },
             ],
         },
@@ -6248,17 +6248,17 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 8,
             variants: &[
                 EnumVariant {
-                    name: "Level0",
+                    name: "LEVEL0",
                     description: Some("Level 0."),
                     value: 85,
                 },
                 EnumVariant {
-                    name: "Level0roProtActive",
+                    name: "LEVEL0ROPROT_ACTIVE",
                     description: Some("Level 0 (readout protection not active)."),
                     value: 170,
                 },
                 EnumVariant {
-                    name: "Level2",
+                    name: "LEVEL2",
                     description: Some("Level 2 (chip readout protection active)."),
                     value: 204,
                 },

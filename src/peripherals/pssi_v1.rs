@@ -22,37 +22,37 @@ impl Pssi {
     #[doc = "PSSI control register."]
     #[inline(always)]
     pub const fn cr(self) -> crate::common::Reg<regs::Cr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0usize) as _) }
     }
     #[doc = "PSSI status register."]
     #[inline(always)]
     pub const fn sr(self) -> crate::common::Reg<regs::Sr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x04usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x04usize) as _) }
     }
     #[doc = "PSSI raw interrupt status register."]
     #[inline(always)]
     pub const fn ris(self) -> crate::common::Reg<regs::Ris, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x08usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x08usize) as _) }
     }
     #[doc = "PSSI interrupt enable register."]
     #[inline(always)]
     pub const fn ier(self) -> crate::common::Reg<regs::Ier, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0cusize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0cusize) as _) }
     }
     #[doc = "PSSI masked interrupt status register."]
     #[inline(always)]
     pub const fn mis(self) -> crate::common::Reg<regs::Mis, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x10usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x10usize) as _) }
     }
     #[doc = "PSSI interrupt clear register."]
     #[inline(always)]
     pub const fn icr(self) -> crate::common::Reg<regs::Icr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x14usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x14usize) as _) }
     }
     #[doc = "PSSI data register."]
     #[inline(always)]
     pub const fn dr(self) -> crate::common::Reg<regs::Dr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x28usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x28usize) as _) }
     }
 }
 pub mod regs {
@@ -62,7 +62,6 @@ pub mod regs {
     pub struct Cr(pub u32);
     impl Cr {
         #[doc = "Parallel data clock polarity This bit configures the capture edge of the parallel clock or the edge used for driving outputs, depending on OUTEN."]
-        #[must_use]
         #[inline(always)]
         pub const fn ckpol(&self) -> super::vals::Ckpol {
             let val = (self.0 >> 5usize) & 0x01;
@@ -70,11 +69,10 @@ pub mod regs {
         }
         #[doc = "Parallel data clock polarity This bit configures the capture edge of the parallel clock or the edge used for driving outputs, depending on OUTEN."]
         #[inline(always)]
-        pub const fn set_ckpol(&mut self, val: super::vals::Ckpol) {
+        pub fn set_ckpol(&mut self, val: super::vals::Ckpol) {
             self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
         }
         #[doc = "Data enable (PSSI_DE) polarity This bit indicates the level on the PSSI_DE pin when the data are not valid on the parallel interface."]
-        #[must_use]
         #[inline(always)]
         pub const fn depol(&self) -> super::vals::Depol {
             let val = (self.0 >> 6usize) & 0x01;
@@ -82,11 +80,10 @@ pub mod regs {
         }
         #[doc = "Data enable (PSSI_DE) polarity This bit indicates the level on the PSSI_DE pin when the data are not valid on the parallel interface."]
         #[inline(always)]
-        pub const fn set_depol(&mut self, val: super::vals::Depol) {
+        pub fn set_depol(&mut self, val: super::vals::Depol) {
             self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
         }
         #[doc = "Ready (PSSI_RDY) polarity This bit indicates the level on the PSSI_RDY pin when the data are not valid on the parallel interface."]
-        #[must_use]
         #[inline(always)]
         pub const fn rdypol(&self) -> super::vals::Rdypol {
             let val = (self.0 >> 8usize) & 0x01;
@@ -94,11 +91,10 @@ pub mod regs {
         }
         #[doc = "Ready (PSSI_RDY) polarity This bit indicates the level on the PSSI_RDY pin when the data are not valid on the parallel interface."]
         #[inline(always)]
-        pub const fn set_rdypol(&mut self, val: super::vals::Rdypol) {
+        pub fn set_rdypol(&mut self, val: super::vals::Rdypol) {
             self.0 = (self.0 & !(0x01 << 8usize)) | (((val.to_bits() as u32) & 0x01) << 8usize);
         }
         #[doc = "Extended data mode."]
-        #[must_use]
         #[inline(always)]
         pub const fn edm(&self) -> super::vals::Edm {
             let val = (self.0 >> 10usize) & 0x03;
@@ -106,11 +102,10 @@ pub mod regs {
         }
         #[doc = "Extended data mode."]
         #[inline(always)]
-        pub const fn set_edm(&mut self, val: super::vals::Edm) {
+        pub fn set_edm(&mut self, val: super::vals::Edm) {
             self.0 = (self.0 & !(0x03 << 10usize)) | (((val.to_bits() as u32) & 0x03) << 10usize);
         }
         #[doc = "PSSI enable The contents of the FIFO are flushed when ENABLE is cleared to 0. Note: When ENABLE=1, the content of PSSI_CR must not be changed, except for the ENABLE bit itself. All configuration bits can change as soon as ENABLE changes from 0 to 1. The DMA controller and all PSSI configuration registers must be programmed correctly before setting the ENABLE bit to 1. The ENABLE bit and the DCMI ENABLE bit (bit 15 of DCMI_CR) must not be set to 1 at the same time."]
-        #[must_use]
         #[inline(always)]
         pub const fn enable(&self) -> bool {
             let val = (self.0 >> 14usize) & 0x01;
@@ -118,11 +113,10 @@ pub mod regs {
         }
         #[doc = "PSSI enable The contents of the FIFO are flushed when ENABLE is cleared to 0. Note: When ENABLE=1, the content of PSSI_CR must not be changed, except for the ENABLE bit itself. All configuration bits can change as soon as ENABLE changes from 0 to 1. The DMA controller and all PSSI configuration registers must be programmed correctly before setting the ENABLE bit to 1. The ENABLE bit and the DCMI ENABLE bit (bit 15 of DCMI_CR) must not be set to 1 at the same time."]
         #[inline(always)]
-        pub const fn set_enable(&mut self, val: bool) {
+        pub fn set_enable(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
         }
         #[doc = "Data enable and ready configuration When the PSSI_RDY function is mapped to the PSSI_DE pin (settings 101 or 111), it is still the RDYPOL bit which determines its polarity. Similarly, when the PSSI_DE function is mapped to the PSSI_RDY pin (settings 110 or 111), it is still the DEPOL bit which determines its polarity."]
-        #[must_use]
         #[inline(always)]
         pub const fn derdycfg(&self) -> super::vals::Derdycfg {
             let val = (self.0 >> 18usize) & 0x07;
@@ -130,11 +124,10 @@ pub mod regs {
         }
         #[doc = "Data enable and ready configuration When the PSSI_RDY function is mapped to the PSSI_DE pin (settings 101 or 111), it is still the RDYPOL bit which determines its polarity. Similarly, when the PSSI_DE function is mapped to the PSSI_RDY pin (settings 110 or 111), it is still the DEPOL bit which determines its polarity."]
         #[inline(always)]
-        pub const fn set_derdycfg(&mut self, val: super::vals::Derdycfg) {
+        pub fn set_derdycfg(&mut self, val: super::vals::Derdycfg) {
             self.0 = (self.0 & !(0x07 << 18usize)) | (((val.to_bits() as u32) & 0x07) << 18usize);
         }
         #[doc = "DMA enable bit."]
-        #[must_use]
         #[inline(always)]
         pub const fn dmaen(&self) -> bool {
             let val = (self.0 >> 30usize) & 0x01;
@@ -142,11 +135,10 @@ pub mod regs {
         }
         #[doc = "DMA enable bit."]
         #[inline(always)]
-        pub const fn set_dmaen(&mut self, val: bool) {
+        pub fn set_dmaen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
         }
         #[doc = "Data direction selection bit."]
-        #[must_use]
         #[inline(always)]
         pub const fn outen(&self) -> super::vals::Outen {
             let val = (self.0 >> 31usize) & 0x01;
@@ -154,7 +146,7 @@ pub mod regs {
         }
         #[doc = "Data direction selection bit."]
         #[inline(always)]
-        pub const fn set_outen(&mut self, val: super::vals::Outen) {
+        pub fn set_outen(&mut self, val: super::vals::Outen) {
             self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
         }
     }
@@ -181,18 +173,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Cr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Cr {{ ckpol: {:?}, depol: {:?}, rdypol: {:?}, edm: {:?}, enable: {=bool:?}, derdycfg: {:?}, dmaen: {=bool:?}, outen: {:?} }}",
-                self.ckpol(),
-                self.depol(),
-                self.rdypol(),
-                self.edm(),
-                self.enable(),
-                self.derdycfg(),
-                self.dmaen(),
-                self.outen()
-            )
+            defmt :: write ! (f , "Cr {{ ckpol: {:?}, depol: {:?}, rdypol: {:?}, edm: {:?}, enable: {=bool:?}, derdycfg: {:?}, dmaen: {=bool:?}, outen: {:?} }}" , self . ckpol () , self . depol () , self . rdypol () , self . edm () , self . enable () , self . derdycfg () , self . dmaen () , self . outen ())
         }
     }
     #[doc = "PSSI data register."]
@@ -201,7 +182,6 @@ pub mod regs {
     pub struct Dr(pub u32);
     impl Dr {
         #[doc = "Data byte 0."]
-        #[must_use]
         #[inline(always)]
         pub const fn byte(&self, n: usize) -> u8 {
             assert!(n < 4usize);
@@ -211,7 +191,7 @@ pub mod regs {
         }
         #[doc = "Data byte 0."]
         #[inline(always)]
-        pub const fn set_byte(&mut self, n: usize, val: u8) {
+        pub fn set_byte(&mut self, n: usize, val: u8) {
             assert!(n < 4usize);
             let offs = 0usize + n * 8usize;
             self.0 = (self.0 & !(0xff << offs)) | (((val as u32) & 0xff) << offs);
@@ -252,7 +232,6 @@ pub mod regs {
     pub struct Icr(pub u32);
     impl Icr {
         #[doc = "Data buffer overrun/underrun interrupt status clear Writing this bit to 1 clears the OVR_RIS bit in PSSI_RIS."]
-        #[must_use]
         #[inline(always)]
         pub const fn ovr_isc(&self) -> bool {
             let val = (self.0 >> 1usize) & 0x01;
@@ -260,7 +239,7 @@ pub mod regs {
         }
         #[doc = "Data buffer overrun/underrun interrupt status clear Writing this bit to 1 clears the OVR_RIS bit in PSSI_RIS."]
         #[inline(always)]
-        pub const fn set_ovr_isc(&mut self, val: bool) {
+        pub fn set_ovr_isc(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
         }
     }
@@ -287,7 +266,6 @@ pub mod regs {
     pub struct Ier(pub u32);
     impl Ier {
         #[doc = "Data buffer overrun/underrun interrupt enable."]
-        #[must_use]
         #[inline(always)]
         pub const fn ovr_ie(&self) -> bool {
             let val = (self.0 >> 1usize) & 0x01;
@@ -295,7 +273,7 @@ pub mod regs {
         }
         #[doc = "Data buffer overrun/underrun interrupt enable."]
         #[inline(always)]
-        pub const fn set_ovr_ie(&mut self, val: bool) {
+        pub fn set_ovr_ie(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
         }
     }
@@ -322,7 +300,6 @@ pub mod regs {
     pub struct Mis(pub u32);
     impl Mis {
         #[doc = "Data buffer overrun/underrun masked interrupt status This bit is set to 1 only when PSSI_IER/OVR_IE and PSSI_RIS/OVR_RIS are both set to 1."]
-        #[must_use]
         #[inline(always)]
         pub const fn ovr_mis(&self) -> bool {
             let val = (self.0 >> 1usize) & 0x01;
@@ -330,7 +307,7 @@ pub mod regs {
         }
         #[doc = "Data buffer overrun/underrun masked interrupt status This bit is set to 1 only when PSSI_IER/OVR_IE and PSSI_RIS/OVR_RIS are both set to 1."]
         #[inline(always)]
-        pub const fn set_ovr_mis(&mut self, val: bool) {
+        pub fn set_ovr_mis(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
         }
     }
@@ -357,7 +334,6 @@ pub mod regs {
     pub struct Ris(pub u32);
     impl Ris {
         #[doc = "Data buffer overrun/underrun raw interrupt status This bit is cleared by writing a 1 to the OVR_ISC bit in PSSI_ICR."]
-        #[must_use]
         #[inline(always)]
         pub const fn ovr_ris(&self) -> bool {
             let val = (self.0 >> 1usize) & 0x01;
@@ -365,7 +341,7 @@ pub mod regs {
         }
         #[doc = "Data buffer overrun/underrun raw interrupt status This bit is cleared by writing a 1 to the OVR_ISC bit in PSSI_ICR."]
         #[inline(always)]
-        pub const fn set_ovr_ris(&mut self, val: bool) {
+        pub fn set_ovr_ris(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
         }
     }
@@ -392,7 +368,6 @@ pub mod regs {
     pub struct Sr(pub u32);
     impl Sr {
         #[doc = "FIFO is ready to transfer four bytes."]
-        #[must_use]
         #[inline(always)]
         pub const fn rtt4b(&self) -> bool {
             let val = (self.0 >> 2usize) & 0x01;
@@ -400,11 +375,10 @@ pub mod regs {
         }
         #[doc = "FIFO is ready to transfer four bytes."]
         #[inline(always)]
-        pub const fn set_rtt4b(&mut self, val: bool) {
+        pub fn set_rtt4b(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
         }
         #[doc = "FIFO is ready to transfer one byte."]
-        #[must_use]
         #[inline(always)]
         pub const fn rtt1b(&self) -> bool {
             let val = (self.0 >> 3usize) & 0x01;
@@ -412,7 +386,7 @@ pub mod regs {
         }
         #[doc = "FIFO is ready to transfer one byte."]
         #[inline(always)]
-        pub const fn set_rtt1b(&mut self, val: bool) {
+        pub fn set_rtt1b(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
         }
     }
@@ -448,9 +422,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Ckpol {
         #[doc = "Falling edge active for inputs or rising edge active for outputs."]
-        FallingEdge = 0x0,
+        FALLING_EDGE = 0x0,
         #[doc = "Rising edge active for inputs or falling edge active for outputs."]
-        RisingEdge = 0x01,
+        RISING_EDGE = 0x01,
     }
     impl Ckpol {
         #[inline(always)]
@@ -479,9 +453,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Depol {
         #[doc = "PSSI_DE active low (0 indicates that data is valid)."]
-        ActiveLow = 0x0,
+        ACTIVE_LOW = 0x0,
         #[doc = "PSSI_DE active high (1 indicates that data is valid)."]
-        ActiveHigh = 0x01,
+        ACTIVE_HIGH = 0x01,
     }
     impl Depol {
         #[inline(always)]
@@ -510,21 +484,21 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Derdycfg {
         #[doc = "PSSI_DE and PSSI_RDY both disabled."]
-        Disabled = 0x0,
+        DISABLED = 0x0,
         #[doc = "Only PSSI_RDY enabled."]
-        Rdy = 0x01,
+        RDY = 0x01,
         #[doc = "Only PSSI_DE enabled."]
-        De = 0x02,
+        DE = 0x02,
         #[doc = "Both PSSI_RDY and PSSI_DE alternate functions enabled."]
-        RdyDeAlt = 0x03,
+        RDY_DE_ALT = 0x03,
         #[doc = "Both PSSI_RDY and PSSI_DE features enabled - bidirectional on PSSI_RDY pin."]
-        RdyDe = 0x04,
+        RDY_DE = 0x04,
         #[doc = "Only PSSI_RDY function enabled, but mapped to PSSI_DE pin."]
-        RdyRemapped = 0x05,
+        RDY_REMAPPED = 0x05,
         #[doc = "Only PSSI_DE function enabled, but mapped to PSSI_RDY pin."]
-        DeRemapped = 0x06,
+        DE_REMAPPED = 0x06,
         #[doc = "Both PSSI_RDY and PSSI_DE features enabled - bidirectional on PSSI_DE pin."]
-        RdyDeBidi = 0x07,
+        RDY_DE_BIDI = 0x07,
     }
     impl Derdycfg {
         #[inline(always)]
@@ -553,11 +527,11 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Edm {
         #[doc = "Interface captures 8-bit data on every parallel data clock."]
-        BitWidth8 = 0x0,
+        BIT_WIDTH8 = 0x0,
         _RESERVED_1 = 0x01,
         _RESERVED_2 = 0x02,
         #[doc = "The interface captures 16-bit data on every parallel data clock."]
-        BitWidth16 = 0x03,
+        BIT_WIDTH16 = 0x03,
     }
     impl Edm {
         #[inline(always)]
@@ -586,9 +560,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Outen {
         #[doc = "Data is input synchronously with PSSI_PDCK."]
-        ReceiveMode = 0x0,
+        RECEIVE_MODE = 0x0,
         #[doc = "Data is output synchronously with PSSI_PDCK."]
-        TransmitMode = 0x01,
+        TRANSMIT_MODE = 0x01,
     }
     impl Outen {
         #[inline(always)]
@@ -617,9 +591,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Rdypol {
         #[doc = "PSSI_RDY active low (0 indicates that the receiver is ready to receive)."]
-        ActiveLow = 0x0,
+        ACTIVE_LOW = 0x0,
         #[doc = "PSSI_RDY active high (1 indicates that the receiver is ready to receive)."]
-        ActiveHigh = 0x01,
+        ACTIVE_HIGH = 0x01,
     }
     impl Rdypol {
         #[inline(always)]

@@ -22,267 +22,267 @@ impl Flash {
     #[doc = "FLASH access control register."]
     #[inline(always)]
     pub const fn acr(self) -> crate::common::Reg<regs::Acr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0usize) as _) }
     }
     #[doc = "FLASH nonsecure key register."]
     #[inline(always)]
     pub const fn keyr(self) -> crate::common::Reg<regs::Keyr, crate::common::W> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x08usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x08usize) as _) }
     }
     #[doc = "FLASH secure key register."]
     #[inline(always)]
     pub const fn skeyr(self) -> crate::common::Reg<regs::Skeyr, crate::common::W> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0cusize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0cusize) as _) }
     }
     #[doc = "FLASH option key register."]
     #[inline(always)]
     pub const fn optkeyr(self) -> crate::common::Reg<regs::Optkeyr, crate::common::W> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x10usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x10usize) as _) }
     }
     #[doc = "FLASH bank 1 power-down key register."]
     #[inline(always)]
     pub const fn pdkey1r(self) -> crate::common::Reg<regs::Pdkey1r, crate::common::W> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x18usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x18usize) as _) }
     }
     #[doc = "FLASH bank 2 power-down key register."]
     #[inline(always)]
     pub const fn pdkey2r(self) -> crate::common::Reg<regs::Pdkey2r, crate::common::W> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x1cusize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x1cusize) as _) }
     }
     #[doc = "FLASH nonsecure status register."]
     #[inline(always)]
     pub const fn sr(self) -> crate::common::Reg<regs::Sr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x20usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x20usize) as _) }
     }
     #[doc = "FLASH secure status register."]
     #[inline(always)]
     pub const fn ssr(self) -> crate::common::Reg<regs::Ssr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x24usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x24usize) as _) }
     }
     #[doc = "FLASH nonsecure control register."]
     #[inline(always)]
     pub const fn cr(self) -> crate::common::Reg<regs::Cr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x28usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x28usize) as _) }
     }
     #[doc = "FLASH secure control register."]
     #[inline(always)]
     pub const fn scr(self) -> crate::common::Reg<regs::Scr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x2cusize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x2cusize) as _) }
     }
     #[doc = "FLASH ECC register."]
     #[inline(always)]
     pub const fn ecccorr(self) -> crate::common::Reg<regs::Ecccorr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x30usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x30usize) as _) }
     }
     #[doc = "FLASH ECC detection register."]
     #[inline(always)]
     pub const fn eccdetr(self) -> crate::common::Reg<regs::Eccdetr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x34usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x34usize) as _) }
     }
     #[doc = "FLASH operation status register."]
     #[inline(always)]
     pub const fn opsr(self) -> crate::common::Reg<regs::Opsr, crate::common::R> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x38usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x38usize) as _) }
     }
     #[doc = "FLASH option register."]
     #[inline(always)]
     pub const fn optr(self) -> crate::common::Reg<regs::Optr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x40usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x40usize) as _) }
     }
     #[doc = "FLASH nonsecure boot address 0 register."]
     #[inline(always)]
     pub const fn boot0r(self) -> crate::common::Reg<regs::Boot0r, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x44usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x44usize) as _) }
     }
     #[doc = "FLASH nonsecure boot address 1 register."]
     #[inline(always)]
     pub const fn boot1r(self) -> crate::common::Reg<regs::Boot1r, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x48usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x48usize) as _) }
     }
     #[doc = "FLASH secure boot address 0 register."]
     #[inline(always)]
     pub const fn sboot0r(self) -> crate::common::Reg<regs::Sboot0r, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x4cusize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x4cusize) as _) }
     }
     #[doc = "FLASH secure watermark1 register 1."]
     #[inline(always)]
     pub const fn secwm1r1(self) -> crate::common::Reg<regs::Secwm1r1, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x50usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x50usize) as _) }
     }
     #[doc = "FLASH secure watermark1 register 2."]
     #[inline(always)]
     pub const fn secwm1r2(self) -> crate::common::Reg<regs::Secwm1r2, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x54usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x54usize) as _) }
     }
     #[doc = "FLASH WRP1 area A address register."]
     #[inline(always)]
     pub const fn wrp1ar(self) -> crate::common::Reg<regs::Wrp1ar, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x58usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x58usize) as _) }
     }
     #[doc = "FLASH WRP1 area B address register."]
     #[inline(always)]
     pub const fn wrp1br(self) -> crate::common::Reg<regs::Wrp1br, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x5cusize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x5cusize) as _) }
     }
     #[doc = "FLASH secure watermark2 register 1."]
     #[inline(always)]
     pub const fn secwm2r1(self) -> crate::common::Reg<regs::Secwm2r1, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x60usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x60usize) as _) }
     }
     #[doc = "FLASH secure watermark2 register 2."]
     #[inline(always)]
     pub const fn secwm2r2(self) -> crate::common::Reg<regs::Secwm2r2, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x64usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x64usize) as _) }
     }
     #[doc = "FLASH WPR2 area A address register."]
     #[inline(always)]
     pub const fn wrp2ar(self) -> crate::common::Reg<regs::Wrp2ar, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x68usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x68usize) as _) }
     }
     #[doc = "FLASH WPR2 area B address register."]
     #[inline(always)]
     pub const fn wrp2br(self) -> crate::common::Reg<regs::Wrp2br, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x6cusize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x6cusize) as _) }
     }
     #[doc = "FLASH secure block based bank 1 register 1."]
     #[inline(always)]
     pub const fn secbb1r1(self) -> crate::common::Reg<regs::Secbb1r1, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x80usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x80usize) as _) }
     }
     #[doc = "FLASH secure block based bank 1 register 2."]
     #[inline(always)]
     pub const fn secbb1r2(self) -> crate::common::Reg<regs::Secbb1r2, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x84usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x84usize) as _) }
     }
     #[doc = "FLASH secure block based bank 1 register 3."]
     #[inline(always)]
     pub const fn secbb1r3(self) -> crate::common::Reg<regs::Secbb1r3, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x88usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x88usize) as _) }
     }
     #[doc = "FLASH secure block based bank 1 register 4."]
     #[inline(always)]
     pub const fn secbb1r4(self) -> crate::common::Reg<regs::Secbb1r4, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x8cusize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x8cusize) as _) }
     }
     #[doc = "FLASH secure block based bank 2 register 1."]
     #[inline(always)]
     pub const fn secbb2r1(self) -> crate::common::Reg<regs::Secbb2r1, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0xa0usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0xa0usize) as _) }
     }
     #[doc = "FLASH secure block based bank 2 register 2."]
     #[inline(always)]
     pub const fn secbb2r2(self) -> crate::common::Reg<regs::Secbb2r2, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0xa4usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0xa4usize) as _) }
     }
     #[doc = "FLASH secure block based bank 2 register 3."]
     #[inline(always)]
     pub const fn secbb2r3(self) -> crate::common::Reg<regs::Secbb2r3, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0xa8usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0xa8usize) as _) }
     }
     #[doc = "FLASH secure block based bank 2 register 4."]
     #[inline(always)]
     pub const fn secbb2r4(self) -> crate::common::Reg<regs::Secbb2r4, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0xacusize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0xacusize) as _) }
     }
     #[doc = "FLASH secure HDP control register."]
     #[inline(always)]
     pub const fn sechdpcr(self) -> crate::common::Reg<regs::Sechdpcr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0xc0usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0xc0usize) as _) }
     }
     #[doc = "FLASH privilege configuration register."]
     #[inline(always)]
     pub const fn privcfgr(self) -> crate::common::Reg<regs::Privcfgr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0xc4usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0xc4usize) as _) }
     }
     #[doc = "FLASH HDP extension register."]
     #[inline(always)]
-    pub const fn sechdp_ex_tr(self) -> crate::common::Reg<regs::SechdpExTr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0xc8usize) as _) }
+    pub const fn sechdpex_tr(self) -> crate::common::Reg<regs::SechdpexTr, crate::common::RW> {
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0xc8usize) as _) }
     }
     #[doc = "FLASH privilege block-based bank 1 register 1."]
     #[inline(always)]
     pub const fn privbb1r1(self) -> crate::common::Reg<regs::Privbb1r1, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0xd0usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0xd0usize) as _) }
     }
     #[doc = "FLASH privilege block-based bank 1 register 2."]
     #[inline(always)]
     pub const fn privbb1r2(self) -> crate::common::Reg<regs::Privbb1r2, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0xd4usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0xd4usize) as _) }
     }
     #[doc = "FLASH privilege block-based bank 1 register 3."]
     #[inline(always)]
     pub const fn privbb1r3(self) -> crate::common::Reg<regs::Privbb1r3, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0xd8usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0xd8usize) as _) }
     }
     #[doc = "FLASH privilege block-based bank 1 register 4."]
     #[inline(always)]
     pub const fn privbb1r4(self) -> crate::common::Reg<regs::Privbb1r4, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0xdcusize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0xdcusize) as _) }
     }
     #[doc = "FLASH privilege block based bank 2 register 1."]
     #[inline(always)]
     pub const fn privbb2r1(self) -> crate::common::Reg<regs::Privbb2r1, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0xf0usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0xf0usize) as _) }
     }
     #[doc = "FLASH privilege block based bank 2 register 2."]
     #[inline(always)]
     pub const fn privbb2r2(self) -> crate::common::Reg<regs::Privbb2r2, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0xf4usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0xf4usize) as _) }
     }
     #[doc = "FLASH privilege block based bank 2 register 3."]
     #[inline(always)]
     pub const fn privbb2r3(self) -> crate::common::Reg<regs::Privbb2r3, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0xf8usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0xf8usize) as _) }
     }
     #[doc = "FLASH privilege block based bank 2 register 4."]
     #[inline(always)]
     pub const fn privbb2r4(self) -> crate::common::Reg<regs::Privbb2r4, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0xfcusize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0xfcusize) as _) }
     }
     #[doc = "FLASH OEM1 key register 1."]
     #[inline(always)]
     pub const fn oem1keyr1(self) -> crate::common::Reg<regs::Oem1keyr1, crate::common::W> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0110usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0110usize) as _) }
     }
     #[doc = "FLASH OEM1 key register 2."]
     #[inline(always)]
     pub const fn oem1keyr2(self) -> crate::common::Reg<regs::Oem1keyr2, crate::common::W> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0114usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0114usize) as _) }
     }
     #[doc = "FLASH OEM1 key register 3."]
     #[inline(always)]
     pub const fn oem1keyr3(self) -> crate::common::Reg<regs::Oem1keyr3, crate::common::W> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0118usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0118usize) as _) }
     }
     #[doc = "FLASH OEM1 key register 4."]
     #[inline(always)]
     pub const fn oem1keyr4(self) -> crate::common::Reg<regs::Oem1keyr4, crate::common::W> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x011cusize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x011cusize) as _) }
     }
     #[doc = "FLASH OEM2 key register 1."]
     #[inline(always)]
     pub const fn oem2keyr1(self) -> crate::common::Reg<regs::Oem2keyr1, crate::common::W> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0120usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0120usize) as _) }
     }
     #[doc = "FLASH OEM2 key register 2."]
     #[inline(always)]
     pub const fn oem2keyr2(self) -> crate::common::Reg<regs::Oem2keyr2, crate::common::W> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0124usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0124usize) as _) }
     }
     #[doc = "FLASH OEM2 key register 3."]
     #[inline(always)]
     pub const fn oem2keyr3(self) -> crate::common::Reg<regs::Oem2keyr3, crate::common::W> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0128usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0128usize) as _) }
     }
     #[doc = "FLASH OEM2 key register 4."]
     #[inline(always)]
     pub const fn oem2keyr4(self) -> crate::common::Reg<regs::Oem2keyr4, crate::common::W> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x012cusize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x012cusize) as _) }
     }
     #[doc = "FLASH OEM key status register."]
     #[inline(always)]
     pub const fn oemkeysr(self) -> crate::common::Reg<regs::Oemkeysr, crate::common::R> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0130usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0130usize) as _) }
     }
 }
 pub mod regs {
@@ -292,7 +292,6 @@ pub mod regs {
     pub struct Acr(pub u32);
     impl Acr {
         #[doc = "Latency."]
-        #[must_use]
         #[inline(always)]
         pub const fn latency(&self) -> u8 {
             let val = (self.0 >> 0usize) & 0x0f;
@@ -300,11 +299,10 @@ pub mod regs {
         }
         #[doc = "Latency."]
         #[inline(always)]
-        pub const fn set_latency(&mut self, val: u8) {
+        pub fn set_latency(&mut self, val: u8) {
             self.0 = (self.0 & !(0x0f << 0usize)) | (((val as u32) & 0x0f) << 0usize);
         }
         #[doc = "Prefetch enable."]
-        #[must_use]
         #[inline(always)]
         pub const fn prften(&self) -> bool {
             let val = (self.0 >> 8usize) & 0x01;
@@ -312,11 +310,10 @@ pub mod regs {
         }
         #[doc = "Prefetch enable."]
         #[inline(always)]
-        pub const fn set_prften(&mut self, val: bool) {
+        pub fn set_prften(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
         }
         #[doc = "Low-power read mode."]
-        #[must_use]
         #[inline(always)]
         pub const fn lpm(&self) -> bool {
             let val = (self.0 >> 11usize) & 0x01;
@@ -324,11 +321,10 @@ pub mod regs {
         }
         #[doc = "Low-power read mode."]
         #[inline(always)]
-        pub const fn set_lpm(&mut self, val: bool) {
+        pub fn set_lpm(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
         }
         #[doc = "Bank 1 power-down mode request."]
-        #[must_use]
         #[inline(always)]
         pub const fn pdreq1(&self) -> bool {
             let val = (self.0 >> 12usize) & 0x01;
@@ -336,11 +332,10 @@ pub mod regs {
         }
         #[doc = "Bank 1 power-down mode request."]
         #[inline(always)]
-        pub const fn set_pdreq1(&mut self, val: bool) {
+        pub fn set_pdreq1(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
         }
         #[doc = "Bank 2 power-down mode request."]
-        #[must_use]
         #[inline(always)]
         pub const fn pdreq2(&self) -> bool {
             let val = (self.0 >> 13usize) & 0x01;
@@ -348,11 +343,10 @@ pub mod regs {
         }
         #[doc = "Bank 2 power-down mode request."]
         #[inline(always)]
-        pub const fn set_pdreq2(&mut self, val: bool) {
+        pub fn set_pdreq2(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
         }
         #[doc = "Flash memory power-down mode during Sleep mode."]
-        #[must_use]
         #[inline(always)]
         pub const fn sleep_pd(&self) -> bool {
             let val = (self.0 >> 14usize) & 0x01;
@@ -360,7 +354,7 @@ pub mod regs {
         }
         #[doc = "Flash memory power-down mode during Sleep mode."]
         #[inline(always)]
-        pub const fn set_sleep_pd(&mut self, val: bool) {
+        pub fn set_sleep_pd(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
         }
     }
@@ -385,16 +379,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Acr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Acr {{ latency: {=u8:?}, prften: {=bool:?}, lpm: {=bool:?}, pdreq1: {=bool:?}, pdreq2: {=bool:?}, sleep_pd: {=bool:?} }}",
-                self.latency(),
-                self.prften(),
-                self.lpm(),
-                self.pdreq1(),
-                self.pdreq2(),
-                self.sleep_pd()
-            )
+            defmt :: write ! (f , "Acr {{ latency: {=u8:?}, prften: {=bool:?}, lpm: {=bool:?}, pdreq1: {=bool:?}, pdreq2: {=bool:?}, sleep_pd: {=bool:?} }}" , self . latency () , self . prften () , self . lpm () , self . pdreq1 () , self . pdreq2 () , self . sleep_pd ())
         }
     }
     #[doc = "FLASH nonsecure boot address 0 register."]
@@ -403,7 +388,6 @@ pub mod regs {
     pub struct Boot0r(pub u32);
     impl Boot0r {
         #[doc = "Nonsecure boot base address 0."]
-        #[must_use]
         #[inline(always)]
         pub const fn add(&self) -> u32 {
             let val = (self.0 >> 7usize) & 0x01ff_ffff;
@@ -411,7 +395,7 @@ pub mod regs {
         }
         #[doc = "Nonsecure boot base address 0."]
         #[inline(always)]
-        pub const fn set_add(&mut self, val: u32) {
+        pub fn set_add(&mut self, val: u32) {
             self.0 = (self.0 & !(0x01ff_ffff << 7usize)) | (((val as u32) & 0x01ff_ffff) << 7usize);
         }
     }
@@ -438,7 +422,6 @@ pub mod regs {
     pub struct Boot1r(pub u32);
     impl Boot1r {
         #[doc = "nonsecure boot address 1."]
-        #[must_use]
         #[inline(always)]
         pub const fn add(&self) -> u32 {
             let val = (self.0 >> 7usize) & 0x01ff_ffff;
@@ -446,7 +429,7 @@ pub mod regs {
         }
         #[doc = "nonsecure boot address 1."]
         #[inline(always)]
-        pub const fn set_add(&mut self, val: u32) {
+        pub fn set_add(&mut self, val: u32) {
             self.0 = (self.0 & !(0x01ff_ffff << 7usize)) | (((val as u32) & 0x01ff_ffff) << 7usize);
         }
     }
@@ -473,7 +456,6 @@ pub mod regs {
     pub struct Cr(pub u32);
     impl Cr {
         #[doc = "Nonsecure programming."]
-        #[must_use]
         #[inline(always)]
         pub const fn pg(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -481,11 +463,10 @@ pub mod regs {
         }
         #[doc = "Nonsecure programming."]
         #[inline(always)]
-        pub const fn set_pg(&mut self, val: bool) {
+        pub fn set_pg(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "Nonsecure page erase."]
-        #[must_use]
         #[inline(always)]
         pub const fn per(&self) -> bool {
             let val = (self.0 >> 1usize) & 0x01;
@@ -493,11 +474,10 @@ pub mod regs {
         }
         #[doc = "Nonsecure page erase."]
         #[inline(always)]
-        pub const fn set_per(&mut self, val: bool) {
+        pub fn set_per(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
         }
         #[doc = "Nonsecure bank 1 mass erase."]
-        #[must_use]
         #[inline(always)]
         pub const fn mer1(&self) -> bool {
             let val = (self.0 >> 2usize) & 0x01;
@@ -505,11 +485,10 @@ pub mod regs {
         }
         #[doc = "Nonsecure bank 1 mass erase."]
         #[inline(always)]
-        pub const fn set_mer1(&mut self, val: bool) {
+        pub fn set_mer1(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
         }
         #[doc = "Nonsecure page number selection."]
-        #[must_use]
         #[inline(always)]
         pub const fn pnb(&self) -> u8 {
             let val = (self.0 >> 3usize) & 0x7f;
@@ -517,11 +496,10 @@ pub mod regs {
         }
         #[doc = "Nonsecure page number selection."]
         #[inline(always)]
-        pub const fn set_pnb(&mut self, val: u8) {
+        pub fn set_pnb(&mut self, val: u8) {
             self.0 = (self.0 & !(0x7f << 3usize)) | (((val as u32) & 0x7f) << 3usize);
         }
         #[doc = "Nonsecure bank selection for page erase."]
-        #[must_use]
         #[inline(always)]
         pub const fn bker(&self) -> bool {
             let val = (self.0 >> 11usize) & 0x01;
@@ -529,11 +507,10 @@ pub mod regs {
         }
         #[doc = "Nonsecure bank selection for page erase."]
         #[inline(always)]
-        pub const fn set_bker(&mut self, val: bool) {
+        pub fn set_bker(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
         }
         #[doc = "Nonsecure burst write programming mode."]
-        #[must_use]
         #[inline(always)]
         pub const fn bwr(&self) -> bool {
             let val = (self.0 >> 14usize) & 0x01;
@@ -541,11 +518,10 @@ pub mod regs {
         }
         #[doc = "Nonsecure burst write programming mode."]
         #[inline(always)]
-        pub const fn set_bwr(&mut self, val: bool) {
+        pub fn set_bwr(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
         }
         #[doc = "Nonsecure bank 2 mass erase."]
-        #[must_use]
         #[inline(always)]
         pub const fn mer2(&self) -> bool {
             let val = (self.0 >> 15usize) & 0x01;
@@ -553,11 +529,10 @@ pub mod regs {
         }
         #[doc = "Nonsecure bank 2 mass erase."]
         #[inline(always)]
-        pub const fn set_mer2(&mut self, val: bool) {
+        pub fn set_mer2(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
         }
         #[doc = "Nonsecure start."]
-        #[must_use]
         #[inline(always)]
         pub const fn strt(&self) -> bool {
             let val = (self.0 >> 16usize) & 0x01;
@@ -565,11 +540,10 @@ pub mod regs {
         }
         #[doc = "Nonsecure start."]
         #[inline(always)]
-        pub const fn set_strt(&mut self, val: bool) {
+        pub fn set_strt(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
         }
         #[doc = "Option modification start."]
-        #[must_use]
         #[inline(always)]
         pub const fn optstrt(&self) -> bool {
             let val = (self.0 >> 17usize) & 0x01;
@@ -577,11 +551,10 @@ pub mod regs {
         }
         #[doc = "Option modification start."]
         #[inline(always)]
-        pub const fn set_optstrt(&mut self, val: bool) {
+        pub fn set_optstrt(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
         }
         #[doc = "Nonsecure end of operation interrupt enable."]
-        #[must_use]
         #[inline(always)]
         pub const fn eopie(&self) -> bool {
             let val = (self.0 >> 24usize) & 0x01;
@@ -589,11 +562,10 @@ pub mod regs {
         }
         #[doc = "Nonsecure end of operation interrupt enable."]
         #[inline(always)]
-        pub const fn set_eopie(&mut self, val: bool) {
+        pub fn set_eopie(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
         }
         #[doc = "Nonsecure error interrupt enable."]
-        #[must_use]
         #[inline(always)]
         pub const fn errie(&self) -> bool {
             let val = (self.0 >> 25usize) & 0x01;
@@ -601,11 +573,10 @@ pub mod regs {
         }
         #[doc = "Nonsecure error interrupt enable."]
         #[inline(always)]
-        pub const fn set_errie(&mut self, val: bool) {
+        pub fn set_errie(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
         }
         #[doc = "Option-byte loading forced."]
-        #[must_use]
         #[inline(always)]
         pub const fn obl_launch(&self) -> bool {
             let val = (self.0 >> 27usize) & 0x01;
@@ -613,11 +584,10 @@ pub mod regs {
         }
         #[doc = "Option-byte loading forced."]
         #[inline(always)]
-        pub const fn set_obl_launch(&mut self, val: bool) {
+        pub fn set_obl_launch(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 27usize)) | (((val as u32) & 0x01) << 27usize);
         }
         #[doc = "Option lock."]
-        #[must_use]
         #[inline(always)]
         pub const fn optlock(&self) -> bool {
             let val = (self.0 >> 30usize) & 0x01;
@@ -625,11 +595,10 @@ pub mod regs {
         }
         #[doc = "Option lock."]
         #[inline(always)]
-        pub const fn set_optlock(&mut self, val: bool) {
+        pub fn set_optlock(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
         }
         #[doc = "Nonsecure lock."]
-        #[must_use]
         #[inline(always)]
         pub const fn lock(&self) -> bool {
             let val = (self.0 >> 31usize) & 0x01;
@@ -637,7 +606,7 @@ pub mod regs {
         }
         #[doc = "Nonsecure lock."]
         #[inline(always)]
-        pub const fn set_lock(&mut self, val: bool) {
+        pub fn set_lock(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
         }
     }
@@ -670,24 +639,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Cr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Cr {{ pg: {=bool:?}, per: {=bool:?}, mer1: {=bool:?}, pnb: {=u8:?}, bker: {=bool:?}, bwr: {=bool:?}, mer2: {=bool:?}, strt: {=bool:?}, optstrt: {=bool:?}, eopie: {=bool:?}, errie: {=bool:?}, obl_launch: {=bool:?}, optlock: {=bool:?}, lock: {=bool:?} }}",
-                self.pg(),
-                self.per(),
-                self.mer1(),
-                self.pnb(),
-                self.bker(),
-                self.bwr(),
-                self.mer2(),
-                self.strt(),
-                self.optstrt(),
-                self.eopie(),
-                self.errie(),
-                self.obl_launch(),
-                self.optlock(),
-                self.lock()
-            )
+            defmt :: write ! (f , "Cr {{ pg: {=bool:?}, per: {=bool:?}, mer1: {=bool:?}, pnb: {=u8:?}, bker: {=bool:?}, bwr: {=bool:?}, mer2: {=bool:?}, strt: {=bool:?}, optstrt: {=bool:?}, eopie: {=bool:?}, errie: {=bool:?}, obl_launch: {=bool:?}, optlock: {=bool:?}, lock: {=bool:?} }}" , self . pg () , self . per () , self . mer1 () , self . pnb () , self . bker () , self . bwr () , self . mer2 () , self . strt () , self . optstrt () , self . eopie () , self . errie () , self . obl_launch () , self . optlock () , self . lock ())
         }
     }
     #[doc = "FLASH ECC register."]
@@ -696,7 +648,6 @@ pub mod regs {
     pub struct Ecccorr(pub u32);
     impl Ecccorr {
         #[doc = "ECC fail address."]
-        #[must_use]
         #[inline(always)]
         pub const fn addr_ecc(&self) -> u32 {
             let val = (self.0 >> 0usize) & 0x0007_ffff;
@@ -704,11 +655,10 @@ pub mod regs {
         }
         #[doc = "ECC fail address."]
         #[inline(always)]
-        pub const fn set_addr_ecc(&mut self, val: u32) {
+        pub fn set_addr_ecc(&mut self, val: u32) {
             self.0 = (self.0 & !(0x0007_ffff << 0usize)) | (((val as u32) & 0x0007_ffff) << 0usize);
         }
         #[doc = "ECC fail bank."]
-        #[must_use]
         #[inline(always)]
         pub const fn bk_ecc(&self) -> bool {
             let val = (self.0 >> 21usize) & 0x01;
@@ -716,11 +666,10 @@ pub mod regs {
         }
         #[doc = "ECC fail bank."]
         #[inline(always)]
-        pub const fn set_bk_ecc(&mut self, val: bool) {
+        pub fn set_bk_ecc(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
         }
         #[doc = "System flash memory ECC fail."]
-        #[must_use]
         #[inline(always)]
         pub const fn sysf_ecc(&self) -> bool {
             let val = (self.0 >> 22usize) & 0x01;
@@ -728,11 +677,10 @@ pub mod regs {
         }
         #[doc = "System flash memory ECC fail."]
         #[inline(always)]
-        pub const fn set_sysf_ecc(&mut self, val: bool) {
+        pub fn set_sysf_ecc(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
         }
         #[doc = "ECC correction interrupt enable."]
-        #[must_use]
         #[inline(always)]
         pub const fn eccie(&self) -> bool {
             let val = (self.0 >> 24usize) & 0x01;
@@ -740,11 +688,10 @@ pub mod regs {
         }
         #[doc = "ECC correction interrupt enable."]
         #[inline(always)]
-        pub const fn set_eccie(&mut self, val: bool) {
+        pub fn set_eccie(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
         }
         #[doc = "ECC correction."]
-        #[must_use]
         #[inline(always)]
         pub const fn eccc(&self) -> bool {
             let val = (self.0 >> 30usize) & 0x01;
@@ -752,7 +699,7 @@ pub mod regs {
         }
         #[doc = "ECC correction."]
         #[inline(always)]
-        pub const fn set_eccc(&mut self, val: bool) {
+        pub fn set_eccc(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
         }
     }
@@ -776,15 +723,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Ecccorr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Ecccorr {{ addr_ecc: {=u32:?}, bk_ecc: {=bool:?}, sysf_ecc: {=bool:?}, eccie: {=bool:?}, eccc: {=bool:?} }}",
-                self.addr_ecc(),
-                self.bk_ecc(),
-                self.sysf_ecc(),
-                self.eccie(),
-                self.eccc()
-            )
+            defmt :: write ! (f , "Ecccorr {{ addr_ecc: {=u32:?}, bk_ecc: {=bool:?}, sysf_ecc: {=bool:?}, eccie: {=bool:?}, eccc: {=bool:?} }}" , self . addr_ecc () , self . bk_ecc () , self . sysf_ecc () , self . eccie () , self . eccc ())
         }
     }
     #[doc = "FLASH ECC detection register."]
@@ -793,7 +732,6 @@ pub mod regs {
     pub struct Eccdetr(pub u32);
     impl Eccdetr {
         #[doc = "ECC fail address."]
-        #[must_use]
         #[inline(always)]
         pub const fn addr_ecc(&self) -> u32 {
             let val = (self.0 >> 0usize) & 0x0007_ffff;
@@ -801,11 +739,10 @@ pub mod regs {
         }
         #[doc = "ECC fail address."]
         #[inline(always)]
-        pub const fn set_addr_ecc(&mut self, val: u32) {
+        pub fn set_addr_ecc(&mut self, val: u32) {
             self.0 = (self.0 & !(0x0007_ffff << 0usize)) | (((val as u32) & 0x0007_ffff) << 0usize);
         }
         #[doc = "ECC fail bank."]
-        #[must_use]
         #[inline(always)]
         pub const fn bk_ecc(&self) -> bool {
             let val = (self.0 >> 21usize) & 0x01;
@@ -813,11 +750,10 @@ pub mod regs {
         }
         #[doc = "ECC fail bank."]
         #[inline(always)]
-        pub const fn set_bk_ecc(&mut self, val: bool) {
+        pub fn set_bk_ecc(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
         }
         #[doc = "System flash memory ECC fail."]
-        #[must_use]
         #[inline(always)]
         pub const fn sysf_ecc(&self) -> bool {
             let val = (self.0 >> 22usize) & 0x01;
@@ -825,11 +761,10 @@ pub mod regs {
         }
         #[doc = "System flash memory ECC fail."]
         #[inline(always)]
-        pub const fn set_sysf_ecc(&mut self, val: bool) {
+        pub fn set_sysf_ecc(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
         }
         #[doc = "ECC detection."]
-        #[must_use]
         #[inline(always)]
         pub const fn eccd(&self) -> bool {
             let val = (self.0 >> 31usize) & 0x01;
@@ -837,7 +772,7 @@ pub mod regs {
         }
         #[doc = "ECC detection."]
         #[inline(always)]
-        pub const fn set_eccd(&mut self, val: bool) {
+        pub fn set_eccd(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
         }
     }
@@ -876,7 +811,6 @@ pub mod regs {
     pub struct Keyr(pub u32);
     impl Keyr {
         #[doc = "Flash memory nonsecure key."]
-        #[must_use]
         #[inline(always)]
         pub const fn key(&self) -> u32 {
             let val = (self.0 >> 0usize) & 0xffff_ffff;
@@ -884,7 +818,7 @@ pub mod regs {
         }
         #[doc = "Flash memory nonsecure key."]
         #[inline(always)]
-        pub const fn set_key(&mut self, val: u32) {
+        pub fn set_key(&mut self, val: u32) {
             self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
         }
     }
@@ -912,7 +846,6 @@ pub mod regs {
     impl Oem1keyr1 {
         #[doc = "OEM1\\[31:0\\]
 bytes key."]
-        #[must_use]
         #[inline(always)]
         pub const fn oem1key(&self) -> u32 {
             let val = (self.0 >> 0usize) & 0xffff_ffff;
@@ -921,7 +854,7 @@ bytes key."]
         #[doc = "OEM1\\[31:0\\]
 bytes key."]
         #[inline(always)]
-        pub const fn set_oem1key(&mut self, val: u32) {
+        pub fn set_oem1key(&mut self, val: u32) {
             self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
         }
     }
@@ -949,7 +882,6 @@ bytes key."]
     impl Oem1keyr2 {
         #[doc = "OEM1\\[63:32\\]
 bytes key."]
-        #[must_use]
         #[inline(always)]
         pub const fn oem1key(&self) -> u32 {
             let val = (self.0 >> 0usize) & 0xffff_ffff;
@@ -958,7 +890,7 @@ bytes key."]
         #[doc = "OEM1\\[63:32\\]
 bytes key."]
         #[inline(always)]
-        pub const fn set_oem1key(&mut self, val: u32) {
+        pub fn set_oem1key(&mut self, val: u32) {
             self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
         }
     }
@@ -986,7 +918,6 @@ bytes key."]
     impl Oem1keyr3 {
         #[doc = "OEM1\\[95:64\\]
 bytes key."]
-        #[must_use]
         #[inline(always)]
         pub const fn oem1key(&self) -> u32 {
             let val = (self.0 >> 0usize) & 0xffff_ffff;
@@ -995,7 +926,7 @@ bytes key."]
         #[doc = "OEM1\\[95:64\\]
 bytes key."]
         #[inline(always)]
-        pub const fn set_oem1key(&mut self, val: u32) {
+        pub fn set_oem1key(&mut self, val: u32) {
             self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
         }
     }
@@ -1023,7 +954,6 @@ bytes key."]
     impl Oem1keyr4 {
         #[doc = "OEM1\\[127:96\\]
 bytes key."]
-        #[must_use]
         #[inline(always)]
         pub const fn oem1key(&self) -> u32 {
             let val = (self.0 >> 0usize) & 0xffff_ffff;
@@ -1032,7 +962,7 @@ bytes key."]
         #[doc = "OEM1\\[127:96\\]
 bytes key."]
         #[inline(always)]
-        pub const fn set_oem1key(&mut self, val: u32) {
+        pub fn set_oem1key(&mut self, val: u32) {
             self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
         }
     }
@@ -1060,7 +990,6 @@ bytes key."]
     impl Oem2keyr1 {
         #[doc = "OEM2\\[31:0\\]
 bytes key."]
-        #[must_use]
         #[inline(always)]
         pub const fn oem2key(&self) -> u32 {
             let val = (self.0 >> 0usize) & 0xffff_ffff;
@@ -1069,7 +998,7 @@ bytes key."]
         #[doc = "OEM2\\[31:0\\]
 bytes key."]
         #[inline(always)]
-        pub const fn set_oem2key(&mut self, val: u32) {
+        pub fn set_oem2key(&mut self, val: u32) {
             self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
         }
     }
@@ -1097,7 +1026,6 @@ bytes key."]
     impl Oem2keyr2 {
         #[doc = "OEM2\\[63:32\\]
 bytes key."]
-        #[must_use]
         #[inline(always)]
         pub const fn oem2key(&self) -> u32 {
             let val = (self.0 >> 0usize) & 0xffff_ffff;
@@ -1106,7 +1034,7 @@ bytes key."]
         #[doc = "OEM2\\[63:32\\]
 bytes key."]
         #[inline(always)]
-        pub const fn set_oem2key(&mut self, val: u32) {
+        pub fn set_oem2key(&mut self, val: u32) {
             self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
         }
     }
@@ -1134,7 +1062,6 @@ bytes key."]
     impl Oem2keyr3 {
         #[doc = "OEM2\\[95:64\\]
 bytes key."]
-        #[must_use]
         #[inline(always)]
         pub const fn oem2key(&self) -> u32 {
             let val = (self.0 >> 0usize) & 0xffff_ffff;
@@ -1143,7 +1070,7 @@ bytes key."]
         #[doc = "OEM2\\[95:64\\]
 bytes key."]
         #[inline(always)]
-        pub const fn set_oem2key(&mut self, val: u32) {
+        pub fn set_oem2key(&mut self, val: u32) {
             self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
         }
     }
@@ -1171,7 +1098,6 @@ bytes key."]
     impl Oem2keyr4 {
         #[doc = "OEM2\\[127:96\\]
 bytes key."]
-        #[must_use]
         #[inline(always)]
         pub const fn oem2key(&self) -> u32 {
             let val = (self.0 >> 0usize) & 0xffff_ffff;
@@ -1180,7 +1106,7 @@ bytes key."]
         #[doc = "OEM2\\[127:96\\]
 bytes key."]
         #[inline(always)]
-        pub const fn set_oem2key(&mut self, val: u32) {
+        pub fn set_oem2key(&mut self, val: u32) {
             self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
         }
     }
@@ -1207,7 +1133,6 @@ bytes key."]
     pub struct Oemkeysr(pub u32);
     impl Oemkeysr {
         #[doc = "8-bit OEMKEY1 CRC."]
-        #[must_use]
         #[inline(always)]
         pub const fn oem1keycrc(&self) -> u8 {
             let val = (self.0 >> 0usize) & 0xff;
@@ -1215,11 +1140,10 @@ bytes key."]
         }
         #[doc = "8-bit OEMKEY1 CRC."]
         #[inline(always)]
-        pub const fn set_oem1keycrc(&mut self, val: u8) {
+        pub fn set_oem1keycrc(&mut self, val: u8) {
             self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
         }
         #[doc = "8-bit OEM2KEY CRC."]
-        #[must_use]
         #[inline(always)]
         pub const fn oem2keycrc(&self) -> u8 {
             let val = (self.0 >> 16usize) & 0xff;
@@ -1227,7 +1151,7 @@ bytes key."]
         }
         #[doc = "8-bit OEM2KEY CRC."]
         #[inline(always)]
-        pub const fn set_oem2keycrc(&mut self, val: u8) {
+        pub fn set_oem2keycrc(&mut self, val: u8) {
             self.0 = (self.0 & !(0xff << 16usize)) | (((val as u32) & 0xff) << 16usize);
         }
     }
@@ -1262,7 +1186,6 @@ bytes key."]
     pub struct Opsr(pub u32);
     impl Opsr {
         #[doc = "Interrupted operation address."]
-        #[must_use]
         #[inline(always)]
         pub const fn addr_op(&self) -> u32 {
             let val = (self.0 >> 0usize) & 0x0007_ffff;
@@ -1270,11 +1193,10 @@ bytes key."]
         }
         #[doc = "Interrupted operation address."]
         #[inline(always)]
-        pub const fn set_addr_op(&mut self, val: u32) {
+        pub fn set_addr_op(&mut self, val: u32) {
             self.0 = (self.0 & !(0x0007_ffff << 0usize)) | (((val as u32) & 0x0007_ffff) << 0usize);
         }
         #[doc = "Interrupted operation bank."]
-        #[must_use]
         #[inline(always)]
         pub const fn bk_op(&self) -> bool {
             let val = (self.0 >> 21usize) & 0x01;
@@ -1282,11 +1204,10 @@ bytes key."]
         }
         #[doc = "Interrupted operation bank."]
         #[inline(always)]
-        pub const fn set_bk_op(&mut self, val: bool) {
+        pub fn set_bk_op(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
         }
         #[doc = "Operation in system flash memory interrupted."]
-        #[must_use]
         #[inline(always)]
         pub const fn sysf_op(&self) -> bool {
             let val = (self.0 >> 22usize) & 0x01;
@@ -1294,11 +1215,10 @@ bytes key."]
         }
         #[doc = "Operation in system flash memory interrupted."]
         #[inline(always)]
-        pub const fn set_sysf_op(&mut self, val: bool) {
+        pub fn set_sysf_op(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
         }
         #[doc = "Flash memory operation code."]
-        #[must_use]
         #[inline(always)]
         pub const fn code_op(&self) -> super::vals::CodeOp {
             let val = (self.0 >> 29usize) & 0x07;
@@ -1306,7 +1226,7 @@ bytes key."]
         }
         #[doc = "Flash memory operation code."]
         #[inline(always)]
-        pub const fn set_code_op(&mut self, val: super::vals::CodeOp) {
+        pub fn set_code_op(&mut self, val: super::vals::CodeOp) {
             self.0 = (self.0 & !(0x07 << 29usize)) | (((val.to_bits() as u32) & 0x07) << 29usize);
         }
     }
@@ -1345,7 +1265,6 @@ bytes key."]
     pub struct Optkeyr(pub u32);
     impl Optkeyr {
         #[doc = "Option-byte key."]
-        #[must_use]
         #[inline(always)]
         pub const fn key(&self) -> u32 {
             let val = (self.0 >> 0usize) & 0xffff_ffff;
@@ -1353,7 +1272,7 @@ bytes key."]
         }
         #[doc = "Option-byte key."]
         #[inline(always)]
-        pub const fn set_key(&mut self, val: u32) {
+        pub fn set_key(&mut self, val: u32) {
             self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
         }
     }
@@ -1380,7 +1299,6 @@ bytes key."]
     pub struct Optr(pub u32);
     impl Optr {
         #[doc = "Readout protection level."]
-        #[must_use]
         #[inline(always)]
         pub const fn rdp(&self) -> super::vals::Rdp {
             let val = (self.0 >> 0usize) & 0xff;
@@ -1388,11 +1306,10 @@ bytes key."]
         }
         #[doc = "Readout protection level."]
         #[inline(always)]
-        pub const fn set_rdp(&mut self, val: super::vals::Rdp) {
+        pub fn set_rdp(&mut self, val: super::vals::Rdp) {
             self.0 = (self.0 & !(0xff << 0usize)) | (((val.to_bits() as u32) & 0xff) << 0usize);
         }
         #[doc = "BOR reset level."]
-        #[must_use]
         #[inline(always)]
         pub const fn bor_lev(&self) -> super::vals::BorLev {
             let val = (self.0 >> 8usize) & 0x07;
@@ -1400,11 +1317,10 @@ bytes key."]
         }
         #[doc = "BOR reset level."]
         #[inline(always)]
-        pub const fn set_bor_lev(&mut self, val: super::vals::BorLev) {
+        pub fn set_bor_lev(&mut self, val: super::vals::BorLev) {
             self.0 = (self.0 & !(0x07 << 8usize)) | (((val.to_bits() as u32) & 0x07) << 8usize);
         }
         #[doc = "Backup domain reset with power-on reset."]
-        #[must_use]
         #[inline(always)]
         pub const fn bdrst_por(&self) -> bool {
             let val = (self.0 >> 11usize) & 0x01;
@@ -1412,11 +1328,10 @@ bytes key."]
         }
         #[doc = "Backup domain reset with power-on reset."]
         #[inline(always)]
-        pub const fn set_bdrst_por(&mut self, val: bool) {
+        pub fn set_bdrst_por(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
         }
         #[doc = "Reset generation in Stop mode."]
-        #[must_use]
         #[inline(always)]
         pub const fn nrst_stop(&self) -> bool {
             let val = (self.0 >> 12usize) & 0x01;
@@ -1424,11 +1339,10 @@ bytes key."]
         }
         #[doc = "Reset generation in Stop mode."]
         #[inline(always)]
-        pub const fn set_nrst_stop(&mut self, val: bool) {
+        pub fn set_nrst_stop(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
         }
         #[doc = "Reset generation in Standby mode."]
-        #[must_use]
         #[inline(always)]
         pub const fn nrst_stdby(&self) -> bool {
             let val = (self.0 >> 13usize) & 0x01;
@@ -1436,11 +1350,10 @@ bytes key."]
         }
         #[doc = "Reset generation in Standby mode."]
         #[inline(always)]
-        pub const fn set_nrst_stdby(&mut self, val: bool) {
+        pub fn set_nrst_stdby(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
         }
         #[doc = "Reset generation in Shutdown mode."]
-        #[must_use]
         #[inline(always)]
         pub const fn nrst_shdw(&self) -> bool {
             let val = (self.0 >> 14usize) & 0x01;
@@ -1448,11 +1361,10 @@ bytes key."]
         }
         #[doc = "Reset generation in Shutdown mode."]
         #[inline(always)]
-        pub const fn set_nrst_shdw(&mut self, val: bool) {
+        pub fn set_nrst_shdw(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
         }
         #[doc = "SRAM1 erase upon system reset."]
-        #[must_use]
         #[inline(always)]
         pub const fn sram1_rst(&self) -> bool {
             let val = (self.0 >> 15usize) & 0x01;
@@ -1460,11 +1372,10 @@ bytes key."]
         }
         #[doc = "SRAM1 erase upon system reset."]
         #[inline(always)]
-        pub const fn set_sram1_rst(&mut self, val: bool) {
+        pub fn set_sram1_rst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
         }
         #[doc = "Independent watchdog selection."]
-        #[must_use]
         #[inline(always)]
         pub const fn iwdg_sw(&self) -> bool {
             let val = (self.0 >> 16usize) & 0x01;
@@ -1472,11 +1383,10 @@ bytes key."]
         }
         #[doc = "Independent watchdog selection."]
         #[inline(always)]
-        pub const fn set_iwdg_sw(&mut self, val: bool) {
+        pub fn set_iwdg_sw(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
         }
         #[doc = "Independent watchdog counter freeze in Stop mode."]
-        #[must_use]
         #[inline(always)]
         pub const fn iwdg_stop(&self) -> bool {
             let val = (self.0 >> 17usize) & 0x01;
@@ -1484,11 +1394,10 @@ bytes key."]
         }
         #[doc = "Independent watchdog counter freeze in Stop mode."]
         #[inline(always)]
-        pub const fn set_iwdg_stop(&mut self, val: bool) {
+        pub fn set_iwdg_stop(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
         }
         #[doc = "Independent watchdog counter freeze in Standby mode."]
-        #[must_use]
         #[inline(always)]
         pub const fn iwdg_stdby(&self) -> bool {
             let val = (self.0 >> 18usize) & 0x01;
@@ -1496,11 +1405,10 @@ bytes key."]
         }
         #[doc = "Independent watchdog counter freeze in Standby mode."]
         #[inline(always)]
-        pub const fn set_iwdg_stdby(&mut self, val: bool) {
+        pub fn set_iwdg_stdby(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
         }
         #[doc = "Window watchdog selection."]
-        #[must_use]
         #[inline(always)]
         pub const fn wwdg_sw(&self) -> bool {
             let val = (self.0 >> 19usize) & 0x01;
@@ -1508,11 +1416,10 @@ bytes key."]
         }
         #[doc = "Window watchdog selection."]
         #[inline(always)]
-        pub const fn set_wwdg_sw(&mut self, val: bool) {
+        pub fn set_wwdg_sw(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
         }
         #[doc = "Swap banks."]
-        #[must_use]
         #[inline(always)]
         pub const fn swap_bank(&self) -> bool {
             let val = (self.0 >> 20usize) & 0x01;
@@ -1520,11 +1427,10 @@ bytes key."]
         }
         #[doc = "Swap banks."]
         #[inline(always)]
-        pub const fn set_swap_bank(&mut self, val: bool) {
+        pub fn set_swap_bank(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
         }
         #[doc = "Dual-bank on 512-Kbyte flash memory devices."]
-        #[must_use]
         #[inline(always)]
         pub const fn dualbank(&self) -> bool {
             let val = (self.0 >> 21usize) & 0x01;
@@ -1532,11 +1438,10 @@ bytes key."]
         }
         #[doc = "Dual-bank on 512-Kbyte flash memory devices."]
         #[inline(always)]
-        pub const fn set_dualbank(&mut self, val: bool) {
+        pub fn set_dualbank(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
         }
         #[doc = "SRAM2 parity check enable."]
-        #[must_use]
         #[inline(always)]
         pub const fn sram2_pe(&self) -> bool {
             let val = (self.0 >> 24usize) & 0x01;
@@ -1544,11 +1449,10 @@ bytes key."]
         }
         #[doc = "SRAM2 parity check enable."]
         #[inline(always)]
-        pub const fn set_sram2_pe(&mut self, val: bool) {
+        pub fn set_sram2_pe(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
         }
         #[doc = "SRAM2 erase when system reset."]
-        #[must_use]
         #[inline(always)]
         pub const fn sram2_rst(&self) -> bool {
             let val = (self.0 >> 25usize) & 0x01;
@@ -1556,11 +1460,10 @@ bytes key."]
         }
         #[doc = "SRAM2 erase when system reset."]
         #[inline(always)]
-        pub const fn set_sram2_rst(&mut self, val: bool) {
+        pub fn set_sram2_rst(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
         }
         #[doc = "Software BOOT0."]
-        #[must_use]
         #[inline(always)]
         pub const fn nswboot0(&self) -> bool {
             let val = (self.0 >> 26usize) & 0x01;
@@ -1568,11 +1471,10 @@ bytes key."]
         }
         #[doc = "Software BOOT0."]
         #[inline(always)]
-        pub const fn set_nswboot0(&mut self, val: bool) {
+        pub fn set_nswboot0(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 26usize)) | (((val as u32) & 0x01) << 26usize);
         }
         #[doc = "NBOOT0 option bit."]
-        #[must_use]
         #[inline(always)]
         pub const fn nboot0(&self) -> bool {
             let val = (self.0 >> 27usize) & 0x01;
@@ -1580,11 +1482,10 @@ bytes key."]
         }
         #[doc = "NBOOT0 option bit."]
         #[inline(always)]
-        pub const fn set_nboot0(&mut self, val: bool) {
+        pub fn set_nboot0(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 27usize)) | (((val as u32) & 0x01) << 27usize);
         }
         #[doc = "High-speed I/O at low Vless thansub>DD less than/sub>voltage configuration bit."]
-        #[must_use]
         #[inline(always)]
         pub const fn io_vdd_hslv(&self) -> bool {
             let val = (self.0 >> 29usize) & 0x01;
@@ -1592,11 +1493,10 @@ bytes key."]
         }
         #[doc = "High-speed I/O at low Vless thansub>DD less than/sub>voltage configuration bit."]
         #[inline(always)]
-        pub const fn set_io_vdd_hslv(&mut self, val: bool) {
+        pub fn set_io_vdd_hslv(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
         }
         #[doc = "High-speed I/O at low Vless thansub>DDIO2less than/sub> voltage configuration bit."]
-        #[must_use]
         #[inline(always)]
         pub const fn io_vddio2_hslv(&self) -> bool {
             let val = (self.0 >> 30usize) & 0x01;
@@ -1604,11 +1504,10 @@ bytes key."]
         }
         #[doc = "High-speed I/O at low Vless thansub>DDIO2less than/sub> voltage configuration bit."]
         #[inline(always)]
-        pub const fn set_io_vddio2_hslv(&mut self, val: bool) {
+        pub fn set_io_vddio2_hslv(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
         }
         #[doc = "Global TrustZone security enable."]
-        #[must_use]
         #[inline(always)]
         pub const fn tzen(&self) -> bool {
             let val = (self.0 >> 31usize) & 0x01;
@@ -1616,7 +1515,7 @@ bytes key."]
         }
         #[doc = "Global TrustZone security enable."]
         #[inline(always)]
-        pub const fn set_tzen(&mut self, val: bool) {
+        pub fn set_tzen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
         }
     }
@@ -1655,30 +1554,7 @@ bytes key."]
     #[cfg(feature = "defmt")]
     impl defmt::Format for Optr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Optr {{ rdp: {:?}, bor_lev: {:?}, bdrst_por: {=bool:?}, nrst_stop: {=bool:?}, nrst_stdby: {=bool:?}, nrst_shdw: {=bool:?}, sram1_rst: {=bool:?}, iwdg_sw: {=bool:?}, iwdg_stop: {=bool:?}, iwdg_stdby: {=bool:?}, wwdg_sw: {=bool:?}, swap_bank: {=bool:?}, dualbank: {=bool:?}, sram2_pe: {=bool:?}, sram2_rst: {=bool:?}, nswboot0: {=bool:?}, nboot0: {=bool:?}, io_vdd_hslv: {=bool:?}, io_vddio2_hslv: {=bool:?}, tzen: {=bool:?} }}",
-                self.rdp(),
-                self.bor_lev(),
-                self.bdrst_por(),
-                self.nrst_stop(),
-                self.nrst_stdby(),
-                self.nrst_shdw(),
-                self.sram1_rst(),
-                self.iwdg_sw(),
-                self.iwdg_stop(),
-                self.iwdg_stdby(),
-                self.wwdg_sw(),
-                self.swap_bank(),
-                self.dualbank(),
-                self.sram2_pe(),
-                self.sram2_rst(),
-                self.nswboot0(),
-                self.nboot0(),
-                self.io_vdd_hslv(),
-                self.io_vddio2_hslv(),
-                self.tzen()
-            )
+            defmt :: write ! (f , "Optr {{ rdp: {:?}, bor_lev: {:?}, bdrst_por: {=bool:?}, nrst_stop: {=bool:?}, nrst_stdby: {=bool:?}, nrst_shdw: {=bool:?}, sram1_rst: {=bool:?}, iwdg_sw: {=bool:?}, iwdg_stop: {=bool:?}, iwdg_stdby: {=bool:?}, wwdg_sw: {=bool:?}, swap_bank: {=bool:?}, dualbank: {=bool:?}, sram2_pe: {=bool:?}, sram2_rst: {=bool:?}, nswboot0: {=bool:?}, nboot0: {=bool:?}, io_vdd_hslv: {=bool:?}, io_vddio2_hslv: {=bool:?}, tzen: {=bool:?} }}" , self . rdp () , self . bor_lev () , self . bdrst_por () , self . nrst_stop () , self . nrst_stdby () , self . nrst_shdw () , self . sram1_rst () , self . iwdg_sw () , self . iwdg_stop () , self . iwdg_stdby () , self . wwdg_sw () , self . swap_bank () , self . dualbank () , self . sram2_pe () , self . sram2_rst () , self . nswboot0 () , self . nboot0 () , self . io_vdd_hslv () , self . io_vddio2_hslv () , self . tzen ())
         }
     }
     #[doc = "FLASH bank 1 power-down key register."]
@@ -1687,7 +1563,6 @@ bytes key."]
     pub struct Pdkey1r(pub u32);
     impl Pdkey1r {
         #[doc = "Bank 1 power-down key."]
-        #[must_use]
         #[inline(always)]
         pub const fn key1(&self) -> u32 {
             let val = (self.0 >> 0usize) & 0xffff_ffff;
@@ -1695,7 +1570,7 @@ bytes key."]
         }
         #[doc = "Bank 1 power-down key."]
         #[inline(always)]
-        pub const fn set_key1(&mut self, val: u32) {
+        pub fn set_key1(&mut self, val: u32) {
             self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
         }
     }
@@ -1722,7 +1597,6 @@ bytes key."]
     pub struct Pdkey2r(pub u32);
     impl Pdkey2r {
         #[doc = "Bank 2 power-down key."]
-        #[must_use]
         #[inline(always)]
         pub const fn key2(&self) -> u32 {
             let val = (self.0 >> 0usize) & 0xffff_ffff;
@@ -1730,7 +1604,7 @@ bytes key."]
         }
         #[doc = "Bank 2 power-down key."]
         #[inline(always)]
-        pub const fn set_key2(&mut self, val: u32) {
+        pub fn set_key2(&mut self, val: u32) {
             self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
         }
     }
@@ -1757,7 +1631,6 @@ bytes key."]
     pub struct Privbb1r1(pub u32);
     impl Privbb1r1 {
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv0(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -1765,11 +1638,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv0(&mut self, val: bool) {
+        pub fn set_priv0(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv1(&self) -> bool {
             let val = (self.0 >> 1usize) & 0x01;
@@ -1777,11 +1649,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv1(&mut self, val: bool) {
+        pub fn set_priv1(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv2(&self) -> bool {
             let val = (self.0 >> 2usize) & 0x01;
@@ -1789,11 +1660,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv2(&mut self, val: bool) {
+        pub fn set_priv2(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv3(&self) -> bool {
             let val = (self.0 >> 3usize) & 0x01;
@@ -1801,11 +1671,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv3(&mut self, val: bool) {
+        pub fn set_priv3(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv4(&self) -> bool {
             let val = (self.0 >> 4usize) & 0x01;
@@ -1813,11 +1682,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv4(&mut self, val: bool) {
+        pub fn set_priv4(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv5(&self) -> bool {
             let val = (self.0 >> 5usize) & 0x01;
@@ -1825,11 +1693,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv5(&mut self, val: bool) {
+        pub fn set_priv5(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv6(&self) -> bool {
             let val = (self.0 >> 6usize) & 0x01;
@@ -1837,11 +1704,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv6(&mut self, val: bool) {
+        pub fn set_priv6(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv7(&self) -> bool {
             let val = (self.0 >> 7usize) & 0x01;
@@ -1849,11 +1715,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv7(&mut self, val: bool) {
+        pub fn set_priv7(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv8(&self) -> bool {
             let val = (self.0 >> 8usize) & 0x01;
@@ -1861,11 +1726,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv8(&mut self, val: bool) {
+        pub fn set_priv8(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv9(&self) -> bool {
             let val = (self.0 >> 9usize) & 0x01;
@@ -1873,11 +1737,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv9(&mut self, val: bool) {
+        pub fn set_priv9(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv10(&self) -> bool {
             let val = (self.0 >> 10usize) & 0x01;
@@ -1885,11 +1748,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv10(&mut self, val: bool) {
+        pub fn set_priv10(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv11(&self) -> bool {
             let val = (self.0 >> 11usize) & 0x01;
@@ -1897,11 +1759,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv11(&mut self, val: bool) {
+        pub fn set_priv11(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv12(&self) -> bool {
             let val = (self.0 >> 12usize) & 0x01;
@@ -1909,11 +1770,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv12(&mut self, val: bool) {
+        pub fn set_priv12(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv13(&self) -> bool {
             let val = (self.0 >> 13usize) & 0x01;
@@ -1921,11 +1781,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv13(&mut self, val: bool) {
+        pub fn set_priv13(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv14(&self) -> bool {
             let val = (self.0 >> 14usize) & 0x01;
@@ -1933,11 +1792,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv14(&mut self, val: bool) {
+        pub fn set_priv14(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv15(&self) -> bool {
             let val = (self.0 >> 15usize) & 0x01;
@@ -1945,11 +1803,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv15(&mut self, val: bool) {
+        pub fn set_priv15(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv16(&self) -> bool {
             let val = (self.0 >> 16usize) & 0x01;
@@ -1957,11 +1814,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv16(&mut self, val: bool) {
+        pub fn set_priv16(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv17(&self) -> bool {
             let val = (self.0 >> 17usize) & 0x01;
@@ -1969,11 +1825,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv17(&mut self, val: bool) {
+        pub fn set_priv17(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv18(&self) -> bool {
             let val = (self.0 >> 18usize) & 0x01;
@@ -1981,11 +1836,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv18(&mut self, val: bool) {
+        pub fn set_priv18(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv19(&self) -> bool {
             let val = (self.0 >> 19usize) & 0x01;
@@ -1993,11 +1847,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv19(&mut self, val: bool) {
+        pub fn set_priv19(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv20(&self) -> bool {
             let val = (self.0 >> 20usize) & 0x01;
@@ -2005,11 +1858,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv20(&mut self, val: bool) {
+        pub fn set_priv20(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv21(&self) -> bool {
             let val = (self.0 >> 21usize) & 0x01;
@@ -2017,11 +1869,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv21(&mut self, val: bool) {
+        pub fn set_priv21(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv22(&self) -> bool {
             let val = (self.0 >> 22usize) & 0x01;
@@ -2029,11 +1880,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv22(&mut self, val: bool) {
+        pub fn set_priv22(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv23(&self) -> bool {
             let val = (self.0 >> 23usize) & 0x01;
@@ -2041,11 +1891,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv23(&mut self, val: bool) {
+        pub fn set_priv23(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv24(&self) -> bool {
             let val = (self.0 >> 24usize) & 0x01;
@@ -2053,11 +1902,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv24(&mut self, val: bool) {
+        pub fn set_priv24(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv25(&self) -> bool {
             let val = (self.0 >> 25usize) & 0x01;
@@ -2065,11 +1913,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv25(&mut self, val: bool) {
+        pub fn set_priv25(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv26(&self) -> bool {
             let val = (self.0 >> 26usize) & 0x01;
@@ -2077,11 +1924,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv26(&mut self, val: bool) {
+        pub fn set_priv26(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 26usize)) | (((val as u32) & 0x01) << 26usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv27(&self) -> bool {
             let val = (self.0 >> 27usize) & 0x01;
@@ -2089,11 +1935,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv27(&mut self, val: bool) {
+        pub fn set_priv27(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 27usize)) | (((val as u32) & 0x01) << 27usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv28(&self) -> bool {
             let val = (self.0 >> 28usize) & 0x01;
@@ -2101,11 +1946,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv28(&mut self, val: bool) {
+        pub fn set_priv28(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv29(&self) -> bool {
             let val = (self.0 >> 29usize) & 0x01;
@@ -2113,11 +1957,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv29(&mut self, val: bool) {
+        pub fn set_priv29(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv30(&self) -> bool {
             let val = (self.0 >> 30usize) & 0x01;
@@ -2125,11 +1968,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv30(&mut self, val: bool) {
+        pub fn set_priv30(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv31(&self) -> bool {
             let val = (self.0 >> 31usize) & 0x01;
@@ -2137,7 +1979,7 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv31(&mut self, val: bool) {
+        pub fn set_priv31(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
         }
     }
@@ -2188,42 +2030,7 @@ bytes key."]
     #[cfg(feature = "defmt")]
     impl defmt::Format for Privbb1r1 {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Privbb1r1 {{ priv0: {=bool:?}, priv1: {=bool:?}, priv2: {=bool:?}, priv3: {=bool:?}, priv4: {=bool:?}, priv5: {=bool:?}, priv6: {=bool:?}, priv7: {=bool:?}, priv8: {=bool:?}, priv9: {=bool:?}, priv10: {=bool:?}, priv11: {=bool:?}, priv12: {=bool:?}, priv13: {=bool:?}, priv14: {=bool:?}, priv15: {=bool:?}, priv16: {=bool:?}, priv17: {=bool:?}, priv18: {=bool:?}, priv19: {=bool:?}, priv20: {=bool:?}, priv21: {=bool:?}, priv22: {=bool:?}, priv23: {=bool:?}, priv24: {=bool:?}, priv25: {=bool:?}, priv26: {=bool:?}, priv27: {=bool:?}, priv28: {=bool:?}, priv29: {=bool:?}, priv30: {=bool:?}, priv31: {=bool:?} }}",
-                self.priv0(),
-                self.priv1(),
-                self.priv2(),
-                self.priv3(),
-                self.priv4(),
-                self.priv5(),
-                self.priv6(),
-                self.priv7(),
-                self.priv8(),
-                self.priv9(),
-                self.priv10(),
-                self.priv11(),
-                self.priv12(),
-                self.priv13(),
-                self.priv14(),
-                self.priv15(),
-                self.priv16(),
-                self.priv17(),
-                self.priv18(),
-                self.priv19(),
-                self.priv20(),
-                self.priv21(),
-                self.priv22(),
-                self.priv23(),
-                self.priv24(),
-                self.priv25(),
-                self.priv26(),
-                self.priv27(),
-                self.priv28(),
-                self.priv29(),
-                self.priv30(),
-                self.priv31()
-            )
+            defmt :: write ! (f , "Privbb1r1 {{ priv0: {=bool:?}, priv1: {=bool:?}, priv2: {=bool:?}, priv3: {=bool:?}, priv4: {=bool:?}, priv5: {=bool:?}, priv6: {=bool:?}, priv7: {=bool:?}, priv8: {=bool:?}, priv9: {=bool:?}, priv10: {=bool:?}, priv11: {=bool:?}, priv12: {=bool:?}, priv13: {=bool:?}, priv14: {=bool:?}, priv15: {=bool:?}, priv16: {=bool:?}, priv17: {=bool:?}, priv18: {=bool:?}, priv19: {=bool:?}, priv20: {=bool:?}, priv21: {=bool:?}, priv22: {=bool:?}, priv23: {=bool:?}, priv24: {=bool:?}, priv25: {=bool:?}, priv26: {=bool:?}, priv27: {=bool:?}, priv28: {=bool:?}, priv29: {=bool:?}, priv30: {=bool:?}, priv31: {=bool:?} }}" , self . priv0 () , self . priv1 () , self . priv2 () , self . priv3 () , self . priv4 () , self . priv5 () , self . priv6 () , self . priv7 () , self . priv8 () , self . priv9 () , self . priv10 () , self . priv11 () , self . priv12 () , self . priv13 () , self . priv14 () , self . priv15 () , self . priv16 () , self . priv17 () , self . priv18 () , self . priv19 () , self . priv20 () , self . priv21 () , self . priv22 () , self . priv23 () , self . priv24 () , self . priv25 () , self . priv26 () , self . priv27 () , self . priv28 () , self . priv29 () , self . priv30 () , self . priv31 ())
         }
     }
     #[doc = "FLASH privilege block-based bank 1 register 2."]
@@ -2232,7 +2039,6 @@ bytes key."]
     pub struct Privbb1r2(pub u32);
     impl Privbb1r2 {
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv0(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -2240,11 +2046,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv0(&mut self, val: bool) {
+        pub fn set_priv0(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv1(&self) -> bool {
             let val = (self.0 >> 1usize) & 0x01;
@@ -2252,11 +2057,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv1(&mut self, val: bool) {
+        pub fn set_priv1(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv2(&self) -> bool {
             let val = (self.0 >> 2usize) & 0x01;
@@ -2264,11 +2068,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv2(&mut self, val: bool) {
+        pub fn set_priv2(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv3(&self) -> bool {
             let val = (self.0 >> 3usize) & 0x01;
@@ -2276,11 +2079,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv3(&mut self, val: bool) {
+        pub fn set_priv3(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv4(&self) -> bool {
             let val = (self.0 >> 4usize) & 0x01;
@@ -2288,11 +2090,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv4(&mut self, val: bool) {
+        pub fn set_priv4(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv5(&self) -> bool {
             let val = (self.0 >> 5usize) & 0x01;
@@ -2300,11 +2101,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv5(&mut self, val: bool) {
+        pub fn set_priv5(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv6(&self) -> bool {
             let val = (self.0 >> 6usize) & 0x01;
@@ -2312,11 +2112,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv6(&mut self, val: bool) {
+        pub fn set_priv6(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv7(&self) -> bool {
             let val = (self.0 >> 7usize) & 0x01;
@@ -2324,11 +2123,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv7(&mut self, val: bool) {
+        pub fn set_priv7(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv8(&self) -> bool {
             let val = (self.0 >> 8usize) & 0x01;
@@ -2336,11 +2134,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv8(&mut self, val: bool) {
+        pub fn set_priv8(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv9(&self) -> bool {
             let val = (self.0 >> 9usize) & 0x01;
@@ -2348,11 +2145,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv9(&mut self, val: bool) {
+        pub fn set_priv9(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv10(&self) -> bool {
             let val = (self.0 >> 10usize) & 0x01;
@@ -2360,11 +2156,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv10(&mut self, val: bool) {
+        pub fn set_priv10(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv11(&self) -> bool {
             let val = (self.0 >> 11usize) & 0x01;
@@ -2372,11 +2167,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv11(&mut self, val: bool) {
+        pub fn set_priv11(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv12(&self) -> bool {
             let val = (self.0 >> 12usize) & 0x01;
@@ -2384,11 +2178,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv12(&mut self, val: bool) {
+        pub fn set_priv12(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv13(&self) -> bool {
             let val = (self.0 >> 13usize) & 0x01;
@@ -2396,11 +2189,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv13(&mut self, val: bool) {
+        pub fn set_priv13(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv14(&self) -> bool {
             let val = (self.0 >> 14usize) & 0x01;
@@ -2408,11 +2200,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv14(&mut self, val: bool) {
+        pub fn set_priv14(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv15(&self) -> bool {
             let val = (self.0 >> 15usize) & 0x01;
@@ -2420,11 +2211,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv15(&mut self, val: bool) {
+        pub fn set_priv15(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv16(&self) -> bool {
             let val = (self.0 >> 16usize) & 0x01;
@@ -2432,11 +2222,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv16(&mut self, val: bool) {
+        pub fn set_priv16(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv17(&self) -> bool {
             let val = (self.0 >> 17usize) & 0x01;
@@ -2444,11 +2233,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv17(&mut self, val: bool) {
+        pub fn set_priv17(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv18(&self) -> bool {
             let val = (self.0 >> 18usize) & 0x01;
@@ -2456,11 +2244,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv18(&mut self, val: bool) {
+        pub fn set_priv18(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv19(&self) -> bool {
             let val = (self.0 >> 19usize) & 0x01;
@@ -2468,11 +2255,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv19(&mut self, val: bool) {
+        pub fn set_priv19(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv20(&self) -> bool {
             let val = (self.0 >> 20usize) & 0x01;
@@ -2480,11 +2266,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv20(&mut self, val: bool) {
+        pub fn set_priv20(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv21(&self) -> bool {
             let val = (self.0 >> 21usize) & 0x01;
@@ -2492,11 +2277,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv21(&mut self, val: bool) {
+        pub fn set_priv21(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv22(&self) -> bool {
             let val = (self.0 >> 22usize) & 0x01;
@@ -2504,11 +2288,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv22(&mut self, val: bool) {
+        pub fn set_priv22(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv23(&self) -> bool {
             let val = (self.0 >> 23usize) & 0x01;
@@ -2516,11 +2299,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv23(&mut self, val: bool) {
+        pub fn set_priv23(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv24(&self) -> bool {
             let val = (self.0 >> 24usize) & 0x01;
@@ -2528,11 +2310,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv24(&mut self, val: bool) {
+        pub fn set_priv24(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv25(&self) -> bool {
             let val = (self.0 >> 25usize) & 0x01;
@@ -2540,11 +2321,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv25(&mut self, val: bool) {
+        pub fn set_priv25(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv26(&self) -> bool {
             let val = (self.0 >> 26usize) & 0x01;
@@ -2552,11 +2332,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv26(&mut self, val: bool) {
+        pub fn set_priv26(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 26usize)) | (((val as u32) & 0x01) << 26usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv27(&self) -> bool {
             let val = (self.0 >> 27usize) & 0x01;
@@ -2564,11 +2343,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv27(&mut self, val: bool) {
+        pub fn set_priv27(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 27usize)) | (((val as u32) & 0x01) << 27usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv28(&self) -> bool {
             let val = (self.0 >> 28usize) & 0x01;
@@ -2576,11 +2354,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv28(&mut self, val: bool) {
+        pub fn set_priv28(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv29(&self) -> bool {
             let val = (self.0 >> 29usize) & 0x01;
@@ -2588,11 +2365,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv29(&mut self, val: bool) {
+        pub fn set_priv29(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv30(&self) -> bool {
             let val = (self.0 >> 30usize) & 0x01;
@@ -2600,11 +2376,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv30(&mut self, val: bool) {
+        pub fn set_priv30(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv31(&self) -> bool {
             let val = (self.0 >> 31usize) & 0x01;
@@ -2612,7 +2387,7 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv31(&mut self, val: bool) {
+        pub fn set_priv31(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
         }
     }
@@ -2663,42 +2438,7 @@ bytes key."]
     #[cfg(feature = "defmt")]
     impl defmt::Format for Privbb1r2 {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Privbb1r2 {{ priv0: {=bool:?}, priv1: {=bool:?}, priv2: {=bool:?}, priv3: {=bool:?}, priv4: {=bool:?}, priv5: {=bool:?}, priv6: {=bool:?}, priv7: {=bool:?}, priv8: {=bool:?}, priv9: {=bool:?}, priv10: {=bool:?}, priv11: {=bool:?}, priv12: {=bool:?}, priv13: {=bool:?}, priv14: {=bool:?}, priv15: {=bool:?}, priv16: {=bool:?}, priv17: {=bool:?}, priv18: {=bool:?}, priv19: {=bool:?}, priv20: {=bool:?}, priv21: {=bool:?}, priv22: {=bool:?}, priv23: {=bool:?}, priv24: {=bool:?}, priv25: {=bool:?}, priv26: {=bool:?}, priv27: {=bool:?}, priv28: {=bool:?}, priv29: {=bool:?}, priv30: {=bool:?}, priv31: {=bool:?} }}",
-                self.priv0(),
-                self.priv1(),
-                self.priv2(),
-                self.priv3(),
-                self.priv4(),
-                self.priv5(),
-                self.priv6(),
-                self.priv7(),
-                self.priv8(),
-                self.priv9(),
-                self.priv10(),
-                self.priv11(),
-                self.priv12(),
-                self.priv13(),
-                self.priv14(),
-                self.priv15(),
-                self.priv16(),
-                self.priv17(),
-                self.priv18(),
-                self.priv19(),
-                self.priv20(),
-                self.priv21(),
-                self.priv22(),
-                self.priv23(),
-                self.priv24(),
-                self.priv25(),
-                self.priv26(),
-                self.priv27(),
-                self.priv28(),
-                self.priv29(),
-                self.priv30(),
-                self.priv31()
-            )
+            defmt :: write ! (f , "Privbb1r2 {{ priv0: {=bool:?}, priv1: {=bool:?}, priv2: {=bool:?}, priv3: {=bool:?}, priv4: {=bool:?}, priv5: {=bool:?}, priv6: {=bool:?}, priv7: {=bool:?}, priv8: {=bool:?}, priv9: {=bool:?}, priv10: {=bool:?}, priv11: {=bool:?}, priv12: {=bool:?}, priv13: {=bool:?}, priv14: {=bool:?}, priv15: {=bool:?}, priv16: {=bool:?}, priv17: {=bool:?}, priv18: {=bool:?}, priv19: {=bool:?}, priv20: {=bool:?}, priv21: {=bool:?}, priv22: {=bool:?}, priv23: {=bool:?}, priv24: {=bool:?}, priv25: {=bool:?}, priv26: {=bool:?}, priv27: {=bool:?}, priv28: {=bool:?}, priv29: {=bool:?}, priv30: {=bool:?}, priv31: {=bool:?} }}" , self . priv0 () , self . priv1 () , self . priv2 () , self . priv3 () , self . priv4 () , self . priv5 () , self . priv6 () , self . priv7 () , self . priv8 () , self . priv9 () , self . priv10 () , self . priv11 () , self . priv12 () , self . priv13 () , self . priv14 () , self . priv15 () , self . priv16 () , self . priv17 () , self . priv18 () , self . priv19 () , self . priv20 () , self . priv21 () , self . priv22 () , self . priv23 () , self . priv24 () , self . priv25 () , self . priv26 () , self . priv27 () , self . priv28 () , self . priv29 () , self . priv30 () , self . priv31 ())
         }
     }
     #[doc = "FLASH privilege block-based bank 1 register 3."]
@@ -2707,7 +2447,6 @@ bytes key."]
     pub struct Privbb1r3(pub u32);
     impl Privbb1r3 {
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv0(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -2715,11 +2454,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv0(&mut self, val: bool) {
+        pub fn set_priv0(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv1(&self) -> bool {
             let val = (self.0 >> 1usize) & 0x01;
@@ -2727,11 +2465,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv1(&mut self, val: bool) {
+        pub fn set_priv1(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv2(&self) -> bool {
             let val = (self.0 >> 2usize) & 0x01;
@@ -2739,11 +2476,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv2(&mut self, val: bool) {
+        pub fn set_priv2(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv3(&self) -> bool {
             let val = (self.0 >> 3usize) & 0x01;
@@ -2751,11 +2487,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv3(&mut self, val: bool) {
+        pub fn set_priv3(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv4(&self) -> bool {
             let val = (self.0 >> 4usize) & 0x01;
@@ -2763,11 +2498,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv4(&mut self, val: bool) {
+        pub fn set_priv4(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv5(&self) -> bool {
             let val = (self.0 >> 5usize) & 0x01;
@@ -2775,11 +2509,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv5(&mut self, val: bool) {
+        pub fn set_priv5(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv6(&self) -> bool {
             let val = (self.0 >> 6usize) & 0x01;
@@ -2787,11 +2520,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv6(&mut self, val: bool) {
+        pub fn set_priv6(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv7(&self) -> bool {
             let val = (self.0 >> 7usize) & 0x01;
@@ -2799,11 +2531,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv7(&mut self, val: bool) {
+        pub fn set_priv7(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv8(&self) -> bool {
             let val = (self.0 >> 8usize) & 0x01;
@@ -2811,11 +2542,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv8(&mut self, val: bool) {
+        pub fn set_priv8(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv9(&self) -> bool {
             let val = (self.0 >> 9usize) & 0x01;
@@ -2823,11 +2553,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv9(&mut self, val: bool) {
+        pub fn set_priv9(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv10(&self) -> bool {
             let val = (self.0 >> 10usize) & 0x01;
@@ -2835,11 +2564,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv10(&mut self, val: bool) {
+        pub fn set_priv10(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv11(&self) -> bool {
             let val = (self.0 >> 11usize) & 0x01;
@@ -2847,11 +2575,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv11(&mut self, val: bool) {
+        pub fn set_priv11(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv12(&self) -> bool {
             let val = (self.0 >> 12usize) & 0x01;
@@ -2859,11 +2586,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv12(&mut self, val: bool) {
+        pub fn set_priv12(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv13(&self) -> bool {
             let val = (self.0 >> 13usize) & 0x01;
@@ -2871,11 +2597,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv13(&mut self, val: bool) {
+        pub fn set_priv13(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv14(&self) -> bool {
             let val = (self.0 >> 14usize) & 0x01;
@@ -2883,11 +2608,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv14(&mut self, val: bool) {
+        pub fn set_priv14(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv15(&self) -> bool {
             let val = (self.0 >> 15usize) & 0x01;
@@ -2895,11 +2619,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv15(&mut self, val: bool) {
+        pub fn set_priv15(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv16(&self) -> bool {
             let val = (self.0 >> 16usize) & 0x01;
@@ -2907,11 +2630,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv16(&mut self, val: bool) {
+        pub fn set_priv16(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv17(&self) -> bool {
             let val = (self.0 >> 17usize) & 0x01;
@@ -2919,11 +2641,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv17(&mut self, val: bool) {
+        pub fn set_priv17(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv18(&self) -> bool {
             let val = (self.0 >> 18usize) & 0x01;
@@ -2931,11 +2652,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv18(&mut self, val: bool) {
+        pub fn set_priv18(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv19(&self) -> bool {
             let val = (self.0 >> 19usize) & 0x01;
@@ -2943,11 +2663,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv19(&mut self, val: bool) {
+        pub fn set_priv19(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv20(&self) -> bool {
             let val = (self.0 >> 20usize) & 0x01;
@@ -2955,11 +2674,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv20(&mut self, val: bool) {
+        pub fn set_priv20(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv21(&self) -> bool {
             let val = (self.0 >> 21usize) & 0x01;
@@ -2967,11 +2685,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv21(&mut self, val: bool) {
+        pub fn set_priv21(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv22(&self) -> bool {
             let val = (self.0 >> 22usize) & 0x01;
@@ -2979,11 +2696,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv22(&mut self, val: bool) {
+        pub fn set_priv22(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv23(&self) -> bool {
             let val = (self.0 >> 23usize) & 0x01;
@@ -2991,11 +2707,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv23(&mut self, val: bool) {
+        pub fn set_priv23(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv24(&self) -> bool {
             let val = (self.0 >> 24usize) & 0x01;
@@ -3003,11 +2718,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv24(&mut self, val: bool) {
+        pub fn set_priv24(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv25(&self) -> bool {
             let val = (self.0 >> 25usize) & 0x01;
@@ -3015,11 +2729,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv25(&mut self, val: bool) {
+        pub fn set_priv25(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv26(&self) -> bool {
             let val = (self.0 >> 26usize) & 0x01;
@@ -3027,11 +2740,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv26(&mut self, val: bool) {
+        pub fn set_priv26(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 26usize)) | (((val as u32) & 0x01) << 26usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv27(&self) -> bool {
             let val = (self.0 >> 27usize) & 0x01;
@@ -3039,11 +2751,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv27(&mut self, val: bool) {
+        pub fn set_priv27(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 27usize)) | (((val as u32) & 0x01) << 27usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv28(&self) -> bool {
             let val = (self.0 >> 28usize) & 0x01;
@@ -3051,11 +2762,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv28(&mut self, val: bool) {
+        pub fn set_priv28(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv29(&self) -> bool {
             let val = (self.0 >> 29usize) & 0x01;
@@ -3063,11 +2773,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv29(&mut self, val: bool) {
+        pub fn set_priv29(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv30(&self) -> bool {
             let val = (self.0 >> 30usize) & 0x01;
@@ -3075,11 +2784,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv30(&mut self, val: bool) {
+        pub fn set_priv30(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv31(&self) -> bool {
             let val = (self.0 >> 31usize) & 0x01;
@@ -3087,7 +2795,7 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv31(&mut self, val: bool) {
+        pub fn set_priv31(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
         }
     }
@@ -3138,42 +2846,7 @@ bytes key."]
     #[cfg(feature = "defmt")]
     impl defmt::Format for Privbb1r3 {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Privbb1r3 {{ priv0: {=bool:?}, priv1: {=bool:?}, priv2: {=bool:?}, priv3: {=bool:?}, priv4: {=bool:?}, priv5: {=bool:?}, priv6: {=bool:?}, priv7: {=bool:?}, priv8: {=bool:?}, priv9: {=bool:?}, priv10: {=bool:?}, priv11: {=bool:?}, priv12: {=bool:?}, priv13: {=bool:?}, priv14: {=bool:?}, priv15: {=bool:?}, priv16: {=bool:?}, priv17: {=bool:?}, priv18: {=bool:?}, priv19: {=bool:?}, priv20: {=bool:?}, priv21: {=bool:?}, priv22: {=bool:?}, priv23: {=bool:?}, priv24: {=bool:?}, priv25: {=bool:?}, priv26: {=bool:?}, priv27: {=bool:?}, priv28: {=bool:?}, priv29: {=bool:?}, priv30: {=bool:?}, priv31: {=bool:?} }}",
-                self.priv0(),
-                self.priv1(),
-                self.priv2(),
-                self.priv3(),
-                self.priv4(),
-                self.priv5(),
-                self.priv6(),
-                self.priv7(),
-                self.priv8(),
-                self.priv9(),
-                self.priv10(),
-                self.priv11(),
-                self.priv12(),
-                self.priv13(),
-                self.priv14(),
-                self.priv15(),
-                self.priv16(),
-                self.priv17(),
-                self.priv18(),
-                self.priv19(),
-                self.priv20(),
-                self.priv21(),
-                self.priv22(),
-                self.priv23(),
-                self.priv24(),
-                self.priv25(),
-                self.priv26(),
-                self.priv27(),
-                self.priv28(),
-                self.priv29(),
-                self.priv30(),
-                self.priv31()
-            )
+            defmt :: write ! (f , "Privbb1r3 {{ priv0: {=bool:?}, priv1: {=bool:?}, priv2: {=bool:?}, priv3: {=bool:?}, priv4: {=bool:?}, priv5: {=bool:?}, priv6: {=bool:?}, priv7: {=bool:?}, priv8: {=bool:?}, priv9: {=bool:?}, priv10: {=bool:?}, priv11: {=bool:?}, priv12: {=bool:?}, priv13: {=bool:?}, priv14: {=bool:?}, priv15: {=bool:?}, priv16: {=bool:?}, priv17: {=bool:?}, priv18: {=bool:?}, priv19: {=bool:?}, priv20: {=bool:?}, priv21: {=bool:?}, priv22: {=bool:?}, priv23: {=bool:?}, priv24: {=bool:?}, priv25: {=bool:?}, priv26: {=bool:?}, priv27: {=bool:?}, priv28: {=bool:?}, priv29: {=bool:?}, priv30: {=bool:?}, priv31: {=bool:?} }}" , self . priv0 () , self . priv1 () , self . priv2 () , self . priv3 () , self . priv4 () , self . priv5 () , self . priv6 () , self . priv7 () , self . priv8 () , self . priv9 () , self . priv10 () , self . priv11 () , self . priv12 () , self . priv13 () , self . priv14 () , self . priv15 () , self . priv16 () , self . priv17 () , self . priv18 () , self . priv19 () , self . priv20 () , self . priv21 () , self . priv22 () , self . priv23 () , self . priv24 () , self . priv25 () , self . priv26 () , self . priv27 () , self . priv28 () , self . priv29 () , self . priv30 () , self . priv31 ())
         }
     }
     #[doc = "FLASH privilege block-based bank 1 register 4."]
@@ -3182,7 +2855,6 @@ bytes key."]
     pub struct Privbb1r4(pub u32);
     impl Privbb1r4 {
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv0(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -3190,11 +2862,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv0(&mut self, val: bool) {
+        pub fn set_priv0(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv1(&self) -> bool {
             let val = (self.0 >> 1usize) & 0x01;
@@ -3202,11 +2873,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv1(&mut self, val: bool) {
+        pub fn set_priv1(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv2(&self) -> bool {
             let val = (self.0 >> 2usize) & 0x01;
@@ -3214,11 +2884,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv2(&mut self, val: bool) {
+        pub fn set_priv2(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv3(&self) -> bool {
             let val = (self.0 >> 3usize) & 0x01;
@@ -3226,11 +2895,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv3(&mut self, val: bool) {
+        pub fn set_priv3(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv4(&self) -> bool {
             let val = (self.0 >> 4usize) & 0x01;
@@ -3238,11 +2906,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv4(&mut self, val: bool) {
+        pub fn set_priv4(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv5(&self) -> bool {
             let val = (self.0 >> 5usize) & 0x01;
@@ -3250,11 +2917,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv5(&mut self, val: bool) {
+        pub fn set_priv5(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv6(&self) -> bool {
             let val = (self.0 >> 6usize) & 0x01;
@@ -3262,11 +2928,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv6(&mut self, val: bool) {
+        pub fn set_priv6(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv7(&self) -> bool {
             let val = (self.0 >> 7usize) & 0x01;
@@ -3274,11 +2939,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv7(&mut self, val: bool) {
+        pub fn set_priv7(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv8(&self) -> bool {
             let val = (self.0 >> 8usize) & 0x01;
@@ -3286,11 +2950,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv8(&mut self, val: bool) {
+        pub fn set_priv8(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv9(&self) -> bool {
             let val = (self.0 >> 9usize) & 0x01;
@@ -3298,11 +2961,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv9(&mut self, val: bool) {
+        pub fn set_priv9(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv10(&self) -> bool {
             let val = (self.0 >> 10usize) & 0x01;
@@ -3310,11 +2972,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv10(&mut self, val: bool) {
+        pub fn set_priv10(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv11(&self) -> bool {
             let val = (self.0 >> 11usize) & 0x01;
@@ -3322,11 +2983,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv11(&mut self, val: bool) {
+        pub fn set_priv11(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv12(&self) -> bool {
             let val = (self.0 >> 12usize) & 0x01;
@@ -3334,11 +2994,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv12(&mut self, val: bool) {
+        pub fn set_priv12(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv13(&self) -> bool {
             let val = (self.0 >> 13usize) & 0x01;
@@ -3346,11 +3005,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv13(&mut self, val: bool) {
+        pub fn set_priv13(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv14(&self) -> bool {
             let val = (self.0 >> 14usize) & 0x01;
@@ -3358,11 +3016,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv14(&mut self, val: bool) {
+        pub fn set_priv14(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv15(&self) -> bool {
             let val = (self.0 >> 15usize) & 0x01;
@@ -3370,11 +3027,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv15(&mut self, val: bool) {
+        pub fn set_priv15(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv16(&self) -> bool {
             let val = (self.0 >> 16usize) & 0x01;
@@ -3382,11 +3038,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv16(&mut self, val: bool) {
+        pub fn set_priv16(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv17(&self) -> bool {
             let val = (self.0 >> 17usize) & 0x01;
@@ -3394,11 +3049,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv17(&mut self, val: bool) {
+        pub fn set_priv17(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv18(&self) -> bool {
             let val = (self.0 >> 18usize) & 0x01;
@@ -3406,11 +3060,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv18(&mut self, val: bool) {
+        pub fn set_priv18(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv19(&self) -> bool {
             let val = (self.0 >> 19usize) & 0x01;
@@ -3418,11 +3071,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv19(&mut self, val: bool) {
+        pub fn set_priv19(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv20(&self) -> bool {
             let val = (self.0 >> 20usize) & 0x01;
@@ -3430,11 +3082,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv20(&mut self, val: bool) {
+        pub fn set_priv20(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv21(&self) -> bool {
             let val = (self.0 >> 21usize) & 0x01;
@@ -3442,11 +3093,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv21(&mut self, val: bool) {
+        pub fn set_priv21(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv22(&self) -> bool {
             let val = (self.0 >> 22usize) & 0x01;
@@ -3454,11 +3104,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv22(&mut self, val: bool) {
+        pub fn set_priv22(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv23(&self) -> bool {
             let val = (self.0 >> 23usize) & 0x01;
@@ -3466,11 +3115,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv23(&mut self, val: bool) {
+        pub fn set_priv23(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv24(&self) -> bool {
             let val = (self.0 >> 24usize) & 0x01;
@@ -3478,11 +3126,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv24(&mut self, val: bool) {
+        pub fn set_priv24(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv25(&self) -> bool {
             let val = (self.0 >> 25usize) & 0x01;
@@ -3490,11 +3137,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv25(&mut self, val: bool) {
+        pub fn set_priv25(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv26(&self) -> bool {
             let val = (self.0 >> 26usize) & 0x01;
@@ -3502,11 +3148,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv26(&mut self, val: bool) {
+        pub fn set_priv26(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 26usize)) | (((val as u32) & 0x01) << 26usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv27(&self) -> bool {
             let val = (self.0 >> 27usize) & 0x01;
@@ -3514,11 +3159,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv27(&mut self, val: bool) {
+        pub fn set_priv27(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 27usize)) | (((val as u32) & 0x01) << 27usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv28(&self) -> bool {
             let val = (self.0 >> 28usize) & 0x01;
@@ -3526,11 +3170,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv28(&mut self, val: bool) {
+        pub fn set_priv28(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv29(&self) -> bool {
             let val = (self.0 >> 29usize) & 0x01;
@@ -3538,11 +3181,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv29(&mut self, val: bool) {
+        pub fn set_priv29(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv30(&self) -> bool {
             let val = (self.0 >> 30usize) & 0x01;
@@ -3550,11 +3192,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv30(&mut self, val: bool) {
+        pub fn set_priv30(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv31(&self) -> bool {
             let val = (self.0 >> 31usize) & 0x01;
@@ -3562,7 +3203,7 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv31(&mut self, val: bool) {
+        pub fn set_priv31(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
         }
     }
@@ -3613,42 +3254,7 @@ bytes key."]
     #[cfg(feature = "defmt")]
     impl defmt::Format for Privbb1r4 {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Privbb1r4 {{ priv0: {=bool:?}, priv1: {=bool:?}, priv2: {=bool:?}, priv3: {=bool:?}, priv4: {=bool:?}, priv5: {=bool:?}, priv6: {=bool:?}, priv7: {=bool:?}, priv8: {=bool:?}, priv9: {=bool:?}, priv10: {=bool:?}, priv11: {=bool:?}, priv12: {=bool:?}, priv13: {=bool:?}, priv14: {=bool:?}, priv15: {=bool:?}, priv16: {=bool:?}, priv17: {=bool:?}, priv18: {=bool:?}, priv19: {=bool:?}, priv20: {=bool:?}, priv21: {=bool:?}, priv22: {=bool:?}, priv23: {=bool:?}, priv24: {=bool:?}, priv25: {=bool:?}, priv26: {=bool:?}, priv27: {=bool:?}, priv28: {=bool:?}, priv29: {=bool:?}, priv30: {=bool:?}, priv31: {=bool:?} }}",
-                self.priv0(),
-                self.priv1(),
-                self.priv2(),
-                self.priv3(),
-                self.priv4(),
-                self.priv5(),
-                self.priv6(),
-                self.priv7(),
-                self.priv8(),
-                self.priv9(),
-                self.priv10(),
-                self.priv11(),
-                self.priv12(),
-                self.priv13(),
-                self.priv14(),
-                self.priv15(),
-                self.priv16(),
-                self.priv17(),
-                self.priv18(),
-                self.priv19(),
-                self.priv20(),
-                self.priv21(),
-                self.priv22(),
-                self.priv23(),
-                self.priv24(),
-                self.priv25(),
-                self.priv26(),
-                self.priv27(),
-                self.priv28(),
-                self.priv29(),
-                self.priv30(),
-                self.priv31()
-            )
+            defmt :: write ! (f , "Privbb1r4 {{ priv0: {=bool:?}, priv1: {=bool:?}, priv2: {=bool:?}, priv3: {=bool:?}, priv4: {=bool:?}, priv5: {=bool:?}, priv6: {=bool:?}, priv7: {=bool:?}, priv8: {=bool:?}, priv9: {=bool:?}, priv10: {=bool:?}, priv11: {=bool:?}, priv12: {=bool:?}, priv13: {=bool:?}, priv14: {=bool:?}, priv15: {=bool:?}, priv16: {=bool:?}, priv17: {=bool:?}, priv18: {=bool:?}, priv19: {=bool:?}, priv20: {=bool:?}, priv21: {=bool:?}, priv22: {=bool:?}, priv23: {=bool:?}, priv24: {=bool:?}, priv25: {=bool:?}, priv26: {=bool:?}, priv27: {=bool:?}, priv28: {=bool:?}, priv29: {=bool:?}, priv30: {=bool:?}, priv31: {=bool:?} }}" , self . priv0 () , self . priv1 () , self . priv2 () , self . priv3 () , self . priv4 () , self . priv5 () , self . priv6 () , self . priv7 () , self . priv8 () , self . priv9 () , self . priv10 () , self . priv11 () , self . priv12 () , self . priv13 () , self . priv14 () , self . priv15 () , self . priv16 () , self . priv17 () , self . priv18 () , self . priv19 () , self . priv20 () , self . priv21 () , self . priv22 () , self . priv23 () , self . priv24 () , self . priv25 () , self . priv26 () , self . priv27 () , self . priv28 () , self . priv29 () , self . priv30 () , self . priv31 ())
         }
     }
     #[doc = "FLASH privilege block based bank 2 register 1."]
@@ -3657,7 +3263,6 @@ bytes key."]
     pub struct Privbb2r1(pub u32);
     impl Privbb2r1 {
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv0(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -3665,11 +3270,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv0(&mut self, val: bool) {
+        pub fn set_priv0(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv1(&self) -> bool {
             let val = (self.0 >> 1usize) & 0x01;
@@ -3677,11 +3281,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv1(&mut self, val: bool) {
+        pub fn set_priv1(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv2(&self) -> bool {
             let val = (self.0 >> 2usize) & 0x01;
@@ -3689,11 +3292,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv2(&mut self, val: bool) {
+        pub fn set_priv2(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv3(&self) -> bool {
             let val = (self.0 >> 3usize) & 0x01;
@@ -3701,11 +3303,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv3(&mut self, val: bool) {
+        pub fn set_priv3(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv4(&self) -> bool {
             let val = (self.0 >> 4usize) & 0x01;
@@ -3713,11 +3314,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv4(&mut self, val: bool) {
+        pub fn set_priv4(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv5(&self) -> bool {
             let val = (self.0 >> 5usize) & 0x01;
@@ -3725,11 +3325,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv5(&mut self, val: bool) {
+        pub fn set_priv5(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv6(&self) -> bool {
             let val = (self.0 >> 6usize) & 0x01;
@@ -3737,11 +3336,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv6(&mut self, val: bool) {
+        pub fn set_priv6(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv7(&self) -> bool {
             let val = (self.0 >> 7usize) & 0x01;
@@ -3749,11 +3347,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv7(&mut self, val: bool) {
+        pub fn set_priv7(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv8(&self) -> bool {
             let val = (self.0 >> 8usize) & 0x01;
@@ -3761,11 +3358,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv8(&mut self, val: bool) {
+        pub fn set_priv8(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv9(&self) -> bool {
             let val = (self.0 >> 9usize) & 0x01;
@@ -3773,11 +3369,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv9(&mut self, val: bool) {
+        pub fn set_priv9(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv10(&self) -> bool {
             let val = (self.0 >> 10usize) & 0x01;
@@ -3785,11 +3380,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv10(&mut self, val: bool) {
+        pub fn set_priv10(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv11(&self) -> bool {
             let val = (self.0 >> 11usize) & 0x01;
@@ -3797,11 +3391,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv11(&mut self, val: bool) {
+        pub fn set_priv11(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv12(&self) -> bool {
             let val = (self.0 >> 12usize) & 0x01;
@@ -3809,11 +3402,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv12(&mut self, val: bool) {
+        pub fn set_priv12(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv13(&self) -> bool {
             let val = (self.0 >> 13usize) & 0x01;
@@ -3821,11 +3413,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv13(&mut self, val: bool) {
+        pub fn set_priv13(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv14(&self) -> bool {
             let val = (self.0 >> 14usize) & 0x01;
@@ -3833,11 +3424,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv14(&mut self, val: bool) {
+        pub fn set_priv14(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv15(&self) -> bool {
             let val = (self.0 >> 15usize) & 0x01;
@@ -3845,11 +3435,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv15(&mut self, val: bool) {
+        pub fn set_priv15(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv16(&self) -> bool {
             let val = (self.0 >> 16usize) & 0x01;
@@ -3857,11 +3446,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv16(&mut self, val: bool) {
+        pub fn set_priv16(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv17(&self) -> bool {
             let val = (self.0 >> 17usize) & 0x01;
@@ -3869,11 +3457,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv17(&mut self, val: bool) {
+        pub fn set_priv17(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv18(&self) -> bool {
             let val = (self.0 >> 18usize) & 0x01;
@@ -3881,11 +3468,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv18(&mut self, val: bool) {
+        pub fn set_priv18(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv19(&self) -> bool {
             let val = (self.0 >> 19usize) & 0x01;
@@ -3893,11 +3479,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv19(&mut self, val: bool) {
+        pub fn set_priv19(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv20(&self) -> bool {
             let val = (self.0 >> 20usize) & 0x01;
@@ -3905,11 +3490,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv20(&mut self, val: bool) {
+        pub fn set_priv20(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv21(&self) -> bool {
             let val = (self.0 >> 21usize) & 0x01;
@@ -3917,11 +3501,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv21(&mut self, val: bool) {
+        pub fn set_priv21(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv22(&self) -> bool {
             let val = (self.0 >> 22usize) & 0x01;
@@ -3929,11 +3512,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv22(&mut self, val: bool) {
+        pub fn set_priv22(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv23(&self) -> bool {
             let val = (self.0 >> 23usize) & 0x01;
@@ -3941,11 +3523,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv23(&mut self, val: bool) {
+        pub fn set_priv23(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv24(&self) -> bool {
             let val = (self.0 >> 24usize) & 0x01;
@@ -3953,11 +3534,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv24(&mut self, val: bool) {
+        pub fn set_priv24(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv25(&self) -> bool {
             let val = (self.0 >> 25usize) & 0x01;
@@ -3965,11 +3545,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv25(&mut self, val: bool) {
+        pub fn set_priv25(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv26(&self) -> bool {
             let val = (self.0 >> 26usize) & 0x01;
@@ -3977,11 +3556,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv26(&mut self, val: bool) {
+        pub fn set_priv26(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 26usize)) | (((val as u32) & 0x01) << 26usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv27(&self) -> bool {
             let val = (self.0 >> 27usize) & 0x01;
@@ -3989,11 +3567,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv27(&mut self, val: bool) {
+        pub fn set_priv27(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 27usize)) | (((val as u32) & 0x01) << 27usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv28(&self) -> bool {
             let val = (self.0 >> 28usize) & 0x01;
@@ -4001,11 +3578,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv28(&mut self, val: bool) {
+        pub fn set_priv28(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv29(&self) -> bool {
             let val = (self.0 >> 29usize) & 0x01;
@@ -4013,11 +3589,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv29(&mut self, val: bool) {
+        pub fn set_priv29(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv30(&self) -> bool {
             let val = (self.0 >> 30usize) & 0x01;
@@ -4025,11 +3600,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv30(&mut self, val: bool) {
+        pub fn set_priv30(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv31(&self) -> bool {
             let val = (self.0 >> 31usize) & 0x01;
@@ -4037,7 +3611,7 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv31(&mut self, val: bool) {
+        pub fn set_priv31(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
         }
     }
@@ -4088,42 +3662,7 @@ bytes key."]
     #[cfg(feature = "defmt")]
     impl defmt::Format for Privbb2r1 {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Privbb2r1 {{ priv0: {=bool:?}, priv1: {=bool:?}, priv2: {=bool:?}, priv3: {=bool:?}, priv4: {=bool:?}, priv5: {=bool:?}, priv6: {=bool:?}, priv7: {=bool:?}, priv8: {=bool:?}, priv9: {=bool:?}, priv10: {=bool:?}, priv11: {=bool:?}, priv12: {=bool:?}, priv13: {=bool:?}, priv14: {=bool:?}, priv15: {=bool:?}, priv16: {=bool:?}, priv17: {=bool:?}, priv18: {=bool:?}, priv19: {=bool:?}, priv20: {=bool:?}, priv21: {=bool:?}, priv22: {=bool:?}, priv23: {=bool:?}, priv24: {=bool:?}, priv25: {=bool:?}, priv26: {=bool:?}, priv27: {=bool:?}, priv28: {=bool:?}, priv29: {=bool:?}, priv30: {=bool:?}, priv31: {=bool:?} }}",
-                self.priv0(),
-                self.priv1(),
-                self.priv2(),
-                self.priv3(),
-                self.priv4(),
-                self.priv5(),
-                self.priv6(),
-                self.priv7(),
-                self.priv8(),
-                self.priv9(),
-                self.priv10(),
-                self.priv11(),
-                self.priv12(),
-                self.priv13(),
-                self.priv14(),
-                self.priv15(),
-                self.priv16(),
-                self.priv17(),
-                self.priv18(),
-                self.priv19(),
-                self.priv20(),
-                self.priv21(),
-                self.priv22(),
-                self.priv23(),
-                self.priv24(),
-                self.priv25(),
-                self.priv26(),
-                self.priv27(),
-                self.priv28(),
-                self.priv29(),
-                self.priv30(),
-                self.priv31()
-            )
+            defmt :: write ! (f , "Privbb2r1 {{ priv0: {=bool:?}, priv1: {=bool:?}, priv2: {=bool:?}, priv3: {=bool:?}, priv4: {=bool:?}, priv5: {=bool:?}, priv6: {=bool:?}, priv7: {=bool:?}, priv8: {=bool:?}, priv9: {=bool:?}, priv10: {=bool:?}, priv11: {=bool:?}, priv12: {=bool:?}, priv13: {=bool:?}, priv14: {=bool:?}, priv15: {=bool:?}, priv16: {=bool:?}, priv17: {=bool:?}, priv18: {=bool:?}, priv19: {=bool:?}, priv20: {=bool:?}, priv21: {=bool:?}, priv22: {=bool:?}, priv23: {=bool:?}, priv24: {=bool:?}, priv25: {=bool:?}, priv26: {=bool:?}, priv27: {=bool:?}, priv28: {=bool:?}, priv29: {=bool:?}, priv30: {=bool:?}, priv31: {=bool:?} }}" , self . priv0 () , self . priv1 () , self . priv2 () , self . priv3 () , self . priv4 () , self . priv5 () , self . priv6 () , self . priv7 () , self . priv8 () , self . priv9 () , self . priv10 () , self . priv11 () , self . priv12 () , self . priv13 () , self . priv14 () , self . priv15 () , self . priv16 () , self . priv17 () , self . priv18 () , self . priv19 () , self . priv20 () , self . priv21 () , self . priv22 () , self . priv23 () , self . priv24 () , self . priv25 () , self . priv26 () , self . priv27 () , self . priv28 () , self . priv29 () , self . priv30 () , self . priv31 ())
         }
     }
     #[doc = "FLASH privilege block based bank 2 register 2."]
@@ -4132,7 +3671,6 @@ bytes key."]
     pub struct Privbb2r2(pub u32);
     impl Privbb2r2 {
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv0(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -4140,11 +3678,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv0(&mut self, val: bool) {
+        pub fn set_priv0(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv1(&self) -> bool {
             let val = (self.0 >> 1usize) & 0x01;
@@ -4152,11 +3689,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv1(&mut self, val: bool) {
+        pub fn set_priv1(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv2(&self) -> bool {
             let val = (self.0 >> 2usize) & 0x01;
@@ -4164,11 +3700,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv2(&mut self, val: bool) {
+        pub fn set_priv2(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv3(&self) -> bool {
             let val = (self.0 >> 3usize) & 0x01;
@@ -4176,11 +3711,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv3(&mut self, val: bool) {
+        pub fn set_priv3(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv4(&self) -> bool {
             let val = (self.0 >> 4usize) & 0x01;
@@ -4188,11 +3722,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv4(&mut self, val: bool) {
+        pub fn set_priv4(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv5(&self) -> bool {
             let val = (self.0 >> 5usize) & 0x01;
@@ -4200,11 +3733,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv5(&mut self, val: bool) {
+        pub fn set_priv5(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv6(&self) -> bool {
             let val = (self.0 >> 6usize) & 0x01;
@@ -4212,11 +3744,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv6(&mut self, val: bool) {
+        pub fn set_priv6(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv7(&self) -> bool {
             let val = (self.0 >> 7usize) & 0x01;
@@ -4224,11 +3755,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv7(&mut self, val: bool) {
+        pub fn set_priv7(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv8(&self) -> bool {
             let val = (self.0 >> 8usize) & 0x01;
@@ -4236,11 +3766,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv8(&mut self, val: bool) {
+        pub fn set_priv8(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv9(&self) -> bool {
             let val = (self.0 >> 9usize) & 0x01;
@@ -4248,11 +3777,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv9(&mut self, val: bool) {
+        pub fn set_priv9(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv10(&self) -> bool {
             let val = (self.0 >> 10usize) & 0x01;
@@ -4260,11 +3788,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv10(&mut self, val: bool) {
+        pub fn set_priv10(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv11(&self) -> bool {
             let val = (self.0 >> 11usize) & 0x01;
@@ -4272,11 +3799,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv11(&mut self, val: bool) {
+        pub fn set_priv11(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv12(&self) -> bool {
             let val = (self.0 >> 12usize) & 0x01;
@@ -4284,11 +3810,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv12(&mut self, val: bool) {
+        pub fn set_priv12(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv13(&self) -> bool {
             let val = (self.0 >> 13usize) & 0x01;
@@ -4296,11 +3821,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv13(&mut self, val: bool) {
+        pub fn set_priv13(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv14(&self) -> bool {
             let val = (self.0 >> 14usize) & 0x01;
@@ -4308,11 +3832,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv14(&mut self, val: bool) {
+        pub fn set_priv14(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv15(&self) -> bool {
             let val = (self.0 >> 15usize) & 0x01;
@@ -4320,11 +3843,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv15(&mut self, val: bool) {
+        pub fn set_priv15(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv16(&self) -> bool {
             let val = (self.0 >> 16usize) & 0x01;
@@ -4332,11 +3854,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv16(&mut self, val: bool) {
+        pub fn set_priv16(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv17(&self) -> bool {
             let val = (self.0 >> 17usize) & 0x01;
@@ -4344,11 +3865,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv17(&mut self, val: bool) {
+        pub fn set_priv17(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv18(&self) -> bool {
             let val = (self.0 >> 18usize) & 0x01;
@@ -4356,11 +3876,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv18(&mut self, val: bool) {
+        pub fn set_priv18(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv19(&self) -> bool {
             let val = (self.0 >> 19usize) & 0x01;
@@ -4368,11 +3887,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv19(&mut self, val: bool) {
+        pub fn set_priv19(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv20(&self) -> bool {
             let val = (self.0 >> 20usize) & 0x01;
@@ -4380,11 +3898,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv20(&mut self, val: bool) {
+        pub fn set_priv20(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv21(&self) -> bool {
             let val = (self.0 >> 21usize) & 0x01;
@@ -4392,11 +3909,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv21(&mut self, val: bool) {
+        pub fn set_priv21(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv22(&self) -> bool {
             let val = (self.0 >> 22usize) & 0x01;
@@ -4404,11 +3920,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv22(&mut self, val: bool) {
+        pub fn set_priv22(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv23(&self) -> bool {
             let val = (self.0 >> 23usize) & 0x01;
@@ -4416,11 +3931,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv23(&mut self, val: bool) {
+        pub fn set_priv23(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv24(&self) -> bool {
             let val = (self.0 >> 24usize) & 0x01;
@@ -4428,11 +3942,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv24(&mut self, val: bool) {
+        pub fn set_priv24(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv25(&self) -> bool {
             let val = (self.0 >> 25usize) & 0x01;
@@ -4440,11 +3953,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv25(&mut self, val: bool) {
+        pub fn set_priv25(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv26(&self) -> bool {
             let val = (self.0 >> 26usize) & 0x01;
@@ -4452,11 +3964,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv26(&mut self, val: bool) {
+        pub fn set_priv26(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 26usize)) | (((val as u32) & 0x01) << 26usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv27(&self) -> bool {
             let val = (self.0 >> 27usize) & 0x01;
@@ -4464,11 +3975,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv27(&mut self, val: bool) {
+        pub fn set_priv27(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 27usize)) | (((val as u32) & 0x01) << 27usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv28(&self) -> bool {
             let val = (self.0 >> 28usize) & 0x01;
@@ -4476,11 +3986,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv28(&mut self, val: bool) {
+        pub fn set_priv28(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv29(&self) -> bool {
             let val = (self.0 >> 29usize) & 0x01;
@@ -4488,11 +3997,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv29(&mut self, val: bool) {
+        pub fn set_priv29(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv30(&self) -> bool {
             let val = (self.0 >> 30usize) & 0x01;
@@ -4500,11 +4008,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv30(&mut self, val: bool) {
+        pub fn set_priv30(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv31(&self) -> bool {
             let val = (self.0 >> 31usize) & 0x01;
@@ -4512,7 +4019,7 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv31(&mut self, val: bool) {
+        pub fn set_priv31(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
         }
     }
@@ -4563,42 +4070,7 @@ bytes key."]
     #[cfg(feature = "defmt")]
     impl defmt::Format for Privbb2r2 {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Privbb2r2 {{ priv0: {=bool:?}, priv1: {=bool:?}, priv2: {=bool:?}, priv3: {=bool:?}, priv4: {=bool:?}, priv5: {=bool:?}, priv6: {=bool:?}, priv7: {=bool:?}, priv8: {=bool:?}, priv9: {=bool:?}, priv10: {=bool:?}, priv11: {=bool:?}, priv12: {=bool:?}, priv13: {=bool:?}, priv14: {=bool:?}, priv15: {=bool:?}, priv16: {=bool:?}, priv17: {=bool:?}, priv18: {=bool:?}, priv19: {=bool:?}, priv20: {=bool:?}, priv21: {=bool:?}, priv22: {=bool:?}, priv23: {=bool:?}, priv24: {=bool:?}, priv25: {=bool:?}, priv26: {=bool:?}, priv27: {=bool:?}, priv28: {=bool:?}, priv29: {=bool:?}, priv30: {=bool:?}, priv31: {=bool:?} }}",
-                self.priv0(),
-                self.priv1(),
-                self.priv2(),
-                self.priv3(),
-                self.priv4(),
-                self.priv5(),
-                self.priv6(),
-                self.priv7(),
-                self.priv8(),
-                self.priv9(),
-                self.priv10(),
-                self.priv11(),
-                self.priv12(),
-                self.priv13(),
-                self.priv14(),
-                self.priv15(),
-                self.priv16(),
-                self.priv17(),
-                self.priv18(),
-                self.priv19(),
-                self.priv20(),
-                self.priv21(),
-                self.priv22(),
-                self.priv23(),
-                self.priv24(),
-                self.priv25(),
-                self.priv26(),
-                self.priv27(),
-                self.priv28(),
-                self.priv29(),
-                self.priv30(),
-                self.priv31()
-            )
+            defmt :: write ! (f , "Privbb2r2 {{ priv0: {=bool:?}, priv1: {=bool:?}, priv2: {=bool:?}, priv3: {=bool:?}, priv4: {=bool:?}, priv5: {=bool:?}, priv6: {=bool:?}, priv7: {=bool:?}, priv8: {=bool:?}, priv9: {=bool:?}, priv10: {=bool:?}, priv11: {=bool:?}, priv12: {=bool:?}, priv13: {=bool:?}, priv14: {=bool:?}, priv15: {=bool:?}, priv16: {=bool:?}, priv17: {=bool:?}, priv18: {=bool:?}, priv19: {=bool:?}, priv20: {=bool:?}, priv21: {=bool:?}, priv22: {=bool:?}, priv23: {=bool:?}, priv24: {=bool:?}, priv25: {=bool:?}, priv26: {=bool:?}, priv27: {=bool:?}, priv28: {=bool:?}, priv29: {=bool:?}, priv30: {=bool:?}, priv31: {=bool:?} }}" , self . priv0 () , self . priv1 () , self . priv2 () , self . priv3 () , self . priv4 () , self . priv5 () , self . priv6 () , self . priv7 () , self . priv8 () , self . priv9 () , self . priv10 () , self . priv11 () , self . priv12 () , self . priv13 () , self . priv14 () , self . priv15 () , self . priv16 () , self . priv17 () , self . priv18 () , self . priv19 () , self . priv20 () , self . priv21 () , self . priv22 () , self . priv23 () , self . priv24 () , self . priv25 () , self . priv26 () , self . priv27 () , self . priv28 () , self . priv29 () , self . priv30 () , self . priv31 ())
         }
     }
     #[doc = "FLASH privilege block based bank 2 register 3."]
@@ -4607,7 +4079,6 @@ bytes key."]
     pub struct Privbb2r3(pub u32);
     impl Privbb2r3 {
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv0(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -4615,11 +4086,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv0(&mut self, val: bool) {
+        pub fn set_priv0(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv1(&self) -> bool {
             let val = (self.0 >> 1usize) & 0x01;
@@ -4627,11 +4097,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv1(&mut self, val: bool) {
+        pub fn set_priv1(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv2(&self) -> bool {
             let val = (self.0 >> 2usize) & 0x01;
@@ -4639,11 +4108,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv2(&mut self, val: bool) {
+        pub fn set_priv2(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv3(&self) -> bool {
             let val = (self.0 >> 3usize) & 0x01;
@@ -4651,11 +4119,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv3(&mut self, val: bool) {
+        pub fn set_priv3(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv4(&self) -> bool {
             let val = (self.0 >> 4usize) & 0x01;
@@ -4663,11 +4130,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv4(&mut self, val: bool) {
+        pub fn set_priv4(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv5(&self) -> bool {
             let val = (self.0 >> 5usize) & 0x01;
@@ -4675,11 +4141,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv5(&mut self, val: bool) {
+        pub fn set_priv5(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv6(&self) -> bool {
             let val = (self.0 >> 6usize) & 0x01;
@@ -4687,11 +4152,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv6(&mut self, val: bool) {
+        pub fn set_priv6(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv7(&self) -> bool {
             let val = (self.0 >> 7usize) & 0x01;
@@ -4699,11 +4163,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv7(&mut self, val: bool) {
+        pub fn set_priv7(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv8(&self) -> bool {
             let val = (self.0 >> 8usize) & 0x01;
@@ -4711,11 +4174,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv8(&mut self, val: bool) {
+        pub fn set_priv8(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv9(&self) -> bool {
             let val = (self.0 >> 9usize) & 0x01;
@@ -4723,11 +4185,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv9(&mut self, val: bool) {
+        pub fn set_priv9(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv10(&self) -> bool {
             let val = (self.0 >> 10usize) & 0x01;
@@ -4735,11 +4196,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv10(&mut self, val: bool) {
+        pub fn set_priv10(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv11(&self) -> bool {
             let val = (self.0 >> 11usize) & 0x01;
@@ -4747,11 +4207,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv11(&mut self, val: bool) {
+        pub fn set_priv11(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv12(&self) -> bool {
             let val = (self.0 >> 12usize) & 0x01;
@@ -4759,11 +4218,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv12(&mut self, val: bool) {
+        pub fn set_priv12(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv13(&self) -> bool {
             let val = (self.0 >> 13usize) & 0x01;
@@ -4771,11 +4229,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv13(&mut self, val: bool) {
+        pub fn set_priv13(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv14(&self) -> bool {
             let val = (self.0 >> 14usize) & 0x01;
@@ -4783,11 +4240,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv14(&mut self, val: bool) {
+        pub fn set_priv14(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv15(&self) -> bool {
             let val = (self.0 >> 15usize) & 0x01;
@@ -4795,11 +4251,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv15(&mut self, val: bool) {
+        pub fn set_priv15(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv16(&self) -> bool {
             let val = (self.0 >> 16usize) & 0x01;
@@ -4807,11 +4262,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv16(&mut self, val: bool) {
+        pub fn set_priv16(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv17(&self) -> bool {
             let val = (self.0 >> 17usize) & 0x01;
@@ -4819,11 +4273,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv17(&mut self, val: bool) {
+        pub fn set_priv17(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv18(&self) -> bool {
             let val = (self.0 >> 18usize) & 0x01;
@@ -4831,11 +4284,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv18(&mut self, val: bool) {
+        pub fn set_priv18(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv19(&self) -> bool {
             let val = (self.0 >> 19usize) & 0x01;
@@ -4843,11 +4295,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv19(&mut self, val: bool) {
+        pub fn set_priv19(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv20(&self) -> bool {
             let val = (self.0 >> 20usize) & 0x01;
@@ -4855,11 +4306,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv20(&mut self, val: bool) {
+        pub fn set_priv20(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv21(&self) -> bool {
             let val = (self.0 >> 21usize) & 0x01;
@@ -4867,11 +4317,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv21(&mut self, val: bool) {
+        pub fn set_priv21(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv22(&self) -> bool {
             let val = (self.0 >> 22usize) & 0x01;
@@ -4879,11 +4328,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv22(&mut self, val: bool) {
+        pub fn set_priv22(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv23(&self) -> bool {
             let val = (self.0 >> 23usize) & 0x01;
@@ -4891,11 +4339,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv23(&mut self, val: bool) {
+        pub fn set_priv23(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv24(&self) -> bool {
             let val = (self.0 >> 24usize) & 0x01;
@@ -4903,11 +4350,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv24(&mut self, val: bool) {
+        pub fn set_priv24(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv25(&self) -> bool {
             let val = (self.0 >> 25usize) & 0x01;
@@ -4915,11 +4361,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv25(&mut self, val: bool) {
+        pub fn set_priv25(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv26(&self) -> bool {
             let val = (self.0 >> 26usize) & 0x01;
@@ -4927,11 +4372,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv26(&mut self, val: bool) {
+        pub fn set_priv26(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 26usize)) | (((val as u32) & 0x01) << 26usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv27(&self) -> bool {
             let val = (self.0 >> 27usize) & 0x01;
@@ -4939,11 +4383,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv27(&mut self, val: bool) {
+        pub fn set_priv27(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 27usize)) | (((val as u32) & 0x01) << 27usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv28(&self) -> bool {
             let val = (self.0 >> 28usize) & 0x01;
@@ -4951,11 +4394,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv28(&mut self, val: bool) {
+        pub fn set_priv28(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv29(&self) -> bool {
             let val = (self.0 >> 29usize) & 0x01;
@@ -4963,11 +4405,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv29(&mut self, val: bool) {
+        pub fn set_priv29(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv30(&self) -> bool {
             let val = (self.0 >> 30usize) & 0x01;
@@ -4975,11 +4416,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv30(&mut self, val: bool) {
+        pub fn set_priv30(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv31(&self) -> bool {
             let val = (self.0 >> 31usize) & 0x01;
@@ -4987,7 +4427,7 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv31(&mut self, val: bool) {
+        pub fn set_priv31(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
         }
     }
@@ -5038,42 +4478,7 @@ bytes key."]
     #[cfg(feature = "defmt")]
     impl defmt::Format for Privbb2r3 {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Privbb2r3 {{ priv0: {=bool:?}, priv1: {=bool:?}, priv2: {=bool:?}, priv3: {=bool:?}, priv4: {=bool:?}, priv5: {=bool:?}, priv6: {=bool:?}, priv7: {=bool:?}, priv8: {=bool:?}, priv9: {=bool:?}, priv10: {=bool:?}, priv11: {=bool:?}, priv12: {=bool:?}, priv13: {=bool:?}, priv14: {=bool:?}, priv15: {=bool:?}, priv16: {=bool:?}, priv17: {=bool:?}, priv18: {=bool:?}, priv19: {=bool:?}, priv20: {=bool:?}, priv21: {=bool:?}, priv22: {=bool:?}, priv23: {=bool:?}, priv24: {=bool:?}, priv25: {=bool:?}, priv26: {=bool:?}, priv27: {=bool:?}, priv28: {=bool:?}, priv29: {=bool:?}, priv30: {=bool:?}, priv31: {=bool:?} }}",
-                self.priv0(),
-                self.priv1(),
-                self.priv2(),
-                self.priv3(),
-                self.priv4(),
-                self.priv5(),
-                self.priv6(),
-                self.priv7(),
-                self.priv8(),
-                self.priv9(),
-                self.priv10(),
-                self.priv11(),
-                self.priv12(),
-                self.priv13(),
-                self.priv14(),
-                self.priv15(),
-                self.priv16(),
-                self.priv17(),
-                self.priv18(),
-                self.priv19(),
-                self.priv20(),
-                self.priv21(),
-                self.priv22(),
-                self.priv23(),
-                self.priv24(),
-                self.priv25(),
-                self.priv26(),
-                self.priv27(),
-                self.priv28(),
-                self.priv29(),
-                self.priv30(),
-                self.priv31()
-            )
+            defmt :: write ! (f , "Privbb2r3 {{ priv0: {=bool:?}, priv1: {=bool:?}, priv2: {=bool:?}, priv3: {=bool:?}, priv4: {=bool:?}, priv5: {=bool:?}, priv6: {=bool:?}, priv7: {=bool:?}, priv8: {=bool:?}, priv9: {=bool:?}, priv10: {=bool:?}, priv11: {=bool:?}, priv12: {=bool:?}, priv13: {=bool:?}, priv14: {=bool:?}, priv15: {=bool:?}, priv16: {=bool:?}, priv17: {=bool:?}, priv18: {=bool:?}, priv19: {=bool:?}, priv20: {=bool:?}, priv21: {=bool:?}, priv22: {=bool:?}, priv23: {=bool:?}, priv24: {=bool:?}, priv25: {=bool:?}, priv26: {=bool:?}, priv27: {=bool:?}, priv28: {=bool:?}, priv29: {=bool:?}, priv30: {=bool:?}, priv31: {=bool:?} }}" , self . priv0 () , self . priv1 () , self . priv2 () , self . priv3 () , self . priv4 () , self . priv5 () , self . priv6 () , self . priv7 () , self . priv8 () , self . priv9 () , self . priv10 () , self . priv11 () , self . priv12 () , self . priv13 () , self . priv14 () , self . priv15 () , self . priv16 () , self . priv17 () , self . priv18 () , self . priv19 () , self . priv20 () , self . priv21 () , self . priv22 () , self . priv23 () , self . priv24 () , self . priv25 () , self . priv26 () , self . priv27 () , self . priv28 () , self . priv29 () , self . priv30 () , self . priv31 ())
         }
     }
     #[doc = "FLASH privilege block based bank 2 register 4."]
@@ -5082,7 +4487,6 @@ bytes key."]
     pub struct Privbb2r4(pub u32);
     impl Privbb2r4 {
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv0(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -5090,11 +4494,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv0(&mut self, val: bool) {
+        pub fn set_priv0(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv1(&self) -> bool {
             let val = (self.0 >> 1usize) & 0x01;
@@ -5102,11 +4505,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv1(&mut self, val: bool) {
+        pub fn set_priv1(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv2(&self) -> bool {
             let val = (self.0 >> 2usize) & 0x01;
@@ -5114,11 +4516,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv2(&mut self, val: bool) {
+        pub fn set_priv2(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv3(&self) -> bool {
             let val = (self.0 >> 3usize) & 0x01;
@@ -5126,11 +4527,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv3(&mut self, val: bool) {
+        pub fn set_priv3(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv4(&self) -> bool {
             let val = (self.0 >> 4usize) & 0x01;
@@ -5138,11 +4538,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv4(&mut self, val: bool) {
+        pub fn set_priv4(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv5(&self) -> bool {
             let val = (self.0 >> 5usize) & 0x01;
@@ -5150,11 +4549,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv5(&mut self, val: bool) {
+        pub fn set_priv5(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv6(&self) -> bool {
             let val = (self.0 >> 6usize) & 0x01;
@@ -5162,11 +4560,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv6(&mut self, val: bool) {
+        pub fn set_priv6(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv7(&self) -> bool {
             let val = (self.0 >> 7usize) & 0x01;
@@ -5174,11 +4571,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv7(&mut self, val: bool) {
+        pub fn set_priv7(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv8(&self) -> bool {
             let val = (self.0 >> 8usize) & 0x01;
@@ -5186,11 +4582,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv8(&mut self, val: bool) {
+        pub fn set_priv8(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv9(&self) -> bool {
             let val = (self.0 >> 9usize) & 0x01;
@@ -5198,11 +4593,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv9(&mut self, val: bool) {
+        pub fn set_priv9(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv10(&self) -> bool {
             let val = (self.0 >> 10usize) & 0x01;
@@ -5210,11 +4604,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv10(&mut self, val: bool) {
+        pub fn set_priv10(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv11(&self) -> bool {
             let val = (self.0 >> 11usize) & 0x01;
@@ -5222,11 +4615,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv11(&mut self, val: bool) {
+        pub fn set_priv11(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv12(&self) -> bool {
             let val = (self.0 >> 12usize) & 0x01;
@@ -5234,11 +4626,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv12(&mut self, val: bool) {
+        pub fn set_priv12(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv13(&self) -> bool {
             let val = (self.0 >> 13usize) & 0x01;
@@ -5246,11 +4637,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv13(&mut self, val: bool) {
+        pub fn set_priv13(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv14(&self) -> bool {
             let val = (self.0 >> 14usize) & 0x01;
@@ -5258,11 +4648,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv14(&mut self, val: bool) {
+        pub fn set_priv14(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv15(&self) -> bool {
             let val = (self.0 >> 15usize) & 0x01;
@@ -5270,11 +4659,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv15(&mut self, val: bool) {
+        pub fn set_priv15(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv16(&self) -> bool {
             let val = (self.0 >> 16usize) & 0x01;
@@ -5282,11 +4670,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv16(&mut self, val: bool) {
+        pub fn set_priv16(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv17(&self) -> bool {
             let val = (self.0 >> 17usize) & 0x01;
@@ -5294,11 +4681,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv17(&mut self, val: bool) {
+        pub fn set_priv17(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv18(&self) -> bool {
             let val = (self.0 >> 18usize) & 0x01;
@@ -5306,11 +4692,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv18(&mut self, val: bool) {
+        pub fn set_priv18(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv19(&self) -> bool {
             let val = (self.0 >> 19usize) & 0x01;
@@ -5318,11 +4703,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv19(&mut self, val: bool) {
+        pub fn set_priv19(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv20(&self) -> bool {
             let val = (self.0 >> 20usize) & 0x01;
@@ -5330,11 +4714,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv20(&mut self, val: bool) {
+        pub fn set_priv20(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv21(&self) -> bool {
             let val = (self.0 >> 21usize) & 0x01;
@@ -5342,11 +4725,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv21(&mut self, val: bool) {
+        pub fn set_priv21(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv22(&self) -> bool {
             let val = (self.0 >> 22usize) & 0x01;
@@ -5354,11 +4736,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv22(&mut self, val: bool) {
+        pub fn set_priv22(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv23(&self) -> bool {
             let val = (self.0 >> 23usize) & 0x01;
@@ -5366,11 +4747,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv23(&mut self, val: bool) {
+        pub fn set_priv23(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv24(&self) -> bool {
             let val = (self.0 >> 24usize) & 0x01;
@@ -5378,11 +4758,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv24(&mut self, val: bool) {
+        pub fn set_priv24(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv25(&self) -> bool {
             let val = (self.0 >> 25usize) & 0x01;
@@ -5390,11 +4769,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv25(&mut self, val: bool) {
+        pub fn set_priv25(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv26(&self) -> bool {
             let val = (self.0 >> 26usize) & 0x01;
@@ -5402,11 +4780,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv26(&mut self, val: bool) {
+        pub fn set_priv26(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 26usize)) | (((val as u32) & 0x01) << 26usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv27(&self) -> bool {
             let val = (self.0 >> 27usize) & 0x01;
@@ -5414,11 +4791,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv27(&mut self, val: bool) {
+        pub fn set_priv27(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 27usize)) | (((val as u32) & 0x01) << 27usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv28(&self) -> bool {
             let val = (self.0 >> 28usize) & 0x01;
@@ -5426,11 +4802,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv28(&mut self, val: bool) {
+        pub fn set_priv28(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv29(&self) -> bool {
             let val = (self.0 >> 29usize) & 0x01;
@@ -5438,11 +4813,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv29(&mut self, val: bool) {
+        pub fn set_priv29(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv30(&self) -> bool {
             let val = (self.0 >> 30usize) & 0x01;
@@ -5450,11 +4824,10 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv30(&mut self, val: bool) {
+        pub fn set_priv30(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
         }
         #[doc = "Page privileged/unprivileged attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv31(&self) -> bool {
             let val = (self.0 >> 31usize) & 0x01;
@@ -5462,7 +4835,7 @@ bytes key."]
         }
         #[doc = "Page privileged/unprivileged attribution."]
         #[inline(always)]
-        pub const fn set_priv31(&mut self, val: bool) {
+        pub fn set_priv31(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
         }
     }
@@ -5513,42 +4886,7 @@ bytes key."]
     #[cfg(feature = "defmt")]
     impl defmt::Format for Privbb2r4 {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Privbb2r4 {{ priv0: {=bool:?}, priv1: {=bool:?}, priv2: {=bool:?}, priv3: {=bool:?}, priv4: {=bool:?}, priv5: {=bool:?}, priv6: {=bool:?}, priv7: {=bool:?}, priv8: {=bool:?}, priv9: {=bool:?}, priv10: {=bool:?}, priv11: {=bool:?}, priv12: {=bool:?}, priv13: {=bool:?}, priv14: {=bool:?}, priv15: {=bool:?}, priv16: {=bool:?}, priv17: {=bool:?}, priv18: {=bool:?}, priv19: {=bool:?}, priv20: {=bool:?}, priv21: {=bool:?}, priv22: {=bool:?}, priv23: {=bool:?}, priv24: {=bool:?}, priv25: {=bool:?}, priv26: {=bool:?}, priv27: {=bool:?}, priv28: {=bool:?}, priv29: {=bool:?}, priv30: {=bool:?}, priv31: {=bool:?} }}",
-                self.priv0(),
-                self.priv1(),
-                self.priv2(),
-                self.priv3(),
-                self.priv4(),
-                self.priv5(),
-                self.priv6(),
-                self.priv7(),
-                self.priv8(),
-                self.priv9(),
-                self.priv10(),
-                self.priv11(),
-                self.priv12(),
-                self.priv13(),
-                self.priv14(),
-                self.priv15(),
-                self.priv16(),
-                self.priv17(),
-                self.priv18(),
-                self.priv19(),
-                self.priv20(),
-                self.priv21(),
-                self.priv22(),
-                self.priv23(),
-                self.priv24(),
-                self.priv25(),
-                self.priv26(),
-                self.priv27(),
-                self.priv28(),
-                self.priv29(),
-                self.priv30(),
-                self.priv31()
-            )
+            defmt :: write ! (f , "Privbb2r4 {{ priv0: {=bool:?}, priv1: {=bool:?}, priv2: {=bool:?}, priv3: {=bool:?}, priv4: {=bool:?}, priv5: {=bool:?}, priv6: {=bool:?}, priv7: {=bool:?}, priv8: {=bool:?}, priv9: {=bool:?}, priv10: {=bool:?}, priv11: {=bool:?}, priv12: {=bool:?}, priv13: {=bool:?}, priv14: {=bool:?}, priv15: {=bool:?}, priv16: {=bool:?}, priv17: {=bool:?}, priv18: {=bool:?}, priv19: {=bool:?}, priv20: {=bool:?}, priv21: {=bool:?}, priv22: {=bool:?}, priv23: {=bool:?}, priv24: {=bool:?}, priv25: {=bool:?}, priv26: {=bool:?}, priv27: {=bool:?}, priv28: {=bool:?}, priv29: {=bool:?}, priv30: {=bool:?}, priv31: {=bool:?} }}" , self . priv0 () , self . priv1 () , self . priv2 () , self . priv3 () , self . priv4 () , self . priv5 () , self . priv6 () , self . priv7 () , self . priv8 () , self . priv9 () , self . priv10 () , self . priv11 () , self . priv12 () , self . priv13 () , self . priv14 () , self . priv15 () , self . priv16 () , self . priv17 () , self . priv18 () , self . priv19 () , self . priv20 () , self . priv21 () , self . priv22 () , self . priv23 () , self . priv24 () , self . priv25 () , self . priv26 () , self . priv27 () , self . priv28 () , self . priv29 () , self . priv30 () , self . priv31 ())
         }
     }
     #[doc = "FLASH privilege configuration register."]
@@ -5557,7 +4895,6 @@ bytes key."]
     pub struct Privcfgr(pub u32);
     impl Privcfgr {
         #[doc = "Privileged protection for secure registers."]
-        #[must_use]
         #[inline(always)]
         pub const fn spriv(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -5565,11 +4902,10 @@ bytes key."]
         }
         #[doc = "Privileged protection for secure registers."]
         #[inline(always)]
-        pub const fn set_spriv(&mut self, val: bool) {
+        pub fn set_spriv(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "Privileged protection for nonsecure registers."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv_(&self) -> bool {
             let val = (self.0 >> 1usize) & 0x01;
@@ -5577,7 +4913,7 @@ bytes key."]
         }
         #[doc = "Privileged protection for nonsecure registers."]
         #[inline(always)]
-        pub const fn set_priv_(&mut self, val: bool) {
+        pub fn set_priv_(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
         }
     }
@@ -5612,7 +4948,6 @@ bytes key."]
     pub struct Sboot0r(pub u32);
     impl Sboot0r {
         #[doc = "Boot lock."]
-        #[must_use]
         #[inline(always)]
         pub const fn boot_lock(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -5620,11 +4955,10 @@ bytes key."]
         }
         #[doc = "Boot lock."]
         #[inline(always)]
-        pub const fn set_boot_lock(&mut self, val: bool) {
+        pub fn set_boot_lock(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "Secure boot base address 0."]
-        #[must_use]
         #[inline(always)]
         pub const fn add(&self) -> u32 {
             let val = (self.0 >> 7usize) & 0x01ff_ffff;
@@ -5632,7 +4966,7 @@ bytes key."]
         }
         #[doc = "Secure boot base address 0."]
         #[inline(always)]
-        pub const fn set_add(&mut self, val: u32) {
+        pub fn set_add(&mut self, val: u32) {
             self.0 = (self.0 & !(0x01ff_ffff << 7usize)) | (((val as u32) & 0x01ff_ffff) << 7usize);
         }
     }
@@ -5667,7 +5001,6 @@ bytes key."]
     pub struct Scr(pub u32);
     impl Scr {
         #[doc = "Secure programming."]
-        #[must_use]
         #[inline(always)]
         pub const fn pg(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -5675,11 +5008,10 @@ bytes key."]
         }
         #[doc = "Secure programming."]
         #[inline(always)]
-        pub const fn set_pg(&mut self, val: bool) {
+        pub fn set_pg(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "Secure page erase."]
-        #[must_use]
         #[inline(always)]
         pub const fn per(&self) -> bool {
             let val = (self.0 >> 1usize) & 0x01;
@@ -5687,11 +5019,10 @@ bytes key."]
         }
         #[doc = "Secure page erase."]
         #[inline(always)]
-        pub const fn set_per(&mut self, val: bool) {
+        pub fn set_per(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
         }
         #[doc = "Secure bank 1 mass erase."]
-        #[must_use]
         #[inline(always)]
         pub const fn mer1(&self) -> bool {
             let val = (self.0 >> 2usize) & 0x01;
@@ -5699,11 +5030,10 @@ bytes key."]
         }
         #[doc = "Secure bank 1 mass erase."]
         #[inline(always)]
-        pub const fn set_mer1(&mut self, val: bool) {
+        pub fn set_mer1(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
         }
         #[doc = "Secure page number selection."]
-        #[must_use]
         #[inline(always)]
         pub const fn pnb(&self) -> u8 {
             let val = (self.0 >> 3usize) & 0x7f;
@@ -5711,11 +5041,10 @@ bytes key."]
         }
         #[doc = "Secure page number selection."]
         #[inline(always)]
-        pub const fn set_pnb(&mut self, val: u8) {
+        pub fn set_pnb(&mut self, val: u8) {
             self.0 = (self.0 & !(0x7f << 3usize)) | (((val as u32) & 0x7f) << 3usize);
         }
         #[doc = "Secure bank selection for page erase."]
-        #[must_use]
         #[inline(always)]
         pub const fn bker(&self) -> bool {
             let val = (self.0 >> 11usize) & 0x01;
@@ -5723,11 +5052,10 @@ bytes key."]
         }
         #[doc = "Secure bank selection for page erase."]
         #[inline(always)]
-        pub const fn set_bker(&mut self, val: bool) {
+        pub fn set_bker(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
         }
         #[doc = "Secure burst write programming mode."]
-        #[must_use]
         #[inline(always)]
         pub const fn bwr(&self) -> bool {
             let val = (self.0 >> 14usize) & 0x01;
@@ -5735,11 +5063,10 @@ bytes key."]
         }
         #[doc = "Secure burst write programming mode."]
         #[inline(always)]
-        pub const fn set_bwr(&mut self, val: bool) {
+        pub fn set_bwr(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
         }
         #[doc = "Secure bank 2 mass erase."]
-        #[must_use]
         #[inline(always)]
         pub const fn mer2(&self) -> bool {
             let val = (self.0 >> 15usize) & 0x01;
@@ -5747,11 +5074,10 @@ bytes key."]
         }
         #[doc = "Secure bank 2 mass erase."]
         #[inline(always)]
-        pub const fn set_mer2(&mut self, val: bool) {
+        pub fn set_mer2(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
         }
         #[doc = "Secure start."]
-        #[must_use]
         #[inline(always)]
         pub const fn strt(&self) -> bool {
             let val = (self.0 >> 16usize) & 0x01;
@@ -5759,11 +5085,10 @@ bytes key."]
         }
         #[doc = "Secure start."]
         #[inline(always)]
-        pub const fn set_strt(&mut self, val: bool) {
+        pub fn set_strt(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
         }
         #[doc = "Secure end of operation interrupt enable."]
-        #[must_use]
         #[inline(always)]
         pub const fn eopie(&self) -> bool {
             let val = (self.0 >> 24usize) & 0x01;
@@ -5771,11 +5096,10 @@ bytes key."]
         }
         #[doc = "Secure end of operation interrupt enable."]
         #[inline(always)]
-        pub const fn set_eopie(&mut self, val: bool) {
+        pub fn set_eopie(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
         }
         #[doc = "Secure error interrupt enable."]
-        #[must_use]
         #[inline(always)]
         pub const fn errie(&self) -> bool {
             let val = (self.0 >> 25usize) & 0x01;
@@ -5783,11 +5107,10 @@ bytes key."]
         }
         #[doc = "Secure error interrupt enable."]
         #[inline(always)]
-        pub const fn set_errie(&mut self, val: bool) {
+        pub fn set_errie(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
         }
         #[doc = "Flash memory security state invert."]
-        #[must_use]
         #[inline(always)]
         pub const fn inv(&self) -> bool {
             let val = (self.0 >> 29usize) & 0x01;
@@ -5795,11 +5118,10 @@ bytes key."]
         }
         #[doc = "Flash memory security state invert."]
         #[inline(always)]
-        pub const fn set_inv(&mut self, val: bool) {
+        pub fn set_inv(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
         }
         #[doc = "Secure lock."]
-        #[must_use]
         #[inline(always)]
         pub const fn lock(&self) -> bool {
             let val = (self.0 >> 31usize) & 0x01;
@@ -5807,7 +5129,7 @@ bytes key."]
         }
         #[doc = "Secure lock."]
         #[inline(always)]
-        pub const fn set_lock(&mut self, val: bool) {
+        pub fn set_lock(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
         }
     }
@@ -5838,22 +5160,7 @@ bytes key."]
     #[cfg(feature = "defmt")]
     impl defmt::Format for Scr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Scr {{ pg: {=bool:?}, per: {=bool:?}, mer1: {=bool:?}, pnb: {=u8:?}, bker: {=bool:?}, bwr: {=bool:?}, mer2: {=bool:?}, strt: {=bool:?}, eopie: {=bool:?}, errie: {=bool:?}, inv: {=bool:?}, lock: {=bool:?} }}",
-                self.pg(),
-                self.per(),
-                self.mer1(),
-                self.pnb(),
-                self.bker(),
-                self.bwr(),
-                self.mer2(),
-                self.strt(),
-                self.eopie(),
-                self.errie(),
-                self.inv(),
-                self.lock()
-            )
+            defmt :: write ! (f , "Scr {{ pg: {=bool:?}, per: {=bool:?}, mer1: {=bool:?}, pnb: {=u8:?}, bker: {=bool:?}, bwr: {=bool:?}, mer2: {=bool:?}, strt: {=bool:?}, eopie: {=bool:?}, errie: {=bool:?}, inv: {=bool:?}, lock: {=bool:?} }}" , self . pg () , self . per () , self . mer1 () , self . pnb () , self . bker () , self . bwr () , self . mer2 () , self . strt () , self . eopie () , self . errie () , self . inv () , self . lock ())
         }
     }
     #[doc = "FLASH secure block based bank 1 register 1."]
@@ -5862,7 +5169,6 @@ bytes key."]
     pub struct Secbb1r1(pub u32);
     impl Secbb1r1 {
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec0(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -5870,11 +5176,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec0(&mut self, val: bool) {
+        pub fn set_sec0(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec1(&self) -> bool {
             let val = (self.0 >> 1usize) & 0x01;
@@ -5882,11 +5187,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec1(&mut self, val: bool) {
+        pub fn set_sec1(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec2(&self) -> bool {
             let val = (self.0 >> 2usize) & 0x01;
@@ -5894,11 +5198,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec2(&mut self, val: bool) {
+        pub fn set_sec2(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec3(&self) -> bool {
             let val = (self.0 >> 3usize) & 0x01;
@@ -5906,11 +5209,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec3(&mut self, val: bool) {
+        pub fn set_sec3(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec4(&self) -> bool {
             let val = (self.0 >> 4usize) & 0x01;
@@ -5918,11 +5220,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec4(&mut self, val: bool) {
+        pub fn set_sec4(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec5(&self) -> bool {
             let val = (self.0 >> 5usize) & 0x01;
@@ -5930,11 +5231,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec5(&mut self, val: bool) {
+        pub fn set_sec5(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec6(&self) -> bool {
             let val = (self.0 >> 6usize) & 0x01;
@@ -5942,11 +5242,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec6(&mut self, val: bool) {
+        pub fn set_sec6(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec7(&self) -> bool {
             let val = (self.0 >> 7usize) & 0x01;
@@ -5954,11 +5253,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec7(&mut self, val: bool) {
+        pub fn set_sec7(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec8(&self) -> bool {
             let val = (self.0 >> 8usize) & 0x01;
@@ -5966,11 +5264,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec8(&mut self, val: bool) {
+        pub fn set_sec8(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec9(&self) -> bool {
             let val = (self.0 >> 9usize) & 0x01;
@@ -5978,11 +5275,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec9(&mut self, val: bool) {
+        pub fn set_sec9(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec10(&self) -> bool {
             let val = (self.0 >> 10usize) & 0x01;
@@ -5990,11 +5286,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec10(&mut self, val: bool) {
+        pub fn set_sec10(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec11(&self) -> bool {
             let val = (self.0 >> 11usize) & 0x01;
@@ -6002,11 +5297,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec11(&mut self, val: bool) {
+        pub fn set_sec11(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec12(&self) -> bool {
             let val = (self.0 >> 12usize) & 0x01;
@@ -6014,11 +5308,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec12(&mut self, val: bool) {
+        pub fn set_sec12(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec13(&self) -> bool {
             let val = (self.0 >> 13usize) & 0x01;
@@ -6026,11 +5319,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec13(&mut self, val: bool) {
+        pub fn set_sec13(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec14(&self) -> bool {
             let val = (self.0 >> 14usize) & 0x01;
@@ -6038,11 +5330,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec14(&mut self, val: bool) {
+        pub fn set_sec14(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec15(&self) -> bool {
             let val = (self.0 >> 15usize) & 0x01;
@@ -6050,11 +5341,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec15(&mut self, val: bool) {
+        pub fn set_sec15(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec16(&self) -> bool {
             let val = (self.0 >> 16usize) & 0x01;
@@ -6062,11 +5352,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec16(&mut self, val: bool) {
+        pub fn set_sec16(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec17(&self) -> bool {
             let val = (self.0 >> 17usize) & 0x01;
@@ -6074,11 +5363,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec17(&mut self, val: bool) {
+        pub fn set_sec17(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec18(&self) -> bool {
             let val = (self.0 >> 18usize) & 0x01;
@@ -6086,11 +5374,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec18(&mut self, val: bool) {
+        pub fn set_sec18(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec19(&self) -> bool {
             let val = (self.0 >> 19usize) & 0x01;
@@ -6098,11 +5385,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec19(&mut self, val: bool) {
+        pub fn set_sec19(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec20(&self) -> bool {
             let val = (self.0 >> 20usize) & 0x01;
@@ -6110,11 +5396,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec20(&mut self, val: bool) {
+        pub fn set_sec20(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec21(&self) -> bool {
             let val = (self.0 >> 21usize) & 0x01;
@@ -6122,11 +5407,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec21(&mut self, val: bool) {
+        pub fn set_sec21(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec22(&self) -> bool {
             let val = (self.0 >> 22usize) & 0x01;
@@ -6134,11 +5418,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec22(&mut self, val: bool) {
+        pub fn set_sec22(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec23(&self) -> bool {
             let val = (self.0 >> 23usize) & 0x01;
@@ -6146,11 +5429,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec23(&mut self, val: bool) {
+        pub fn set_sec23(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec24(&self) -> bool {
             let val = (self.0 >> 24usize) & 0x01;
@@ -6158,11 +5440,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec24(&mut self, val: bool) {
+        pub fn set_sec24(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec25(&self) -> bool {
             let val = (self.0 >> 25usize) & 0x01;
@@ -6170,11 +5451,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec25(&mut self, val: bool) {
+        pub fn set_sec25(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec26(&self) -> bool {
             let val = (self.0 >> 26usize) & 0x01;
@@ -6182,11 +5462,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec26(&mut self, val: bool) {
+        pub fn set_sec26(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 26usize)) | (((val as u32) & 0x01) << 26usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec27(&self) -> bool {
             let val = (self.0 >> 27usize) & 0x01;
@@ -6194,11 +5473,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec27(&mut self, val: bool) {
+        pub fn set_sec27(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 27usize)) | (((val as u32) & 0x01) << 27usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec28(&self) -> bool {
             let val = (self.0 >> 28usize) & 0x01;
@@ -6206,11 +5484,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec28(&mut self, val: bool) {
+        pub fn set_sec28(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec29(&self) -> bool {
             let val = (self.0 >> 29usize) & 0x01;
@@ -6218,11 +5495,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec29(&mut self, val: bool) {
+        pub fn set_sec29(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec30(&self) -> bool {
             let val = (self.0 >> 30usize) & 0x01;
@@ -6230,11 +5506,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec30(&mut self, val: bool) {
+        pub fn set_sec30(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec31(&self) -> bool {
             let val = (self.0 >> 31usize) & 0x01;
@@ -6242,7 +5517,7 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec31(&mut self, val: bool) {
+        pub fn set_sec31(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
         }
     }
@@ -6293,42 +5568,7 @@ bytes key."]
     #[cfg(feature = "defmt")]
     impl defmt::Format for Secbb1r1 {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Secbb1r1 {{ sec0: {=bool:?}, sec1: {=bool:?}, sec2: {=bool:?}, sec3: {=bool:?}, sec4: {=bool:?}, sec5: {=bool:?}, sec6: {=bool:?}, sec7: {=bool:?}, sec8: {=bool:?}, sec9: {=bool:?}, sec10: {=bool:?}, sec11: {=bool:?}, sec12: {=bool:?}, sec13: {=bool:?}, sec14: {=bool:?}, sec15: {=bool:?}, sec16: {=bool:?}, sec17: {=bool:?}, sec18: {=bool:?}, sec19: {=bool:?}, sec20: {=bool:?}, sec21: {=bool:?}, sec22: {=bool:?}, sec23: {=bool:?}, sec24: {=bool:?}, sec25: {=bool:?}, sec26: {=bool:?}, sec27: {=bool:?}, sec28: {=bool:?}, sec29: {=bool:?}, sec30: {=bool:?}, sec31: {=bool:?} }}",
-                self.sec0(),
-                self.sec1(),
-                self.sec2(),
-                self.sec3(),
-                self.sec4(),
-                self.sec5(),
-                self.sec6(),
-                self.sec7(),
-                self.sec8(),
-                self.sec9(),
-                self.sec10(),
-                self.sec11(),
-                self.sec12(),
-                self.sec13(),
-                self.sec14(),
-                self.sec15(),
-                self.sec16(),
-                self.sec17(),
-                self.sec18(),
-                self.sec19(),
-                self.sec20(),
-                self.sec21(),
-                self.sec22(),
-                self.sec23(),
-                self.sec24(),
-                self.sec25(),
-                self.sec26(),
-                self.sec27(),
-                self.sec28(),
-                self.sec29(),
-                self.sec30(),
-                self.sec31()
-            )
+            defmt :: write ! (f , "Secbb1r1 {{ sec0: {=bool:?}, sec1: {=bool:?}, sec2: {=bool:?}, sec3: {=bool:?}, sec4: {=bool:?}, sec5: {=bool:?}, sec6: {=bool:?}, sec7: {=bool:?}, sec8: {=bool:?}, sec9: {=bool:?}, sec10: {=bool:?}, sec11: {=bool:?}, sec12: {=bool:?}, sec13: {=bool:?}, sec14: {=bool:?}, sec15: {=bool:?}, sec16: {=bool:?}, sec17: {=bool:?}, sec18: {=bool:?}, sec19: {=bool:?}, sec20: {=bool:?}, sec21: {=bool:?}, sec22: {=bool:?}, sec23: {=bool:?}, sec24: {=bool:?}, sec25: {=bool:?}, sec26: {=bool:?}, sec27: {=bool:?}, sec28: {=bool:?}, sec29: {=bool:?}, sec30: {=bool:?}, sec31: {=bool:?} }}" , self . sec0 () , self . sec1 () , self . sec2 () , self . sec3 () , self . sec4 () , self . sec5 () , self . sec6 () , self . sec7 () , self . sec8 () , self . sec9 () , self . sec10 () , self . sec11 () , self . sec12 () , self . sec13 () , self . sec14 () , self . sec15 () , self . sec16 () , self . sec17 () , self . sec18 () , self . sec19 () , self . sec20 () , self . sec21 () , self . sec22 () , self . sec23 () , self . sec24 () , self . sec25 () , self . sec26 () , self . sec27 () , self . sec28 () , self . sec29 () , self . sec30 () , self . sec31 ())
         }
     }
     #[doc = "FLASH secure block based bank 1 register 2."]
@@ -6337,7 +5577,6 @@ bytes key."]
     pub struct Secbb1r2(pub u32);
     impl Secbb1r2 {
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec0(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -6345,11 +5584,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec0(&mut self, val: bool) {
+        pub fn set_sec0(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec1(&self) -> bool {
             let val = (self.0 >> 1usize) & 0x01;
@@ -6357,11 +5595,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec1(&mut self, val: bool) {
+        pub fn set_sec1(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec2(&self) -> bool {
             let val = (self.0 >> 2usize) & 0x01;
@@ -6369,11 +5606,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec2(&mut self, val: bool) {
+        pub fn set_sec2(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec3(&self) -> bool {
             let val = (self.0 >> 3usize) & 0x01;
@@ -6381,11 +5617,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec3(&mut self, val: bool) {
+        pub fn set_sec3(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec4(&self) -> bool {
             let val = (self.0 >> 4usize) & 0x01;
@@ -6393,11 +5628,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec4(&mut self, val: bool) {
+        pub fn set_sec4(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec5(&self) -> bool {
             let val = (self.0 >> 5usize) & 0x01;
@@ -6405,11 +5639,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec5(&mut self, val: bool) {
+        pub fn set_sec5(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec6(&self) -> bool {
             let val = (self.0 >> 6usize) & 0x01;
@@ -6417,11 +5650,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec6(&mut self, val: bool) {
+        pub fn set_sec6(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec7(&self) -> bool {
             let val = (self.0 >> 7usize) & 0x01;
@@ -6429,11 +5661,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec7(&mut self, val: bool) {
+        pub fn set_sec7(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec8(&self) -> bool {
             let val = (self.0 >> 8usize) & 0x01;
@@ -6441,11 +5672,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec8(&mut self, val: bool) {
+        pub fn set_sec8(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec9(&self) -> bool {
             let val = (self.0 >> 9usize) & 0x01;
@@ -6453,11 +5683,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec9(&mut self, val: bool) {
+        pub fn set_sec9(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec10(&self) -> bool {
             let val = (self.0 >> 10usize) & 0x01;
@@ -6465,11 +5694,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec10(&mut self, val: bool) {
+        pub fn set_sec10(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec11(&self) -> bool {
             let val = (self.0 >> 11usize) & 0x01;
@@ -6477,11 +5705,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec11(&mut self, val: bool) {
+        pub fn set_sec11(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec12(&self) -> bool {
             let val = (self.0 >> 12usize) & 0x01;
@@ -6489,11 +5716,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec12(&mut self, val: bool) {
+        pub fn set_sec12(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec13(&self) -> bool {
             let val = (self.0 >> 13usize) & 0x01;
@@ -6501,11 +5727,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec13(&mut self, val: bool) {
+        pub fn set_sec13(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec14(&self) -> bool {
             let val = (self.0 >> 14usize) & 0x01;
@@ -6513,11 +5738,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec14(&mut self, val: bool) {
+        pub fn set_sec14(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec15(&self) -> bool {
             let val = (self.0 >> 15usize) & 0x01;
@@ -6525,11 +5749,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec15(&mut self, val: bool) {
+        pub fn set_sec15(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec16(&self) -> bool {
             let val = (self.0 >> 16usize) & 0x01;
@@ -6537,11 +5760,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec16(&mut self, val: bool) {
+        pub fn set_sec16(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec17(&self) -> bool {
             let val = (self.0 >> 17usize) & 0x01;
@@ -6549,11 +5771,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec17(&mut self, val: bool) {
+        pub fn set_sec17(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec18(&self) -> bool {
             let val = (self.0 >> 18usize) & 0x01;
@@ -6561,11 +5782,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec18(&mut self, val: bool) {
+        pub fn set_sec18(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec19(&self) -> bool {
             let val = (self.0 >> 19usize) & 0x01;
@@ -6573,11 +5793,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec19(&mut self, val: bool) {
+        pub fn set_sec19(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec20(&self) -> bool {
             let val = (self.0 >> 20usize) & 0x01;
@@ -6585,11 +5804,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec20(&mut self, val: bool) {
+        pub fn set_sec20(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec21(&self) -> bool {
             let val = (self.0 >> 21usize) & 0x01;
@@ -6597,11 +5815,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec21(&mut self, val: bool) {
+        pub fn set_sec21(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec22(&self) -> bool {
             let val = (self.0 >> 22usize) & 0x01;
@@ -6609,11 +5826,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec22(&mut self, val: bool) {
+        pub fn set_sec22(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec23(&self) -> bool {
             let val = (self.0 >> 23usize) & 0x01;
@@ -6621,11 +5837,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec23(&mut self, val: bool) {
+        pub fn set_sec23(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec24(&self) -> bool {
             let val = (self.0 >> 24usize) & 0x01;
@@ -6633,11 +5848,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec24(&mut self, val: bool) {
+        pub fn set_sec24(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec25(&self) -> bool {
             let val = (self.0 >> 25usize) & 0x01;
@@ -6645,11 +5859,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec25(&mut self, val: bool) {
+        pub fn set_sec25(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec26(&self) -> bool {
             let val = (self.0 >> 26usize) & 0x01;
@@ -6657,11 +5870,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec26(&mut self, val: bool) {
+        pub fn set_sec26(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 26usize)) | (((val as u32) & 0x01) << 26usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec27(&self) -> bool {
             let val = (self.0 >> 27usize) & 0x01;
@@ -6669,11 +5881,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec27(&mut self, val: bool) {
+        pub fn set_sec27(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 27usize)) | (((val as u32) & 0x01) << 27usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec28(&self) -> bool {
             let val = (self.0 >> 28usize) & 0x01;
@@ -6681,11 +5892,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec28(&mut self, val: bool) {
+        pub fn set_sec28(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec29(&self) -> bool {
             let val = (self.0 >> 29usize) & 0x01;
@@ -6693,11 +5903,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec29(&mut self, val: bool) {
+        pub fn set_sec29(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec30(&self) -> bool {
             let val = (self.0 >> 30usize) & 0x01;
@@ -6705,11 +5914,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec30(&mut self, val: bool) {
+        pub fn set_sec30(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec31(&self) -> bool {
             let val = (self.0 >> 31usize) & 0x01;
@@ -6717,7 +5925,7 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec31(&mut self, val: bool) {
+        pub fn set_sec31(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
         }
     }
@@ -6768,42 +5976,7 @@ bytes key."]
     #[cfg(feature = "defmt")]
     impl defmt::Format for Secbb1r2 {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Secbb1r2 {{ sec0: {=bool:?}, sec1: {=bool:?}, sec2: {=bool:?}, sec3: {=bool:?}, sec4: {=bool:?}, sec5: {=bool:?}, sec6: {=bool:?}, sec7: {=bool:?}, sec8: {=bool:?}, sec9: {=bool:?}, sec10: {=bool:?}, sec11: {=bool:?}, sec12: {=bool:?}, sec13: {=bool:?}, sec14: {=bool:?}, sec15: {=bool:?}, sec16: {=bool:?}, sec17: {=bool:?}, sec18: {=bool:?}, sec19: {=bool:?}, sec20: {=bool:?}, sec21: {=bool:?}, sec22: {=bool:?}, sec23: {=bool:?}, sec24: {=bool:?}, sec25: {=bool:?}, sec26: {=bool:?}, sec27: {=bool:?}, sec28: {=bool:?}, sec29: {=bool:?}, sec30: {=bool:?}, sec31: {=bool:?} }}",
-                self.sec0(),
-                self.sec1(),
-                self.sec2(),
-                self.sec3(),
-                self.sec4(),
-                self.sec5(),
-                self.sec6(),
-                self.sec7(),
-                self.sec8(),
-                self.sec9(),
-                self.sec10(),
-                self.sec11(),
-                self.sec12(),
-                self.sec13(),
-                self.sec14(),
-                self.sec15(),
-                self.sec16(),
-                self.sec17(),
-                self.sec18(),
-                self.sec19(),
-                self.sec20(),
-                self.sec21(),
-                self.sec22(),
-                self.sec23(),
-                self.sec24(),
-                self.sec25(),
-                self.sec26(),
-                self.sec27(),
-                self.sec28(),
-                self.sec29(),
-                self.sec30(),
-                self.sec31()
-            )
+            defmt :: write ! (f , "Secbb1r2 {{ sec0: {=bool:?}, sec1: {=bool:?}, sec2: {=bool:?}, sec3: {=bool:?}, sec4: {=bool:?}, sec5: {=bool:?}, sec6: {=bool:?}, sec7: {=bool:?}, sec8: {=bool:?}, sec9: {=bool:?}, sec10: {=bool:?}, sec11: {=bool:?}, sec12: {=bool:?}, sec13: {=bool:?}, sec14: {=bool:?}, sec15: {=bool:?}, sec16: {=bool:?}, sec17: {=bool:?}, sec18: {=bool:?}, sec19: {=bool:?}, sec20: {=bool:?}, sec21: {=bool:?}, sec22: {=bool:?}, sec23: {=bool:?}, sec24: {=bool:?}, sec25: {=bool:?}, sec26: {=bool:?}, sec27: {=bool:?}, sec28: {=bool:?}, sec29: {=bool:?}, sec30: {=bool:?}, sec31: {=bool:?} }}" , self . sec0 () , self . sec1 () , self . sec2 () , self . sec3 () , self . sec4 () , self . sec5 () , self . sec6 () , self . sec7 () , self . sec8 () , self . sec9 () , self . sec10 () , self . sec11 () , self . sec12 () , self . sec13 () , self . sec14 () , self . sec15 () , self . sec16 () , self . sec17 () , self . sec18 () , self . sec19 () , self . sec20 () , self . sec21 () , self . sec22 () , self . sec23 () , self . sec24 () , self . sec25 () , self . sec26 () , self . sec27 () , self . sec28 () , self . sec29 () , self . sec30 () , self . sec31 ())
         }
     }
     #[doc = "FLASH secure block based bank 1 register 3."]
@@ -6812,7 +5985,6 @@ bytes key."]
     pub struct Secbb1r3(pub u32);
     impl Secbb1r3 {
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec0(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -6820,11 +5992,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec0(&mut self, val: bool) {
+        pub fn set_sec0(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec1(&self) -> bool {
             let val = (self.0 >> 1usize) & 0x01;
@@ -6832,11 +6003,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec1(&mut self, val: bool) {
+        pub fn set_sec1(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec2(&self) -> bool {
             let val = (self.0 >> 2usize) & 0x01;
@@ -6844,11 +6014,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec2(&mut self, val: bool) {
+        pub fn set_sec2(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec3(&self) -> bool {
             let val = (self.0 >> 3usize) & 0x01;
@@ -6856,11 +6025,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec3(&mut self, val: bool) {
+        pub fn set_sec3(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec4(&self) -> bool {
             let val = (self.0 >> 4usize) & 0x01;
@@ -6868,11 +6036,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec4(&mut self, val: bool) {
+        pub fn set_sec4(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec5(&self) -> bool {
             let val = (self.0 >> 5usize) & 0x01;
@@ -6880,11 +6047,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec5(&mut self, val: bool) {
+        pub fn set_sec5(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec6(&self) -> bool {
             let val = (self.0 >> 6usize) & 0x01;
@@ -6892,11 +6058,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec6(&mut self, val: bool) {
+        pub fn set_sec6(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec7(&self) -> bool {
             let val = (self.0 >> 7usize) & 0x01;
@@ -6904,11 +6069,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec7(&mut self, val: bool) {
+        pub fn set_sec7(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec8(&self) -> bool {
             let val = (self.0 >> 8usize) & 0x01;
@@ -6916,11 +6080,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec8(&mut self, val: bool) {
+        pub fn set_sec8(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec9(&self) -> bool {
             let val = (self.0 >> 9usize) & 0x01;
@@ -6928,11 +6091,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec9(&mut self, val: bool) {
+        pub fn set_sec9(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec10(&self) -> bool {
             let val = (self.0 >> 10usize) & 0x01;
@@ -6940,11 +6102,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec10(&mut self, val: bool) {
+        pub fn set_sec10(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec11(&self) -> bool {
             let val = (self.0 >> 11usize) & 0x01;
@@ -6952,11 +6113,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec11(&mut self, val: bool) {
+        pub fn set_sec11(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec12(&self) -> bool {
             let val = (self.0 >> 12usize) & 0x01;
@@ -6964,11 +6124,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec12(&mut self, val: bool) {
+        pub fn set_sec12(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec13(&self) -> bool {
             let val = (self.0 >> 13usize) & 0x01;
@@ -6976,11 +6135,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec13(&mut self, val: bool) {
+        pub fn set_sec13(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec14(&self) -> bool {
             let val = (self.0 >> 14usize) & 0x01;
@@ -6988,11 +6146,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec14(&mut self, val: bool) {
+        pub fn set_sec14(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec15(&self) -> bool {
             let val = (self.0 >> 15usize) & 0x01;
@@ -7000,11 +6157,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec15(&mut self, val: bool) {
+        pub fn set_sec15(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec16(&self) -> bool {
             let val = (self.0 >> 16usize) & 0x01;
@@ -7012,11 +6168,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec16(&mut self, val: bool) {
+        pub fn set_sec16(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec17(&self) -> bool {
             let val = (self.0 >> 17usize) & 0x01;
@@ -7024,11 +6179,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec17(&mut self, val: bool) {
+        pub fn set_sec17(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec18(&self) -> bool {
             let val = (self.0 >> 18usize) & 0x01;
@@ -7036,11 +6190,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec18(&mut self, val: bool) {
+        pub fn set_sec18(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec19(&self) -> bool {
             let val = (self.0 >> 19usize) & 0x01;
@@ -7048,11 +6201,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec19(&mut self, val: bool) {
+        pub fn set_sec19(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec20(&self) -> bool {
             let val = (self.0 >> 20usize) & 0x01;
@@ -7060,11 +6212,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec20(&mut self, val: bool) {
+        pub fn set_sec20(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec21(&self) -> bool {
             let val = (self.0 >> 21usize) & 0x01;
@@ -7072,11 +6223,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec21(&mut self, val: bool) {
+        pub fn set_sec21(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec22(&self) -> bool {
             let val = (self.0 >> 22usize) & 0x01;
@@ -7084,11 +6234,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec22(&mut self, val: bool) {
+        pub fn set_sec22(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec23(&self) -> bool {
             let val = (self.0 >> 23usize) & 0x01;
@@ -7096,11 +6245,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec23(&mut self, val: bool) {
+        pub fn set_sec23(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec24(&self) -> bool {
             let val = (self.0 >> 24usize) & 0x01;
@@ -7108,11 +6256,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec24(&mut self, val: bool) {
+        pub fn set_sec24(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec25(&self) -> bool {
             let val = (self.0 >> 25usize) & 0x01;
@@ -7120,11 +6267,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec25(&mut self, val: bool) {
+        pub fn set_sec25(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec26(&self) -> bool {
             let val = (self.0 >> 26usize) & 0x01;
@@ -7132,11 +6278,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec26(&mut self, val: bool) {
+        pub fn set_sec26(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 26usize)) | (((val as u32) & 0x01) << 26usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec27(&self) -> bool {
             let val = (self.0 >> 27usize) & 0x01;
@@ -7144,11 +6289,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec27(&mut self, val: bool) {
+        pub fn set_sec27(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 27usize)) | (((val as u32) & 0x01) << 27usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec28(&self) -> bool {
             let val = (self.0 >> 28usize) & 0x01;
@@ -7156,11 +6300,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec28(&mut self, val: bool) {
+        pub fn set_sec28(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec29(&self) -> bool {
             let val = (self.0 >> 29usize) & 0x01;
@@ -7168,11 +6311,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec29(&mut self, val: bool) {
+        pub fn set_sec29(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec30(&self) -> bool {
             let val = (self.0 >> 30usize) & 0x01;
@@ -7180,11 +6322,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec30(&mut self, val: bool) {
+        pub fn set_sec30(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec31(&self) -> bool {
             let val = (self.0 >> 31usize) & 0x01;
@@ -7192,7 +6333,7 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec31(&mut self, val: bool) {
+        pub fn set_sec31(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
         }
     }
@@ -7243,42 +6384,7 @@ bytes key."]
     #[cfg(feature = "defmt")]
     impl defmt::Format for Secbb1r3 {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Secbb1r3 {{ sec0: {=bool:?}, sec1: {=bool:?}, sec2: {=bool:?}, sec3: {=bool:?}, sec4: {=bool:?}, sec5: {=bool:?}, sec6: {=bool:?}, sec7: {=bool:?}, sec8: {=bool:?}, sec9: {=bool:?}, sec10: {=bool:?}, sec11: {=bool:?}, sec12: {=bool:?}, sec13: {=bool:?}, sec14: {=bool:?}, sec15: {=bool:?}, sec16: {=bool:?}, sec17: {=bool:?}, sec18: {=bool:?}, sec19: {=bool:?}, sec20: {=bool:?}, sec21: {=bool:?}, sec22: {=bool:?}, sec23: {=bool:?}, sec24: {=bool:?}, sec25: {=bool:?}, sec26: {=bool:?}, sec27: {=bool:?}, sec28: {=bool:?}, sec29: {=bool:?}, sec30: {=bool:?}, sec31: {=bool:?} }}",
-                self.sec0(),
-                self.sec1(),
-                self.sec2(),
-                self.sec3(),
-                self.sec4(),
-                self.sec5(),
-                self.sec6(),
-                self.sec7(),
-                self.sec8(),
-                self.sec9(),
-                self.sec10(),
-                self.sec11(),
-                self.sec12(),
-                self.sec13(),
-                self.sec14(),
-                self.sec15(),
-                self.sec16(),
-                self.sec17(),
-                self.sec18(),
-                self.sec19(),
-                self.sec20(),
-                self.sec21(),
-                self.sec22(),
-                self.sec23(),
-                self.sec24(),
-                self.sec25(),
-                self.sec26(),
-                self.sec27(),
-                self.sec28(),
-                self.sec29(),
-                self.sec30(),
-                self.sec31()
-            )
+            defmt :: write ! (f , "Secbb1r3 {{ sec0: {=bool:?}, sec1: {=bool:?}, sec2: {=bool:?}, sec3: {=bool:?}, sec4: {=bool:?}, sec5: {=bool:?}, sec6: {=bool:?}, sec7: {=bool:?}, sec8: {=bool:?}, sec9: {=bool:?}, sec10: {=bool:?}, sec11: {=bool:?}, sec12: {=bool:?}, sec13: {=bool:?}, sec14: {=bool:?}, sec15: {=bool:?}, sec16: {=bool:?}, sec17: {=bool:?}, sec18: {=bool:?}, sec19: {=bool:?}, sec20: {=bool:?}, sec21: {=bool:?}, sec22: {=bool:?}, sec23: {=bool:?}, sec24: {=bool:?}, sec25: {=bool:?}, sec26: {=bool:?}, sec27: {=bool:?}, sec28: {=bool:?}, sec29: {=bool:?}, sec30: {=bool:?}, sec31: {=bool:?} }}" , self . sec0 () , self . sec1 () , self . sec2 () , self . sec3 () , self . sec4 () , self . sec5 () , self . sec6 () , self . sec7 () , self . sec8 () , self . sec9 () , self . sec10 () , self . sec11 () , self . sec12 () , self . sec13 () , self . sec14 () , self . sec15 () , self . sec16 () , self . sec17 () , self . sec18 () , self . sec19 () , self . sec20 () , self . sec21 () , self . sec22 () , self . sec23 () , self . sec24 () , self . sec25 () , self . sec26 () , self . sec27 () , self . sec28 () , self . sec29 () , self . sec30 () , self . sec31 ())
         }
     }
     #[doc = "FLASH secure block based bank 1 register 4."]
@@ -7287,7 +6393,6 @@ bytes key."]
     pub struct Secbb1r4(pub u32);
     impl Secbb1r4 {
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec0(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -7295,11 +6400,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec0(&mut self, val: bool) {
+        pub fn set_sec0(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec1(&self) -> bool {
             let val = (self.0 >> 1usize) & 0x01;
@@ -7307,11 +6411,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec1(&mut self, val: bool) {
+        pub fn set_sec1(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec2(&self) -> bool {
             let val = (self.0 >> 2usize) & 0x01;
@@ -7319,11 +6422,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec2(&mut self, val: bool) {
+        pub fn set_sec2(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec3(&self) -> bool {
             let val = (self.0 >> 3usize) & 0x01;
@@ -7331,11 +6433,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec3(&mut self, val: bool) {
+        pub fn set_sec3(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec4(&self) -> bool {
             let val = (self.0 >> 4usize) & 0x01;
@@ -7343,11 +6444,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec4(&mut self, val: bool) {
+        pub fn set_sec4(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec5(&self) -> bool {
             let val = (self.0 >> 5usize) & 0x01;
@@ -7355,11 +6455,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec5(&mut self, val: bool) {
+        pub fn set_sec5(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec6(&self) -> bool {
             let val = (self.0 >> 6usize) & 0x01;
@@ -7367,11 +6466,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec6(&mut self, val: bool) {
+        pub fn set_sec6(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec7(&self) -> bool {
             let val = (self.0 >> 7usize) & 0x01;
@@ -7379,11 +6477,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec7(&mut self, val: bool) {
+        pub fn set_sec7(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec8(&self) -> bool {
             let val = (self.0 >> 8usize) & 0x01;
@@ -7391,11 +6488,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec8(&mut self, val: bool) {
+        pub fn set_sec8(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec9(&self) -> bool {
             let val = (self.0 >> 9usize) & 0x01;
@@ -7403,11 +6499,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec9(&mut self, val: bool) {
+        pub fn set_sec9(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec10(&self) -> bool {
             let val = (self.0 >> 10usize) & 0x01;
@@ -7415,11 +6510,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec10(&mut self, val: bool) {
+        pub fn set_sec10(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec11(&self) -> bool {
             let val = (self.0 >> 11usize) & 0x01;
@@ -7427,11 +6521,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec11(&mut self, val: bool) {
+        pub fn set_sec11(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec12(&self) -> bool {
             let val = (self.0 >> 12usize) & 0x01;
@@ -7439,11 +6532,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec12(&mut self, val: bool) {
+        pub fn set_sec12(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec13(&self) -> bool {
             let val = (self.0 >> 13usize) & 0x01;
@@ -7451,11 +6543,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec13(&mut self, val: bool) {
+        pub fn set_sec13(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec14(&self) -> bool {
             let val = (self.0 >> 14usize) & 0x01;
@@ -7463,11 +6554,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec14(&mut self, val: bool) {
+        pub fn set_sec14(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec15(&self) -> bool {
             let val = (self.0 >> 15usize) & 0x01;
@@ -7475,11 +6565,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec15(&mut self, val: bool) {
+        pub fn set_sec15(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec16(&self) -> bool {
             let val = (self.0 >> 16usize) & 0x01;
@@ -7487,11 +6576,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec16(&mut self, val: bool) {
+        pub fn set_sec16(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec17(&self) -> bool {
             let val = (self.0 >> 17usize) & 0x01;
@@ -7499,11 +6587,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec17(&mut self, val: bool) {
+        pub fn set_sec17(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec18(&self) -> bool {
             let val = (self.0 >> 18usize) & 0x01;
@@ -7511,11 +6598,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec18(&mut self, val: bool) {
+        pub fn set_sec18(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec19(&self) -> bool {
             let val = (self.0 >> 19usize) & 0x01;
@@ -7523,11 +6609,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec19(&mut self, val: bool) {
+        pub fn set_sec19(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec20(&self) -> bool {
             let val = (self.0 >> 20usize) & 0x01;
@@ -7535,11 +6620,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec20(&mut self, val: bool) {
+        pub fn set_sec20(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec21(&self) -> bool {
             let val = (self.0 >> 21usize) & 0x01;
@@ -7547,11 +6631,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec21(&mut self, val: bool) {
+        pub fn set_sec21(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec22(&self) -> bool {
             let val = (self.0 >> 22usize) & 0x01;
@@ -7559,11 +6642,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec22(&mut self, val: bool) {
+        pub fn set_sec22(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec23(&self) -> bool {
             let val = (self.0 >> 23usize) & 0x01;
@@ -7571,11 +6653,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec23(&mut self, val: bool) {
+        pub fn set_sec23(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec24(&self) -> bool {
             let val = (self.0 >> 24usize) & 0x01;
@@ -7583,11 +6664,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec24(&mut self, val: bool) {
+        pub fn set_sec24(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec25(&self) -> bool {
             let val = (self.0 >> 25usize) & 0x01;
@@ -7595,11 +6675,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec25(&mut self, val: bool) {
+        pub fn set_sec25(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec26(&self) -> bool {
             let val = (self.0 >> 26usize) & 0x01;
@@ -7607,11 +6686,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec26(&mut self, val: bool) {
+        pub fn set_sec26(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 26usize)) | (((val as u32) & 0x01) << 26usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec27(&self) -> bool {
             let val = (self.0 >> 27usize) & 0x01;
@@ -7619,11 +6697,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec27(&mut self, val: bool) {
+        pub fn set_sec27(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 27usize)) | (((val as u32) & 0x01) << 27usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec28(&self) -> bool {
             let val = (self.0 >> 28usize) & 0x01;
@@ -7631,11 +6708,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec28(&mut self, val: bool) {
+        pub fn set_sec28(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec29(&self) -> bool {
             let val = (self.0 >> 29usize) & 0x01;
@@ -7643,11 +6719,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec29(&mut self, val: bool) {
+        pub fn set_sec29(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec30(&self) -> bool {
             let val = (self.0 >> 30usize) & 0x01;
@@ -7655,11 +6730,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec30(&mut self, val: bool) {
+        pub fn set_sec30(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec31(&self) -> bool {
             let val = (self.0 >> 31usize) & 0x01;
@@ -7667,7 +6741,7 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec31(&mut self, val: bool) {
+        pub fn set_sec31(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
         }
     }
@@ -7718,42 +6792,7 @@ bytes key."]
     #[cfg(feature = "defmt")]
     impl defmt::Format for Secbb1r4 {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Secbb1r4 {{ sec0: {=bool:?}, sec1: {=bool:?}, sec2: {=bool:?}, sec3: {=bool:?}, sec4: {=bool:?}, sec5: {=bool:?}, sec6: {=bool:?}, sec7: {=bool:?}, sec8: {=bool:?}, sec9: {=bool:?}, sec10: {=bool:?}, sec11: {=bool:?}, sec12: {=bool:?}, sec13: {=bool:?}, sec14: {=bool:?}, sec15: {=bool:?}, sec16: {=bool:?}, sec17: {=bool:?}, sec18: {=bool:?}, sec19: {=bool:?}, sec20: {=bool:?}, sec21: {=bool:?}, sec22: {=bool:?}, sec23: {=bool:?}, sec24: {=bool:?}, sec25: {=bool:?}, sec26: {=bool:?}, sec27: {=bool:?}, sec28: {=bool:?}, sec29: {=bool:?}, sec30: {=bool:?}, sec31: {=bool:?} }}",
-                self.sec0(),
-                self.sec1(),
-                self.sec2(),
-                self.sec3(),
-                self.sec4(),
-                self.sec5(),
-                self.sec6(),
-                self.sec7(),
-                self.sec8(),
-                self.sec9(),
-                self.sec10(),
-                self.sec11(),
-                self.sec12(),
-                self.sec13(),
-                self.sec14(),
-                self.sec15(),
-                self.sec16(),
-                self.sec17(),
-                self.sec18(),
-                self.sec19(),
-                self.sec20(),
-                self.sec21(),
-                self.sec22(),
-                self.sec23(),
-                self.sec24(),
-                self.sec25(),
-                self.sec26(),
-                self.sec27(),
-                self.sec28(),
-                self.sec29(),
-                self.sec30(),
-                self.sec31()
-            )
+            defmt :: write ! (f , "Secbb1r4 {{ sec0: {=bool:?}, sec1: {=bool:?}, sec2: {=bool:?}, sec3: {=bool:?}, sec4: {=bool:?}, sec5: {=bool:?}, sec6: {=bool:?}, sec7: {=bool:?}, sec8: {=bool:?}, sec9: {=bool:?}, sec10: {=bool:?}, sec11: {=bool:?}, sec12: {=bool:?}, sec13: {=bool:?}, sec14: {=bool:?}, sec15: {=bool:?}, sec16: {=bool:?}, sec17: {=bool:?}, sec18: {=bool:?}, sec19: {=bool:?}, sec20: {=bool:?}, sec21: {=bool:?}, sec22: {=bool:?}, sec23: {=bool:?}, sec24: {=bool:?}, sec25: {=bool:?}, sec26: {=bool:?}, sec27: {=bool:?}, sec28: {=bool:?}, sec29: {=bool:?}, sec30: {=bool:?}, sec31: {=bool:?} }}" , self . sec0 () , self . sec1 () , self . sec2 () , self . sec3 () , self . sec4 () , self . sec5 () , self . sec6 () , self . sec7 () , self . sec8 () , self . sec9 () , self . sec10 () , self . sec11 () , self . sec12 () , self . sec13 () , self . sec14 () , self . sec15 () , self . sec16 () , self . sec17 () , self . sec18 () , self . sec19 () , self . sec20 () , self . sec21 () , self . sec22 () , self . sec23 () , self . sec24 () , self . sec25 () , self . sec26 () , self . sec27 () , self . sec28 () , self . sec29 () , self . sec30 () , self . sec31 ())
         }
     }
     #[doc = "FLASH secure block based bank 2 register 1."]
@@ -7762,7 +6801,6 @@ bytes key."]
     pub struct Secbb2r1(pub u32);
     impl Secbb2r1 {
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec0(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -7770,11 +6808,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec0(&mut self, val: bool) {
+        pub fn set_sec0(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec1(&self) -> bool {
             let val = (self.0 >> 1usize) & 0x01;
@@ -7782,11 +6819,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec1(&mut self, val: bool) {
+        pub fn set_sec1(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec2(&self) -> bool {
             let val = (self.0 >> 2usize) & 0x01;
@@ -7794,11 +6830,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec2(&mut self, val: bool) {
+        pub fn set_sec2(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec3(&self) -> bool {
             let val = (self.0 >> 3usize) & 0x01;
@@ -7806,11 +6841,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec3(&mut self, val: bool) {
+        pub fn set_sec3(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec4(&self) -> bool {
             let val = (self.0 >> 4usize) & 0x01;
@@ -7818,11 +6852,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec4(&mut self, val: bool) {
+        pub fn set_sec4(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec5(&self) -> bool {
             let val = (self.0 >> 5usize) & 0x01;
@@ -7830,11 +6863,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec5(&mut self, val: bool) {
+        pub fn set_sec5(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec6(&self) -> bool {
             let val = (self.0 >> 6usize) & 0x01;
@@ -7842,11 +6874,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec6(&mut self, val: bool) {
+        pub fn set_sec6(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec7(&self) -> bool {
             let val = (self.0 >> 7usize) & 0x01;
@@ -7854,11 +6885,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec7(&mut self, val: bool) {
+        pub fn set_sec7(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec8(&self) -> bool {
             let val = (self.0 >> 8usize) & 0x01;
@@ -7866,11 +6896,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec8(&mut self, val: bool) {
+        pub fn set_sec8(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec9(&self) -> bool {
             let val = (self.0 >> 9usize) & 0x01;
@@ -7878,11 +6907,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec9(&mut self, val: bool) {
+        pub fn set_sec9(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec10(&self) -> bool {
             let val = (self.0 >> 10usize) & 0x01;
@@ -7890,11 +6918,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec10(&mut self, val: bool) {
+        pub fn set_sec10(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec11(&self) -> bool {
             let val = (self.0 >> 11usize) & 0x01;
@@ -7902,11 +6929,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec11(&mut self, val: bool) {
+        pub fn set_sec11(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec12(&self) -> bool {
             let val = (self.0 >> 12usize) & 0x01;
@@ -7914,11 +6940,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec12(&mut self, val: bool) {
+        pub fn set_sec12(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec13(&self) -> bool {
             let val = (self.0 >> 13usize) & 0x01;
@@ -7926,11 +6951,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec13(&mut self, val: bool) {
+        pub fn set_sec13(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec14(&self) -> bool {
             let val = (self.0 >> 14usize) & 0x01;
@@ -7938,11 +6962,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec14(&mut self, val: bool) {
+        pub fn set_sec14(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec15(&self) -> bool {
             let val = (self.0 >> 15usize) & 0x01;
@@ -7950,11 +6973,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec15(&mut self, val: bool) {
+        pub fn set_sec15(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec16(&self) -> bool {
             let val = (self.0 >> 16usize) & 0x01;
@@ -7962,11 +6984,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec16(&mut self, val: bool) {
+        pub fn set_sec16(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec17(&self) -> bool {
             let val = (self.0 >> 17usize) & 0x01;
@@ -7974,11 +6995,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec17(&mut self, val: bool) {
+        pub fn set_sec17(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec18(&self) -> bool {
             let val = (self.0 >> 18usize) & 0x01;
@@ -7986,11 +7006,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec18(&mut self, val: bool) {
+        pub fn set_sec18(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec19(&self) -> bool {
             let val = (self.0 >> 19usize) & 0x01;
@@ -7998,11 +7017,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec19(&mut self, val: bool) {
+        pub fn set_sec19(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec20(&self) -> bool {
             let val = (self.0 >> 20usize) & 0x01;
@@ -8010,11 +7028,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec20(&mut self, val: bool) {
+        pub fn set_sec20(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec21(&self) -> bool {
             let val = (self.0 >> 21usize) & 0x01;
@@ -8022,11 +7039,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec21(&mut self, val: bool) {
+        pub fn set_sec21(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec22(&self) -> bool {
             let val = (self.0 >> 22usize) & 0x01;
@@ -8034,11 +7050,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec22(&mut self, val: bool) {
+        pub fn set_sec22(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec23(&self) -> bool {
             let val = (self.0 >> 23usize) & 0x01;
@@ -8046,11 +7061,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec23(&mut self, val: bool) {
+        pub fn set_sec23(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec24(&self) -> bool {
             let val = (self.0 >> 24usize) & 0x01;
@@ -8058,11 +7072,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec24(&mut self, val: bool) {
+        pub fn set_sec24(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec25(&self) -> bool {
             let val = (self.0 >> 25usize) & 0x01;
@@ -8070,11 +7083,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec25(&mut self, val: bool) {
+        pub fn set_sec25(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec26(&self) -> bool {
             let val = (self.0 >> 26usize) & 0x01;
@@ -8082,11 +7094,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec26(&mut self, val: bool) {
+        pub fn set_sec26(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 26usize)) | (((val as u32) & 0x01) << 26usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec27(&self) -> bool {
             let val = (self.0 >> 27usize) & 0x01;
@@ -8094,11 +7105,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec27(&mut self, val: bool) {
+        pub fn set_sec27(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 27usize)) | (((val as u32) & 0x01) << 27usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec28(&self) -> bool {
             let val = (self.0 >> 28usize) & 0x01;
@@ -8106,11 +7116,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec28(&mut self, val: bool) {
+        pub fn set_sec28(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec29(&self) -> bool {
             let val = (self.0 >> 29usize) & 0x01;
@@ -8118,11 +7127,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec29(&mut self, val: bool) {
+        pub fn set_sec29(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec30(&self) -> bool {
             let val = (self.0 >> 30usize) & 0x01;
@@ -8130,11 +7138,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec30(&mut self, val: bool) {
+        pub fn set_sec30(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec31(&self) -> bool {
             let val = (self.0 >> 31usize) & 0x01;
@@ -8142,7 +7149,7 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec31(&mut self, val: bool) {
+        pub fn set_sec31(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
         }
     }
@@ -8193,42 +7200,7 @@ bytes key."]
     #[cfg(feature = "defmt")]
     impl defmt::Format for Secbb2r1 {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Secbb2r1 {{ sec0: {=bool:?}, sec1: {=bool:?}, sec2: {=bool:?}, sec3: {=bool:?}, sec4: {=bool:?}, sec5: {=bool:?}, sec6: {=bool:?}, sec7: {=bool:?}, sec8: {=bool:?}, sec9: {=bool:?}, sec10: {=bool:?}, sec11: {=bool:?}, sec12: {=bool:?}, sec13: {=bool:?}, sec14: {=bool:?}, sec15: {=bool:?}, sec16: {=bool:?}, sec17: {=bool:?}, sec18: {=bool:?}, sec19: {=bool:?}, sec20: {=bool:?}, sec21: {=bool:?}, sec22: {=bool:?}, sec23: {=bool:?}, sec24: {=bool:?}, sec25: {=bool:?}, sec26: {=bool:?}, sec27: {=bool:?}, sec28: {=bool:?}, sec29: {=bool:?}, sec30: {=bool:?}, sec31: {=bool:?} }}",
-                self.sec0(),
-                self.sec1(),
-                self.sec2(),
-                self.sec3(),
-                self.sec4(),
-                self.sec5(),
-                self.sec6(),
-                self.sec7(),
-                self.sec8(),
-                self.sec9(),
-                self.sec10(),
-                self.sec11(),
-                self.sec12(),
-                self.sec13(),
-                self.sec14(),
-                self.sec15(),
-                self.sec16(),
-                self.sec17(),
-                self.sec18(),
-                self.sec19(),
-                self.sec20(),
-                self.sec21(),
-                self.sec22(),
-                self.sec23(),
-                self.sec24(),
-                self.sec25(),
-                self.sec26(),
-                self.sec27(),
-                self.sec28(),
-                self.sec29(),
-                self.sec30(),
-                self.sec31()
-            )
+            defmt :: write ! (f , "Secbb2r1 {{ sec0: {=bool:?}, sec1: {=bool:?}, sec2: {=bool:?}, sec3: {=bool:?}, sec4: {=bool:?}, sec5: {=bool:?}, sec6: {=bool:?}, sec7: {=bool:?}, sec8: {=bool:?}, sec9: {=bool:?}, sec10: {=bool:?}, sec11: {=bool:?}, sec12: {=bool:?}, sec13: {=bool:?}, sec14: {=bool:?}, sec15: {=bool:?}, sec16: {=bool:?}, sec17: {=bool:?}, sec18: {=bool:?}, sec19: {=bool:?}, sec20: {=bool:?}, sec21: {=bool:?}, sec22: {=bool:?}, sec23: {=bool:?}, sec24: {=bool:?}, sec25: {=bool:?}, sec26: {=bool:?}, sec27: {=bool:?}, sec28: {=bool:?}, sec29: {=bool:?}, sec30: {=bool:?}, sec31: {=bool:?} }}" , self . sec0 () , self . sec1 () , self . sec2 () , self . sec3 () , self . sec4 () , self . sec5 () , self . sec6 () , self . sec7 () , self . sec8 () , self . sec9 () , self . sec10 () , self . sec11 () , self . sec12 () , self . sec13 () , self . sec14 () , self . sec15 () , self . sec16 () , self . sec17 () , self . sec18 () , self . sec19 () , self . sec20 () , self . sec21 () , self . sec22 () , self . sec23 () , self . sec24 () , self . sec25 () , self . sec26 () , self . sec27 () , self . sec28 () , self . sec29 () , self . sec30 () , self . sec31 ())
         }
     }
     #[doc = "FLASH secure block based bank 2 register 2."]
@@ -8237,7 +7209,6 @@ bytes key."]
     pub struct Secbb2r2(pub u32);
     impl Secbb2r2 {
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec0(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -8245,11 +7216,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec0(&mut self, val: bool) {
+        pub fn set_sec0(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec1(&self) -> bool {
             let val = (self.0 >> 1usize) & 0x01;
@@ -8257,11 +7227,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec1(&mut self, val: bool) {
+        pub fn set_sec1(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec2(&self) -> bool {
             let val = (self.0 >> 2usize) & 0x01;
@@ -8269,11 +7238,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec2(&mut self, val: bool) {
+        pub fn set_sec2(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec3(&self) -> bool {
             let val = (self.0 >> 3usize) & 0x01;
@@ -8281,11 +7249,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec3(&mut self, val: bool) {
+        pub fn set_sec3(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec4(&self) -> bool {
             let val = (self.0 >> 4usize) & 0x01;
@@ -8293,11 +7260,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec4(&mut self, val: bool) {
+        pub fn set_sec4(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec5(&self) -> bool {
             let val = (self.0 >> 5usize) & 0x01;
@@ -8305,11 +7271,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec5(&mut self, val: bool) {
+        pub fn set_sec5(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec6(&self) -> bool {
             let val = (self.0 >> 6usize) & 0x01;
@@ -8317,11 +7282,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec6(&mut self, val: bool) {
+        pub fn set_sec6(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec7(&self) -> bool {
             let val = (self.0 >> 7usize) & 0x01;
@@ -8329,11 +7293,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec7(&mut self, val: bool) {
+        pub fn set_sec7(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec8(&self) -> bool {
             let val = (self.0 >> 8usize) & 0x01;
@@ -8341,11 +7304,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec8(&mut self, val: bool) {
+        pub fn set_sec8(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec9(&self) -> bool {
             let val = (self.0 >> 9usize) & 0x01;
@@ -8353,11 +7315,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec9(&mut self, val: bool) {
+        pub fn set_sec9(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec10(&self) -> bool {
             let val = (self.0 >> 10usize) & 0x01;
@@ -8365,11 +7326,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec10(&mut self, val: bool) {
+        pub fn set_sec10(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec11(&self) -> bool {
             let val = (self.0 >> 11usize) & 0x01;
@@ -8377,11 +7337,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec11(&mut self, val: bool) {
+        pub fn set_sec11(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec12(&self) -> bool {
             let val = (self.0 >> 12usize) & 0x01;
@@ -8389,11 +7348,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec12(&mut self, val: bool) {
+        pub fn set_sec12(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec13(&self) -> bool {
             let val = (self.0 >> 13usize) & 0x01;
@@ -8401,11 +7359,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec13(&mut self, val: bool) {
+        pub fn set_sec13(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec14(&self) -> bool {
             let val = (self.0 >> 14usize) & 0x01;
@@ -8413,11 +7370,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec14(&mut self, val: bool) {
+        pub fn set_sec14(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec15(&self) -> bool {
             let val = (self.0 >> 15usize) & 0x01;
@@ -8425,11 +7381,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec15(&mut self, val: bool) {
+        pub fn set_sec15(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec16(&self) -> bool {
             let val = (self.0 >> 16usize) & 0x01;
@@ -8437,11 +7392,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec16(&mut self, val: bool) {
+        pub fn set_sec16(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec17(&self) -> bool {
             let val = (self.0 >> 17usize) & 0x01;
@@ -8449,11 +7403,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec17(&mut self, val: bool) {
+        pub fn set_sec17(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec18(&self) -> bool {
             let val = (self.0 >> 18usize) & 0x01;
@@ -8461,11 +7414,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec18(&mut self, val: bool) {
+        pub fn set_sec18(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec19(&self) -> bool {
             let val = (self.0 >> 19usize) & 0x01;
@@ -8473,11 +7425,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec19(&mut self, val: bool) {
+        pub fn set_sec19(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec20(&self) -> bool {
             let val = (self.0 >> 20usize) & 0x01;
@@ -8485,11 +7436,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec20(&mut self, val: bool) {
+        pub fn set_sec20(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec21(&self) -> bool {
             let val = (self.0 >> 21usize) & 0x01;
@@ -8497,11 +7447,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec21(&mut self, val: bool) {
+        pub fn set_sec21(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec22(&self) -> bool {
             let val = (self.0 >> 22usize) & 0x01;
@@ -8509,11 +7458,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec22(&mut self, val: bool) {
+        pub fn set_sec22(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec23(&self) -> bool {
             let val = (self.0 >> 23usize) & 0x01;
@@ -8521,11 +7469,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec23(&mut self, val: bool) {
+        pub fn set_sec23(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec24(&self) -> bool {
             let val = (self.0 >> 24usize) & 0x01;
@@ -8533,11 +7480,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec24(&mut self, val: bool) {
+        pub fn set_sec24(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec25(&self) -> bool {
             let val = (self.0 >> 25usize) & 0x01;
@@ -8545,11 +7491,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec25(&mut self, val: bool) {
+        pub fn set_sec25(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec26(&self) -> bool {
             let val = (self.0 >> 26usize) & 0x01;
@@ -8557,11 +7502,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec26(&mut self, val: bool) {
+        pub fn set_sec26(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 26usize)) | (((val as u32) & 0x01) << 26usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec27(&self) -> bool {
             let val = (self.0 >> 27usize) & 0x01;
@@ -8569,11 +7513,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec27(&mut self, val: bool) {
+        pub fn set_sec27(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 27usize)) | (((val as u32) & 0x01) << 27usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec28(&self) -> bool {
             let val = (self.0 >> 28usize) & 0x01;
@@ -8581,11 +7524,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec28(&mut self, val: bool) {
+        pub fn set_sec28(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec29(&self) -> bool {
             let val = (self.0 >> 29usize) & 0x01;
@@ -8593,11 +7535,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec29(&mut self, val: bool) {
+        pub fn set_sec29(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec30(&self) -> bool {
             let val = (self.0 >> 30usize) & 0x01;
@@ -8605,11 +7546,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec30(&mut self, val: bool) {
+        pub fn set_sec30(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec31(&self) -> bool {
             let val = (self.0 >> 31usize) & 0x01;
@@ -8617,7 +7557,7 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec31(&mut self, val: bool) {
+        pub fn set_sec31(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
         }
     }
@@ -8668,42 +7608,7 @@ bytes key."]
     #[cfg(feature = "defmt")]
     impl defmt::Format for Secbb2r2 {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Secbb2r2 {{ sec0: {=bool:?}, sec1: {=bool:?}, sec2: {=bool:?}, sec3: {=bool:?}, sec4: {=bool:?}, sec5: {=bool:?}, sec6: {=bool:?}, sec7: {=bool:?}, sec8: {=bool:?}, sec9: {=bool:?}, sec10: {=bool:?}, sec11: {=bool:?}, sec12: {=bool:?}, sec13: {=bool:?}, sec14: {=bool:?}, sec15: {=bool:?}, sec16: {=bool:?}, sec17: {=bool:?}, sec18: {=bool:?}, sec19: {=bool:?}, sec20: {=bool:?}, sec21: {=bool:?}, sec22: {=bool:?}, sec23: {=bool:?}, sec24: {=bool:?}, sec25: {=bool:?}, sec26: {=bool:?}, sec27: {=bool:?}, sec28: {=bool:?}, sec29: {=bool:?}, sec30: {=bool:?}, sec31: {=bool:?} }}",
-                self.sec0(),
-                self.sec1(),
-                self.sec2(),
-                self.sec3(),
-                self.sec4(),
-                self.sec5(),
-                self.sec6(),
-                self.sec7(),
-                self.sec8(),
-                self.sec9(),
-                self.sec10(),
-                self.sec11(),
-                self.sec12(),
-                self.sec13(),
-                self.sec14(),
-                self.sec15(),
-                self.sec16(),
-                self.sec17(),
-                self.sec18(),
-                self.sec19(),
-                self.sec20(),
-                self.sec21(),
-                self.sec22(),
-                self.sec23(),
-                self.sec24(),
-                self.sec25(),
-                self.sec26(),
-                self.sec27(),
-                self.sec28(),
-                self.sec29(),
-                self.sec30(),
-                self.sec31()
-            )
+            defmt :: write ! (f , "Secbb2r2 {{ sec0: {=bool:?}, sec1: {=bool:?}, sec2: {=bool:?}, sec3: {=bool:?}, sec4: {=bool:?}, sec5: {=bool:?}, sec6: {=bool:?}, sec7: {=bool:?}, sec8: {=bool:?}, sec9: {=bool:?}, sec10: {=bool:?}, sec11: {=bool:?}, sec12: {=bool:?}, sec13: {=bool:?}, sec14: {=bool:?}, sec15: {=bool:?}, sec16: {=bool:?}, sec17: {=bool:?}, sec18: {=bool:?}, sec19: {=bool:?}, sec20: {=bool:?}, sec21: {=bool:?}, sec22: {=bool:?}, sec23: {=bool:?}, sec24: {=bool:?}, sec25: {=bool:?}, sec26: {=bool:?}, sec27: {=bool:?}, sec28: {=bool:?}, sec29: {=bool:?}, sec30: {=bool:?}, sec31: {=bool:?} }}" , self . sec0 () , self . sec1 () , self . sec2 () , self . sec3 () , self . sec4 () , self . sec5 () , self . sec6 () , self . sec7 () , self . sec8 () , self . sec9 () , self . sec10 () , self . sec11 () , self . sec12 () , self . sec13 () , self . sec14 () , self . sec15 () , self . sec16 () , self . sec17 () , self . sec18 () , self . sec19 () , self . sec20 () , self . sec21 () , self . sec22 () , self . sec23 () , self . sec24 () , self . sec25 () , self . sec26 () , self . sec27 () , self . sec28 () , self . sec29 () , self . sec30 () , self . sec31 ())
         }
     }
     #[doc = "FLASH secure block based bank 2 register 3."]
@@ -8712,7 +7617,6 @@ bytes key."]
     pub struct Secbb2r3(pub u32);
     impl Secbb2r3 {
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec0(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -8720,11 +7624,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec0(&mut self, val: bool) {
+        pub fn set_sec0(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec1(&self) -> bool {
             let val = (self.0 >> 1usize) & 0x01;
@@ -8732,11 +7635,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec1(&mut self, val: bool) {
+        pub fn set_sec1(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec2(&self) -> bool {
             let val = (self.0 >> 2usize) & 0x01;
@@ -8744,11 +7646,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec2(&mut self, val: bool) {
+        pub fn set_sec2(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec3(&self) -> bool {
             let val = (self.0 >> 3usize) & 0x01;
@@ -8756,11 +7657,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec3(&mut self, val: bool) {
+        pub fn set_sec3(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec4(&self) -> bool {
             let val = (self.0 >> 4usize) & 0x01;
@@ -8768,11 +7668,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec4(&mut self, val: bool) {
+        pub fn set_sec4(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec5(&self) -> bool {
             let val = (self.0 >> 5usize) & 0x01;
@@ -8780,11 +7679,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec5(&mut self, val: bool) {
+        pub fn set_sec5(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec6(&self) -> bool {
             let val = (self.0 >> 6usize) & 0x01;
@@ -8792,11 +7690,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec6(&mut self, val: bool) {
+        pub fn set_sec6(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec7(&self) -> bool {
             let val = (self.0 >> 7usize) & 0x01;
@@ -8804,11 +7701,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec7(&mut self, val: bool) {
+        pub fn set_sec7(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec8(&self) -> bool {
             let val = (self.0 >> 8usize) & 0x01;
@@ -8816,11 +7712,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec8(&mut self, val: bool) {
+        pub fn set_sec8(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec9(&self) -> bool {
             let val = (self.0 >> 9usize) & 0x01;
@@ -8828,11 +7723,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec9(&mut self, val: bool) {
+        pub fn set_sec9(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec10(&self) -> bool {
             let val = (self.0 >> 10usize) & 0x01;
@@ -8840,11 +7734,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec10(&mut self, val: bool) {
+        pub fn set_sec10(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec11(&self) -> bool {
             let val = (self.0 >> 11usize) & 0x01;
@@ -8852,11 +7745,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec11(&mut self, val: bool) {
+        pub fn set_sec11(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec12(&self) -> bool {
             let val = (self.0 >> 12usize) & 0x01;
@@ -8864,11 +7756,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec12(&mut self, val: bool) {
+        pub fn set_sec12(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec13(&self) -> bool {
             let val = (self.0 >> 13usize) & 0x01;
@@ -8876,11 +7767,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec13(&mut self, val: bool) {
+        pub fn set_sec13(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec14(&self) -> bool {
             let val = (self.0 >> 14usize) & 0x01;
@@ -8888,11 +7778,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec14(&mut self, val: bool) {
+        pub fn set_sec14(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec15(&self) -> bool {
             let val = (self.0 >> 15usize) & 0x01;
@@ -8900,11 +7789,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec15(&mut self, val: bool) {
+        pub fn set_sec15(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec16(&self) -> bool {
             let val = (self.0 >> 16usize) & 0x01;
@@ -8912,11 +7800,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec16(&mut self, val: bool) {
+        pub fn set_sec16(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec17(&self) -> bool {
             let val = (self.0 >> 17usize) & 0x01;
@@ -8924,11 +7811,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec17(&mut self, val: bool) {
+        pub fn set_sec17(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec18(&self) -> bool {
             let val = (self.0 >> 18usize) & 0x01;
@@ -8936,11 +7822,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec18(&mut self, val: bool) {
+        pub fn set_sec18(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec19(&self) -> bool {
             let val = (self.0 >> 19usize) & 0x01;
@@ -8948,11 +7833,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec19(&mut self, val: bool) {
+        pub fn set_sec19(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec20(&self) -> bool {
             let val = (self.0 >> 20usize) & 0x01;
@@ -8960,11 +7844,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec20(&mut self, val: bool) {
+        pub fn set_sec20(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec21(&self) -> bool {
             let val = (self.0 >> 21usize) & 0x01;
@@ -8972,11 +7855,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec21(&mut self, val: bool) {
+        pub fn set_sec21(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec22(&self) -> bool {
             let val = (self.0 >> 22usize) & 0x01;
@@ -8984,11 +7866,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec22(&mut self, val: bool) {
+        pub fn set_sec22(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec23(&self) -> bool {
             let val = (self.0 >> 23usize) & 0x01;
@@ -8996,11 +7877,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec23(&mut self, val: bool) {
+        pub fn set_sec23(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec24(&self) -> bool {
             let val = (self.0 >> 24usize) & 0x01;
@@ -9008,11 +7888,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec24(&mut self, val: bool) {
+        pub fn set_sec24(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec25(&self) -> bool {
             let val = (self.0 >> 25usize) & 0x01;
@@ -9020,11 +7899,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec25(&mut self, val: bool) {
+        pub fn set_sec25(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec26(&self) -> bool {
             let val = (self.0 >> 26usize) & 0x01;
@@ -9032,11 +7910,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec26(&mut self, val: bool) {
+        pub fn set_sec26(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 26usize)) | (((val as u32) & 0x01) << 26usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec27(&self) -> bool {
             let val = (self.0 >> 27usize) & 0x01;
@@ -9044,11 +7921,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec27(&mut self, val: bool) {
+        pub fn set_sec27(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 27usize)) | (((val as u32) & 0x01) << 27usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec28(&self) -> bool {
             let val = (self.0 >> 28usize) & 0x01;
@@ -9056,11 +7932,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec28(&mut self, val: bool) {
+        pub fn set_sec28(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec29(&self) -> bool {
             let val = (self.0 >> 29usize) & 0x01;
@@ -9068,11 +7943,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec29(&mut self, val: bool) {
+        pub fn set_sec29(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec30(&self) -> bool {
             let val = (self.0 >> 30usize) & 0x01;
@@ -9080,11 +7954,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec30(&mut self, val: bool) {
+        pub fn set_sec30(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec31(&self) -> bool {
             let val = (self.0 >> 31usize) & 0x01;
@@ -9092,7 +7965,7 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec31(&mut self, val: bool) {
+        pub fn set_sec31(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
         }
     }
@@ -9143,42 +8016,7 @@ bytes key."]
     #[cfg(feature = "defmt")]
     impl defmt::Format for Secbb2r3 {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Secbb2r3 {{ sec0: {=bool:?}, sec1: {=bool:?}, sec2: {=bool:?}, sec3: {=bool:?}, sec4: {=bool:?}, sec5: {=bool:?}, sec6: {=bool:?}, sec7: {=bool:?}, sec8: {=bool:?}, sec9: {=bool:?}, sec10: {=bool:?}, sec11: {=bool:?}, sec12: {=bool:?}, sec13: {=bool:?}, sec14: {=bool:?}, sec15: {=bool:?}, sec16: {=bool:?}, sec17: {=bool:?}, sec18: {=bool:?}, sec19: {=bool:?}, sec20: {=bool:?}, sec21: {=bool:?}, sec22: {=bool:?}, sec23: {=bool:?}, sec24: {=bool:?}, sec25: {=bool:?}, sec26: {=bool:?}, sec27: {=bool:?}, sec28: {=bool:?}, sec29: {=bool:?}, sec30: {=bool:?}, sec31: {=bool:?} }}",
-                self.sec0(),
-                self.sec1(),
-                self.sec2(),
-                self.sec3(),
-                self.sec4(),
-                self.sec5(),
-                self.sec6(),
-                self.sec7(),
-                self.sec8(),
-                self.sec9(),
-                self.sec10(),
-                self.sec11(),
-                self.sec12(),
-                self.sec13(),
-                self.sec14(),
-                self.sec15(),
-                self.sec16(),
-                self.sec17(),
-                self.sec18(),
-                self.sec19(),
-                self.sec20(),
-                self.sec21(),
-                self.sec22(),
-                self.sec23(),
-                self.sec24(),
-                self.sec25(),
-                self.sec26(),
-                self.sec27(),
-                self.sec28(),
-                self.sec29(),
-                self.sec30(),
-                self.sec31()
-            )
+            defmt :: write ! (f , "Secbb2r3 {{ sec0: {=bool:?}, sec1: {=bool:?}, sec2: {=bool:?}, sec3: {=bool:?}, sec4: {=bool:?}, sec5: {=bool:?}, sec6: {=bool:?}, sec7: {=bool:?}, sec8: {=bool:?}, sec9: {=bool:?}, sec10: {=bool:?}, sec11: {=bool:?}, sec12: {=bool:?}, sec13: {=bool:?}, sec14: {=bool:?}, sec15: {=bool:?}, sec16: {=bool:?}, sec17: {=bool:?}, sec18: {=bool:?}, sec19: {=bool:?}, sec20: {=bool:?}, sec21: {=bool:?}, sec22: {=bool:?}, sec23: {=bool:?}, sec24: {=bool:?}, sec25: {=bool:?}, sec26: {=bool:?}, sec27: {=bool:?}, sec28: {=bool:?}, sec29: {=bool:?}, sec30: {=bool:?}, sec31: {=bool:?} }}" , self . sec0 () , self . sec1 () , self . sec2 () , self . sec3 () , self . sec4 () , self . sec5 () , self . sec6 () , self . sec7 () , self . sec8 () , self . sec9 () , self . sec10 () , self . sec11 () , self . sec12 () , self . sec13 () , self . sec14 () , self . sec15 () , self . sec16 () , self . sec17 () , self . sec18 () , self . sec19 () , self . sec20 () , self . sec21 () , self . sec22 () , self . sec23 () , self . sec24 () , self . sec25 () , self . sec26 () , self . sec27 () , self . sec28 () , self . sec29 () , self . sec30 () , self . sec31 ())
         }
     }
     #[doc = "FLASH secure block based bank 2 register 4."]
@@ -9187,7 +8025,6 @@ bytes key."]
     pub struct Secbb2r4(pub u32);
     impl Secbb2r4 {
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec0(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -9195,11 +8032,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec0(&mut self, val: bool) {
+        pub fn set_sec0(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec1(&self) -> bool {
             let val = (self.0 >> 1usize) & 0x01;
@@ -9207,11 +8043,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec1(&mut self, val: bool) {
+        pub fn set_sec1(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec2(&self) -> bool {
             let val = (self.0 >> 2usize) & 0x01;
@@ -9219,11 +8054,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec2(&mut self, val: bool) {
+        pub fn set_sec2(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec3(&self) -> bool {
             let val = (self.0 >> 3usize) & 0x01;
@@ -9231,11 +8065,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec3(&mut self, val: bool) {
+        pub fn set_sec3(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec4(&self) -> bool {
             let val = (self.0 >> 4usize) & 0x01;
@@ -9243,11 +8076,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec4(&mut self, val: bool) {
+        pub fn set_sec4(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec5(&self) -> bool {
             let val = (self.0 >> 5usize) & 0x01;
@@ -9255,11 +8087,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec5(&mut self, val: bool) {
+        pub fn set_sec5(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec6(&self) -> bool {
             let val = (self.0 >> 6usize) & 0x01;
@@ -9267,11 +8098,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec6(&mut self, val: bool) {
+        pub fn set_sec6(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec7(&self) -> bool {
             let val = (self.0 >> 7usize) & 0x01;
@@ -9279,11 +8109,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec7(&mut self, val: bool) {
+        pub fn set_sec7(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec8(&self) -> bool {
             let val = (self.0 >> 8usize) & 0x01;
@@ -9291,11 +8120,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec8(&mut self, val: bool) {
+        pub fn set_sec8(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec9(&self) -> bool {
             let val = (self.0 >> 9usize) & 0x01;
@@ -9303,11 +8131,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec9(&mut self, val: bool) {
+        pub fn set_sec9(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec10(&self) -> bool {
             let val = (self.0 >> 10usize) & 0x01;
@@ -9315,11 +8142,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec10(&mut self, val: bool) {
+        pub fn set_sec10(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec11(&self) -> bool {
             let val = (self.0 >> 11usize) & 0x01;
@@ -9327,11 +8153,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec11(&mut self, val: bool) {
+        pub fn set_sec11(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec12(&self) -> bool {
             let val = (self.0 >> 12usize) & 0x01;
@@ -9339,11 +8164,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec12(&mut self, val: bool) {
+        pub fn set_sec12(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec13(&self) -> bool {
             let val = (self.0 >> 13usize) & 0x01;
@@ -9351,11 +8175,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec13(&mut self, val: bool) {
+        pub fn set_sec13(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec14(&self) -> bool {
             let val = (self.0 >> 14usize) & 0x01;
@@ -9363,11 +8186,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec14(&mut self, val: bool) {
+        pub fn set_sec14(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec15(&self) -> bool {
             let val = (self.0 >> 15usize) & 0x01;
@@ -9375,11 +8197,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec15(&mut self, val: bool) {
+        pub fn set_sec15(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec16(&self) -> bool {
             let val = (self.0 >> 16usize) & 0x01;
@@ -9387,11 +8208,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec16(&mut self, val: bool) {
+        pub fn set_sec16(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec17(&self) -> bool {
             let val = (self.0 >> 17usize) & 0x01;
@@ -9399,11 +8219,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec17(&mut self, val: bool) {
+        pub fn set_sec17(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec18(&self) -> bool {
             let val = (self.0 >> 18usize) & 0x01;
@@ -9411,11 +8230,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec18(&mut self, val: bool) {
+        pub fn set_sec18(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec19(&self) -> bool {
             let val = (self.0 >> 19usize) & 0x01;
@@ -9423,11 +8241,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec19(&mut self, val: bool) {
+        pub fn set_sec19(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec20(&self) -> bool {
             let val = (self.0 >> 20usize) & 0x01;
@@ -9435,11 +8252,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec20(&mut self, val: bool) {
+        pub fn set_sec20(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec21(&self) -> bool {
             let val = (self.0 >> 21usize) & 0x01;
@@ -9447,11 +8263,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec21(&mut self, val: bool) {
+        pub fn set_sec21(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec22(&self) -> bool {
             let val = (self.0 >> 22usize) & 0x01;
@@ -9459,11 +8274,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec22(&mut self, val: bool) {
+        pub fn set_sec22(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec23(&self) -> bool {
             let val = (self.0 >> 23usize) & 0x01;
@@ -9471,11 +8285,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec23(&mut self, val: bool) {
+        pub fn set_sec23(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec24(&self) -> bool {
             let val = (self.0 >> 24usize) & 0x01;
@@ -9483,11 +8296,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec24(&mut self, val: bool) {
+        pub fn set_sec24(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec25(&self) -> bool {
             let val = (self.0 >> 25usize) & 0x01;
@@ -9495,11 +8307,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec25(&mut self, val: bool) {
+        pub fn set_sec25(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec26(&self) -> bool {
             let val = (self.0 >> 26usize) & 0x01;
@@ -9507,11 +8318,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec26(&mut self, val: bool) {
+        pub fn set_sec26(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 26usize)) | (((val as u32) & 0x01) << 26usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec27(&self) -> bool {
             let val = (self.0 >> 27usize) & 0x01;
@@ -9519,11 +8329,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec27(&mut self, val: bool) {
+        pub fn set_sec27(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 27usize)) | (((val as u32) & 0x01) << 27usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec28(&self) -> bool {
             let val = (self.0 >> 28usize) & 0x01;
@@ -9531,11 +8340,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec28(&mut self, val: bool) {
+        pub fn set_sec28(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec29(&self) -> bool {
             let val = (self.0 >> 29usize) & 0x01;
@@ -9543,11 +8351,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec29(&mut self, val: bool) {
+        pub fn set_sec29(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec30(&self) -> bool {
             let val = (self.0 >> 30usize) & 0x01;
@@ -9555,11 +8362,10 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec30(&mut self, val: bool) {
+        pub fn set_sec30(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
         }
         #[doc = "Page secure/nonsecure attribution."]
-        #[must_use]
         #[inline(always)]
         pub const fn sec31(&self) -> bool {
             let val = (self.0 >> 31usize) & 0x01;
@@ -9567,7 +8373,7 @@ bytes key."]
         }
         #[doc = "Page secure/nonsecure attribution."]
         #[inline(always)]
-        pub const fn set_sec31(&mut self, val: bool) {
+        pub fn set_sec31(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
         }
     }
@@ -9618,97 +8424,7 @@ bytes key."]
     #[cfg(feature = "defmt")]
     impl defmt::Format for Secbb2r4 {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Secbb2r4 {{ sec0: {=bool:?}, sec1: {=bool:?}, sec2: {=bool:?}, sec3: {=bool:?}, sec4: {=bool:?}, sec5: {=bool:?}, sec6: {=bool:?}, sec7: {=bool:?}, sec8: {=bool:?}, sec9: {=bool:?}, sec10: {=bool:?}, sec11: {=bool:?}, sec12: {=bool:?}, sec13: {=bool:?}, sec14: {=bool:?}, sec15: {=bool:?}, sec16: {=bool:?}, sec17: {=bool:?}, sec18: {=bool:?}, sec19: {=bool:?}, sec20: {=bool:?}, sec21: {=bool:?}, sec22: {=bool:?}, sec23: {=bool:?}, sec24: {=bool:?}, sec25: {=bool:?}, sec26: {=bool:?}, sec27: {=bool:?}, sec28: {=bool:?}, sec29: {=bool:?}, sec30: {=bool:?}, sec31: {=bool:?} }}",
-                self.sec0(),
-                self.sec1(),
-                self.sec2(),
-                self.sec3(),
-                self.sec4(),
-                self.sec5(),
-                self.sec6(),
-                self.sec7(),
-                self.sec8(),
-                self.sec9(),
-                self.sec10(),
-                self.sec11(),
-                self.sec12(),
-                self.sec13(),
-                self.sec14(),
-                self.sec15(),
-                self.sec16(),
-                self.sec17(),
-                self.sec18(),
-                self.sec19(),
-                self.sec20(),
-                self.sec21(),
-                self.sec22(),
-                self.sec23(),
-                self.sec24(),
-                self.sec25(),
-                self.sec26(),
-                self.sec27(),
-                self.sec28(),
-                self.sec29(),
-                self.sec30(),
-                self.sec31()
-            )
-        }
-    }
-    #[doc = "FLASH HDP extension register."]
-    #[repr(transparent)]
-    #[derive(Copy, Clone, Eq, PartialEq)]
-    pub struct SechdpExTr(pub u32);
-    impl SechdpExTr {
-        #[doc = "HDP area extension in 4-Kbyte pages in bank 1."]
-        #[must_use]
-        #[inline(always)]
-        pub const fn hdp1_ex_t(&self) -> u8 {
-            let val = (self.0 >> 0usize) & 0xff;
-            val as u8
-        }
-        #[doc = "HDP area extension in 4-Kbyte pages in bank 1."]
-        #[inline(always)]
-        pub const fn set_hdp1_ex_t(&mut self, val: u8) {
-            self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
-        }
-        #[doc = "HDP area extension in 4-Kbyte pages in bank 2."]
-        #[must_use]
-        #[inline(always)]
-        pub const fn hdp2_ex_t(&self) -> u8 {
-            let val = (self.0 >> 16usize) & 0xff;
-            val as u8
-        }
-        #[doc = "HDP area extension in 4-Kbyte pages in bank 2."]
-        #[inline(always)]
-        pub const fn set_hdp2_ex_t(&mut self, val: u8) {
-            self.0 = (self.0 & !(0xff << 16usize)) | (((val as u32) & 0xff) << 16usize);
-        }
-    }
-    impl Default for SechdpExTr {
-        #[inline(always)]
-        fn default() -> SechdpExTr {
-            SechdpExTr(0)
-        }
-    }
-    impl core::fmt::Debug for SechdpExTr {
-        fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-            f.debug_struct("SechdpExTr")
-                .field("hdp1_ex_t", &self.hdp1_ex_t())
-                .field("hdp2_ex_t", &self.hdp2_ex_t())
-                .finish()
-        }
-    }
-    #[cfg(feature = "defmt")]
-    impl defmt::Format for SechdpExTr {
-        fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "SechdpExTr {{ hdp1_ex_t: {=u8:?}, hdp2_ex_t: {=u8:?} }}",
-                self.hdp1_ex_t(),
-                self.hdp2_ex_t()
-            )
+            defmt :: write ! (f , "Secbb2r4 {{ sec0: {=bool:?}, sec1: {=bool:?}, sec2: {=bool:?}, sec3: {=bool:?}, sec4: {=bool:?}, sec5: {=bool:?}, sec6: {=bool:?}, sec7: {=bool:?}, sec8: {=bool:?}, sec9: {=bool:?}, sec10: {=bool:?}, sec11: {=bool:?}, sec12: {=bool:?}, sec13: {=bool:?}, sec14: {=bool:?}, sec15: {=bool:?}, sec16: {=bool:?}, sec17: {=bool:?}, sec18: {=bool:?}, sec19: {=bool:?}, sec20: {=bool:?}, sec21: {=bool:?}, sec22: {=bool:?}, sec23: {=bool:?}, sec24: {=bool:?}, sec25: {=bool:?}, sec26: {=bool:?}, sec27: {=bool:?}, sec28: {=bool:?}, sec29: {=bool:?}, sec30: {=bool:?}, sec31: {=bool:?} }}" , self . sec0 () , self . sec1 () , self . sec2 () , self . sec3 () , self . sec4 () , self . sec5 () , self . sec6 () , self . sec7 () , self . sec8 () , self . sec9 () , self . sec10 () , self . sec11 () , self . sec12 () , self . sec13 () , self . sec14 () , self . sec15 () , self . sec16 () , self . sec17 () , self . sec18 () , self . sec19 () , self . sec20 () , self . sec21 () , self . sec22 () , self . sec23 () , self . sec24 () , self . sec25 () , self . sec26 () , self . sec27 () , self . sec28 () , self . sec29 () , self . sec30 () , self . sec31 ())
         }
     }
     #[doc = "FLASH secure HDP control register."]
@@ -9717,7 +8433,6 @@ bytes key."]
     pub struct Sechdpcr(pub u32);
     impl Sechdpcr {
         #[doc = "HDP1 area access disable."]
-        #[must_use]
         #[inline(always)]
         pub const fn hdp1_accdis(&self) -> u8 {
             let val = (self.0 >> 0usize) & 0xff;
@@ -9725,11 +8440,10 @@ bytes key."]
         }
         #[doc = "HDP1 area access disable."]
         #[inline(always)]
-        pub const fn set_hdp1_accdis(&mut self, val: u8) {
+        pub fn set_hdp1_accdis(&mut self, val: u8) {
             self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
         }
         #[doc = "HDP2 area access disable."]
-        #[must_use]
         #[inline(always)]
         pub const fn hdp2_accdis(&self) -> u8 {
             let val = (self.0 >> 8usize) & 0xff;
@@ -9737,11 +8451,10 @@ bytes key."]
         }
         #[doc = "HDP2 area access disable."]
         #[inline(always)]
-        pub const fn set_hdp2_accdis(&mut self, val: u8) {
+        pub fn set_hdp2_accdis(&mut self, val: u8) {
             self.0 = (self.0 & !(0xff << 8usize)) | (((val as u32) & 0xff) << 8usize);
         }
         #[doc = "HDP1 extension area access disable."]
-        #[must_use]
         #[inline(always)]
         pub const fn hdp1ex_t_accdis(&self) -> u8 {
             let val = (self.0 >> 16usize) & 0xff;
@@ -9749,11 +8462,10 @@ bytes key."]
         }
         #[doc = "HDP1 extension area access disable."]
         #[inline(always)]
-        pub const fn set_hdp1ex_t_accdis(&mut self, val: u8) {
+        pub fn set_hdp1ex_t_accdis(&mut self, val: u8) {
             self.0 = (self.0 & !(0xff << 16usize)) | (((val as u32) & 0xff) << 16usize);
         }
         #[doc = "HDP2 extension area access disable."]
-        #[must_use]
         #[inline(always)]
         pub const fn hdp2ex_t_accdis(&self) -> u8 {
             let val = (self.0 >> 24usize) & 0xff;
@@ -9761,7 +8473,7 @@ bytes key."]
         }
         #[doc = "HDP2 extension area access disable."]
         #[inline(always)]
-        pub const fn set_hdp2ex_t_accdis(&mut self, val: u8) {
+        pub fn set_hdp2ex_t_accdis(&mut self, val: u8) {
             self.0 = (self.0 & !(0xff << 24usize)) | (((val as u32) & 0xff) << 24usize);
         }
     }
@@ -9784,13 +8496,59 @@ bytes key."]
     #[cfg(feature = "defmt")]
     impl defmt::Format for Sechdpcr {
         fn format(&self, f: defmt::Formatter) {
+            defmt :: write ! (f , "Sechdpcr {{ hdp1_accdis: {=u8:?}, hdp2_accdis: {=u8:?}, hdp1ex_t_accdis: {=u8:?}, hdp2ex_t_accdis: {=u8:?} }}" , self . hdp1_accdis () , self . hdp2_accdis () , self . hdp1ex_t_accdis () , self . hdp2ex_t_accdis ())
+        }
+    }
+    #[doc = "FLASH HDP extension register."]
+    #[repr(transparent)]
+    #[derive(Copy, Clone, Eq, PartialEq)]
+    pub struct SechdpexTr(pub u32);
+    impl SechdpexTr {
+        #[doc = "HDP area extension in 4-Kbyte pages in bank 1."]
+        #[inline(always)]
+        pub const fn hdp1_ex_t(&self) -> u8 {
+            let val = (self.0 >> 0usize) & 0xff;
+            val as u8
+        }
+        #[doc = "HDP area extension in 4-Kbyte pages in bank 1."]
+        #[inline(always)]
+        pub fn set_hdp1_ex_t(&mut self, val: u8) {
+            self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
+        }
+        #[doc = "HDP area extension in 4-Kbyte pages in bank 2."]
+        #[inline(always)]
+        pub const fn hdp2_ex_t(&self) -> u8 {
+            let val = (self.0 >> 16usize) & 0xff;
+            val as u8
+        }
+        #[doc = "HDP area extension in 4-Kbyte pages in bank 2."]
+        #[inline(always)]
+        pub fn set_hdp2_ex_t(&mut self, val: u8) {
+            self.0 = (self.0 & !(0xff << 16usize)) | (((val as u32) & 0xff) << 16usize);
+        }
+    }
+    impl Default for SechdpexTr {
+        #[inline(always)]
+        fn default() -> SechdpexTr {
+            SechdpexTr(0)
+        }
+    }
+    impl core::fmt::Debug for SechdpexTr {
+        fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+            f.debug_struct("SechdpexTr")
+                .field("hdp1_ex_t", &self.hdp1_ex_t())
+                .field("hdp2_ex_t", &self.hdp2_ex_t())
+                .finish()
+        }
+    }
+    #[cfg(feature = "defmt")]
+    impl defmt::Format for SechdpexTr {
+        fn format(&self, f: defmt::Formatter) {
             defmt::write!(
                 f,
-                "Sechdpcr {{ hdp1_accdis: {=u8:?}, hdp2_accdis: {=u8:?}, hdp1ex_t_accdis: {=u8:?}, hdp2ex_t_accdis: {=u8:?} }}",
-                self.hdp1_accdis(),
-                self.hdp2_accdis(),
-                self.hdp1ex_t_accdis(),
-                self.hdp2ex_t_accdis()
+                "SechdpexTr {{ hdp1_ex_t: {=u8:?}, hdp2_ex_t: {=u8:?} }}",
+                self.hdp1_ex_t(),
+                self.hdp2_ex_t()
             )
         }
     }
@@ -9800,7 +8558,6 @@ bytes key."]
     pub struct Secwm1r1(pub u32);
     impl Secwm1r1 {
         #[doc = "Start page of first secure area."]
-        #[must_use]
         #[inline(always)]
         pub const fn secwm1_strt(&self) -> u8 {
             let val = (self.0 >> 0usize) & 0x7f;
@@ -9808,11 +8565,10 @@ bytes key."]
         }
         #[doc = "Start page of first secure area."]
         #[inline(always)]
-        pub const fn set_secwm1_strt(&mut self, val: u8) {
+        pub fn set_secwm1_strt(&mut self, val: u8) {
             self.0 = (self.0 & !(0x7f << 0usize)) | (((val as u32) & 0x7f) << 0usize);
         }
         #[doc = "End page of first secure area."]
-        #[must_use]
         #[inline(always)]
         pub const fn secwm1_end(&self) -> u8 {
             let val = (self.0 >> 16usize) & 0x7f;
@@ -9820,7 +8576,7 @@ bytes key."]
         }
         #[doc = "End page of first secure area."]
         #[inline(always)]
-        pub const fn set_secwm1_end(&mut self, val: u8) {
+        pub fn set_secwm1_end(&mut self, val: u8) {
             self.0 = (self.0 & !(0x7f << 16usize)) | (((val as u32) & 0x7f) << 16usize);
         }
     }
@@ -9855,7 +8611,6 @@ bytes key."]
     pub struct Secwm1r2(pub u32);
     impl Secwm1r2 {
         #[doc = "End page of first hide protection area."]
-        #[must_use]
         #[inline(always)]
         pub const fn hdp1_end(&self) -> u8 {
             let val = (self.0 >> 16usize) & 0x7f;
@@ -9863,11 +8618,10 @@ bytes key."]
         }
         #[doc = "End page of first hide protection area."]
         #[inline(always)]
-        pub const fn set_hdp1_end(&mut self, val: u8) {
+        pub fn set_hdp1_end(&mut self, val: u8) {
             self.0 = (self.0 & !(0x7f << 16usize)) | (((val as u32) & 0x7f) << 16usize);
         }
         #[doc = "Hide protection first area enable."]
-        #[must_use]
         #[inline(always)]
         pub const fn hdp1en(&self) -> u8 {
             let val = (self.0 >> 24usize) & 0xff;
@@ -9875,7 +8629,7 @@ bytes key."]
         }
         #[doc = "Hide protection first area enable."]
         #[inline(always)]
-        pub const fn set_hdp1en(&mut self, val: u8) {
+        pub fn set_hdp1en(&mut self, val: u8) {
             self.0 = (self.0 & !(0xff << 24usize)) | (((val as u32) & 0xff) << 24usize);
         }
     }
@@ -9910,7 +8664,6 @@ bytes key."]
     pub struct Secwm2r1(pub u32);
     impl Secwm2r1 {
         #[doc = "Start page of second secure area."]
-        #[must_use]
         #[inline(always)]
         pub const fn secwm2_strt(&self) -> u8 {
             let val = (self.0 >> 0usize) & 0x7f;
@@ -9918,11 +8671,10 @@ bytes key."]
         }
         #[doc = "Start page of second secure area."]
         #[inline(always)]
-        pub const fn set_secwm2_strt(&mut self, val: u8) {
+        pub fn set_secwm2_strt(&mut self, val: u8) {
             self.0 = (self.0 & !(0x7f << 0usize)) | (((val as u32) & 0x7f) << 0usize);
         }
         #[doc = "End page of second secure area."]
-        #[must_use]
         #[inline(always)]
         pub const fn secwm2_end(&self) -> u8 {
             let val = (self.0 >> 16usize) & 0x7f;
@@ -9930,7 +8682,7 @@ bytes key."]
         }
         #[doc = "End page of second secure area."]
         #[inline(always)]
-        pub const fn set_secwm2_end(&mut self, val: u8) {
+        pub fn set_secwm2_end(&mut self, val: u8) {
             self.0 = (self.0 & !(0x7f << 16usize)) | (((val as u32) & 0x7f) << 16usize);
         }
     }
@@ -9965,7 +8717,6 @@ bytes key."]
     pub struct Secwm2r2(pub u32);
     impl Secwm2r2 {
         #[doc = "End page of hide protection second area."]
-        #[must_use]
         #[inline(always)]
         pub const fn hdp2_end(&self) -> u8 {
             let val = (self.0 >> 16usize) & 0x7f;
@@ -9973,11 +8724,10 @@ bytes key."]
         }
         #[doc = "End page of hide protection second area."]
         #[inline(always)]
-        pub const fn set_hdp2_end(&mut self, val: u8) {
+        pub fn set_hdp2_end(&mut self, val: u8) {
             self.0 = (self.0 & !(0x7f << 16usize)) | (((val as u32) & 0x7f) << 16usize);
         }
         #[doc = "Hide protection second area enable."]
-        #[must_use]
         #[inline(always)]
         pub const fn hdp2en(&self) -> u8 {
             let val = (self.0 >> 24usize) & 0xff;
@@ -9985,7 +8735,7 @@ bytes key."]
         }
         #[doc = "Hide protection second area enable."]
         #[inline(always)]
-        pub const fn set_hdp2en(&mut self, val: u8) {
+        pub fn set_hdp2en(&mut self, val: u8) {
             self.0 = (self.0 & !(0xff << 24usize)) | (((val as u32) & 0xff) << 24usize);
         }
     }
@@ -10020,7 +8770,6 @@ bytes key."]
     pub struct Skeyr(pub u32);
     impl Skeyr {
         #[doc = "Flash memory secure key."]
-        #[must_use]
         #[inline(always)]
         pub const fn key(&self) -> u32 {
             let val = (self.0 >> 0usize) & 0xffff_ffff;
@@ -10028,7 +8777,7 @@ bytes key."]
         }
         #[doc = "Flash memory secure key."]
         #[inline(always)]
-        pub const fn set_key(&mut self, val: u32) {
+        pub fn set_key(&mut self, val: u32) {
             self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
         }
     }
@@ -10055,7 +8804,6 @@ bytes key."]
     pub struct Sr(pub u32);
     impl Sr {
         #[doc = "Nonsecure end of operation."]
-        #[must_use]
         #[inline(always)]
         pub const fn eop(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -10063,11 +8811,10 @@ bytes key."]
         }
         #[doc = "Nonsecure end of operation."]
         #[inline(always)]
-        pub const fn set_eop(&mut self, val: bool) {
+        pub fn set_eop(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "Nonsecure operation error."]
-        #[must_use]
         #[inline(always)]
         pub const fn operr(&self) -> bool {
             let val = (self.0 >> 1usize) & 0x01;
@@ -10075,11 +8822,10 @@ bytes key."]
         }
         #[doc = "Nonsecure operation error."]
         #[inline(always)]
-        pub const fn set_operr(&mut self, val: bool) {
+        pub fn set_operr(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
         }
         #[doc = "Nonsecure programming error."]
-        #[must_use]
         #[inline(always)]
         pub const fn progerr(&self) -> bool {
             let val = (self.0 >> 3usize) & 0x01;
@@ -10087,11 +8833,10 @@ bytes key."]
         }
         #[doc = "Nonsecure programming error."]
         #[inline(always)]
-        pub const fn set_progerr(&mut self, val: bool) {
+        pub fn set_progerr(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
         }
         #[doc = "Nonsecure write protection error."]
-        #[must_use]
         #[inline(always)]
         pub const fn wrperr(&self) -> bool {
             let val = (self.0 >> 4usize) & 0x01;
@@ -10099,11 +8844,10 @@ bytes key."]
         }
         #[doc = "Nonsecure write protection error."]
         #[inline(always)]
-        pub const fn set_wrperr(&mut self, val: bool) {
+        pub fn set_wrperr(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
         }
         #[doc = "Nonsecure programming alignment error."]
-        #[must_use]
         #[inline(always)]
         pub const fn pgaerr(&self) -> bool {
             let val = (self.0 >> 5usize) & 0x01;
@@ -10111,11 +8855,10 @@ bytes key."]
         }
         #[doc = "Nonsecure programming alignment error."]
         #[inline(always)]
-        pub const fn set_pgaerr(&mut self, val: bool) {
+        pub fn set_pgaerr(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
         }
         #[doc = "Nonsecure size error."]
-        #[must_use]
         #[inline(always)]
         pub const fn sizerr(&self) -> bool {
             let val = (self.0 >> 6usize) & 0x01;
@@ -10123,11 +8866,10 @@ bytes key."]
         }
         #[doc = "Nonsecure size error."]
         #[inline(always)]
-        pub const fn set_sizerr(&mut self, val: bool) {
+        pub fn set_sizerr(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
         }
         #[doc = "Nonsecure programming sequence error."]
-        #[must_use]
         #[inline(always)]
         pub const fn pgserr(&self) -> bool {
             let val = (self.0 >> 7usize) & 0x01;
@@ -10135,11 +8877,10 @@ bytes key."]
         }
         #[doc = "Nonsecure programming sequence error."]
         #[inline(always)]
-        pub const fn set_pgserr(&mut self, val: bool) {
+        pub fn set_pgserr(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
         }
         #[doc = "Option write error."]
-        #[must_use]
         #[inline(always)]
         pub const fn optwerr(&self) -> bool {
             let val = (self.0 >> 13usize) & 0x01;
@@ -10147,11 +8888,10 @@ bytes key."]
         }
         #[doc = "Option write error."]
         #[inline(always)]
-        pub const fn set_optwerr(&mut self, val: bool) {
+        pub fn set_optwerr(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
         }
         #[doc = "Nonsecure busy."]
-        #[must_use]
         #[inline(always)]
         pub const fn bsy(&self) -> bool {
             let val = (self.0 >> 16usize) & 0x01;
@@ -10159,11 +8899,10 @@ bytes key."]
         }
         #[doc = "Nonsecure busy."]
         #[inline(always)]
-        pub const fn set_bsy(&mut self, val: bool) {
+        pub fn set_bsy(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
         }
         #[doc = "Nonsecure wait data to write."]
-        #[must_use]
         #[inline(always)]
         pub const fn wdw(&self) -> bool {
             let val = (self.0 >> 17usize) & 0x01;
@@ -10171,11 +8910,10 @@ bytes key."]
         }
         #[doc = "Nonsecure wait data to write."]
         #[inline(always)]
-        pub const fn set_wdw(&mut self, val: bool) {
+        pub fn set_wdw(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
         }
         #[doc = "OEM1 lock."]
-        #[must_use]
         #[inline(always)]
         pub const fn oem1lock(&self) -> bool {
             let val = (self.0 >> 18usize) & 0x01;
@@ -10183,11 +8921,10 @@ bytes key."]
         }
         #[doc = "OEM1 lock."]
         #[inline(always)]
-        pub const fn set_oem1lock(&mut self, val: bool) {
+        pub fn set_oem1lock(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
         }
         #[doc = "OEM2 lock."]
-        #[must_use]
         #[inline(always)]
         pub const fn oem2lock(&self) -> bool {
             let val = (self.0 >> 19usize) & 0x01;
@@ -10195,11 +8932,10 @@ bytes key."]
         }
         #[doc = "OEM2 lock."]
         #[inline(always)]
-        pub const fn set_oem2lock(&mut self, val: bool) {
+        pub fn set_oem2lock(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
         }
         #[doc = "Bank 1 in power-down mode."]
-        #[must_use]
         #[inline(always)]
         pub const fn pd1(&self) -> bool {
             let val = (self.0 >> 20usize) & 0x01;
@@ -10207,11 +8943,10 @@ bytes key."]
         }
         #[doc = "Bank 1 in power-down mode."]
         #[inline(always)]
-        pub const fn set_pd1(&mut self, val: bool) {
+        pub fn set_pd1(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
         }
         #[doc = "Bank 2 in power-down mode."]
-        #[must_use]
         #[inline(always)]
         pub const fn pd2(&self) -> bool {
             let val = (self.0 >> 21usize) & 0x01;
@@ -10219,7 +8954,7 @@ bytes key."]
         }
         #[doc = "Bank 2 in power-down mode."]
         #[inline(always)]
-        pub const fn set_pd2(&mut self, val: bool) {
+        pub fn set_pd2(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
         }
     }
@@ -10252,24 +8987,7 @@ bytes key."]
     #[cfg(feature = "defmt")]
     impl defmt::Format for Sr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Sr {{ eop: {=bool:?}, operr: {=bool:?}, progerr: {=bool:?}, wrperr: {=bool:?}, pgaerr: {=bool:?}, sizerr: {=bool:?}, pgserr: {=bool:?}, optwerr: {=bool:?}, bsy: {=bool:?}, wdw: {=bool:?}, oem1lock: {=bool:?}, oem2lock: {=bool:?}, pd1: {=bool:?}, pd2: {=bool:?} }}",
-                self.eop(),
-                self.operr(),
-                self.progerr(),
-                self.wrperr(),
-                self.pgaerr(),
-                self.sizerr(),
-                self.pgserr(),
-                self.optwerr(),
-                self.bsy(),
-                self.wdw(),
-                self.oem1lock(),
-                self.oem2lock(),
-                self.pd1(),
-                self.pd2()
-            )
+            defmt :: write ! (f , "Sr {{ eop: {=bool:?}, operr: {=bool:?}, progerr: {=bool:?}, wrperr: {=bool:?}, pgaerr: {=bool:?}, sizerr: {=bool:?}, pgserr: {=bool:?}, optwerr: {=bool:?}, bsy: {=bool:?}, wdw: {=bool:?}, oem1lock: {=bool:?}, oem2lock: {=bool:?}, pd1: {=bool:?}, pd2: {=bool:?} }}" , self . eop () , self . operr () , self . progerr () , self . wrperr () , self . pgaerr () , self . sizerr () , self . pgserr () , self . optwerr () , self . bsy () , self . wdw () , self . oem1lock () , self . oem2lock () , self . pd1 () , self . pd2 ())
         }
     }
     #[doc = "FLASH secure status register."]
@@ -10278,7 +8996,6 @@ bytes key."]
     pub struct Ssr(pub u32);
     impl Ssr {
         #[doc = "Secure end of operation."]
-        #[must_use]
         #[inline(always)]
         pub const fn eop(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -10286,11 +9003,10 @@ bytes key."]
         }
         #[doc = "Secure end of operation."]
         #[inline(always)]
-        pub const fn set_eop(&mut self, val: bool) {
+        pub fn set_eop(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "Secure operation error."]
-        #[must_use]
         #[inline(always)]
         pub const fn operr(&self) -> bool {
             let val = (self.0 >> 1usize) & 0x01;
@@ -10298,11 +9014,10 @@ bytes key."]
         }
         #[doc = "Secure operation error."]
         #[inline(always)]
-        pub const fn set_operr(&mut self, val: bool) {
+        pub fn set_operr(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
         }
         #[doc = "Secure programming error."]
-        #[must_use]
         #[inline(always)]
         pub const fn progerr(&self) -> bool {
             let val = (self.0 >> 3usize) & 0x01;
@@ -10310,11 +9025,10 @@ bytes key."]
         }
         #[doc = "Secure programming error."]
         #[inline(always)]
-        pub const fn set_progerr(&mut self, val: bool) {
+        pub fn set_progerr(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
         }
         #[doc = "Secure write protection error."]
-        #[must_use]
         #[inline(always)]
         pub const fn wrperr(&self) -> bool {
             let val = (self.0 >> 4usize) & 0x01;
@@ -10322,11 +9036,10 @@ bytes key."]
         }
         #[doc = "Secure write protection error."]
         #[inline(always)]
-        pub const fn set_wrperr(&mut self, val: bool) {
+        pub fn set_wrperr(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
         }
         #[doc = "Secure programming alignment error."]
-        #[must_use]
         #[inline(always)]
         pub const fn pgaerr(&self) -> bool {
             let val = (self.0 >> 5usize) & 0x01;
@@ -10334,11 +9047,10 @@ bytes key."]
         }
         #[doc = "Secure programming alignment error."]
         #[inline(always)]
-        pub const fn set_pgaerr(&mut self, val: bool) {
+        pub fn set_pgaerr(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
         }
         #[doc = "Secure size error."]
-        #[must_use]
         #[inline(always)]
         pub const fn sizerr(&self) -> bool {
             let val = (self.0 >> 6usize) & 0x01;
@@ -10346,11 +9058,10 @@ bytes key."]
         }
         #[doc = "Secure size error."]
         #[inline(always)]
-        pub const fn set_sizerr(&mut self, val: bool) {
+        pub fn set_sizerr(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
         }
         #[doc = "Secure programming sequence error."]
-        #[must_use]
         #[inline(always)]
         pub const fn pgserr(&self) -> bool {
             let val = (self.0 >> 7usize) & 0x01;
@@ -10358,11 +9069,10 @@ bytes key."]
         }
         #[doc = "Secure programming sequence error."]
         #[inline(always)]
-        pub const fn set_pgserr(&mut self, val: bool) {
+        pub fn set_pgserr(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
         }
         #[doc = "Secure busy."]
-        #[must_use]
         #[inline(always)]
         pub const fn bsy(&self) -> bool {
             let val = (self.0 >> 16usize) & 0x01;
@@ -10370,11 +9080,10 @@ bytes key."]
         }
         #[doc = "Secure busy."]
         #[inline(always)]
-        pub const fn set_bsy(&mut self, val: bool) {
+        pub fn set_bsy(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
         }
         #[doc = "Secure wait data to write."]
-        #[must_use]
         #[inline(always)]
         pub const fn wdw(&self) -> bool {
             let val = (self.0 >> 17usize) & 0x01;
@@ -10382,7 +9091,7 @@ bytes key."]
         }
         #[doc = "Secure wait data to write."]
         #[inline(always)]
-        pub const fn set_wdw(&mut self, val: bool) {
+        pub fn set_wdw(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
         }
     }
@@ -10410,19 +9119,7 @@ bytes key."]
     #[cfg(feature = "defmt")]
     impl defmt::Format for Ssr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Ssr {{ eop: {=bool:?}, operr: {=bool:?}, progerr: {=bool:?}, wrperr: {=bool:?}, pgaerr: {=bool:?}, sizerr: {=bool:?}, pgserr: {=bool:?}, bsy: {=bool:?}, wdw: {=bool:?} }}",
-                self.eop(),
-                self.operr(),
-                self.progerr(),
-                self.wrperr(),
-                self.pgaerr(),
-                self.sizerr(),
-                self.pgserr(),
-                self.bsy(),
-                self.wdw()
-            )
+            defmt :: write ! (f , "Ssr {{ eop: {=bool:?}, operr: {=bool:?}, progerr: {=bool:?}, wrperr: {=bool:?}, pgaerr: {=bool:?}, sizerr: {=bool:?}, pgserr: {=bool:?}, bsy: {=bool:?}, wdw: {=bool:?} }}" , self . eop () , self . operr () , self . progerr () , self . wrperr () , self . pgaerr () , self . sizerr () , self . pgserr () , self . bsy () , self . wdw ())
         }
     }
     #[doc = "FLASH WRP1 area A address register."]
@@ -10431,7 +9128,6 @@ bytes key."]
     pub struct Wrp1ar(pub u32);
     impl Wrp1ar {
         #[doc = "Bank 1 WPR first area A start page."]
-        #[must_use]
         #[inline(always)]
         pub const fn strt(&self) -> u8 {
             let val = (self.0 >> 0usize) & 0x7f;
@@ -10439,11 +9135,10 @@ bytes key."]
         }
         #[doc = "Bank 1 WPR first area A start page."]
         #[inline(always)]
-        pub const fn set_strt(&mut self, val: u8) {
+        pub fn set_strt(&mut self, val: u8) {
             self.0 = (self.0 & !(0x7f << 0usize)) | (((val as u32) & 0x7f) << 0usize);
         }
         #[doc = "Bank 1 WPR first area A end page."]
-        #[must_use]
         #[inline(always)]
         pub const fn end(&self) -> u8 {
             let val = (self.0 >> 16usize) & 0x7f;
@@ -10451,11 +9146,10 @@ bytes key."]
         }
         #[doc = "Bank 1 WPR first area A end page."]
         #[inline(always)]
-        pub const fn set_end(&mut self, val: u8) {
+        pub fn set_end(&mut self, val: u8) {
             self.0 = (self.0 & !(0x7f << 16usize)) | (((val as u32) & 0x7f) << 16usize);
         }
         #[doc = "Bank 1 WPR first area A unlock."]
-        #[must_use]
         #[inline(always)]
         pub const fn unlock(&self) -> bool {
             let val = (self.0 >> 31usize) & 0x01;
@@ -10463,7 +9157,7 @@ bytes key."]
         }
         #[doc = "Bank 1 WPR first area A unlock."]
         #[inline(always)]
-        pub const fn set_unlock(&mut self, val: bool) {
+        pub fn set_unlock(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
         }
     }
@@ -10500,7 +9194,6 @@ bytes key."]
     pub struct Wrp1br(pub u32);
     impl Wrp1br {
         #[doc = "Bank 1 WRP second area B start page."]
-        #[must_use]
         #[inline(always)]
         pub const fn strt(&self) -> u8 {
             let val = (self.0 >> 0usize) & 0x7f;
@@ -10508,11 +9201,10 @@ bytes key."]
         }
         #[doc = "Bank 1 WRP second area B start page."]
         #[inline(always)]
-        pub const fn set_strt(&mut self, val: u8) {
+        pub fn set_strt(&mut self, val: u8) {
             self.0 = (self.0 & !(0x7f << 0usize)) | (((val as u32) & 0x7f) << 0usize);
         }
         #[doc = "Bank 1 WRP second area B end page."]
-        #[must_use]
         #[inline(always)]
         pub const fn end(&self) -> u8 {
             let val = (self.0 >> 16usize) & 0x7f;
@@ -10520,11 +9212,10 @@ bytes key."]
         }
         #[doc = "Bank 1 WRP second area B end page."]
         #[inline(always)]
-        pub const fn set_end(&mut self, val: u8) {
+        pub fn set_end(&mut self, val: u8) {
             self.0 = (self.0 & !(0x7f << 16usize)) | (((val as u32) & 0x7f) << 16usize);
         }
         #[doc = "Bank 1 WPR second area B unlock."]
-        #[must_use]
         #[inline(always)]
         pub const fn unlock(&self) -> bool {
             let val = (self.0 >> 31usize) & 0x01;
@@ -10532,7 +9223,7 @@ bytes key."]
         }
         #[doc = "Bank 1 WPR second area B unlock."]
         #[inline(always)]
-        pub const fn set_unlock(&mut self, val: bool) {
+        pub fn set_unlock(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
         }
     }
@@ -10569,7 +9260,6 @@ bytes key."]
     pub struct Wrp2ar(pub u32);
     impl Wrp2ar {
         #[doc = "Bank 2 WPR first area A start page."]
-        #[must_use]
         #[inline(always)]
         pub const fn strt(&self) -> u8 {
             let val = (self.0 >> 0usize) & 0x7f;
@@ -10577,11 +9267,10 @@ bytes key."]
         }
         #[doc = "Bank 2 WPR first area A start page."]
         #[inline(always)]
-        pub const fn set_strt(&mut self, val: u8) {
+        pub fn set_strt(&mut self, val: u8) {
             self.0 = (self.0 & !(0x7f << 0usize)) | (((val as u32) & 0x7f) << 0usize);
         }
         #[doc = "Bank 2 WPR first area A end page."]
-        #[must_use]
         #[inline(always)]
         pub const fn end(&self) -> u8 {
             let val = (self.0 >> 16usize) & 0x7f;
@@ -10589,11 +9278,10 @@ bytes key."]
         }
         #[doc = "Bank 2 WPR first area A end page."]
         #[inline(always)]
-        pub const fn set_end(&mut self, val: u8) {
+        pub fn set_end(&mut self, val: u8) {
             self.0 = (self.0 & !(0x7f << 16usize)) | (((val as u32) & 0x7f) << 16usize);
         }
         #[doc = "Bank 2 WPR first area A unlock."]
-        #[must_use]
         #[inline(always)]
         pub const fn unlock(&self) -> bool {
             let val = (self.0 >> 31usize) & 0x01;
@@ -10601,7 +9289,7 @@ bytes key."]
         }
         #[doc = "Bank 2 WPR first area A unlock."]
         #[inline(always)]
-        pub const fn set_unlock(&mut self, val: bool) {
+        pub fn set_unlock(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
         }
     }
@@ -10638,7 +9326,6 @@ bytes key."]
     pub struct Wrp2br(pub u32);
     impl Wrp2br {
         #[doc = "Bank 2 WPR second area B start page."]
-        #[must_use]
         #[inline(always)]
         pub const fn strt(&self) -> u8 {
             let val = (self.0 >> 0usize) & 0x7f;
@@ -10646,11 +9333,10 @@ bytes key."]
         }
         #[doc = "Bank 2 WPR second area B start page."]
         #[inline(always)]
-        pub const fn set_strt(&mut self, val: u8) {
+        pub fn set_strt(&mut self, val: u8) {
             self.0 = (self.0 & !(0x7f << 0usize)) | (((val as u32) & 0x7f) << 0usize);
         }
         #[doc = "Bank 2 WPR second area B end page."]
-        #[must_use]
         #[inline(always)]
         pub const fn end(&self) -> u8 {
             let val = (self.0 >> 16usize) & 0x7f;
@@ -10658,11 +9344,10 @@ bytes key."]
         }
         #[doc = "Bank 2 WPR second area B end page."]
         #[inline(always)]
-        pub const fn set_end(&mut self, val: u8) {
+        pub fn set_end(&mut self, val: u8) {
             self.0 = (self.0 & !(0x7f << 16usize)) | (((val as u32) & 0x7f) << 16usize);
         }
         #[doc = "Bank 2 WPR second area B unlock."]
-        #[must_use]
         #[inline(always)]
         pub const fn unlock(&self) -> bool {
             let val = (self.0 >> 31usize) & 0x01;
@@ -10670,7 +9355,7 @@ bytes key."]
         }
         #[doc = "Bank 2 WPR second area B unlock."]
         #[inline(always)]
-        pub const fn set_unlock(&mut self, val: bool) {
+        pub fn set_unlock(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
         }
     }
@@ -10708,15 +9393,15 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum BorLev {
         #[doc = "BOR level 0 (reset level threshold around 1."]
-        Level0 = 0x0,
+        LEVEL0 = 0x0,
         #[doc = "BOR level 1 (reset level threshold around 2."]
-        Level1 = 0x01,
+        LEVEL1 = 0x01,
         #[doc = "BOR level 2 (reset level threshold around 2."]
-        Level2 = 0x02,
+        LEVEL2 = 0x02,
         #[doc = "BOR level 3 (reset level threshold around 2."]
-        Level3 = 0x03,
+        LEVEL3 = 0x03,
         #[doc = "BOR level 4 (reset level threshold around 2."]
-        Level4 = 0x04,
+        LEVEL4 = 0x04,
         _RESERVED_5 = 0x05,
         _RESERVED_6 = 0x06,
         _RESERVED_7 = 0x07,
@@ -10748,19 +9433,19 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum CodeOp {
         #[doc = "No flash operation interrupted by previous reset."]
-        NoFlashInt = 0x0,
+        NO_FLASH_INT = 0x0,
         #[doc = "Single write operation interrupted."]
-        SingleWrInt = 0x01,
+        SINGLE_WR_INT = 0x01,
         #[doc = "Burst write operation interrupted."]
-        BurstWrInt = 0x02,
+        BURST_WR_INT = 0x02,
         #[doc = "Page erase operation interrupted."]
-        PgEraseInt = 0x03,
+        PG_ERASE_INT = 0x03,
         #[doc = "Bank erase operation interrupted."]
-        BankEraseInt = 0x04,
+        BANK_ERASE_INT = 0x04,
         #[doc = "Mass erase operation interrupted."]
-        MassEraseInt = 0x05,
+        MASS_ERASE_INT = 0x05,
         #[doc = "Option change operation interrupted."]
-        OptChangeInt = 0x06,
+        OPT_CHANGE_INT = 0x06,
         _RESERVED_7 = 0x07,
     }
     impl CodeOp {
@@ -10790,11 +9475,11 @@ pub mod vals {
     pub struct Rdp(u8);
     impl Rdp {
         #[doc = "Level 0."]
-        pub const Level0: Self = Self(0x55);
+        pub const LEVEL0: Self = Self(0x55);
         #[doc = "Level 0 (readout protection not active)."]
-        pub const Level0roProtActive: Self = Self(0xaa);
+        pub const LEVEL0ROPROT_ACTIVE: Self = Self(0xaa);
         #[doc = "Level 2 (chip readout protection active)."]
-        pub const Level2: Self = Self(0xcc);
+        pub const LEVEL2: Self = Self(0xcc);
     }
     impl Rdp {
         pub const fn from_bits(val: u8) -> Rdp {
@@ -10807,9 +9492,9 @@ pub mod vals {
     impl core::fmt::Debug for Rdp {
         fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
             match self.0 {
-                0x55 => f.write_str("Level0"),
-                0xaa => f.write_str("Level0roProtActive"),
-                0xcc => f.write_str("Level2"),
+                0x55 => f.write_str("LEVEL0"),
+                0xaa => f.write_str("LEVEL0ROPROT_ACTIVE"),
+                0xcc => f.write_str("LEVEL2"),
                 other => core::write!(f, "0x{:02X}", other),
             }
         }
@@ -10818,9 +9503,9 @@ pub mod vals {
     impl defmt::Format for Rdp {
         fn format(&self, f: defmt::Formatter) {
             match self.0 {
-                0x55 => defmt::write!(f, "Level0"),
-                0xaa => defmt::write!(f, "Level0roProtActive"),
-                0xcc => defmt::write!(f, "Level2"),
+                0x55 => defmt::write!(f, "LEVEL0"),
+                0xaa => defmt::write!(f, "LEVEL0ROPROT_ACTIVE"),
+                0xcc => defmt::write!(f, "LEVEL2"),
                 other => defmt::write!(f, "0x{:02X}", other),
             }
         }

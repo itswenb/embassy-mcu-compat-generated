@@ -22,67 +22,67 @@ impl Dbgmcu {
     #[doc = "DBGMCU identity code register."]
     #[inline(always)]
     pub const fn idcode(self) -> crate::common::Reg<regs::Idcode, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0usize) as _) }
     }
     #[doc = "DBGMCU configuration register."]
     #[inline(always)]
     pub const fn cr(self) -> crate::common::Reg<regs::Cr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x04usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x04usize) as _) }
     }
     #[doc = "DBGMCU APB1L peripheral freeze register."]
     #[inline(always)]
     pub const fn apb1lfz1(self) -> crate::common::Reg<regs::Apb1lfz1, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x10usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x10usize) as _) }
     }
     #[doc = "DBGMCU APB1H peripheral freeze register."]
     #[inline(always)]
     pub const fn apb1hfz1(self) -> crate::common::Reg<regs::Apb1hfz1, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x14usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x14usize) as _) }
     }
     #[doc = "DBGMCU APB2 peripheral freeze register."]
     #[inline(always)]
     pub const fn apb2fz1(self) -> crate::common::Reg<regs::Apb2fz1, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x18usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x18usize) as _) }
     }
     #[doc = "DBGMCU APB4 peripheral freeze register."]
     #[inline(always)]
     pub const fn apb4fz1(self) -> crate::common::Reg<regs::Apb4fz1, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x1cusize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x1cusize) as _) }
     }
     #[doc = "DBGMCU APB5 peripheral freeze register."]
     #[inline(always)]
     pub const fn apb5fz1(self) -> crate::common::Reg<regs::Apb5fz1, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x20usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x20usize) as _) }
     }
     #[doc = "DBGMCU AHB1 peripheral freeze register."]
     #[inline(always)]
     pub const fn ahb1fz1(self) -> crate::common::Reg<regs::Ahb1fz1, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x24usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x24usize) as _) }
     }
     #[doc = "DBGMCU AHB5 peripheral freeze register."]
     #[inline(always)]
     pub const fn ahb5fz1(self) -> crate::common::Reg<regs::Ahb5fz1, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x28usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x28usize) as _) }
     }
     #[doc = "DBGMCU status register."]
     #[inline(always)]
     pub const fn sr(self) -> crate::common::Reg<regs::Sr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0xfcusize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0xfcusize) as _) }
     }
     #[doc = "DBGMCU host authentication register."]
     #[inline(always)]
     pub const fn dbg_auth_host(self) -> crate::common::Reg<regs::DbgAuthHost, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0100usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0100usize) as _) }
     }
     #[doc = "DBGMCU device authentication register."]
     #[inline(always)]
     pub const fn dbg_auth_dev(self) -> crate::common::Reg<regs::DbgAuthDev, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0104usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0104usize) as _) }
     }
     #[doc = "DBGMCU message read acknowledge authentication register."]
     #[inline(always)]
     pub const fn dbg_auth_ack(self) -> crate::common::Reg<regs::DbgAuthAck, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0108usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0108usize) as _) }
     }
 }
 pub mod regs {
@@ -92,20 +92,180 @@ pub mod regs {
     pub struct Ahb1fz1(pub u32);
     impl Ahb1fz1 {
         #[doc = "GPDMA1_CHn suspend in debug."]
-        #[must_use]
         #[inline(always)]
-        pub const fn dbg_gpdma1_stop(&self, n: usize) -> bool {
-            assert!(n < 16usize);
-            let offs = 0usize + n * 1usize;
-            let val = (self.0 >> offs) & 0x01;
+        pub const fn dbg_gpdma1_ch0_stop(&self) -> bool {
+            let val = (self.0 >> 0usize) & 0x01;
             val != 0
         }
         #[doc = "GPDMA1_CHn suspend in debug."]
         #[inline(always)]
-        pub const fn set_dbg_gpdma1_stop(&mut self, n: usize, val: bool) {
-            assert!(n < 16usize);
-            let offs = 0usize + n * 1usize;
-            self.0 = (self.0 & !(0x01 << offs)) | (((val as u32) & 0x01) << offs);
+        pub fn set_dbg_gpdma1_ch0_stop(&mut self, val: bool) {
+            self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
+        }
+        #[doc = "GPDMA1_CHn suspend in debug."]
+        #[inline(always)]
+        pub const fn dbg_gpdma1_ch1_stop(&self) -> bool {
+            let val = (self.0 >> 1usize) & 0x01;
+            val != 0
+        }
+        #[doc = "GPDMA1_CHn suspend in debug."]
+        #[inline(always)]
+        pub fn set_dbg_gpdma1_ch1_stop(&mut self, val: bool) {
+            self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
+        }
+        #[doc = "GPDMA1_CHn suspend in debug."]
+        #[inline(always)]
+        pub const fn dbg_gpdma1_ch2_stop(&self) -> bool {
+            let val = (self.0 >> 2usize) & 0x01;
+            val != 0
+        }
+        #[doc = "GPDMA1_CHn suspend in debug."]
+        #[inline(always)]
+        pub fn set_dbg_gpdma1_ch2_stop(&mut self, val: bool) {
+            self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
+        }
+        #[doc = "GPDMA1_CHn suspend in debug."]
+        #[inline(always)]
+        pub const fn dbg_gpdma1_ch3_stop(&self) -> bool {
+            let val = (self.0 >> 3usize) & 0x01;
+            val != 0
+        }
+        #[doc = "GPDMA1_CHn suspend in debug."]
+        #[inline(always)]
+        pub fn set_dbg_gpdma1_ch3_stop(&mut self, val: bool) {
+            self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
+        }
+        #[doc = "GPDMA1_CHn suspend in debug."]
+        #[inline(always)]
+        pub const fn dbg_gpdma1_ch4_stop(&self) -> bool {
+            let val = (self.0 >> 4usize) & 0x01;
+            val != 0
+        }
+        #[doc = "GPDMA1_CHn suspend in debug."]
+        #[inline(always)]
+        pub fn set_dbg_gpdma1_ch4_stop(&mut self, val: bool) {
+            self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
+        }
+        #[doc = "GPDMA1_CHn suspend in debug."]
+        #[inline(always)]
+        pub const fn dbg_gpdma1_ch5_stop(&self) -> bool {
+            let val = (self.0 >> 5usize) & 0x01;
+            val != 0
+        }
+        #[doc = "GPDMA1_CHn suspend in debug."]
+        #[inline(always)]
+        pub fn set_dbg_gpdma1_ch5_stop(&mut self, val: bool) {
+            self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
+        }
+        #[doc = "GPDMA1_CHn suspend in debug."]
+        #[inline(always)]
+        pub const fn dbg_gpdma1_ch6_stop(&self) -> bool {
+            let val = (self.0 >> 6usize) & 0x01;
+            val != 0
+        }
+        #[doc = "GPDMA1_CHn suspend in debug."]
+        #[inline(always)]
+        pub fn set_dbg_gpdma1_ch6_stop(&mut self, val: bool) {
+            self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
+        }
+        #[doc = "GPDMA1_CHn suspend in debug."]
+        #[inline(always)]
+        pub const fn dbg_gpdma1_ch7_stop(&self) -> bool {
+            let val = (self.0 >> 7usize) & 0x01;
+            val != 0
+        }
+        #[doc = "GPDMA1_CHn suspend in debug."]
+        #[inline(always)]
+        pub fn set_dbg_gpdma1_ch7_stop(&mut self, val: bool) {
+            self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
+        }
+        #[doc = "GPDMA1_CHn suspend in debug."]
+        #[inline(always)]
+        pub const fn dbg_gpdma1_ch8_stop(&self) -> bool {
+            let val = (self.0 >> 8usize) & 0x01;
+            val != 0
+        }
+        #[doc = "GPDMA1_CHn suspend in debug."]
+        #[inline(always)]
+        pub fn set_dbg_gpdma1_ch8_stop(&mut self, val: bool) {
+            self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
+        }
+        #[doc = "GPDMA1_CHn suspend in debug."]
+        #[inline(always)]
+        pub const fn dbg_gpdma1_ch9_stop(&self) -> bool {
+            let val = (self.0 >> 9usize) & 0x01;
+            val != 0
+        }
+        #[doc = "GPDMA1_CHn suspend in debug."]
+        #[inline(always)]
+        pub fn set_dbg_gpdma1_ch9_stop(&mut self, val: bool) {
+            self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
+        }
+        #[doc = "GPDMA1_CHn suspend in debug."]
+        #[inline(always)]
+        pub const fn dbg_gpdma1_ch10_stop(&self) -> bool {
+            let val = (self.0 >> 10usize) & 0x01;
+            val != 0
+        }
+        #[doc = "GPDMA1_CHn suspend in debug."]
+        #[inline(always)]
+        pub fn set_dbg_gpdma1_ch10_stop(&mut self, val: bool) {
+            self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
+        }
+        #[doc = "GPDMA1_CHn suspend in debug."]
+        #[inline(always)]
+        pub const fn dbg_gpdma1_ch11_stop(&self) -> bool {
+            let val = (self.0 >> 11usize) & 0x01;
+            val != 0
+        }
+        #[doc = "GPDMA1_CHn suspend in debug."]
+        #[inline(always)]
+        pub fn set_dbg_gpdma1_ch11_stop(&mut self, val: bool) {
+            self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
+        }
+        #[doc = "GPDMA1_CHn suspend in debug."]
+        #[inline(always)]
+        pub const fn dbg_gpdma1_ch12_stop(&self) -> bool {
+            let val = (self.0 >> 12usize) & 0x01;
+            val != 0
+        }
+        #[doc = "GPDMA1_CHn suspend in debug."]
+        #[inline(always)]
+        pub fn set_dbg_gpdma1_ch12_stop(&mut self, val: bool) {
+            self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
+        }
+        #[doc = "GPDMA1_CHn suspend in debug."]
+        #[inline(always)]
+        pub const fn dbg_gpdma1_ch13_stop(&self) -> bool {
+            let val = (self.0 >> 13usize) & 0x01;
+            val != 0
+        }
+        #[doc = "GPDMA1_CHn suspend in debug."]
+        #[inline(always)]
+        pub fn set_dbg_gpdma1_ch13_stop(&mut self, val: bool) {
+            self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
+        }
+        #[doc = "GPDMA1_CHn suspend in debug."]
+        #[inline(always)]
+        pub const fn dbg_gpdma1_ch14_stop(&self) -> bool {
+            let val = (self.0 >> 14usize) & 0x01;
+            val != 0
+        }
+        #[doc = "GPDMA1_CHn suspend in debug."]
+        #[inline(always)]
+        pub fn set_dbg_gpdma1_ch14_stop(&mut self, val: bool) {
+            self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
+        }
+        #[doc = "GPDMA1_CHn suspend in debug."]
+        #[inline(always)]
+        pub const fn dbg_gpdma1_ch15_stop(&self) -> bool {
+            let val = (self.0 >> 15usize) & 0x01;
+            val != 0
+        }
+        #[doc = "GPDMA1_CHn suspend in debug."]
+        #[inline(always)]
+        pub fn set_dbg_gpdma1_ch15_stop(&mut self, val: bool) {
+            self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
         }
     }
     impl Default for Ahb1fz1 {
@@ -117,48 +277,29 @@ pub mod regs {
     impl core::fmt::Debug for Ahb1fz1 {
         fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
             f.debug_struct("Ahb1fz1")
-                .field("dbg_gpdma1_stop[0]", &self.dbg_gpdma1_stop(0usize))
-                .field("dbg_gpdma1_stop[1]", &self.dbg_gpdma1_stop(1usize))
-                .field("dbg_gpdma1_stop[2]", &self.dbg_gpdma1_stop(2usize))
-                .field("dbg_gpdma1_stop[3]", &self.dbg_gpdma1_stop(3usize))
-                .field("dbg_gpdma1_stop[4]", &self.dbg_gpdma1_stop(4usize))
-                .field("dbg_gpdma1_stop[5]", &self.dbg_gpdma1_stop(5usize))
-                .field("dbg_gpdma1_stop[6]", &self.dbg_gpdma1_stop(6usize))
-                .field("dbg_gpdma1_stop[7]", &self.dbg_gpdma1_stop(7usize))
-                .field("dbg_gpdma1_stop[8]", &self.dbg_gpdma1_stop(8usize))
-                .field("dbg_gpdma1_stop[9]", &self.dbg_gpdma1_stop(9usize))
-                .field("dbg_gpdma1_stop[10]", &self.dbg_gpdma1_stop(10usize))
-                .field("dbg_gpdma1_stop[11]", &self.dbg_gpdma1_stop(11usize))
-                .field("dbg_gpdma1_stop[12]", &self.dbg_gpdma1_stop(12usize))
-                .field("dbg_gpdma1_stop[13]", &self.dbg_gpdma1_stop(13usize))
-                .field("dbg_gpdma1_stop[14]", &self.dbg_gpdma1_stop(14usize))
-                .field("dbg_gpdma1_stop[15]", &self.dbg_gpdma1_stop(15usize))
+                .field("dbg_gpdma1_ch0_stop", &self.dbg_gpdma1_ch0_stop())
+                .field("dbg_gpdma1_ch1_stop", &self.dbg_gpdma1_ch1_stop())
+                .field("dbg_gpdma1_ch2_stop", &self.dbg_gpdma1_ch2_stop())
+                .field("dbg_gpdma1_ch3_stop", &self.dbg_gpdma1_ch3_stop())
+                .field("dbg_gpdma1_ch4_stop", &self.dbg_gpdma1_ch4_stop())
+                .field("dbg_gpdma1_ch5_stop", &self.dbg_gpdma1_ch5_stop())
+                .field("dbg_gpdma1_ch6_stop", &self.dbg_gpdma1_ch6_stop())
+                .field("dbg_gpdma1_ch7_stop", &self.dbg_gpdma1_ch7_stop())
+                .field("dbg_gpdma1_ch8_stop", &self.dbg_gpdma1_ch8_stop())
+                .field("dbg_gpdma1_ch9_stop", &self.dbg_gpdma1_ch9_stop())
+                .field("dbg_gpdma1_ch10_stop", &self.dbg_gpdma1_ch10_stop())
+                .field("dbg_gpdma1_ch11_stop", &self.dbg_gpdma1_ch11_stop())
+                .field("dbg_gpdma1_ch12_stop", &self.dbg_gpdma1_ch12_stop())
+                .field("dbg_gpdma1_ch13_stop", &self.dbg_gpdma1_ch13_stop())
+                .field("dbg_gpdma1_ch14_stop", &self.dbg_gpdma1_ch14_stop())
+                .field("dbg_gpdma1_ch15_stop", &self.dbg_gpdma1_ch15_stop())
                 .finish()
         }
     }
     #[cfg(feature = "defmt")]
     impl defmt::Format for Ahb1fz1 {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Ahb1fz1 {{ dbg_gpdma1_stop[0]: {=bool:?}, dbg_gpdma1_stop[1]: {=bool:?}, dbg_gpdma1_stop[2]: {=bool:?}, dbg_gpdma1_stop[3]: {=bool:?}, dbg_gpdma1_stop[4]: {=bool:?}, dbg_gpdma1_stop[5]: {=bool:?}, dbg_gpdma1_stop[6]: {=bool:?}, dbg_gpdma1_stop[7]: {=bool:?}, dbg_gpdma1_stop[8]: {=bool:?}, dbg_gpdma1_stop[9]: {=bool:?}, dbg_gpdma1_stop[10]: {=bool:?}, dbg_gpdma1_stop[11]: {=bool:?}, dbg_gpdma1_stop[12]: {=bool:?}, dbg_gpdma1_stop[13]: {=bool:?}, dbg_gpdma1_stop[14]: {=bool:?}, dbg_gpdma1_stop[15]: {=bool:?} }}",
-                self.dbg_gpdma1_stop(0usize),
-                self.dbg_gpdma1_stop(1usize),
-                self.dbg_gpdma1_stop(2usize),
-                self.dbg_gpdma1_stop(3usize),
-                self.dbg_gpdma1_stop(4usize),
-                self.dbg_gpdma1_stop(5usize),
-                self.dbg_gpdma1_stop(6usize),
-                self.dbg_gpdma1_stop(7usize),
-                self.dbg_gpdma1_stop(8usize),
-                self.dbg_gpdma1_stop(9usize),
-                self.dbg_gpdma1_stop(10usize),
-                self.dbg_gpdma1_stop(11usize),
-                self.dbg_gpdma1_stop(12usize),
-                self.dbg_gpdma1_stop(13usize),
-                self.dbg_gpdma1_stop(14usize),
-                self.dbg_gpdma1_stop(15usize)
-            )
+            defmt :: write ! (f , "Ahb1fz1 {{ dbg_gpdma1_ch0_stop: {=bool:?}, dbg_gpdma1_ch1_stop: {=bool:?}, dbg_gpdma1_ch2_stop: {=bool:?}, dbg_gpdma1_ch3_stop: {=bool:?}, dbg_gpdma1_ch4_stop: {=bool:?}, dbg_gpdma1_ch5_stop: {=bool:?}, dbg_gpdma1_ch6_stop: {=bool:?}, dbg_gpdma1_ch7_stop: {=bool:?}, dbg_gpdma1_ch8_stop: {=bool:?}, dbg_gpdma1_ch9_stop: {=bool:?}, dbg_gpdma1_ch10_stop: {=bool:?}, dbg_gpdma1_ch11_stop: {=bool:?}, dbg_gpdma1_ch12_stop: {=bool:?}, dbg_gpdma1_ch13_stop: {=bool:?}, dbg_gpdma1_ch14_stop: {=bool:?}, dbg_gpdma1_ch15_stop: {=bool:?} }}" , self . dbg_gpdma1_ch0_stop () , self . dbg_gpdma1_ch1_stop () , self . dbg_gpdma1_ch2_stop () , self . dbg_gpdma1_ch3_stop () , self . dbg_gpdma1_ch4_stop () , self . dbg_gpdma1_ch5_stop () , self . dbg_gpdma1_ch6_stop () , self . dbg_gpdma1_ch7_stop () , self . dbg_gpdma1_ch8_stop () , self . dbg_gpdma1_ch9_stop () , self . dbg_gpdma1_ch10_stop () , self . dbg_gpdma1_ch11_stop () , self . dbg_gpdma1_ch12_stop () , self . dbg_gpdma1_ch13_stop () , self . dbg_gpdma1_ch14_stop () , self . dbg_gpdma1_ch15_stop ())
         }
     }
     #[doc = "DBGMCU AHB5 peripheral freeze register."]
@@ -167,23 +308,182 @@ pub mod regs {
     pub struct Ahb5fz1(pub u32);
     impl Ahb5fz1 {
         #[doc = "HPDMA3_CHn suspend in debug."]
-        #[must_use]
         #[inline(always)]
-        pub const fn dbg_hpdma1_stop(&self, n: usize) -> bool {
-            assert!(n < 16usize);
-            let offs = 0usize + n * 1usize;
-            let val = (self.0 >> offs) & 0x01;
+        pub const fn dbg_hpdma1_ch0_stop(&self) -> bool {
+            let val = (self.0 >> 0usize) & 0x01;
             val != 0
         }
         #[doc = "HPDMA3_CHn suspend in debug."]
         #[inline(always)]
-        pub const fn set_dbg_hpdma1_stop(&mut self, n: usize, val: bool) {
-            assert!(n < 16usize);
-            let offs = 0usize + n * 1usize;
-            self.0 = (self.0 & !(0x01 << offs)) | (((val as u32) & 0x01) << offs);
+        pub fn set_dbg_hpdma1_ch0_stop(&mut self, val: bool) {
+            self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
+        }
+        #[doc = "HPDMA3_CHn suspend in debug."]
+        #[inline(always)]
+        pub const fn dbg_hpdma1_ch1_stop(&self) -> bool {
+            let val = (self.0 >> 1usize) & 0x01;
+            val != 0
+        }
+        #[doc = "HPDMA3_CHn suspend in debug."]
+        #[inline(always)]
+        pub fn set_dbg_hpdma1_ch1_stop(&mut self, val: bool) {
+            self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
+        }
+        #[doc = "HPDMA3_CHn suspend in debug."]
+        #[inline(always)]
+        pub const fn dbg_hpdma1_ch2_stop(&self) -> bool {
+            let val = (self.0 >> 2usize) & 0x01;
+            val != 0
+        }
+        #[doc = "HPDMA3_CHn suspend in debug."]
+        #[inline(always)]
+        pub fn set_dbg_hpdma1_ch2_stop(&mut self, val: bool) {
+            self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
+        }
+        #[doc = "HPDMA3_CHn suspend in debug."]
+        #[inline(always)]
+        pub const fn dbg_hpdma1_ch3_stop(&self) -> bool {
+            let val = (self.0 >> 3usize) & 0x01;
+            val != 0
+        }
+        #[doc = "HPDMA3_CHn suspend in debug."]
+        #[inline(always)]
+        pub fn set_dbg_hpdma1_ch3_stop(&mut self, val: bool) {
+            self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
+        }
+        #[doc = "HPDMA3_CHn suspend in debug."]
+        #[inline(always)]
+        pub const fn dbg_hpdma1_ch4_stop(&self) -> bool {
+            let val = (self.0 >> 4usize) & 0x01;
+            val != 0
+        }
+        #[doc = "HPDMA3_CHn suspend in debug."]
+        #[inline(always)]
+        pub fn set_dbg_hpdma1_ch4_stop(&mut self, val: bool) {
+            self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
+        }
+        #[doc = "HPDMA3_CHn suspend in debug."]
+        #[inline(always)]
+        pub const fn dbg_hpdma1_ch5_stop(&self) -> bool {
+            let val = (self.0 >> 5usize) & 0x01;
+            val != 0
+        }
+        #[doc = "HPDMA3_CHn suspend in debug."]
+        #[inline(always)]
+        pub fn set_dbg_hpdma1_ch5_stop(&mut self, val: bool) {
+            self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
+        }
+        #[doc = "HPDMA3_CHn suspend in debug."]
+        #[inline(always)]
+        pub const fn dbg_hpdma1_ch6_stop(&self) -> bool {
+            let val = (self.0 >> 6usize) & 0x01;
+            val != 0
+        }
+        #[doc = "HPDMA3_CHn suspend in debug."]
+        #[inline(always)]
+        pub fn set_dbg_hpdma1_ch6_stop(&mut self, val: bool) {
+            self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
+        }
+        #[doc = "HPDMA3_CHn suspend in debug."]
+        #[inline(always)]
+        pub const fn dbg_hpdma1_ch7_stop(&self) -> bool {
+            let val = (self.0 >> 7usize) & 0x01;
+            val != 0
+        }
+        #[doc = "HPDMA3_CHn suspend in debug."]
+        #[inline(always)]
+        pub fn set_dbg_hpdma1_ch7_stop(&mut self, val: bool) {
+            self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
+        }
+        #[doc = "HPDMA3_CHn suspend in debug."]
+        #[inline(always)]
+        pub const fn dbg_hpdma1_ch8_stop(&self) -> bool {
+            let val = (self.0 >> 8usize) & 0x01;
+            val != 0
+        }
+        #[doc = "HPDMA3_CHn suspend in debug."]
+        #[inline(always)]
+        pub fn set_dbg_hpdma1_ch8_stop(&mut self, val: bool) {
+            self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
+        }
+        #[doc = "HPDMA3_CHn suspend in debug."]
+        #[inline(always)]
+        pub const fn dbg_hpdma1_ch9_stop(&self) -> bool {
+            let val = (self.0 >> 9usize) & 0x01;
+            val != 0
+        }
+        #[doc = "HPDMA3_CHn suspend in debug."]
+        #[inline(always)]
+        pub fn set_dbg_hpdma1_ch9_stop(&mut self, val: bool) {
+            self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
+        }
+        #[doc = "HPDMA3_CHn suspend in debug."]
+        #[inline(always)]
+        pub const fn dbg_hpdma1_ch10_stop(&self) -> bool {
+            let val = (self.0 >> 10usize) & 0x01;
+            val != 0
+        }
+        #[doc = "HPDMA3_CHn suspend in debug."]
+        #[inline(always)]
+        pub fn set_dbg_hpdma1_ch10_stop(&mut self, val: bool) {
+            self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
+        }
+        #[doc = "HPDMA3_CHn suspend in debug."]
+        #[inline(always)]
+        pub const fn dbg_hpdma1_ch11_stop(&self) -> bool {
+            let val = (self.0 >> 11usize) & 0x01;
+            val != 0
+        }
+        #[doc = "HPDMA3_CHn suspend in debug."]
+        #[inline(always)]
+        pub fn set_dbg_hpdma1_ch11_stop(&mut self, val: bool) {
+            self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
+        }
+        #[doc = "HPDMA3_CHn suspend in debug."]
+        #[inline(always)]
+        pub const fn dbg_hpdma1_ch12_stop(&self) -> bool {
+            let val = (self.0 >> 12usize) & 0x01;
+            val != 0
+        }
+        #[doc = "HPDMA3_CHn suspend in debug."]
+        #[inline(always)]
+        pub fn set_dbg_hpdma1_ch12_stop(&mut self, val: bool) {
+            self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
+        }
+        #[doc = "HPDMA3_CHn suspend in debug."]
+        #[inline(always)]
+        pub const fn dbg_hpdma1_ch13_stop(&self) -> bool {
+            let val = (self.0 >> 13usize) & 0x01;
+            val != 0
+        }
+        #[doc = "HPDMA3_CHn suspend in debug."]
+        #[inline(always)]
+        pub fn set_dbg_hpdma1_ch13_stop(&mut self, val: bool) {
+            self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
+        }
+        #[doc = "HPDMA3_CHn suspend in debug."]
+        #[inline(always)]
+        pub const fn dbg_hpdma1_ch14_stop(&self) -> bool {
+            let val = (self.0 >> 14usize) & 0x01;
+            val != 0
+        }
+        #[doc = "HPDMA3_CHn suspend in debug."]
+        #[inline(always)]
+        pub fn set_dbg_hpdma1_ch14_stop(&mut self, val: bool) {
+            self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
+        }
+        #[doc = "HPDMA3_CHn suspend in debug."]
+        #[inline(always)]
+        pub const fn dbg_hpdma1_ch15_stop(&self) -> bool {
+            let val = (self.0 >> 15usize) & 0x01;
+            val != 0
+        }
+        #[doc = "HPDMA3_CHn suspend in debug."]
+        #[inline(always)]
+        pub fn set_dbg_hpdma1_ch15_stop(&mut self, val: bool) {
+            self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
         }
         #[doc = "NPU stop in debug mode."]
-        #[must_use]
         #[inline(always)]
         pub const fn npu_dbg_freeze(&self) -> super::vals::NpuDbgFreeze {
             let val = (self.0 >> 16usize) & 0x01;
@@ -191,7 +491,7 @@ pub mod regs {
         }
         #[doc = "NPU stop in debug mode."]
         #[inline(always)]
-        pub const fn set_npu_dbg_freeze(&mut self, val: super::vals::NpuDbgFreeze) {
+        pub fn set_npu_dbg_freeze(&mut self, val: super::vals::NpuDbgFreeze) {
             self.0 = (self.0 & !(0x01 << 16usize)) | (((val.to_bits() as u32) & 0x01) << 16usize);
         }
     }
@@ -204,22 +504,22 @@ pub mod regs {
     impl core::fmt::Debug for Ahb5fz1 {
         fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
             f.debug_struct("Ahb5fz1")
-                .field("dbg_hpdma1_stop[0]", &self.dbg_hpdma1_stop(0usize))
-                .field("dbg_hpdma1_stop[1]", &self.dbg_hpdma1_stop(1usize))
-                .field("dbg_hpdma1_stop[2]", &self.dbg_hpdma1_stop(2usize))
-                .field("dbg_hpdma1_stop[3]", &self.dbg_hpdma1_stop(3usize))
-                .field("dbg_hpdma1_stop[4]", &self.dbg_hpdma1_stop(4usize))
-                .field("dbg_hpdma1_stop[5]", &self.dbg_hpdma1_stop(5usize))
-                .field("dbg_hpdma1_stop[6]", &self.dbg_hpdma1_stop(6usize))
-                .field("dbg_hpdma1_stop[7]", &self.dbg_hpdma1_stop(7usize))
-                .field("dbg_hpdma1_stop[8]", &self.dbg_hpdma1_stop(8usize))
-                .field("dbg_hpdma1_stop[9]", &self.dbg_hpdma1_stop(9usize))
-                .field("dbg_hpdma1_stop[10]", &self.dbg_hpdma1_stop(10usize))
-                .field("dbg_hpdma1_stop[11]", &self.dbg_hpdma1_stop(11usize))
-                .field("dbg_hpdma1_stop[12]", &self.dbg_hpdma1_stop(12usize))
-                .field("dbg_hpdma1_stop[13]", &self.dbg_hpdma1_stop(13usize))
-                .field("dbg_hpdma1_stop[14]", &self.dbg_hpdma1_stop(14usize))
-                .field("dbg_hpdma1_stop[15]", &self.dbg_hpdma1_stop(15usize))
+                .field("dbg_hpdma1_ch0_stop", &self.dbg_hpdma1_ch0_stop())
+                .field("dbg_hpdma1_ch1_stop", &self.dbg_hpdma1_ch1_stop())
+                .field("dbg_hpdma1_ch2_stop", &self.dbg_hpdma1_ch2_stop())
+                .field("dbg_hpdma1_ch3_stop", &self.dbg_hpdma1_ch3_stop())
+                .field("dbg_hpdma1_ch4_stop", &self.dbg_hpdma1_ch4_stop())
+                .field("dbg_hpdma1_ch5_stop", &self.dbg_hpdma1_ch5_stop())
+                .field("dbg_hpdma1_ch6_stop", &self.dbg_hpdma1_ch6_stop())
+                .field("dbg_hpdma1_ch7_stop", &self.dbg_hpdma1_ch7_stop())
+                .field("dbg_hpdma1_ch8_stop", &self.dbg_hpdma1_ch8_stop())
+                .field("dbg_hpdma1_ch9_stop", &self.dbg_hpdma1_ch9_stop())
+                .field("dbg_hpdma1_ch10_stop", &self.dbg_hpdma1_ch10_stop())
+                .field("dbg_hpdma1_ch11_stop", &self.dbg_hpdma1_ch11_stop())
+                .field("dbg_hpdma1_ch12_stop", &self.dbg_hpdma1_ch12_stop())
+                .field("dbg_hpdma1_ch13_stop", &self.dbg_hpdma1_ch13_stop())
+                .field("dbg_hpdma1_ch14_stop", &self.dbg_hpdma1_ch14_stop())
+                .field("dbg_hpdma1_ch15_stop", &self.dbg_hpdma1_ch15_stop())
                 .field("npu_dbg_freeze", &self.npu_dbg_freeze())
                 .finish()
         }
@@ -227,27 +527,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Ahb5fz1 {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Ahb5fz1 {{ dbg_hpdma1_stop[0]: {=bool:?}, dbg_hpdma1_stop[1]: {=bool:?}, dbg_hpdma1_stop[2]: {=bool:?}, dbg_hpdma1_stop[3]: {=bool:?}, dbg_hpdma1_stop[4]: {=bool:?}, dbg_hpdma1_stop[5]: {=bool:?}, dbg_hpdma1_stop[6]: {=bool:?}, dbg_hpdma1_stop[7]: {=bool:?}, dbg_hpdma1_stop[8]: {=bool:?}, dbg_hpdma1_stop[9]: {=bool:?}, dbg_hpdma1_stop[10]: {=bool:?}, dbg_hpdma1_stop[11]: {=bool:?}, dbg_hpdma1_stop[12]: {=bool:?}, dbg_hpdma1_stop[13]: {=bool:?}, dbg_hpdma1_stop[14]: {=bool:?}, dbg_hpdma1_stop[15]: {=bool:?}, npu_dbg_freeze: {:?} }}",
-                self.dbg_hpdma1_stop(0usize),
-                self.dbg_hpdma1_stop(1usize),
-                self.dbg_hpdma1_stop(2usize),
-                self.dbg_hpdma1_stop(3usize),
-                self.dbg_hpdma1_stop(4usize),
-                self.dbg_hpdma1_stop(5usize),
-                self.dbg_hpdma1_stop(6usize),
-                self.dbg_hpdma1_stop(7usize),
-                self.dbg_hpdma1_stop(8usize),
-                self.dbg_hpdma1_stop(9usize),
-                self.dbg_hpdma1_stop(10usize),
-                self.dbg_hpdma1_stop(11usize),
-                self.dbg_hpdma1_stop(12usize),
-                self.dbg_hpdma1_stop(13usize),
-                self.dbg_hpdma1_stop(14usize),
-                self.dbg_hpdma1_stop(15usize),
-                self.npu_dbg_freeze()
-            )
+            defmt :: write ! (f , "Ahb5fz1 {{ dbg_hpdma1_ch0_stop: {=bool:?}, dbg_hpdma1_ch1_stop: {=bool:?}, dbg_hpdma1_ch2_stop: {=bool:?}, dbg_hpdma1_ch3_stop: {=bool:?}, dbg_hpdma1_ch4_stop: {=bool:?}, dbg_hpdma1_ch5_stop: {=bool:?}, dbg_hpdma1_ch6_stop: {=bool:?}, dbg_hpdma1_ch7_stop: {=bool:?}, dbg_hpdma1_ch8_stop: {=bool:?}, dbg_hpdma1_ch9_stop: {=bool:?}, dbg_hpdma1_ch10_stop: {=bool:?}, dbg_hpdma1_ch11_stop: {=bool:?}, dbg_hpdma1_ch12_stop: {=bool:?}, dbg_hpdma1_ch13_stop: {=bool:?}, dbg_hpdma1_ch14_stop: {=bool:?}, dbg_hpdma1_ch15_stop: {=bool:?}, npu_dbg_freeze: {:?} }}" , self . dbg_hpdma1_ch0_stop () , self . dbg_hpdma1_ch1_stop () , self . dbg_hpdma1_ch2_stop () , self . dbg_hpdma1_ch3_stop () , self . dbg_hpdma1_ch4_stop () , self . dbg_hpdma1_ch5_stop () , self . dbg_hpdma1_ch6_stop () , self . dbg_hpdma1_ch7_stop () , self . dbg_hpdma1_ch8_stop () , self . dbg_hpdma1_ch9_stop () , self . dbg_hpdma1_ch10_stop () , self . dbg_hpdma1_ch11_stop () , self . dbg_hpdma1_ch12_stop () , self . dbg_hpdma1_ch13_stop () , self . dbg_hpdma1_ch14_stop () , self . dbg_hpdma1_ch15_stop () , self . npu_dbg_freeze ())
         }
     }
     #[doc = "DBGMCU APB1H peripheral freeze register."]
@@ -256,7 +536,6 @@ pub mod regs {
     pub struct Apb1hfz1(pub u32);
     impl Apb1hfz1 {
         #[doc = "FDCAN stop in debug."]
-        #[must_use]
         #[inline(always)]
         pub const fn dbg_fdcan_stop(&self) -> bool {
             let val = (self.0 >> 8usize) & 0x01;
@@ -264,7 +543,7 @@ pub mod regs {
         }
         #[doc = "FDCAN stop in debug."]
         #[inline(always)]
-        pub const fn set_dbg_fdcan_stop(&mut self, val: bool) {
+        pub fn set_dbg_fdcan_stop(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
         }
     }
@@ -293,7 +572,6 @@ pub mod regs {
     pub struct Apb1lfz1(pub u32);
     impl Apb1lfz1 {
         #[doc = "TIM2 stop in debug."]
-        #[must_use]
         #[inline(always)]
         pub const fn dbg_tim2_stop(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -301,11 +579,10 @@ pub mod regs {
         }
         #[doc = "TIM2 stop in debug."]
         #[inline(always)]
-        pub const fn set_dbg_tim2_stop(&mut self, val: bool) {
+        pub fn set_dbg_tim2_stop(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "TIM3 stop in debug."]
-        #[must_use]
         #[inline(always)]
         pub const fn dbg_tim3_stop(&self) -> bool {
             let val = (self.0 >> 1usize) & 0x01;
@@ -313,11 +590,10 @@ pub mod regs {
         }
         #[doc = "TIM3 stop in debug."]
         #[inline(always)]
-        pub const fn set_dbg_tim3_stop(&mut self, val: bool) {
+        pub fn set_dbg_tim3_stop(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
         }
         #[doc = "TIM4 stop in debug."]
-        #[must_use]
         #[inline(always)]
         pub const fn dbg_tim4_stop(&self) -> bool {
             let val = (self.0 >> 2usize) & 0x01;
@@ -325,11 +601,10 @@ pub mod regs {
         }
         #[doc = "TIM4 stop in debug."]
         #[inline(always)]
-        pub const fn set_dbg_tim4_stop(&mut self, val: bool) {
+        pub fn set_dbg_tim4_stop(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
         }
         #[doc = "TIM5 stop in debug."]
-        #[must_use]
         #[inline(always)]
         pub const fn dbg_tim5_stop(&self) -> bool {
             let val = (self.0 >> 3usize) & 0x01;
@@ -337,11 +612,10 @@ pub mod regs {
         }
         #[doc = "TIM5 stop in debug."]
         #[inline(always)]
-        pub const fn set_dbg_tim5_stop(&mut self, val: bool) {
+        pub fn set_dbg_tim5_stop(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
         }
         #[doc = "TIM6 stop in debug."]
-        #[must_use]
         #[inline(always)]
         pub const fn dbg_tim6_stop(&self) -> bool {
             let val = (self.0 >> 4usize) & 0x01;
@@ -349,11 +623,10 @@ pub mod regs {
         }
         #[doc = "TIM6 stop in debug."]
         #[inline(always)]
-        pub const fn set_dbg_tim6_stop(&mut self, val: bool) {
+        pub fn set_dbg_tim6_stop(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
         }
         #[doc = "TIM7 stop in debug."]
-        #[must_use]
         #[inline(always)]
         pub const fn dbg_tim7_stop(&self) -> bool {
             let val = (self.0 >> 5usize) & 0x01;
@@ -361,11 +634,10 @@ pub mod regs {
         }
         #[doc = "TIM7 stop in debug."]
         #[inline(always)]
-        pub const fn set_dbg_tim7_stop(&mut self, val: bool) {
+        pub fn set_dbg_tim7_stop(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
         }
         #[doc = "TIM12 stop in debug."]
-        #[must_use]
         #[inline(always)]
         pub const fn dbg_tim12_stop(&self) -> bool {
             let val = (self.0 >> 6usize) & 0x01;
@@ -373,11 +645,10 @@ pub mod regs {
         }
         #[doc = "TIM12 stop in debug."]
         #[inline(always)]
-        pub const fn set_dbg_tim12_stop(&mut self, val: bool) {
+        pub fn set_dbg_tim12_stop(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
         }
         #[doc = "TIM13 stop in debug."]
-        #[must_use]
         #[inline(always)]
         pub const fn dbg_tim13_stop(&self) -> bool {
             let val = (self.0 >> 7usize) & 0x01;
@@ -385,11 +656,10 @@ pub mod regs {
         }
         #[doc = "TIM13 stop in debug."]
         #[inline(always)]
-        pub const fn set_dbg_tim13_stop(&mut self, val: bool) {
+        pub fn set_dbg_tim13_stop(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
         }
         #[doc = "TIM14 stop in debug."]
-        #[must_use]
         #[inline(always)]
         pub const fn dbg_tim14_stop(&self) -> bool {
             let val = (self.0 >> 8usize) & 0x01;
@@ -397,11 +667,10 @@ pub mod regs {
         }
         #[doc = "TIM14 stop in debug."]
         #[inline(always)]
-        pub const fn set_dbg_tim14_stop(&mut self, val: bool) {
+        pub fn set_dbg_tim14_stop(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
         }
         #[doc = "LPTIM1 stop in debug."]
-        #[must_use]
         #[inline(always)]
         pub const fn dbg_lptim1_stop(&self) -> bool {
             let val = (self.0 >> 9usize) & 0x01;
@@ -409,11 +678,10 @@ pub mod regs {
         }
         #[doc = "LPTIM1 stop in debug."]
         #[inline(always)]
-        pub const fn set_dbg_lptim1_stop(&mut self, val: bool) {
+        pub fn set_dbg_lptim1_stop(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
         }
         #[doc = "WWDG1 stop in debug."]
-        #[must_use]
         #[inline(always)]
         pub const fn dbg_wwdg1_stop(&self) -> bool {
             let val = (self.0 >> 11usize) & 0x01;
@@ -421,11 +689,10 @@ pub mod regs {
         }
         #[doc = "WWDG1 stop in debug."]
         #[inline(always)]
-        pub const fn set_dbg_wwdg1_stop(&mut self, val: bool) {
+        pub fn set_dbg_wwdg1_stop(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
         }
         #[doc = "TIM10 stop in debug."]
-        #[must_use]
         #[inline(always)]
         pub const fn dbg_tim10_stop(&self) -> bool {
             let val = (self.0 >> 12usize) & 0x01;
@@ -433,11 +700,10 @@ pub mod regs {
         }
         #[doc = "TIM10 stop in debug."]
         #[inline(always)]
-        pub const fn set_dbg_tim10_stop(&mut self, val: bool) {
+        pub fn set_dbg_tim10_stop(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
         }
         #[doc = "TIM11 stop in debug."]
-        #[must_use]
         #[inline(always)]
         pub const fn dbg_tim11_stop(&self) -> bool {
             let val = (self.0 >> 13usize) & 0x01;
@@ -445,11 +711,10 @@ pub mod regs {
         }
         #[doc = "TIM11 stop in debug."]
         #[inline(always)]
-        pub const fn set_dbg_tim11_stop(&mut self, val: bool) {
+        pub fn set_dbg_tim11_stop(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
         }
         #[doc = "I2C1 SMBUS timeout stop in debug."]
-        #[must_use]
         #[inline(always)]
         pub const fn dbg_i2c1_stop(&self) -> bool {
             let val = (self.0 >> 21usize) & 0x01;
@@ -457,11 +722,10 @@ pub mod regs {
         }
         #[doc = "I2C1 SMBUS timeout stop in debug."]
         #[inline(always)]
-        pub const fn set_dbg_i2c1_stop(&mut self, val: bool) {
+        pub fn set_dbg_i2c1_stop(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
         }
         #[doc = "I2C2 SMBUS timeout stop in debug."]
-        #[must_use]
         #[inline(always)]
         pub const fn dbg_i2c2_stop(&self) -> bool {
             let val = (self.0 >> 22usize) & 0x01;
@@ -469,11 +733,10 @@ pub mod regs {
         }
         #[doc = "I2C2 SMBUS timeout stop in debug."]
         #[inline(always)]
-        pub const fn set_dbg_i2c2_stop(&mut self, val: bool) {
+        pub fn set_dbg_i2c2_stop(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
         }
         #[doc = "I2C3 SMBUS timeout stop in debug."]
-        #[must_use]
         #[inline(always)]
         pub const fn dbg_i2c3_stop(&self) -> bool {
             let val = (self.0 >> 23usize) & 0x01;
@@ -481,11 +744,10 @@ pub mod regs {
         }
         #[doc = "I2C3 SMBUS timeout stop in debug."]
         #[inline(always)]
-        pub const fn set_dbg_i2c3_stop(&mut self, val: bool) {
+        pub fn set_dbg_i2c3_stop(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
         }
         #[doc = "I3C1 SMBUS timeout stop in debug."]
-        #[must_use]
         #[inline(always)]
         pub const fn dbg_i3c1_stop(&self) -> bool {
             let val = (self.0 >> 24usize) & 0x01;
@@ -493,11 +755,10 @@ pub mod regs {
         }
         #[doc = "I3C1 SMBUS timeout stop in debug."]
         #[inline(always)]
-        pub const fn set_dbg_i3c1_stop(&mut self, val: bool) {
+        pub fn set_dbg_i3c1_stop(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
         }
         #[doc = "I3C2 SMBUS timeout stop in debug."]
-        #[must_use]
         #[inline(always)]
         pub const fn dbg_i3c2_stop(&self) -> bool {
             let val = (self.0 >> 25usize) & 0x01;
@@ -505,7 +766,7 @@ pub mod regs {
         }
         #[doc = "I3C2 SMBUS timeout stop in debug."]
         #[inline(always)]
-        pub const fn set_dbg_i3c2_stop(&mut self, val: bool) {
+        pub fn set_dbg_i3c2_stop(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
         }
     }
@@ -542,28 +803,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Apb1lfz1 {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Apb1lfz1 {{ dbg_tim2_stop: {=bool:?}, dbg_tim3_stop: {=bool:?}, dbg_tim4_stop: {=bool:?}, dbg_tim5_stop: {=bool:?}, dbg_tim6_stop: {=bool:?}, dbg_tim7_stop: {=bool:?}, dbg_tim12_stop: {=bool:?}, dbg_tim13_stop: {=bool:?}, dbg_tim14_stop: {=bool:?}, dbg_lptim1_stop: {=bool:?}, dbg_wwdg1_stop: {=bool:?}, dbg_tim10_stop: {=bool:?}, dbg_tim11_stop: {=bool:?}, dbg_i2c1_stop: {=bool:?}, dbg_i2c2_stop: {=bool:?}, dbg_i2c3_stop: {=bool:?}, dbg_i3c1_stop: {=bool:?}, dbg_i3c2_stop: {=bool:?} }}",
-                self.dbg_tim2_stop(),
-                self.dbg_tim3_stop(),
-                self.dbg_tim4_stop(),
-                self.dbg_tim5_stop(),
-                self.dbg_tim6_stop(),
-                self.dbg_tim7_stop(),
-                self.dbg_tim12_stop(),
-                self.dbg_tim13_stop(),
-                self.dbg_tim14_stop(),
-                self.dbg_lptim1_stop(),
-                self.dbg_wwdg1_stop(),
-                self.dbg_tim10_stop(),
-                self.dbg_tim11_stop(),
-                self.dbg_i2c1_stop(),
-                self.dbg_i2c2_stop(),
-                self.dbg_i2c3_stop(),
-                self.dbg_i3c1_stop(),
-                self.dbg_i3c2_stop()
-            )
+            defmt :: write ! (f , "Apb1lfz1 {{ dbg_tim2_stop: {=bool:?}, dbg_tim3_stop: {=bool:?}, dbg_tim4_stop: {=bool:?}, dbg_tim5_stop: {=bool:?}, dbg_tim6_stop: {=bool:?}, dbg_tim7_stop: {=bool:?}, dbg_tim12_stop: {=bool:?}, dbg_tim13_stop: {=bool:?}, dbg_tim14_stop: {=bool:?}, dbg_lptim1_stop: {=bool:?}, dbg_wwdg1_stop: {=bool:?}, dbg_tim10_stop: {=bool:?}, dbg_tim11_stop: {=bool:?}, dbg_i2c1_stop: {=bool:?}, dbg_i2c2_stop: {=bool:?}, dbg_i2c3_stop: {=bool:?}, dbg_i3c1_stop: {=bool:?}, dbg_i3c2_stop: {=bool:?} }}" , self . dbg_tim2_stop () , self . dbg_tim3_stop () , self . dbg_tim4_stop () , self . dbg_tim5_stop () , self . dbg_tim6_stop () , self . dbg_tim7_stop () , self . dbg_tim12_stop () , self . dbg_tim13_stop () , self . dbg_tim14_stop () , self . dbg_lptim1_stop () , self . dbg_wwdg1_stop () , self . dbg_tim10_stop () , self . dbg_tim11_stop () , self . dbg_i2c1_stop () , self . dbg_i2c2_stop () , self . dbg_i2c3_stop () , self . dbg_i3c1_stop () , self . dbg_i3c2_stop ())
         }
     }
     #[doc = "DBGMCU APB2 peripheral freeze register."]
@@ -572,7 +812,6 @@ pub mod regs {
     pub struct Apb2fz1(pub u32);
     impl Apb2fz1 {
         #[doc = "TIM1 stop in debug."]
-        #[must_use]
         #[inline(always)]
         pub const fn dbg_tim1_stop(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -580,11 +819,10 @@ pub mod regs {
         }
         #[doc = "TIM1 stop in debug."]
         #[inline(always)]
-        pub const fn set_dbg_tim1_stop(&mut self, val: bool) {
+        pub fn set_dbg_tim1_stop(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "TIM8 stop in debug."]
-        #[must_use]
         #[inline(always)]
         pub const fn dbg_tim8_stop(&self) -> bool {
             let val = (self.0 >> 1usize) & 0x01;
@@ -592,11 +830,10 @@ pub mod regs {
         }
         #[doc = "TIM8 stop in debug."]
         #[inline(always)]
-        pub const fn set_dbg_tim8_stop(&mut self, val: bool) {
+        pub fn set_dbg_tim8_stop(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
         }
         #[doc = "TIM18 stop in debug."]
-        #[must_use]
         #[inline(always)]
         pub const fn dbg_tim18_stop(&self) -> bool {
             let val = (self.0 >> 15usize) & 0x01;
@@ -604,11 +841,10 @@ pub mod regs {
         }
         #[doc = "TIM18 stop in debug."]
         #[inline(always)]
-        pub const fn set_dbg_tim18_stop(&mut self, val: bool) {
+        pub fn set_dbg_tim18_stop(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
         }
         #[doc = "TIM15 stop in debug."]
-        #[must_use]
         #[inline(always)]
         pub const fn dbg_tim15_stop(&self) -> bool {
             let val = (self.0 >> 16usize) & 0x01;
@@ -616,11 +852,10 @@ pub mod regs {
         }
         #[doc = "TIM15 stop in debug."]
         #[inline(always)]
-        pub const fn set_dbg_tim15_stop(&mut self, val: bool) {
+        pub fn set_dbg_tim15_stop(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
         }
         #[doc = "TIM16 stop in debug."]
-        #[must_use]
         #[inline(always)]
         pub const fn dbg_tim16_stop(&self) -> bool {
             let val = (self.0 >> 17usize) & 0x01;
@@ -628,11 +863,10 @@ pub mod regs {
         }
         #[doc = "TIM16 stop in debug."]
         #[inline(always)]
-        pub const fn set_dbg_tim16_stop(&mut self, val: bool) {
+        pub fn set_dbg_tim16_stop(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
         }
         #[doc = "TIM17 stop in debug."]
-        #[must_use]
         #[inline(always)]
         pub const fn dbg_tim17_stop(&self) -> bool {
             let val = (self.0 >> 18usize) & 0x01;
@@ -640,11 +874,10 @@ pub mod regs {
         }
         #[doc = "TIM17 stop in debug."]
         #[inline(always)]
-        pub const fn set_dbg_tim17_stop(&mut self, val: bool) {
+        pub fn set_dbg_tim17_stop(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
         }
         #[doc = "TIM9 stop in debug."]
-        #[must_use]
         #[inline(always)]
         pub const fn dbg_tim9_stop(&self) -> bool {
             let val = (self.0 >> 19usize) & 0x01;
@@ -652,7 +885,7 @@ pub mod regs {
         }
         #[doc = "TIM9 stop in debug."]
         #[inline(always)]
-        pub const fn set_dbg_tim9_stop(&mut self, val: bool) {
+        pub fn set_dbg_tim9_stop(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
         }
     }
@@ -678,17 +911,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Apb2fz1 {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Apb2fz1 {{ dbg_tim1_stop: {=bool:?}, dbg_tim8_stop: {=bool:?}, dbg_tim18_stop: {=bool:?}, dbg_tim15_stop: {=bool:?}, dbg_tim16_stop: {=bool:?}, dbg_tim17_stop: {=bool:?}, dbg_tim9_stop: {=bool:?} }}",
-                self.dbg_tim1_stop(),
-                self.dbg_tim8_stop(),
-                self.dbg_tim18_stop(),
-                self.dbg_tim15_stop(),
-                self.dbg_tim16_stop(),
-                self.dbg_tim17_stop(),
-                self.dbg_tim9_stop()
-            )
+            defmt :: write ! (f , "Apb2fz1 {{ dbg_tim1_stop: {=bool:?}, dbg_tim8_stop: {=bool:?}, dbg_tim18_stop: {=bool:?}, dbg_tim15_stop: {=bool:?}, dbg_tim16_stop: {=bool:?}, dbg_tim17_stop: {=bool:?}, dbg_tim9_stop: {=bool:?} }}" , self . dbg_tim1_stop () , self . dbg_tim8_stop () , self . dbg_tim18_stop () , self . dbg_tim15_stop () , self . dbg_tim16_stop () , self . dbg_tim17_stop () , self . dbg_tim9_stop ())
         }
     }
     #[doc = "DBGMCU APB4 peripheral freeze register."]
@@ -697,7 +920,6 @@ pub mod regs {
     pub struct Apb4fz1(pub u32);
     impl Apb4fz1 {
         #[doc = "I2C4 stop in debug."]
-        #[must_use]
         #[inline(always)]
         pub const fn dbg_i2c4_stop(&self) -> bool {
             let val = (self.0 >> 8usize) & 0x01;
@@ -705,11 +927,10 @@ pub mod regs {
         }
         #[doc = "I2C4 stop in debug."]
         #[inline(always)]
-        pub const fn set_dbg_i2c4_stop(&mut self, val: bool) {
+        pub fn set_dbg_i2c4_stop(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
         }
         #[doc = "LPTIM2 stop in debug."]
-        #[must_use]
         #[inline(always)]
         pub const fn dbg_lptim2_stop(&self) -> bool {
             let val = (self.0 >> 9usize) & 0x01;
@@ -717,11 +938,10 @@ pub mod regs {
         }
         #[doc = "LPTIM2 stop in debug."]
         #[inline(always)]
-        pub const fn set_dbg_lptim2_stop(&mut self, val: bool) {
+        pub fn set_dbg_lptim2_stop(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
         }
         #[doc = "LPTIM3 stop in debug."]
-        #[must_use]
         #[inline(always)]
         pub const fn dbg_lptim3_stop(&self) -> bool {
             let val = (self.0 >> 10usize) & 0x01;
@@ -729,11 +949,10 @@ pub mod regs {
         }
         #[doc = "LPTIM3 stop in debug."]
         #[inline(always)]
-        pub const fn set_dbg_lptim3_stop(&mut self, val: bool) {
+        pub fn set_dbg_lptim3_stop(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
         }
         #[doc = "LPTIM4 stop in debug."]
-        #[must_use]
         #[inline(always)]
         pub const fn dbg_lptim4_stop(&self) -> bool {
             let val = (self.0 >> 11usize) & 0x01;
@@ -741,11 +960,10 @@ pub mod regs {
         }
         #[doc = "LPTIM4 stop in debug."]
         #[inline(always)]
-        pub const fn set_dbg_lptim4_stop(&mut self, val: bool) {
+        pub fn set_dbg_lptim4_stop(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
         }
         #[doc = "LPTIM5 stop in debug."]
-        #[must_use]
         #[inline(always)]
         pub const fn dbg_lptim5_stop(&self) -> bool {
             let val = (self.0 >> 12usize) & 0x01;
@@ -753,11 +971,10 @@ pub mod regs {
         }
         #[doc = "LPTIM5 stop in debug."]
         #[inline(always)]
-        pub const fn set_dbg_lptim5_stop(&mut self, val: bool) {
+        pub fn set_dbg_lptim5_stop(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
         }
         #[doc = "RTC clock is suspended in debug."]
-        #[must_use]
         #[inline(always)]
         pub const fn dbg_rtc_stop(&self) -> bool {
             let val = (self.0 >> 16usize) & 0x01;
@@ -765,11 +982,10 @@ pub mod regs {
         }
         #[doc = "RTC clock is suspended in debug."]
         #[inline(always)]
-        pub const fn set_dbg_rtc_stop(&mut self, val: bool) {
+        pub fn set_dbg_rtc_stop(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
         }
         #[doc = "WWDG stop in debug."]
-        #[must_use]
         #[inline(always)]
         pub const fn dbg_iwdg_stop(&self) -> bool {
             let val = (self.0 >> 18usize) & 0x01;
@@ -777,7 +993,7 @@ pub mod regs {
         }
         #[doc = "WWDG stop in debug."]
         #[inline(always)]
-        pub const fn set_dbg_iwdg_stop(&mut self, val: bool) {
+        pub fn set_dbg_iwdg_stop(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
         }
     }
@@ -803,17 +1019,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Apb4fz1 {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Apb4fz1 {{ dbg_i2c4_stop: {=bool:?}, dbg_lptim2_stop: {=bool:?}, dbg_lptim3_stop: {=bool:?}, dbg_lptim4_stop: {=bool:?}, dbg_lptim5_stop: {=bool:?}, dbg_rtc_stop: {=bool:?}, dbg_iwdg_stop: {=bool:?} }}",
-                self.dbg_i2c4_stop(),
-                self.dbg_lptim2_stop(),
-                self.dbg_lptim3_stop(),
-                self.dbg_lptim4_stop(),
-                self.dbg_lptim5_stop(),
-                self.dbg_rtc_stop(),
-                self.dbg_iwdg_stop()
-            )
+            defmt :: write ! (f , "Apb4fz1 {{ dbg_i2c4_stop: {=bool:?}, dbg_lptim2_stop: {=bool:?}, dbg_lptim3_stop: {=bool:?}, dbg_lptim4_stop: {=bool:?}, dbg_lptim5_stop: {=bool:?}, dbg_rtc_stop: {=bool:?}, dbg_iwdg_stop: {=bool:?} }}" , self . dbg_i2c4_stop () , self . dbg_lptim2_stop () , self . dbg_lptim3_stop () , self . dbg_lptim4_stop () , self . dbg_lptim5_stop () , self . dbg_rtc_stop () , self . dbg_iwdg_stop ())
         }
     }
     #[doc = "DBGMCU APB5 peripheral freeze register."]
@@ -822,7 +1028,6 @@ pub mod regs {
     pub struct Apb5fz1(pub u32);
     impl Apb5fz1 {
         #[doc = "GFXTIM stop in debug."]
-        #[must_use]
         #[inline(always)]
         pub const fn dbg_gfxtim_stop(&self) -> bool {
             let val = (self.0 >> 4usize) & 0x01;
@@ -830,7 +1035,7 @@ pub mod regs {
         }
         #[doc = "GFXTIM stop in debug."]
         #[inline(always)]
-        pub const fn set_dbg_gfxtim_stop(&mut self, val: bool) {
+        pub fn set_dbg_gfxtim_stop(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
         }
     }
@@ -859,7 +1064,6 @@ pub mod regs {
     pub struct Cr(pub u32);
     impl Cr {
         #[doc = "Allow debug in Sleep mode."]
-        #[must_use]
         #[inline(always)]
         pub const fn dbg_sleep(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -867,11 +1071,10 @@ pub mod regs {
         }
         #[doc = "Allow debug in Sleep mode."]
         #[inline(always)]
-        pub const fn set_dbg_sleep(&mut self, val: bool) {
+        pub fn set_dbg_sleep(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "Allow debug in Stop mode."]
-        #[must_use]
         #[inline(always)]
         pub const fn dbg_stop(&self) -> bool {
             let val = (self.0 >> 1usize) & 0x01;
@@ -879,11 +1082,10 @@ pub mod regs {
         }
         #[doc = "Allow debug in Stop mode."]
         #[inline(always)]
-        pub const fn set_dbg_stop(&mut self, val: bool) {
+        pub fn set_dbg_stop(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
         }
         #[doc = "Allow debug in Standby mode."]
-        #[must_use]
         #[inline(always)]
         pub const fn dbg_standby(&self) -> bool {
             let val = (self.0 >> 2usize) & 0x01;
@@ -891,11 +1093,10 @@ pub mod regs {
         }
         #[doc = "Allow debug in Standby mode."]
         #[inline(always)]
-        pub const fn set_dbg_standby(&mut self, val: bool) {
+        pub fn set_dbg_standby(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
         }
         #[doc = "Debug clock enable through software."]
-        #[must_use]
         #[inline(always)]
         pub const fn dbgclken(&self) -> super::vals::Dbgclken {
             let val = (self.0 >> 20usize) & 0x01;
@@ -903,11 +1104,10 @@ pub mod regs {
         }
         #[doc = "Debug clock enable through software."]
         #[inline(always)]
-        pub const fn set_dbgclken(&mut self, val: super::vals::Dbgclken) {
+        pub fn set_dbgclken(&mut self, val: super::vals::Dbgclken) {
             self.0 = (self.0 & !(0x01 << 20usize)) | (((val.to_bits() as u32) & 0x01) << 20usize);
         }
         #[doc = "TPIU export clock enable through software."]
-        #[must_use]
         #[inline(always)]
         pub const fn traceclken(&self) -> super::vals::Traceclken {
             let val = (self.0 >> 21usize) & 0x01;
@@ -915,11 +1115,10 @@ pub mod regs {
         }
         #[doc = "TPIU export clock enable through software."]
         #[inline(always)]
-        pub const fn set_traceclken(&mut self, val: super::vals::Traceclken) {
+        pub fn set_traceclken(&mut self, val: super::vals::Traceclken) {
             self.0 = (self.0 & !(0x01 << 21usize)) | (((val.to_bits() as u32) & 0x01) << 21usize);
         }
         #[doc = "DBTRGIO connection control."]
-        #[must_use]
         #[inline(always)]
         pub const fn dbtrgoen(&self) -> super::vals::Dbtrgoen {
             let val = (self.0 >> 28usize) & 0x01;
@@ -927,11 +1126,10 @@ pub mod regs {
         }
         #[doc = "DBTRGIO connection control."]
         #[inline(always)]
-        pub const fn set_dbtrgoen(&mut self, val: super::vals::Dbtrgoen) {
+        pub fn set_dbtrgoen(&mut self, val: super::vals::Dbtrgoen) {
             self.0 = (self.0 & !(0x01 << 28usize)) | (((val.to_bits() as u32) & 0x01) << 28usize);
         }
         #[doc = "TSGEN halt enable."]
-        #[must_use]
         #[inline(always)]
         pub const fn hlt_tsgen_en(&self) -> super::vals::HltTsgenEn {
             let val = (self.0 >> 31usize) & 0x01;
@@ -939,7 +1137,7 @@ pub mod regs {
         }
         #[doc = "TSGEN halt enable."]
         #[inline(always)]
-        pub const fn set_hlt_tsgen_en(&mut self, val: super::vals::HltTsgenEn) {
+        pub fn set_hlt_tsgen_en(&mut self, val: super::vals::HltTsgenEn) {
             self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
         }
     }
@@ -965,17 +1163,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Cr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Cr {{ dbg_sleep: {=bool:?}, dbg_stop: {=bool:?}, dbg_standby: {=bool:?}, dbgclken: {:?}, traceclken: {:?}, dbtrgoen: {:?}, hlt_tsgen_en: {:?} }}",
-                self.dbg_sleep(),
-                self.dbg_stop(),
-                self.dbg_standby(),
-                self.dbgclken(),
-                self.traceclken(),
-                self.dbtrgoen(),
-                self.hlt_tsgen_en()
-            )
+            defmt :: write ! (f , "Cr {{ dbg_sleep: {=bool:?}, dbg_stop: {=bool:?}, dbg_standby: {=bool:?}, dbgclken: {:?}, traceclken: {:?}, dbtrgoen: {:?}, hlt_tsgen_en: {:?} }}" , self . dbg_sleep () , self . dbg_stop () , self . dbg_standby () , self . dbgclken () , self . traceclken () , self . dbtrgoen () , self . hlt_tsgen_en ())
         }
     }
     #[doc = "DBGMCU message read acknowledge authentication register."]
@@ -984,7 +1172,6 @@ pub mod regs {
     pub struct DbgAuthAck(pub u32);
     impl DbgAuthAck {
         #[doc = "Access status to DBG_AUTH_HOST register."]
-        #[must_use]
         #[inline(always)]
         pub const fn host_ack(&self) -> super::vals::HostAck {
             let val = (self.0 >> 0usize) & 0x01;
@@ -992,11 +1179,10 @@ pub mod regs {
         }
         #[doc = "Access status to DBG_AUTH_HOST register."]
         #[inline(always)]
-        pub const fn set_host_ack(&mut self, val: super::vals::HostAck) {
+        pub fn set_host_ack(&mut self, val: super::vals::HostAck) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
         }
         #[doc = "Access status to DBG_AUTH_DEV register."]
-        #[must_use]
         #[inline(always)]
         pub const fn device_ack(&self) -> super::vals::DeviceAck {
             let val = (self.0 >> 1usize) & 0x01;
@@ -1004,7 +1190,7 @@ pub mod regs {
         }
         #[doc = "Access status to DBG_AUTH_DEV register."]
         #[inline(always)]
-        pub const fn set_device_ack(&mut self, val: super::vals::DeviceAck) {
+        pub fn set_device_ack(&mut self, val: super::vals::DeviceAck) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
         }
     }
@@ -1039,7 +1225,6 @@ pub mod regs {
     pub struct DbgAuthDev(pub u32);
     impl DbgAuthDev {
         #[doc = "Mailbox between debugger and processor."]
-        #[must_use]
         #[inline(always)]
         pub const fn message(&self) -> u32 {
             let val = (self.0 >> 0usize) & 0xffff_ffff;
@@ -1047,7 +1232,7 @@ pub mod regs {
         }
         #[doc = "Mailbox between debugger and processor."]
         #[inline(always)]
-        pub const fn set_message(&mut self, val: u32) {
+        pub fn set_message(&mut self, val: u32) {
             self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
         }
     }
@@ -1074,7 +1259,6 @@ pub mod regs {
     pub struct DbgAuthHost(pub u32);
     impl DbgAuthHost {
         #[doc = "Mailbox between debugger and processor."]
-        #[must_use]
         #[inline(always)]
         pub const fn message(&self) -> u32 {
             let val = (self.0 >> 0usize) & 0xffff_ffff;
@@ -1082,7 +1266,7 @@ pub mod regs {
         }
         #[doc = "Mailbox between debugger and processor."]
         #[inline(always)]
-        pub const fn set_message(&mut self, val: u32) {
+        pub fn set_message(&mut self, val: u32) {
             self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
         }
     }
@@ -1109,7 +1293,6 @@ pub mod regs {
     pub struct Idcode(pub u32);
     impl Idcode {
         #[doc = "Device ID."]
-        #[must_use]
         #[inline(always)]
         pub const fn dev_id(&self) -> super::vals::DevId {
             let val = (self.0 >> 0usize) & 0x0fff;
@@ -1117,11 +1300,10 @@ pub mod regs {
         }
         #[doc = "Device ID."]
         #[inline(always)]
-        pub const fn set_dev_id(&mut self, val: super::vals::DevId) {
+        pub fn set_dev_id(&mut self, val: super::vals::DevId) {
             self.0 = (self.0 & !(0x0fff << 0usize)) | (((val.to_bits() as u32) & 0x0fff) << 0usize);
         }
         #[doc = "Revision."]
-        #[must_use]
         #[inline(always)]
         pub const fn rev_id(&self) -> u16 {
             let val = (self.0 >> 16usize) & 0xffff;
@@ -1129,7 +1311,7 @@ pub mod regs {
         }
         #[doc = "Revision."]
         #[inline(always)]
-        pub const fn set_rev_id(&mut self, val: u16) {
+        pub fn set_rev_id(&mut self, val: u16) {
             self.0 = (self.0 & !(0xffff << 16usize)) | (((val as u32) & 0xffff) << 16usize);
         }
     }
@@ -1164,7 +1346,6 @@ pub mod regs {
     pub struct Sr(pub u32);
     impl Sr {
         #[doc = "Access point 0 presence."]
-        #[must_use]
         #[inline(always)]
         pub const fn ap0_present(&self) -> super::vals::Ap0Present {
             let val = (self.0 >> 0usize) & 0x01;
@@ -1172,11 +1353,10 @@ pub mod regs {
         }
         #[doc = "Access point 0 presence."]
         #[inline(always)]
-        pub const fn set_ap0_present(&mut self, val: super::vals::Ap0Present) {
+        pub fn set_ap0_present(&mut self, val: super::vals::Ap0Present) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
         }
         #[doc = "Access point 1 presence."]
-        #[must_use]
         #[inline(always)]
         pub const fn ap1_present(&self) -> super::vals::Ap1Present {
             let val = (self.0 >> 1usize) & 0x01;
@@ -1184,11 +1364,10 @@ pub mod regs {
         }
         #[doc = "Access point 1 presence."]
         #[inline(always)]
-        pub const fn set_ap1_present(&mut self, val: super::vals::Ap1Present) {
+        pub fn set_ap1_present(&mut self, val: super::vals::Ap1Present) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
         }
         #[doc = "Access point 0 enable."]
-        #[must_use]
         #[inline(always)]
         pub const fn ap0_enable(&self) -> super::vals::Ap0Enable {
             let val = (self.0 >> 16usize) & 0x01;
@@ -1196,11 +1375,10 @@ pub mod regs {
         }
         #[doc = "Access point 0 enable."]
         #[inline(always)]
-        pub const fn set_ap0_enable(&mut self, val: super::vals::Ap0Enable) {
+        pub fn set_ap0_enable(&mut self, val: super::vals::Ap0Enable) {
             self.0 = (self.0 & !(0x01 << 16usize)) | (((val.to_bits() as u32) & 0x01) << 16usize);
         }
         #[doc = "Access point 1 enable."]
-        #[must_use]
         #[inline(always)]
         pub const fn ap1_enable(&self) -> super::vals::Ap1Enable {
             let val = (self.0 >> 17usize) & 0x01;
@@ -1208,7 +1386,7 @@ pub mod regs {
         }
         #[doc = "Access point 1 enable."]
         #[inline(always)]
-        pub const fn set_ap1_enable(&mut self, val: super::vals::Ap1Enable) {
+        pub fn set_ap1_enable(&mut self, val: super::vals::Ap1Enable) {
             self.0 = (self.0 & !(0x01 << 17usize)) | (((val.to_bits() as u32) & 0x01) << 17usize);
         }
     }
@@ -1249,7 +1427,7 @@ pub mod vals {
     pub enum Ap0Enable {
         _RESERVED_0 = 0x0,
         #[doc = "Always enable."]
-        B0x1 = 0x01,
+        B_0X1 = 0x01,
     }
     impl Ap0Enable {
         #[inline(always)]
@@ -1279,7 +1457,7 @@ pub mod vals {
     pub enum Ap0Present {
         _RESERVED_0 = 0x0,
         #[doc = "AP present."]
-        B0x1 = 0x01,
+        B_0X1 = 0x01,
     }
     impl Ap0Present {
         #[inline(always)]
@@ -1308,9 +1486,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Ap1Enable {
         #[doc = "AP disabled (debug access locked)."]
-        B0x0 = 0x0,
+        B_0X0 = 0x0,
         #[doc = "AP enabled (debug access open)."]
-        B0x1 = 0x01,
+        B_0X1 = 0x01,
     }
     impl Ap1Enable {
         #[inline(always)]
@@ -1340,7 +1518,7 @@ pub mod vals {
     pub enum Ap1Present {
         _RESERVED_0 = 0x0,
         #[doc = "AP present."]
-        B0x1 = 0x01,
+        B_0X1 = 0x01,
     }
     impl Ap1Present {
         #[inline(always)]
@@ -1369,9 +1547,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Dbgclken {
         #[doc = "Debug clock is off."]
-        B0x0 = 0x0,
+        B_0X0 = 0x0,
         #[doc = "Debug clock is on."]
-        B0x1 = 0x01,
+        B_0X1 = 0x01,
     }
     impl Dbgclken {
         #[inline(always)]
@@ -1400,9 +1578,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Dbtrgoen {
         #[doc = "DBTRGIO connected to DBTRGIN."]
-        B0x0 = 0x0,
+        B_0X0 = 0x0,
         #[doc = "DBTRGIO connected to DBTRGOUT."]
-        B0x1 = 0x01,
+        B_0X1 = 0x01,
     }
     impl Dbtrgoen {
         #[inline(always)]
@@ -1431,7 +1609,7 @@ pub mod vals {
     pub struct DevId(u16);
     impl DevId {
         #[doc = "STM32N6xx."]
-        pub const B0x486: Self = Self(0x0486);
+        pub const B_0X486: Self = Self(0x0486);
     }
     impl DevId {
         pub const fn from_bits(val: u16) -> DevId {
@@ -1444,7 +1622,7 @@ pub mod vals {
     impl core::fmt::Debug for DevId {
         fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
             match self.0 {
-                0x0486 => f.write_str("B0x486"),
+                0x0486 => f.write_str("B_0X486"),
                 other => core::write!(f, "0x{:02X}", other),
             }
         }
@@ -1453,7 +1631,7 @@ pub mod vals {
     impl defmt::Format for DevId {
         fn format(&self, f: defmt::Formatter) {
             match self.0 {
-                0x0486 => defmt::write!(f, "B0x486"),
+                0x0486 => defmt::write!(f, "B_0X486"),
                 other => defmt::write!(f, "0x{:02X}", other),
             }
         }
@@ -1475,9 +1653,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum DeviceAck {
         #[doc = "Debugger has read DBG_AUTH_DEV."]
-        B0x0 = 0x0,
+        B_0X0 = 0x0,
         #[doc = "Processor has written DBG_AUTH_DEV."]
-        B0x1 = 0x01,
+        B_0X1 = 0x01,
     }
     impl DeviceAck {
         #[inline(always)]
@@ -1506,9 +1684,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum HltTsgenEn {
         #[doc = "TSGEN keeps on counting when processor is in halt."]
-        B0x0 = 0x0,
+        B_0X0 = 0x0,
         #[doc = "TSGEN stops counting when processor is in halt."]
-        B0x1 = 0x01,
+        B_0X1 = 0x01,
     }
     impl HltTsgenEn {
         #[inline(always)]
@@ -1537,9 +1715,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum HostAck {
         #[doc = "Processor has read DBG_AUTH_HOST."]
-        B0x0 = 0x0,
+        B_0X0 = 0x0,
         #[doc = "Debugger has written DBG_AUTH_HOST."]
-        B0x1 = 0x01,
+        B_0X1 = 0x01,
     }
     impl HostAck {
         #[inline(always)]
@@ -1568,9 +1746,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum NpuDbgFreeze {
         #[doc = "Normal operation. The NPU continues to operate while Cortex-M55 is in debug mode."]
-        B0x0 = 0x0,
+        B_0X0 = 0x0,
         #[doc = "Stop in debug. NPU is suspended while Cortex-M55 is in debug mode."]
-        B0x1 = 0x01,
+        B_0X1 = 0x01,
     }
     impl NpuDbgFreeze {
         #[inline(always)]
@@ -1599,9 +1777,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Traceclken {
         #[doc = "TPIU clock is off."]
-        B0x0 = 0x0,
+        B_0X0 = 0x0,
         #[doc = "TPIU clock is on."]
-        B0x1 = 0x01,
+        B_0X1 = 0x01,
     }
     impl Traceclken {
         #[inline(always)]

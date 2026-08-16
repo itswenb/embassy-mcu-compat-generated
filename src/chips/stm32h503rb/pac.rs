@@ -419,8 +419,6 @@ mod _vectors {
     ];
 }
 pub const UID: uid::Uid = unsafe { uid::Uid::from_ptr(0x08ff_f800usize as _) };
-pub const TS_CAL1: tscal::Tscal = unsafe { tscal::Tscal::from_ptr(0x08ff_f814usize as _) };
-pub const TS_CAL2: tscal::Tscal = unsafe { tscal::Tscal::from_ptr(0x08ff_f818usize as _) };
 pub const TIM2: timer::TimGp32 = unsafe { timer::TimGp32::from_ptr(0x4000_0000usize as _) };
 pub const TIM3: timer::TimGp16 = unsafe { timer::TimGp16::from_ptr(0x4000_0400usize as _) };
 pub const TIM6: timer::TimBasic = unsafe { timer::TimBasic::from_ptr(0x4000_1000usize as _) };
@@ -453,9 +451,6 @@ pub const CRC: crc::Crc = unsafe { crc::Crc::from_ptr(0x4002_3000usize as _) };
 pub const RAMCFG: ramcfg::Ramcfg = unsafe { ramcfg::Ramcfg::from_ptr(0x4002_6000usize as _) };
 pub const ICACHE: icache::Icache = unsafe { icache::Icache::from_ptr(0x4003_0400usize as _) };
 pub const GTZC: gtzc::Gtzc1 = unsafe { gtzc::Gtzc1::from_ptr(0x4003_2400usize as _) };
-pub const GTZC_TZSC: *mut () = 0x4003_2400usize as _;
-pub const GTZC_MPCBB1: *mut () = 0x4003_2c00usize as _;
-pub const GTZC_MPCBB2: *mut () = 0x4003_3000usize as _;
 pub const GPIOA: gpio::Gpio = unsafe { gpio::Gpio::from_ptr(0x4202_0000usize as _) };
 pub const GPIOB: gpio::Gpio = unsafe { gpio::Gpio::from_ptr(0x4202_0400usize as _) };
 pub const GPIOC: gpio::Gpio = unsafe { gpio::Gpio::from_ptr(0x4202_0800usize as _) };
@@ -482,9 +477,9 @@ pub const DLYB_OCTOSPI1: dlyb::Dlyb = unsafe { dlyb::Dlyb::from_ptr(0x4600_f000u
 #[cfg(feature = "rt")]
 pub const NVIC_PRIO_BITS: u8 = 4;
 #[cfg(feature = "rt")]
-pub use Interrupt as interrupt;
-#[cfg(feature = "rt")]
 pub use cortex_m_rt::interrupt;
+#[cfg(feature = "rt")]
+pub use Interrupt as interrupt;
 #[path = "../../peripherals/adc_h5.rs"]
 pub mod adc;
 #[path = "../../peripherals/adccommon_h50.rs"]
@@ -549,8 +544,6 @@ pub mod syscfg;
 pub mod tamp;
 #[path = "../../peripherals/timer_v2.rs"]
 pub mod timer;
-#[path = "../../peripherals/tscal_v1.rs"]
-pub mod tscal;
 #[path = "../../peripherals/uid_v1.rs"]
 pub mod uid;
 #[path = "../../peripherals/usart_v4.rs"]

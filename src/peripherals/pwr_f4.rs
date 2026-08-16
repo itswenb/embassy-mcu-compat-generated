@@ -22,12 +22,12 @@ impl Pwr {
     #[doc = "power control register"]
     #[inline(always)]
     pub const fn cr1(self) -> crate::common::Reg<regs::Cr1, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0usize) as _) }
     }
     #[doc = "power control/status register"]
     #[inline(always)]
     pub const fn csr1(self) -> crate::common::Reg<regs::Csr1, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x04usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x04usize) as _) }
     }
 }
 pub mod regs {
@@ -37,7 +37,6 @@ pub mod regs {
     pub struct Cr1(pub u32);
     impl Cr1 {
         #[doc = "Low-power deep sleep"]
-        #[must_use]
         #[inline(always)]
         pub const fn lpds(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -45,11 +44,10 @@ pub mod regs {
         }
         #[doc = "Low-power deep sleep"]
         #[inline(always)]
-        pub const fn set_lpds(&mut self, val: bool) {
+        pub fn set_lpds(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "Power down deepsleep"]
-        #[must_use]
         #[inline(always)]
         pub const fn pdds(&self) -> super::vals::Pdds {
             let val = (self.0 >> 1usize) & 0x01;
@@ -57,11 +55,10 @@ pub mod regs {
         }
         #[doc = "Power down deepsleep"]
         #[inline(always)]
-        pub const fn set_pdds(&mut self, val: super::vals::Pdds) {
+        pub fn set_pdds(&mut self, val: super::vals::Pdds) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
         }
         #[doc = "Clear wakeup flag"]
-        #[must_use]
         #[inline(always)]
         pub const fn cwuf(&self) -> bool {
             let val = (self.0 >> 2usize) & 0x01;
@@ -69,11 +66,10 @@ pub mod regs {
         }
         #[doc = "Clear wakeup flag"]
         #[inline(always)]
-        pub const fn set_cwuf(&mut self, val: bool) {
+        pub fn set_cwuf(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
         }
         #[doc = "Clear standby flag"]
-        #[must_use]
         #[inline(always)]
         pub const fn csbf(&self) -> bool {
             let val = (self.0 >> 3usize) & 0x01;
@@ -81,11 +77,10 @@ pub mod regs {
         }
         #[doc = "Clear standby flag"]
         #[inline(always)]
-        pub const fn set_csbf(&mut self, val: bool) {
+        pub fn set_csbf(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
         }
         #[doc = "Power voltage detector enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn pvde(&self) -> bool {
             let val = (self.0 >> 4usize) & 0x01;
@@ -93,11 +88,10 @@ pub mod regs {
         }
         #[doc = "Power voltage detector enable"]
         #[inline(always)]
-        pub const fn set_pvde(&mut self, val: bool) {
+        pub fn set_pvde(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
         }
         #[doc = "PVD level selection"]
-        #[must_use]
         #[inline(always)]
         pub const fn pls(&self) -> u8 {
             let val = (self.0 >> 5usize) & 0x07;
@@ -105,11 +99,10 @@ pub mod regs {
         }
         #[doc = "PVD level selection"]
         #[inline(always)]
-        pub const fn set_pls(&mut self, val: u8) {
+        pub fn set_pls(&mut self, val: u8) {
             self.0 = (self.0 & !(0x07 << 5usize)) | (((val as u32) & 0x07) << 5usize);
         }
         #[doc = "Disable backup domain write protection"]
-        #[must_use]
         #[inline(always)]
         pub const fn dbp(&self) -> bool {
             let val = (self.0 >> 8usize) & 0x01;
@@ -117,11 +110,10 @@ pub mod regs {
         }
         #[doc = "Disable backup domain write protection"]
         #[inline(always)]
-        pub const fn set_dbp(&mut self, val: bool) {
+        pub fn set_dbp(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
         }
         #[doc = "Flash power down in Stop mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn fpds(&self) -> bool {
             let val = (self.0 >> 9usize) & 0x01;
@@ -129,11 +121,10 @@ pub mod regs {
         }
         #[doc = "Flash power down in Stop mode"]
         #[inline(always)]
-        pub const fn set_fpds(&mut self, val: bool) {
+        pub fn set_fpds(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
         }
         #[doc = "Low-Power Regulator Low Voltage in deepsleep"]
-        #[must_use]
         #[inline(always)]
         pub const fn lplvds(&self) -> bool {
             let val = (self.0 >> 10usize) & 0x01;
@@ -141,11 +132,10 @@ pub mod regs {
         }
         #[doc = "Low-Power Regulator Low Voltage in deepsleep"]
         #[inline(always)]
-        pub const fn set_lplvds(&mut self, val: bool) {
+        pub fn set_lplvds(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
         }
         #[doc = "Main regulator low voltage in deepsleep mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn mrlvds(&self) -> bool {
             let val = (self.0 >> 11usize) & 0x01;
@@ -153,11 +143,10 @@ pub mod regs {
         }
         #[doc = "Main regulator low voltage in deepsleep mode"]
         #[inline(always)]
-        pub const fn set_mrlvds(&mut self, val: bool) {
+        pub fn set_mrlvds(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
         }
         #[doc = "ADCDC1"]
-        #[must_use]
         #[inline(always)]
         pub const fn adcdc1(&self) -> bool {
             let val = (self.0 >> 13usize) & 0x01;
@@ -165,11 +154,10 @@ pub mod regs {
         }
         #[doc = "ADCDC1"]
         #[inline(always)]
-        pub const fn set_adcdc1(&mut self, val: bool) {
+        pub fn set_adcdc1(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
         }
         #[doc = "Regulator voltage scaling output selection"]
-        #[must_use]
         #[inline(always)]
         pub const fn vos(&self) -> super::vals::Vos {
             let val = (self.0 >> 14usize) & 0x03;
@@ -177,12 +165,11 @@ pub mod regs {
         }
         #[doc = "Regulator voltage scaling output selection"]
         #[inline(always)]
-        pub const fn set_vos(&mut self, val: super::vals::Vos) {
+        pub fn set_vos(&mut self, val: super::vals::Vos) {
             self.0 = (self.0 & !(0x03 << 14usize)) | (((val.to_bits() as u32) & 0x03) << 14usize);
         }
         #[doc = "Over-drive enable (STM32F4\\[23\\]
 ONLY)"]
-        #[must_use]
         #[inline(always)]
         pub const fn oden(&self) -> bool {
             let val = (self.0 >> 16usize) & 0x01;
@@ -191,12 +178,11 @@ ONLY)"]
         #[doc = "Over-drive enable (STM32F4\\[23\\]
 ONLY)"]
         #[inline(always)]
-        pub const fn set_oden(&mut self, val: bool) {
+        pub fn set_oden(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
         }
         #[doc = "Over-drive switching enabled (STM32F4\\[23\\]
 ONLY)"]
-        #[must_use]
         #[inline(always)]
         pub const fn odswen(&self) -> bool {
             let val = (self.0 >> 17usize) & 0x01;
@@ -205,12 +191,11 @@ ONLY)"]
         #[doc = "Over-drive switching enabled (STM32F4\\[23\\]
 ONLY)"]
         #[inline(always)]
-        pub const fn set_odswen(&mut self, val: bool) {
+        pub fn set_odswen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
         }
         #[doc = "Under-drive enable in stop mode (STM32F4\\[23\\]
 ONLY)"]
-        #[must_use]
         #[inline(always)]
         pub const fn uden(&self) -> u8 {
             let val = (self.0 >> 18usize) & 0x03;
@@ -219,11 +204,10 @@ ONLY)"]
         #[doc = "Under-drive enable in stop mode (STM32F4\\[23\\]
 ONLY)"]
         #[inline(always)]
-        pub const fn set_uden(&mut self, val: u8) {
+        pub fn set_uden(&mut self, val: u8) {
             self.0 = (self.0 & !(0x03 << 18usize)) | (((val as u32) & 0x03) << 18usize);
         }
         #[doc = "Flash Memory Stop while System Run"]
-        #[must_use]
         #[inline(always)]
         pub const fn fmssr(&self) -> bool {
             let val = (self.0 >> 20usize) & 0x01;
@@ -231,11 +215,10 @@ ONLY)"]
         }
         #[doc = "Flash Memory Stop while System Run"]
         #[inline(always)]
-        pub const fn set_fmssr(&mut self, val: bool) {
+        pub fn set_fmssr(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
         }
         #[doc = "Flash Interface Stop while System Run"]
-        #[must_use]
         #[inline(always)]
         pub const fn fissr(&self) -> bool {
             let val = (self.0 >> 21usize) & 0x01;
@@ -243,7 +226,7 @@ ONLY)"]
         }
         #[doc = "Flash Interface Stop while System Run"]
         #[inline(always)]
-        pub const fn set_fissr(&mut self, val: bool) {
+        pub fn set_fissr(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
         }
     }
@@ -279,27 +262,7 @@ ONLY)"]
     #[cfg(feature = "defmt")]
     impl defmt::Format for Cr1 {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Cr1 {{ lpds: {=bool:?}, pdds: {:?}, cwuf: {=bool:?}, csbf: {=bool:?}, pvde: {=bool:?}, pls: {=u8:?}, dbp: {=bool:?}, fpds: {=bool:?}, lplvds: {=bool:?}, mrlvds: {=bool:?}, adcdc1: {=bool:?}, vos: {:?}, oden: {=bool:?}, odswen: {=bool:?}, uden: {=u8:?}, fmssr: {=bool:?}, fissr: {=bool:?} }}",
-                self.lpds(),
-                self.pdds(),
-                self.cwuf(),
-                self.csbf(),
-                self.pvde(),
-                self.pls(),
-                self.dbp(),
-                self.fpds(),
-                self.lplvds(),
-                self.mrlvds(),
-                self.adcdc1(),
-                self.vos(),
-                self.oden(),
-                self.odswen(),
-                self.uden(),
-                self.fmssr(),
-                self.fissr()
-            )
+            defmt :: write ! (f , "Cr1 {{ lpds: {=bool:?}, pdds: {:?}, cwuf: {=bool:?}, csbf: {=bool:?}, pvde: {=bool:?}, pls: {=u8:?}, dbp: {=bool:?}, fpds: {=bool:?}, lplvds: {=bool:?}, mrlvds: {=bool:?}, adcdc1: {=bool:?}, vos: {:?}, oden: {=bool:?}, odswen: {=bool:?}, uden: {=u8:?}, fmssr: {=bool:?}, fissr: {=bool:?} }}" , self . lpds () , self . pdds () , self . cwuf () , self . csbf () , self . pvde () , self . pls () , self . dbp () , self . fpds () , self . lplvds () , self . mrlvds () , self . adcdc1 () , self . vos () , self . oden () , self . odswen () , self . uden () , self . fmssr () , self . fissr ())
         }
     }
     #[doc = "power control/status register"]
@@ -308,7 +271,6 @@ ONLY)"]
     pub struct Csr1(pub u32);
     impl Csr1 {
         #[doc = "Wakeup flag"]
-        #[must_use]
         #[inline(always)]
         pub const fn wuf(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -316,11 +278,10 @@ ONLY)"]
         }
         #[doc = "Wakeup flag"]
         #[inline(always)]
-        pub const fn set_wuf(&mut self, val: bool) {
+        pub fn set_wuf(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "Standby flag"]
-        #[must_use]
         #[inline(always)]
         pub const fn sbf(&self) -> bool {
             let val = (self.0 >> 1usize) & 0x01;
@@ -328,11 +289,10 @@ ONLY)"]
         }
         #[doc = "Standby flag"]
         #[inline(always)]
-        pub const fn set_sbf(&mut self, val: bool) {
+        pub fn set_sbf(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
         }
         #[doc = "PVD output"]
-        #[must_use]
         #[inline(always)]
         pub const fn pvdo(&self) -> bool {
             let val = (self.0 >> 2usize) & 0x01;
@@ -340,11 +300,10 @@ ONLY)"]
         }
         #[doc = "PVD output"]
         #[inline(always)]
-        pub const fn set_pvdo(&mut self, val: bool) {
+        pub fn set_pvdo(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
         }
         #[doc = "Backup regulator ready"]
-        #[must_use]
         #[inline(always)]
         pub const fn brr(&self) -> bool {
             let val = (self.0 >> 3usize) & 0x01;
@@ -352,11 +311,10 @@ ONLY)"]
         }
         #[doc = "Backup regulator ready"]
         #[inline(always)]
-        pub const fn set_brr(&mut self, val: bool) {
+        pub fn set_brr(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
         }
         #[doc = "Enable WKUP2 pin"]
-        #[must_use]
         #[inline(always)]
         pub const fn ewup2(&self) -> bool {
             let val = (self.0 >> 7usize) & 0x01;
@@ -364,11 +322,10 @@ ONLY)"]
         }
         #[doc = "Enable WKUP2 pin"]
         #[inline(always)]
-        pub const fn set_ewup2(&mut self, val: bool) {
+        pub fn set_ewup2(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
         }
         #[doc = "Enable WKUP pin"]
-        #[must_use]
         #[inline(always)]
         pub const fn ewup(&self) -> bool {
             let val = (self.0 >> 8usize) & 0x01;
@@ -376,11 +333,10 @@ ONLY)"]
         }
         #[doc = "Enable WKUP pin"]
         #[inline(always)]
-        pub const fn set_ewup(&mut self, val: bool) {
+        pub fn set_ewup(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
         }
         #[doc = "Backup regulator enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn bre(&self) -> bool {
             let val = (self.0 >> 9usize) & 0x01;
@@ -388,12 +344,11 @@ ONLY)"]
         }
         #[doc = "Backup regulator enable"]
         #[inline(always)]
-        pub const fn set_bre(&mut self, val: bool) {
+        pub fn set_bre(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
         }
         #[doc = "Regulator voltage scaling output selection ready bit (STM32F4\\[23\\]
 ONLY)"]
-        #[must_use]
         #[inline(always)]
         pub const fn vosrdy(&self) -> bool {
             let val = (self.0 >> 14usize) & 0x01;
@@ -402,12 +357,11 @@ ONLY)"]
         #[doc = "Regulator voltage scaling output selection ready bit (STM32F4\\[23\\]
 ONLY)"]
         #[inline(always)]
-        pub const fn set_vosrdy(&mut self, val: bool) {
+        pub fn set_vosrdy(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
         }
         #[doc = "Over-drive mode ready (STM32F4\\[23\\]
 ONLY)"]
-        #[must_use]
         #[inline(always)]
         pub const fn odrdy(&self) -> bool {
             let val = (self.0 >> 16usize) & 0x01;
@@ -416,12 +370,11 @@ ONLY)"]
         #[doc = "Over-drive mode ready (STM32F4\\[23\\]
 ONLY)"]
         #[inline(always)]
-        pub const fn set_odrdy(&mut self, val: bool) {
+        pub fn set_odrdy(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
         }
         #[doc = "Over-drive mode switching ready (STM32F4\\[23\\]
 ONLY)"]
-        #[must_use]
         #[inline(always)]
         pub const fn odswrdy(&self) -> bool {
             let val = (self.0 >> 17usize) & 0x01;
@@ -430,11 +383,10 @@ ONLY)"]
         #[doc = "Over-drive mode switching ready (STM32F4\\[23\\]
 ONLY)"]
         #[inline(always)]
-        pub const fn set_odswrdy(&mut self, val: bool) {
+        pub fn set_odswrdy(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
         }
         #[doc = "Under-drive ready flag"]
-        #[must_use]
         #[inline(always)]
         pub const fn udrdy(&self) -> u8 {
             let val = (self.0 >> 18usize) & 0x03;
@@ -442,7 +394,7 @@ ONLY)"]
         }
         #[doc = "Under-drive ready flag"]
         #[inline(always)]
-        pub const fn set_udrdy(&mut self, val: u8) {
+        pub fn set_udrdy(&mut self, val: u8) {
             self.0 = (self.0 & !(0x03 << 18usize)) | (((val as u32) & 0x03) << 18usize);
         }
     }
@@ -472,21 +424,7 @@ ONLY)"]
     #[cfg(feature = "defmt")]
     impl defmt::Format for Csr1 {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Csr1 {{ wuf: {=bool:?}, sbf: {=bool:?}, pvdo: {=bool:?}, brr: {=bool:?}, ewup2: {=bool:?}, ewup: {=bool:?}, bre: {=bool:?}, vosrdy: {=bool:?}, odrdy: {=bool:?}, odswrdy: {=bool:?}, udrdy: {=u8:?} }}",
-                self.wuf(),
-                self.sbf(),
-                self.pvdo(),
-                self.brr(),
-                self.ewup2(),
-                self.ewup(),
-                self.bre(),
-                self.vosrdy(),
-                self.odrdy(),
-                self.odswrdy(),
-                self.udrdy()
-            )
+            defmt :: write ! (f , "Csr1 {{ wuf: {=bool:?}, sbf: {=bool:?}, pvdo: {=bool:?}, brr: {=bool:?}, ewup2: {=bool:?}, ewup: {=bool:?}, bre: {=bool:?}, vosrdy: {=bool:?}, odrdy: {=bool:?}, odswrdy: {=bool:?}, udrdy: {=u8:?} }}" , self . wuf () , self . sbf () , self . pvdo () , self . brr () , self . ewup2 () , self . ewup () , self . bre () , self . vosrdy () , self . odrdy () , self . odswrdy () , self . udrdy ())
         }
     }
 }
@@ -496,9 +434,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Pdds {
         #[doc = "Enter Stop mode when the CPU enters deepsleep"]
-        StopMode = 0x0,
+        STOP_MODE = 0x0,
         #[doc = "Enter Standby mode when the CPU enters deepsleep"]
-        StandbyMode = 0x01,
+        STANDBY_MODE = 0x01,
     }
     impl Pdds {
         #[inline(always)]
@@ -529,11 +467,11 @@ pub mod vals {
         _RESERVED_0 = 0x0,
         #[doc = "Scale 3 mode (STM32F4\\[23\\]
 ONLY)"]
-        Scale3 = 0x01,
+        SCALE3 = 0x01,
         #[doc = "Scale 2 mode"]
-        Scale2 = 0x02,
+        SCALE2 = 0x02,
         #[doc = "Scale 1 mode (reset value)"]
-        Scale1 = 0x03,
+        SCALE1 = 0x03,
     }
     impl Vos {
         #[inline(always)]

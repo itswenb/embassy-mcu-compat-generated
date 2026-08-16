@@ -23,37 +23,37 @@ impl Exti {
     #[inline(always)]
     pub const fn imr(self, n: usize) -> crate::common::Reg<regs::Lines, crate::common::RW> {
         assert!(n < 2usize);
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0usize + n * 32usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0usize + n * 32usize) as _) }
     }
     #[doc = "Interrupt mask register"]
     #[inline(always)]
     pub const fn emr(self, n: usize) -> crate::common::Reg<regs::Lines, crate::common::RW> {
         assert!(n < 2usize);
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x04usize + n * 32usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x04usize + n * 32usize) as _) }
     }
     #[doc = "Rising Trigger selection register"]
     #[inline(always)]
     pub const fn rtsr(self, n: usize) -> crate::common::Reg<regs::Lines, crate::common::RW> {
         assert!(n < 2usize);
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x08usize + n * 32usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x08usize + n * 32usize) as _) }
     }
     #[doc = "Falling Trigger selection register"]
     #[inline(always)]
     pub const fn ftsr(self, n: usize) -> crate::common::Reg<regs::Lines, crate::common::RW> {
         assert!(n < 2usize);
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0cusize + n * 32usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0cusize + n * 32usize) as _) }
     }
     #[doc = "Software interrupt event register"]
     #[inline(always)]
     pub const fn swier(self, n: usize) -> crate::common::Reg<regs::Lines, crate::common::RW> {
         assert!(n < 2usize);
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x10usize + n * 32usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x10usize + n * 32usize) as _) }
     }
     #[doc = "Pending register"]
     #[inline(always)]
     pub const fn pr(self, n: usize) -> crate::common::Reg<regs::Lines, crate::common::RW> {
         assert!(n < 2usize);
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x14usize + n * 32usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x14usize + n * 32usize) as _) }
     }
 }
 pub mod regs {
@@ -63,7 +63,6 @@ pub mod regs {
     pub struct Lines(pub u32);
     impl Lines {
         #[doc = "EXTI line"]
-        #[must_use]
         #[inline(always)]
         pub const fn line(&self, n: usize) -> bool {
             assert!(n < 32usize);
@@ -73,7 +72,7 @@ pub mod regs {
         }
         #[doc = "EXTI line"]
         #[inline(always)]
-        pub const fn set_line(&mut self, n: usize, val: bool) {
+        pub fn set_line(&mut self, n: usize, val: bool) {
             assert!(n < 32usize);
             let offs = 0usize + n * 1usize;
             self.0 = (self.0 & !(0x01 << offs)) | (((val as u32) & 0x01) << offs);
@@ -126,42 +125,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Lines {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Lines {{ line[0]: {=bool:?}, line[1]: {=bool:?}, line[2]: {=bool:?}, line[3]: {=bool:?}, line[4]: {=bool:?}, line[5]: {=bool:?}, line[6]: {=bool:?}, line[7]: {=bool:?}, line[8]: {=bool:?}, line[9]: {=bool:?}, line[10]: {=bool:?}, line[11]: {=bool:?}, line[12]: {=bool:?}, line[13]: {=bool:?}, line[14]: {=bool:?}, line[15]: {=bool:?}, line[16]: {=bool:?}, line[17]: {=bool:?}, line[18]: {=bool:?}, line[19]: {=bool:?}, line[20]: {=bool:?}, line[21]: {=bool:?}, line[22]: {=bool:?}, line[23]: {=bool:?}, line[24]: {=bool:?}, line[25]: {=bool:?}, line[26]: {=bool:?}, line[27]: {=bool:?}, line[28]: {=bool:?}, line[29]: {=bool:?}, line[30]: {=bool:?}, line[31]: {=bool:?} }}",
-                self.line(0usize),
-                self.line(1usize),
-                self.line(2usize),
-                self.line(3usize),
-                self.line(4usize),
-                self.line(5usize),
-                self.line(6usize),
-                self.line(7usize),
-                self.line(8usize),
-                self.line(9usize),
-                self.line(10usize),
-                self.line(11usize),
-                self.line(12usize),
-                self.line(13usize),
-                self.line(14usize),
-                self.line(15usize),
-                self.line(16usize),
-                self.line(17usize),
-                self.line(18usize),
-                self.line(19usize),
-                self.line(20usize),
-                self.line(21usize),
-                self.line(22usize),
-                self.line(23usize),
-                self.line(24usize),
-                self.line(25usize),
-                self.line(26usize),
-                self.line(27usize),
-                self.line(28usize),
-                self.line(29usize),
-                self.line(30usize),
-                self.line(31usize)
-            )
+            defmt :: write ! (f , "Lines {{ line[0]: {=bool:?}, line[1]: {=bool:?}, line[2]: {=bool:?}, line[3]: {=bool:?}, line[4]: {=bool:?}, line[5]: {=bool:?}, line[6]: {=bool:?}, line[7]: {=bool:?}, line[8]: {=bool:?}, line[9]: {=bool:?}, line[10]: {=bool:?}, line[11]: {=bool:?}, line[12]: {=bool:?}, line[13]: {=bool:?}, line[14]: {=bool:?}, line[15]: {=bool:?}, line[16]: {=bool:?}, line[17]: {=bool:?}, line[18]: {=bool:?}, line[19]: {=bool:?}, line[20]: {=bool:?}, line[21]: {=bool:?}, line[22]: {=bool:?}, line[23]: {=bool:?}, line[24]: {=bool:?}, line[25]: {=bool:?}, line[26]: {=bool:?}, line[27]: {=bool:?}, line[28]: {=bool:?}, line[29]: {=bool:?}, line[30]: {=bool:?}, line[31]: {=bool:?} }}" , self . line (0usize) , self . line (1usize) , self . line (2usize) , self . line (3usize) , self . line (4usize) , self . line (5usize) , self . line (6usize) , self . line (7usize) , self . line (8usize) , self . line (9usize) , self . line (10usize) , self . line (11usize) , self . line (12usize) , self . line (13usize) , self . line (14usize) , self . line (15usize) , self . line (16usize) , self . line (17usize) , self . line (18usize) , self . line (19usize) , self . line (20usize) , self . line (21usize) , self . line (22usize) , self . line (23usize) , self . line (24usize) , self . line (25usize) , self . line (26usize) , self . line (27usize) , self . line (28usize) , self . line (29usize) , self . line (30usize) , self . line (31usize))
         }
     }
 }

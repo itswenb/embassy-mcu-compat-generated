@@ -23,55 +23,55 @@ impl Exti {
     #[inline(always)]
     pub const fn rtsr(self, n: usize) -> crate::common::Reg<regs::Lines, crate::common::RW> {
         assert!(n < 2usize);
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0usize + n * 32usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0usize + n * 32usize) as _) }
     }
     #[doc = "falling trigger selection register"]
     #[inline(always)]
     pub const fn ftsr(self, n: usize) -> crate::common::Reg<regs::Lines, crate::common::RW> {
         assert!(n < 2usize);
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x04usize + n * 32usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x04usize + n * 32usize) as _) }
     }
     #[doc = "software interrupt event register"]
     #[inline(always)]
     pub const fn swier(self, n: usize) -> crate::common::Reg<regs::Lines, crate::common::RW> {
         assert!(n < 2usize);
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x08usize + n * 32usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x08usize + n * 32usize) as _) }
     }
     #[doc = "rising edge pending register"]
     #[inline(always)]
     pub const fn rpr(self, n: usize) -> crate::common::Reg<regs::Lines, crate::common::RW> {
         assert!(n < 2usize);
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0cusize + n * 32usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0cusize + n * 32usize) as _) }
     }
     #[doc = "falling edge pending register"]
     #[inline(always)]
     pub const fn fpr(self, n: usize) -> crate::common::Reg<regs::Lines, crate::common::RW> {
         assert!(n < 2usize);
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x10usize + n * 32usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x10usize + n * 32usize) as _) }
     }
     #[doc = "privilege configuration register"]
     #[inline(always)]
     pub const fn privcfgr(self, n: usize) -> crate::common::Reg<regs::Priv, crate::common::RW> {
         assert!(n < 2usize);
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x18usize + n * 32usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x18usize + n * 32usize) as _) }
     }
     #[doc = "external interrupt selection register"]
     #[inline(always)]
     pub const fn exticr(self, n: usize) -> crate::common::Reg<regs::Exti, crate::common::RW> {
         assert!(n < 4usize);
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x60usize + n * 4usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x60usize + n * 4usize) as _) }
     }
     #[doc = "CPU wakeup with interrupt mask register"]
     #[inline(always)]
     pub const fn imr(self, n: usize) -> crate::common::Reg<regs::Lines, crate::common::RW> {
         assert!(n < 2usize);
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x80usize + n * 16usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x80usize + n * 16usize) as _) }
     }
     #[doc = "CPU wakeup with event mask register"]
     #[inline(always)]
     pub const fn emr(self, n: usize) -> crate::common::Reg<regs::Lines, crate::common::RW> {
         assert!(n < 2usize);
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x84usize + n * 16usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x84usize + n * 16usize) as _) }
     }
 }
 pub mod regs {
@@ -81,7 +81,6 @@ pub mod regs {
     pub struct Exti(pub u32);
     impl Exti {
         #[doc = "EXTI12 GPIO port selection These bits are written by software to select the source input for EXTI12 external interrupt. When EXTI_PRIVCFGR.PRIV12 is disabled, EXTI12 can be accessed with privileged and unprivileged access. When EXTI_PRIVCFGR.PRIV12 is enabled, EXTI12 can only be accessed with privileged access. Unprivileged write to this bit is discarded. Others: reserved"]
-        #[must_use]
         #[inline(always)]
         pub const fn exti(&self, n: usize) -> u8 {
             assert!(n < 4usize);
@@ -91,7 +90,7 @@ pub mod regs {
         }
         #[doc = "EXTI12 GPIO port selection These bits are written by software to select the source input for EXTI12 external interrupt. When EXTI_PRIVCFGR.PRIV12 is disabled, EXTI12 can be accessed with privileged and unprivileged access. When EXTI_PRIVCFGR.PRIV12 is enabled, EXTI12 can only be accessed with privileged access. Unprivileged write to this bit is discarded. Others: reserved"]
         #[inline(always)]
-        pub const fn set_exti(&mut self, n: usize, val: u8) {
+        pub fn set_exti(&mut self, n: usize, val: u8) {
             assert!(n < 4usize);
             let offs = 0usize + n * 8usize;
             self.0 = (self.0 & !(0xff << offs)) | (((val as u32) & 0xff) << offs);
@@ -132,7 +131,6 @@ pub mod regs {
     pub struct Lines(pub u32);
     impl Lines {
         #[doc = "EXTI line"]
-        #[must_use]
         #[inline(always)]
         pub const fn line(&self, n: usize) -> bool {
             assert!(n < 32usize);
@@ -142,7 +140,7 @@ pub mod regs {
         }
         #[doc = "EXTI line"]
         #[inline(always)]
-        pub const fn set_line(&mut self, n: usize, val: bool) {
+        pub fn set_line(&mut self, n: usize, val: bool) {
             assert!(n < 32usize);
             let offs = 0usize + n * 1usize;
             self.0 = (self.0 & !(0x01 << offs)) | (((val as u32) & 0x01) << offs);
@@ -195,42 +193,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Lines {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Lines {{ line[0]: {=bool:?}, line[1]: {=bool:?}, line[2]: {=bool:?}, line[3]: {=bool:?}, line[4]: {=bool:?}, line[5]: {=bool:?}, line[6]: {=bool:?}, line[7]: {=bool:?}, line[8]: {=bool:?}, line[9]: {=bool:?}, line[10]: {=bool:?}, line[11]: {=bool:?}, line[12]: {=bool:?}, line[13]: {=bool:?}, line[14]: {=bool:?}, line[15]: {=bool:?}, line[16]: {=bool:?}, line[17]: {=bool:?}, line[18]: {=bool:?}, line[19]: {=bool:?}, line[20]: {=bool:?}, line[21]: {=bool:?}, line[22]: {=bool:?}, line[23]: {=bool:?}, line[24]: {=bool:?}, line[25]: {=bool:?}, line[26]: {=bool:?}, line[27]: {=bool:?}, line[28]: {=bool:?}, line[29]: {=bool:?}, line[30]: {=bool:?}, line[31]: {=bool:?} }}",
-                self.line(0usize),
-                self.line(1usize),
-                self.line(2usize),
-                self.line(3usize),
-                self.line(4usize),
-                self.line(5usize),
-                self.line(6usize),
-                self.line(7usize),
-                self.line(8usize),
-                self.line(9usize),
-                self.line(10usize),
-                self.line(11usize),
-                self.line(12usize),
-                self.line(13usize),
-                self.line(14usize),
-                self.line(15usize),
-                self.line(16usize),
-                self.line(17usize),
-                self.line(18usize),
-                self.line(19usize),
-                self.line(20usize),
-                self.line(21usize),
-                self.line(22usize),
-                self.line(23usize),
-                self.line(24usize),
-                self.line(25usize),
-                self.line(26usize),
-                self.line(27usize),
-                self.line(28usize),
-                self.line(29usize),
-                self.line(30usize),
-                self.line(31usize)
-            )
+            defmt :: write ! (f , "Lines {{ line[0]: {=bool:?}, line[1]: {=bool:?}, line[2]: {=bool:?}, line[3]: {=bool:?}, line[4]: {=bool:?}, line[5]: {=bool:?}, line[6]: {=bool:?}, line[7]: {=bool:?}, line[8]: {=bool:?}, line[9]: {=bool:?}, line[10]: {=bool:?}, line[11]: {=bool:?}, line[12]: {=bool:?}, line[13]: {=bool:?}, line[14]: {=bool:?}, line[15]: {=bool:?}, line[16]: {=bool:?}, line[17]: {=bool:?}, line[18]: {=bool:?}, line[19]: {=bool:?}, line[20]: {=bool:?}, line[21]: {=bool:?}, line[22]: {=bool:?}, line[23]: {=bool:?}, line[24]: {=bool:?}, line[25]: {=bool:?}, line[26]: {=bool:?}, line[27]: {=bool:?}, line[28]: {=bool:?}, line[29]: {=bool:?}, line[30]: {=bool:?}, line[31]: {=bool:?} }}" , self . line (0usize) , self . line (1usize) , self . line (2usize) , self . line (3usize) , self . line (4usize) , self . line (5usize) , self . line (6usize) , self . line (7usize) , self . line (8usize) , self . line (9usize) , self . line (10usize) , self . line (11usize) , self . line (12usize) , self . line (13usize) , self . line (14usize) , self . line (15usize) , self . line (16usize) , self . line (17usize) , self . line (18usize) , self . line (19usize) , self . line (20usize) , self . line (21usize) , self . line (22usize) , self . line (23usize) , self . line (24usize) , self . line (25usize) , self . line (26usize) , self . line (27usize) , self . line (28usize) , self . line (29usize) , self . line (30usize) , self . line (31usize))
         }
     }
     #[doc = "privilege configuration register"]
@@ -239,7 +202,6 @@ pub mod regs {
     pub struct Priv(pub u32);
     impl Priv {
         #[doc = "Security enable on event input x When EXTI_SECCFGR.SECx is disabled, PRIVx can be accessed with secure and non-secure access. When EXTI_SECCFGR.SECx is enabled, PRIVx can only be written with secure access. Non-secure write to this PRIVx is discarded."]
-        #[must_use]
         #[inline(always)]
         pub const fn priv_(&self, n: usize) -> bool {
             assert!(n < 32usize);
@@ -249,7 +211,7 @@ pub mod regs {
         }
         #[doc = "Security enable on event input x When EXTI_SECCFGR.SECx is disabled, PRIVx can be accessed with secure and non-secure access. When EXTI_SECCFGR.SECx is enabled, PRIVx can only be written with secure access. Non-secure write to this PRIVx is discarded."]
         #[inline(always)]
-        pub const fn set_priv_(&mut self, n: usize, val: bool) {
+        pub fn set_priv_(&mut self, n: usize, val: bool) {
             assert!(n < 32usize);
             let offs = 0usize + n * 1usize;
             self.0 = (self.0 & !(0x01 << offs)) | (((val as u32) & 0x01) << offs);
@@ -302,42 +264,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Priv {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Priv {{ priv_[0]: {=bool:?}, priv_[1]: {=bool:?}, priv_[2]: {=bool:?}, priv_[3]: {=bool:?}, priv_[4]: {=bool:?}, priv_[5]: {=bool:?}, priv_[6]: {=bool:?}, priv_[7]: {=bool:?}, priv_[8]: {=bool:?}, priv_[9]: {=bool:?}, priv_[10]: {=bool:?}, priv_[11]: {=bool:?}, priv_[12]: {=bool:?}, priv_[13]: {=bool:?}, priv_[14]: {=bool:?}, priv_[15]: {=bool:?}, priv_[16]: {=bool:?}, priv_[17]: {=bool:?}, priv_[18]: {=bool:?}, priv_[19]: {=bool:?}, priv_[20]: {=bool:?}, priv_[21]: {=bool:?}, priv_[22]: {=bool:?}, priv_[23]: {=bool:?}, priv_[24]: {=bool:?}, priv_[25]: {=bool:?}, priv_[26]: {=bool:?}, priv_[27]: {=bool:?}, priv_[28]: {=bool:?}, priv_[29]: {=bool:?}, priv_[30]: {=bool:?}, priv_[31]: {=bool:?} }}",
-                self.priv_(0usize),
-                self.priv_(1usize),
-                self.priv_(2usize),
-                self.priv_(3usize),
-                self.priv_(4usize),
-                self.priv_(5usize),
-                self.priv_(6usize),
-                self.priv_(7usize),
-                self.priv_(8usize),
-                self.priv_(9usize),
-                self.priv_(10usize),
-                self.priv_(11usize),
-                self.priv_(12usize),
-                self.priv_(13usize),
-                self.priv_(14usize),
-                self.priv_(15usize),
-                self.priv_(16usize),
-                self.priv_(17usize),
-                self.priv_(18usize),
-                self.priv_(19usize),
-                self.priv_(20usize),
-                self.priv_(21usize),
-                self.priv_(22usize),
-                self.priv_(23usize),
-                self.priv_(24usize),
-                self.priv_(25usize),
-                self.priv_(26usize),
-                self.priv_(27usize),
-                self.priv_(28usize),
-                self.priv_(29usize),
-                self.priv_(30usize),
-                self.priv_(31usize)
-            )
+            defmt :: write ! (f , "Priv {{ priv_[0]: {=bool:?}, priv_[1]: {=bool:?}, priv_[2]: {=bool:?}, priv_[3]: {=bool:?}, priv_[4]: {=bool:?}, priv_[5]: {=bool:?}, priv_[6]: {=bool:?}, priv_[7]: {=bool:?}, priv_[8]: {=bool:?}, priv_[9]: {=bool:?}, priv_[10]: {=bool:?}, priv_[11]: {=bool:?}, priv_[12]: {=bool:?}, priv_[13]: {=bool:?}, priv_[14]: {=bool:?}, priv_[15]: {=bool:?}, priv_[16]: {=bool:?}, priv_[17]: {=bool:?}, priv_[18]: {=bool:?}, priv_[19]: {=bool:?}, priv_[20]: {=bool:?}, priv_[21]: {=bool:?}, priv_[22]: {=bool:?}, priv_[23]: {=bool:?}, priv_[24]: {=bool:?}, priv_[25]: {=bool:?}, priv_[26]: {=bool:?}, priv_[27]: {=bool:?}, priv_[28]: {=bool:?}, priv_[29]: {=bool:?}, priv_[30]: {=bool:?}, priv_[31]: {=bool:?} }}" , self . priv_ (0usize) , self . priv_ (1usize) , self . priv_ (2usize) , self . priv_ (3usize) , self . priv_ (4usize) , self . priv_ (5usize) , self . priv_ (6usize) , self . priv_ (7usize) , self . priv_ (8usize) , self . priv_ (9usize) , self . priv_ (10usize) , self . priv_ (11usize) , self . priv_ (12usize) , self . priv_ (13usize) , self . priv_ (14usize) , self . priv_ (15usize) , self . priv_ (16usize) , self . priv_ (17usize) , self . priv_ (18usize) , self . priv_ (19usize) , self . priv_ (20usize) , self . priv_ (21usize) , self . priv_ (22usize) , self . priv_ (23usize) , self . priv_ (24usize) , self . priv_ (25usize) , self . priv_ (26usize) , self . priv_ (27usize) , self . priv_ (28usize) , self . priv_ (29usize) , self . priv_ (30usize) , self . priv_ (31usize))
         }
     }
 }

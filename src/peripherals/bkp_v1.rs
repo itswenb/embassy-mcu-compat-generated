@@ -24,7 +24,7 @@ impl Bkp {
     pub const fn dr(self, n: usize) -> crate::common::Reg<regs::Dr, crate::common::RW> {
         assert!(n < 42usize);
         unsafe {
-            crate::common::Reg::from_ptr(self.ptr.wrapping_add(
+            crate::common::Reg::from_ptr(self.ptr.add(
                 0x0usize
                     + ([
                         4usize, 8usize, 12usize, 16usize, 20usize, 24usize, 28usize, 32usize, 36usize, 40usize,
@@ -39,17 +39,17 @@ impl Bkp {
     #[doc = "RTC clock calibration register"]
     #[inline(always)]
     pub const fn rtccr(self) -> crate::common::Reg<regs::Rtccr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x2cusize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x2cusize) as _) }
     }
     #[doc = "Control register"]
     #[inline(always)]
     pub const fn cr(self) -> crate::common::Reg<regs::Cr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x30usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x30usize) as _) }
     }
     #[doc = "Control/status register"]
     #[inline(always)]
     pub const fn csr(self) -> crate::common::Reg<regs::Csr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x34usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x34usize) as _) }
     }
 }
 pub mod regs {
@@ -59,7 +59,6 @@ pub mod regs {
     pub struct Cr(pub u32);
     impl Cr {
         #[doc = "Tamper pin enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn tpe(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -67,11 +66,10 @@ pub mod regs {
         }
         #[doc = "Tamper pin enable"]
         #[inline(always)]
-        pub const fn set_tpe(&mut self, val: bool) {
+        pub fn set_tpe(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "Tamper pin active level"]
-        #[must_use]
         #[inline(always)]
         pub const fn tpal(&self) -> super::vals::Tpal {
             let val = (self.0 >> 1usize) & 0x01;
@@ -79,7 +77,7 @@ pub mod regs {
         }
         #[doc = "Tamper pin active level"]
         #[inline(always)]
-        pub const fn set_tpal(&mut self, val: super::vals::Tpal) {
+        pub fn set_tpal(&mut self, val: super::vals::Tpal) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
         }
     }
@@ -109,7 +107,6 @@ pub mod regs {
     pub struct Csr(pub u32);
     impl Csr {
         #[doc = "Clear Tamper event"]
-        #[must_use]
         #[inline(always)]
         pub const fn cte(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -117,11 +114,10 @@ pub mod regs {
         }
         #[doc = "Clear Tamper event"]
         #[inline(always)]
-        pub const fn set_cte(&mut self, val: bool) {
+        pub fn set_cte(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "Clear Tamper Interrupt"]
-        #[must_use]
         #[inline(always)]
         pub const fn cti(&self) -> bool {
             let val = (self.0 >> 1usize) & 0x01;
@@ -129,11 +125,10 @@ pub mod regs {
         }
         #[doc = "Clear Tamper Interrupt"]
         #[inline(always)]
-        pub const fn set_cti(&mut self, val: bool) {
+        pub fn set_cti(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
         }
         #[doc = "Tamper Pin interrupt enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn tpie(&self) -> bool {
             let val = (self.0 >> 2usize) & 0x01;
@@ -141,11 +136,10 @@ pub mod regs {
         }
         #[doc = "Tamper Pin interrupt enable"]
         #[inline(always)]
-        pub const fn set_tpie(&mut self, val: bool) {
+        pub fn set_tpie(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
         }
         #[doc = "Tamper Event Flag"]
-        #[must_use]
         #[inline(always)]
         pub const fn tef(&self) -> bool {
             let val = (self.0 >> 8usize) & 0x01;
@@ -153,11 +147,10 @@ pub mod regs {
         }
         #[doc = "Tamper Event Flag"]
         #[inline(always)]
-        pub const fn set_tef(&mut self, val: bool) {
+        pub fn set_tef(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
         }
         #[doc = "Tamper Interrupt Flag"]
-        #[must_use]
         #[inline(always)]
         pub const fn tif(&self) -> bool {
             let val = (self.0 >> 9usize) & 0x01;
@@ -165,7 +158,7 @@ pub mod regs {
         }
         #[doc = "Tamper Interrupt Flag"]
         #[inline(always)]
-        pub const fn set_tif(&mut self, val: bool) {
+        pub fn set_tif(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
         }
     }
@@ -206,7 +199,6 @@ pub mod regs {
     pub struct Dr(pub u32);
     impl Dr {
         #[doc = "Backup data"]
-        #[must_use]
         #[inline(always)]
         pub const fn d(&self) -> u16 {
             let val = (self.0 >> 0usize) & 0xffff;
@@ -214,7 +206,7 @@ pub mod regs {
         }
         #[doc = "Backup data"]
         #[inline(always)]
-        pub const fn set_d(&mut self, val: u16) {
+        pub fn set_d(&mut self, val: u16) {
             self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
         }
     }
@@ -241,7 +233,6 @@ pub mod regs {
     pub struct Rtccr(pub u32);
     impl Rtccr {
         #[doc = "Calibration value"]
-        #[must_use]
         #[inline(always)]
         pub const fn cal(&self) -> u8 {
             let val = (self.0 >> 0usize) & 0x7f;
@@ -249,11 +240,10 @@ pub mod regs {
         }
         #[doc = "Calibration value"]
         #[inline(always)]
-        pub const fn set_cal(&mut self, val: u8) {
+        pub fn set_cal(&mut self, val: u8) {
             self.0 = (self.0 & !(0x7f << 0usize)) | (((val as u32) & 0x7f) << 0usize);
         }
         #[doc = "Calibration Clock Output"]
-        #[must_use]
         #[inline(always)]
         pub const fn cco(&self) -> bool {
             let val = (self.0 >> 7usize) & 0x01;
@@ -261,11 +251,10 @@ pub mod regs {
         }
         #[doc = "Calibration Clock Output"]
         #[inline(always)]
-        pub const fn set_cco(&mut self, val: bool) {
+        pub fn set_cco(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
         }
         #[doc = "Alarm or second output enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn asoe(&self) -> bool {
             let val = (self.0 >> 8usize) & 0x01;
@@ -273,11 +262,10 @@ pub mod regs {
         }
         #[doc = "Alarm or second output enable"]
         #[inline(always)]
-        pub const fn set_asoe(&mut self, val: bool) {
+        pub fn set_asoe(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
         }
         #[doc = "Alarm or second output selection"]
-        #[must_use]
         #[inline(always)]
         pub const fn asos(&self) -> super::vals::Asos {
             let val = (self.0 >> 9usize) & 0x01;
@@ -285,7 +273,7 @@ pub mod regs {
         }
         #[doc = "Alarm or second output selection"]
         #[inline(always)]
-        pub const fn set_asos(&mut self, val: super::vals::Asos) {
+        pub fn set_asos(&mut self, val: super::vals::Asos) {
             self.0 = (self.0 & !(0x01 << 9usize)) | (((val.to_bits() as u32) & 0x01) << 9usize);
         }
     }
@@ -325,9 +313,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Asos {
         #[doc = "RTC Alarm pulse output selected"]
-        Alarm = 0x0,
+        ALARM = 0x0,
         #[doc = "RTC Second pulse output selected"]
-        Second = 0x01,
+        SECOND = 0x01,
     }
     impl Asos {
         #[inline(always)]
@@ -356,9 +344,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Tpal {
         #[doc = "A high level on the TAMPER pin resets all data backup registers (if TPE bit is set)"]
-        High = 0x0,
+        HIGH = 0x0,
         #[doc = "A low level on the TAMPER pin resets all data backup registers (if TPE bit is set)"]
-        Low = 0x01,
+        LOW = 0x01,
     }
     impl Tpal {
         #[inline(always)]

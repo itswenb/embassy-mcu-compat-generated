@@ -22,7 +22,7 @@ impl Comp {
     #[doc = "Comparator control and status register."]
     #[inline(always)]
     pub const fn csr(self) -> crate::common::Reg<regs::Csr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0usize) as _) }
     }
 }
 pub mod regs {
@@ -32,7 +32,6 @@ pub mod regs {
     pub struct Csr(pub u32);
     impl Csr {
         #[doc = "Enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn en(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -40,11 +39,10 @@ pub mod regs {
         }
         #[doc = "Enable"]
         #[inline(always)]
-        pub const fn set_en(&mut self, val: bool) {
+        pub fn set_en(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "Input minus selection bits."]
-        #[must_use]
         #[inline(always)]
         pub const fn inmsel(&self) -> u8 {
             let val = (self.0 >> 4usize) & 0x0f;
@@ -52,11 +50,10 @@ pub mod regs {
         }
         #[doc = "Input minus selection bits."]
         #[inline(always)]
-        pub const fn set_inmsel(&mut self, val: u8) {
+        pub fn set_inmsel(&mut self, val: u8) {
             self.0 = (self.0 & !(0x0f << 4usize)) | (((val as u32) & 0x0f) << 4usize);
         }
         #[doc = "Input plus selection bit."]
-        #[must_use]
         #[inline(always)]
         pub const fn inpsel(&self) -> u8 {
             let val = (self.0 >> 8usize) & 0x07;
@@ -64,11 +61,10 @@ pub mod regs {
         }
         #[doc = "Input plus selection bit."]
         #[inline(always)]
-        pub const fn set_inpsel(&mut self, val: u8) {
+        pub fn set_inpsel(&mut self, val: u8) {
             self.0 = (self.0 & !(0x07 << 8usize)) | (((val as u32) & 0x07) << 8usize);
         }
         #[doc = "Comparator 1 noninverting input selector for window mode."]
-        #[must_use]
         #[inline(always)]
         pub const fn winmode(&self) -> super::vals::WindowMode {
             let val = (self.0 >> 11usize) & 0x01;
@@ -76,11 +72,10 @@ pub mod regs {
         }
         #[doc = "Comparator 1 noninverting input selector for window mode."]
         #[inline(always)]
-        pub const fn set_winmode(&mut self, val: super::vals::WindowMode) {
+        pub fn set_winmode(&mut self, val: super::vals::WindowMode) {
             self.0 = (self.0 & !(0x01 << 11usize)) | (((val.to_bits() as u32) & 0x01) << 11usize);
         }
         #[doc = "Comparator 1 output selector."]
-        #[must_use]
         #[inline(always)]
         pub const fn winout(&self) -> super::vals::WindowOut {
             let val = (self.0 >> 14usize) & 0x01;
@@ -88,11 +83,10 @@ pub mod regs {
         }
         #[doc = "Comparator 1 output selector."]
         #[inline(always)]
-        pub const fn set_winout(&mut self, val: super::vals::WindowOut) {
+        pub fn set_winout(&mut self, val: super::vals::WindowOut) {
             self.0 = (self.0 & !(0x01 << 14usize)) | (((val.to_bits() as u32) & 0x01) << 14usize);
         }
         #[doc = "Polarity selection bit."]
-        #[must_use]
         #[inline(always)]
         pub const fn polarity(&self) -> super::vals::Polarity {
             let val = (self.0 >> 15usize) & 0x01;
@@ -100,11 +94,10 @@ pub mod regs {
         }
         #[doc = "Polarity selection bit."]
         #[inline(always)]
-        pub const fn set_polarity(&mut self, val: super::vals::Polarity) {
+        pub fn set_polarity(&mut self, val: super::vals::Polarity) {
             self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
         }
         #[doc = "Hysteresis selection bits."]
-        #[must_use]
         #[inline(always)]
         pub const fn hyst(&self) -> super::vals::Hyst {
             let val = (self.0 >> 16usize) & 0x03;
@@ -112,11 +105,10 @@ pub mod regs {
         }
         #[doc = "Hysteresis selection bits."]
         #[inline(always)]
-        pub const fn set_hyst(&mut self, val: super::vals::Hyst) {
+        pub fn set_hyst(&mut self, val: super::vals::Hyst) {
             self.0 = (self.0 & !(0x03 << 16usize)) | (((val.to_bits() as u32) & 0x03) << 16usize);
         }
         #[doc = "Power Mode."]
-        #[must_use]
         #[inline(always)]
         pub const fn pwrmode(&self) -> super::vals::Pwrmode {
             let val = (self.0 >> 18usize) & 0x03;
@@ -124,11 +116,10 @@ pub mod regs {
         }
         #[doc = "Power Mode."]
         #[inline(always)]
-        pub const fn set_pwrmode(&mut self, val: super::vals::Pwrmode) {
+        pub fn set_pwrmode(&mut self, val: super::vals::Pwrmode) {
             self.0 = (self.0 & !(0x03 << 18usize)) | (((val.to_bits() as u32) & 0x03) << 18usize);
         }
         #[doc = "Blanking source selection bits."]
-        #[must_use]
         #[inline(always)]
         pub const fn blanksel(&self) -> super::vals::Blanking {
             let val = (self.0 >> 20usize) & 0x1f;
@@ -136,11 +127,10 @@ pub mod regs {
         }
         #[doc = "Blanking source selection bits."]
         #[inline(always)]
-        pub const fn set_blanksel(&mut self, val: super::vals::Blanking) {
+        pub fn set_blanksel(&mut self, val: super::vals::Blanking) {
             self.0 = (self.0 & !(0x1f << 20usize)) | (((val.to_bits() as u32) & 0x1f) << 20usize);
         }
         #[doc = "Output status bit."]
-        #[must_use]
         #[inline(always)]
         pub const fn value(&self) -> bool {
             let val = (self.0 >> 30usize) & 0x01;
@@ -148,11 +138,10 @@ pub mod regs {
         }
         #[doc = "Output status bit."]
         #[inline(always)]
-        pub const fn set_value(&mut self, val: bool) {
+        pub fn set_value(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
         }
         #[doc = "Register lock bit."]
-        #[must_use]
         #[inline(always)]
         pub const fn lock(&self) -> bool {
             let val = (self.0 >> 31usize) & 0x01;
@@ -160,7 +149,7 @@ pub mod regs {
         }
         #[doc = "Register lock bit."]
         #[inline(always)]
-        pub const fn set_lock(&mut self, val: bool) {
+        pub fn set_lock(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
         }
     }
@@ -190,21 +179,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Csr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Csr {{ en: {=bool:?}, inmsel: {=u8:?}, inpsel: {=u8:?}, winmode: {:?}, winout: {:?}, polarity: {:?}, hyst: {:?}, pwrmode: {:?}, blanksel: {:?}, value: {=bool:?}, lock: {=bool:?} }}",
-                self.en(),
-                self.inmsel(),
-                self.inpsel(),
-                self.winmode(),
-                self.winout(),
-                self.polarity(),
-                self.hyst(),
-                self.pwrmode(),
-                self.blanksel(),
-                self.value(),
-                self.lock()
-            )
+            defmt :: write ! (f , "Csr {{ en: {=bool:?}, inmsel: {=u8:?}, inpsel: {=u8:?}, winmode: {:?}, winout: {:?}, polarity: {:?}, hyst: {:?}, pwrmode: {:?}, blanksel: {:?}, value: {=bool:?}, lock: {=bool:?} }}" , self . en () , self . inmsel () , self . inpsel () , self . winmode () , self . winout () , self . polarity () , self . hyst () , self . pwrmode () , self . blanksel () , self . value () , self . lock ())
         }
     }
 }
@@ -214,19 +189,19 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Blanking {
         #[doc = "No blanking."]
-        NoBlanking = 0x0,
+        NO_BLANKING = 0x0,
         #[doc = "TIM1 OC4 enabled as blanking source"]
-        Tim1oc4 = 0x01,
+        TIM1OC4 = 0x01,
         #[doc = "TIM1 OC5 enabled as blanking source"]
-        Tim1oc5 = 0x02,
+        TIM1OC5 = 0x02,
         _RESERVED_3 = 0x03,
         #[doc = "TIM5 OC3 enabled as blanking source"]
-        Tim2oc3 = 0x04,
+        TIM2OC3 = 0x04,
         _RESERVED_5 = 0x05,
         _RESERVED_6 = 0x06,
         _RESERVED_7 = 0x07,
         #[doc = "TIM3 OC3 enabled as blanking source"]
-        Tim3oc3 = 0x08,
+        TIM3OC3 = 0x08,
         _RESERVED_9 = 0x09,
         _RESERVED_a = 0x0a,
         _RESERVED_b = 0x0b,
@@ -235,7 +210,7 @@ pub mod vals {
         _RESERVED_e = 0x0e,
         _RESERVED_f = 0x0f,
         #[doc = "TIM15 OC2 enabled as blanking source"]
-        Tim15oc2 = 0x10,
+        TIM15OC2 = 0x10,
         _RESERVED_11 = 0x11,
         _RESERVED_12 = 0x12,
         _RESERVED_13 = 0x13,
@@ -278,10 +253,10 @@ pub mod vals {
     #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Hyst {
-        None = 0x0,
-        Low = 0x01,
-        Medium = 0x02,
-        High = 0x03,
+        NONE = 0x0,
+        LOW = 0x01,
+        MEDIUM = 0x02,
+        HIGH = 0x03,
     }
     impl Hyst {
         #[inline(always)]
@@ -310,9 +285,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Polarity {
         #[doc = "Output is not inverted."]
-        NotInverted = 0x0,
+        NOT_INVERTED = 0x0,
         #[doc = "Output is inverted."]
-        Inverted = 0x01,
+        INVERTED = 0x01,
     }
     impl Polarity {
         #[inline(always)]
@@ -341,12 +316,12 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Pwrmode {
         #[doc = "High speed / full power."]
-        HighSpeed = 0x0,
+        HIGH_SPEED = 0x0,
         #[doc = "Medium speed / medium power."]
-        MediumSpeed = 0x01,
+        MEDIUM_SPEED = 0x01,
         _RESERVED_2 = 0x02,
         #[doc = "Very-low speed / ultra-low power."]
-        LowSpeed = 0x03,
+        LOW_SPEED = 0x03,
     }
     impl Pwrmode {
         #[inline(always)]
@@ -376,10 +351,10 @@ pub mod vals {
     pub enum WindowMode {
         #[doc = "Signal selected with INPSEL\\[2:0\\]
 bitfield of this register."]
-        ThisInpsel = 0x0,
+        THIS_INPSEL = 0x0,
         #[doc = "Signal selected with INPSEL\\[2:0\\]
 bitfield of the other register (required for window mode)."]
-        OtherInpsel = 0x01,
+        OTHER_INPSEL = 0x01,
     }
     impl WindowMode {
         #[inline(always)]
@@ -408,9 +383,9 @@ bitfield of the other register (required for window mode)."]
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum WindowOut {
         #[doc = "Comparator 1 value."]
-        Comp1Value = 0x0,
+        COMP1_VALUE = 0x0,
         #[doc = "Comparator 1 value XOR comparator 2 value (required for window mode)."]
-        Comp1ValueXorComp2Value = 0x01,
+        COMP1_VALUE_XOR_COMP2_VALUE = 0x01,
     }
     impl WindowOut {
         #[inline(always)]

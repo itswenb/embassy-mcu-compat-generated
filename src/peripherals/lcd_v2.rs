@@ -22,28 +22,28 @@ impl Lcd {
     #[doc = "control register"]
     #[inline(always)]
     pub const fn cr(self) -> crate::common::Reg<regs::Cr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0usize) as _) }
     }
     #[doc = "frame control register"]
     #[inline(always)]
     pub const fn fcr(self) -> crate::common::Reg<regs::Fcr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x04usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x04usize) as _) }
     }
     #[doc = "status register"]
     #[inline(always)]
     pub const fn sr(self) -> crate::common::Reg<regs::Sr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x08usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x08usize) as _) }
     }
     #[doc = "clear register"]
     #[inline(always)]
     pub const fn clr(self) -> crate::common::Reg<regs::Clr, crate::common::W> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0cusize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0cusize) as _) }
     }
     #[doc = "display memory"]
     #[inline(always)]
     pub const fn ram_com(self, n: usize) -> RamCom {
         assert!(n < 8usize);
-        unsafe { RamCom::from_ptr(self.ptr.wrapping_add(0x14usize + n * 8usize) as _) }
+        unsafe { RamCom::from_ptr(self.ptr.add(0x14usize + n * 8usize) as _) }
     }
 }
 #[doc = "display memory"]
@@ -65,12 +65,12 @@ impl RamCom {
     #[doc = "display memory low word"]
     #[inline(always)]
     pub const fn low(self) -> crate::common::Reg<u32, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0usize) as _) }
     }
     #[doc = "display memory high word"]
     #[inline(always)]
     pub const fn high(self) -> crate::common::Reg<u32, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x04usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x04usize) as _) }
     }
 }
 pub mod regs {
@@ -80,7 +80,6 @@ pub mod regs {
     pub struct Clr(pub u32);
     impl Clr {
         #[doc = "Start of frame flag clear"]
-        #[must_use]
         #[inline(always)]
         pub const fn sofc(&self) -> bool {
             let val = (self.0 >> 1usize) & 0x01;
@@ -88,11 +87,10 @@ pub mod regs {
         }
         #[doc = "Start of frame flag clear"]
         #[inline(always)]
-        pub const fn set_sofc(&mut self, val: bool) {
+        pub fn set_sofc(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
         }
         #[doc = "Update display done clear"]
-        #[must_use]
         #[inline(always)]
         pub const fn uddc(&self) -> bool {
             let val = (self.0 >> 3usize) & 0x01;
@@ -100,7 +98,7 @@ pub mod regs {
         }
         #[doc = "Update display done clear"]
         #[inline(always)]
-        pub const fn set_uddc(&mut self, val: bool) {
+        pub fn set_uddc(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
         }
     }
@@ -135,7 +133,6 @@ pub mod regs {
     pub struct Cr(pub u32);
     impl Cr {
         #[doc = "LCD controller enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn lcden(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -143,11 +140,10 @@ pub mod regs {
         }
         #[doc = "LCD controller enable"]
         #[inline(always)]
-        pub const fn set_lcden(&mut self, val: bool) {
+        pub fn set_lcden(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "Voltage source selection"]
-        #[must_use]
         #[inline(always)]
         pub const fn vsel(&self) -> bool {
             let val = (self.0 >> 1usize) & 0x01;
@@ -155,11 +151,10 @@ pub mod regs {
         }
         #[doc = "Voltage source selection"]
         #[inline(always)]
-        pub const fn set_vsel(&mut self, val: bool) {
+        pub fn set_vsel(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
         }
         #[doc = "Duty selection"]
-        #[must_use]
         #[inline(always)]
         pub const fn duty(&self) -> u8 {
             let val = (self.0 >> 2usize) & 0x07;
@@ -167,11 +162,10 @@ pub mod regs {
         }
         #[doc = "Duty selection"]
         #[inline(always)]
-        pub const fn set_duty(&mut self, val: u8) {
+        pub fn set_duty(&mut self, val: u8) {
             self.0 = (self.0 & !(0x07 << 2usize)) | (((val as u32) & 0x07) << 2usize);
         }
         #[doc = "Bias selector"]
-        #[must_use]
         #[inline(always)]
         pub const fn bias(&self) -> u8 {
             let val = (self.0 >> 5usize) & 0x03;
@@ -179,11 +173,10 @@ pub mod regs {
         }
         #[doc = "Bias selector"]
         #[inline(always)]
-        pub const fn set_bias(&mut self, val: u8) {
+        pub fn set_bias(&mut self, val: u8) {
             self.0 = (self.0 & !(0x03 << 5usize)) | (((val as u32) & 0x03) << 5usize);
         }
         #[doc = "Mux segment enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn mux_seg(&self) -> bool {
             let val = (self.0 >> 7usize) & 0x01;
@@ -191,11 +184,10 @@ pub mod regs {
         }
         #[doc = "Mux segment enable"]
         #[inline(always)]
-        pub const fn set_mux_seg(&mut self, val: bool) {
+        pub fn set_mux_seg(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
         }
         #[doc = "Voltage output buffer enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn bufen(&self) -> bool {
             let val = (self.0 >> 8usize) & 0x01;
@@ -203,7 +195,7 @@ pub mod regs {
         }
         #[doc = "Voltage output buffer enable"]
         #[inline(always)]
-        pub const fn set_bufen(&mut self, val: bool) {
+        pub fn set_bufen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
         }
     }
@@ -228,16 +220,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Cr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Cr {{ lcden: {=bool:?}, vsel: {=bool:?}, duty: {=u8:?}, bias: {=u8:?}, mux_seg: {=bool:?}, bufen: {=bool:?} }}",
-                self.lcden(),
-                self.vsel(),
-                self.duty(),
-                self.bias(),
-                self.mux_seg(),
-                self.bufen()
-            )
+            defmt :: write ! (f , "Cr {{ lcden: {=bool:?}, vsel: {=bool:?}, duty: {=u8:?}, bias: {=u8:?}, mux_seg: {=bool:?}, bufen: {=bool:?} }}" , self . lcden () , self . vsel () , self . duty () , self . bias () , self . mux_seg () , self . bufen ())
         }
     }
     #[doc = "frame control register"]
@@ -246,7 +229,6 @@ pub mod regs {
     pub struct Fcr(pub u32);
     impl Fcr {
         #[doc = "High drive enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn hd(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -254,11 +236,10 @@ pub mod regs {
         }
         #[doc = "High drive enable"]
         #[inline(always)]
-        pub const fn set_hd(&mut self, val: bool) {
+        pub fn set_hd(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "Start of frame interrupt enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn sofie(&self) -> bool {
             let val = (self.0 >> 1usize) & 0x01;
@@ -266,11 +247,10 @@ pub mod regs {
         }
         #[doc = "Start of frame interrupt enable"]
         #[inline(always)]
-        pub const fn set_sofie(&mut self, val: bool) {
+        pub fn set_sofie(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
         }
         #[doc = "Update display done interrupt enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn uddie(&self) -> bool {
             let val = (self.0 >> 3usize) & 0x01;
@@ -278,11 +258,10 @@ pub mod regs {
         }
         #[doc = "Update display done interrupt enable"]
         #[inline(always)]
-        pub const fn set_uddie(&mut self, val: bool) {
+        pub fn set_uddie(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
         }
         #[doc = "Pulse ON duration"]
-        #[must_use]
         #[inline(always)]
         pub const fn pon(&self) -> u8 {
             let val = (self.0 >> 4usize) & 0x07;
@@ -290,11 +269,10 @@ pub mod regs {
         }
         #[doc = "Pulse ON duration"]
         #[inline(always)]
-        pub const fn set_pon(&mut self, val: u8) {
+        pub fn set_pon(&mut self, val: u8) {
             self.0 = (self.0 & !(0x07 << 4usize)) | (((val as u32) & 0x07) << 4usize);
         }
         #[doc = "Dead time duration"]
-        #[must_use]
         #[inline(always)]
         pub const fn dead(&self) -> u8 {
             let val = (self.0 >> 7usize) & 0x07;
@@ -302,11 +280,10 @@ pub mod regs {
         }
         #[doc = "Dead time duration"]
         #[inline(always)]
-        pub const fn set_dead(&mut self, val: u8) {
+        pub fn set_dead(&mut self, val: u8) {
             self.0 = (self.0 & !(0x07 << 7usize)) | (((val as u32) & 0x07) << 7usize);
         }
         #[doc = "Contrast control"]
-        #[must_use]
         #[inline(always)]
         pub const fn cc(&self) -> u8 {
             let val = (self.0 >> 10usize) & 0x07;
@@ -314,11 +291,10 @@ pub mod regs {
         }
         #[doc = "Contrast control"]
         #[inline(always)]
-        pub const fn set_cc(&mut self, val: u8) {
+        pub fn set_cc(&mut self, val: u8) {
             self.0 = (self.0 & !(0x07 << 10usize)) | (((val as u32) & 0x07) << 10usize);
         }
         #[doc = "Blink frequency selection"]
-        #[must_use]
         #[inline(always)]
         pub const fn blinkf(&self) -> u8 {
             let val = (self.0 >> 13usize) & 0x07;
@@ -326,11 +302,10 @@ pub mod regs {
         }
         #[doc = "Blink frequency selection"]
         #[inline(always)]
-        pub const fn set_blinkf(&mut self, val: u8) {
+        pub fn set_blinkf(&mut self, val: u8) {
             self.0 = (self.0 & !(0x07 << 13usize)) | (((val as u32) & 0x07) << 13usize);
         }
         #[doc = "Blink mode selection"]
-        #[must_use]
         #[inline(always)]
         pub const fn blink(&self) -> u8 {
             let val = (self.0 >> 16usize) & 0x03;
@@ -338,11 +313,10 @@ pub mod regs {
         }
         #[doc = "Blink mode selection"]
         #[inline(always)]
-        pub const fn set_blink(&mut self, val: u8) {
+        pub fn set_blink(&mut self, val: u8) {
             self.0 = (self.0 & !(0x03 << 16usize)) | (((val as u32) & 0x03) << 16usize);
         }
         #[doc = "DIV clock divider"]
-        #[must_use]
         #[inline(always)]
         pub const fn div(&self) -> u8 {
             let val = (self.0 >> 18usize) & 0x0f;
@@ -350,11 +324,10 @@ pub mod regs {
         }
         #[doc = "DIV clock divider"]
         #[inline(always)]
-        pub const fn set_div(&mut self, val: u8) {
+        pub fn set_div(&mut self, val: u8) {
             self.0 = (self.0 & !(0x0f << 18usize)) | (((val as u32) & 0x0f) << 18usize);
         }
         #[doc = "PS 16-bit prescaler"]
-        #[must_use]
         #[inline(always)]
         pub const fn ps(&self) -> u8 {
             let val = (self.0 >> 22usize) & 0x0f;
@@ -362,7 +335,7 @@ pub mod regs {
         }
         #[doc = "PS 16-bit prescaler"]
         #[inline(always)]
-        pub const fn set_ps(&mut self, val: u8) {
+        pub fn set_ps(&mut self, val: u8) {
             self.0 = (self.0 & !(0x0f << 22usize)) | (((val as u32) & 0x0f) << 22usize);
         }
     }
@@ -391,20 +364,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Fcr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Fcr {{ hd: {=bool:?}, sofie: {=bool:?}, uddie: {=bool:?}, pon: {=u8:?}, dead: {=u8:?}, cc: {=u8:?}, blinkf: {=u8:?}, blink: {=u8:?}, div: {=u8:?}, ps: {=u8:?} }}",
-                self.hd(),
-                self.sofie(),
-                self.uddie(),
-                self.pon(),
-                self.dead(),
-                self.cc(),
-                self.blinkf(),
-                self.blink(),
-                self.div(),
-                self.ps()
-            )
+            defmt :: write ! (f , "Fcr {{ hd: {=bool:?}, sofie: {=bool:?}, uddie: {=bool:?}, pon: {=u8:?}, dead: {=u8:?}, cc: {=u8:?}, blinkf: {=u8:?}, blink: {=u8:?}, div: {=u8:?}, ps: {=u8:?} }}" , self . hd () , self . sofie () , self . uddie () , self . pon () , self . dead () , self . cc () , self . blinkf () , self . blink () , self . div () , self . ps ())
         }
     }
     #[doc = "status register"]
@@ -413,7 +373,6 @@ pub mod regs {
     pub struct Sr(pub u32);
     impl Sr {
         #[doc = "LCD enabled status"]
-        #[must_use]
         #[inline(always)]
         pub const fn ens(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -421,11 +380,10 @@ pub mod regs {
         }
         #[doc = "LCD enabled status"]
         #[inline(always)]
-        pub const fn set_ens(&mut self, val: bool) {
+        pub fn set_ens(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "Start of frame flag"]
-        #[must_use]
         #[inline(always)]
         pub const fn sof(&self) -> bool {
             let val = (self.0 >> 1usize) & 0x01;
@@ -433,11 +391,10 @@ pub mod regs {
         }
         #[doc = "Start of frame flag"]
         #[inline(always)]
-        pub const fn set_sof(&mut self, val: bool) {
+        pub fn set_sof(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
         }
         #[doc = "Update display request"]
-        #[must_use]
         #[inline(always)]
         pub const fn udr(&self) -> bool {
             let val = (self.0 >> 2usize) & 0x01;
@@ -445,11 +402,10 @@ pub mod regs {
         }
         #[doc = "Update display request"]
         #[inline(always)]
-        pub const fn set_udr(&mut self, val: bool) {
+        pub fn set_udr(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
         }
         #[doc = "Update Display Done"]
-        #[must_use]
         #[inline(always)]
         pub const fn udd(&self) -> bool {
             let val = (self.0 >> 3usize) & 0x01;
@@ -457,11 +413,10 @@ pub mod regs {
         }
         #[doc = "Update Display Done"]
         #[inline(always)]
-        pub const fn set_udd(&mut self, val: bool) {
+        pub fn set_udd(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
         }
         #[doc = "Ready flag"]
-        #[must_use]
         #[inline(always)]
         pub const fn rdy(&self) -> bool {
             let val = (self.0 >> 4usize) & 0x01;
@@ -469,11 +424,10 @@ pub mod regs {
         }
         #[doc = "Ready flag"]
         #[inline(always)]
-        pub const fn set_rdy(&mut self, val: bool) {
+        pub fn set_rdy(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
         }
         #[doc = "LCD Frame Control Register Synchronization flag"]
-        #[must_use]
         #[inline(always)]
         pub const fn fcrsf(&self) -> bool {
             let val = (self.0 >> 5usize) & 0x01;
@@ -481,7 +435,7 @@ pub mod regs {
         }
         #[doc = "LCD Frame Control Register Synchronization flag"]
         #[inline(always)]
-        pub const fn set_fcrsf(&mut self, val: bool) {
+        pub fn set_fcrsf(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
         }
     }
@@ -506,16 +460,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Sr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Sr {{ ens: {=bool:?}, sof: {=bool:?}, udr: {=bool:?}, udd: {=bool:?}, rdy: {=bool:?}, fcrsf: {=bool:?} }}",
-                self.ens(),
-                self.sof(),
-                self.udr(),
-                self.udd(),
-                self.rdy(),
-                self.fcrsf()
-            )
+            defmt :: write ! (f , "Sr {{ ens: {=bool:?}, sof: {=bool:?}, udr: {=bool:?}, udd: {=bool:?}, rdy: {=bool:?}, fcrsf: {=bool:?} }}" , self . ens () , self . sof () , self . udr () , self . udd () , self . rdy () , self . fcrsf ())
         }
     }
 }

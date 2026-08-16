@@ -22,22 +22,22 @@ impl Ch {
     #[doc = "DMA channel configuration register (DMA_CCR)"]
     #[inline(always)]
     pub const fn cr(self) -> crate::common::Reg<regs::Cr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0usize) as _) }
     }
     #[doc = "DMA channel 1 number of data register"]
     #[inline(always)]
     pub const fn ndtr(self) -> crate::common::Reg<regs::Ndtr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x04usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x04usize) as _) }
     }
     #[doc = "DMA channel 1 peripheral address register"]
     #[inline(always)]
     pub const fn par(self) -> crate::common::Reg<u32, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x08usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x08usize) as _) }
     }
     #[doc = "DMA channel 1 memory address register"]
     #[inline(always)]
     pub const fn mar(self) -> crate::common::Reg<u32, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0cusize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0cusize) as _) }
     }
 }
 #[doc = "DMA controller"]
@@ -59,23 +59,23 @@ impl Dma {
     #[doc = "DMA interrupt status register (DMA_ISR)"]
     #[inline(always)]
     pub const fn isr(self) -> crate::common::Reg<regs::Isr, crate::common::R> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0usize) as _) }
     }
     #[doc = "DMA interrupt flag clear register (DMA_IFCR)"]
     #[inline(always)]
     pub const fn ifcr(self) -> crate::common::Reg<regs::Isr, crate::common::W> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x04usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x04usize) as _) }
     }
     #[doc = "Channel cluster: CCR?, CNDTR?, CPAR?, and CMAR? registers"]
     #[inline(always)]
     pub const fn ch(self, n: usize) -> Ch {
         assert!(n < 8usize);
-        unsafe { Ch::from_ptr(self.ptr.wrapping_add(0x08usize + n * 20usize) as _) }
+        unsafe { Ch::from_ptr(self.ptr.add(0x08usize + n * 20usize) as _) }
     }
     #[doc = "channel selection register"]
     #[inline(always)]
     pub const fn cselr(self) -> crate::common::Reg<regs::Cselr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0xa8usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0xa8usize) as _) }
     }
 }
 pub mod regs {
@@ -85,7 +85,6 @@ pub mod regs {
     pub struct Cr(pub u32);
     impl Cr {
         #[doc = "Channel enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn en(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -93,11 +92,10 @@ pub mod regs {
         }
         #[doc = "Channel enable"]
         #[inline(always)]
-        pub const fn set_en(&mut self, val: bool) {
+        pub fn set_en(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "Transfer complete interrupt enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn tcie(&self) -> bool {
             let val = (self.0 >> 1usize) & 0x01;
@@ -105,11 +103,10 @@ pub mod regs {
         }
         #[doc = "Transfer complete interrupt enable"]
         #[inline(always)]
-        pub const fn set_tcie(&mut self, val: bool) {
+        pub fn set_tcie(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
         }
         #[doc = "Half Transfer interrupt enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn htie(&self) -> bool {
             let val = (self.0 >> 2usize) & 0x01;
@@ -117,11 +114,10 @@ pub mod regs {
         }
         #[doc = "Half Transfer interrupt enable"]
         #[inline(always)]
-        pub const fn set_htie(&mut self, val: bool) {
+        pub fn set_htie(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
         }
         #[doc = "Transfer error interrupt enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn teie(&self) -> bool {
             let val = (self.0 >> 3usize) & 0x01;
@@ -129,11 +125,10 @@ pub mod regs {
         }
         #[doc = "Transfer error interrupt enable"]
         #[inline(always)]
-        pub const fn set_teie(&mut self, val: bool) {
+        pub fn set_teie(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
         }
         #[doc = "Data transfer direction"]
-        #[must_use]
         #[inline(always)]
         pub const fn dir(&self) -> super::vals::Dir {
             let val = (self.0 >> 4usize) & 0x01;
@@ -141,11 +136,10 @@ pub mod regs {
         }
         #[doc = "Data transfer direction"]
         #[inline(always)]
-        pub const fn set_dir(&mut self, val: super::vals::Dir) {
+        pub fn set_dir(&mut self, val: super::vals::Dir) {
             self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u32) & 0x01) << 4usize);
         }
         #[doc = "Circular mode enabled"]
-        #[must_use]
         #[inline(always)]
         pub const fn circ(&self) -> bool {
             let val = (self.0 >> 5usize) & 0x01;
@@ -153,11 +147,10 @@ pub mod regs {
         }
         #[doc = "Circular mode enabled"]
         #[inline(always)]
-        pub const fn set_circ(&mut self, val: bool) {
+        pub fn set_circ(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
         }
         #[doc = "Peripheral increment mode enabled"]
-        #[must_use]
         #[inline(always)]
         pub const fn pinc(&self) -> bool {
             let val = (self.0 >> 6usize) & 0x01;
@@ -165,11 +158,10 @@ pub mod regs {
         }
         #[doc = "Peripheral increment mode enabled"]
         #[inline(always)]
-        pub const fn set_pinc(&mut self, val: bool) {
+        pub fn set_pinc(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
         }
         #[doc = "Memory increment mode enabled"]
-        #[must_use]
         #[inline(always)]
         pub const fn minc(&self) -> bool {
             let val = (self.0 >> 7usize) & 0x01;
@@ -177,11 +169,10 @@ pub mod regs {
         }
         #[doc = "Memory increment mode enabled"]
         #[inline(always)]
-        pub const fn set_minc(&mut self, val: bool) {
+        pub fn set_minc(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
         }
         #[doc = "Peripheral size"]
-        #[must_use]
         #[inline(always)]
         pub const fn psize(&self) -> super::vals::Size {
             let val = (self.0 >> 8usize) & 0x03;
@@ -189,11 +180,10 @@ pub mod regs {
         }
         #[doc = "Peripheral size"]
         #[inline(always)]
-        pub const fn set_psize(&mut self, val: super::vals::Size) {
+        pub fn set_psize(&mut self, val: super::vals::Size) {
             self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u32) & 0x03) << 8usize);
         }
         #[doc = "Memory size"]
-        #[must_use]
         #[inline(always)]
         pub const fn msize(&self) -> super::vals::Size {
             let val = (self.0 >> 10usize) & 0x03;
@@ -201,11 +191,10 @@ pub mod regs {
         }
         #[doc = "Memory size"]
         #[inline(always)]
-        pub const fn set_msize(&mut self, val: super::vals::Size) {
+        pub fn set_msize(&mut self, val: super::vals::Size) {
             self.0 = (self.0 & !(0x03 << 10usize)) | (((val.to_bits() as u32) & 0x03) << 10usize);
         }
         #[doc = "Channel Priority level"]
-        #[must_use]
         #[inline(always)]
         pub const fn pl(&self) -> super::vals::Pl {
             let val = (self.0 >> 12usize) & 0x03;
@@ -213,11 +202,10 @@ pub mod regs {
         }
         #[doc = "Channel Priority level"]
         #[inline(always)]
-        pub const fn set_pl(&mut self, val: super::vals::Pl) {
+        pub fn set_pl(&mut self, val: super::vals::Pl) {
             self.0 = (self.0 & !(0x03 << 12usize)) | (((val.to_bits() as u32) & 0x03) << 12usize);
         }
         #[doc = "Memory to memory mode enabled"]
-        #[must_use]
         #[inline(always)]
         pub const fn mem2mem(&self) -> bool {
             let val = (self.0 >> 14usize) & 0x01;
@@ -225,7 +213,7 @@ pub mod regs {
         }
         #[doc = "Memory to memory mode enabled"]
         #[inline(always)]
-        pub const fn set_mem2mem(&mut self, val: bool) {
+        pub fn set_mem2mem(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
         }
     }
@@ -256,22 +244,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Cr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Cr {{ en: {=bool:?}, tcie: {=bool:?}, htie: {=bool:?}, teie: {=bool:?}, dir: {:?}, circ: {=bool:?}, pinc: {=bool:?}, minc: {=bool:?}, psize: {:?}, msize: {:?}, pl: {:?}, mem2mem: {=bool:?} }}",
-                self.en(),
-                self.tcie(),
-                self.htie(),
-                self.teie(),
-                self.dir(),
-                self.circ(),
-                self.pinc(),
-                self.minc(),
-                self.psize(),
-                self.msize(),
-                self.pl(),
-                self.mem2mem()
-            )
+            defmt :: write ! (f , "Cr {{ en: {=bool:?}, tcie: {=bool:?}, htie: {=bool:?}, teie: {=bool:?}, dir: {:?}, circ: {=bool:?}, pinc: {=bool:?}, minc: {=bool:?}, psize: {:?}, msize: {:?}, pl: {:?}, mem2mem: {=bool:?} }}" , self . en () , self . tcie () , self . htie () , self . teie () , self . dir () , self . circ () , self . pinc () , self . minc () , self . psize () , self . msize () , self . pl () , self . mem2mem ())
         }
     }
     #[doc = "channel selection register"]
@@ -280,7 +253,6 @@ pub mod regs {
     pub struct Cselr(pub u32);
     impl Cselr {
         #[doc = "DMA channel selection"]
-        #[must_use]
         #[inline(always)]
         pub const fn cs(&self, n: usize) -> u8 {
             assert!(n < 8usize);
@@ -290,7 +262,7 @@ pub mod regs {
         }
         #[doc = "DMA channel selection"]
         #[inline(always)]
-        pub const fn set_cs(&mut self, n: usize, val: u8) {
+        pub fn set_cs(&mut self, n: usize, val: u8) {
             assert!(n < 8usize);
             let offs = 0usize + n * 4usize;
             self.0 = (self.0 & !(0x0f << offs)) | (((val as u32) & 0x0f) << offs);
@@ -319,18 +291,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Cselr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Cselr {{ cs[0]: {=u8:?}, cs[1]: {=u8:?}, cs[2]: {=u8:?}, cs[3]: {=u8:?}, cs[4]: {=u8:?}, cs[5]: {=u8:?}, cs[6]: {=u8:?}, cs[7]: {=u8:?} }}",
-                self.cs(0usize),
-                self.cs(1usize),
-                self.cs(2usize),
-                self.cs(3usize),
-                self.cs(4usize),
-                self.cs(5usize),
-                self.cs(6usize),
-                self.cs(7usize)
-            )
+            defmt :: write ! (f , "Cselr {{ cs[0]: {=u8:?}, cs[1]: {=u8:?}, cs[2]: {=u8:?}, cs[3]: {=u8:?}, cs[4]: {=u8:?}, cs[5]: {=u8:?}, cs[6]: {=u8:?}, cs[7]: {=u8:?} }}" , self . cs (0usize) , self . cs (1usize) , self . cs (2usize) , self . cs (3usize) , self . cs (4usize) , self . cs (5usize) , self . cs (6usize) , self . cs (7usize))
         }
     }
     #[doc = "DMA interrupt status register (DMA_ISR)"]
@@ -339,7 +300,6 @@ pub mod regs {
     pub struct Isr(pub u32);
     impl Isr {
         #[doc = "Channel 1 Global interrupt flag"]
-        #[must_use]
         #[inline(always)]
         pub const fn gif(&self, n: usize) -> bool {
             assert!(n < 8usize);
@@ -349,13 +309,12 @@ pub mod regs {
         }
         #[doc = "Channel 1 Global interrupt flag"]
         #[inline(always)]
-        pub const fn set_gif(&mut self, n: usize, val: bool) {
+        pub fn set_gif(&mut self, n: usize, val: bool) {
             assert!(n < 8usize);
             let offs = 0usize + n * 4usize;
             self.0 = (self.0 & !(0x01 << offs)) | (((val as u32) & 0x01) << offs);
         }
         #[doc = "Channel 1 Transfer Complete flag"]
-        #[must_use]
         #[inline(always)]
         pub const fn tcif(&self, n: usize) -> bool {
             assert!(n < 8usize);
@@ -365,13 +324,12 @@ pub mod regs {
         }
         #[doc = "Channel 1 Transfer Complete flag"]
         #[inline(always)]
-        pub const fn set_tcif(&mut self, n: usize, val: bool) {
+        pub fn set_tcif(&mut self, n: usize, val: bool) {
             assert!(n < 8usize);
             let offs = 1usize + n * 4usize;
             self.0 = (self.0 & !(0x01 << offs)) | (((val as u32) & 0x01) << offs);
         }
         #[doc = "Channel 1 Half Transfer Complete flag"]
-        #[must_use]
         #[inline(always)]
         pub const fn htif(&self, n: usize) -> bool {
             assert!(n < 8usize);
@@ -381,13 +339,12 @@ pub mod regs {
         }
         #[doc = "Channel 1 Half Transfer Complete flag"]
         #[inline(always)]
-        pub const fn set_htif(&mut self, n: usize, val: bool) {
+        pub fn set_htif(&mut self, n: usize, val: bool) {
             assert!(n < 8usize);
             let offs = 2usize + n * 4usize;
             self.0 = (self.0 & !(0x01 << offs)) | (((val as u32) & 0x01) << offs);
         }
         #[doc = "Channel 1 Transfer Error flag"]
-        #[must_use]
         #[inline(always)]
         pub const fn teif(&self, n: usize) -> bool {
             assert!(n < 8usize);
@@ -397,7 +354,7 @@ pub mod regs {
         }
         #[doc = "Channel 1 Transfer Error flag"]
         #[inline(always)]
-        pub const fn set_teif(&mut self, n: usize, val: bool) {
+        pub fn set_teif(&mut self, n: usize, val: bool) {
             assert!(n < 8usize);
             let offs = 3usize + n * 4usize;
             self.0 = (self.0 & !(0x01 << offs)) | (((val as u32) & 0x01) << offs);
@@ -450,42 +407,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Isr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Isr {{ gif[0]: {=bool:?}, gif[1]: {=bool:?}, gif[2]: {=bool:?}, gif[3]: {=bool:?}, gif[4]: {=bool:?}, gif[5]: {=bool:?}, gif[6]: {=bool:?}, gif[7]: {=bool:?}, tcif[0]: {=bool:?}, tcif[1]: {=bool:?}, tcif[2]: {=bool:?}, tcif[3]: {=bool:?}, tcif[4]: {=bool:?}, tcif[5]: {=bool:?}, tcif[6]: {=bool:?}, tcif[7]: {=bool:?}, htif[0]: {=bool:?}, htif[1]: {=bool:?}, htif[2]: {=bool:?}, htif[3]: {=bool:?}, htif[4]: {=bool:?}, htif[5]: {=bool:?}, htif[6]: {=bool:?}, htif[7]: {=bool:?}, teif[0]: {=bool:?}, teif[1]: {=bool:?}, teif[2]: {=bool:?}, teif[3]: {=bool:?}, teif[4]: {=bool:?}, teif[5]: {=bool:?}, teif[6]: {=bool:?}, teif[7]: {=bool:?} }}",
-                self.gif(0usize),
-                self.gif(1usize),
-                self.gif(2usize),
-                self.gif(3usize),
-                self.gif(4usize),
-                self.gif(5usize),
-                self.gif(6usize),
-                self.gif(7usize),
-                self.tcif(0usize),
-                self.tcif(1usize),
-                self.tcif(2usize),
-                self.tcif(3usize),
-                self.tcif(4usize),
-                self.tcif(5usize),
-                self.tcif(6usize),
-                self.tcif(7usize),
-                self.htif(0usize),
-                self.htif(1usize),
-                self.htif(2usize),
-                self.htif(3usize),
-                self.htif(4usize),
-                self.htif(5usize),
-                self.htif(6usize),
-                self.htif(7usize),
-                self.teif(0usize),
-                self.teif(1usize),
-                self.teif(2usize),
-                self.teif(3usize),
-                self.teif(4usize),
-                self.teif(5usize),
-                self.teif(6usize),
-                self.teif(7usize)
-            )
+            defmt :: write ! (f , "Isr {{ gif[0]: {=bool:?}, gif[1]: {=bool:?}, gif[2]: {=bool:?}, gif[3]: {=bool:?}, gif[4]: {=bool:?}, gif[5]: {=bool:?}, gif[6]: {=bool:?}, gif[7]: {=bool:?}, tcif[0]: {=bool:?}, tcif[1]: {=bool:?}, tcif[2]: {=bool:?}, tcif[3]: {=bool:?}, tcif[4]: {=bool:?}, tcif[5]: {=bool:?}, tcif[6]: {=bool:?}, tcif[7]: {=bool:?}, htif[0]: {=bool:?}, htif[1]: {=bool:?}, htif[2]: {=bool:?}, htif[3]: {=bool:?}, htif[4]: {=bool:?}, htif[5]: {=bool:?}, htif[6]: {=bool:?}, htif[7]: {=bool:?}, teif[0]: {=bool:?}, teif[1]: {=bool:?}, teif[2]: {=bool:?}, teif[3]: {=bool:?}, teif[4]: {=bool:?}, teif[5]: {=bool:?}, teif[6]: {=bool:?}, teif[7]: {=bool:?} }}" , self . gif (0usize) , self . gif (1usize) , self . gif (2usize) , self . gif (3usize) , self . gif (4usize) , self . gif (5usize) , self . gif (6usize) , self . gif (7usize) , self . tcif (0usize) , self . tcif (1usize) , self . tcif (2usize) , self . tcif (3usize) , self . tcif (4usize) , self . tcif (5usize) , self . tcif (6usize) , self . tcif (7usize) , self . htif (0usize) , self . htif (1usize) , self . htif (2usize) , self . htif (3usize) , self . htif (4usize) , self . htif (5usize) , self . htif (6usize) , self . htif (7usize) , self . teif (0usize) , self . teif (1usize) , self . teif (2usize) , self . teif (3usize) , self . teif (4usize) , self . teif (5usize) , self . teif (6usize) , self . teif (7usize))
         }
     }
     #[doc = "DMA channel 1 number of data register"]
@@ -494,7 +416,6 @@ pub mod regs {
     pub struct Ndtr(pub u32);
     impl Ndtr {
         #[doc = "Number of data to transfer"]
-        #[must_use]
         #[inline(always)]
         pub const fn ndt(&self) -> u16 {
             let val = (self.0 >> 0usize) & 0xffff;
@@ -502,7 +423,7 @@ pub mod regs {
         }
         #[doc = "Number of data to transfer"]
         #[inline(always)]
-        pub const fn set_ndt(&mut self, val: u16) {
+        pub fn set_ndt(&mut self, val: u16) {
             self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
         }
     }
@@ -530,9 +451,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Dir {
         #[doc = "Read from peripheral"]
-        FromPeripheral = 0x0,
+        FROM_PERIPHERAL = 0x0,
         #[doc = "Read from memory"]
-        FromMemory = 0x01,
+        FROM_MEMORY = 0x01,
     }
     impl Dir {
         #[inline(always)]
@@ -561,13 +482,13 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Pl {
         #[doc = "Low priority"]
-        Low = 0x0,
+        LOW = 0x0,
         #[doc = "Medium priority"]
-        Medium = 0x01,
+        MEDIUM = 0x01,
         #[doc = "High priority"]
-        High = 0x02,
+        HIGH = 0x02,
         #[doc = "Very high priority"]
-        VeryHigh = 0x03,
+        VERY_HIGH = 0x03,
     }
     impl Pl {
         #[inline(always)]
@@ -596,11 +517,11 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Size {
         #[doc = "8-bit size"]
-        Bits8 = 0x0,
+        BITS8 = 0x0,
         #[doc = "16-bit size"]
-        Bits16 = 0x01,
+        BITS16 = 0x01,
         #[doc = "32-bit size"]
-        Bits32 = 0x02,
+        BITS32 = 0x02,
         _RESERVED_3 = 0x03,
     }
     impl Size {

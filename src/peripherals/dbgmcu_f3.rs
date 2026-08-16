@@ -22,22 +22,22 @@ impl Dbgmcu {
     #[doc = "MCU Device ID Code Register"]
     #[inline(always)]
     pub const fn idcode(self) -> crate::common::Reg<regs::Idcode, crate::common::R> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0usize) as _) }
     }
     #[doc = "Debug MCU Configuration Register"]
     #[inline(always)]
     pub const fn cr(self) -> crate::common::Reg<regs::Cr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x04usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x04usize) as _) }
     }
     #[doc = "APB Low Freeze Register"]
     #[inline(always)]
     pub const fn apb1fzr(self) -> crate::common::Reg<regs::Apb1fzr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x08usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x08usize) as _) }
     }
     #[doc = "APB High Freeze Register"]
     #[inline(always)]
     pub const fn apb2fzr(self) -> crate::common::Reg<regs::Apb2fzr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0cusize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0cusize) as _) }
     }
 }
 pub mod regs {
@@ -47,7 +47,6 @@ pub mod regs {
     pub struct Apb1fzr(pub u32);
     impl Apb1fzr {
         #[doc = "Debug Timer 2 stopped when Core is halted"]
-        #[must_use]
         #[inline(always)]
         pub const fn tim2(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -55,11 +54,10 @@ pub mod regs {
         }
         #[doc = "Debug Timer 2 stopped when Core is halted"]
         #[inline(always)]
-        pub const fn set_tim2(&mut self, val: bool) {
+        pub fn set_tim2(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "Debug Timer 3 stopped when Core is halted"]
-        #[must_use]
         #[inline(always)]
         pub const fn tim3(&self) -> bool {
             let val = (self.0 >> 1usize) & 0x01;
@@ -67,11 +65,10 @@ pub mod regs {
         }
         #[doc = "Debug Timer 3 stopped when Core is halted"]
         #[inline(always)]
-        pub const fn set_tim3(&mut self, val: bool) {
+        pub fn set_tim3(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
         }
         #[doc = "Debug Timer 4 stopped when Core is halted"]
-        #[must_use]
         #[inline(always)]
         pub const fn tim4(&self) -> bool {
             let val = (self.0 >> 2usize) & 0x01;
@@ -79,11 +76,10 @@ pub mod regs {
         }
         #[doc = "Debug Timer 4 stopped when Core is halted"]
         #[inline(always)]
-        pub const fn set_tim4(&mut self, val: bool) {
+        pub fn set_tim4(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
         }
         #[doc = "Debug Timer 5 stopped when Core is halted"]
-        #[must_use]
         #[inline(always)]
         pub const fn tim5(&self) -> bool {
             let val = (self.0 >> 3usize) & 0x01;
@@ -91,11 +87,10 @@ pub mod regs {
         }
         #[doc = "Debug Timer 5 stopped when Core is halted"]
         #[inline(always)]
-        pub const fn set_tim5(&mut self, val: bool) {
+        pub fn set_tim5(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
         }
         #[doc = "Debug Timer 6 stopped when Core is halted"]
-        #[must_use]
         #[inline(always)]
         pub const fn tim6(&self) -> bool {
             let val = (self.0 >> 4usize) & 0x01;
@@ -103,11 +98,10 @@ pub mod regs {
         }
         #[doc = "Debug Timer 6 stopped when Core is halted"]
         #[inline(always)]
-        pub const fn set_tim6(&mut self, val: bool) {
+        pub fn set_tim6(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
         }
         #[doc = "Debug Timer 7 stopped when Core is halted"]
-        #[must_use]
         #[inline(always)]
         pub const fn tim7(&self) -> bool {
             let val = (self.0 >> 5usize) & 0x01;
@@ -115,11 +109,10 @@ pub mod regs {
         }
         #[doc = "Debug Timer 7 stopped when Core is halted"]
         #[inline(always)]
-        pub const fn set_tim7(&mut self, val: bool) {
+        pub fn set_tim7(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
         }
         #[doc = "Debug Timer 12 stopped when Core is halted"]
-        #[must_use]
         #[inline(always)]
         pub const fn tim12(&self) -> bool {
             let val = (self.0 >> 6usize) & 0x01;
@@ -127,11 +120,10 @@ pub mod regs {
         }
         #[doc = "Debug Timer 12 stopped when Core is halted"]
         #[inline(always)]
-        pub const fn set_tim12(&mut self, val: bool) {
+        pub fn set_tim12(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
         }
         #[doc = "Debug Timer 13 stopped when Core is halted"]
-        #[must_use]
         #[inline(always)]
         pub const fn tim13(&self) -> bool {
             let val = (self.0 >> 7usize) & 0x01;
@@ -139,11 +131,10 @@ pub mod regs {
         }
         #[doc = "Debug Timer 13 stopped when Core is halted"]
         #[inline(always)]
-        pub const fn set_tim13(&mut self, val: bool) {
+        pub fn set_tim13(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
         }
         #[doc = "Debug Timer 14 stopped when Core is halted"]
-        #[must_use]
         #[inline(always)]
         pub const fn tim14(&self) -> bool {
             let val = (self.0 >> 8usize) & 0x01;
@@ -151,11 +142,10 @@ pub mod regs {
         }
         #[doc = "Debug Timer 14 stopped when Core is halted"]
         #[inline(always)]
-        pub const fn set_tim14(&mut self, val: bool) {
+        pub fn set_tim14(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
         }
         #[doc = "Debug Timer 18 stopped when Core is halted"]
-        #[must_use]
         #[inline(always)]
         pub const fn tim18(&self) -> bool {
             let val = (self.0 >> 9usize) & 0x01;
@@ -163,11 +153,10 @@ pub mod regs {
         }
         #[doc = "Debug Timer 18 stopped when Core is halted"]
         #[inline(always)]
-        pub const fn set_tim18(&mut self, val: bool) {
+        pub fn set_tim18(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
         }
         #[doc = "Debug RTC stopped when Core is halted"]
-        #[must_use]
         #[inline(always)]
         pub const fn rtc(&self) -> bool {
             let val = (self.0 >> 10usize) & 0x01;
@@ -175,11 +164,10 @@ pub mod regs {
         }
         #[doc = "Debug RTC stopped when Core is halted"]
         #[inline(always)]
-        pub const fn set_rtc(&mut self, val: bool) {
+        pub fn set_rtc(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
         }
         #[doc = "Debug Window Wachdog stopped when Core is halted"]
-        #[must_use]
         #[inline(always)]
         pub const fn wwdg(&self) -> bool {
             let val = (self.0 >> 11usize) & 0x01;
@@ -187,11 +175,10 @@ pub mod regs {
         }
         #[doc = "Debug Window Wachdog stopped when Core is halted"]
         #[inline(always)]
-        pub const fn set_wwdg(&mut self, val: bool) {
+        pub fn set_wwdg(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
         }
         #[doc = "Debug Independent Wachdog stopped when Core is halted"]
-        #[must_use]
         #[inline(always)]
         pub const fn iwdg(&self) -> bool {
             let val = (self.0 >> 12usize) & 0x01;
@@ -199,11 +186,10 @@ pub mod regs {
         }
         #[doc = "Debug Independent Wachdog stopped when Core is halted"]
         #[inline(always)]
-        pub const fn set_iwdg(&mut self, val: bool) {
+        pub fn set_iwdg(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
         }
         #[doc = "SMBUS timeout mode stopped when Core is halted"]
-        #[must_use]
         #[inline(always)]
         pub const fn i2c1_smbus_timeout(&self) -> bool {
             let val = (self.0 >> 21usize) & 0x01;
@@ -211,11 +197,10 @@ pub mod regs {
         }
         #[doc = "SMBUS timeout mode stopped when Core is halted"]
         #[inline(always)]
-        pub const fn set_i2c1_smbus_timeout(&mut self, val: bool) {
+        pub fn set_i2c1_smbus_timeout(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
         }
         #[doc = "SMBUS timeout mode stopped when Core is halted"]
-        #[must_use]
         #[inline(always)]
         pub const fn i2c2_smbus_timeout(&self) -> bool {
             let val = (self.0 >> 22usize) & 0x01;
@@ -223,11 +208,10 @@ pub mod regs {
         }
         #[doc = "SMBUS timeout mode stopped when Core is halted"]
         #[inline(always)]
-        pub const fn set_i2c2_smbus_timeout(&mut self, val: bool) {
+        pub fn set_i2c2_smbus_timeout(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
         }
         #[doc = "Debug CAN stopped when core is halted"]
-        #[must_use]
         #[inline(always)]
         pub const fn can(&self) -> bool {
             let val = (self.0 >> 25usize) & 0x01;
@@ -235,7 +219,7 @@ pub mod regs {
         }
         #[doc = "Debug CAN stopped when core is halted"]
         #[inline(always)]
-        pub const fn set_can(&mut self, val: bool) {
+        pub fn set_can(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
         }
     }
@@ -270,26 +254,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Apb1fzr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Apb1fzr {{ tim2: {=bool:?}, tim3: {=bool:?}, tim4: {=bool:?}, tim5: {=bool:?}, tim6: {=bool:?}, tim7: {=bool:?}, tim12: {=bool:?}, tim13: {=bool:?}, tim14: {=bool:?}, tim18: {=bool:?}, rtc: {=bool:?}, wwdg: {=bool:?}, iwdg: {=bool:?}, i2c1_smbus_timeout: {=bool:?}, i2c2_smbus_timeout: {=bool:?}, can: {=bool:?} }}",
-                self.tim2(),
-                self.tim3(),
-                self.tim4(),
-                self.tim5(),
-                self.tim6(),
-                self.tim7(),
-                self.tim12(),
-                self.tim13(),
-                self.tim14(),
-                self.tim18(),
-                self.rtc(),
-                self.wwdg(),
-                self.iwdg(),
-                self.i2c1_smbus_timeout(),
-                self.i2c2_smbus_timeout(),
-                self.can()
-            )
+            defmt :: write ! (f , "Apb1fzr {{ tim2: {=bool:?}, tim3: {=bool:?}, tim4: {=bool:?}, tim5: {=bool:?}, tim6: {=bool:?}, tim7: {=bool:?}, tim12: {=bool:?}, tim13: {=bool:?}, tim14: {=bool:?}, tim18: {=bool:?}, rtc: {=bool:?}, wwdg: {=bool:?}, iwdg: {=bool:?}, i2c1_smbus_timeout: {=bool:?}, i2c2_smbus_timeout: {=bool:?}, can: {=bool:?} }}" , self . tim2 () , self . tim3 () , self . tim4 () , self . tim5 () , self . tim6 () , self . tim7 () , self . tim12 () , self . tim13 () , self . tim14 () , self . tim18 () , self . rtc () , self . wwdg () , self . iwdg () , self . i2c1_smbus_timeout () , self . i2c2_smbus_timeout () , self . can ())
         }
     }
     #[doc = "APB High Freeze Register"]
@@ -298,7 +263,6 @@ pub mod regs {
     pub struct Apb2fzr(pub u32);
     impl Apb2fzr {
         #[doc = "Debug Timer 15 stopped when Core is halted"]
-        #[must_use]
         #[inline(always)]
         pub const fn tim15(&self) -> bool {
             let val = (self.0 >> 2usize) & 0x01;
@@ -306,11 +270,10 @@ pub mod regs {
         }
         #[doc = "Debug Timer 15 stopped when Core is halted"]
         #[inline(always)]
-        pub const fn set_tim15(&mut self, val: bool) {
+        pub fn set_tim15(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
         }
         #[doc = "Debug Timer 16 stopped when Core is halted"]
-        #[must_use]
         #[inline(always)]
         pub const fn tim16(&self) -> bool {
             let val = (self.0 >> 3usize) & 0x01;
@@ -318,11 +281,10 @@ pub mod regs {
         }
         #[doc = "Debug Timer 16 stopped when Core is halted"]
         #[inline(always)]
-        pub const fn set_tim16(&mut self, val: bool) {
+        pub fn set_tim16(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
         }
         #[doc = "Debug Timer 17 stopped when Core is halted"]
-        #[must_use]
         #[inline(always)]
         pub const fn tim17(&self) -> bool {
             let val = (self.0 >> 4usize) & 0x01;
@@ -330,11 +292,10 @@ pub mod regs {
         }
         #[doc = "Debug Timer 17 stopped when Core is halted"]
         #[inline(always)]
-        pub const fn set_tim17(&mut self, val: bool) {
+        pub fn set_tim17(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
         }
         #[doc = "Debug Timer 19 stopped when Core is halted"]
-        #[must_use]
         #[inline(always)]
         pub const fn tim19(&self) -> bool {
             let val = (self.0 >> 5usize) & 0x01;
@@ -342,7 +303,7 @@ pub mod regs {
         }
         #[doc = "Debug Timer 19 stopped when Core is halted"]
         #[inline(always)]
-        pub const fn set_tim19(&mut self, val: bool) {
+        pub fn set_tim19(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
         }
     }
@@ -381,7 +342,6 @@ pub mod regs {
     pub struct Cr(pub u32);
     impl Cr {
         #[doc = "Debug Sleep mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn dbg_sleep(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -389,11 +349,10 @@ pub mod regs {
         }
         #[doc = "Debug Sleep mode"]
         #[inline(always)]
-        pub const fn set_dbg_sleep(&mut self, val: bool) {
+        pub fn set_dbg_sleep(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "Debug Stop Mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn dbg_stop(&self) -> bool {
             let val = (self.0 >> 1usize) & 0x01;
@@ -401,11 +360,10 @@ pub mod regs {
         }
         #[doc = "Debug Stop Mode"]
         #[inline(always)]
-        pub const fn set_dbg_stop(&mut self, val: bool) {
+        pub fn set_dbg_stop(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
         }
         #[doc = "Debug Standby Mode"]
-        #[must_use]
         #[inline(always)]
         pub const fn dbg_standby(&self) -> bool {
             let val = (self.0 >> 2usize) & 0x01;
@@ -413,11 +371,10 @@ pub mod regs {
         }
         #[doc = "Debug Standby Mode"]
         #[inline(always)]
-        pub const fn set_dbg_standby(&mut self, val: bool) {
+        pub fn set_dbg_standby(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
         }
         #[doc = "Trace pin assignment control"]
-        #[must_use]
         #[inline(always)]
         pub const fn trace_ioen(&self) -> bool {
             let val = (self.0 >> 5usize) & 0x01;
@@ -425,11 +382,10 @@ pub mod regs {
         }
         #[doc = "Trace pin assignment control"]
         #[inline(always)]
-        pub const fn set_trace_ioen(&mut self, val: bool) {
+        pub fn set_trace_ioen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
         }
         #[doc = "Trace pin assignment control"]
-        #[must_use]
         #[inline(always)]
         pub const fn trace_mode(&self) -> u8 {
             let val = (self.0 >> 6usize) & 0x03;
@@ -437,7 +393,7 @@ pub mod regs {
         }
         #[doc = "Trace pin assignment control"]
         #[inline(always)]
-        pub const fn set_trace_mode(&mut self, val: u8) {
+        pub fn set_trace_mode(&mut self, val: u8) {
             self.0 = (self.0 & !(0x03 << 6usize)) | (((val as u32) & 0x03) << 6usize);
         }
     }
@@ -461,15 +417,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Cr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Cr {{ dbg_sleep: {=bool:?}, dbg_stop: {=bool:?}, dbg_standby: {=bool:?}, trace_ioen: {=bool:?}, trace_mode: {=u8:?} }}",
-                self.dbg_sleep(),
-                self.dbg_stop(),
-                self.dbg_standby(),
-                self.trace_ioen(),
-                self.trace_mode()
-            )
+            defmt :: write ! (f , "Cr {{ dbg_sleep: {=bool:?}, dbg_stop: {=bool:?}, dbg_standby: {=bool:?}, trace_ioen: {=bool:?}, trace_mode: {=u8:?} }}" , self . dbg_sleep () , self . dbg_stop () , self . dbg_standby () , self . trace_ioen () , self . trace_mode ())
         }
     }
     #[doc = "MCU Device ID Code Register"]
@@ -478,7 +426,6 @@ pub mod regs {
     pub struct Idcode(pub u32);
     impl Idcode {
         #[doc = "Device Identifier"]
-        #[must_use]
         #[inline(always)]
         pub const fn dev_id(&self) -> u16 {
             let val = (self.0 >> 0usize) & 0x0fff;
@@ -486,11 +433,10 @@ pub mod regs {
         }
         #[doc = "Device Identifier"]
         #[inline(always)]
-        pub const fn set_dev_id(&mut self, val: u16) {
+        pub fn set_dev_id(&mut self, val: u16) {
             self.0 = (self.0 & !(0x0fff << 0usize)) | (((val as u32) & 0x0fff) << 0usize);
         }
         #[doc = "Revision Identifier"]
-        #[must_use]
         #[inline(always)]
         pub const fn rev_id(&self) -> u16 {
             let val = (self.0 >> 16usize) & 0xffff;
@@ -498,7 +444,7 @@ pub mod regs {
         }
         #[doc = "Revision Identifier"]
         #[inline(always)]
-        pub const fn set_rev_id(&mut self, val: u16) {
+        pub fn set_rev_id(&mut self, val: u16) {
             self.0 = (self.0 & !(0xffff << 16usize)) | (((val as u32) & 0xffff) << 16usize);
         }
     }

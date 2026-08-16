@@ -160,9 +160,7 @@ mod _vectors {
     ];
 }
 pub const UID: uid::Uid = unsafe { uid::Uid::from_ptr(0x1fff_7590usize as _) };
-pub const TS_CAL1: tscal::Tscal = unsafe { tscal::Tscal::from_ptr(0x1fff_75a8usize as _) };
 pub const VREFINTCAL: vrefintcal::Vrefintcal = unsafe { vrefintcal::Vrefintcal::from_ptr(0x1fff_75aausize as _) };
-pub const TS_CAL2: tscal::Tscal = unsafe { tscal::Tscal::from_ptr(0x1fff_75c8usize as _) };
 pub const TIM2: timer::TimGp32 = unsafe { timer::TimGp32::from_ptr(0x4000_0000usize as _) };
 pub const RTC: rtc::Rtc = unsafe { rtc::Rtc::from_ptr(0x4000_2800usize as _) };
 pub const WWDG: wwdg::Wwdg = unsafe { wwdg::Wwdg::from_ptr(0x4000_2c00usize as _) };
@@ -206,17 +204,14 @@ pub const HSEM: hsem::Hsem = unsafe { hsem::Hsem::from_ptr(0x5800_1400usize as _
 pub const AES: aes::Aes = unsafe { aes::Aes::from_ptr(0x5800_1800usize as _) };
 pub const PKA: pka::Pka = unsafe { pka::Pka::from_ptr(0x5800_2000usize as _) };
 pub const FLASH: flash::Flash = unsafe { flash::Flash::from_ptr(0x5800_4000usize as _) };
-pub const GTZC: *mut () = 0x5800_4400usize as _;
-pub const GTZC_TZSC: *mut () = 0x5800_4400usize as _;
-pub const GTZC_TZIC: *mut () = 0x5800_4800usize as _;
 pub const SUBGHZSPI: spi::Spi = unsafe { spi::Spi::from_ptr(0x5801_0000usize as _) };
 #[doc = r" Number available in the NVIC for configuring priority"]
 #[cfg(feature = "rt")]
 pub const NVIC_PRIO_BITS: u8 = 2;
 #[cfg(feature = "rt")]
-pub use Interrupt as interrupt;
-#[cfg(feature = "rt")]
 pub use cortex_m_rt::interrupt;
+#[cfg(feature = "rt")]
+pub use Interrupt as interrupt;
 #[path = "../../peripherals/adc_g0.rs"]
 pub mod adc;
 #[path = "../../peripherals/adccommon_v3.rs"]
@@ -267,8 +262,6 @@ pub mod syscfg;
 pub mod tamp;
 #[path = "../../peripherals/timer_v3.rs"]
 pub mod timer;
-#[path = "../../peripherals/tscal_v1.rs"]
-pub mod tscal;
 #[path = "../../peripherals/uid_v1.rs"]
 pub mod uid;
 #[path = "../../peripherals/usart_v4.rs"]

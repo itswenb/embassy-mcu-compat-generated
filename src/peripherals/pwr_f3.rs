@@ -22,12 +22,12 @@ impl Pwr {
     #[doc = "power control register"]
     #[inline(always)]
     pub const fn cr(self) -> crate::common::Reg<regs::Cr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0usize) as _) }
     }
     #[doc = "power control/status register"]
     #[inline(always)]
     pub const fn csr(self) -> crate::common::Reg<regs::Csr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x04usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x04usize) as _) }
     }
 }
 pub mod regs {
@@ -37,7 +37,6 @@ pub mod regs {
     pub struct Cr(pub u32);
     impl Cr {
         #[doc = "Low-power deep sleep"]
-        #[must_use]
         #[inline(always)]
         pub const fn lpds(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -45,11 +44,10 @@ pub mod regs {
         }
         #[doc = "Low-power deep sleep"]
         #[inline(always)]
-        pub const fn set_lpds(&mut self, val: bool) {
+        pub fn set_lpds(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "Power down deepsleep"]
-        #[must_use]
         #[inline(always)]
         pub const fn pdds(&self) -> super::vals::Pdds {
             let val = (self.0 >> 1usize) & 0x01;
@@ -57,11 +55,10 @@ pub mod regs {
         }
         #[doc = "Power down deepsleep"]
         #[inline(always)]
-        pub const fn set_pdds(&mut self, val: super::vals::Pdds) {
+        pub fn set_pdds(&mut self, val: super::vals::Pdds) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
         }
         #[doc = "Clear wakeup flag"]
-        #[must_use]
         #[inline(always)]
         pub const fn cwuf(&self) -> bool {
             let val = (self.0 >> 2usize) & 0x01;
@@ -69,11 +66,10 @@ pub mod regs {
         }
         #[doc = "Clear wakeup flag"]
         #[inline(always)]
-        pub const fn set_cwuf(&mut self, val: bool) {
+        pub fn set_cwuf(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
         }
         #[doc = "Clear standby flag"]
-        #[must_use]
         #[inline(always)]
         pub const fn csbf(&self) -> bool {
             let val = (self.0 >> 3usize) & 0x01;
@@ -81,11 +77,10 @@ pub mod regs {
         }
         #[doc = "Clear standby flag"]
         #[inline(always)]
-        pub const fn set_csbf(&mut self, val: bool) {
+        pub fn set_csbf(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
         }
         #[doc = "Power voltage detector enable"]
-        #[must_use]
         #[inline(always)]
         pub const fn pvde(&self) -> bool {
             let val = (self.0 >> 4usize) & 0x01;
@@ -93,11 +88,10 @@ pub mod regs {
         }
         #[doc = "Power voltage detector enable"]
         #[inline(always)]
-        pub const fn set_pvde(&mut self, val: bool) {
+        pub fn set_pvde(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
         }
         #[doc = "PVD level selection"]
-        #[must_use]
         #[inline(always)]
         pub const fn pls(&self) -> u8 {
             let val = (self.0 >> 5usize) & 0x07;
@@ -105,11 +99,10 @@ pub mod regs {
         }
         #[doc = "PVD level selection"]
         #[inline(always)]
-        pub const fn set_pls(&mut self, val: u8) {
+        pub fn set_pls(&mut self, val: u8) {
             self.0 = (self.0 & !(0x07 << 5usize)) | (((val as u32) & 0x07) << 5usize);
         }
         #[doc = "Disable backup domain write protection"]
-        #[must_use]
         #[inline(always)]
         pub const fn dbp(&self) -> bool {
             let val = (self.0 >> 8usize) & 0x01;
@@ -117,11 +110,10 @@ pub mod regs {
         }
         #[doc = "Disable backup domain write protection"]
         #[inline(always)]
-        pub const fn set_dbp(&mut self, val: bool) {
+        pub fn set_dbp(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
         }
         #[doc = "ENable SD1 ADC"]
-        #[must_use]
         #[inline(always)]
         pub const fn ensd(&self, n: usize) -> bool {
             assert!(n < 3usize);
@@ -131,7 +123,7 @@ pub mod regs {
         }
         #[doc = "ENable SD1 ADC"]
         #[inline(always)]
-        pub const fn set_ensd(&mut self, n: usize, val: bool) {
+        pub fn set_ensd(&mut self, n: usize, val: bool) {
             assert!(n < 3usize);
             let offs = 9usize + n * 1usize;
             self.0 = (self.0 & !(0x01 << offs)) | (((val as u32) & 0x01) << offs);
@@ -162,20 +154,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Cr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Cr {{ lpds: {=bool:?}, pdds: {:?}, cwuf: {=bool:?}, csbf: {=bool:?}, pvde: {=bool:?}, pls: {=u8:?}, dbp: {=bool:?}, ensd[0]: {=bool:?}, ensd[1]: {=bool:?}, ensd[2]: {=bool:?} }}",
-                self.lpds(),
-                self.pdds(),
-                self.cwuf(),
-                self.csbf(),
-                self.pvde(),
-                self.pls(),
-                self.dbp(),
-                self.ensd(0usize),
-                self.ensd(1usize),
-                self.ensd(2usize)
-            )
+            defmt :: write ! (f , "Cr {{ lpds: {=bool:?}, pdds: {:?}, cwuf: {=bool:?}, csbf: {=bool:?}, pvde: {=bool:?}, pls: {=u8:?}, dbp: {=bool:?}, ensd[0]: {=bool:?}, ensd[1]: {=bool:?}, ensd[2]: {=bool:?} }}" , self . lpds () , self . pdds () , self . cwuf () , self . csbf () , self . pvde () , self . pls () , self . dbp () , self . ensd (0usize) , self . ensd (1usize) , self . ensd (2usize))
         }
     }
     #[doc = "power control/status register"]
@@ -184,7 +163,6 @@ pub mod regs {
     pub struct Csr(pub u32);
     impl Csr {
         #[doc = "Wakeup flag"]
-        #[must_use]
         #[inline(always)]
         pub const fn wuf(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -192,11 +170,10 @@ pub mod regs {
         }
         #[doc = "Wakeup flag"]
         #[inline(always)]
-        pub const fn set_wuf(&mut self, val: bool) {
+        pub fn set_wuf(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "Standby flag"]
-        #[must_use]
         #[inline(always)]
         pub const fn sbf(&self) -> bool {
             let val = (self.0 >> 1usize) & 0x01;
@@ -204,11 +181,10 @@ pub mod regs {
         }
         #[doc = "Standby flag"]
         #[inline(always)]
-        pub const fn set_sbf(&mut self, val: bool) {
+        pub fn set_sbf(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
         }
         #[doc = "PVD output"]
-        #[must_use]
         #[inline(always)]
         pub const fn pvdo(&self) -> bool {
             let val = (self.0 >> 2usize) & 0x01;
@@ -216,11 +192,10 @@ pub mod regs {
         }
         #[doc = "PVD output"]
         #[inline(always)]
-        pub const fn set_pvdo(&mut self, val: bool) {
+        pub fn set_pvdo(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
         }
         #[doc = "Internal voltage reference ready flag"]
-        #[must_use]
         #[inline(always)]
         pub const fn vrefintrdyf(&self) -> bool {
             let val = (self.0 >> 3usize) & 0x01;
@@ -228,11 +203,10 @@ pub mod regs {
         }
         #[doc = "Internal voltage reference ready flag"]
         #[inline(always)]
-        pub const fn set_vrefintrdyf(&mut self, val: bool) {
+        pub fn set_vrefintrdyf(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
         }
         #[doc = "Enable WKUP1 pin"]
-        #[must_use]
         #[inline(always)]
         pub const fn ewup(&self, n: usize) -> bool {
             assert!(n < 2usize);
@@ -242,7 +216,7 @@ pub mod regs {
         }
         #[doc = "Enable WKUP1 pin"]
         #[inline(always)]
-        pub const fn set_ewup(&mut self, n: usize, val: bool) {
+        pub fn set_ewup(&mut self, n: usize, val: bool) {
             assert!(n < 2usize);
             let offs = 8usize + n * 1usize;
             self.0 = (self.0 & !(0x01 << offs)) | (((val as u32) & 0x01) << offs);
@@ -269,16 +243,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Csr {
         fn format(&self, f: defmt::Formatter) {
-            defmt::write!(
-                f,
-                "Csr {{ wuf: {=bool:?}, sbf: {=bool:?}, pvdo: {=bool:?}, vrefintrdyf: {=bool:?}, ewup[0]: {=bool:?}, ewup[1]: {=bool:?} }}",
-                self.wuf(),
-                self.sbf(),
-                self.pvdo(),
-                self.vrefintrdyf(),
-                self.ewup(0usize),
-                self.ewup(1usize)
-            )
+            defmt :: write ! (f , "Csr {{ wuf: {=bool:?}, sbf: {=bool:?}, pvdo: {=bool:?}, vrefintrdyf: {=bool:?}, ewup[0]: {=bool:?}, ewup[1]: {=bool:?} }}" , self . wuf () , self . sbf () , self . pvdo () , self . vrefintrdyf () , self . ewup (0usize) , self . ewup (1usize))
         }
     }
 }
@@ -288,9 +253,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Pdds {
         #[doc = "Enter Stop mode when the CPU enters deepsleep"]
-        StopMode = 0x0,
+        STOP_MODE = 0x0,
         #[doc = "Enter Standby mode when the CPU enters deepsleep"]
-        StandbyMode = 0x01,
+        STANDBY_MODE = 0x01,
     }
     impl Pdds {
         #[inline(always)]

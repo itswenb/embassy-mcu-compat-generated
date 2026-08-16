@@ -782,27 +782,27 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 4,
             variants: &[
                 EnumVariant {
-                    name: "Ws0",
+                    name: "WS0",
                     description: Some("Zero wait states"),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "Ws1",
+                    name: "WS1",
                     description: Some("One wait state"),
                     value: 1,
                 },
                 EnumVariant {
-                    name: "Ws2",
+                    name: "WS2",
                     description: Some("Two wait states"),
                     value: 2,
                 },
                 EnumVariant {
-                    name: "Ws3",
+                    name: "WS3",
                     description: Some("Three wait states"),
                     value: 3,
                 },
                 EnumVariant {
-                    name: "Ws4",
+                    name: "WS4",
                     description: Some("Four wait states"),
                     value: 4,
                 },
@@ -814,17 +814,17 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 2,
             variants: &[
                 EnumVariant {
-                    name: "Gpio",
-                    description: Some("Reset pin is in GPIO mode only"),
-                    value: 2,
-                },
-                EnumVariant {
-                    name: "InputOnly",
+                    name: "INPUT_ONLY",
                     description: Some("Reset pin is in reset input mode only"),
                     value: 1,
                 },
                 EnumVariant {
-                    name: "InputOutput",
+                    name: "GPIO",
+                    description: Some("Reset pin is in GPIO mode only"),
+                    value: 2,
+                },
+                EnumVariant {
+                    name: "INPUT_OUTPUT",
                     description: Some("Reset pin is in reset input and output mode"),
                     value: 3,
                 },
@@ -836,17 +836,17 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 8,
             variants: &[
                 EnumVariant {
-                    name: "Level0",
+                    name: "LEVEL_0",
                     description: Some("Read protection not active"),
                     value: 170,
                 },
                 EnumVariant {
-                    name: "Level1",
+                    name: "LEVEL_1",
                     description: Some("Memories read protection active"),
                     value: 187,
                 },
                 EnumVariant {
-                    name: "Level2",
+                    name: "LEVEL_2",
                     description: Some("Chip read protection active"),
                     value: 204,
                 },

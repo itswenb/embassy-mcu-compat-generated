@@ -272,8 +272,6 @@ mod _vectors {
 }
 pub const UID: uid::Uid = unsafe { uid::Uid::from_ptr(0x1ff8_00d0usize as _) };
 pub const VREFINTCAL: vrefintcal::Vrefintcal = unsafe { vrefintcal::Vrefintcal::from_ptr(0x1ff8_00f8usize as _) };
-pub const TS_CAL1: tscal::Tscal = unsafe { tscal::Tscal::from_ptr(0x1ff8_00fausize as _) };
-pub const TS_CAL2: tscal::Tscal = unsafe { tscal::Tscal::from_ptr(0x1ff8_00feusize as _) };
 pub const TIM2: timer::TimGp16 = unsafe { timer::TimGp16::from_ptr(0x4000_0000usize as _) };
 pub const TIM3: timer::TimGp16 = unsafe { timer::TimGp16::from_ptr(0x4000_0400usize as _) };
 pub const TIM4: timer::TimGp16 = unsafe { timer::TimGp16::from_ptr(0x4000_0800usize as _) };
@@ -328,9 +326,9 @@ pub const DBGMCU: dbgmcu::Dbgmcu = unsafe { dbgmcu::Dbgmcu::from_ptr(0xe004_2000
 #[cfg(feature = "rt")]
 pub const NVIC_PRIO_BITS: u8 = 4;
 #[cfg(feature = "rt")]
-pub use Interrupt as interrupt;
-#[cfg(feature = "rt")]
 pub use cortex_m_rt::interrupt;
+#[cfg(feature = "rt")]
+pub use Interrupt as interrupt;
 #[path = "../../peripherals/adc_f3v2.rs"]
 pub mod adc;
 #[path = "../../peripherals/aes_v1.rs"]
@@ -367,8 +365,6 @@ pub mod spi;
 pub mod syscfg;
 #[path = "../../peripherals/timer_v1.rs"]
 pub mod timer;
-#[path = "../../peripherals/tscal_v1.rs"]
-pub mod tscal;
 #[path = "../../peripherals/uid_v1.rs"]
 pub mod uid;
 #[path = "../../peripherals/usart_v2.rs"]

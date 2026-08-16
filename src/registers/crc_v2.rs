@@ -121,24 +121,24 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 2,
             variants: &[
                 EnumVariant {
-                    name: "Polysize16",
-                    description: Some("16-bit polynomial"),
-                    value: 1,
-                },
-                EnumVariant {
-                    name: "Polysize32",
+                    name: "POLYSIZE32",
                     description: Some("32-bit polynomial"),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "Polysize7",
-                    description: Some("7-bit polynomial"),
-                    value: 3,
+                    name: "POLYSIZE16",
+                    description: Some("16-bit polynomial"),
+                    value: 1,
                 },
                 EnumVariant {
-                    name: "Polysize8",
+                    name: "POLYSIZE8",
                     description: Some("8-bit polynomial"),
                     value: 2,
+                },
+                EnumVariant {
+                    name: "POLYSIZE7",
+                    description: Some("7-bit polynomial"),
+                    value: 3,
                 },
             ],
         },
@@ -148,22 +148,22 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 2,
             variants: &[
                 EnumVariant {
-                    name: "Byte",
-                    description: Some("Bit reversal done by byte"),
-                    value: 1,
-                },
-                EnumVariant {
-                    name: "HalfWord",
-                    description: Some("Bit reversal done by half-word"),
-                    value: 2,
-                },
-                EnumVariant {
-                    name: "Normal",
+                    name: "NORMAL",
                     description: Some("Bit order not affected"),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "Word",
+                    name: "BYTE",
+                    description: Some("Bit reversal done by byte"),
+                    value: 1,
+                },
+                EnumVariant {
+                    name: "HALF_WORD",
+                    description: Some("Bit reversal done by half-word"),
+                    value: 2,
+                },
+                EnumVariant {
+                    name: "WORD",
                     description: Some("Bit reversal done by word"),
                     value: 3,
                 },
@@ -175,12 +175,12 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 1,
             variants: &[
                 EnumVariant {
-                    name: "Normal",
+                    name: "NORMAL",
                     description: Some("Bit order not affected"),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "Reversed",
+                    name: "REVERSED",
                     description: Some("Bit reversed output"),
                     value: 1,
                 },

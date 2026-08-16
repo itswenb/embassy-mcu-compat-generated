@@ -364,17 +364,17 @@ pub(crate) static REGISTERS: IR = IR {
         bit_size: 3,
         variants: &[
             EnumVariant {
-                name: "Ws0",
+                name: "WS0",
                 description: Some("Zero wait state, if 0 < SYSCLK≤ 24 MHz"),
                 value: 0,
             },
             EnumVariant {
-                name: "Ws1",
+                name: "WS1",
                 description: Some("One wait state, if 24 MHz < SYSCLK ≤ 48 MHz"),
                 value: 1,
             },
             EnumVariant {
-                name: "Ws2",
+                name: "WS2",
                 description: Some("Two wait states, if 48 MHz < SYSCLK ≤ 72 MHz"),
                 value: 2,
             },

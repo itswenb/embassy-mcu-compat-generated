@@ -631,8 +631,6 @@ mod _vectors {
     ];
 }
 pub const UID: uid::Uid = unsafe { uid::Uid::from_ptr(0x1ff1_e800usize as _) };
-pub const TS_CAL1: tscal::Tscal = unsafe { tscal::Tscal::from_ptr(0x1ff1_e820usize as _) };
-pub const TS_CAL2: tscal::Tscal = unsafe { tscal::Tscal::from_ptr(0x1ff1_e840usize as _) };
 pub const TIM2: timer::TimGp32 = unsafe { timer::TimGp32::from_ptr(0x4000_0000usize as _) };
 pub const TIM3: timer::TimGp16 = unsafe { timer::TimGp16::from_ptr(0x4000_0400usize as _) };
 pub const TIM4: timer::TimGp16 = unsafe { timer::TimGp16::from_ptr(0x4000_0800usize as _) };
@@ -754,16 +752,16 @@ pub const DBGMCU: dbgmcu::Dbgmcu = unsafe { dbgmcu::Dbgmcu::from_ptr(0x5c00_1000
 #[cfg(feature = "rt")]
 pub const NVIC_PRIO_BITS: u8 = 4;
 #[cfg(feature = "rt")]
-pub use Interrupt as interrupt;
-#[cfg(feature = "rt")]
 pub use cortex_m_rt::interrupt;
+#[cfg(feature = "rt")]
+pub use Interrupt as interrupt;
 #[path = "../../peripherals/adc_v4.rs"]
 pub mod adc;
 #[path = "../../peripherals/adccommon_v4.rs"]
 pub mod adccommon;
 #[path = "../../peripherals/bdma_v1.rs"]
 pub mod bdma;
-#[path = "../../peripherals/can_fdcan_v2.rs"]
+#[path = "../../peripherals/can_fdcan_h7.rs"]
 pub mod can;
 #[path = "../../peripherals/cec_v2.rs"]
 pub mod cec;
@@ -797,7 +795,7 @@ pub mod dts;
 pub mod eth;
 #[path = "../../peripherals/exti_h7.rs"]
 pub mod exti;
-#[path = "../../peripherals/fdcanram_v2.rs"]
+#[path = "../../peripherals/fdcanram_h7.rs"]
 pub mod fdcanram;
 #[path = "../../peripherals/flash_h7.rs"]
 pub mod flash;
@@ -855,8 +853,6 @@ pub mod spi;
 pub mod syscfg;
 #[path = "../../peripherals/timer_v3.rs"]
 pub mod timer;
-#[path = "../../peripherals/tscal_v1.rs"]
-pub mod tscal;
 #[path = "../../peripherals/uid_v1.rs"]
 pub mod uid;
 #[path = "../../peripherals/usart_v4.rs"]
