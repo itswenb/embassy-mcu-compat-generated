@@ -1,76 +1,122 @@
-# stm32-metapac
+# embassy-mcu-compat-generated
 
-This is a [Peripheral Access Crate](https://rust-embedded.github.io/book/start/registers.html) for STMicroelectronics STM32 microcontrollers.
+按系列批次交付的 Embassy MCU 兼容包。工具与原始资料不在本仓库发布。
 
-This crate has been automatically generated based on data in the [`stm32-data` project](https://github.com/embassy-rs/stm32-data), and is used for the [`embassy-stm32`](github.com/embassy-rs/embassy/) Rust Hardware Abstraction Layer (HAL) for the STM32 microcontrollers.
+## 当前交付状态
 
-## Metadata
+目前没有完成驱动功能和实机运行验收的发布批次。旧根包、原生 PAC 和开发候选已移至本地可恢复归档；不是删除型号或宣称硬件不支持。
 
-This PAC additionally exports "metadata" about the chips. To use it, enable the `metadata` feature and access it at `stm32_metapac::METADATA`. It is intended to be consumed from `build.rs` scripts or code-generation tools running on PCs, not from the firmware itself.
+当前没有可用 Cargo 根包，旧的本地 patch 路径已撤出。开发候选在工具库缓存中继续完善；只有验收后的批次才放入 `batches/<系列>/`。
 
-The metadata includes the following info:
+## 设备清单
 
-- Memory maps for RAM, flash.
-- Interrupts
-- GPIO Alternate Function mappings
-- Interrupt -> peripheral mappings
-- DMA channel -> peripehral mappings
-- RCC clock tree information for each peripheral (what clocks does it receive, which RCC registers to poke to enable, reset, or choose the clock)
+清单由批次输入生成，状态来源见 [support-status.json](support-status.json)。编译通过不等于驱动已支持。
 
-## Supported chips
+### gd32e23x
 
-This PAC aims to support all STM32 chip families:
+已支持：0；待支持：40。
 
-- STM32F0
-- STM32F1
-- STM32F2
-- STM32F3
-- STM32F4
-- STM32F7
-- STM32C0
-- STM32G0
-- STM32G4
-- STM32H5
-- STM32H7
-- STM32H7RS
-- STM32L0
-- STM32L1
-- STM32L4
-- STM32L5
-- STM32U0
-- STM32U5
-- STM32WB
-- STM32WBA
-- STM32WL
+- `gd32e225cb`：待支持
+- `gd32e225f8`：待支持
+- `gd32e225gb`：待支持
+- `gd32e225kb`：待支持
+- `gd32e230c4`：待支持
+- `gd32e230c6`：待支持
+- `gd32e230c8`：待支持
+- `gd32e230e8`：待支持
+- `gd32e230f4`：待支持
+- `gd32e230f6`：待支持
+- `gd32e230f8`：待支持
+- `gd32e230g4`：待支持
+- `gd32e230g6`：待支持
+- `gd32e230g8`：待支持
+- `gd32e230k4`：待支持
+- `gd32e230k6`：待支持
+- `gd32e230k8`：待支持
+- `gd32e231c4`：待支持
+- `gd32e231c6`：待支持
+- `gd32e231c8`：待支持
+- `gd32e231k8`：待支持
+- `gd32e231t8`：待支持
+- `gd32e235c4`：待支持
+- `gd32e235c6`：待支持
+- `gd32e235c8`：待支持
+- `gd32e235cb`：待支持
+- `gd32e235e8`：待支持
+- `gd32e235eb`：待支持
+- `gd32e235f4`：待支持
+- `gd32e235f6`：待支持
+- `gd32e235f8`：待支持
+- `gd32e235fb`：待支持
+- `gd32e235g4`：待支持
+- `gd32e235g6`：待支持
+- `gd32e235g8`：待支持
+- `gd32e235gb`：待支持
+- `gd32e235k4`：待支持
+- `gd32e235k6`：待支持
+- `gd32e235k8`：待支持
+- `gd32e235kb`：待支持
 
-## Embassy STM32 零修改兼容入口
+### gd32f30x
 
-根 `stm32-metapac` 包允许未修改的 `embassy-stm32` 使用 662 个 Cortex-M
-GD32 真实型号。应用选择一个合适的 STM32 feature，并通过环境变量选择真实芯片：
+已支持：0；待支持：40。
 
-```toml
-[dependencies]
-embassy-stm32 = { version = "...", features = ["stm32f303cb"] }
+- `gd32f303cb`：待支持
+- `gd32f303cc`：待支持
+- `gd32f303ce`：待支持
+- `gd32f303cg`：待支持
+- `gd32f303rb`：待支持
+- `gd32f303rc`：待支持
+- `gd32f303re`：待支持
+- `gd32f303rg`：待支持
+- `gd32f303ri`：待支持
+- `gd32f303rk`：待支持
+- `gd32f303vb`：待支持
+- `gd32f303vc`：待支持
+- `gd32f303ve`：待支持
+- `gd32f303vg`：待支持
+- `gd32f303vi`：待支持
+- `gd32f303vk`：待支持
+- `gd32f303zc`：待支持
+- `gd32f303ze`：待支持
+- `gd32f303zg`：待支持
+- `gd32f303zi`：待支持
+- `gd32f303zk`：待支持
+- `gd32f305rb`：待支持
+- `gd32f305rc`：待支持
+- `gd32f305re`：待支持
+- `gd32f305rg`：待支持
+- `gd32f305vc`：待支持
+- `gd32f305ve`：待支持
+- `gd32f305vg`：待支持
+- `gd32f305zc`：待支持
+- `gd32f305ze`：待支持
+- `gd32f305zg`：待支持
+- `gd32f307rc`：待支持
+- `gd32f307re`：待支持
+- `gd32f307rg`：待支持
+- `gd32f307vc`：待支持
+- `gd32f307ve`：待支持
+- `gd32f307vg`：待支持
+- `gd32f307zc`：待支持
+- `gd32f307ze`：待支持
+- `gd32f307zg`：待支持
 
-[patch."https://github.com/embassy-rs/stm32-data-generated"]
-stm32-metapac = { git = "https://github.com/itswenb/embassy-mcu-compat-generated", rev = "<固定提交>" }
-```
+### gd32vf103
 
-```toml
-[env]
-EMBASSY_MCU_COMPAT_CHIP = "gd32f303cb"
-```
+已支持：0；待支持：14。
 
-真实型号与 STM32 feature 不做固定映射；使用者负责选择架构及外设拓扑相近的 feature。
-
-## 原生 GD32 PAC
-
-本仓库还发布 workspace 包 [`mcu-metapac`](mcu-metapac/README.md)，当前包含 680
-个由真实厂商数据生成并通过编译门的 GD32 feature。依赖时选择一个真实型号：
-
-```toml
-[dependencies]
-mcu-metapac = { git = "https://github.com/itswenb/embassy-mcu-compat-generated", rev = "<固定提交>", features = ["gd32f103c8", "pac", "metadata"] }
-```
-
-这条原生 PAC 路径不等于所有型号已经通过 `embassy-stm32` 或实机验证。
+- `gd32vf103c4`：待支持
+- `gd32vf103c6`：待支持
+- `gd32vf103c8`：待支持
+- `gd32vf103cb`：待支持
+- `gd32vf103r4`：待支持
+- `gd32vf103r6`：待支持
+- `gd32vf103r8`：待支持
+- `gd32vf103rb`：待支持
+- `gd32vf103t4`：待支持
+- `gd32vf103t6`：待支持
+- `gd32vf103t8`：待支持
+- `gd32vf103tb`：待支持
+- `gd32vf103v8`：待支持
+- `gd32vf103vb`：待支持
