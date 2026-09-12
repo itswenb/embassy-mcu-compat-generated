@@ -1,0 +1,1402 @@
+{
+  "block/NVIC": {
+    "description": "Nested Vectored Interrupt Controller",
+    "items": [
+      {
+        "byte_offset": 0,
+        "description": "Interrupt Set Enable Register",
+        "fieldset": "ISER",
+        "name": "ISER"
+      },
+      {
+        "byte_offset": 128,
+        "description": "Interrupt Clear Enable Register",
+        "fieldset": "ICER",
+        "name": "ICER"
+      },
+      {
+        "byte_offset": 256,
+        "description": "Interrupt Set-Pending Register",
+        "fieldset": "ISPR",
+        "name": "ISPR"
+      },
+      {
+        "byte_offset": 384,
+        "description": "Interrupt Clear-Pending Register",
+        "fieldset": "ICPR",
+        "name": "ICPR"
+      },
+      {
+        "byte_offset": 512,
+        "description": "Interrupt Active bit Register",
+        "fieldset": "IABR",
+        "name": "IABR"
+      },
+      {
+        "bit_size": 8,
+        "byte_offset": 768,
+        "description": "Interrupt Priority Register 0",
+        "fieldset": "IPR0",
+        "name": "IPR0"
+      },
+      {
+        "bit_size": 8,
+        "byte_offset": 769,
+        "description": "Interrupt Priority Register 1",
+        "fieldset": "IPR1",
+        "name": "IPR1"
+      },
+      {
+        "bit_size": 8,
+        "byte_offset": 770,
+        "description": "Interrupt Priority Register 2",
+        "fieldset": "IPR2",
+        "name": "IPR2"
+      },
+      {
+        "bit_size": 8,
+        "byte_offset": 771,
+        "description": "Interrupt Priority Register 3",
+        "fieldset": "IPR3",
+        "name": "IPR3"
+      },
+      {
+        "bit_size": 8,
+        "byte_offset": 772,
+        "description": "Interrupt Priority Register 4",
+        "fieldset": "IPR4",
+        "name": "IPR4"
+      },
+      {
+        "bit_size": 8,
+        "byte_offset": 773,
+        "description": "Interrupt Priority Register 5",
+        "fieldset": "IPR5",
+        "name": "IPR5"
+      },
+      {
+        "bit_size": 8,
+        "byte_offset": 774,
+        "description": "Interrupt Priority Register 6",
+        "fieldset": "IPR6",
+        "name": "IPR6"
+      },
+      {
+        "bit_size": 8,
+        "byte_offset": 775,
+        "description": "Interrupt Priority Register 7",
+        "fieldset": "IPR7",
+        "name": "IPR7"
+      },
+      {
+        "bit_size": 8,
+        "byte_offset": 776,
+        "description": "Interrupt Priority Register 8",
+        "fieldset": "IPR8",
+        "name": "IPR8"
+      },
+      {
+        "bit_size": 8,
+        "byte_offset": 777,
+        "description": "Interrupt Priority Register 9",
+        "fieldset": "IPR9",
+        "name": "IPR9"
+      },
+      {
+        "bit_size": 8,
+        "byte_offset": 778,
+        "description": "Interrupt Priority Register 10",
+        "fieldset": "IPR10",
+        "name": "IPR10"
+      },
+      {
+        "bit_size": 8,
+        "byte_offset": 779,
+        "description": "Interrupt Priority Register 11",
+        "fieldset": "IPR11",
+        "name": "IPR11"
+      },
+      {
+        "bit_size": 8,
+        "byte_offset": 780,
+        "description": "Interrupt Priority Register 12",
+        "fieldset": "IPR12",
+        "name": "IPR12"
+      },
+      {
+        "bit_size": 8,
+        "byte_offset": 781,
+        "description": "Interrupt Priority Register 13",
+        "fieldset": "IPR13",
+        "name": "IPR13"
+      },
+      {
+        "bit_size": 8,
+        "byte_offset": 782,
+        "description": "Interrupt Priority Register 14",
+        "fieldset": "IPR14",
+        "name": "IPR14"
+      },
+      {
+        "bit_size": 8,
+        "byte_offset": 783,
+        "description": "Interrupt Priority Register 15",
+        "fieldset": "IPR15",
+        "name": "IPR15"
+      },
+      {
+        "bit_size": 8,
+        "byte_offset": 784,
+        "description": "Interrupt Priority Register 16",
+        "fieldset": "IPR16",
+        "name": "IPR16"
+      },
+      {
+        "bit_size": 8,
+        "byte_offset": 785,
+        "description": "Interrupt Priority Register 17",
+        "fieldset": "IPR17",
+        "name": "IPR17"
+      },
+      {
+        "bit_size": 8,
+        "byte_offset": 786,
+        "description": "Interrupt Priority Register 18",
+        "fieldset": "IPR18",
+        "name": "IPR18"
+      },
+      {
+        "bit_size": 8,
+        "byte_offset": 787,
+        "description": "Interrupt Priority Register 19",
+        "fieldset": "IPR19",
+        "name": "IPR19"
+      },
+      {
+        "bit_size": 8,
+        "byte_offset": 788,
+        "description": "Interrupt Priority Register 20",
+        "fieldset": "IPR20",
+        "name": "IPR20"
+      },
+      {
+        "bit_size": 8,
+        "byte_offset": 789,
+        "description": "Interrupt Priority Register 21",
+        "fieldset": "IPR21",
+        "name": "IPR21"
+      },
+      {
+        "bit_size": 8,
+        "byte_offset": 790,
+        "description": "Interrupt Priority Register 22",
+        "fieldset": "IPR22",
+        "name": "IPR22"
+      },
+      {
+        "bit_size": 8,
+        "byte_offset": 791,
+        "description": "Interrupt Priority Register 23",
+        "fieldset": "IPR23",
+        "name": "IPR23"
+      },
+      {
+        "bit_size": 8,
+        "byte_offset": 792,
+        "description": "Interrupt Priority Register 24",
+        "fieldset": "IPR24",
+        "name": "IPR24"
+      },
+      {
+        "bit_size": 8,
+        "byte_offset": 793,
+        "description": "Interrupt Priority Register 25",
+        "fieldset": "IPR25",
+        "name": "IPR25"
+      },
+      {
+        "bit_size": 8,
+        "byte_offset": 794,
+        "description": "Interrupt Priority Register 26",
+        "fieldset": "IPR26",
+        "name": "IPR26"
+      },
+      {
+        "bit_size": 8,
+        "byte_offset": 795,
+        "description": "Interrupt Priority Register 27",
+        "fieldset": "IPR27",
+        "name": "IPR27"
+      },
+      {
+        "bit_size": 8,
+        "byte_offset": 796,
+        "description": "Interrupt Priority Register 28",
+        "fieldset": "IPR28",
+        "name": "IPR28"
+      },
+      {
+        "bit_size": 8,
+        "byte_offset": 797,
+        "description": "Interrupt Priority Register 29",
+        "fieldset": "IPR29",
+        "name": "IPR29"
+      },
+      {
+        "bit_size": 8,
+        "byte_offset": 798,
+        "description": "Interrupt Priority Register 30",
+        "fieldset": "IPR30",
+        "name": "IPR30"
+      },
+      {
+        "bit_size": 8,
+        "byte_offset": 799,
+        "description": "Interrupt Priority Register 31",
+        "fieldset": "IPR31",
+        "name": "IPR31"
+      },
+      {
+        "bit_size": 8,
+        "byte_offset": 800,
+        "description": "Interrupt Priority Register 32",
+        "fieldset": "IPR32",
+        "name": "IPR32"
+      },
+      {
+        "bit_size": 8,
+        "byte_offset": 801,
+        "description": "Interrupt Priority Register 33",
+        "fieldset": "IPR33",
+        "name": "IPR33"
+      },
+      {
+        "bit_size": 8,
+        "byte_offset": 802,
+        "description": "Interrupt Priority Register 34",
+        "fieldset": "IPR34",
+        "name": "IPR34"
+      },
+      {
+        "bit_size": 8,
+        "byte_offset": 803,
+        "description": "Interrupt Priority Register 35",
+        "fieldset": "IPR35",
+        "name": "IPR35"
+      },
+      {
+        "bit_size": 8,
+        "byte_offset": 804,
+        "description": "Interrupt Priority Register 36",
+        "fieldset": "IPR36",
+        "name": "IPR36"
+      },
+      {
+        "bit_size": 8,
+        "byte_offset": 805,
+        "description": "Interrupt Priority Register 37",
+        "fieldset": "IPR37",
+        "name": "IPR37"
+      },
+      {
+        "bit_size": 8,
+        "byte_offset": 806,
+        "description": "Interrupt Priority Register 38",
+        "fieldset": "IPR38",
+        "name": "IPR38"
+      },
+      {
+        "bit_size": 8,
+        "byte_offset": 807,
+        "description": "Interrupt Priority Register 39",
+        "fieldset": "IPR39",
+        "name": "IPR39"
+      },
+      {
+        "bit_size": 8,
+        "byte_offset": 808,
+        "description": "Interrupt Priority Register 40",
+        "fieldset": "IPR40",
+        "name": "IPR40"
+      },
+      {
+        "bit_size": 8,
+        "byte_offset": 809,
+        "description": "Interrupt Priority Register 41",
+        "fieldset": "IPR41",
+        "name": "IPR41"
+      },
+      {
+        "bit_size": 8,
+        "byte_offset": 810,
+        "description": "Interrupt Priority Register 42",
+        "fieldset": "IPR42",
+        "name": "IPR42"
+      },
+      {
+        "bit_size": 8,
+        "byte_offset": 811,
+        "description": "Interrupt Priority Register 43",
+        "fieldset": "IPR43",
+        "name": "IPR43"
+      },
+      {
+        "bit_size": 8,
+        "byte_offset": 812,
+        "description": "Interrupt Priority Register 44",
+        "fieldset": "IPR44",
+        "name": "IPR44"
+      },
+      {
+        "bit_size": 8,
+        "byte_offset": 813,
+        "description": "Interrupt Priority Register 45",
+        "fieldset": "IPR45",
+        "name": "IPR45"
+      },
+      {
+        "bit_size": 8,
+        "byte_offset": 814,
+        "description": "Interrupt Priority Register 46",
+        "fieldset": "IPR46",
+        "name": "IPR46"
+      },
+      {
+        "bit_size": 8,
+        "byte_offset": 815,
+        "description": "Interrupt Priority Register 47",
+        "fieldset": "IPR47",
+        "name": "IPR47"
+      },
+      {
+        "bit_size": 8,
+        "byte_offset": 816,
+        "description": "Interrupt Priority Register 48",
+        "fieldset": "IPR48",
+        "name": "IPR48"
+      },
+      {
+        "bit_size": 8,
+        "byte_offset": 817,
+        "description": "Interrupt Priority Register 49",
+        "fieldset": "IPR49",
+        "name": "IPR49"
+      },
+      {
+        "bit_size": 8,
+        "byte_offset": 818,
+        "description": "Interrupt Priority Register 50",
+        "fieldset": "IPR50",
+        "name": "IPR50"
+      },
+      {
+        "bit_size": 8,
+        "byte_offset": 819,
+        "description": "Interrupt Priority Register 51",
+        "fieldset": "IPR51",
+        "name": "IPR51"
+      },
+      {
+        "bit_size": 8,
+        "byte_offset": 820,
+        "description": "Interrupt Priority Register 52",
+        "fieldset": "IPR52",
+        "name": "IPR52"
+      },
+      {
+        "bit_size": 8,
+        "byte_offset": 821,
+        "description": "Interrupt Priority Register 53",
+        "fieldset": "IPR53",
+        "name": "IPR53"
+      },
+      {
+        "bit_size": 8,
+        "byte_offset": 822,
+        "description": "Interrupt Priority Register 54",
+        "fieldset": "IPR54",
+        "name": "IPR54"
+      },
+      {
+        "bit_size": 8,
+        "byte_offset": 823,
+        "description": "Interrupt Priority Register 55",
+        "fieldset": "IPR55",
+        "name": "IPR55"
+      },
+      {
+        "bit_size": 8,
+        "byte_offset": 824,
+        "description": "Interrupt Priority Register 56",
+        "fieldset": "IPR56",
+        "name": "IPR56"
+      },
+      {
+        "bit_size": 8,
+        "byte_offset": 825,
+        "description": "Interrupt Priority Register 57",
+        "fieldset": "IPR57",
+        "name": "IPR57"
+      },
+      {
+        "bit_size": 8,
+        "byte_offset": 826,
+        "description": "Interrupt Priority Register 58",
+        "fieldset": "IPR58",
+        "name": "IPR58"
+      },
+      {
+        "bit_size": 8,
+        "byte_offset": 827,
+        "description": "Interrupt Priority Register 59",
+        "fieldset": "IPR59",
+        "name": "IPR59"
+      },
+      {
+        "bit_size": 8,
+        "byte_offset": 828,
+        "description": "Interrupt Priority Register 60",
+        "fieldset": "IPR60",
+        "name": "IPR60"
+      },
+      {
+        "bit_size": 8,
+        "byte_offset": 829,
+        "description": "Interrupt Priority Register 61",
+        "fieldset": "IPR61",
+        "name": "IPR61"
+      },
+      {
+        "bit_size": 8,
+        "byte_offset": 830,
+        "description": "Interrupt Priority Register 62",
+        "fieldset": "IPR62",
+        "name": "IPR62"
+      },
+      {
+        "bit_size": 8,
+        "byte_offset": 831,
+        "description": "Interrupt Priority Register 63",
+        "fieldset": "IPR63",
+        "name": "IPR63"
+      },
+      {
+        "bit_size": 8,
+        "byte_offset": 832,
+        "description": "Interrupt Priority Register 64",
+        "fieldset": "IPR64",
+        "name": "IPR64"
+      },
+      {
+        "bit_size": 8,
+        "byte_offset": 833,
+        "description": "Interrupt Priority Register 65",
+        "fieldset": "IPR65",
+        "name": "IPR65"
+      },
+      {
+        "bit_size": 8,
+        "byte_offset": 834,
+        "description": "Interrupt Priority Register 66",
+        "fieldset": "IPR66",
+        "name": "IPR66"
+      },
+      {
+        "bit_size": 8,
+        "byte_offset": 835,
+        "description": "Interrupt Priority Register 67",
+        "fieldset": "IPR67",
+        "name": "IPR67"
+      },
+      {
+        "access": "Write",
+        "byte_offset": 3584,
+        "description": "Software Trigger Interrupt Register",
+        "fieldset": "STIR",
+        "name": "STIR"
+      }
+    ]
+  },
+  "fieldset/IABR": {
+    "description": "Interrupt Active bit Register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "IABR",
+        "name": "IABR"
+      }
+    ]
+  },
+  "fieldset/ICER": {
+    "description": "Interrupt Clear Enable Register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "CLRENA",
+        "name": "CLRENA"
+      }
+    ]
+  },
+  "fieldset/ICPR": {
+    "description": "Interrupt Clear-Pending Register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "CLRPEND",
+        "name": "CLRPEND"
+      }
+    ]
+  },
+  "fieldset/IPR0": {
+    "bit_size": 8,
+    "description": "Interrupt Priority Register 0",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "PRI_00",
+        "name": "PRI_00"
+      }
+    ]
+  },
+  "fieldset/IPR1": {
+    "bit_size": 8,
+    "description": "Interrupt Priority Register 1",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "PRI_01",
+        "name": "PRI_01"
+      }
+    ]
+  },
+  "fieldset/IPR10": {
+    "bit_size": 8,
+    "description": "Interrupt Priority Register 10",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "PRI_10",
+        "name": "PRI_10"
+      }
+    ]
+  },
+  "fieldset/IPR11": {
+    "bit_size": 8,
+    "description": "Interrupt Priority Register 11",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "PRI_11",
+        "name": "PRI_11"
+      }
+    ]
+  },
+  "fieldset/IPR12": {
+    "bit_size": 8,
+    "description": "Interrupt Priority Register 12",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "PRI_12",
+        "name": "PRI_12"
+      }
+    ]
+  },
+  "fieldset/IPR13": {
+    "bit_size": 8,
+    "description": "Interrupt Priority Register 13",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "PRI_13",
+        "name": "PRI_13"
+      }
+    ]
+  },
+  "fieldset/IPR14": {
+    "bit_size": 8,
+    "description": "Interrupt Priority Register 14",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "PRI_14",
+        "name": "PRI_14"
+      }
+    ]
+  },
+  "fieldset/IPR15": {
+    "bit_size": 8,
+    "description": "Interrupt Priority Register 15",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "PRI_15",
+        "name": "PRI_15"
+      }
+    ]
+  },
+  "fieldset/IPR16": {
+    "bit_size": 8,
+    "description": "Interrupt Priority Register 16",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "PRI_16",
+        "name": "PRI_16"
+      }
+    ]
+  },
+  "fieldset/IPR17": {
+    "bit_size": 8,
+    "description": "Interrupt Priority Register 17",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "PRI_17",
+        "name": "PRI_17"
+      }
+    ]
+  },
+  "fieldset/IPR18": {
+    "bit_size": 8,
+    "description": "Interrupt Priority Register 18",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "PRI_18",
+        "name": "PRI_18"
+      }
+    ]
+  },
+  "fieldset/IPR19": {
+    "bit_size": 8,
+    "description": "Interrupt Priority Register 19",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "PRI_19",
+        "name": "PRI_19"
+      }
+    ]
+  },
+  "fieldset/IPR2": {
+    "bit_size": 8,
+    "description": "Interrupt Priority Register 2",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "PRI_02",
+        "name": "PRI_02"
+      }
+    ]
+  },
+  "fieldset/IPR20": {
+    "bit_size": 8,
+    "description": "Interrupt Priority Register 20",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "PRI_20",
+        "name": "PRI_20"
+      }
+    ]
+  },
+  "fieldset/IPR21": {
+    "bit_size": 8,
+    "description": "Interrupt Priority Register 21",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "PRI_21",
+        "name": "PRI_21"
+      }
+    ]
+  },
+  "fieldset/IPR22": {
+    "bit_size": 8,
+    "description": "Interrupt Priority Register 22",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "PRI_22",
+        "name": "PRI_22"
+      }
+    ]
+  },
+  "fieldset/IPR23": {
+    "bit_size": 8,
+    "description": "Interrupt Priority Register 23",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "PRI_23",
+        "name": "PRI_23"
+      }
+    ]
+  },
+  "fieldset/IPR24": {
+    "bit_size": 8,
+    "description": "Interrupt Priority Register 24",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "PRI_24",
+        "name": "PRI_24"
+      }
+    ]
+  },
+  "fieldset/IPR25": {
+    "bit_size": 8,
+    "description": "Interrupt Priority Register 25",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "PRI_25",
+        "name": "PRI_25"
+      }
+    ]
+  },
+  "fieldset/IPR26": {
+    "bit_size": 8,
+    "description": "Interrupt Priority Register 26",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "PRI_26",
+        "name": "PRI_26"
+      }
+    ]
+  },
+  "fieldset/IPR27": {
+    "bit_size": 8,
+    "description": "Interrupt Priority Register 27",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "PRI_27",
+        "name": "PRI_27"
+      }
+    ]
+  },
+  "fieldset/IPR28": {
+    "bit_size": 8,
+    "description": "Interrupt Priority Register 28",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "PRI_28",
+        "name": "PRI_28"
+      }
+    ]
+  },
+  "fieldset/IPR29": {
+    "bit_size": 8,
+    "description": "Interrupt Priority Register 29",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "PRI_29",
+        "name": "PRI_29"
+      }
+    ]
+  },
+  "fieldset/IPR3": {
+    "bit_size": 8,
+    "description": "Interrupt Priority Register 3",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "PRI_03",
+        "name": "PRI_03"
+      }
+    ]
+  },
+  "fieldset/IPR30": {
+    "bit_size": 8,
+    "description": "Interrupt Priority Register 30",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "PRI_30",
+        "name": "PRI_30"
+      }
+    ]
+  },
+  "fieldset/IPR31": {
+    "bit_size": 8,
+    "description": "Interrupt Priority Register 31",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "PRI_31",
+        "name": "PRI_31"
+      }
+    ]
+  },
+  "fieldset/IPR32": {
+    "bit_size": 8,
+    "description": "Interrupt Priority Register 32",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "PRI_32",
+        "name": "PRI_32"
+      }
+    ]
+  },
+  "fieldset/IPR33": {
+    "bit_size": 8,
+    "description": "Interrupt Priority Register 33",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "PRI_33",
+        "name": "PRI_33"
+      }
+    ]
+  },
+  "fieldset/IPR34": {
+    "bit_size": 8,
+    "description": "Interrupt Priority Register 34",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "PRI_34",
+        "name": "PRI_34"
+      }
+    ]
+  },
+  "fieldset/IPR35": {
+    "bit_size": 8,
+    "description": "Interrupt Priority Register 35",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "PRI_35",
+        "name": "PRI_35"
+      }
+    ]
+  },
+  "fieldset/IPR36": {
+    "bit_size": 8,
+    "description": "Interrupt Priority Register 36",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "PRI_36",
+        "name": "PRI_36"
+      }
+    ]
+  },
+  "fieldset/IPR37": {
+    "bit_size": 8,
+    "description": "Interrupt Priority Register 37",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "PRI_37",
+        "name": "PRI_37"
+      }
+    ]
+  },
+  "fieldset/IPR38": {
+    "bit_size": 8,
+    "description": "Interrupt Priority Register 38",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "PRI_38",
+        "name": "PRI_38"
+      }
+    ]
+  },
+  "fieldset/IPR39": {
+    "bit_size": 8,
+    "description": "Interrupt Priority Register 39",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "PRI_39",
+        "name": "PRI_39"
+      }
+    ]
+  },
+  "fieldset/IPR4": {
+    "bit_size": 8,
+    "description": "Interrupt Priority Register 4",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "PRI_04",
+        "name": "PRI_04"
+      }
+    ]
+  },
+  "fieldset/IPR40": {
+    "bit_size": 8,
+    "description": "Interrupt Priority Register 40",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "PRI_40",
+        "name": "PRI_40"
+      }
+    ]
+  },
+  "fieldset/IPR41": {
+    "bit_size": 8,
+    "description": "Interrupt Priority Register 41",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "PRI_41",
+        "name": "PRI_41"
+      }
+    ]
+  },
+  "fieldset/IPR42": {
+    "bit_size": 8,
+    "description": "Interrupt Priority Register 42",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "PRI_42",
+        "name": "PRI_42"
+      }
+    ]
+  },
+  "fieldset/IPR43": {
+    "bit_size": 8,
+    "description": "Interrupt Priority Register 43",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "PRI_43",
+        "name": "PRI_43"
+      }
+    ]
+  },
+  "fieldset/IPR44": {
+    "bit_size": 8,
+    "description": "Interrupt Priority Register 44",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "PRI_44",
+        "name": "PRI_44"
+      }
+    ]
+  },
+  "fieldset/IPR45": {
+    "bit_size": 8,
+    "description": "Interrupt Priority Register 45",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "PRI_45",
+        "name": "PRI_45"
+      }
+    ]
+  },
+  "fieldset/IPR46": {
+    "bit_size": 8,
+    "description": "Interrupt Priority Register 46",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "PRI_46",
+        "name": "PRI_46"
+      }
+    ]
+  },
+  "fieldset/IPR47": {
+    "bit_size": 8,
+    "description": "Interrupt Priority Register 47",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "PRI_47",
+        "name": "PRI_47"
+      }
+    ]
+  },
+  "fieldset/IPR48": {
+    "bit_size": 8,
+    "description": "Interrupt Priority Register 48",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "PRI_48",
+        "name": "PRI_48"
+      }
+    ]
+  },
+  "fieldset/IPR49": {
+    "bit_size": 8,
+    "description": "Interrupt Priority Register 49",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "PRI_49",
+        "name": "PRI_49"
+      }
+    ]
+  },
+  "fieldset/IPR5": {
+    "bit_size": 8,
+    "description": "Interrupt Priority Register 5",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "PRI_05",
+        "name": "PRI_05"
+      }
+    ]
+  },
+  "fieldset/IPR50": {
+    "bit_size": 8,
+    "description": "Interrupt Priority Register 50",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "PRI_50",
+        "name": "PRI_50"
+      }
+    ]
+  },
+  "fieldset/IPR51": {
+    "bit_size": 8,
+    "description": "Interrupt Priority Register 51",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "PRI_51",
+        "name": "PRI_51"
+      }
+    ]
+  },
+  "fieldset/IPR52": {
+    "bit_size": 8,
+    "description": "Interrupt Priority Register 52",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "PRI_52",
+        "name": "PRI_52"
+      }
+    ]
+  },
+  "fieldset/IPR53": {
+    "bit_size": 8,
+    "description": "Interrupt Priority Register 53",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "PRI_53",
+        "name": "PRI_53"
+      }
+    ]
+  },
+  "fieldset/IPR54": {
+    "bit_size": 8,
+    "description": "Interrupt Priority Register 54",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "PRI_54",
+        "name": "PRI_54"
+      }
+    ]
+  },
+  "fieldset/IPR55": {
+    "bit_size": 8,
+    "description": "Interrupt Priority Register 55",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "PRI_55",
+        "name": "PRI_55"
+      }
+    ]
+  },
+  "fieldset/IPR56": {
+    "bit_size": 8,
+    "description": "Interrupt Priority Register 56",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "PRI_56",
+        "name": "PRI_56"
+      }
+    ]
+  },
+  "fieldset/IPR57": {
+    "bit_size": 8,
+    "description": "Interrupt Priority Register 57",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "PRI_57",
+        "name": "PRI_57"
+      }
+    ]
+  },
+  "fieldset/IPR58": {
+    "bit_size": 8,
+    "description": "Interrupt Priority Register 58",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "PRI_58",
+        "name": "PRI_58"
+      }
+    ]
+  },
+  "fieldset/IPR59": {
+    "bit_size": 8,
+    "description": "Interrupt Priority Register 59",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "PRI_59",
+        "name": "PRI_59"
+      }
+    ]
+  },
+  "fieldset/IPR6": {
+    "bit_size": 8,
+    "description": "Interrupt Priority Register 6",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "PRI_06",
+        "name": "PRI_06"
+      }
+    ]
+  },
+  "fieldset/IPR60": {
+    "bit_size": 8,
+    "description": "Interrupt Priority Register 60",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "PRI_60",
+        "name": "PRI_60"
+      }
+    ]
+  },
+  "fieldset/IPR61": {
+    "bit_size": 8,
+    "description": "Interrupt Priority Register 61",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "PRI_61",
+        "name": "PRI_61"
+      }
+    ]
+  },
+  "fieldset/IPR62": {
+    "bit_size": 8,
+    "description": "Interrupt Priority Register 62",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "PRI_62",
+        "name": "PRI_62"
+      }
+    ]
+  },
+  "fieldset/IPR63": {
+    "bit_size": 8,
+    "description": "Interrupt Priority Register 63",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "PRI_63",
+        "name": "PRI_63"
+      }
+    ]
+  },
+  "fieldset/IPR64": {
+    "bit_size": 8,
+    "description": "Interrupt Priority Register 64",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "PRI_64",
+        "name": "PRI_64"
+      }
+    ]
+  },
+  "fieldset/IPR65": {
+    "bit_size": 8,
+    "description": "Interrupt Priority Register 65",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "PRI_65",
+        "name": "PRI_65"
+      }
+    ]
+  },
+  "fieldset/IPR66": {
+    "bit_size": 8,
+    "description": "Interrupt Priority Register 66",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "PRI_66",
+        "name": "PRI_66"
+      }
+    ]
+  },
+  "fieldset/IPR67": {
+    "bit_size": 8,
+    "description": "Interrupt Priority Register 67",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "PRI_67",
+        "name": "PRI_67"
+      }
+    ]
+  },
+  "fieldset/IPR7": {
+    "bit_size": 8,
+    "description": "Interrupt Priority Register 7",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "PRI_07",
+        "name": "PRI_07"
+      }
+    ]
+  },
+  "fieldset/IPR8": {
+    "bit_size": 8,
+    "description": "Interrupt Priority Register 8",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "PRI_08",
+        "name": "PRI_08"
+      }
+    ]
+  },
+  "fieldset/IPR9": {
+    "bit_size": 8,
+    "description": "Interrupt Priority Register 9",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "PRI_09",
+        "name": "PRI_09"
+      }
+    ]
+  },
+  "fieldset/ISER": {
+    "description": "Interrupt Set Enable Register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "SETENA",
+        "name": "SETENA"
+      }
+    ]
+  },
+  "fieldset/ISPR": {
+    "description": "Interrupt Set-Pending Register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "SETPEND",
+        "name": "SETPEND"
+      }
+    ]
+  },
+  "fieldset/STIR": {
+    "description": "Software Trigger Interrupt Register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "STIR",
+        "name": "STIR"
+      }
+    ]
+  }
+}

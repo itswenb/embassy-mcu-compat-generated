@@ -1,0 +1,132 @@
+{
+  "block/GD_MERGED_0793F10281D0": {
+    "items": [
+      {
+        "byte_offset": 0,
+        "description": "Control register",
+        "fieldset": "GD_MERGED_0793F10281D0_SVD_CTL",
+        "name": "CTL"
+      },
+      {
+        "byte_offset": 0,
+        "fieldset": "GD_MERGED_0793F10281D0_FW_WWDGT_CTL",
+        "name": "WWDGT_CTL"
+      },
+      {
+        "byte_offset": 4,
+        "description": "Configuration register",
+        "fieldset": "GD_MERGED_0793F10281D0_SVD_CFG",
+        "name": "CFG"
+      },
+      {
+        "byte_offset": 4,
+        "fieldset": "GD_MERGED_0793F10281D0_FW_WWDGT_CFG",
+        "name": "WWDGT_CFG"
+      },
+      {
+        "byte_offset": 8,
+        "description": "Status register",
+        "fieldset": "GD_MERGED_0793F10281D0_SVD_STAT",
+        "name": "STAT"
+      },
+      {
+        "byte_offset": 8,
+        "fieldset": "GD_MERGED_0793F10281D0_FW_WWDGT_STAT",
+        "name": "WWDGT_STAT"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_0793F10281D0_FW_WWDGT_CFG": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 7,
+        "name": "WWDGT_CFG_WIN"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 2,
+        "name": "WWDGT_CFG_PSC"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "name": "WWDGT_CFG_EWIE"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_0793F10281D0_FW_WWDGT_CTL": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 7,
+        "name": "WWDGT_CTL_CNT"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "name": "WWDGT_CTL_WDGTEN"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_0793F10281D0_FW_WWDGT_STAT": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "WWDGT_STAT_EWIF"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_0793F10281D0_SVD_CFG": {
+    "description": "Configuration register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 7,
+        "description": "7-bit window value",
+        "name": "WIN"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 2,
+        "description": "Prescaler",
+        "name": "PSC"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "Early wakeup interrupt",
+        "name": "EWIE"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_0793F10281D0_SVD_CTL": {
+    "description": "Control register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 7,
+        "description": "7-bit counter",
+        "name": "CNT"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Activation bit",
+        "name": "WDGTEN"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_0793F10281D0_SVD_STAT": {
+    "description": "Status register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Early wakeup interrupt flag",
+        "name": "EWIF"
+      }
+    ]
+  }
+}

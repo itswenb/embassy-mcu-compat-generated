@@ -1,0 +1,76 @@
+{
+  "block/WWDGT": {
+    "description": "Window watchdog timer",
+    "items": [
+      {
+        "byte_offset": 0,
+        "description": "Control register",
+        "fieldset": "CTL",
+        "name": "CTL"
+      },
+      {
+        "byte_offset": 4,
+        "description": "Configuration register",
+        "fieldset": "CFG",
+        "name": "CFG"
+      },
+      {
+        "byte_offset": 8,
+        "description": "Status register",
+        "fieldset": "STAT",
+        "name": "STAT"
+      }
+    ]
+  },
+  "fieldset/CFG": {
+    "description": "Configuration register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 7,
+        "description": "7-bit window value",
+        "name": "WIN"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 2,
+        "description": "Prescaler",
+        "name": "PSC"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "Early wakeup interrupt",
+        "name": "EWIE"
+      }
+    ]
+  },
+  "fieldset/CTL": {
+    "description": "Control register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 7,
+        "description": "7-bit counter",
+        "name": "CNT"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Activation bit",
+        "name": "WDGTEN"
+      }
+    ]
+  },
+  "fieldset/STAT": {
+    "description": "Status register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Early wakeup interrupt flag",
+        "name": "EWIF"
+      }
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "block/USBRAM": {
+    "description": "GD32F30x USB/CAN 共享缓冲 SRAM",
+    "items": [
+      {
+        "name": "MEM",
+        "byte_offset": 0,
+        "bit_size": 16,
+        "array": {
+          "len": 256,
+          "stride": 4
+        }
+      }
+    ]
+  }
+}

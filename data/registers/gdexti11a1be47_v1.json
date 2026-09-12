@@ -1,0 +1,793 @@
+{
+  "block/EXTI": {
+    "description": "External interrupt/event controller",
+    "items": [
+      {
+        "byte_offset": 0,
+        "description": "Interrupt enable register (EXTI_INTEN)",
+        "fieldset": "INTEN",
+        "name": "INTEN"
+      },
+      {
+        "byte_offset": 4,
+        "description": "Event enable register (EXTI_EVEN)",
+        "fieldset": "EVEN",
+        "name": "EVEN"
+      },
+      {
+        "byte_offset": 8,
+        "description": "Rising Edge Trigger Enable register (EXTI_RTEN)",
+        "fieldset": "RTEN",
+        "name": "RTEN"
+      },
+      {
+        "byte_offset": 12,
+        "description": "Falling Egde Trigger Enable register (EXTI_FTEN)",
+        "fieldset": "FTEN",
+        "name": "FTEN"
+      },
+      {
+        "byte_offset": 16,
+        "description": "Software interrupt event register (EXTI_SWIEV)",
+        "fieldset": "SWIEV",
+        "name": "SWIEV"
+      },
+      {
+        "byte_offset": 20,
+        "description": "Pending register (EXTI_PD)",
+        "fieldset": "PD",
+        "name": "PD"
+      }
+    ]
+  },
+  "fieldset/EVEN": {
+    "description": "Event enable register (EXTI_EVEN)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Enable Event on line 0",
+        "name": "EVEN0"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Enable Event on line 1",
+        "name": "EVEN1"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Enable Event on line 2",
+        "name": "EVEN2"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Enable Event on line 3",
+        "name": "EVEN3"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "Enable Event on line 4",
+        "name": "EVEN4"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "Enable Event on line 5",
+        "name": "EVEN5"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "Enable Event on line 6",
+        "name": "EVEN6"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Enable Event on line 7",
+        "name": "EVEN7"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "Enable Event on line 8",
+        "name": "EVEN8"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "Enable Event on line 9",
+        "name": "EVEN9"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "Enable Event on line 10",
+        "name": "EVEN10"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "description": "Enable Event on line 11",
+        "name": "EVEN11"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "description": "Enable Event on line 12",
+        "name": "EVEN12"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "description": "Enable Event on line 13",
+        "name": "EVEN13"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "description": "Enable Event on line 14",
+        "name": "EVEN14"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "Enable Event on line 15",
+        "name": "EVEN15"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "description": "Enable Event on line 16",
+        "name": "EVEN16"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 1,
+        "description": "Enable Event on line 17",
+        "name": "EVEN17"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 1,
+        "description": "Enable Event on line 18",
+        "name": "EVEN18"
+      },
+      {
+        "bit_offset": 19,
+        "bit_size": 1,
+        "description": "Enable Event on line 19",
+        "name": "EVEN19"
+      }
+    ]
+  },
+  "fieldset/FTEN": {
+    "description": "Falling Egde Trigger Enable register (EXTI_FTEN)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Falling edge trigger enable of line 0",
+        "name": "FTEN0"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Falling edge trigger enable of line 1",
+        "name": "FTEN1"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Falling edge trigger enable of line 2",
+        "name": "FTEN2"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Falling edge trigger enable of line 3",
+        "name": "FTEN3"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "Falling edge trigger enable of line 4",
+        "name": "FTEN4"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "Falling edge trigger enable of line 5",
+        "name": "FTEN5"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "Falling edge trigger enable of line 6",
+        "name": "FTEN6"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Falling edge trigger enable of line 7",
+        "name": "FTEN7"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "Falling edge trigger enable of line 8",
+        "name": "FTEN8"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "Falling edge trigger enable of line 9",
+        "name": "FTEN9"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "Falling edge trigger enable of line 10",
+        "name": "FTEN10"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "description": "Falling edge trigger enable of line 11",
+        "name": "FTEN11"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "description": "Falling edge trigger enable of line 12",
+        "name": "FTEN12"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "description": "Falling edge trigger enable of line 13",
+        "name": "FTEN13"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "description": "Falling edge trigger enable of line 14",
+        "name": "FTEN14"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "Falling edge trigger enable of line 15",
+        "name": "FTEN15"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "description": "Falling edge trigger enable of line 16",
+        "name": "FTEN16"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 1,
+        "description": "Falling edge trigger enable of line 17",
+        "name": "FTEN17"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 1,
+        "description": "Falling edge trigger enable of line 18",
+        "name": "FTEN18"
+      },
+      {
+        "bit_offset": 19,
+        "bit_size": 1,
+        "description": "Falling edge trigger enable of line 19",
+        "name": "FTEN19"
+      }
+    ]
+  },
+  "fieldset/INTEN": {
+    "description": "Interrupt enable register (EXTI_INTEN)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Enable Interrupt on line 0",
+        "name": "INTEN0"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Enable Interrupt on line 1",
+        "name": "INTEN1"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Enable Interrupt on line 2",
+        "name": "INTEN2"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Enable Interrupt on line 3",
+        "name": "INTEN3"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "Enable Interrupt on line 4",
+        "name": "INTEN4"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "Enable Interrupt on line 5",
+        "name": "INTEN5"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "Enable Interrupt on line 6",
+        "name": "INTEN6"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Enable Interrupt on line 7",
+        "name": "INTEN7"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "Enable Interrupt on line 8",
+        "name": "INTEN8"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "Enable Interrupt on line 9",
+        "name": "INTEN9"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "Enable Interrupt on line 10",
+        "name": "INTEN10"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "description": "Enable Interrupt on line 11",
+        "name": "INTEN11"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "description": "Enable Interrupt on line 12",
+        "name": "INTEN12"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "description": "Enable Interrupt on line 13",
+        "name": "INTEN13"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "description": "Enable Interrupt on line 14",
+        "name": "INTEN14"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "Enable Interrupt on line 15",
+        "name": "INTEN15"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "description": "Enable Interrupt on line 16",
+        "name": "INTEN16"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 1,
+        "description": "Enable Interrupt on line 17",
+        "name": "INTEN17"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 1,
+        "description": "Enable Interrupt on line 18",
+        "name": "INTEN18"
+      },
+      {
+        "bit_offset": 19,
+        "bit_size": 1,
+        "description": "Enable Interrupt on line 19",
+        "name": "INTEN19"
+      }
+    ]
+  },
+  "fieldset/PD": {
+    "description": "Pending register (EXTI_PD)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Interrupt pending status of line 0",
+        "name": "PD0"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Interrupt pending status of line 1",
+        "name": "PD1"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Interrupt pending status of line 2",
+        "name": "PD2"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Interrupt pending status of line 3",
+        "name": "PD3"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "Interrupt pending status of line 4",
+        "name": "PD4"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "Interrupt pending status of line 5",
+        "name": "PD5"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "Interrupt pending status of line 6",
+        "name": "PD6"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Interrupt pending status of line 7",
+        "name": "PD7"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "Interrupt pending status of line 8",
+        "name": "PD8"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "Interrupt pending status of line 9",
+        "name": "PD9"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "Interrupt pending status of line 10",
+        "name": "PD10"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "description": "Interrupt pending status of line 11",
+        "name": "PD11"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "description": "Interrupt pending status of line 12",
+        "name": "PD12"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "description": "Interrupt pending status of line 13",
+        "name": "PD13"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "description": "Interrupt pending status of line 14",
+        "name": "PD14"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "Interrupt pending status of line 15",
+        "name": "PD15"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "description": "Interrupt pending status of line 16",
+        "name": "PD16"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 1,
+        "description": "Interrupt pending status of line 17",
+        "name": "PD17"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 1,
+        "description": "Interrupt pending status of line 18",
+        "name": "PD18"
+      },
+      {
+        "bit_offset": 19,
+        "bit_size": 1,
+        "description": "Interrupt pending status of line 19",
+        "name": "PD19"
+      }
+    ]
+  },
+  "fieldset/RTEN": {
+    "description": "Rising Edge Trigger Enable register (EXTI_RTEN)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Rising edge trigger enable of line 0",
+        "name": "RTEN0"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Rising edge trigger enable of line 1",
+        "name": "RTEN1"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Rising edge trigger enable of line 2",
+        "name": "RTEN2"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Rising edge trigger enable of line 3",
+        "name": "RTEN3"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "Rising edge trigger enable of line 4",
+        "name": "RTEN4"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "Rising edge trigger enable of line 5",
+        "name": "RTEN5"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "Rising edge trigger enable of line 6",
+        "name": "RTEN6"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Rising edge trigger enable of line 7",
+        "name": "RTEN7"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "Rising edge trigger enable of line 8",
+        "name": "RTEN8"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "Rising edge trigger enable of line 9",
+        "name": "RTEN9"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "Rising edge trigger enable of line 10",
+        "name": "RTEN10"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "description": "Rising edge trigger enable of line 11",
+        "name": "RTEN11"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "description": "Rising edge trigger enable of line 12",
+        "name": "RTEN12"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "description": "Rising edge trigger enable of line 13",
+        "name": "RTEN13"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "description": "Rising edge trigger enable of line 14",
+        "name": "RTEN14"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "Rising edge trigger enable of line 15",
+        "name": "RTEN15"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "description": "Rising edge trigger enable of line 16",
+        "name": "RTEN16"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 1,
+        "description": "Rising edge trigger enable of line 17",
+        "name": "RTEN17"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 1,
+        "description": "Rising edge trigger enable of line 18",
+        "name": "RTEN18"
+      },
+      {
+        "bit_offset": 19,
+        "bit_size": 1,
+        "description": "Rising edge trigger enable of line 19",
+        "name": "RTEN19"
+      }
+    ]
+  },
+  "fieldset/SWIEV": {
+    "description": "Software interrupt event register (EXTI_SWIEV)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Interrupt/Event software trigger on line 0",
+        "name": "SWIEV0"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Interrupt/Event software trigger on line 1",
+        "name": "SWIEV1"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Interrupt/Event software trigger on line 2",
+        "name": "SWIEV2"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Interrupt/Event software trigger on line 3",
+        "name": "SWIEV3"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "Interrupt/Event software trigger on line 4",
+        "name": "SWIEV4"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "Interrupt/Event software trigger on line 5",
+        "name": "SWIEV5"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "Interrupt/Event software trigger on line 6",
+        "name": "SWIEV6"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Interrupt/Event software trigger on line 7",
+        "name": "SWIEV7"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "Interrupt/Event software trigger on line 8",
+        "name": "SWIEV8"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "Interrupt/Event software trigger on line 9",
+        "name": "SWIEV9"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "Interrupt/Event software trigger on line 10",
+        "name": "SWIEV10"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "description": "Interrupt/Event software trigger on line 11",
+        "name": "SWIEV11"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "description": "Interrupt/Event software trigger on line 12",
+        "name": "SWIEV12"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "description": "Interrupt/Event software trigger on line 13",
+        "name": "SWIEV13"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "description": "Interrupt/Event software trigger on line 14",
+        "name": "SWIEV14"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "Interrupt/Event software trigger on line 15",
+        "name": "SWIEV15"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "description": "Interrupt/Event software trigger on line 16",
+        "name": "SWIEV16"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 1,
+        "description": "Interrupt/Event software trigger on line 17",
+        "name": "SWIEV17"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 1,
+        "description": "Interrupt/Event software trigger on line 18",
+        "name": "SWIEV18"
+      },
+      {
+        "bit_offset": 19,
+        "bit_size": 1,
+        "description": "Interrupt/Event software trigger on line 19",
+        "name": "SWIEV19"
+      }
+    ]
+  }
+}

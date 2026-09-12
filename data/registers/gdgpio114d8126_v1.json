@@ -1,0 +1,718 @@
+{
+  "block/GPIO": {
+    "items": [
+      {
+        "byte_offset": 0,
+        "fieldset": "GPIO_CTL0",
+        "name": "GPIO_CTL0"
+      },
+      {
+        "byte_offset": 4,
+        "fieldset": "GPIO_CTL1",
+        "name": "GPIO_CTL1"
+      },
+      {
+        "byte_offset": 8,
+        "fieldset": "GPIO_ISTAT",
+        "name": "GPIO_ISTAT"
+      },
+      {
+        "byte_offset": 12,
+        "fieldset": "GPIO_OCTL",
+        "name": "GPIO_OCTL"
+      },
+      {
+        "byte_offset": 16,
+        "fieldset": "GPIO_BOP",
+        "name": "GPIO_BOP"
+      },
+      {
+        "byte_offset": 20,
+        "fieldset": "GPIO_BC",
+        "name": "GPIO_BC"
+      },
+      {
+        "byte_offset": 24,
+        "fieldset": "GPIO_LOCK",
+        "name": "GPIO_LOCK"
+      },
+      {
+        "byte_offset": 60,
+        "name": "GPIOx_SPD"
+      }
+    ]
+  },
+  "fieldset/GPIO_BC": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "GPIO_BC_CR0"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "GPIO_BC_CR1"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "GPIO_BC_CR2"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "name": "GPIO_BC_CR3"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "name": "GPIO_BC_CR4"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "name": "GPIO_BC_CR5"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "name": "GPIO_BC_CR6"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "name": "GPIO_BC_CR7"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "name": "GPIO_BC_CR8"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "name": "GPIO_BC_CR9"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "name": "GPIO_BC_CR10"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "name": "GPIO_BC_CR11"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "name": "GPIO_BC_CR12"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "name": "GPIO_BC_CR13"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "name": "GPIO_BC_CR14"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "name": "GPIO_BC_CR15"
+      }
+    ]
+  },
+  "fieldset/GPIO_BOP": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "GPIO_BOP_BOP0"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "GPIO_BOP_BOP1"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "GPIO_BOP_BOP2"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "name": "GPIO_BOP_BOP3"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "name": "GPIO_BOP_BOP4"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "name": "GPIO_BOP_BOP5"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "name": "GPIO_BOP_BOP6"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "name": "GPIO_BOP_BOP7"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "name": "GPIO_BOP_BOP8"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "name": "GPIO_BOP_BOP9"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "name": "GPIO_BOP_BOP10"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "name": "GPIO_BOP_BOP11"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "name": "GPIO_BOP_BOP12"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "name": "GPIO_BOP_BOP13"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "name": "GPIO_BOP_BOP14"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "name": "GPIO_BOP_BOP15"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "name": "GPIO_BOP_CR0"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 1,
+        "name": "GPIO_BOP_CR1"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 1,
+        "name": "GPIO_BOP_CR2"
+      },
+      {
+        "bit_offset": 19,
+        "bit_size": 1,
+        "name": "GPIO_BOP_CR3"
+      },
+      {
+        "bit_offset": 20,
+        "bit_size": 1,
+        "name": "GPIO_BOP_CR4"
+      },
+      {
+        "bit_offset": 21,
+        "bit_size": 1,
+        "name": "GPIO_BOP_CR5"
+      },
+      {
+        "bit_offset": 22,
+        "bit_size": 1,
+        "name": "GPIO_BOP_CR6"
+      },
+      {
+        "bit_offset": 23,
+        "bit_size": 1,
+        "name": "GPIO_BOP_CR7"
+      },
+      {
+        "bit_offset": 24,
+        "bit_size": 1,
+        "name": "GPIO_BOP_CR8"
+      },
+      {
+        "bit_offset": 25,
+        "bit_size": 1,
+        "name": "GPIO_BOP_CR9"
+      },
+      {
+        "bit_offset": 26,
+        "bit_size": 1,
+        "name": "GPIO_BOP_CR10"
+      },
+      {
+        "bit_offset": 27,
+        "bit_size": 1,
+        "name": "GPIO_BOP_CR11"
+      },
+      {
+        "bit_offset": 28,
+        "bit_size": 1,
+        "name": "GPIO_BOP_CR12"
+      },
+      {
+        "bit_offset": 29,
+        "bit_size": 1,
+        "name": "GPIO_BOP_CR13"
+      },
+      {
+        "bit_offset": 30,
+        "bit_size": 1,
+        "name": "GPIO_BOP_CR14"
+      },
+      {
+        "bit_offset": 31,
+        "bit_size": 1,
+        "name": "GPIO_BOP_CR15"
+      }
+    ]
+  },
+  "fieldset/GPIO_CTL0": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 2,
+        "name": "GPIO_CTL0_MD0"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 2,
+        "name": "GPIO_CTL0_CTL0"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 2,
+        "name": "GPIO_CTL0_MD1"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 2,
+        "name": "GPIO_CTL0_CTL1"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 2,
+        "name": "GPIO_CTL0_MD2"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 2,
+        "name": "GPIO_CTL0_CTL2"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 2,
+        "name": "GPIO_CTL0_MD3"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 2,
+        "name": "GPIO_CTL0_CTL3"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 2,
+        "name": "GPIO_CTL0_MD4"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 2,
+        "name": "GPIO_CTL0_CTL4"
+      },
+      {
+        "bit_offset": 20,
+        "bit_size": 2,
+        "name": "GPIO_CTL0_MD5"
+      },
+      {
+        "bit_offset": 22,
+        "bit_size": 2,
+        "name": "GPIO_CTL0_CTL5"
+      },
+      {
+        "bit_offset": 24,
+        "bit_size": 2,
+        "name": "GPIO_CTL0_MD6"
+      },
+      {
+        "bit_offset": 26,
+        "bit_size": 2,
+        "name": "GPIO_CTL0_CTL6"
+      },
+      {
+        "bit_offset": 28,
+        "bit_size": 2,
+        "name": "GPIO_CTL0_MD7"
+      },
+      {
+        "bit_offset": 30,
+        "bit_size": 2,
+        "name": "GPIO_CTL0_CTL7"
+      }
+    ]
+  },
+  "fieldset/GPIO_CTL1": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 2,
+        "name": "GPIO_CTL1_MD8"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 2,
+        "name": "GPIO_CTL1_CTL8"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 2,
+        "name": "GPIO_CTL1_MD9"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 2,
+        "name": "GPIO_CTL1_CTL9"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 2,
+        "name": "GPIO_CTL1_MD10"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 2,
+        "name": "GPIO_CTL1_CTL10"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 2,
+        "name": "GPIO_CTL1_MD11"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 2,
+        "name": "GPIO_CTL1_CTL11"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 2,
+        "name": "GPIO_CTL1_MD12"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 2,
+        "name": "GPIO_CTL1_CTL12"
+      },
+      {
+        "bit_offset": 20,
+        "bit_size": 2,
+        "name": "GPIO_CTL1_MD13"
+      },
+      {
+        "bit_offset": 22,
+        "bit_size": 2,
+        "name": "GPIO_CTL1_CTL13"
+      },
+      {
+        "bit_offset": 24,
+        "bit_size": 2,
+        "name": "GPIO_CTL1_MD14"
+      },
+      {
+        "bit_offset": 26,
+        "bit_size": 2,
+        "name": "GPIO_CTL1_CTL14"
+      },
+      {
+        "bit_offset": 28,
+        "bit_size": 2,
+        "name": "GPIO_CTL1_MD15"
+      },
+      {
+        "bit_offset": 30,
+        "bit_size": 2,
+        "name": "GPIO_CTL1_CTL15"
+      }
+    ]
+  },
+  "fieldset/GPIO_ISTAT": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "GPIO_ISTAT_ISTAT0"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "GPIO_ISTAT_ISTAT1"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "GPIO_ISTAT_ISTAT2"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "name": "GPIO_ISTAT_ISTAT3"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "name": "GPIO_ISTAT_ISTAT4"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "name": "GPIO_ISTAT_ISTAT5"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "name": "GPIO_ISTAT_ISTAT6"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "name": "GPIO_ISTAT_ISTAT7"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "name": "GPIO_ISTAT_ISTAT8"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "name": "GPIO_ISTAT_ISTAT9"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "name": "GPIO_ISTAT_ISTAT10"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "name": "GPIO_ISTAT_ISTAT11"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "name": "GPIO_ISTAT_ISTAT12"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "name": "GPIO_ISTAT_ISTAT13"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "name": "GPIO_ISTAT_ISTAT14"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "name": "GPIO_ISTAT_ISTAT15"
+      }
+    ]
+  },
+  "fieldset/GPIO_LOCK": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "GPIO_LOCK_LK0"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "GPIO_LOCK_LK1"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "GPIO_LOCK_LK2"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "name": "GPIO_LOCK_LK3"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "name": "GPIO_LOCK_LK4"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "name": "GPIO_LOCK_LK5"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "name": "GPIO_LOCK_LK6"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "name": "GPIO_LOCK_LK7"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "name": "GPIO_LOCK_LK8"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "name": "GPIO_LOCK_LK9"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "name": "GPIO_LOCK_LK10"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "name": "GPIO_LOCK_LK11"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "name": "GPIO_LOCK_LK12"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "name": "GPIO_LOCK_LK13"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "name": "GPIO_LOCK_LK14"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "name": "GPIO_LOCK_LK15"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "name": "GPIO_LOCK_LKK"
+      }
+    ]
+  },
+  "fieldset/GPIO_OCTL": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "GPIO_OCTL_OCTL0"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "GPIO_OCTL_OCTL1"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "GPIO_OCTL_OCTL2"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "name": "GPIO_OCTL_OCTL3"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "name": "GPIO_OCTL_OCTL4"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "name": "GPIO_OCTL_OCTL5"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "name": "GPIO_OCTL_OCTL6"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "name": "GPIO_OCTL_OCTL7"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "name": "GPIO_OCTL_OCTL8"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "name": "GPIO_OCTL_OCTL9"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "name": "GPIO_OCTL_OCTL10"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "name": "GPIO_OCTL_OCTL11"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "name": "GPIO_OCTL_OCTL12"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "name": "GPIO_OCTL_OCTL13"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "name": "GPIO_OCTL_OCTL14"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "name": "GPIO_OCTL_OCTL15"
+      }
+    ]
+  }
+}

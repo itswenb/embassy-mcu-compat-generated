@@ -1,0 +1,556 @@
+{
+  "block/EXMC": {
+    "items": [
+      {
+        "byte_offset": 0,
+        "fieldset": "EXMC_SNCTL",
+        "name": "EXMC_SNCTL_0"
+      },
+      {
+        "byte_offset": 8,
+        "fieldset": "EXMC_SNCTL",
+        "name": "EXMC_SNCTL_1"
+      },
+      {
+        "byte_offset": 16,
+        "fieldset": "EXMC_SNCTL",
+        "name": "EXMC_SNCTL_2"
+      },
+      {
+        "byte_offset": 24,
+        "fieldset": "EXMC_SNCTL",
+        "name": "EXMC_SNCTL_3"
+      },
+      {
+        "byte_offset": 0,
+        "name": "EXMC_SNCTL0"
+      },
+      {
+        "byte_offset": 4,
+        "fieldset": "EXMC_SNTCFG",
+        "name": "EXMC_SNTCFG_0"
+      },
+      {
+        "byte_offset": 12,
+        "fieldset": "EXMC_SNTCFG",
+        "name": "EXMC_SNTCFG_1"
+      },
+      {
+        "byte_offset": 20,
+        "fieldset": "EXMC_SNTCFG",
+        "name": "EXMC_SNTCFG_2"
+      },
+      {
+        "byte_offset": 28,
+        "fieldset": "EXMC_SNTCFG",
+        "name": "EXMC_SNTCFG_3"
+      },
+      {
+        "byte_offset": 4,
+        "name": "EXMC_SNTCFG0"
+      },
+      {
+        "byte_offset": 8,
+        "name": "EXMC_SNCTL1"
+      },
+      {
+        "byte_offset": 12,
+        "name": "EXMC_SNTCFG1"
+      },
+      {
+        "byte_offset": 16,
+        "name": "EXMC_SNCTL2"
+      },
+      {
+        "byte_offset": 20,
+        "name": "EXMC_SNTCFG2"
+      },
+      {
+        "byte_offset": 24,
+        "name": "EXMC_SNCTL3"
+      },
+      {
+        "byte_offset": 28,
+        "name": "EXMC_SNTCFG3"
+      },
+      {
+        "byte_offset": 96,
+        "fieldset": "EXMC_NPCTL",
+        "name": "EXMC_NPCTL_1"
+      },
+      {
+        "byte_offset": 128,
+        "fieldset": "EXMC_NPCTL",
+        "name": "EXMC_NPCTL_2"
+      },
+      {
+        "byte_offset": 160,
+        "fieldset": "EXMC_NPCTL",
+        "name": "EXMC_NPCTL_3"
+      },
+      {
+        "byte_offset": 96,
+        "name": "EXMC_NPCTL1"
+      },
+      {
+        "byte_offset": 100,
+        "fieldset": "EXMC_NPINTEN",
+        "name": "EXMC_NPINTEN_1"
+      },
+      {
+        "byte_offset": 132,
+        "fieldset": "EXMC_NPINTEN",
+        "name": "EXMC_NPINTEN_2"
+      },
+      {
+        "byte_offset": 164,
+        "fieldset": "EXMC_NPINTEN",
+        "name": "EXMC_NPINTEN_3"
+      },
+      {
+        "byte_offset": 100,
+        "name": "EXMC_NPINTEN1"
+      },
+      {
+        "byte_offset": 104,
+        "fieldset": "EXMC_NPCTCFG",
+        "name": "EXMC_NPCTCFG_1"
+      },
+      {
+        "byte_offset": 136,
+        "fieldset": "EXMC_NPCTCFG",
+        "name": "EXMC_NPCTCFG_2"
+      },
+      {
+        "byte_offset": 168,
+        "fieldset": "EXMC_NPCTCFG",
+        "name": "EXMC_NPCTCFG_3"
+      },
+      {
+        "byte_offset": 104,
+        "name": "EXMC_NPCTCFG1"
+      },
+      {
+        "byte_offset": 108,
+        "fieldset": "EXMC_NPATCFG",
+        "name": "EXMC_NPATCFG_1"
+      },
+      {
+        "byte_offset": 140,
+        "fieldset": "EXMC_NPATCFG",
+        "name": "EXMC_NPATCFG_2"
+      },
+      {
+        "byte_offset": 172,
+        "fieldset": "EXMC_NPATCFG",
+        "name": "EXMC_NPATCFG_3"
+      },
+      {
+        "byte_offset": 108,
+        "name": "EXMC_NPATCFG1"
+      },
+      {
+        "byte_offset": 116,
+        "fieldset": "EXMC_NECC",
+        "name": "EXMC_NECC_1"
+      },
+      {
+        "byte_offset": 148,
+        "fieldset": "EXMC_NECC",
+        "name": "EXMC_NECC_2"
+      },
+      {
+        "byte_offset": 116,
+        "name": "EXMC_NECC1"
+      },
+      {
+        "byte_offset": 128,
+        "name": "EXMC_NPCTL2"
+      },
+      {
+        "byte_offset": 132,
+        "name": "EXMC_NPINTEN2"
+      },
+      {
+        "byte_offset": 136,
+        "name": "EXMC_NPCTCFG2"
+      },
+      {
+        "byte_offset": 140,
+        "name": "EXMC_NPATCFG2"
+      },
+      {
+        "byte_offset": 148,
+        "name": "EXMC_NECC2"
+      },
+      {
+        "byte_offset": 160,
+        "name": "EXMC_NPCTL3"
+      },
+      {
+        "byte_offset": 164,
+        "name": "EXMC_NPINTEN3"
+      },
+      {
+        "byte_offset": 168,
+        "name": "EXMC_NPCTCFG3"
+      },
+      {
+        "byte_offset": 172,
+        "name": "EXMC_NPATCFG3"
+      },
+      {
+        "byte_offset": 176,
+        "fieldset": "EXMC_PIOTCFG3",
+        "name": "EXMC_PIOTCFG3"
+      },
+      {
+        "byte_offset": 260,
+        "fieldset": "EXMC_SNWTCFG",
+        "name": "EXMC_SNWTCFG_0"
+      },
+      {
+        "byte_offset": 268,
+        "fieldset": "EXMC_SNWTCFG",
+        "name": "EXMC_SNWTCFG_1"
+      },
+      {
+        "byte_offset": 276,
+        "fieldset": "EXMC_SNWTCFG",
+        "name": "EXMC_SNWTCFG_2"
+      },
+      {
+        "byte_offset": 284,
+        "fieldset": "EXMC_SNWTCFG",
+        "name": "EXMC_SNWTCFG_3"
+      },
+      {
+        "byte_offset": 260,
+        "name": "EXMC_SNWTCFG0"
+      },
+      {
+        "byte_offset": 268,
+        "name": "EXMC_SNWTCFG1"
+      },
+      {
+        "byte_offset": 276,
+        "name": "EXMC_SNWTCFG2"
+      },
+      {
+        "byte_offset": 284,
+        "name": "EXMC_SNWTCFG3"
+      }
+    ]
+  },
+  "fieldset/EXMC_NECC": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "name": "EXMC_NECC_ECC"
+      }
+    ]
+  },
+  "fieldset/EXMC_NPATCFG": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "name": "EXMC_NPATCFG_ATTSET"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 8,
+        "name": "EXMC_NPATCFG_ATTWAIT"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 8,
+        "name": "EXMC_NPATCFG_ATTHLD"
+      },
+      {
+        "bit_offset": 24,
+        "bit_size": 8,
+        "name": "EXMC_NPATCFG_ATTHIZ"
+      }
+    ]
+  },
+  "fieldset/EXMC_NPCTCFG": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "name": "EXMC_NPCTCFG_COMSET"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 8,
+        "name": "EXMC_NPCTCFG_COMWAIT"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 8,
+        "name": "EXMC_NPCTCFG_COMHLD"
+      },
+      {
+        "bit_offset": 24,
+        "bit_size": 8,
+        "name": "EXMC_NPCTCFG_COMHIZ"
+      }
+    ]
+  },
+  "fieldset/EXMC_NPCTL": {
+    "fields": [
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "EXMC_NPCTL_NDWTEN"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "EXMC_NPCTL_NDBKEN"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "name": "EXMC_NPCTL_NDTP"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 2,
+        "name": "EXMC_NPCTL_NDW"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "name": "EXMC_NPCTL_ECCEN"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 4,
+        "name": "EXMC_NPCTL_CTR"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 4,
+        "name": "EXMC_NPCTL_ATR"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 3,
+        "name": "EXMC_NPCTL_ECCSZ"
+      }
+    ]
+  },
+  "fieldset/EXMC_NPINTEN": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "EXMC_NPINTEN_INTRS"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "EXMC_NPINTEN_INTHS"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "EXMC_NPINTEN_INTFS"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "name": "EXMC_NPINTEN_INTREN"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "name": "EXMC_NPINTEN_INTHEN"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "name": "EXMC_NPINTEN_INTFEN"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "name": "EXMC_NPINTEN_FFEPT"
+      }
+    ]
+  },
+  "fieldset/EXMC_PIOTCFG3": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "name": "EXMC_PIOTCFG3_IOSET"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 8,
+        "name": "EXMC_PIOTCFG3_IOWAIT"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 8,
+        "name": "EXMC_PIOTCFG3_IOHLD"
+      },
+      {
+        "bit_offset": 24,
+        "bit_size": 8,
+        "name": "EXMC_PIOTCFG3_IOHIZ"
+      }
+    ]
+  },
+  "fieldset/EXMC_SNCTL": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "EXMC_SNCTL_NRBKEN"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "EXMC_SNCTL_NRMUX"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 2,
+        "name": "EXMC_SNCTL_NRTP"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 2,
+        "name": "EXMC_SNCTL_NRW"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "name": "EXMC_SNCTL_NREN"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "name": "EXMC_SNCTL_SBRSTEN"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "name": "EXMC_SNCTL_NRWTPOL"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "name": "EXMC_SNCTL_WRAPEN"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "name": "EXMC_SNCTL_NRWTCFG"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "name": "EXMC_SNCTL_WREN"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "name": "EXMC_SNCTL_NRWTEN"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "name": "EXMC_SNCTL_EXMODEN"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "name": "EXMC_SNCTL_ASYNCWAIT"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 3,
+        "name": "EXMC_SNCTL_CPS"
+      },
+      {
+        "bit_offset": 19,
+        "bit_size": 1,
+        "name": "EXMC_SNCTL_SYNCWR"
+      }
+    ]
+  },
+  "fieldset/EXMC_SNTCFG": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 4,
+        "name": "EXMC_SNTCFG_ASET"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 4,
+        "name": "EXMC_SNTCFG_AHLD"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 8,
+        "name": "EXMC_SNTCFG_DSET"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 4,
+        "name": "EXMC_SNTCFG_BUSLAT"
+      },
+      {
+        "bit_offset": 20,
+        "bit_size": 4,
+        "name": "EXMC_SNTCFG_CKDIV"
+      },
+      {
+        "bit_offset": 24,
+        "bit_size": 4,
+        "name": "EXMC_SNTCFG_DLAT"
+      },
+      {
+        "bit_offset": 28,
+        "bit_size": 2,
+        "name": "EXMC_SNTCFG_ASYNCMOD"
+      }
+    ]
+  },
+  "fieldset/EXMC_SNWTCFG": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 4,
+        "name": "EXMC_SNWTCFG_WASET"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 4,
+        "name": "EXMC_SNWTCFG_WAHLD"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 8,
+        "name": "EXMC_SNWTCFG_WDSET"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 4,
+        "name": "EXMC_SNWTCFG_WBUSLAT"
+      },
+      {
+        "bit_offset": 28,
+        "bit_size": 2,
+        "name": "EXMC_SNWTCFG_WASYNCMOD"
+      }
+    ]
+  }
+}

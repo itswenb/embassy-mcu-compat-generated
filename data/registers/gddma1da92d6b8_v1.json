@@ -1,0 +1,1586 @@
+{
+  "block/GD_MERGED_C8AB3DA1047D": {
+    "items": [
+      {
+        "byte_offset": 0,
+        "fieldset": "GD_MERGED_C8AB3DA1047D_FW_DMA_INTF",
+        "name": "DMA_INTF"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 0,
+        "description": "Interrupt flag register",
+        "fieldset": "GD_MERGED_C8AB3DA1047D_SVD_INTF",
+        "name": "INTF"
+      },
+      {
+        "byte_offset": 4,
+        "fieldset": "GD_MERGED_C8AB3DA1047D_FW_DMA_INTC",
+        "name": "DMA_INTC"
+      },
+      {
+        "access": "Write",
+        "byte_offset": 4,
+        "description": "Interrupt flag clear register",
+        "fieldset": "GD_MERGED_C8AB3DA1047D_SVD_INTC",
+        "name": "INTC"
+      },
+      {
+        "byte_offset": 8,
+        "description": "Channel 0 control register",
+        "fieldset": "GD_MERGED_C8AB3DA1047D_SVD_CH0CTL",
+        "name": "CH0CTL"
+      },
+      {
+        "byte_offset": 8,
+        "name": "DMA_CH0CTL"
+      },
+      {
+        "byte_offset": 8,
+        "name": "DMA_CHCTL_0"
+      },
+      {
+        "byte_offset": 12,
+        "description": "Channel 0 counter register",
+        "fieldset": "GD_MERGED_C8AB3DA1047D_SVD_CH0CNT",
+        "name": "CH0CNT"
+      },
+      {
+        "byte_offset": 12,
+        "name": "DMA_CH0CNT"
+      },
+      {
+        "byte_offset": 12,
+        "name": "DMA_CHCNT_0"
+      },
+      {
+        "byte_offset": 16,
+        "description": "Channel 0 peripheral base address register",
+        "fieldset": "GD_MERGED_C8AB3DA1047D_SVD_CH0PADDR",
+        "name": "CH0PADDR"
+      },
+      {
+        "byte_offset": 16,
+        "name": "DMA_CH0PADDR"
+      },
+      {
+        "byte_offset": 16,
+        "name": "DMA_CHPADDR_0"
+      },
+      {
+        "byte_offset": 20,
+        "description": "Channel 0 memory base address register",
+        "fieldset": "GD_MERGED_C8AB3DA1047D_SVD_CH0MADDR",
+        "name": "CH0MADDR"
+      },
+      {
+        "byte_offset": 20,
+        "name": "DMA_CH0MADDR"
+      },
+      {
+        "byte_offset": 20,
+        "name": "DMA_CHMADDR_0"
+      },
+      {
+        "byte_offset": 28,
+        "description": "Channel 1 control register",
+        "fieldset": "GD_MERGED_C8AB3DA1047D_SVD_CH1CTL",
+        "name": "CH1CTL"
+      },
+      {
+        "byte_offset": 28,
+        "name": "DMA_CH1CTL"
+      },
+      {
+        "byte_offset": 28,
+        "name": "DMA_CHCTL_1"
+      },
+      {
+        "byte_offset": 32,
+        "description": "Channel 1 counter register",
+        "fieldset": "GD_MERGED_C8AB3DA1047D_SVD_CH1CNT",
+        "name": "CH1CNT"
+      },
+      {
+        "byte_offset": 32,
+        "name": "DMA_CH1CNT"
+      },
+      {
+        "byte_offset": 32,
+        "name": "DMA_CHCNT_1"
+      },
+      {
+        "byte_offset": 36,
+        "description": "Channel 1 peripheral base address register",
+        "fieldset": "GD_MERGED_C8AB3DA1047D_SVD_CH1PADDR",
+        "name": "CH1PADDR"
+      },
+      {
+        "byte_offset": 36,
+        "name": "DMA_CH1PADDR"
+      },
+      {
+        "byte_offset": 36,
+        "name": "DMA_CHPADDR_1"
+      },
+      {
+        "byte_offset": 40,
+        "description": "Channel 1 memory base address register",
+        "fieldset": "GD_MERGED_C8AB3DA1047D_SVD_CH1MADDR",
+        "name": "CH1MADDR"
+      },
+      {
+        "byte_offset": 40,
+        "name": "DMA_CH1MADDR"
+      },
+      {
+        "byte_offset": 40,
+        "name": "DMA_CHMADDR_1"
+      },
+      {
+        "byte_offset": 48,
+        "description": "Channel 2 control register",
+        "fieldset": "GD_MERGED_C8AB3DA1047D_SVD_CH2CTL",
+        "name": "CH2CTL"
+      },
+      {
+        "byte_offset": 48,
+        "name": "DMA_CH2CTL"
+      },
+      {
+        "byte_offset": 48,
+        "name": "DMA_CHCTL_2"
+      },
+      {
+        "byte_offset": 52,
+        "description": "Channel 2 counter register",
+        "fieldset": "GD_MERGED_C8AB3DA1047D_SVD_CH2CNT",
+        "name": "CH2CNT"
+      },
+      {
+        "byte_offset": 52,
+        "name": "DMA_CH2CNT"
+      },
+      {
+        "byte_offset": 52,
+        "name": "DMA_CHCNT_2"
+      },
+      {
+        "byte_offset": 56,
+        "description": "Channel 2 peripheral base address register",
+        "fieldset": "GD_MERGED_C8AB3DA1047D_SVD_CH2PADDR",
+        "name": "CH2PADDR"
+      },
+      {
+        "byte_offset": 56,
+        "name": "DMA_CH2PADDR"
+      },
+      {
+        "byte_offset": 56,
+        "name": "DMA_CHPADDR_2"
+      },
+      {
+        "byte_offset": 60,
+        "description": "Channel 2 memory base address register",
+        "fieldset": "GD_MERGED_C8AB3DA1047D_SVD_CH2MADDR",
+        "name": "CH2MADDR"
+      },
+      {
+        "byte_offset": 60,
+        "name": "DMA_CH2MADDR"
+      },
+      {
+        "byte_offset": 60,
+        "name": "DMA_CHMADDR_2"
+      },
+      {
+        "byte_offset": 68,
+        "description": "Channel 3 control register",
+        "fieldset": "GD_MERGED_C8AB3DA1047D_SVD_CH3CTL",
+        "name": "CH3CTL"
+      },
+      {
+        "byte_offset": 68,
+        "name": "DMA_CH3CTL"
+      },
+      {
+        "byte_offset": 68,
+        "name": "DMA_CHCTL_3"
+      },
+      {
+        "byte_offset": 72,
+        "description": "Channel 3 counter register",
+        "fieldset": "GD_MERGED_C8AB3DA1047D_SVD_CH3CNT",
+        "name": "CH3CNT"
+      },
+      {
+        "byte_offset": 72,
+        "name": "DMA_CH3CNT"
+      },
+      {
+        "byte_offset": 72,
+        "name": "DMA_CHCNT_3"
+      },
+      {
+        "byte_offset": 76,
+        "description": "Channel 3 peripheral base address register",
+        "fieldset": "GD_MERGED_C8AB3DA1047D_SVD_CH3PADDR",
+        "name": "CH3PADDR"
+      },
+      {
+        "byte_offset": 76,
+        "name": "DMA_CH3PADDR"
+      },
+      {
+        "byte_offset": 76,
+        "name": "DMA_CHPADDR_3"
+      },
+      {
+        "byte_offset": 80,
+        "description": "Channel 3 memory base address register",
+        "fieldset": "GD_MERGED_C8AB3DA1047D_SVD_CH3MADDR",
+        "name": "CH3MADDR"
+      },
+      {
+        "byte_offset": 80,
+        "name": "DMA_CH3MADDR"
+      },
+      {
+        "byte_offset": 80,
+        "name": "DMA_CHMADDR_3"
+      },
+      {
+        "byte_offset": 88,
+        "description": "Channel 4 control register",
+        "fieldset": "GD_MERGED_C8AB3DA1047D_SVD_CH4CTL",
+        "name": "CH4CTL"
+      },
+      {
+        "byte_offset": 88,
+        "name": "DMA_CH4CTL"
+      },
+      {
+        "byte_offset": 88,
+        "name": "DMA_CHCTL_4"
+      },
+      {
+        "byte_offset": 92,
+        "description": "Channel 4 counter register",
+        "fieldset": "GD_MERGED_C8AB3DA1047D_SVD_CH4CNT",
+        "name": "CH4CNT"
+      },
+      {
+        "byte_offset": 92,
+        "name": "DMA_CH4CNT"
+      },
+      {
+        "byte_offset": 92,
+        "name": "DMA_CHCNT_4"
+      },
+      {
+        "byte_offset": 96,
+        "description": "Channel 4 peripheral base address register",
+        "fieldset": "GD_MERGED_C8AB3DA1047D_SVD_CH4PADDR",
+        "name": "CH4PADDR"
+      },
+      {
+        "byte_offset": 96,
+        "name": "DMA_CH4PADDR"
+      },
+      {
+        "byte_offset": 96,
+        "name": "DMA_CHPADDR_4"
+      },
+      {
+        "byte_offset": 100,
+        "description": "Channel 4 memory base address register",
+        "fieldset": "GD_MERGED_C8AB3DA1047D_SVD_CH4MADDR",
+        "name": "CH4MADDR"
+      },
+      {
+        "byte_offset": 100,
+        "name": "DMA_CH4MADDR"
+      },
+      {
+        "byte_offset": 100,
+        "name": "DMA_CHMADDR_4"
+      },
+      {
+        "byte_offset": 108,
+        "description": "Channel 5 control register",
+        "fieldset": "GD_MERGED_C8AB3DA1047D_SVD_CH5CTL",
+        "name": "CH5CTL"
+      },
+      {
+        "byte_offset": 108,
+        "name": "DMA_CH5CTL"
+      },
+      {
+        "byte_offset": 108,
+        "name": "DMA_CHCTL_5"
+      },
+      {
+        "byte_offset": 112,
+        "description": "Channel 5 counter register",
+        "fieldset": "GD_MERGED_C8AB3DA1047D_SVD_CH5CNT",
+        "name": "CH5CNT"
+      },
+      {
+        "byte_offset": 112,
+        "name": "DMA_CH5CNT"
+      },
+      {
+        "byte_offset": 112,
+        "name": "DMA_CHCNT_5"
+      },
+      {
+        "byte_offset": 116,
+        "description": "Channel 5 peripheral base address register",
+        "fieldset": "GD_MERGED_C8AB3DA1047D_SVD_CH5PADDR",
+        "name": "CH5PADDR"
+      },
+      {
+        "byte_offset": 116,
+        "name": "DMA_CH5PADDR"
+      },
+      {
+        "byte_offset": 116,
+        "name": "DMA_CHPADDR_5"
+      },
+      {
+        "byte_offset": 120,
+        "description": "Channel 5 memory base address register",
+        "fieldset": "GD_MERGED_C8AB3DA1047D_SVD_CH5MADDR",
+        "name": "CH5MADDR"
+      },
+      {
+        "byte_offset": 120,
+        "name": "DMA_CH5MADDR"
+      },
+      {
+        "byte_offset": 120,
+        "name": "DMA_CHMADDR_5"
+      },
+      {
+        "byte_offset": 128,
+        "description": "Channel 6 control register",
+        "fieldset": "GD_MERGED_C8AB3DA1047D_SVD_CH6CTL",
+        "name": "CH6CTL"
+      },
+      {
+        "byte_offset": 128,
+        "name": "DMA_CH6CTL"
+      },
+      {
+        "byte_offset": 128,
+        "name": "DMA_CHCTL_6"
+      },
+      {
+        "byte_offset": 132,
+        "description": "Channel 6 counter register",
+        "fieldset": "GD_MERGED_C8AB3DA1047D_SVD_CH6CNT",
+        "name": "CH6CNT"
+      },
+      {
+        "byte_offset": 132,
+        "name": "DMA_CH6CNT"
+      },
+      {
+        "byte_offset": 132,
+        "name": "DMA_CHCNT_6"
+      },
+      {
+        "byte_offset": 136,
+        "description": "Channel 6 peripheral base address register",
+        "fieldset": "GD_MERGED_C8AB3DA1047D_SVD_CH6PADDR",
+        "name": "CH6PADDR"
+      },
+      {
+        "byte_offset": 136,
+        "name": "DMA_CH6PADDR"
+      },
+      {
+        "byte_offset": 136,
+        "name": "DMA_CHPADDR_6"
+      },
+      {
+        "byte_offset": 140,
+        "description": "Channel 6 memory base address register",
+        "fieldset": "GD_MERGED_C8AB3DA1047D_SVD_CH6MADDR",
+        "name": "CH6MADDR"
+      },
+      {
+        "byte_offset": 140,
+        "name": "DMA_CH6MADDR"
+      },
+      {
+        "byte_offset": 140,
+        "name": "DMA_CHMADDR_6"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_C8AB3DA1047D_FW_DMA_INTC": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "DMA_INTC_GIFC"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "DMA_INTC_FTFIFC"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "DMA_INTC_HTFIFC"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "name": "DMA_INTC_ERRIFC"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_C8AB3DA1047D_FW_DMA_INTF": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "DMA_INTF_GIF"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "DMA_INTF_FTFIF"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "DMA_INTF_HTFIF"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "name": "DMA_INTF_ERRIF"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_C8AB3DA1047D_SVD_CH0CNT": {
+    "description": "Channel 0 counter register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Transfer counter",
+        "name": "CNT"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_C8AB3DA1047D_SVD_CH0CTL": {
+    "description": "Channel 0 control register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Channel enable",
+        "name": "CHEN"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Enable bit for channel full transfer finish interrupt",
+        "name": "FTFIE"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Enable bit for channel half transfer finish interrupt",
+        "name": "HTFIE"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Enable bit for channel error interrupt",
+        "name": "ERRIE"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "Transfer direction",
+        "name": "DIR"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "Circular mode enable",
+        "name": "CMEN"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "Next address generation algorithm of peripheral",
+        "name": "PNAGA"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Next address generation algorithm of memory",
+        "name": "MNAGA"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 2,
+        "description": "Transfer data size of peripheral",
+        "name": "PWIDTH"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 2,
+        "description": "Transfer data size of memory",
+        "name": "MWIDTH"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 2,
+        "description": "Priority level",
+        "name": "PRIO"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "description": "Memory to Memory Mode",
+        "name": "M2M"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_C8AB3DA1047D_SVD_CH0MADDR": {
+    "description": "Channel 0 memory base address register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "Memory base address",
+        "name": "MADDR"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_C8AB3DA1047D_SVD_CH0PADDR": {
+    "description": "Channel 0 peripheral base address register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "Peripheral base address",
+        "name": "PADDR"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_C8AB3DA1047D_SVD_CH1CNT": {
+    "description": "Channel 1 counter register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Transfer counter",
+        "name": "CNT"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_C8AB3DA1047D_SVD_CH1CTL": {
+    "description": "Channel 1 control register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Channel enable",
+        "name": "CHEN"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Enable bit for channel full transfer finish interrupt",
+        "name": "FTFIE"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Enable bit for channel half transfer finish interrupt",
+        "name": "HTFIE"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Enable bit for channel error interrupt",
+        "name": "ERRIE"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "Transfer direction",
+        "name": "DIR"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "Circular mode enable",
+        "name": "CMEN"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "Next address generation algorithm of peripheral",
+        "name": "PNAGA"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Next address generation algorithm of memory",
+        "name": "MNAGA"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 2,
+        "description": "Transfer data size of peripheral",
+        "name": "PWIDTH"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 2,
+        "description": "Transfer data size of memory",
+        "name": "MWIDTH"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 2,
+        "description": "Priority level",
+        "name": "PRIO"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "description": "Memory to Memory Mode",
+        "name": "M2M"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_C8AB3DA1047D_SVD_CH1MADDR": {
+    "description": "Channel 1 memory base address register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "Memory base address",
+        "name": "MADDR"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_C8AB3DA1047D_SVD_CH1PADDR": {
+    "description": "Channel 1 peripheral base address register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "Peripheral base address",
+        "name": "PADDR"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_C8AB3DA1047D_SVD_CH2CNT": {
+    "description": "Channel 2 counter register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Transfer counter",
+        "name": "CNT"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_C8AB3DA1047D_SVD_CH2CTL": {
+    "description": "Channel 2 control register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Channel enable",
+        "name": "CHEN"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Enable bit for channel full transfer finish interrupt",
+        "name": "FTFIE"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Enable bit for channel half transfer finish interrupt",
+        "name": "HTFIE"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Enable bit for channel error interrupt",
+        "name": "ERRIE"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "Transfer direction",
+        "name": "DIR"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "Circular mode enable",
+        "name": "CMEN"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "Next address generation algorithm of peripheral",
+        "name": "PNAGA"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Next address generation algorithm of memory",
+        "name": "MNAGA"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 2,
+        "description": "Transfer data size of peripheral",
+        "name": "PWIDTH"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 2,
+        "description": "Transfer data size of memory",
+        "name": "MWIDTH"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 2,
+        "description": "Priority level",
+        "name": "PRIO"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "description": "Memory to Memory Mode",
+        "name": "M2M"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_C8AB3DA1047D_SVD_CH2MADDR": {
+    "description": "Channel 2 memory base address register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "Memory base address",
+        "name": "MADDR"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_C8AB3DA1047D_SVD_CH2PADDR": {
+    "description": "Channel 2 peripheral base address register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "Peripheral base address",
+        "name": "PADDR"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_C8AB3DA1047D_SVD_CH3CNT": {
+    "description": "Channel 3 counter register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Transfer counter",
+        "name": "CNT"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_C8AB3DA1047D_SVD_CH3CTL": {
+    "description": "Channel 3 control register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Channel enable",
+        "name": "CHEN"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Enable bit for channel full transfer finish interrupt",
+        "name": "FTFIE"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Enable bit for channel half transfer finish interrupt",
+        "name": "HTFIE"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Enable bit for channel error interrupt",
+        "name": "ERRIE"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "Transfer direction",
+        "name": "DIR"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "Circular mode enable",
+        "name": "CMEN"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "Next address generation algorithm of peripheral",
+        "name": "PNAGA"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Next address generation algorithm of memory",
+        "name": "MNAGA"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 2,
+        "description": "Transfer data size of peripheral",
+        "name": "PWIDTH"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 2,
+        "description": "Transfer data size of memory",
+        "name": "MWIDTH"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 2,
+        "description": "Priority level",
+        "name": "PRIO"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "description": "Memory to Memory Mode",
+        "name": "M2M"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_C8AB3DA1047D_SVD_CH3MADDR": {
+    "description": "Channel 3 memory base address register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "Memory base address",
+        "name": "MADDR"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_C8AB3DA1047D_SVD_CH3PADDR": {
+    "description": "Channel 3 peripheral base address register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "Peripheral base address",
+        "name": "PADDR"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_C8AB3DA1047D_SVD_CH4CNT": {
+    "description": "Channel 4 counter register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Transfer counter",
+        "name": "CNT"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_C8AB3DA1047D_SVD_CH4CTL": {
+    "description": "Channel 4 control register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Channel enable",
+        "name": "CHEN"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Enable bit for channel full transfer finish interrupt",
+        "name": "FTFIE"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Enable bit for channel half transfer finish interrupt",
+        "name": "HTFIE"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Enable bit for channel error interrupt",
+        "name": "ERRIE"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "Transfer direction",
+        "name": "DIR"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "Circular mode enable",
+        "name": "CMEN"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "Next address generation algorithm of peripheral",
+        "name": "PNAGA"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Next address generation algorithm of memory",
+        "name": "MNAGA"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 2,
+        "description": "Transfer data size of peripheral",
+        "name": "PWIDTH"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 2,
+        "description": "Transfer data size of memory",
+        "name": "MWIDTH"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 2,
+        "description": "Priority level",
+        "name": "PRIO"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "description": "Memory to Memory Mode",
+        "name": "M2M"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_C8AB3DA1047D_SVD_CH4MADDR": {
+    "description": "Channel 4 memory base address register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "Memory base address",
+        "name": "MADDR"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_C8AB3DA1047D_SVD_CH4PADDR": {
+    "description": "Channel 4 peripheral base address register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "Peripheral base address",
+        "name": "PADDR"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_C8AB3DA1047D_SVD_CH5CNT": {
+    "description": "Channel 5 counter register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Transfer counter",
+        "name": "CNT"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_C8AB3DA1047D_SVD_CH5CTL": {
+    "description": "Channel 5 control register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Channel enable",
+        "name": "CHEN"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Enable bit for channel full transfer finish interrupt",
+        "name": "FTFIE"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Enable bit for channel half transfer finish interrupt",
+        "name": "HTFIE"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Enable bit for channel error interrupt",
+        "name": "ERRIE"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "Transfer direction",
+        "name": "DIR"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "Circular mode enable",
+        "name": "CMEN"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "Next address generation algorithm of peripheral",
+        "name": "PNAGA"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Next address generation algorithm of memory",
+        "name": "MNAGA"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 2,
+        "description": "Transfer data size of peripheral",
+        "name": "PWIDTH"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 2,
+        "description": "Transfer data size of memory",
+        "name": "MWIDTH"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 2,
+        "description": "Priority level",
+        "name": "PRIO"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "description": "Memory to Memory Mode",
+        "name": "M2M"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_C8AB3DA1047D_SVD_CH5MADDR": {
+    "description": "Channel 5 memory base address register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "Memory base address",
+        "name": "MADDR"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_C8AB3DA1047D_SVD_CH5PADDR": {
+    "description": "Channel 5 peripheral base address register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "Peripheral base address",
+        "name": "PADDR"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_C8AB3DA1047D_SVD_CH6CNT": {
+    "description": "Channel 6 counter register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Transfer counter",
+        "name": "CNT"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_C8AB3DA1047D_SVD_CH6CTL": {
+    "description": "Channel 6 control register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Channel enable",
+        "name": "CHEN"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Enable bit for channel full transfer finish interrupt",
+        "name": "FTFIE"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Enable bit for channel half transfer finish interrupt",
+        "name": "HTFIE"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Enable bit for channel error interrupt",
+        "name": "ERRIE"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "Transfer direction",
+        "name": "DIR"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "Circular mode enable",
+        "name": "CMEN"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "Next address generation algorithm of peripheral",
+        "name": "PNAGA"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Next address generation algorithm of memory",
+        "name": "MNAGA"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 2,
+        "description": "Transfer data size of peripheral",
+        "name": "PWIDTH"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 2,
+        "description": "Transfer data size of memory",
+        "name": "MWIDTH"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 2,
+        "description": "Priority level",
+        "name": "PRIO"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "description": "Memory to Memory Mode",
+        "name": "M2M"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_C8AB3DA1047D_SVD_CH6MADDR": {
+    "description": "Channel 6 memory base address register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "Memory base address",
+        "name": "MADDR"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_C8AB3DA1047D_SVD_CH6PADDR": {
+    "description": "Channel 6 peripheral base address register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "Peripheral base address",
+        "name": "PADDR"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_C8AB3DA1047D_SVD_INTC": {
+    "description": "Interrupt flag clear register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Clear global interrupt flag of channel 0",
+        "name": "GIFC0"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Clear bit for full transfer finish flag of channel 0",
+        "name": "FTFIFC0"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Clear bit for half transfer finish flag of channel 0",
+        "name": "HTFIFC0"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Clear bit for error flag of channel 0",
+        "name": "ERRIFC0"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "Clear global interrupt flag of channel 1",
+        "name": "GIFC1"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "Clear bit for full transfer finish flag of channel 1",
+        "name": "FTFIFC1"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "Clear bit for half transfer finish flag of channel 1",
+        "name": "HTFIFC1"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Clear bit for error flag of channel 1",
+        "name": "ERRIFC1"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "Clear global interrupt flag of channel 2",
+        "name": "GIFC2"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "Clear bit for full transfer finish flag of channel 2",
+        "name": "FTFIFC2"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "Clear bit for half transfer finish flag of channel 2",
+        "name": "HTFIFC2"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "description": "Clear bit for error flag of channel 2",
+        "name": "ERRIFC2"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "description": "Clear global interrupt flag of channel 3",
+        "name": "GIFC3"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "description": "Clear bit for full transfer finish flag of channel 3",
+        "name": "FTFIFC3"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "description": "Clear bit for half transfer finish flag of channel 3",
+        "name": "HTFIFC3"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "Clear bit for error flag of channel 3",
+        "name": "ERRIFC3"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "description": "Clear global interrupt flag of channel 4",
+        "name": "GIFC4"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 1,
+        "description": "Clear bit for full transfer finish flag of channel 4",
+        "name": "FTFIFC4"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 1,
+        "description": "Clear bit for half transfer finish flag of channel 4",
+        "name": "HTFIFC4"
+      },
+      {
+        "bit_offset": 19,
+        "bit_size": 1,
+        "description": "Clear bit for error flag of channel 4",
+        "name": "ERRIFC4"
+      },
+      {
+        "bit_offset": 20,
+        "bit_size": 1,
+        "description": "Clear global interrupt flag of channel 5",
+        "name": "GIFC5"
+      },
+      {
+        "bit_offset": 21,
+        "bit_size": 1,
+        "description": "Clear bit for full transfer finish flag of channel 5",
+        "name": "FTFIFC5"
+      },
+      {
+        "bit_offset": 22,
+        "bit_size": 1,
+        "description": "Clear bit for half transfer finish flag of channel 5",
+        "name": "HTFIFC5"
+      },
+      {
+        "bit_offset": 23,
+        "bit_size": 1,
+        "description": "Clear bit for error flag of channel 5",
+        "name": "ERRIFC5"
+      },
+      {
+        "bit_offset": 24,
+        "bit_size": 1,
+        "description": "Clear global interrupt flag of channel 6",
+        "name": "GIFC6"
+      },
+      {
+        "bit_offset": 25,
+        "bit_size": 1,
+        "description": "Clear bit for full transfer finish flag of channel 6",
+        "name": "FTFIFC6"
+      },
+      {
+        "bit_offset": 26,
+        "bit_size": 1,
+        "description": "Clear bit for half transfer finish flag of channel 6",
+        "name": "HTFIFC6"
+      },
+      {
+        "bit_offset": 27,
+        "bit_size": 1,
+        "description": "Clear bit for error flag of channel 6",
+        "name": "ERRIFC6"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_C8AB3DA1047D_SVD_INTF": {
+    "description": "Interrupt flag register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Global interrupt flag of channel 0",
+        "name": "GIF0"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Full Transfer finish flag of channe 0",
+        "name": "FTFIF0"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Half transfer finish flag of channel 0",
+        "name": "HTFIF0"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Error flag of channel 0",
+        "name": "ERRIF0"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "Global interrupt flag of channel 1",
+        "name": "GIF1"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "Full Transfer finish flag of channe 1",
+        "name": "FTFIF1"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "Half transfer finish flag of channel 1",
+        "name": "HTFIF1"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Error flag of channel 1",
+        "name": "ERRIF1"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "Global interrupt flag of channel 2",
+        "name": "GIF2"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "Full Transfer finish flag of channe 2",
+        "name": "FTFIF2"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "Half transfer finish flag of channel 2",
+        "name": "HTFIF2"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "description": "Error flag of channel 2",
+        "name": "ERRIF2"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "description": "Global interrupt flag of channel 3",
+        "name": "GIF3"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "description": "Full Transfer finish flag of channe 3",
+        "name": "FTFIF3"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "description": "Half transfer finish flag of channel 3",
+        "name": "HTFIF3"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "Error flag of channel 3",
+        "name": "ERRIF3"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "description": "Global interrupt flag of channel 4",
+        "name": "GIF4"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 1,
+        "description": "Full Transfer finish flag of channe 4",
+        "name": "FTFIF4"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 1,
+        "description": "Half transfer finish flag of channel 4",
+        "name": "HTFIF4"
+      },
+      {
+        "bit_offset": 19,
+        "bit_size": 1,
+        "description": "Error flag of channel 4",
+        "name": "ERRIF4"
+      },
+      {
+        "bit_offset": 20,
+        "bit_size": 1,
+        "description": "Global interrupt flag of channel 5",
+        "name": "GIF5"
+      },
+      {
+        "bit_offset": 21,
+        "bit_size": 1,
+        "description": "Full Transfer finish flag of channe 5",
+        "name": "FTFIF5"
+      },
+      {
+        "bit_offset": 22,
+        "bit_size": 1,
+        "description": "Half transfer finish flag of channel 5",
+        "name": "HTFIF5"
+      },
+      {
+        "bit_offset": 23,
+        "bit_size": 1,
+        "description": "Error flag of channel 5",
+        "name": "ERRIF5"
+      },
+      {
+        "bit_offset": 24,
+        "bit_size": 1,
+        "description": "Global interrupt flag of channel 6",
+        "name": "GIF6"
+      },
+      {
+        "bit_offset": 25,
+        "bit_size": 1,
+        "description": "Full Transfer finish flag of channe 6",
+        "name": "FTFIF6"
+      },
+      {
+        "bit_offset": 26,
+        "bit_size": 1,
+        "description": "Half transfer finish flag of channel 6",
+        "name": "HTFIF6"
+      },
+      {
+        "bit_offset": 27,
+        "bit_size": 1,
+        "description": "Error flag of channel 6",
+        "name": "ERRIF6"
+      }
+    ]
+  }
+}

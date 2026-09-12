@@ -1,0 +1,709 @@
+{
+  "cores": [
+    {
+      "dma_channels": [],
+      "interrupts": [
+        {
+          "name": "WWDGT",
+          "number": 0
+        },
+        {
+          "name": "Tamper",
+          "number": 2
+        },
+        {
+          "name": "RTC",
+          "number": 3
+        },
+        {
+          "name": "FMC",
+          "number": 4
+        },
+        {
+          "name": "RCU_CTC",
+          "number": 5
+        },
+        {
+          "name": "EXTI_Line0",
+          "number": 6
+        },
+        {
+          "name": "EXTI_Line1",
+          "number": 7
+        },
+        {
+          "name": "EXTI_Line2",
+          "number": 8
+        },
+        {
+          "name": "EXTI_Line3",
+          "number": 9
+        },
+        {
+          "name": "EXTI_Line4",
+          "number": 10
+        },
+        {
+          "name": "DMA0_Channel0",
+          "number": 11
+        },
+        {
+          "name": "DMA0_Channel1",
+          "number": 12
+        },
+        {
+          "name": "DMA0_Channel2",
+          "number": 13
+        },
+        {
+          "name": "DMA0_Channel3",
+          "number": 14
+        },
+        {
+          "name": "DMA0_Channel4",
+          "number": 15
+        },
+        {
+          "name": "DMA0_Channel5",
+          "number": 16
+        },
+        {
+          "name": "DMA0_Channel6",
+          "number": 17
+        },
+        {
+          "name": "ADC0_1",
+          "number": 18
+        },
+        {
+          "name": "USBD_HP_CAN0_TX",
+          "number": 19
+        },
+        {
+          "name": "USBD_LP_CAN0_RX0",
+          "number": 20
+        },
+        {
+          "name": "CAN0_RX1",
+          "number": 21
+        },
+        {
+          "name": "CAN0_EWMC",
+          "number": 22
+        },
+        {
+          "name": "EXTI_line9_5",
+          "number": 23
+        },
+        {
+          "name": "TIMER0_BRK_TIMER8",
+          "number": 24
+        },
+        {
+          "name": "TIMER0_UP_TIMER9",
+          "number": 25
+        },
+        {
+          "name": "TIMER0_TRG_CMT_TIMER10",
+          "number": 26
+        },
+        {
+          "name": "TIMER0_CC",
+          "number": 27
+        },
+        {
+          "name": "TIMER1",
+          "number": 28
+        },
+        {
+          "name": "TIMER2",
+          "number": 29
+        },
+        {
+          "name": "TIMER3",
+          "number": 30
+        },
+        {
+          "name": "I2C0_EV",
+          "number": 31
+        },
+        {
+          "name": "I2C0_ER",
+          "number": 32
+        },
+        {
+          "name": "I2C1_EV",
+          "number": 33
+        },
+        {
+          "name": "I2C1_ER",
+          "number": 34
+        },
+        {
+          "name": "SPI0",
+          "number": 35
+        },
+        {
+          "name": "SPI1",
+          "number": 36
+        },
+        {
+          "name": "USART0",
+          "number": 37
+        },
+        {
+          "name": "USART1",
+          "number": 38
+        },
+        {
+          "name": "USART2",
+          "number": 39
+        },
+        {
+          "name": "EXTI_line15_10",
+          "number": 40
+        },
+        {
+          "name": "RTC_Alarm",
+          "number": 41
+        },
+        {
+          "name": "USBD_WKUP",
+          "number": 42
+        },
+        {
+          "name": "TIMER7_BRK_TIMER11",
+          "number": 43
+        },
+        {
+          "name": "TIMER7_UP_TIMER12",
+          "number": 44
+        },
+        {
+          "name": "TIMER7_TRG_CMT_TIMER13",
+          "number": 45
+        },
+        {
+          "name": "TIMER7_CC",
+          "number": 46
+        },
+        {
+          "name": "ADC2",
+          "number": 47
+        },
+        {
+          "name": "EXMC",
+          "number": 48
+        },
+        {
+          "name": "SDIO",
+          "number": 49
+        },
+        {
+          "name": "TIMER4",
+          "number": 50
+        },
+        {
+          "name": "SPI2",
+          "number": 51
+        },
+        {
+          "name": "UART3",
+          "number": 52
+        },
+        {
+          "name": "UART4",
+          "number": 53
+        },
+        {
+          "name": "TIMER5",
+          "number": 54
+        },
+        {
+          "name": "TIMER6",
+          "number": 55
+        },
+        {
+          "name": "DMA1_Channel0",
+          "number": 56
+        },
+        {
+          "name": "DMA1_Channel1",
+          "number": 57
+        },
+        {
+          "name": "DMA1_Channel2",
+          "number": 58
+        },
+        {
+          "name": "DMA1_Channel3_4",
+          "number": 59
+        }
+      ],
+      "name": "cm4",
+      "peripherals": [
+        {
+          "address": 1073816576,
+          "name": "ADC0",
+          "registers": {
+            "block": "GD_MERGED_E91AC787C82C",
+            "kind": "gdadc0029a3a29",
+            "version": "v1"
+          }
+        },
+        {
+          "address": 1073817600,
+          "name": "ADC1",
+          "registers": {
+            "block": "GD_MERGED_015B0F001E66",
+            "kind": "gdadc11ea2e108",
+            "version": "v1"
+          }
+        },
+        {
+          "address": 1073822720,
+          "name": "ADC2",
+          "registers": {
+            "block": "GD_MERGED_015B0F001E66",
+            "kind": "gdadc21ea2e108",
+            "version": "v1"
+          }
+        },
+        {
+          "address": 1073807360,
+          "name": "AFIO",
+          "registers": {
+            "block": "GD_MERGED_1A7DAE5120DC",
+            "kind": "gdafio1fe35ae3",
+            "version": "v1"
+          }
+        },
+        {
+          "address": 1073769472,
+          "name": "BKP",
+          "registers": {
+            "block": "GD_MERGED_E93FCD514B35",
+            "kind": "gdbkp8e888478",
+            "version": "v1"
+          }
+        },
+        {
+          "address": 1073767424,
+          "name": "CAN0",
+          "registers": {
+            "block": "GD_MERGED_8A07CF8E0E4B",
+            "kind": "gdcan0745d81b4",
+            "version": "v1"
+          }
+        },
+        {
+          "address": 1073885184,
+          "name": "CRC",
+          "registers": {
+            "block": "GD_MERGED_8E537DC71839",
+            "kind": "gdcrc7e93d37f",
+            "version": "v1"
+          }
+        },
+        {
+          "address": 1073793024,
+          "name": "CTC",
+          "registers": {
+            "block": "GD_MERGED_FC02E261CA5A",
+            "kind": "gdctc291a8e76",
+            "version": "v1"
+          }
+        },
+        {
+          "address": 1073771520,
+          "name": "DAC",
+          "registers": {
+            "block": "DAC",
+            "kind": "gddac1e2c6112",
+            "version": "v1"
+          }
+        },
+        {
+          "address": 3758366720,
+          "name": "DBG",
+          "registers": {
+            "block": "GD_MERGED_897495A6AC66",
+            "kind": "gddbgf4de7e7e",
+            "version": "v1"
+          }
+        },
+        {
+          "address": 1073872896,
+          "name": "DMA0",
+          "registers": {
+            "block": "GD_MERGED_C8AB3DA1047D",
+            "kind": "gddma0da92d6b8",
+            "version": "v1"
+          }
+        },
+        {
+          "address": 1073873920,
+          "name": "DMA1",
+          "registers": {
+            "block": "GD_MERGED_C8AB3DA1047D",
+            "kind": "gddma1da92d6b8",
+            "version": "v1"
+          }
+        },
+        {
+          "address": 2684354560,
+          "name": "EXMC",
+          "registers": {
+            "block": "GD_MERGED_014800D36787",
+            "kind": "gdexmc295523c9",
+            "version": "v1"
+          }
+        },
+        {
+          "address": 1073808384,
+          "name": "EXTI",
+          "registers": {
+            "block": "GD_MERGED_ECB613BBF6CF",
+            "kind": "gdextid89e722e",
+            "version": "v1"
+          }
+        },
+        {
+          "address": 1073881088,
+          "name": "FMC",
+          "registers": {
+            "block": "GD_MERGED_457F9D70F2F9",
+            "kind": "gdfmce3f4b51f",
+            "version": "v1"
+          }
+        },
+        {
+          "address": 1073754112,
+          "name": "FWDGT",
+          "registers": {
+            "block": "GD_MERGED_0BFD2B0913F8",
+            "kind": "gdfwdgt82a1393b",
+            "version": "v1"
+          }
+        },
+        {
+          "address": 1073809408,
+          "name": "GPIOA",
+          "registers": {
+            "block": "GD_MERGED_3E7E51AAC352",
+            "kind": "gdgpioa10d059cd",
+            "version": "v1"
+          }
+        },
+        {
+          "address": 1073810432,
+          "name": "GPIOB",
+          "registers": {
+            "block": "GD_MERGED_3E7E51AAC352",
+            "kind": "gdgpiob10d059cd",
+            "version": "v1"
+          }
+        },
+        {
+          "address": 1073811456,
+          "name": "GPIOC",
+          "registers": {
+            "block": "GD_MERGED_3E7E51AAC352",
+            "kind": "gdgpioc10d059cd",
+            "version": "v1"
+          }
+        },
+        {
+          "address": 1073812480,
+          "name": "GPIOD",
+          "registers": {
+            "block": "GD_MERGED_3E7E51AAC352",
+            "kind": "gdgpiod10d059cd",
+            "version": "v1"
+          }
+        },
+        {
+          "address": 1073813504,
+          "name": "GPIOE",
+          "registers": {
+            "block": "GD_MERGED_3E7E51AAC352",
+            "kind": "gdgpioe10d059cd",
+            "version": "v1"
+          }
+        },
+        {
+          "address": 1073814528,
+          "name": "GPIOF",
+          "registers": {
+            "block": "GD_MERGED_3E7E51AAC352",
+            "kind": "gdgpiof10d059cd",
+            "version": "v1"
+          }
+        },
+        {
+          "address": 1073815552,
+          "name": "GPIOG",
+          "registers": {
+            "block": "GD_MERGED_3E7E51AAC352",
+            "kind": "gdgpiog10d059cd",
+            "version": "v1"
+          }
+        },
+        {
+          "address": 1073763328,
+          "name": "I2C0",
+          "registers": {
+            "block": "GD_MERGED_93B0337BA7A0",
+            "kind": "gdi2c08680c8a9",
+            "version": "v1"
+          }
+        },
+        {
+          "address": 1073764352,
+          "name": "I2C1",
+          "registers": {
+            "block": "GD_MERGED_93B0337BA7A0",
+            "kind": "gdi2c18680c8a9",
+            "version": "v1"
+          }
+        },
+        {
+          "address": 1073770496,
+          "name": "PMU",
+          "registers": {
+            "block": "GD_MERGED_5666562F8079",
+            "kind": "gdpmu2741867c",
+            "version": "v1"
+          }
+        },
+        {
+          "address": 1073876992,
+          "name": "RCU",
+          "registers": {
+            "block": "GD_MERGED_663ACB246974",
+            "kind": "gdrcu0d59b71f",
+            "version": "v1"
+          }
+        },
+        {
+          "address": 1073752064,
+          "name": "RTC",
+          "registers": {
+            "block": "GD_MERGED_207892AB5BE8",
+            "kind": "gdrtcea273093",
+            "version": "v1"
+          }
+        },
+        {
+          "address": 1073840128,
+          "name": "SDIO",
+          "registers": {
+            "block": "GD_MERGED_BF156A8931CD",
+            "kind": "gdsdio1150fafe",
+            "version": "v1"
+          }
+        },
+        {
+          "address": 1073819648,
+          "name": "SPI0",
+          "registers": {
+            "block": "GD_MERGED_755BDF3AB841",
+            "kind": "gdspi0bcf184c7",
+            "version": "v1"
+          }
+        },
+        {
+          "address": 1073756160,
+          "name": "SPI1",
+          "registers": {
+            "block": "GD_MERGED_755BDF3AB841",
+            "kind": "gdspi1bcf184c7",
+            "version": "v1"
+          }
+        },
+        {
+          "address": 1073757184,
+          "name": "SPI2",
+          "registers": {
+            "block": "GD_MERGED_755BDF3AB841",
+            "kind": "gdspi2bcf184c7",
+            "version": "v1"
+          }
+        },
+        {
+          "address": 1073818624,
+          "name": "TIMER0",
+          "registers": {
+            "block": "GD_MERGED_8C07478B0386",
+            "kind": "gdtimer070ab4e75",
+            "version": "v1"
+          }
+        },
+        {
+          "address": 1073741824,
+          "name": "TIMER1",
+          "registers": {
+            "block": "GD_MERGED_CC327E3CCE67",
+            "kind": "gdtimer186ad945d",
+            "version": "v1"
+          }
+        },
+        {
+          "address": 1073742848,
+          "name": "TIMER2",
+          "registers": {
+            "block": "GD_MERGED_CC327E3CCE67",
+            "kind": "gdtimer286ad945d",
+            "version": "v1"
+          }
+        },
+        {
+          "address": 1073743872,
+          "name": "TIMER3",
+          "registers": {
+            "block": "GD_MERGED_CC327E3CCE67",
+            "kind": "gdtimer386ad945d",
+            "version": "v1"
+          }
+        },
+        {
+          "address": 1073744896,
+          "name": "TIMER4",
+          "registers": {
+            "block": "GD_MERGED_CC327E3CCE67",
+            "kind": "gdtimer486ad945d",
+            "version": "v1"
+          }
+        },
+        {
+          "address": 1073745920,
+          "name": "TIMER5",
+          "registers": {
+            "block": "GD_MERGED_B996034DF974",
+            "kind": "gdtimer5e4531133",
+            "version": "v1"
+          }
+        },
+        {
+          "address": 1073746944,
+          "name": "TIMER6",
+          "registers": {
+            "block": "GD_MERGED_B996034DF974",
+            "kind": "gdtimer6e4531133",
+            "version": "v1"
+          }
+        },
+        {
+          "address": 1073820672,
+          "name": "TIMER7",
+          "registers": {
+            "block": "GD_MERGED_8C07478B0386",
+            "kind": "gdtimer770ab4e75",
+            "version": "v1"
+          }
+        },
+        {
+          "address": 1073761280,
+          "name": "UART3",
+          "registers": {
+            "block": "GD_MERGED_5830DC39A4B2",
+            "kind": "gduart30ff4dff4",
+            "version": "v1"
+          }
+        },
+        {
+          "address": 1073762304,
+          "name": "UART4",
+          "registers": {
+            "block": "GD_MERGED_5830DC39A4B2",
+            "kind": "gduart40ff4dff4",
+            "version": "v1"
+          }
+        },
+        {
+          "address": 1073821696,
+          "name": "USART0",
+          "registers": {
+            "block": "GD_MERGED_7C2777BCC34D",
+            "kind": "gdusart024485341",
+            "version": "v1"
+          }
+        },
+        {
+          "address": 1073759232,
+          "name": "USART1",
+          "registers": {
+            "block": "GD_MERGED_7C2777BCC34D",
+            "kind": "gdusart124485341",
+            "version": "v1"
+          }
+        },
+        {
+          "address": 1073760256,
+          "name": "USART2",
+          "registers": {
+            "block": "GD_MERGED_7C2777BCC34D",
+            "kind": "gdusart224485341",
+            "version": "v1"
+          }
+        },
+        {
+          "address": 1073765376,
+          "name": "USBD",
+          "registers": {
+            "block": "USBD",
+            "kind": "gdusbd81a0e1ed",
+            "version": "v1"
+          }
+        },
+        {
+          "address": 1073753088,
+          "name": "WWDGT",
+          "registers": {
+            "block": "GD_MERGED_0793F10281D0",
+            "kind": "gdwwdgt8402382d",
+            "version": "v1"
+          }
+        },
+        {
+          "name": "USBRAM",
+          "address": 1073766400,
+          "registers": {
+            "kind": "usbram",
+            "version": "16x1_512",
+            "block": "USBRAM"
+          }
+        }
+      ],
+      "pins": []
+    }
+  ],
+  "device_id": 0,
+  "die": "GD32",
+  "docs": [],
+  "family": "GD32",
+  "line": "GD32F30x",
+  "memory": [
+    [
+      {
+        "address": 134217728,
+        "kind": "flash",
+        "name": "IROM1_BANK0",
+        "settings": {
+          "erase_size": 2048,
+          "erase_value": 255,
+          "write_size": 2
+        },
+        "size": 262144
+      },
+      {
+        "address": 536870912,
+        "kind": "ram",
+        "name": "IRAM1",
+        "size": 49152
+      }
+    ]
+  ],
+  "name": "GD32F303VC",
+  "packages": []
+}

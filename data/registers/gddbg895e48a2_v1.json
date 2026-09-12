@@ -1,0 +1,180 @@
+{
+  "block/DBG": {
+    "description": "Debug support",
+    "items": [
+      {
+        "access": "Read",
+        "byte_offset": 0,
+        "description": "ID code register",
+        "fieldset": "ID",
+        "name": "ID"
+      },
+      {
+        "byte_offset": 4,
+        "description": "Control register 0",
+        "fieldset": "CTL0",
+        "name": "CTL0"
+      }
+    ]
+  },
+  "fieldset/CTL0": {
+    "description": "Control register 0",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Sleep mode hold register",
+        "name": "SLP_HOLD"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Deep-sleep mode hold register",
+        "name": "DSLP_HOLD"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Standby mode hold register",
+        "name": "STB_HOLD"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "Trace pin allocation enable",
+        "name": "TRACE_IOEN"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "WWDGT hold bit",
+        "name": "WWDGT_HOLD"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "FWDGT hold bit",
+        "name": "FWDGT_HOLD"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "TIMER 0 hold bit",
+        "name": "TIMER0_HOLD"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "description": "TIMER 1 hold bit",
+        "name": "TIMER1_HOLD"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "description": "TIMER 2 hold bit",
+        "name": "TIMER2_HOLD"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "description": "TIMER 23 hold bit",
+        "name": "TIMER3_HOLD"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "description": "CAN0 hold bit",
+        "name": "CAN0_HOLD"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "I2C0 hold bit",
+        "name": "I2C0_HOLD"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "description": "I2C1 hold bit",
+        "name": "I2C1_HOLD"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 1,
+        "description": "TIMER4_HOLD",
+        "name": "TIMER4_HOLD"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 1,
+        "description": "TIMER 5 hold bit",
+        "name": "TIMER5_HOLD"
+      },
+      {
+        "bit_offset": 19,
+        "bit_size": 1,
+        "description": "TIMER 6 hold bit",
+        "name": "TIMER6_HOLD"
+      },
+      {
+        "bit_offset": 20,
+        "bit_size": 1,
+        "description": "TIMER 7 hold bit",
+        "name": "TIMER7_HOLD"
+      },
+      {
+        "bit_offset": 21,
+        "bit_size": 1,
+        "description": "CAN1 hold bit",
+        "name": "CAN1_HOLD"
+      },
+      {
+        "bit_offset": 25,
+        "bit_size": 1,
+        "description": "TIMER 11 hold bit",
+        "name": "TIMER11_HOLD"
+      },
+      {
+        "bit_offset": 26,
+        "bit_size": 1,
+        "description": "TIMER 12 hold bit",
+        "name": "TIMER12_HOLD"
+      },
+      {
+        "bit_offset": 27,
+        "bit_size": 1,
+        "description": "TIMER 13 hold bit",
+        "name": "TIMER13_HOLD"
+      },
+      {
+        "bit_offset": 28,
+        "bit_size": 1,
+        "description": "TIMER 8 hold bit",
+        "name": "TIMER8_HOLD"
+      },
+      {
+        "bit_offset": 29,
+        "bit_size": 1,
+        "description": "TIMER 9 hold bit",
+        "name": "TIMER9_HOLD"
+      },
+      {
+        "bit_offset": 30,
+        "bit_size": 1,
+        "description": "TIMER 10 hold bit",
+        "name": "TIMER10_HOLD"
+      }
+    ]
+  },
+  "fieldset/ID": {
+    "description": "ID code register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "DBG ID code register",
+        "name": "ID_CODE"
+      }
+    ]
+  }
+}

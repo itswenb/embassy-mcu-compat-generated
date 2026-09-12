@@ -1,0 +1,223 @@
+{
+  "block/RTC": {
+    "description": "Real-time clock",
+    "items": [
+      {
+        "byte_offset": 0,
+        "description": "RTC interrupt enable register",
+        "fieldset": "INTEN",
+        "name": "INTEN"
+      },
+      {
+        "byte_offset": 4,
+        "description": "control register",
+        "fieldset": "CTL",
+        "name": "CTL"
+      },
+      {
+        "byte_offset": 8,
+        "description": "RTC prescaler high register",
+        "fieldset": "PSCH",
+        "name": "PSCH"
+      },
+      {
+        "byte_offset": 12,
+        "description": "RTC prescaler low register",
+        "fieldset": "PSCL",
+        "name": "PSCL"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 16,
+        "description": "RTC divider high register",
+        "fieldset": "DIVH",
+        "name": "DIVH"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 20,
+        "description": "RTC divider low register",
+        "fieldset": "DIVL",
+        "name": "DIVL"
+      },
+      {
+        "byte_offset": 24,
+        "description": "RTC counter high register",
+        "fieldset": "CNTH",
+        "name": "CNTH"
+      },
+      {
+        "byte_offset": 28,
+        "description": "RTC counter low register",
+        "fieldset": "CNTL",
+        "name": "CNTL"
+      },
+      {
+        "access": "Write",
+        "byte_offset": 32,
+        "description": "Alarm high register",
+        "fieldset": "ALRMH",
+        "name": "ALRMH"
+      },
+      {
+        "access": "Write",
+        "byte_offset": 36,
+        "description": "RTC alarm low register",
+        "fieldset": "ALRML",
+        "name": "ALRML"
+      }
+    ]
+  },
+  "fieldset/ALRMH": {
+    "description": "Alarm high register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Alarm value high",
+        "name": "ALRM"
+      }
+    ]
+  },
+  "fieldset/ALRML": {
+    "description": "RTC alarm low register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "alarm value low",
+        "name": "ALRM"
+      }
+    ]
+  },
+  "fieldset/CNTH": {
+    "description": "RTC counter high register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "RTC counter value high",
+        "name": "CNT"
+      }
+    ]
+  },
+  "fieldset/CNTL": {
+    "description": "RTC counter low register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "RTC conuter value low",
+        "name": "CNT"
+      }
+    ]
+  },
+  "fieldset/CTL": {
+    "description": "control register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Sencond interrupt flag",
+        "name": "SCIF"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Alarm interrupt flag",
+        "name": "ALRMIF"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Overflow interrupt flag",
+        "name": "OVIF"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Registers synchronized flag",
+        "name": "RSYNF"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "Configuration mode flag",
+        "name": "CMF"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "Last write operation finished flag",
+        "name": "LWOFF"
+      }
+    ]
+  },
+  "fieldset/DIVH": {
+    "description": "RTC divider high register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 4,
+        "description": "RTC divider value high",
+        "name": "DIV"
+      }
+    ]
+  },
+  "fieldset/DIVL": {
+    "description": "RTC divider low register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "RTC divider value low",
+        "name": "DIV"
+      }
+    ]
+  },
+  "fieldset/INTEN": {
+    "description": "RTC interrupt enable register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Second interrupt",
+        "name": "SCIE"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Alarm interrupt enable",
+        "name": "ALRMIE"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Overflow interrupt enable",
+        "name": "OVIE"
+      }
+    ]
+  },
+  "fieldset/PSCH": {
+    "description": "RTC prescaler high register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 4,
+        "description": "RTC prescaler value high",
+        "name": "PSC"
+      }
+    ]
+  },
+  "fieldset/PSCL": {
+    "description": "RTC prescaler low register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "RTC prescaler value low",
+        "name": "PSC"
+      }
+    ]
+  }
+}

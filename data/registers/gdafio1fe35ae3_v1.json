@@ -1,0 +1,566 @@
+{
+  "block/GD_MERGED_1A7DAE5120DC": {
+    "items": [
+      {
+        "byte_offset": 0,
+        "fieldset": "GD_MERGED_1A7DAE5120DC_FW_AFIO_EC",
+        "name": "AFIO_EC"
+      },
+      {
+        "byte_offset": 0,
+        "description": "Event control register",
+        "fieldset": "GD_MERGED_1A7DAE5120DC_SVD_EC",
+        "name": "EC"
+      },
+      {
+        "byte_offset": 4,
+        "fieldset": "GD_MERGED_1A7DAE5120DC_FW_AFIO_PCF0",
+        "name": "AFIO_PCF0"
+      },
+      {
+        "byte_offset": 4,
+        "description": "AFIO port configuration register 0",
+        "fieldset": "GD_MERGED_1A7DAE5120DC_SVD_PCF0",
+        "name": "PCF0"
+      },
+      {
+        "byte_offset": 8,
+        "name": "AFIO_EXTISS0"
+      },
+      {
+        "byte_offset": 8,
+        "description": "EXTI sources selection register 0",
+        "fieldset": "GD_MERGED_1A7DAE5120DC_SVD_EXTISS0",
+        "name": "EXTISS0"
+      },
+      {
+        "byte_offset": 12,
+        "name": "AFIO_EXTISS1"
+      },
+      {
+        "byte_offset": 12,
+        "description": "EXTI sources selection register 1",
+        "fieldset": "GD_MERGED_1A7DAE5120DC_SVD_EXTISS1",
+        "name": "EXTISS1"
+      },
+      {
+        "byte_offset": 16,
+        "name": "AFIO_EXTISS2"
+      },
+      {
+        "byte_offset": 16,
+        "description": "EXTI sources selection register 2",
+        "fieldset": "GD_MERGED_1A7DAE5120DC_SVD_EXTISS2",
+        "name": "EXTISS2"
+      },
+      {
+        "byte_offset": 20,
+        "name": "AFIO_EXTISS3"
+      },
+      {
+        "byte_offset": 20,
+        "description": "EXTI sources selection register 3",
+        "fieldset": "GD_MERGED_1A7DAE5120DC_SVD_EXTISS3",
+        "name": "EXTISS3"
+      },
+      {
+        "byte_offset": 28,
+        "fieldset": "GD_MERGED_1A7DAE5120DC_FW_AFIO_PCF1",
+        "name": "AFIO_PCF1"
+      },
+      {
+        "byte_offset": 28,
+        "description": "AFIO port configuration register 1",
+        "fieldset": "GD_MERGED_1A7DAE5120DC_SVD_PCF1",
+        "name": "PCF1"
+      },
+      {
+        "byte_offset": 32,
+        "fieldset": "GD_MERGED_1A7DAE5120DC_FW_AFIO_CPSCTL",
+        "name": "AFIO_CPSCTL"
+      },
+      {
+        "byte_offset": 32,
+        "description": "IO compensation control register",
+        "fieldset": "GD_MERGED_1A7DAE5120DC_SVD_CPSCTL",
+        "name": "CPSCTL"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_1A7DAE5120DC_FW_AFIO_CPSCTL": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "AFIO_CPSCTL_CPS_EN"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "name": "AFIO_CPSCTL_CPS_RDY"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_1A7DAE5120DC_FW_AFIO_EC": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 4,
+        "name": "AFIO_EC_PIN"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 3,
+        "name": "AFIO_EC_PORT"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "name": "AFIO_EC_EOE"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_1A7DAE5120DC_FW_AFIO_PCF0": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "AFIO_PCF0_SPI0_REMAP"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "AFIO_PCF0_I2C0_REMAP"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "AFIO_PCF0_USART0_REMAP"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "name": "AFIO_PCF0_USART1_REMAP"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 2,
+        "name": "AFIO_PCF0_USART2_REMAP"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 2,
+        "name": "AFIO_PCF0_TIMER0_REMAP"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 2,
+        "name": "AFIO_PCF0_TIMER1_REMAP"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 2,
+        "name": "AFIO_PCF0_TIMER2_REMAP"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "name": "AFIO_PCF0_TIMER3_REMAP"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 2,
+        "name": "AFIO_PCF0_CAN_REMAP"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "name": "AFIO_PCF0_PD01_REMAP"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "name": "AFIO_PCF0_TIMER4CH3_IREMAP"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 1,
+        "name": "AFIO_PCF0_ADC0_ETRGINS_REMAP"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 1,
+        "name": "AFIO_PCF0_ADC0_ETRGROU_REMAP"
+      },
+      {
+        "bit_offset": 19,
+        "bit_size": 1,
+        "name": "AFIO_PCF0_ADC1_ETRGINS_REMAP"
+      },
+      {
+        "bit_offset": 20,
+        "bit_size": 1,
+        "name": "AFIO_PCF0_ADC1_ETRGROU_REMAP"
+      },
+      {
+        "bit_offset": 24,
+        "bit_size": 3,
+        "name": "AFIO_PCF0_SWJ_CFG"
+      },
+      {
+        "bit_offset": 28,
+        "bit_size": 1,
+        "name": "AFIO_PCF0_SPI2_REMAP"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_1A7DAE5120DC_FW_AFIO_PCF1": {
+    "fields": [
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "name": "AFIO_PCF1_TIMER8_REMAP"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "name": "AFIO_PCF1_TIMER9_REMAP"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "name": "AFIO_PCF1_TIMER10_REMAP"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "name": "AFIO_PCF1_TIMER12_REMAP"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "name": "AFIO_PCF1_TIMER13_REMAP"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "name": "AFIO_PCF1_EXMC_NADV"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 2,
+        "name": "AFIO_PCF1_CTC_REMAP"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_1A7DAE5120DC_SVD_CPSCTL": {
+    "description": "IO compensation control register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "I/O compensation cell enable",
+        "name": "CPS_EN"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "I/O compensation cell is really or not",
+        "name": "CPS_RDY"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_1A7DAE5120DC_SVD_EC": {
+    "description": "Event control register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 4,
+        "description": "Event output pin selection",
+        "name": "PIN"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 3,
+        "description": "Event output port selection",
+        "name": "PORT"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Event output enable",
+        "name": "EOE"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_1A7DAE5120DC_SVD_EXTISS0": {
+    "description": "EXTI sources selection register 0",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 4,
+        "description": "EXTI 0 sources selection",
+        "name": "EXTI0_SS"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 4,
+        "description": "EXTI 1 sources selection",
+        "name": "EXTI1_SS"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 4,
+        "description": "EXTI 2 sources selection",
+        "name": "EXTI2_SS"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 4,
+        "description": "EXTI 3 sources selection",
+        "name": "EXTI3_SS"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_1A7DAE5120DC_SVD_EXTISS1": {
+    "description": "EXTI sources selection register 1",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 4,
+        "description": "EXTI 4 sources selection",
+        "name": "EXTI4_SS"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 4,
+        "description": "EXTI 5 sources selection",
+        "name": "EXTI5_SS"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 4,
+        "description": "EXTI 6 sources selection",
+        "name": "EXTI6_SS"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 4,
+        "description": "EXTI 7 sources selection",
+        "name": "EXTI7_SS"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_1A7DAE5120DC_SVD_EXTISS2": {
+    "description": "EXTI sources selection register 2",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 4,
+        "description": "EXTI 8 sources selection",
+        "name": "EXTI8_SS"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 4,
+        "description": "EXTI 9 sources selection",
+        "name": "EXTI9_SS"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 4,
+        "description": "EXTI 10 sources selection",
+        "name": "EXTI10_SS"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 4,
+        "description": "EXTI 11 sources selection",
+        "name": "EXTI11_SS"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_1A7DAE5120DC_SVD_EXTISS3": {
+    "description": "EXTI sources selection register 3",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 4,
+        "description": "EXTI 12 sources selection",
+        "name": "EXTI12_SS"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 4,
+        "description": "EXTI 13 sources selection",
+        "name": "EXTI13_SS"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 4,
+        "description": "EXTI 14 sources selection",
+        "name": "EXTI14_SS"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 4,
+        "description": "EXTI 15 sources selection",
+        "name": "EXTI15_SS"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_1A7DAE5120DC_SVD_PCF0": {
+    "description": "AFIO port configuration register 0",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "SPI0 remapping",
+        "name": "SPI0_REMAP"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "I2C0 remapping",
+        "name": "I2C0_REMAP"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "USART0 remapping",
+        "name": "USART0_REMAP"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "USART1 remapping",
+        "name": "USART1_REMAP"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 2,
+        "description": "USART2 remapping",
+        "name": "USART2_REMAP"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 2,
+        "description": "TIMER0 remapping",
+        "name": "TIMER0_REMAP"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 2,
+        "description": "TIMER1 remapping",
+        "name": "TIMER1_REMAP"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 2,
+        "description": "TIMER2 remapping",
+        "name": "TIMER2_REMAP"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "description": "TIMER3 remapping",
+        "name": "TIMER3_REMAP"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 2,
+        "description": "CAN interface remapping",
+        "name": "CAN_REMAP"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "Port D0/Port D1 mapping on OSC_IN/OSC_OUT",
+        "name": "PD01_REMAP"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "description": "TIMER4 channel3 internal remapping",
+        "name": "TIMER4CH3_IREMAP"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 1,
+        "description": "ADC 0 external trigger injected conversion remapping",
+        "name": "ADC0_ETRGINJ_REMAP"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 1,
+        "description": "ADC 0 external trigger regular conversion remapping",
+        "name": "ADC0_ETRGREG_REMAP"
+      },
+      {
+        "bit_offset": 19,
+        "bit_size": 1,
+        "description": "ADC 1 external trigger injected conversion remapping",
+        "name": "ADC1_ETRGINJ_REMAP"
+      },
+      {
+        "bit_offset": 20,
+        "bit_size": 1,
+        "description": "ADC 1 external trigger regular conversion remapping",
+        "name": "ADC1_ETRGREG_REMAP"
+      },
+      {
+        "bit_offset": 24,
+        "bit_size": 3,
+        "description": "Serial wire JTAG configuration",
+        "name": "SWJ_CFG"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_1A7DAE5120DC_SVD_PCF1": {
+    "description": "AFIO port configuration register 1",
+    "fields": [
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "TIMER8 remapping",
+        "name": "TIMER8_REMAP"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "TIMER9 remapping",
+        "name": "TIMER9_REMAP"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "TIMER10 remapping",
+        "name": "TIMER10_REMAP"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "TIMER12 remapping",
+        "name": "TIMER12_REMAP"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "TIMER13 remapping",
+        "name": "TIMER13_REMAP"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "FSMC_NADV connect/disconnect",
+        "name": "FSMC_NADV"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 2,
+        "description": "CTC remapping",
+        "name": "CTC_REMAP"
+      }
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "block/USBFS_PWRCLK": {
+    "description": "USB on the go full speed",
+    "items": [
+      {
+        "byte_offset": 0,
+        "description": "power and clock gating control register (PWRCLKCTL)",
+        "fieldset": "PWRCLKCTL",
+        "name": "PWRCLKCTL"
+      }
+    ]
+  },
+  "fieldset/PWRCLKCTL": {
+    "description": "power and clock gating control register (PWRCLKCTL)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Stop the USB clock",
+        "name": "SUCLK"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Stop HCLK",
+        "name": "SHCLK"
+      }
+    ]
+  }
+}

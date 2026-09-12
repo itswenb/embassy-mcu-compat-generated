@@ -1,0 +1,41 @@
+[package]
+name = "stm32-metapac"
+version = "21.0.0"
+edition = "2024"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/itswenb/embassy-mcu-compat-generated"
+description = "面向 Embassy 的 GD32 MCU 兼容外设访问包。"
+
+# `cargo publish` is unable to figure out which .rs files are needed due to the include! magic.
+include = [
+    "**/*.rs",
+    "**/*.x",
+    "Cargo.toml",
+    "README.md",
+]
+
+[dependencies]
+cortex-m = "0.7.6"
+cortex-m-rt = { version = ">=0.6.15,<0.8", optional = true }
+defmt = { version = "1.0.0", optional = true }
+
+[features]
+default = ["pac"]
+
+# Build the actual PAC. Set by default.
+# If you just want the metadata, unset it with `default-features = false`.
+pac = []
+
+# Build the chip metadata.
+# If set, a const `stm32_metapac::METADATA` will be exported, containing all the
+# metadata for the currently selected chip.
+metadata = []
+
+# Implement the `defmt::Format` trait for many types.
+defmt = ["dep:defmt"]
+
+rt = ["cortex-m-rt/device"]
+
+# Chip-selection features
+stm32f103vc = []
+stm32f103vf = []

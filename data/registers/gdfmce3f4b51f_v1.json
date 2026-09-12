@@ -1,0 +1,723 @@
+{
+  "block/GD_MERGED_457F9D70F2F9": {
+    "items": [
+      {
+        "byte_offset": 0,
+        "fieldset": "GD_MERGED_457F9D70F2F9_FW_FMC_WS",
+        "name": "FMC_WS"
+      },
+      {
+        "byte_offset": 0,
+        "description": "wait state counter register",
+        "fieldset": "GD_MERGED_457F9D70F2F9_SVD_WS",
+        "name": "WS"
+      },
+      {
+        "byte_offset": 4,
+        "fieldset": "GD_MERGED_457F9D70F2F9_FW_FMC_KEY0",
+        "name": "FMC_KEY0"
+      },
+      {
+        "access": "Write",
+        "byte_offset": 4,
+        "description": "Unlock key register",
+        "fieldset": "GD_MERGED_457F9D70F2F9_SVD_KEY",
+        "name": "KEY"
+      },
+      {
+        "byte_offset": 8,
+        "fieldset": "GD_MERGED_457F9D70F2F9_FW_FMC_OBKEY",
+        "name": "FMC_OBKEY"
+      },
+      {
+        "access": "Write",
+        "byte_offset": 8,
+        "description": "Option byte unlock key register",
+        "fieldset": "GD_MERGED_457F9D70F2F9_SVD_OBKEY",
+        "name": "OBKEY"
+      },
+      {
+        "byte_offset": 12,
+        "fieldset": "GD_MERGED_457F9D70F2F9_FW_FMC_STAT0",
+        "name": "FMC_STAT0"
+      },
+      {
+        "byte_offset": 12,
+        "description": "Status register 0",
+        "fieldset": "GD_MERGED_457F9D70F2F9_SVD_STAT0",
+        "name": "STAT0"
+      },
+      {
+        "byte_offset": 16,
+        "description": "Control register 0",
+        "fieldset": "GD_MERGED_457F9D70F2F9_SVD_CTL0",
+        "name": "CTL0"
+      },
+      {
+        "byte_offset": 16,
+        "fieldset": "GD_MERGED_457F9D70F2F9_FW_FMC_CTL0",
+        "name": "FMC_CTL0"
+      },
+      {
+        "access": "Write",
+        "byte_offset": 20,
+        "description": "Address register 0",
+        "fieldset": "GD_MERGED_457F9D70F2F9_SVD_ADDR0",
+        "name": "ADDR0"
+      },
+      {
+        "byte_offset": 20,
+        "fieldset": "GD_MERGED_457F9D70F2F9_FW_FMC_ADDR0",
+        "name": "FMC_ADDR0"
+      },
+      {
+        "byte_offset": 28,
+        "fieldset": "GD_MERGED_457F9D70F2F9_FW_FMC_OBSTAT",
+        "name": "FMC_OBSTAT"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 28,
+        "description": "Option byte status register",
+        "fieldset": "GD_MERGED_457F9D70F2F9_SVD_OBSTAT",
+        "name": "OBSTAT"
+      },
+      {
+        "byte_offset": 32,
+        "fieldset": "GD_MERGED_457F9D70F2F9_FW_FMC_WP",
+        "name": "FMC_WP"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 32,
+        "description": "Erase/Program Protection register",
+        "fieldset": "GD_MERGED_457F9D70F2F9_SVD_WPR",
+        "name": "WPR"
+      },
+      {
+        "byte_offset": 68,
+        "fieldset": "GD_MERGED_457F9D70F2F9_FW_FMC_KEY1",
+        "name": "FMC_KEY1"
+      },
+      {
+        "access": "Write",
+        "byte_offset": 68,
+        "description": "Unlock key register 1",
+        "fieldset": "GD_MERGED_457F9D70F2F9_SVD_KEY1",
+        "name": "KEY1"
+      },
+      {
+        "byte_offset": 76,
+        "fieldset": "GD_MERGED_457F9D70F2F9_FW_FMC_STAT1",
+        "name": "FMC_STAT1"
+      },
+      {
+        "byte_offset": 76,
+        "description": "Status register 1",
+        "fieldset": "GD_MERGED_457F9D70F2F9_SVD_STAT1",
+        "name": "STAT1"
+      },
+      {
+        "byte_offset": 80,
+        "description": "Control register 1",
+        "fieldset": "GD_MERGED_457F9D70F2F9_SVD_CTL1",
+        "name": "CTL1"
+      },
+      {
+        "byte_offset": 80,
+        "fieldset": "GD_MERGED_457F9D70F2F9_FW_FMC_CTL1",
+        "name": "FMC_CTL1"
+      },
+      {
+        "access": "Write",
+        "byte_offset": 84,
+        "description": "Address register 1",
+        "fieldset": "GD_MERGED_457F9D70F2F9_SVD_ADDR1",
+        "name": "ADDR1"
+      },
+      {
+        "byte_offset": 84,
+        "fieldset": "GD_MERGED_457F9D70F2F9_FW_FMC_ADDR1",
+        "name": "FMC_ADDR1"
+      },
+      {
+        "byte_offset": 252,
+        "fieldset": "GD_MERGED_457F9D70F2F9_FW_FMC_WSEN",
+        "name": "FMC_WSEN"
+      },
+      {
+        "byte_offset": 252,
+        "description": "Wait state enable register",
+        "fieldset": "GD_MERGED_457F9D70F2F9_SVD_WSEN",
+        "name": "WSEN"
+      },
+      {
+        "byte_offset": 256,
+        "fieldset": "GD_MERGED_457F9D70F2F9_FW_FMC_PID",
+        "name": "FMC_PID"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 256,
+        "description": "Product ID register",
+        "fieldset": "GD_MERGED_457F9D70F2F9_SVD_PID",
+        "name": "PID"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_457F9D70F2F9_FW_FMC_ADDR0": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "name": "FMC_ADDR0_ADDR"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_457F9D70F2F9_FW_FMC_ADDR1": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "name": "FMC_ADDR1_ADDR"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_457F9D70F2F9_FW_FMC_CTL0": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "FMC_CTL0_PG"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "FMC_CTL0_PER"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "FMC_CTL0_MER"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "name": "FMC_CTL0_OBPG"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "name": "FMC_CTL0_OBER"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "name": "FMC_CTL0_START"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "name": "FMC_CTL0_LK"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "name": "FMC_CTL0_OBWEN"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "name": "FMC_CTL0_ERRIE"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "name": "FMC_CTL0_ENDIE"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_457F9D70F2F9_FW_FMC_CTL1": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "FMC_CTL1_PG"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "FMC_CTL1_PER"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "FMC_CTL1_MER"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "name": "FMC_CTL1_START"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "name": "FMC_CTL1_LK"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "name": "FMC_CTL1_ERRIE"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "name": "FMC_CTL1_ENDIE"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_457F9D70F2F9_FW_FMC_KEY0": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "name": "FMC_KEY0_KEY"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_457F9D70F2F9_FW_FMC_KEY1": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "name": "FMC_KEY1_KEY"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_457F9D70F2F9_FW_FMC_OBKEY": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "name": "FMC_OBKEY_OBKEY"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_457F9D70F2F9_FW_FMC_OBSTAT": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "FMC_OBSTAT_OBERR"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "FMC_OBSTAT_SPC"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 8,
+        "name": "FMC_OBSTAT_USER"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 16,
+        "name": "FMC_OBSTAT_DATA"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_457F9D70F2F9_FW_FMC_PID": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "name": "FMC_PID_PID"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_457F9D70F2F9_FW_FMC_STAT0": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "FMC_STAT0_BUSY"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "FMC_STAT0_PGERR"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "name": "FMC_STAT0_WPERR"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "name": "FMC_STAT0_ENDF"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_457F9D70F2F9_FW_FMC_STAT1": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "FMC_STAT1_BUSY"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "FMC_STAT1_PGERR"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "name": "FMC_STAT1_WPERR"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "name": "FMC_STAT1_ENDF"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_457F9D70F2F9_FW_FMC_WP": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "name": "FMC_WP_WP"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_457F9D70F2F9_FW_FMC_WS": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 3,
+        "name": "FMC_WS_WSCNT"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_457F9D70F2F9_FW_FMC_WSEN": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "FMC_WSEN_WSEN"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "FMC_WSEN_BPEN"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_457F9D70F2F9_SVD_ADDR0": {
+    "description": "Address register 0",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "Flash erase/program command address bits",
+        "name": "ADDR"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_457F9D70F2F9_SVD_ADDR1": {
+    "description": "Address register 1",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "Flash erase/program command address bits",
+        "name": "ADDR"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_457F9D70F2F9_SVD_CTL0": {
+    "description": "Control register 0",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Main flash program for bank0 command bit",
+        "name": "PG"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Main flash page erase for bank0 command bit",
+        "name": "PER"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Main flash mass erase for bank0 command bit",
+        "name": "MER"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "Option bytes program command bit",
+        "name": "OBPG"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "Option bytes erase command bit",
+        "name": "OBER"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "Send erase command to FMC bit",
+        "name": "START"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "FMC_CTL0 lock bit",
+        "name": "LK"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "Option byte erase/program enable bit",
+        "name": "OBWEN"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "Error interrupt enable bit",
+        "name": "ERRIE"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "description": "End of operation interrupt enable bit",
+        "name": "ENDIE"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_457F9D70F2F9_SVD_CTL1": {
+    "description": "Control register 1",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Main flash program for bank0 command bit",
+        "name": "PG"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Main flash page erase for bank0 command bit",
+        "name": "PER"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Main flash mass erase for bank0 command bit",
+        "name": "MER"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "Send erase command to FMC bit",
+        "name": "START"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "FMC_CTL0 lock bit",
+        "name": "LK"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "Error interrupt enable bit",
+        "name": "ERRIE"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "description": "End of operation interrupt enable bit",
+        "name": "ENDIE"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_457F9D70F2F9_SVD_KEY": {
+    "description": "Unlock key register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "FMC_CTL unlock register",
+        "name": "KEY"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_457F9D70F2F9_SVD_KEY1": {
+    "description": "Unlock key register 1",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "FMC_CTL unlock register",
+        "name": "KEY"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_457F9D70F2F9_SVD_OBKEY": {
+    "description": "Option byte unlock key register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "FMC_ OBCTL0 option byte operation unlock register",
+        "name": "OBKEY"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_457F9D70F2F9_SVD_OBSTAT": {
+    "description": "Option byte status register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Option bytes read error bit",
+        "name": "OBERR"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Option bytes security protection code",
+        "name": "SPC"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 8,
+        "description": "Store USER of option bytes block after system reset",
+        "name": "USER"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 16,
+        "description": "Store DATA[15:0] of option bytes block after system reset",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_457F9D70F2F9_SVD_PID": {
+    "description": "Product ID register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "Product reserved ID code register",
+        "name": "PID"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_457F9D70F2F9_SVD_STAT0": {
+    "description": "Status register 0",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "The flash is busy bit",
+        "name": "BUSY"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Program error flag bit",
+        "name": "PGERR"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "Erase/Program protection error flag bit",
+        "name": "WPERR"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "End of operation flag bit",
+        "name": "ENDF"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_457F9D70F2F9_SVD_STAT1": {
+    "description": "Status register 1",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "The flash is busy bit",
+        "name": "BUSY"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Program error flag bit",
+        "name": "PGERR"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "Erase/Program protection error flag bit",
+        "name": "WPERR"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "End of operation flag bit",
+        "name": "ENDF"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_457F9D70F2F9_SVD_WPR": {
+    "description": "Erase/Program Protection register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "Store WP[31:0] of option bytes block after system reset",
+        "name": "WP"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_457F9D70F2F9_SVD_WS": {
+    "description": "wait state counter register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 3,
+        "description": "wait state counter register",
+        "name": "WSCNT"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_457F9D70F2F9_SVD_WSEN": {
+    "description": "Wait state enable register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "FMC wait state enable register",
+        "name": "WSEN"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "FMC bit program enable register",
+        "name": "BPEN"
+      }
+    ]
+  }
+}

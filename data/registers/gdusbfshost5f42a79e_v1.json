@@ -1,0 +1,1992 @@
+{
+  "block/USBFS_HOST": {
+    "description": "USB on the go full speed host",
+    "items": [
+      {
+        "byte_offset": 0,
+        "description": "host configuration register (HCTL)",
+        "fieldset": "HCTL",
+        "name": "HCTL"
+      },
+      {
+        "byte_offset": 4,
+        "description": "Host frame interval register",
+        "fieldset": "HFT",
+        "name": "HFT"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 8,
+        "description": "OTG_FS host frame number/frame time remaining register (HFINFR)",
+        "fieldset": "HFINFR",
+        "name": "HFINFR"
+      },
+      {
+        "byte_offset": 16,
+        "description": "Host periodic transmit FIFO/queue status register (HPTFQSTAT)",
+        "fieldset": "HPTFQSTAT",
+        "name": "HPTFQSTAT"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 20,
+        "description": "Host all channels interrupt register",
+        "fieldset": "HACHINT",
+        "name": "HACHINT"
+      },
+      {
+        "byte_offset": 24,
+        "description": "host all channels interrupt mask register",
+        "fieldset": "HACHINTEN",
+        "name": "HACHINTEN"
+      },
+      {
+        "byte_offset": 64,
+        "description": "Host port control and status register (USBFS_HPCS)",
+        "fieldset": "HPCS",
+        "name": "HPCS"
+      },
+      {
+        "byte_offset": 256,
+        "description": "host channel-0 characteristics register (HCH0CTL)",
+        "fieldset": "HCH0CTL",
+        "name": "HCH0CTL"
+      },
+      {
+        "byte_offset": 264,
+        "description": "host channel-0 interrupt register (USBFS_HCHxINTF)",
+        "fieldset": "HCH0INTF",
+        "name": "HCH0INTF"
+      },
+      {
+        "byte_offset": 268,
+        "description": "host channel-0 interrupt enable register (HCH0INTEN)",
+        "fieldset": "HCH0INTEN",
+        "name": "HCH0INTEN"
+      },
+      {
+        "byte_offset": 272,
+        "description": "host channel-0 transfer length register",
+        "fieldset": "HCH0LEN",
+        "name": "HCH0LEN"
+      },
+      {
+        "byte_offset": 288,
+        "description": "host channel-1 characteristics register (HCH1CTL)",
+        "fieldset": "HCH1CTL",
+        "name": "HCH1CTL"
+      },
+      {
+        "byte_offset": 296,
+        "description": "host channel-1 interrupt register (HCH1INTF)",
+        "fieldset": "HCH1INTF",
+        "name": "HCH1INTF"
+      },
+      {
+        "byte_offset": 300,
+        "description": "host channel-1 interrupt enable register (HCH1INTEN)",
+        "fieldset": "HCH1INTEN",
+        "name": "HCH1INTEN"
+      },
+      {
+        "byte_offset": 304,
+        "description": "host channel-1 transfer length register",
+        "fieldset": "HCH1LEN",
+        "name": "HCH1LEN"
+      },
+      {
+        "byte_offset": 320,
+        "description": "host channel-2 characteristics register (HCH2CTL)",
+        "fieldset": "HCH2CTL",
+        "name": "HCH2CTL"
+      },
+      {
+        "byte_offset": 328,
+        "description": "host channel-2 interrupt register (HCH2INTF)",
+        "fieldset": "HCH2INTF",
+        "name": "HCH2INTF"
+      },
+      {
+        "byte_offset": 332,
+        "description": "host channel-2 interrupt enable register (HCH2INTEN)",
+        "fieldset": "HCH2INTEN",
+        "name": "HCH2INTEN"
+      },
+      {
+        "byte_offset": 336,
+        "description": "host channel-2 transfer length register",
+        "fieldset": "HCH2LEN",
+        "name": "HCH2LEN"
+      },
+      {
+        "byte_offset": 352,
+        "description": "host channel-3 characteristics register (HCH3CTL)",
+        "fieldset": "HCH3CTL",
+        "name": "HCH3CTL"
+      },
+      {
+        "byte_offset": 360,
+        "description": "host channel-3 interrupt register (HCH3INTF)",
+        "fieldset": "HCH3INTF",
+        "name": "HCH3INTF"
+      },
+      {
+        "byte_offset": 364,
+        "description": "host channel-3 interrupt enable register (HCH3INTEN)",
+        "fieldset": "HCH3INTEN",
+        "name": "HCH3INTEN"
+      },
+      {
+        "byte_offset": 368,
+        "description": "host channel-3 transfer length register",
+        "fieldset": "HCH3LEN",
+        "name": "HCH3LEN"
+      },
+      {
+        "byte_offset": 384,
+        "description": "host channel-4 characteristics register (HCH4CTL)",
+        "fieldset": "HCH4CTL",
+        "name": "HCH4CTL"
+      },
+      {
+        "byte_offset": 392,
+        "description": "host channel-4 interrupt register (HCH4INTF)",
+        "fieldset": "HCH4INTF",
+        "name": "HCH4INTF"
+      },
+      {
+        "byte_offset": 396,
+        "description": "host channel-4 interrupt enable register (HCH4INTEN)",
+        "fieldset": "HCH4INTEN",
+        "name": "HCH4INTEN"
+      },
+      {
+        "byte_offset": 400,
+        "description": "host channel-4 transfer length register",
+        "fieldset": "HCH4LEN",
+        "name": "HCH4LEN"
+      },
+      {
+        "byte_offset": 416,
+        "description": "host channel-5 characteristics register (HCH5CTL)",
+        "fieldset": "HCH5CTL",
+        "name": "HCH5CTL"
+      },
+      {
+        "byte_offset": 424,
+        "description": "host channel-5 interrupt register (HCH5INTF)",
+        "fieldset": "HCH5INTF",
+        "name": "HCH5INTF"
+      },
+      {
+        "byte_offset": 428,
+        "description": "host channel-5 interrupt enable register (HCH5INTEN)",
+        "fieldset": "HCH5INTEN",
+        "name": "HCH5INTEN"
+      },
+      {
+        "byte_offset": 432,
+        "description": "host channel-5 transfer length register",
+        "fieldset": "HCH5LEN",
+        "name": "HCH5LEN"
+      },
+      {
+        "byte_offset": 448,
+        "description": "host channel-6 characteristics register (HCH6CTL)",
+        "fieldset": "HCH6CTL",
+        "name": "HCH6CTL"
+      },
+      {
+        "byte_offset": 456,
+        "description": "host channel-6 interrupt register (HCH6INTF)",
+        "fieldset": "HCH6INTF",
+        "name": "HCH6INTF"
+      },
+      {
+        "byte_offset": 460,
+        "description": "host channel-6 interrupt enable register (HCH6INTEN)",
+        "fieldset": "HCH6INTEN",
+        "name": "HCH6INTEN"
+      },
+      {
+        "byte_offset": 464,
+        "description": "host channel-6 transfer length register",
+        "fieldset": "HCH6LEN",
+        "name": "HCH6LEN"
+      },
+      {
+        "byte_offset": 480,
+        "description": "host channel-7 characteristics register (HCH7CTL)",
+        "fieldset": "HCH7CTL",
+        "name": "HCH7CTL"
+      },
+      {
+        "byte_offset": 488,
+        "description": "host channel-7 interrupt register (HCH7INTF)",
+        "fieldset": "HCH7INTF",
+        "name": "HCH7INTF"
+      },
+      {
+        "byte_offset": 492,
+        "description": "host channel-7 interrupt enable register (HCH7INTEN)",
+        "fieldset": "HCH7INTEN",
+        "name": "HCH7INTEN"
+      },
+      {
+        "byte_offset": 496,
+        "description": "host channel-7 transfer length register",
+        "fieldset": "HCH7LEN",
+        "name": "HCH7LEN"
+      }
+    ]
+  },
+  "fieldset/HACHINT": {
+    "description": "Host all channels interrupt register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "Host all channel interrupts",
+        "name": "HACHINT"
+      }
+    ]
+  },
+  "fieldset/HACHINTEN": {
+    "description": "host all channels interrupt mask register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "Channel interrupt enable",
+        "name": "CINTEN"
+      }
+    ]
+  },
+  "fieldset/HCH0CTL": {
+    "description": "host channel-0 characteristics register (HCH0CTL)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 11,
+        "description": "Maximum packet size",
+        "name": "MPL"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 4,
+        "description": "Endpoint number",
+        "name": "EPNUM"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "Endpoint direction",
+        "name": "EPDIR"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 1,
+        "description": "Low-speed device",
+        "name": "LSD"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 2,
+        "description": "Endpoint type",
+        "name": "EPTYPE"
+      },
+      {
+        "bit_offset": 22,
+        "bit_size": 7,
+        "description": "Device address",
+        "name": "DAR"
+      },
+      {
+        "bit_offset": 29,
+        "bit_size": 1,
+        "description": "Odd frame",
+        "name": "ODDFRM"
+      },
+      {
+        "bit_offset": 30,
+        "bit_size": 1,
+        "description": "Channel disable",
+        "name": "CDIS"
+      },
+      {
+        "bit_offset": 31,
+        "bit_size": 1,
+        "description": "Channel enable",
+        "name": "CEN"
+      }
+    ]
+  },
+  "fieldset/HCH0INTEN": {
+    "description": "host channel-0 interrupt enable register (HCH0INTEN)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Transfer completed interrupt enable",
+        "name": "TFIE"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Channel halted interrupt enable",
+        "name": "CHIE"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "STALL interrupt enable",
+        "name": "STALLIE"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "NAK interrupt enable",
+        "name": "NAKIE"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "ACK interrupt enable",
+        "name": "ACKIE"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "USB bus error interrupt enable",
+        "name": "USBERIE"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "Babble error interrupt enable",
+        "name": "BBERIE"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "request queue overrun interrupt enable",
+        "name": "REQOVRIE"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "Data toggle error interrupt enable",
+        "name": "DTERIE"
+      }
+    ]
+  },
+  "fieldset/HCH0INTF": {
+    "description": "host channel-0 interrupt register (USBFS_HCHxINTF)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Transfer finished",
+        "name": "TF"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Channel halted",
+        "name": "CH"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "STALL response received interrupt",
+        "name": "STALL"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "NAK response received interrupt",
+        "name": "NAK"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "ACK response received/transmitted interrupt",
+        "name": "ACK"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "USB bus error",
+        "name": "USBER"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "Babble error",
+        "name": "BBER"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "Request queue overrun",
+        "name": "REQOVR"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "Data toggle error",
+        "name": "DTER"
+      }
+    ]
+  },
+  "fieldset/HCH0LEN": {
+    "description": "host channel-0 transfer length register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 19,
+        "description": "Transfer length",
+        "name": "TLEN"
+      },
+      {
+        "bit_offset": 19,
+        "bit_size": 10,
+        "description": "Packet count",
+        "name": "PCNT"
+      },
+      {
+        "bit_offset": 29,
+        "bit_size": 2,
+        "description": "Data PID",
+        "name": "DPID"
+      }
+    ]
+  },
+  "fieldset/HCH1CTL": {
+    "description": "host channel-1 characteristics register (HCH1CTL)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 11,
+        "description": "Maximum packet size",
+        "name": "MPL"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 4,
+        "description": "Endpoint number",
+        "name": "EPNUM"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "Endpoint direction",
+        "name": "EPDIR"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 1,
+        "description": "Low-speed device",
+        "name": "LSD"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 2,
+        "description": "Endpoint type",
+        "name": "EPTYPE"
+      },
+      {
+        "bit_offset": 22,
+        "bit_size": 7,
+        "description": "Device address",
+        "name": "DAR"
+      },
+      {
+        "bit_offset": 29,
+        "bit_size": 1,
+        "description": "Odd frame",
+        "name": "ODDFRM"
+      },
+      {
+        "bit_offset": 30,
+        "bit_size": 1,
+        "description": "Channel disable",
+        "name": "CDIS"
+      },
+      {
+        "bit_offset": 31,
+        "bit_size": 1,
+        "description": "Channel enable",
+        "name": "CEN"
+      }
+    ]
+  },
+  "fieldset/HCH1INTEN": {
+    "description": "host channel-1 interrupt enable register (HCH1INTEN)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Transfer completed interrupt enable",
+        "name": "TFIE"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Channel halted interrupt enable",
+        "name": "CHIE"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "STALL interrupt enable",
+        "name": "STALLIE"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "NAK interrupt enable",
+        "name": "NAKIE"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "ACK interrupt enable",
+        "name": "ACKIE"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "USB bus error interrupt enable",
+        "name": "USBERIE"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "Babble error interrupt enable",
+        "name": "BBERIE"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "request queue overrun interrupt enable",
+        "name": "REQOVRIE"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "Data toggle error interrupt enable",
+        "name": "DTERIE"
+      }
+    ]
+  },
+  "fieldset/HCH1INTF": {
+    "description": "host channel-1 interrupt register (HCH1INTF)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Transfer finished",
+        "name": "TF"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Channel halted",
+        "name": "CH"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "STALL response received interrupt",
+        "name": "STALL"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "NAK response received interrupt",
+        "name": "NAK"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "ACK response received/transmitted interrupt",
+        "name": "ACK"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "USB bus error",
+        "name": "USBER"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "Babble error",
+        "name": "BBER"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "Request queue overrun",
+        "name": "REQOVR"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "Data toggle error",
+        "name": "DTER"
+      }
+    ]
+  },
+  "fieldset/HCH1LEN": {
+    "description": "host channel-1 transfer length register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 19,
+        "description": "Transfer length",
+        "name": "TLEN"
+      },
+      {
+        "bit_offset": 19,
+        "bit_size": 10,
+        "description": "Packet count",
+        "name": "PCNT"
+      },
+      {
+        "bit_offset": 29,
+        "bit_size": 2,
+        "description": "Data PID",
+        "name": "DPID"
+      }
+    ]
+  },
+  "fieldset/HCH2CTL": {
+    "description": "host channel-2 characteristics register (HCH2CTL)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 11,
+        "description": "Maximum packet size",
+        "name": "MPL"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 4,
+        "description": "Endpoint number",
+        "name": "EPNUM"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "Endpoint direction",
+        "name": "EPDIR"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 1,
+        "description": "Low-speed device",
+        "name": "LSD"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 2,
+        "description": "Endpoint type",
+        "name": "EPTYPE"
+      },
+      {
+        "bit_offset": 22,
+        "bit_size": 7,
+        "description": "Device address",
+        "name": "DAR"
+      },
+      {
+        "bit_offset": 29,
+        "bit_size": 1,
+        "description": "Odd frame",
+        "name": "ODDFRM"
+      },
+      {
+        "bit_offset": 30,
+        "bit_size": 1,
+        "description": "Channel disable",
+        "name": "CDIS"
+      },
+      {
+        "bit_offset": 31,
+        "bit_size": 1,
+        "description": "Channel enable",
+        "name": "CEN"
+      }
+    ]
+  },
+  "fieldset/HCH2INTEN": {
+    "description": "host channel-2 interrupt enable register (HCH2INTEN)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Transfer completed interrupt enable",
+        "name": "TFIE"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Channel halted interrupt enable",
+        "name": "CHIE"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "STALL interrupt enable",
+        "name": "STALLIE"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "NAK interrupt enable",
+        "name": "NAKIE"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "ACK interrupt enable",
+        "name": "ACKIE"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "USB bus error interrupt enable",
+        "name": "USBERIE"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "Babble error interrupt enable",
+        "name": "BBERIE"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "request queue overrun interrupt enable",
+        "name": "REQOVRIE"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "Data toggle error interrupt enable",
+        "name": "DTERIE"
+      }
+    ]
+  },
+  "fieldset/HCH2INTF": {
+    "description": "host channel-2 interrupt register (HCH2INTF)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Transfer finished",
+        "name": "TF"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Channel halted",
+        "name": "CH"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "STALL response received interrupt",
+        "name": "STALL"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "NAK response received interrupt",
+        "name": "NAK"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "ACK response received/transmitted interrupt",
+        "name": "ACK"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "USB bus error",
+        "name": "USBER"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "Babble error",
+        "name": "BBER"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "Request queue overrun",
+        "name": "REQOVR"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "Data toggle error",
+        "name": "DTER"
+      }
+    ]
+  },
+  "fieldset/HCH2LEN": {
+    "description": "host channel-2 transfer length register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 19,
+        "description": "Transfer length",
+        "name": "TLEN"
+      },
+      {
+        "bit_offset": 19,
+        "bit_size": 10,
+        "description": "Packet count",
+        "name": "PCNT"
+      },
+      {
+        "bit_offset": 29,
+        "bit_size": 2,
+        "description": "Data PID",
+        "name": "DPID"
+      }
+    ]
+  },
+  "fieldset/HCH3CTL": {
+    "description": "host channel-3 characteristics register (HCH3CTL)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 11,
+        "description": "Maximum packet size",
+        "name": "MPL"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 4,
+        "description": "Endpoint number",
+        "name": "EPNUM"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "Endpoint direction",
+        "name": "EPDIR"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 1,
+        "description": "Low-speed device",
+        "name": "LSD"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 2,
+        "description": "Endpoint type",
+        "name": "EPTYPE"
+      },
+      {
+        "bit_offset": 22,
+        "bit_size": 7,
+        "description": "Device address",
+        "name": "DAR"
+      },
+      {
+        "bit_offset": 29,
+        "bit_size": 1,
+        "description": "Odd frame",
+        "name": "ODDFRM"
+      },
+      {
+        "bit_offset": 30,
+        "bit_size": 1,
+        "description": "Channel disable",
+        "name": "CDIS"
+      },
+      {
+        "bit_offset": 31,
+        "bit_size": 1,
+        "description": "Channel enable",
+        "name": "CEN"
+      }
+    ]
+  },
+  "fieldset/HCH3INTEN": {
+    "description": "host channel-3 interrupt enable register (HCH3INTEN)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Transfer completed interrupt enable",
+        "name": "TFIE"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Channel halted interrupt enable",
+        "name": "CHIE"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "STALL interrupt enable",
+        "name": "STALLIE"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "NAK interrupt enable",
+        "name": "NAKIE"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "ACK interrupt enable",
+        "name": "ACKIE"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "USB bus error interrupt enable",
+        "name": "USBERIE"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "Babble error interrupt enable",
+        "name": "BBERIE"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "request queue overrun interrupt enable",
+        "name": "REQOVRIE"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "Data toggle error interrupt enable",
+        "name": "DTERIE"
+      }
+    ]
+  },
+  "fieldset/HCH3INTF": {
+    "description": "host channel-3 interrupt register (HCH3INTF)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Transfer finished",
+        "name": "TF"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Channel halted",
+        "name": "CH"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "STALL response received interrupt",
+        "name": "STALL"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "NAK response received interrupt",
+        "name": "NAK"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "ACK response received/transmitted interrupt",
+        "name": "ACK"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "USB bus error",
+        "name": "USBER"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "Babble error",
+        "name": "BBER"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "Request queue overrun",
+        "name": "REQOVR"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "Data toggle error",
+        "name": "DTER"
+      }
+    ]
+  },
+  "fieldset/HCH3LEN": {
+    "description": "host channel-3 transfer length register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 19,
+        "description": "Transfer length",
+        "name": "TLEN"
+      },
+      {
+        "bit_offset": 19,
+        "bit_size": 10,
+        "description": "Packet count",
+        "name": "PCNT"
+      },
+      {
+        "bit_offset": 29,
+        "bit_size": 2,
+        "description": "Data PID",
+        "name": "DPID"
+      }
+    ]
+  },
+  "fieldset/HCH4CTL": {
+    "description": "host channel-4 characteristics register (HCH4CTL)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 11,
+        "description": "Maximum packet size",
+        "name": "MPL"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 4,
+        "description": "Endpoint number",
+        "name": "EPNUM"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "Endpoint direction",
+        "name": "EPDIR"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 1,
+        "description": "Low-speed device",
+        "name": "LSD"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 2,
+        "description": "Endpoint type",
+        "name": "EPTYPE"
+      },
+      {
+        "bit_offset": 22,
+        "bit_size": 7,
+        "description": "Device address",
+        "name": "DAR"
+      },
+      {
+        "bit_offset": 29,
+        "bit_size": 1,
+        "description": "Odd frame",
+        "name": "ODDFRM"
+      },
+      {
+        "bit_offset": 30,
+        "bit_size": 1,
+        "description": "Channel disable",
+        "name": "CDIS"
+      },
+      {
+        "bit_offset": 31,
+        "bit_size": 1,
+        "description": "Channel enable",
+        "name": "CEN"
+      }
+    ]
+  },
+  "fieldset/HCH4INTEN": {
+    "description": "host channel-4 interrupt enable register (HCH4INTEN)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Transfer completed interrupt enable",
+        "name": "TFIE"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Channel halted interrupt enable",
+        "name": "CHIE"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "STALL interrupt enable",
+        "name": "STALLIE"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "NAK interrupt enable",
+        "name": "NAKIE"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "ACK interrupt enable",
+        "name": "ACKIE"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "USB bus error interrupt enable",
+        "name": "USBERIE"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "Babble error interrupt enable",
+        "name": "BBERIE"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "request queue overrun interrupt enable",
+        "name": "REQOVRIE"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "Data toggle error interrupt enable",
+        "name": "DTERIE"
+      }
+    ]
+  },
+  "fieldset/HCH4INTF": {
+    "description": "host channel-4 interrupt register (HCH4INTF)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Transfer finished",
+        "name": "TF"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Channel halted",
+        "name": "CH"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "STALL response received interrupt",
+        "name": "STALL"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "NAK response received interrupt",
+        "name": "NAK"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "ACK response received/transmitted interrupt",
+        "name": "ACK"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "USB bus error",
+        "name": "USBER"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "Babble error",
+        "name": "BBER"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "Request queue overrun",
+        "name": "REQOVR"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "Data toggle error",
+        "name": "DTER"
+      }
+    ]
+  },
+  "fieldset/HCH4LEN": {
+    "description": "host channel-4 transfer length register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 19,
+        "description": "Transfer length",
+        "name": "TLEN"
+      },
+      {
+        "bit_offset": 19,
+        "bit_size": 10,
+        "description": "Packet count",
+        "name": "PCNT"
+      },
+      {
+        "bit_offset": 29,
+        "bit_size": 2,
+        "description": "Data PID",
+        "name": "DPID"
+      }
+    ]
+  },
+  "fieldset/HCH5CTL": {
+    "description": "host channel-5 characteristics register (HCH5CTL)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 11,
+        "description": "Maximum packet size",
+        "name": "MPL"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 4,
+        "description": "Endpoint number",
+        "name": "EPNUM"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "Endpoint direction",
+        "name": "EPDIR"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 1,
+        "description": "Low-speed device",
+        "name": "LSD"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 2,
+        "description": "Endpoint type",
+        "name": "EPTYPE"
+      },
+      {
+        "bit_offset": 22,
+        "bit_size": 7,
+        "description": "Device address",
+        "name": "DAR"
+      },
+      {
+        "bit_offset": 29,
+        "bit_size": 1,
+        "description": "Odd frame",
+        "name": "ODDFRM"
+      },
+      {
+        "bit_offset": 30,
+        "bit_size": 1,
+        "description": "Channel disable",
+        "name": "CDIS"
+      },
+      {
+        "bit_offset": 31,
+        "bit_size": 1,
+        "description": "Channel enable",
+        "name": "CEN"
+      }
+    ]
+  },
+  "fieldset/HCH5INTEN": {
+    "description": "host channel-5 interrupt enable register (HCH5INTEN)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Transfer completed interrupt enable",
+        "name": "TFIE"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Channel halted interrupt enable",
+        "name": "CHIE"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "STALL interrupt enable",
+        "name": "STALLIE"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "NAK interrupt enable",
+        "name": "NAKIE"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "ACK interrupt enable",
+        "name": "ACKIE"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "USB bus error interrupt enable",
+        "name": "USBERIE"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "Babble error interrupt enable",
+        "name": "BBERIE"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "request queue overrun interrupt enable",
+        "name": "REQOVRIE"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "Data toggle error interrupt enable",
+        "name": "DTERIE"
+      }
+    ]
+  },
+  "fieldset/HCH5INTF": {
+    "description": "host channel-5 interrupt register (HCH5INTF)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Transfer finished",
+        "name": "TF"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Channel halted",
+        "name": "CH"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "STALL response received interrupt",
+        "name": "STALL"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "NAK response received interrupt",
+        "name": "NAK"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "ACK response received/transmitted interrupt",
+        "name": "ACK"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "USB bus error",
+        "name": "USBER"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "Babble error",
+        "name": "BBER"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "Request queue overrun",
+        "name": "REQOVR"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "Data toggle error",
+        "name": "DTER"
+      }
+    ]
+  },
+  "fieldset/HCH5LEN": {
+    "description": "host channel-5 transfer length register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 19,
+        "description": "Transfer length",
+        "name": "TLEN"
+      },
+      {
+        "bit_offset": 19,
+        "bit_size": 10,
+        "description": "Packet count",
+        "name": "PCNT"
+      },
+      {
+        "bit_offset": 29,
+        "bit_size": 2,
+        "description": "Data PID",
+        "name": "DPID"
+      }
+    ]
+  },
+  "fieldset/HCH6CTL": {
+    "description": "host channel-6 characteristics register (HCH6CTL)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 11,
+        "description": "Maximum packet size",
+        "name": "MPL"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 4,
+        "description": "Endpoint number",
+        "name": "EPNUM"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "Endpoint direction",
+        "name": "EPDIR"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 1,
+        "description": "Low-speed device",
+        "name": "LSD"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 2,
+        "description": "Endpoint type",
+        "name": "EPTYPE"
+      },
+      {
+        "bit_offset": 22,
+        "bit_size": 7,
+        "description": "Device address",
+        "name": "DAR"
+      },
+      {
+        "bit_offset": 29,
+        "bit_size": 1,
+        "description": "Odd frame",
+        "name": "ODDFRM"
+      },
+      {
+        "bit_offset": 30,
+        "bit_size": 1,
+        "description": "Channel disable",
+        "name": "CDIS"
+      },
+      {
+        "bit_offset": 31,
+        "bit_size": 1,
+        "description": "Channel enable",
+        "name": "CEN"
+      }
+    ]
+  },
+  "fieldset/HCH6INTEN": {
+    "description": "host channel-6 interrupt enable register (HCH6INTEN)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Transfer completed interrupt enable",
+        "name": "TFIE"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Channel halted interrupt enable",
+        "name": "CHIE"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "STALL interrupt enable",
+        "name": "STALLIE"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "NAK interrupt enable",
+        "name": "NAKIE"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "ACK interrupt enable",
+        "name": "ACKIE"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "USB bus error interrupt enable",
+        "name": "USBERIE"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "Babble error interrupt enable",
+        "name": "BBERIE"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "request queue overrun interrupt enable",
+        "name": "REQOVRIE"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "Data toggle error interrupt enable",
+        "name": "DTERIE"
+      }
+    ]
+  },
+  "fieldset/HCH6INTF": {
+    "description": "host channel-6 interrupt register (HCH6INTF)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Transfer finished",
+        "name": "TF"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Channel halted",
+        "name": "CH"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "STALL response received interrupt",
+        "name": "STALL"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "NAK response received interrupt",
+        "name": "NAK"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "ACK response received/transmitted interrupt",
+        "name": "ACK"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "USB bus error",
+        "name": "USBER"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "Babble error",
+        "name": "BBER"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "Request queue overrun",
+        "name": "REQOVR"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "Data toggle error",
+        "name": "DTER"
+      }
+    ]
+  },
+  "fieldset/HCH6LEN": {
+    "description": "host channel-6 transfer length register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 19,
+        "description": "Transfer length",
+        "name": "TLEN"
+      },
+      {
+        "bit_offset": 19,
+        "bit_size": 10,
+        "description": "Packet count",
+        "name": "PCNT"
+      },
+      {
+        "bit_offset": 29,
+        "bit_size": 2,
+        "description": "Data PID",
+        "name": "DPID"
+      }
+    ]
+  },
+  "fieldset/HCH7CTL": {
+    "description": "host channel-7 characteristics register (HCH7CTL)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 11,
+        "description": "Maximum packet size",
+        "name": "MPL"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 4,
+        "description": "Endpoint number",
+        "name": "EPNUM"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "Endpoint direction",
+        "name": "EPDIR"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 1,
+        "description": "Low-speed device",
+        "name": "LSD"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 2,
+        "description": "Endpoint type",
+        "name": "EPTYPE"
+      },
+      {
+        "bit_offset": 22,
+        "bit_size": 7,
+        "description": "Device address",
+        "name": "DAR"
+      },
+      {
+        "bit_offset": 29,
+        "bit_size": 1,
+        "description": "Odd frame",
+        "name": "ODDFRM"
+      },
+      {
+        "bit_offset": 30,
+        "bit_size": 1,
+        "description": "Channel disable",
+        "name": "CDIS"
+      },
+      {
+        "bit_offset": 31,
+        "bit_size": 1,
+        "description": "Channel enable",
+        "name": "CEN"
+      }
+    ]
+  },
+  "fieldset/HCH7INTEN": {
+    "description": "host channel-7 interrupt enable register (HCH7INTEN)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Transfer completed interrupt enable",
+        "name": "TFIE"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Channel halted interrupt enable",
+        "name": "CHIE"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "STALL interrupt enable",
+        "name": "STALLIE"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "NAK interrupt enable",
+        "name": "NAKIE"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "ACK interrupt enable",
+        "name": "ACKIE"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "USB bus error interrupt enable",
+        "name": "USBERIE"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "Babble error interrupt enable",
+        "name": "BBERIE"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "request queue overrun interrupt enable",
+        "name": "REQOVRIE"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "Data toggle error interrupt enable",
+        "name": "DTERIE"
+      }
+    ]
+  },
+  "fieldset/HCH7INTF": {
+    "description": "host channel-7 interrupt register (HCH7INTF)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Transfer finished",
+        "name": "TF"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Channel halted",
+        "name": "CH"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "STALL response received interrupt",
+        "name": "STALL"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "NAK response received interrupt",
+        "name": "NAK"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "ACK response received/transmitted interrupt",
+        "name": "ACK"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "USB bus error",
+        "name": "USBER"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "Babble error",
+        "name": "BBER"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "Request queue overrun",
+        "name": "REQOVR"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "Data toggle error",
+        "name": "DTER"
+      }
+    ]
+  },
+  "fieldset/HCH7LEN": {
+    "description": "host channel-7 transfer length register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 19,
+        "description": "Transfer length",
+        "name": "TLEN"
+      },
+      {
+        "bit_offset": 19,
+        "bit_size": 10,
+        "description": "Packet count",
+        "name": "PCNT"
+      },
+      {
+        "bit_offset": 29,
+        "bit_size": 2,
+        "description": "Data PID",
+        "name": "DPID"
+      }
+    ]
+  },
+  "fieldset/HCTL": {
+    "description": "host configuration register (HCTL)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 2,
+        "description": "clock select for USB clock",
+        "name": "CLKSEL"
+      }
+    ]
+  },
+  "fieldset/HFINFR": {
+    "description": "OTG_FS host frame number/frame time remaining register (HFINFR)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Frame number",
+        "name": "FRNUM"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 16,
+        "description": "Frame remaining time",
+        "name": "FRT"
+      }
+    ]
+  },
+  "fieldset/HFT": {
+    "description": "Host frame interval register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Frame interval",
+        "name": "FRI"
+      }
+    ]
+  },
+  "fieldset/HPCS": {
+    "description": "Host port control and status register (USBFS_HPCS)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Port connect status",
+        "name": "PCST"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Port connect detected",
+        "name": "PCD"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Port enable",
+        "name": "PE"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Port enable/disable change",
+        "name": "PEDC"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "Port resume",
+        "name": "PREM"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Port suspend",
+        "name": "PSP"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "Port reset",
+        "name": "PRST"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 2,
+        "description": "Port line status",
+        "name": "PLST"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "description": "Port power",
+        "name": "PP"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 2,
+        "description": "Port speed",
+        "name": "PS"
+      }
+    ]
+  },
+  "fieldset/HPTFQSTAT": {
+    "description": "Host periodic transmit FIFO/queue status register (HPTFQSTAT)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Periodic transmit data FIFO space available",
+        "name": "PTXFS"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 8,
+        "description": "Periodic transmit request queue space available",
+        "name": "PTXREQS"
+      },
+      {
+        "bit_offset": 24,
+        "bit_size": 8,
+        "description": "Top of the periodic transmit request queue",
+        "name": "PTXREQT"
+      }
+    ]
+  }
+}

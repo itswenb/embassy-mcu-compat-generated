@@ -1,0 +1,355 @@
+{
+  "block/ADC": {
+    "items": [
+      {
+        "byte_offset": 0,
+        "fieldset": "ADC_STAT",
+        "name": "ADC_STAT"
+      },
+      {
+        "byte_offset": 4,
+        "fieldset": "ADC_CTL0",
+        "name": "ADC_CTL0"
+      },
+      {
+        "byte_offset": 8,
+        "fieldset": "ADC_CTL1",
+        "name": "ADC_CTL1"
+      },
+      {
+        "byte_offset": 12,
+        "name": "ADC_SAMPT0"
+      },
+      {
+        "byte_offset": 16,
+        "name": "ADC_SAMPT1"
+      },
+      {
+        "byte_offset": 20,
+        "name": "ADC_IOFF0"
+      },
+      {
+        "byte_offset": 24,
+        "name": "ADC_IOFF1"
+      },
+      {
+        "byte_offset": 28,
+        "name": "ADC_IOFF2"
+      },
+      {
+        "byte_offset": 32,
+        "name": "ADC_IOFF3"
+      },
+      {
+        "byte_offset": 36,
+        "fieldset": "ADC_WDHT",
+        "name": "ADC_WDHT"
+      },
+      {
+        "byte_offset": 40,
+        "fieldset": "ADC_WDLT",
+        "name": "ADC_WDLT"
+      },
+      {
+        "byte_offset": 44,
+        "fieldset": "ADC_RSQ0",
+        "name": "ADC_RSQ0"
+      },
+      {
+        "byte_offset": 48,
+        "name": "ADC_RSQ1"
+      },
+      {
+        "byte_offset": 52,
+        "name": "ADC_RSQ2"
+      },
+      {
+        "byte_offset": 56,
+        "fieldset": "ADC_ISQ",
+        "name": "ADC_ISQ"
+      },
+      {
+        "byte_offset": 60,
+        "name": "ADC_IDATA0"
+      },
+      {
+        "byte_offset": 64,
+        "name": "ADC_IDATA1"
+      },
+      {
+        "byte_offset": 68,
+        "name": "ADC_IDATA2"
+      },
+      {
+        "byte_offset": 72,
+        "name": "ADC_IDATA3"
+      },
+      {
+        "byte_offset": 76,
+        "fieldset": "ADC_RDATA",
+        "name": "ADC_RDATA"
+      },
+      {
+        "byte_offset": 128,
+        "fieldset": "ADC_OVSAMPCTL",
+        "name": "ADC_OVSAMPCTL"
+      }
+    ]
+  },
+  "fieldset/ADC_CTL0": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 5,
+        "name": "ADC_CTL0_WDCHSEL"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "name": "ADC_CTL0_EOCIE"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "name": "ADC_CTL0_WDEIE"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "name": "ADC_CTL0_EOICIE"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "name": "ADC_CTL0_SM"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "name": "ADC_CTL0_WDSC"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "name": "ADC_CTL0_ICA"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "name": "ADC_CTL0_DISRC"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "name": "ADC_CTL0_DISIC"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 3,
+        "name": "ADC_CTL0_DISNUM"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 4,
+        "name": "ADC_CTL0_SYNCM"
+      },
+      {
+        "bit_offset": 22,
+        "bit_size": 1,
+        "name": "ADC_CTL0_IWDEN"
+      },
+      {
+        "bit_offset": 23,
+        "bit_size": 1,
+        "name": "ADC_CTL0_RWDEN"
+      },
+      {
+        "bit_offset": 24,
+        "bit_size": 2,
+        "name": "ADC_CTL0_DRES"
+      }
+    ]
+  },
+  "fieldset/ADC_CTL1": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "ADC_CTL1_ADCON"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "ADC_CTL1_CTN"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "ADC_CTL1_CLB"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "name": "ADC_CTL1_RSTCLB"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "name": "ADC_CTL1_DMA"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "name": "ADC_CTL1_DAL"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 3,
+        "name": "ADC_CTL1_ETSIC"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "name": "ADC_CTL1_ETEIC"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 3,
+        "name": "ADC_CTL1_ETSRC"
+      },
+      {
+        "bit_offset": 20,
+        "bit_size": 1,
+        "name": "ADC_CTL1_ETERC"
+      },
+      {
+        "bit_offset": 21,
+        "bit_size": 1,
+        "name": "ADC_CTL1_SWICST"
+      },
+      {
+        "bit_offset": 22,
+        "bit_size": 1,
+        "name": "ADC_CTL1_SWRCST"
+      },
+      {
+        "bit_offset": 23,
+        "bit_size": 1,
+        "name": "ADC_CTL1_TSVREN"
+      }
+    ]
+  },
+  "fieldset/ADC_ISQ": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 5,
+        "name": "ADC_ISQ_ISQN"
+      },
+      {
+        "bit_offset": 20,
+        "bit_size": 2,
+        "name": "ADC_ISQ_IL"
+      }
+    ]
+  },
+  "fieldset/ADC_OVSAMPCTL": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "ADC_OVSAMPCTL_OVSEN"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 3,
+        "name": "ADC_OVSAMPCTL_OVSR"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 4,
+        "name": "ADC_OVSAMPCTL_OVSS"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "name": "ADC_OVSAMPCTL_TOVS"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 2,
+        "name": "ADC_OVSAMPCTL_DRES"
+      }
+    ]
+  },
+  "fieldset/ADC_RDATA": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "name": "ADC_RDATA_RDATA"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 16,
+        "name": "ADC_RDATA_ADC1RDTR"
+      }
+    ]
+  },
+  "fieldset/ADC_RSQ0": {
+    "fields": [
+      {
+        "bit_offset": 20,
+        "bit_size": 4,
+        "name": "ADC_RSQ0_RL"
+      }
+    ]
+  },
+  "fieldset/ADC_STAT": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "ADC_STAT_WDE"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "ADC_STAT_EOC"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "ADC_STAT_EOIC"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "name": "ADC_STAT_STIC"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "name": "ADC_STAT_STRC"
+      }
+    ]
+  },
+  "fieldset/ADC_WDHT": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 12,
+        "name": "ADC_WDHT_WDHT"
+      }
+    ]
+  },
+  "fieldset/ADC_WDLT": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 12,
+        "name": "ADC_WDLT_WDLT"
+      }
+    ]
+  }
+}

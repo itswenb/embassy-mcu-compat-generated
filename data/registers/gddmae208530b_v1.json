@@ -1,0 +1,288 @@
+{
+  "block/DMA": {
+    "items": [
+      {
+        "byte_offset": 0,
+        "fieldset": "DMA_INTF",
+        "name": "DMA_INTF"
+      },
+      {
+        "byte_offset": 4,
+        "fieldset": "DMA_INTC",
+        "name": "DMA_INTC"
+      },
+      {
+        "byte_offset": 8,
+        "name": "DMA_CH0CTL"
+      },
+      {
+        "byte_offset": 8,
+        "name": "DMA_CHCTL_0"
+      },
+      {
+        "byte_offset": 28,
+        "name": "DMA_CHCTL_1"
+      },
+      {
+        "byte_offset": 48,
+        "name": "DMA_CHCTL_2"
+      },
+      {
+        "byte_offset": 68,
+        "name": "DMA_CHCTL_3"
+      },
+      {
+        "byte_offset": 88,
+        "name": "DMA_CHCTL_4"
+      },
+      {
+        "byte_offset": 108,
+        "name": "DMA_CHCTL_5"
+      },
+      {
+        "byte_offset": 128,
+        "name": "DMA_CHCTL_6"
+      },
+      {
+        "byte_offset": 12,
+        "name": "DMA_CH0CNT"
+      },
+      {
+        "byte_offset": 12,
+        "name": "DMA_CHCNT_0"
+      },
+      {
+        "byte_offset": 32,
+        "name": "DMA_CHCNT_1"
+      },
+      {
+        "byte_offset": 52,
+        "name": "DMA_CHCNT_2"
+      },
+      {
+        "byte_offset": 72,
+        "name": "DMA_CHCNT_3"
+      },
+      {
+        "byte_offset": 92,
+        "name": "DMA_CHCNT_4"
+      },
+      {
+        "byte_offset": 112,
+        "name": "DMA_CHCNT_5"
+      },
+      {
+        "byte_offset": 132,
+        "name": "DMA_CHCNT_6"
+      },
+      {
+        "byte_offset": 16,
+        "name": "DMA_CH0PADDR"
+      },
+      {
+        "byte_offset": 16,
+        "name": "DMA_CHPADDR_0"
+      },
+      {
+        "byte_offset": 36,
+        "name": "DMA_CHPADDR_1"
+      },
+      {
+        "byte_offset": 56,
+        "name": "DMA_CHPADDR_2"
+      },
+      {
+        "byte_offset": 76,
+        "name": "DMA_CHPADDR_3"
+      },
+      {
+        "byte_offset": 96,
+        "name": "DMA_CHPADDR_4"
+      },
+      {
+        "byte_offset": 116,
+        "name": "DMA_CHPADDR_5"
+      },
+      {
+        "byte_offset": 136,
+        "name": "DMA_CHPADDR_6"
+      },
+      {
+        "byte_offset": 20,
+        "name": "DMA_CH0MADDR"
+      },
+      {
+        "byte_offset": 20,
+        "name": "DMA_CHMADDR_0"
+      },
+      {
+        "byte_offset": 40,
+        "name": "DMA_CHMADDR_1"
+      },
+      {
+        "byte_offset": 60,
+        "name": "DMA_CHMADDR_2"
+      },
+      {
+        "byte_offset": 80,
+        "name": "DMA_CHMADDR_3"
+      },
+      {
+        "byte_offset": 100,
+        "name": "DMA_CHMADDR_4"
+      },
+      {
+        "byte_offset": 120,
+        "name": "DMA_CHMADDR_5"
+      },
+      {
+        "byte_offset": 140,
+        "name": "DMA_CHMADDR_6"
+      },
+      {
+        "byte_offset": 28,
+        "name": "DMA_CH1CTL"
+      },
+      {
+        "byte_offset": 32,
+        "name": "DMA_CH1CNT"
+      },
+      {
+        "byte_offset": 36,
+        "name": "DMA_CH1PADDR"
+      },
+      {
+        "byte_offset": 40,
+        "name": "DMA_CH1MADDR"
+      },
+      {
+        "byte_offset": 48,
+        "name": "DMA_CH2CTL"
+      },
+      {
+        "byte_offset": 52,
+        "name": "DMA_CH2CNT"
+      },
+      {
+        "byte_offset": 56,
+        "name": "DMA_CH2PADDR"
+      },
+      {
+        "byte_offset": 60,
+        "name": "DMA_CH2MADDR"
+      },
+      {
+        "byte_offset": 68,
+        "name": "DMA_CH3CTL"
+      },
+      {
+        "byte_offset": 72,
+        "name": "DMA_CH3CNT"
+      },
+      {
+        "byte_offset": 76,
+        "name": "DMA_CH3PADDR"
+      },
+      {
+        "byte_offset": 80,
+        "name": "DMA_CH3MADDR"
+      },
+      {
+        "byte_offset": 88,
+        "name": "DMA_CH4CTL"
+      },
+      {
+        "byte_offset": 92,
+        "name": "DMA_CH4CNT"
+      },
+      {
+        "byte_offset": 96,
+        "name": "DMA_CH4PADDR"
+      },
+      {
+        "byte_offset": 100,
+        "name": "DMA_CH4MADDR"
+      },
+      {
+        "byte_offset": 108,
+        "name": "DMA_CH5CTL"
+      },
+      {
+        "byte_offset": 112,
+        "name": "DMA_CH5CNT"
+      },
+      {
+        "byte_offset": 116,
+        "name": "DMA_CH5PADDR"
+      },
+      {
+        "byte_offset": 120,
+        "name": "DMA_CH5MADDR"
+      },
+      {
+        "byte_offset": 128,
+        "name": "DMA_CH6CTL"
+      },
+      {
+        "byte_offset": 132,
+        "name": "DMA_CH6CNT"
+      },
+      {
+        "byte_offset": 136,
+        "name": "DMA_CH6PADDR"
+      },
+      {
+        "byte_offset": 140,
+        "name": "DMA_CH6MADDR"
+      }
+    ]
+  },
+  "fieldset/DMA_INTC": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "DMA_INTC_GIFC"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "DMA_INTC_FTFIFC"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "DMA_INTC_HTFIFC"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "name": "DMA_INTC_ERRIFC"
+      }
+    ]
+  },
+  "fieldset/DMA_INTF": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "DMA_INTF_GIF"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "DMA_INTF_FTFIF"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "DMA_INTF_HTFIF"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "name": "DMA_INTF_ERRIF"
+      }
+    ]
+  }
+}

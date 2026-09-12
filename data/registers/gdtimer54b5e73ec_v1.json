@@ -1,0 +1,174 @@
+{
+  "block/TIMER5": {
+    "description": "Basic-timers",
+    "items": [
+      {
+        "byte_offset": 0,
+        "description": "control register 0",
+        "fieldset": "CTL0",
+        "name": "CTL0"
+      },
+      {
+        "byte_offset": 4,
+        "description": "control register 1",
+        "fieldset": "CTL1",
+        "name": "CTL1"
+      },
+      {
+        "byte_offset": 12,
+        "description": "DMA/Interrupt enable register",
+        "fieldset": "DMAINTEN",
+        "name": "DMAINTEN"
+      },
+      {
+        "byte_offset": 16,
+        "description": "Interrupt flag register",
+        "fieldset": "INTF",
+        "name": "INTF"
+      },
+      {
+        "access": "Write",
+        "byte_offset": 20,
+        "description": "event generation register",
+        "fieldset": "SWEVG",
+        "name": "SWEVG"
+      },
+      {
+        "byte_offset": 36,
+        "description": "Counter register",
+        "fieldset": "CNT",
+        "name": "CNT"
+      },
+      {
+        "byte_offset": 40,
+        "description": "Prescaler register",
+        "fieldset": "PSC",
+        "name": "PSC"
+      },
+      {
+        "byte_offset": 44,
+        "description": "Counter auto reload register",
+        "fieldset": "CAR",
+        "name": "CAR"
+      }
+    ]
+  },
+  "fieldset/CAR": {
+    "description": "Counter auto reload register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Counter auto reload value",
+        "name": "CARL"
+      }
+    ]
+  },
+  "fieldset/CNT": {
+    "description": "Counter register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Low counter value",
+        "name": "CNT"
+      }
+    ]
+  },
+  "fieldset/CTL0": {
+    "description": "control register 0",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Counter enable",
+        "name": "CEN"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Update disable",
+        "name": "UPDIS"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Update source",
+        "name": "UPS"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Single pulse mode",
+        "name": "SPM"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Auto-reload shadow enable",
+        "name": "ARSE"
+      }
+    ]
+  },
+  "fieldset/CTL1": {
+    "description": "control register 1",
+    "fields": [
+      {
+        "bit_offset": 4,
+        "bit_size": 3,
+        "description": "Master mode control",
+        "name": "MMC"
+      }
+    ]
+  },
+  "fieldset/DMAINTEN": {
+    "description": "DMA/Interrupt enable register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Update interrupt enable",
+        "name": "UPIE"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "Update DMA request enable",
+        "name": "UPDEN"
+      }
+    ]
+  },
+  "fieldset/INTF": {
+    "description": "Interrupt flag register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Update interrupt flag",
+        "name": "UPIF"
+      }
+    ]
+  },
+  "fieldset/PSC": {
+    "description": "Prescaler register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Prescaler value of the counter clock",
+        "name": "PSC"
+      }
+    ]
+  },
+  "fieldset/SWEVG": {
+    "description": "event generation register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Update generation",
+        "name": "UPG"
+      }
+    ]
+  }
+}

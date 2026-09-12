@@ -1,0 +1,801 @@
+{
+  "block/GD_MERGED_93B0337BA7A0": {
+    "items": [
+      {
+        "byte_offset": 0,
+        "description": "Control register 0",
+        "fieldset": "GD_MERGED_93B0337BA7A0_SVD_CTL0",
+        "name": "CTL0"
+      },
+      {
+        "byte_offset": 0,
+        "fieldset": "GD_MERGED_93B0337BA7A0_FW_I2C_CTL0",
+        "name": "I2C_CTL0"
+      },
+      {
+        "byte_offset": 4,
+        "description": "Control register 1",
+        "fieldset": "GD_MERGED_93B0337BA7A0_SVD_CTL1",
+        "name": "CTL1"
+      },
+      {
+        "byte_offset": 4,
+        "fieldset": "GD_MERGED_93B0337BA7A0_FW_I2C_CTL1",
+        "name": "I2C_CTL1"
+      },
+      {
+        "byte_offset": 8,
+        "fieldset": "GD_MERGED_93B0337BA7A0_FW_I2C_SADDR0",
+        "name": "I2C_SADDR0"
+      },
+      {
+        "byte_offset": 8,
+        "description": "Slave address register 0",
+        "fieldset": "GD_MERGED_93B0337BA7A0_SVD_SADDR0",
+        "name": "SADDR0"
+      },
+      {
+        "byte_offset": 12,
+        "fieldset": "GD_MERGED_93B0337BA7A0_FW_I2C_SADDR1",
+        "name": "I2C_SADDR1"
+      },
+      {
+        "byte_offset": 12,
+        "description": "Slave address register 1",
+        "fieldset": "GD_MERGED_93B0337BA7A0_SVD_SADDR1",
+        "name": "SADDR1"
+      },
+      {
+        "byte_offset": 16,
+        "description": "Transfer buffer register",
+        "fieldset": "GD_MERGED_93B0337BA7A0_SVD_DATA",
+        "name": "DATA"
+      },
+      {
+        "byte_offset": 16,
+        "fieldset": "GD_MERGED_93B0337BA7A0_FW_I2C_DATA",
+        "name": "I2C_DATA"
+      },
+      {
+        "byte_offset": 20,
+        "fieldset": "GD_MERGED_93B0337BA7A0_FW_I2C_STAT0",
+        "name": "I2C_STAT0"
+      },
+      {
+        "byte_offset": 20,
+        "description": "Transfer status register 0",
+        "fieldset": "GD_MERGED_93B0337BA7A0_SVD_STAT0",
+        "name": "STAT0"
+      },
+      {
+        "byte_offset": 24,
+        "fieldset": "GD_MERGED_93B0337BA7A0_FW_I2C_STAT1",
+        "name": "I2C_STAT1"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 24,
+        "description": "Transfer status register 1",
+        "fieldset": "GD_MERGED_93B0337BA7A0_SVD_STAT1",
+        "name": "STAT1"
+      },
+      {
+        "byte_offset": 28,
+        "description": "Clock configure register",
+        "fieldset": "GD_MERGED_93B0337BA7A0_SVD_CKCFG",
+        "name": "CKCFG"
+      },
+      {
+        "byte_offset": 28,
+        "fieldset": "GD_MERGED_93B0337BA7A0_FW_I2C_CKCFG",
+        "name": "I2C_CKCFG"
+      },
+      {
+        "byte_offset": 32,
+        "fieldset": "GD_MERGED_93B0337BA7A0_FW_I2C_RT",
+        "name": "I2C_RT"
+      },
+      {
+        "byte_offset": 32,
+        "description": "Rise time register",
+        "fieldset": "GD_MERGED_93B0337BA7A0_SVD_RT",
+        "name": "RT"
+      },
+      {
+        "byte_offset": 144,
+        "description": "Fast-mode-plus configure register",
+        "fieldset": "GD_MERGED_93B0337BA7A0_SVD_FMPCFG",
+        "name": "FMPCFG"
+      },
+      {
+        "byte_offset": 144,
+        "fieldset": "GD_MERGED_93B0337BA7A0_FW_I2C_FMPCFG",
+        "name": "I2C_FMPCFG"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_93B0337BA7A0_FW_I2C_CKCFG": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 12,
+        "name": "I2C_CKCFG_CLKC"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "name": "I2C_CKCFG_DTCY"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "name": "I2C_CKCFG_FAST"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_93B0337BA7A0_FW_I2C_CTL0": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "I2C_CTL0_I2CEN"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "I2C_CTL0_SMBEN"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "name": "I2C_CTL0_SMBSEL"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "name": "I2C_CTL0_ARPEN"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "name": "I2C_CTL0_PECEN"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "name": "I2C_CTL0_GCEN"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "name": "I2C_CTL0_SS"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "name": "I2C_CTL0_START"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "name": "I2C_CTL0_STOP"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "name": "I2C_CTL0_ACKEN"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "name": "I2C_CTL0_POAP"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "name": "I2C_CTL0_PECTRANS"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "name": "I2C_CTL0_SALT"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "name": "I2C_CTL0_SRESET"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_93B0337BA7A0_FW_I2C_CTL1": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 7,
+        "name": "I2C_CTL1_I2CCLK"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "name": "I2C_CTL1_ERRIE"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "name": "I2C_CTL1_EVIE"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "name": "I2C_CTL1_BUFIE"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "name": "I2C_CTL1_DMAON"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "name": "I2C_CTL1_DMALST"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_93B0337BA7A0_FW_I2C_DATA": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "name": "I2C_DATA_TRB"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_93B0337BA7A0_FW_I2C_FMPCFG": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "I2C_FMPCFG_FMPEN"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_93B0337BA7A0_FW_I2C_RT": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 7,
+        "name": "I2C_RT_RISETIME"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_93B0337BA7A0_FW_I2C_SADDR0": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "I2C_SADDR0_ADDRESS0"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 7,
+        "name": "I2C_SADDR0_ADDRESS"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 2,
+        "name": "I2C_SADDR0_ADDRESS_H"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "name": "I2C_SADDR0_ADDFORMAT"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_93B0337BA7A0_FW_I2C_SADDR1": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "I2C_SADDR1_DUADEN"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 7,
+        "name": "I2C_SADDR1_ADDRESS2"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_93B0337BA7A0_FW_I2C_STAT0": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "I2C_STAT0_SBSEND"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "I2C_STAT0_ADDSEND"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "I2C_STAT0_BTC"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "name": "I2C_STAT0_ADD10SEND"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "name": "I2C_STAT0_STPDET"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "name": "I2C_STAT0_RBNE"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "name": "I2C_STAT0_TBE"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "name": "I2C_STAT0_BERR"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "name": "I2C_STAT0_LOSTARB"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "name": "I2C_STAT0_AERR"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "name": "I2C_STAT0_OUERR"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "name": "I2C_STAT0_PECERR"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "name": "I2C_STAT0_SMBTO"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "name": "I2C_STAT0_SMBALT"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_93B0337BA7A0_FW_I2C_STAT1": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "I2C_STAT1_MASTER"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "I2C_STAT1_I2CBSY"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "I2C_STAT1_TR"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "name": "I2C_STAT1_RXGC"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "name": "I2C_STAT1_DEFSMB"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "name": "I2C_STAT1_HSTSMB"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "name": "I2C_STAT1_DUMODF"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 8,
+        "name": "I2C_STAT1_PECV"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_93B0337BA7A0_SVD_CKCFG": {
+    "description": "Clock configure register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 12,
+        "description": "I2C Clock control in master mode",
+        "name": "CLKC"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "description": "Duty cycle in fast mode",
+        "name": "DTCY"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "I2C speed selection in master mode",
+        "name": "FAST"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_93B0337BA7A0_SVD_CTL0": {
+    "description": "Control register 0",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "I2C peripheral enable",
+        "name": "I2CEN"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "SMBus/I2C mode switch",
+        "name": "SMBEN"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "SMBusType Selection",
+        "name": "SMBSEL"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "ARP protocol in SMBus switch",
+        "name": "ARPEN"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "PEC Calculation Switch",
+        "name": "PECEN"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "Whether or not to response to a General Call (0x00)",
+        "name": "GCEN"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Whether to stretch SCL low when data is not ready in slave mode",
+        "name": "SS"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "Generate a START condition on I2C bus",
+        "name": "START"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "Generate a STOP condition on I2C bus",
+        "name": "STOP"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "Whether or not to send an ACK",
+        "name": "ACKEN"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "description": "Position of ACK and PEC when receiving",
+        "name": "POAP"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "description": "PEC Transfer",
+        "name": "PECTRANS"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "description": "SMBus alert",
+        "name": "SALT"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "Software reset",
+        "name": "SRESET"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_93B0337BA7A0_SVD_CTL1": {
+    "description": "Control register 1",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 7,
+        "description": "I2C Peripheral clock frequency",
+        "name": "I2CCLK"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "Error interrupt enable",
+        "name": "ERRIE"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "Event interrupt enable",
+        "name": "EVIE"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "Buffer interrupt enable",
+        "name": "BUFIE"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "description": "DMA mode switch",
+        "name": "DMAON"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "description": "Flag indicating DMA last transfer",
+        "name": "DMALST"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_93B0337BA7A0_SVD_DATA": {
+    "description": "Transfer buffer register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "Transmission or reception data buffer register",
+        "name": "TRB"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_93B0337BA7A0_SVD_FMPCFG": {
+    "description": "Fast-mode-plus configure register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Fast-mode-plus enable",
+        "name": "FMPEN"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_93B0337BA7A0_SVD_RT": {
+    "description": "Rise time register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 7,
+        "description": "Maximum rise time in master mode",
+        "name": "RISETIME"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_93B0337BA7A0_SVD_SADDR0": {
+    "description": "Slave address register 0",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Bit 0 of a 10-bit address",
+        "name": "ADDRESS0"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 7,
+        "description": "7-bit address or bits 7:1 of a 10-bit address",
+        "name": "ADDRESS7_1"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 2,
+        "description": "Highest two bits of a 10-bit address",
+        "name": "ADDRESS9_8"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "Address mode for the I2C slave",
+        "name": "ADDFORMAT"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_93B0337BA7A0_SVD_SADDR1": {
+    "description": "Slave address register 1",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Dual-Address mode switch",
+        "name": "DUADEN"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 7,
+        "description": "Second I2C address for the slave in Dual-Address mode",
+        "name": "ADDRESS2"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_93B0337BA7A0_SVD_STAT0": {
+    "description": "Transfer status register 0",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "START condition sent out in master mode",
+        "name": "SBSEND"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Address is sent in master mode or received and matches in slave mode",
+        "name": "ADDSEND"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Byte transmission completed",
+        "name": "BTC"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Header of 10-bit address is sent in master mode",
+        "name": "ADD10SEND"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "STOP condition detected in slave mode",
+        "name": "STPDET"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "I2C_DATA is not Empty during receiving",
+        "name": "RBNE"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "I2C_DATA is Empty during transmitting",
+        "name": "TBE"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "A bus error occurs indication a unexpected START or STOP condition on I2C bus",
+        "name": "BERR"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "Arbitration Lost in master mode",
+        "name": "LOSTARB"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "Acknowledge error",
+        "name": "AERR"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "description": "Over-run or under-run situation occurs in slave mode",
+        "name": "OUERR"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "description": "PEC error when receiving data",
+        "name": "PECERR"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "description": "Timeout signal in SMBus mode",
+        "name": "SMBTO"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "SMBus Alert status",
+        "name": "SMBALT"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_93B0337BA7A0_SVD_STAT1": {
+    "description": "Transfer status register 1",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "A flag indicating whether I2C block is in master or slave mode",
+        "name": "MASTER"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Busy flag",
+        "name": "I2CBSY"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Whether the I2C is a transmitter or a receiver",
+        "name": "TR"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "General call address (00h) received",
+        "name": "RXGC"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "Default address of SMBusDevice",
+        "name": "DEFSMB"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "SMBus Host Header detected in slave mode",
+        "name": "HSTSMB"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Dual Flag in slave mode",
+        "name": "DUMODF"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 8,
+        "description": "Packet Error Checking Value that calculated by hardware when PEC is enabled",
+        "name": "PECV"
+      }
+    ]
+  }
+}

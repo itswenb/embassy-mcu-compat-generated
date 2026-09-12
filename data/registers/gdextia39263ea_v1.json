@@ -1,0 +1,660 @@
+{
+  "block/EXTI": {
+    "items": [
+      {
+        "byte_offset": 0,
+        "fieldset": "EXTI_INTEN",
+        "name": "EXTI_INTEN"
+      },
+      {
+        "byte_offset": 4,
+        "fieldset": "EXTI_EVEN",
+        "name": "EXTI_EVEN"
+      },
+      {
+        "byte_offset": 8,
+        "fieldset": "EXTI_RTEN",
+        "name": "EXTI_RTEN"
+      },
+      {
+        "byte_offset": 12,
+        "fieldset": "EXTI_FTEN",
+        "name": "EXTI_FTEN"
+      },
+      {
+        "byte_offset": 16,
+        "fieldset": "EXTI_SWIEV",
+        "name": "EXTI_SWIEV"
+      },
+      {
+        "byte_offset": 20,
+        "fieldset": "EXTI_PD",
+        "name": "EXTI_PD"
+      }
+    ]
+  },
+  "fieldset/EXTI_EVEN": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "EXTI_EVEN_EVEN0"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "EXTI_EVEN_EVEN1"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "EXTI_EVEN_EVEN2"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "name": "EXTI_EVEN_EVEN3"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "name": "EXTI_EVEN_EVEN4"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "name": "EXTI_EVEN_EVEN5"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "name": "EXTI_EVEN_EVEN6"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "name": "EXTI_EVEN_EVEN7"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "name": "EXTI_EVEN_EVEN8"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "name": "EXTI_EVEN_EVEN9"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "name": "EXTI_EVEN_EVEN10"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "name": "EXTI_EVEN_EVEN11"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "name": "EXTI_EVEN_EVEN12"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "name": "EXTI_EVEN_EVEN13"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "name": "EXTI_EVEN_EVEN14"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "name": "EXTI_EVEN_EVEN15"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "name": "EXTI_EVEN_EVEN16"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 1,
+        "name": "EXTI_EVEN_EVEN17"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 1,
+        "name": "EXTI_EVEN_EVEN18"
+      },
+      {
+        "bit_offset": 19,
+        "bit_size": 1,
+        "name": "EXTI_EVEN_EVEN19"
+      }
+    ]
+  },
+  "fieldset/EXTI_FTEN": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "EXTI_FTEN_FTEN0"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "EXTI_FTEN_FTEN1"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "EXTI_FTEN_FTEN2"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "name": "EXTI_FTEN_FTEN3"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "name": "EXTI_FTEN_FTEN4"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "name": "EXTI_FTEN_FTEN5"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "name": "EXTI_FTEN_FTEN6"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "name": "EXTI_FTEN_FTEN7"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "name": "EXTI_FTEN_FTEN8"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "name": "EXTI_FTEN_FTEN9"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "name": "EXTI_FTEN_FTEN10"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "name": "EXTI_FTEN_FTEN11"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "name": "EXTI_FTEN_FTEN12"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "name": "EXTI_FTEN_FTEN13"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "name": "EXTI_FTEN_FTEN14"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "name": "EXTI_FTEN_FTEN15"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "name": "EXTI_FTEN_FTEN16"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 1,
+        "name": "EXTI_FTEN_FTEN17"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 1,
+        "name": "EXTI_FTEN_FTEN18"
+      },
+      {
+        "bit_offset": 19,
+        "bit_size": 1,
+        "name": "EXTI_FTEN_FTEN19"
+      }
+    ]
+  },
+  "fieldset/EXTI_INTEN": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "EXTI_INTEN_INTEN0"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "EXTI_INTEN_INTEN1"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "EXTI_INTEN_INTEN2"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "name": "EXTI_INTEN_INTEN3"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "name": "EXTI_INTEN_INTEN4"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "name": "EXTI_INTEN_INTEN5"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "name": "EXTI_INTEN_INTEN6"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "name": "EXTI_INTEN_INTEN7"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "name": "EXTI_INTEN_INTEN8"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "name": "EXTI_INTEN_INTEN9"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "name": "EXTI_INTEN_INTEN10"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "name": "EXTI_INTEN_INTEN11"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "name": "EXTI_INTEN_INTEN12"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "name": "EXTI_INTEN_INTEN13"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "name": "EXTI_INTEN_INTEN14"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "name": "EXTI_INTEN_INTEN15"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "name": "EXTI_INTEN_INTEN16"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 1,
+        "name": "EXTI_INTEN_INTEN17"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 1,
+        "name": "EXTI_INTEN_INTEN18"
+      },
+      {
+        "bit_offset": 19,
+        "bit_size": 1,
+        "name": "EXTI_INTEN_INTEN19"
+      }
+    ]
+  },
+  "fieldset/EXTI_PD": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "EXTI_PD_PD0"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "EXTI_PD_PD1"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "EXTI_PD_PD2"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "name": "EXTI_PD_PD3"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "name": "EXTI_PD_PD4"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "name": "EXTI_PD_PD5"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "name": "EXTI_PD_PD6"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "name": "EXTI_PD_PD7"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "name": "EXTI_PD_PD8"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "name": "EXTI_PD_PD9"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "name": "EXTI_PD_PD10"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "name": "EXTI_PD_PD11"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "name": "EXTI_PD_PD12"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "name": "EXTI_PD_PD13"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "name": "EXTI_PD_PD14"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "name": "EXTI_PD_PD15"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "name": "EXTI_PD_PD16"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 1,
+        "name": "EXTI_PD_PD17"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 1,
+        "name": "EXTI_PD_PD18"
+      },
+      {
+        "bit_offset": 19,
+        "bit_size": 1,
+        "name": "EXTI_PD_PD19"
+      }
+    ]
+  },
+  "fieldset/EXTI_RTEN": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "EXTI_RTEN_RTEN0"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "EXTI_RTEN_RTEN1"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "EXTI_RTEN_RTEN2"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "name": "EXTI_RTEN_RTEN3"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "name": "EXTI_RTEN_RTEN4"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "name": "EXTI_RTEN_RTEN5"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "name": "EXTI_RTEN_RTEN6"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "name": "EXTI_RTEN_RTEN7"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "name": "EXTI_RTEN_RTEN8"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "name": "EXTI_RTEN_RTEN9"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "name": "EXTI_RTEN_RTEN10"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "name": "EXTI_RTEN_RTEN11"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "name": "EXTI_RTEN_RTEN12"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "name": "EXTI_RTEN_RTEN13"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "name": "EXTI_RTEN_RTEN14"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "name": "EXTI_RTEN_RTEN15"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "name": "EXTI_RTEN_RTEN16"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 1,
+        "name": "EXTI_RTEN_RTEN17"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 1,
+        "name": "EXTI_RTEN_RTEN18"
+      },
+      {
+        "bit_offset": 19,
+        "bit_size": 1,
+        "name": "EXTI_RTEN_RTEN19"
+      }
+    ]
+  },
+  "fieldset/EXTI_SWIEV": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "EXTI_SWIEV_SWIEV0"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "EXTI_SWIEV_SWIEV1"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "EXTI_SWIEV_SWIEV2"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "name": "EXTI_SWIEV_SWIEV3"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "name": "EXTI_SWIEV_SWIEV4"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "name": "EXTI_SWIEV_SWIEV5"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "name": "EXTI_SWIEV_SWIEV6"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "name": "EXTI_SWIEV_SWIEV7"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "name": "EXTI_SWIEV_SWIEV8"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "name": "EXTI_SWIEV_SWIEV9"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "name": "EXTI_SWIEV_SWIEV10"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "name": "EXTI_SWIEV_SWIEV11"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "name": "EXTI_SWIEV_SWIEV12"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "name": "EXTI_SWIEV_SWIEV13"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "name": "EXTI_SWIEV_SWIEV14"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "name": "EXTI_SWIEV_SWIEV15"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "name": "EXTI_SWIEV_SWIEV16"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 1,
+        "name": "EXTI_SWIEV_SWIEV17"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 1,
+        "name": "EXTI_SWIEV_SWIEV18"
+      },
+      {
+        "bit_offset": 19,
+        "bit_size": 1,
+        "name": "EXTI_SWIEV_SWIEV19"
+      }
+    ]
+  }
+}

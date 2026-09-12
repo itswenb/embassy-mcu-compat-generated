@@ -1,0 +1,827 @@
+{
+  "block/TIMER1": {
+    "description": "General-purpose-timers",
+    "items": [
+      {
+        "byte_offset": 0,
+        "description": "control register 0",
+        "fieldset": "CTL0",
+        "name": "CTL0"
+      },
+      {
+        "byte_offset": 4,
+        "description": "control register 1",
+        "fieldset": "CTL1",
+        "name": "CTL1"
+      },
+      {
+        "byte_offset": 8,
+        "description": "slave mode control register",
+        "fieldset": "SMCFG",
+        "name": "SMCFG"
+      },
+      {
+        "byte_offset": 12,
+        "description": "DMA/Interrupt enable register",
+        "fieldset": "DMAINTEN",
+        "name": "DMAINTEN"
+      },
+      {
+        "byte_offset": 16,
+        "description": "interrupt flag register",
+        "fieldset": "INTF",
+        "name": "INTF"
+      },
+      {
+        "access": "Write",
+        "byte_offset": 20,
+        "description": "event generation register",
+        "fieldset": "SWEVG",
+        "name": "SWEVG"
+      },
+      {
+        "byte_offset": 24,
+        "description": "Channel control register 0 (input mode)",
+        "fieldset": "CHCTL0_Input",
+        "name": "CHCTL0_Input"
+      },
+      {
+        "byte_offset": 24,
+        "description": "Channel control register 0 (output mode)",
+        "fieldset": "CHCTL0_Output",
+        "name": "CHCTL0_Output"
+      },
+      {
+        "byte_offset": 28,
+        "description": "Channel control register 1 (input mode)",
+        "fieldset": "CHCTL1_Input",
+        "name": "CHCTL1_Input"
+      },
+      {
+        "byte_offset": 28,
+        "description": "Channel control register 1 (output mode)",
+        "fieldset": "CHCTL1_Output",
+        "name": "CHCTL1_Output"
+      },
+      {
+        "byte_offset": 32,
+        "description": "Channel control register 2",
+        "fieldset": "CHCTL2",
+        "name": "CHCTL2"
+      },
+      {
+        "byte_offset": 36,
+        "description": "Counter register",
+        "fieldset": "CNT",
+        "name": "CNT"
+      },
+      {
+        "byte_offset": 40,
+        "description": "Prescaler register",
+        "fieldset": "PSC",
+        "name": "PSC"
+      },
+      {
+        "byte_offset": 44,
+        "description": "Counter auto reload register",
+        "fieldset": "CAR",
+        "name": "CAR"
+      },
+      {
+        "byte_offset": 52,
+        "description": "Channel 0 capture/compare value register",
+        "fieldset": "CH0CV",
+        "name": "CH0CV"
+      },
+      {
+        "byte_offset": 56,
+        "description": "Channel 1 capture/compare value register",
+        "fieldset": "CH1CV",
+        "name": "CH1CV"
+      },
+      {
+        "byte_offset": 60,
+        "description": "Channel 2 capture/compare value register",
+        "fieldset": "CH2CV",
+        "name": "CH2CV"
+      },
+      {
+        "byte_offset": 64,
+        "description": "Channel 3 capture/compare value register",
+        "fieldset": "CH3CV",
+        "name": "CH3CV"
+      },
+      {
+        "byte_offset": 72,
+        "description": "DMA configuration register",
+        "fieldset": "DMACFG",
+        "name": "DMACFG"
+      },
+      {
+        "byte_offset": 76,
+        "description": "DMA transfer buffer register",
+        "fieldset": "DMATB",
+        "name": "DMATB"
+      },
+      {
+        "byte_offset": 252,
+        "description": "Configuration",
+        "fieldset": "CFG",
+        "name": "CFG"
+      }
+    ]
+  },
+  "fieldset/CAR": {
+    "description": "Counter auto reload register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "Counter auto reload value",
+        "name": "CARL"
+      }
+    ]
+  },
+  "fieldset/CFG": {
+    "description": "Configuration",
+    "fields": [
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Write CHxVAL register selection",
+        "name": "CHVSEL"
+      }
+    ]
+  },
+  "fieldset/CH0CV": {
+    "description": "Channel 0 capture/compare value register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Capture or compare value of channel 0",
+        "name": "CH0VAL"
+      }
+    ]
+  },
+  "fieldset/CH1CV": {
+    "description": "Channel 1 capture/compare value register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Capture or compare value of channel1",
+        "name": "CH1VAL"
+      }
+    ]
+  },
+  "fieldset/CH2CV": {
+    "description": "Channel 2 capture/compare value register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Capture or compare value of channel 2",
+        "name": "CH2VAL"
+      }
+    ]
+  },
+  "fieldset/CH3CV": {
+    "description": "Channel 3 capture/compare value register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Capture or compare value of channel 3",
+        "name": "CH3VAL"
+      }
+    ]
+  },
+  "fieldset/CHCTL0_Input": {
+    "description": "Channel control register 0 (input mode)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 2,
+        "description": "Channel 0 mode selection",
+        "name": "CH0MS"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 2,
+        "description": "Channel 0 input capture prescaler",
+        "name": "CH0CAPPSC"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 4,
+        "description": "Channel 0 input capture filter control",
+        "name": "CH0CAPFLT"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 2,
+        "description": "Channel 1 mode selection",
+        "name": "CH1MS"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 2,
+        "description": "Channel 1 input capture prescaler",
+        "name": "CH1CAPPSC"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 4,
+        "description": "Channel 1 input capture filter control",
+        "name": "CH1CAPFLT"
+      }
+    ]
+  },
+  "fieldset/CHCTL0_Output": {
+    "description": "Channel control register 0 (output mode)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 2,
+        "description": "Channel 0 I/O mode selection",
+        "name": "CH0MS"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Channel 0 output compare fast enable",
+        "name": "CH0COMFEN"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Channel 0 compare output shadow enable",
+        "name": "CH0COMSEN"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 3,
+        "description": "Channel 0 compare output control",
+        "name": "CH0COMCTL"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Channel 0 output compare clear enable",
+        "name": "CH0COMCEN"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 2,
+        "description": "Channel 1 mode selection",
+        "name": "CH1MS"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "Channel 1 output compare fast enable",
+        "name": "CH1COMFEN"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "description": "Channel 1 output compare shadow enable",
+        "name": "CH1COMSEN"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 3,
+        "description": "Channel 1 compare output control",
+        "name": "CH1COMCTL"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "Channel 1 output compare clear enable",
+        "name": "CH1COMCEN"
+      }
+    ]
+  },
+  "fieldset/CHCTL1_Input": {
+    "description": "Channel control register 1 (input mode)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 2,
+        "description": "Channel 2 mode selection",
+        "name": "CH2MS"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 2,
+        "description": "Channel 2 input capture prescaler",
+        "name": "CH2CAPPSC"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 4,
+        "description": "Channel 2 input capture filter control",
+        "name": "CH2CAPFLT"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 2,
+        "description": "Channel 3 mode selection",
+        "name": "CH3MS"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 2,
+        "description": "Channel 3 input capture prescaler",
+        "name": "CH3CAPPSC"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 4,
+        "description": "Channel 3 input capture filter control",
+        "name": "CH3CAPFLT"
+      }
+    ]
+  },
+  "fieldset/CHCTL1_Output": {
+    "description": "Channel control register 1 (output mode)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 2,
+        "description": "Channel 2 I/O mode selection",
+        "name": "CH2MS"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Channel 2 output compare fast enable",
+        "name": "CH2COMFEN"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Channel 2 compare output shadow enable",
+        "name": "CH2COMSEN"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 3,
+        "description": "Channel 2 compare output control",
+        "name": "CH2COMCTL"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Channel 2 output compare clear enable",
+        "name": "CH2COMCEN"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 2,
+        "description": "Channel 3 mode selection",
+        "name": "CH3MS"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "Channel 3 output compare fast enable",
+        "name": "CH3COMFEN"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "description": "Channel 3 output compare shadow enable",
+        "name": "CH3COMSEN"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 3,
+        "description": "Channel 3 compare output control",
+        "name": "CH3COMCTL"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "Channel 3 output compare clear enable",
+        "name": "CH3COMCEN"
+      }
+    ]
+  },
+  "fieldset/CHCTL2": {
+    "description": "Channel control register 2",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Channel 0 capture/compare function enable",
+        "name": "CH0EN"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Channel 0 capture/compare function polarity",
+        "name": "CH0P"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "Channel 1 capture/compare function enable",
+        "name": "CH1EN"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "Channel 1 capture/compare function polarity",
+        "name": "CH1P"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "Channel 2 capture/compare function enable",
+        "name": "CH2EN"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "Channel 2 capture/compare function polarity",
+        "name": "CH2P"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "description": "Channel 2 complementary output polarity",
+        "name": "CH2NP"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "description": "Channel 3 capture/compare function enable",
+        "name": "CH3EN"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "description": "Channel 3 capture/compare function polarity",
+        "name": "CH3P"
+      }
+    ]
+  },
+  "fieldset/CNT": {
+    "description": "Counter register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "counter value",
+        "name": "CNT"
+      }
+    ]
+  },
+  "fieldset/CTL0": {
+    "description": "control register 0",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Counter enable",
+        "name": "CEN"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Update disable",
+        "name": "UPDIS"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Update source",
+        "name": "UPS"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Single pulse mode",
+        "name": "SPM"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "Direction",
+        "name": "DIR"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 2,
+        "description": "Counter aligns mode selection",
+        "name": "CAM"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Auto-reload shadow enable",
+        "name": "ARSE"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 2,
+        "description": "Clock division",
+        "name": "CKDIV"
+      }
+    ]
+  },
+  "fieldset/CTL1": {
+    "description": "control register 1",
+    "fields": [
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "DMA request source selection",
+        "name": "DMAS"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 3,
+        "description": "Master mode control",
+        "name": "MMC"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Channel 0 trigger input selection",
+        "name": "TI0S"
+      }
+    ]
+  },
+  "fieldset/DMACFG": {
+    "description": "DMA configuration register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 5,
+        "description": "DMA transfer access start address",
+        "name": "DMATA"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 5,
+        "description": "DMA transfer count",
+        "name": "DMATC"
+      }
+    ]
+  },
+  "fieldset/DMAINTEN": {
+    "description": "DMA/Interrupt enable register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Update interrupt enable",
+        "name": "UPIE"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Channel 0 capture/compare interrupt enable",
+        "name": "CH0IE"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Channel 1 capture/compare interrupt enable",
+        "name": "CH1IE"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Channel 2 capture/compare interrupt enable",
+        "name": "CH2IE"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "Channel 3 capture/compare interrupt enable",
+        "name": "CH3IE"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "Trigger interrupt enable",
+        "name": "TRGIE"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "Update DMA request enable",
+        "name": "UPDEN"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "Channel 0 capture/compare DMA request enable",
+        "name": "CH0DEN"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "Channel 1 capture/compare DMA request enable",
+        "name": "CH1DEN"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "description": "Channel 2 capture/compare DMA request enable",
+        "name": "CH2DEN"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "description": "Channel 3 capture/compare DMA request enable",
+        "name": "CH3DEN"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "description": "Trigger DMA request enable",
+        "name": "TRGDEN"
+      }
+    ]
+  },
+  "fieldset/DMATB": {
+    "description": "DMA transfer buffer register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "DMA transfer buffer",
+        "name": "DMATB"
+      }
+    ]
+  },
+  "fieldset/INTF": {
+    "description": "interrupt flag register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Update interrupt flag",
+        "name": "UPIF"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Channel 0 capture/compare interrupt flag",
+        "name": "CH0IF"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Channel 1 capture/compare interrupt flag",
+        "name": "CH1IF"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Channel 2 capture/compare interrupt enable",
+        "name": "CH2IF"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "Channel 3 capture/compare interrupt enable",
+        "name": "CH3IF"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "Trigger interrupt flag",
+        "name": "TRGIF"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "Channel 0 over capture flag",
+        "name": "CH0OF"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "Channel 1 over capture flag",
+        "name": "CH1OF"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "description": "Channel 2 over capture flag",
+        "name": "CH2OF"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "description": "Channel 3 over capture flag",
+        "name": "CH3OF"
+      }
+    ]
+  },
+  "fieldset/PSC": {
+    "description": "Prescaler register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Prescaler value of the counter clock",
+        "name": "PSC"
+      }
+    ]
+  },
+  "fieldset/SMCFG": {
+    "description": "slave mode control register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 3,
+        "description": "Slave mode control",
+        "name": "SMC"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 3,
+        "description": "Trigger selection",
+        "name": "TRGS"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Master-slave mode",
+        "name": "MSM"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 4,
+        "description": "External trigger filter control",
+        "name": "ETFC"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 2,
+        "description": "External trigger prescaler",
+        "name": "ETPSC"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "description": "Part of SMC for enable External clock mode1",
+        "name": "SMC1"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "External trigger polarity",
+        "name": "ETP"
+      }
+    ]
+  },
+  "fieldset/SWEVG": {
+    "description": "event generation register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Update generation",
+        "name": "UPG"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Channel 0 capture or compare event generation",
+        "name": "CH0G"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Channel 1 capture or compare event generation",
+        "name": "CH1G"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Channel 2 capture or compare event generation",
+        "name": "CH2G"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "Channel 3 capture or compare event generation",
+        "name": "CH3G"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "Trigger event generation",
+        "name": "TRGG"
+      }
+    ]
+  }
+}

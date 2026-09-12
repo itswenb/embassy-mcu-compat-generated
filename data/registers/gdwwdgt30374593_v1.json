@@ -1,0 +1,63 @@
+{
+  "block/WWDGT": {
+    "items": [
+      {
+        "byte_offset": 0,
+        "fieldset": "WWDGT_CTL",
+        "name": "WWDGT_CTL"
+      },
+      {
+        "byte_offset": 4,
+        "fieldset": "WWDGT_CFG",
+        "name": "WWDGT_CFG"
+      },
+      {
+        "byte_offset": 8,
+        "fieldset": "WWDGT_STAT",
+        "name": "WWDGT_STAT"
+      }
+    ]
+  },
+  "fieldset/WWDGT_CFG": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 7,
+        "name": "WWDGT_CFG_WIN"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 2,
+        "name": "WWDGT_CFG_PSC"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "name": "WWDGT_CFG_EWIE"
+      }
+    ]
+  },
+  "fieldset/WWDGT_CTL": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 7,
+        "name": "WWDGT_CTL_CNT"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "name": "WWDGT_CTL_WDGTEN"
+      }
+    ]
+  },
+  "fieldset/WWDGT_STAT": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "WWDGT_STAT_EWIF"
+      }
+    ]
+  }
+}

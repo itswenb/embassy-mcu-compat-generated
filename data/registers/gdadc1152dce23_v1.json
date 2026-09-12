@@ -1,0 +1,765 @@
+{
+  "block/ADC1": {
+    "description": "Analog to digital converter",
+    "items": [
+      {
+        "byte_offset": 0,
+        "description": "status register",
+        "fieldset": "STAT",
+        "name": "STAT"
+      },
+      {
+        "byte_offset": 4,
+        "description": "control register 0",
+        "fieldset": "CTL0",
+        "name": "CTL0"
+      },
+      {
+        "byte_offset": 8,
+        "description": "control register 1",
+        "fieldset": "CTL1",
+        "name": "CTL1"
+      },
+      {
+        "byte_offset": 12,
+        "description": "Sample time register 0",
+        "fieldset": "SAMPT0",
+        "name": "SAMPT0"
+      },
+      {
+        "byte_offset": 16,
+        "description": "Sample time register 1",
+        "fieldset": "SAMPT1",
+        "name": "SAMPT1"
+      },
+      {
+        "byte_offset": 20,
+        "description": "Inserted channel data offset register 0",
+        "fieldset": "IOFF0",
+        "name": "IOFF0"
+      },
+      {
+        "byte_offset": 24,
+        "description": "Inserted channel data offset register 1",
+        "fieldset": "IOFF1",
+        "name": "IOFF1"
+      },
+      {
+        "byte_offset": 28,
+        "description": "Inserted channel data offset register 2",
+        "fieldset": "IOFF2",
+        "name": "IOFF2"
+      },
+      {
+        "byte_offset": 32,
+        "description": "Inserted channel data offset register 3",
+        "fieldset": "IOFF3",
+        "name": "IOFF3"
+      },
+      {
+        "byte_offset": 36,
+        "description": "watchdog higher threshold register",
+        "fieldset": "WDHT",
+        "name": "WDHT"
+      },
+      {
+        "byte_offset": 40,
+        "description": "watchdog lower threshold register",
+        "fieldset": "WDLT",
+        "name": "WDLT"
+      },
+      {
+        "byte_offset": 44,
+        "description": "regular sequence register 0",
+        "fieldset": "RSQ0",
+        "name": "RSQ0"
+      },
+      {
+        "byte_offset": 48,
+        "description": "regular sequence register 1",
+        "fieldset": "RSQ1",
+        "name": "RSQ1"
+      },
+      {
+        "byte_offset": 52,
+        "description": "regular sequence register 2",
+        "fieldset": "RSQ2",
+        "name": "RSQ2"
+      },
+      {
+        "byte_offset": 56,
+        "description": "Inserted sequence register",
+        "fieldset": "ISQ",
+        "name": "ISQ"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 60,
+        "description": "Inserted data register 0",
+        "fieldset": "IDATA0",
+        "name": "IDATA0"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 64,
+        "description": "Inserted data register 1",
+        "fieldset": "IDATA1",
+        "name": "IDATA1"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 68,
+        "description": "Inserted data register 2",
+        "fieldset": "IDATA2",
+        "name": "IDATA2"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 72,
+        "description": "Inserted data register 3",
+        "fieldset": "IDATA3",
+        "name": "IDATA3"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 76,
+        "description": "regular data register",
+        "fieldset": "RDATA",
+        "name": "RDATA"
+      },
+      {
+        "byte_offset": 128,
+        "description": "Oversample control register",
+        "fieldset": "OVSAMPCTL",
+        "name": "OVSAMPCTL"
+      }
+    ]
+  },
+  "fieldset/CTL0": {
+    "description": "control register 0",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 5,
+        "description": "Analog watchdog channel select",
+        "name": "WDCHSEL"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "Interrupt enable for EOC",
+        "name": "EOCIE"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "Interrupt enable for WDE",
+        "name": "WDEIE"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Interrupt enable for EOIC",
+        "name": "EOICIE"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "Scan mode",
+        "name": "SM"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "When in scan mode, analog watchdog \t is effective on a single channel",
+        "name": "WDSC"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "Inserted channel group convert \t automatically",
+        "name": "ICA"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "description": "Discontinuous mode on regular channels",
+        "name": "DISRC"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "description": "Discontinuous mode on \t inserted channels",
+        "name": "DISIC"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 3,
+        "description": "Number of conversions in \t discontinuous mode",
+        "name": "DISNUM"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 3,
+        "description": "sync mode selection",
+        "name": "SYNCM"
+      },
+      {
+        "bit_offset": 22,
+        "bit_size": 1,
+        "description": "Inserted channel analog watchdog \t enable",
+        "name": "IWDEN"
+      },
+      {
+        "bit_offset": 23,
+        "bit_size": 1,
+        "description": "Regular channel analog watchdog \t enable",
+        "name": "RWDEN"
+      }
+    ]
+  },
+  "fieldset/CTL1": {
+    "description": "control register 1",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "ADC on",
+        "name": "ADCON"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Continuous mode",
+        "name": "CTN"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "ADC calibration",
+        "name": "CLB"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Reset calibration",
+        "name": "RSTCLB"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "DMA request enable",
+        "name": "DMA"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "description": "Data alignment",
+        "name": "DAL"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 3,
+        "description": "External trigger select for inserted channel",
+        "name": "ETSIC"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "External trigger enable for inserted channel",
+        "name": "ETEIC"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 3,
+        "description": "External trigger select for regular channel",
+        "name": "ETSRC"
+      },
+      {
+        "bit_offset": 20,
+        "bit_size": 1,
+        "description": "External trigger enable for regular channel",
+        "name": "ETERC"
+      },
+      {
+        "bit_offset": 21,
+        "bit_size": 1,
+        "description": "Start on inserted channel",
+        "name": "SWICST"
+      },
+      {
+        "bit_offset": 22,
+        "bit_size": 1,
+        "description": "Start on regular channel",
+        "name": "SWRCST"
+      },
+      {
+        "bit_offset": 23,
+        "bit_size": 1,
+        "description": "Channel 16 and 17 enable of ADC0",
+        "name": "TSVREN"
+      }
+    ]
+  },
+  "fieldset/IDATA0": {
+    "description": "Inserted data register 0",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Inserted number n conversion data",
+        "name": "IDATAn"
+      }
+    ]
+  },
+  "fieldset/IDATA1": {
+    "description": "Inserted data register 1",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Inserted number n conversion data",
+        "name": "IDATAn"
+      }
+    ]
+  },
+  "fieldset/IDATA2": {
+    "description": "Inserted data register 2",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Inserted number n conversion data",
+        "name": "IDATAn"
+      }
+    ]
+  },
+  "fieldset/IDATA3": {
+    "description": "Inserted data register 3",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Inserted number n conversion data",
+        "name": "IDATAn"
+      }
+    ]
+  },
+  "fieldset/IOFF0": {
+    "description": "Inserted channel data offset register 0",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 12,
+        "description": "Data offset for inserted channel 0",
+        "name": "IOFF"
+      }
+    ]
+  },
+  "fieldset/IOFF1": {
+    "description": "Inserted channel data offset register 1",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 12,
+        "description": "Data offset for inserted channel 1",
+        "name": "IOFF"
+      }
+    ]
+  },
+  "fieldset/IOFF2": {
+    "description": "Inserted channel data offset register 2",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 12,
+        "description": "Data offset for inserted channel 2",
+        "name": "IOFF"
+      }
+    ]
+  },
+  "fieldset/IOFF3": {
+    "description": "Inserted channel data offset register 3",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 12,
+        "description": "Data offset for inserted channel 3",
+        "name": "IOFF"
+      }
+    ]
+  },
+  "fieldset/ISQ": {
+    "description": "Inserted sequence register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 5,
+        "description": "1st conversion in inserted sequence",
+        "name": "ISQ0"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 5,
+        "description": "2nd conversion in inserted sequence",
+        "name": "ISQ1"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 5,
+        "description": "3rd conversion in inserted sequence",
+        "name": "ISQ2"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 5,
+        "description": "4th conversion in inserted sequence",
+        "name": "ISQ3"
+      },
+      {
+        "bit_offset": 20,
+        "bit_size": 2,
+        "description": "Inserted channel group length",
+        "name": "IL"
+      }
+    ]
+  },
+  "fieldset/OVSAMPCTL": {
+    "description": "Oversample control register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Oversampling Enable",
+        "name": "OVSEN"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 3,
+        "description": "Oversampling ratio",
+        "name": "OVSR"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 4,
+        "description": "Oversampling shift",
+        "name": "OVSS"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "Triggered Oversampling",
+        "name": "TOVS"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 2,
+        "description": "ADC resolution",
+        "name": "DRES"
+      }
+    ]
+  },
+  "fieldset/RDATA": {
+    "description": "regular data register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Regular channel data",
+        "name": "RDATA"
+      }
+    ]
+  },
+  "fieldset/RSQ0": {
+    "description": "regular sequence register 0",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 5,
+        "description": "13th conversion in regular sequence",
+        "name": "RSQ12"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 5,
+        "description": "14th conversion in regular sequence",
+        "name": "RSQ13"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 5,
+        "description": "15th conversion in regular sequence",
+        "name": "RSQ14"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 5,
+        "description": "16th conversion in regular sequence",
+        "name": "RSQ15"
+      },
+      {
+        "bit_offset": 20,
+        "bit_size": 4,
+        "description": "Regular channel group length",
+        "name": "RL"
+      }
+    ]
+  },
+  "fieldset/RSQ1": {
+    "description": "regular sequence register 1",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 5,
+        "description": "7th conversion in regular sequence",
+        "name": "RSQ6"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 5,
+        "description": "8th conversion in regular sequence",
+        "name": "RSQ7"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 5,
+        "description": "9th conversion in regular sequence",
+        "name": "RSQ8"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 5,
+        "description": "10th conversion in regular sequence",
+        "name": "RSQ9"
+      },
+      {
+        "bit_offset": 20,
+        "bit_size": 5,
+        "description": "11th conversion in regular sequence",
+        "name": "RSQ10"
+      },
+      {
+        "bit_offset": 25,
+        "bit_size": 5,
+        "description": "12th conversion in regular sequence",
+        "name": "RSQ11"
+      }
+    ]
+  },
+  "fieldset/RSQ2": {
+    "description": "regular sequence register 2",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 5,
+        "description": "1st conversion in regular sequence",
+        "name": "RSQ0"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 5,
+        "description": "2nd conversion in regular sequence",
+        "name": "RSQ1"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 5,
+        "description": "3rd conversion in regular sequence",
+        "name": "RSQ2"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 5,
+        "description": "4th conversion in regular sequence",
+        "name": "RSQ3"
+      },
+      {
+        "bit_offset": 20,
+        "bit_size": 5,
+        "description": "5th conversion in regular sequence",
+        "name": "RSQ4"
+      },
+      {
+        "bit_offset": 25,
+        "bit_size": 5,
+        "description": "6th conversion in regular sequence",
+        "name": "RSQ5"
+      }
+    ]
+  },
+  "fieldset/SAMPT0": {
+    "description": "Sample time register 0",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 3,
+        "description": "Channel 10 sample time selection",
+        "name": "SPT10"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 3,
+        "description": "Channel 11 sample time selection",
+        "name": "SPT11"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 3,
+        "description": "Channel 12 sample time selection",
+        "name": "SPT12"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 3,
+        "description": "Channel 13 sample time selection",
+        "name": "SPT13"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 3,
+        "description": "Channel 14 sample time selection",
+        "name": "SPT14"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 3,
+        "description": "Channel 15 sample time selection",
+        "name": "SPT15"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 3,
+        "description": "Channel 16 sample time selection",
+        "name": "SPT16"
+      },
+      {
+        "bit_offset": 21,
+        "bit_size": 3,
+        "description": "Channel 17 sample time selection",
+        "name": "SPT17"
+      }
+    ]
+  },
+  "fieldset/SAMPT1": {
+    "description": "Sample time register 1",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 3,
+        "description": "Channel 0 sample time selection",
+        "name": "SPT0"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 3,
+        "description": "Channel 1 sample time selection",
+        "name": "SPT1"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 3,
+        "description": "Channel 2 sample time selection",
+        "name": "SPT2"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 3,
+        "description": "Channel 3 sample time selection",
+        "name": "SPT3"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 3,
+        "description": "Channel 4 sample time selection",
+        "name": "SPT4"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 3,
+        "description": "Channel 5 sample time selection",
+        "name": "SPT5"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 3,
+        "description": "Channel 6 sample time selection",
+        "name": "SPT6"
+      },
+      {
+        "bit_offset": 21,
+        "bit_size": 3,
+        "description": "Channel 7 sample time selection",
+        "name": "SPT7"
+      },
+      {
+        "bit_offset": 24,
+        "bit_size": 3,
+        "description": "Channel 8 sample time selection",
+        "name": "SPT8"
+      },
+      {
+        "bit_offset": 27,
+        "bit_size": 3,
+        "description": "Channel 9 sample time selection",
+        "name": "SPT9"
+      }
+    ]
+  },
+  "fieldset/STAT": {
+    "description": "status register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Analog watchdog event flag",
+        "name": "WDE"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "End of group conversion flag",
+        "name": "EOC"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "End of inserted group conversion flag",
+        "name": "EOIC"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Start flag of inserted channel group",
+        "name": "STIC"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "Start flag of regular channel group",
+        "name": "STRC"
+      }
+    ]
+  },
+  "fieldset/WDHT": {
+    "description": "watchdog higher threshold register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 12,
+        "description": "Analog watchdog higher threshold",
+        "name": "WDHT"
+      }
+    ]
+  },
+  "fieldset/WDLT": {
+    "description": "watchdog lower threshold register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 12,
+        "description": "Analog watchdog lower threshold",
+        "name": "WDLT"
+      }
+    ]
+  }
+}

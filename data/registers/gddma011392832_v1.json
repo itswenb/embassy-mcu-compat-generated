@@ -1,0 +1,1305 @@
+{
+  "block/DMA0": {
+    "description": "DMA controller",
+    "items": [
+      {
+        "access": "Read",
+        "byte_offset": 0,
+        "description": "Interrupt flag register",
+        "fieldset": "INTF",
+        "name": "INTF"
+      },
+      {
+        "access": "Write",
+        "byte_offset": 4,
+        "description": "Interrupt flag clear register",
+        "fieldset": "INTC",
+        "name": "INTC"
+      },
+      {
+        "byte_offset": 8,
+        "description": "Channel 0 control register",
+        "fieldset": "CH0CTL",
+        "name": "CH0CTL"
+      },
+      {
+        "byte_offset": 12,
+        "description": "Channel 0 counter register",
+        "fieldset": "CH0CNT",
+        "name": "CH0CNT"
+      },
+      {
+        "byte_offset": 16,
+        "description": "Channel 0 peripheral base address register",
+        "fieldset": "CH0PADDR",
+        "name": "CH0PADDR"
+      },
+      {
+        "byte_offset": 20,
+        "description": "Channel 0 memory base address register",
+        "fieldset": "CH0MADDR",
+        "name": "CH0MADDR"
+      },
+      {
+        "byte_offset": 28,
+        "description": "Channel 1 control register",
+        "fieldset": "CH1CTL",
+        "name": "CH1CTL"
+      },
+      {
+        "byte_offset": 32,
+        "description": "Channel 1 counter register",
+        "fieldset": "CH1CNT",
+        "name": "CH1CNT"
+      },
+      {
+        "byte_offset": 36,
+        "description": "Channel 1 peripheral base address register",
+        "fieldset": "CH1PADDR",
+        "name": "CH1PADDR"
+      },
+      {
+        "byte_offset": 40,
+        "description": "Channel 1 memory base address register",
+        "fieldset": "CH1MADDR",
+        "name": "CH1MADDR"
+      },
+      {
+        "byte_offset": 48,
+        "description": "Channel 2 control register",
+        "fieldset": "CH2CTL",
+        "name": "CH2CTL"
+      },
+      {
+        "byte_offset": 52,
+        "description": "Channel 2 counter register",
+        "fieldset": "CH2CNT",
+        "name": "CH2CNT"
+      },
+      {
+        "byte_offset": 56,
+        "description": "Channel 2 peripheral base address register",
+        "fieldset": "CH2PADDR",
+        "name": "CH2PADDR"
+      },
+      {
+        "byte_offset": 60,
+        "description": "Channel 2 memory base address register",
+        "fieldset": "CH2MADDR",
+        "name": "CH2MADDR"
+      },
+      {
+        "byte_offset": 68,
+        "description": "Channel 3 control register",
+        "fieldset": "CH3CTL",
+        "name": "CH3CTL"
+      },
+      {
+        "byte_offset": 72,
+        "description": "Channel 3 counter register",
+        "fieldset": "CH3CNT",
+        "name": "CH3CNT"
+      },
+      {
+        "byte_offset": 76,
+        "description": "Channel 3 peripheral base address register",
+        "fieldset": "CH3PADDR",
+        "name": "CH3PADDR"
+      },
+      {
+        "byte_offset": 80,
+        "description": "Channel 3 memory base address register",
+        "fieldset": "CH3MADDR",
+        "name": "CH3MADDR"
+      },
+      {
+        "byte_offset": 88,
+        "description": "Channel 4 control register",
+        "fieldset": "CH4CTL",
+        "name": "CH4CTL"
+      },
+      {
+        "byte_offset": 92,
+        "description": "Channel 4 counter register",
+        "fieldset": "CH4CNT",
+        "name": "CH4CNT"
+      },
+      {
+        "byte_offset": 96,
+        "description": "Channel 4 peripheral base address register",
+        "fieldset": "CH4PADDR",
+        "name": "CH4PADDR"
+      },
+      {
+        "byte_offset": 100,
+        "description": "Channel 4 memory base address register",
+        "fieldset": "CH4MADDR",
+        "name": "CH4MADDR"
+      },
+      {
+        "byte_offset": 108,
+        "description": "Channel 5 control register",
+        "fieldset": "CH5CTL",
+        "name": "CH5CTL"
+      },
+      {
+        "byte_offset": 112,
+        "description": "Channel 5 counter register",
+        "fieldset": "CH5CNT",
+        "name": "CH5CNT"
+      },
+      {
+        "byte_offset": 116,
+        "description": "Channel 5 peripheral base address register",
+        "fieldset": "CH5PADDR",
+        "name": "CH5PADDR"
+      },
+      {
+        "byte_offset": 120,
+        "description": "Channel 5 memory base address register",
+        "fieldset": "CH5MADDR",
+        "name": "CH5MADDR"
+      },
+      {
+        "byte_offset": 128,
+        "description": "Channel 6 control register",
+        "fieldset": "CH6CTL",
+        "name": "CH6CTL"
+      },
+      {
+        "byte_offset": 132,
+        "description": "Channel 6 counter register",
+        "fieldset": "CH6CNT",
+        "name": "CH6CNT"
+      },
+      {
+        "byte_offset": 136,
+        "description": "Channel 6 peripheral base address register",
+        "fieldset": "CH6PADDR",
+        "name": "CH6PADDR"
+      },
+      {
+        "byte_offset": 140,
+        "description": "Channel 6 memory base address register",
+        "fieldset": "CH6MADDR",
+        "name": "CH6MADDR"
+      }
+    ]
+  },
+  "fieldset/CH0CNT": {
+    "description": "Channel 0 counter register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Transfer counter",
+        "name": "CNT"
+      }
+    ]
+  },
+  "fieldset/CH0CTL": {
+    "description": "Channel 0 control register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Channel enable",
+        "name": "CHEN"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Enable bit for channel full transfer finish interrupt",
+        "name": "FTFIE"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Enable bit for channel half transfer finish interrupt",
+        "name": "HTFIE"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Enable bit for channel error interrupt",
+        "name": "ERRIE"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "Transfer direction",
+        "name": "DIR"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "Circular mode enable",
+        "name": "CMEN"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "Next address generation algorithm of peripheral",
+        "name": "PNAGA"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Next address generation algorithm of memory",
+        "name": "MNAGA"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 2,
+        "description": "Transfer data size of peripheral",
+        "name": "PWIDTH"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 2,
+        "description": "Transfer data size of memory",
+        "name": "MWIDTH"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 2,
+        "description": "Priority level",
+        "name": "PRIO"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "description": "Memory to Memory Mode",
+        "name": "M2M"
+      }
+    ]
+  },
+  "fieldset/CH0MADDR": {
+    "description": "Channel 0 memory base address register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "Memory base address",
+        "name": "MADDR"
+      }
+    ]
+  },
+  "fieldset/CH0PADDR": {
+    "description": "Channel 0 peripheral base address register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "Peripheral base address",
+        "name": "PADDR"
+      }
+    ]
+  },
+  "fieldset/CH1CNT": {
+    "description": "Channel 1 counter register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Transfer counter",
+        "name": "CNT"
+      }
+    ]
+  },
+  "fieldset/CH1CTL": {
+    "description": "Channel 1 control register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Channel enable",
+        "name": "CHEN"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Enable bit for channel full transfer finish interrupt",
+        "name": "FTFIE"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Enable bit for channel half transfer finish interrupt",
+        "name": "HTFIE"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Enable bit for channel error interrupt",
+        "name": "ERRIE"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "Transfer direction",
+        "name": "DIR"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "Circular mode enable",
+        "name": "CMEN"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "Next address generation algorithm of peripheral",
+        "name": "PNAGA"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Next address generation algorithm of memory",
+        "name": "MNAGA"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 2,
+        "description": "Transfer data size of peripheral",
+        "name": "PWIDTH"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 2,
+        "description": "Transfer data size of memory",
+        "name": "MWIDTH"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 2,
+        "description": "Priority level",
+        "name": "PRIO"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "description": "Memory to Memory Mode",
+        "name": "M2M"
+      }
+    ]
+  },
+  "fieldset/CH1MADDR": {
+    "description": "Channel 1 memory base address register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "Memory base address",
+        "name": "MADDR"
+      }
+    ]
+  },
+  "fieldset/CH1PADDR": {
+    "description": "Channel 1 peripheral base address register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "Peripheral base address",
+        "name": "PADDR"
+      }
+    ]
+  },
+  "fieldset/CH2CNT": {
+    "description": "Channel 2 counter register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Transfer counter",
+        "name": "CNT"
+      }
+    ]
+  },
+  "fieldset/CH2CTL": {
+    "description": "Channel 2 control register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Channel enable",
+        "name": "CHEN"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Enable bit for channel full transfer finish interrupt",
+        "name": "FTFIE"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Enable bit for channel half transfer finish interrupt",
+        "name": "HTFIE"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Enable bit for channel error interrupt",
+        "name": "ERRIE"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "Transfer direction",
+        "name": "DIR"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "Circular mode enable",
+        "name": "CMEN"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "Next address generation algorithm of peripheral",
+        "name": "PNAGA"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Next address generation algorithm of memory",
+        "name": "MNAGA"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 2,
+        "description": "Transfer data size of peripheral",
+        "name": "PWIDTH"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 2,
+        "description": "Transfer data size of memory",
+        "name": "MWIDTH"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 2,
+        "description": "Priority level",
+        "name": "PRIO"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "description": "Memory to Memory Mode",
+        "name": "M2M"
+      }
+    ]
+  },
+  "fieldset/CH2MADDR": {
+    "description": "Channel 2 memory base address register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "Memory base address",
+        "name": "MADDR"
+      }
+    ]
+  },
+  "fieldset/CH2PADDR": {
+    "description": "Channel 2 peripheral base address register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "Peripheral base address",
+        "name": "PADDR"
+      }
+    ]
+  },
+  "fieldset/CH3CNT": {
+    "description": "Channel 3 counter register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Transfer counter",
+        "name": "CNT"
+      }
+    ]
+  },
+  "fieldset/CH3CTL": {
+    "description": "Channel 3 control register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Channel enable",
+        "name": "CHEN"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Enable bit for channel full transfer finish interrupt",
+        "name": "FTFIE"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Enable bit for channel half transfer finish interrupt",
+        "name": "HTFIE"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Enable bit for channel error interrupt",
+        "name": "ERRIE"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "Transfer direction",
+        "name": "DIR"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "Circular mode enable",
+        "name": "CMEN"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "Next address generation algorithm of peripheral",
+        "name": "PNAGA"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Next address generation algorithm of memory",
+        "name": "MNAGA"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 2,
+        "description": "Transfer data size of peripheral",
+        "name": "PWIDTH"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 2,
+        "description": "Transfer data size of memory",
+        "name": "MWIDTH"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 2,
+        "description": "Priority level",
+        "name": "PRIO"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "description": "Memory to Memory Mode",
+        "name": "M2M"
+      }
+    ]
+  },
+  "fieldset/CH3MADDR": {
+    "description": "Channel 3 memory base address register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "Memory base address",
+        "name": "MADDR"
+      }
+    ]
+  },
+  "fieldset/CH3PADDR": {
+    "description": "Channel 3 peripheral base address register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "Peripheral base address",
+        "name": "PADDR"
+      }
+    ]
+  },
+  "fieldset/CH4CNT": {
+    "description": "Channel 4 counter register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Transfer counter",
+        "name": "CNT"
+      }
+    ]
+  },
+  "fieldset/CH4CTL": {
+    "description": "Channel 4 control register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Channel enable",
+        "name": "CHEN"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Enable bit for channel full transfer finish interrupt",
+        "name": "FTFIE"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Enable bit for channel half transfer finish interrupt",
+        "name": "HTFIE"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Enable bit for channel error interrupt",
+        "name": "ERRIE"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "Transfer direction",
+        "name": "DIR"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "Circular mode enable",
+        "name": "CMEN"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "Next address generation algorithm of peripheral",
+        "name": "PNAGA"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Next address generation algorithm of memory",
+        "name": "MNAGA"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 2,
+        "description": "Transfer data size of peripheral",
+        "name": "PWIDTH"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 2,
+        "description": "Transfer data size of memory",
+        "name": "MWIDTH"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 2,
+        "description": "Priority level",
+        "name": "PRIO"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "description": "Memory to Memory Mode",
+        "name": "M2M"
+      }
+    ]
+  },
+  "fieldset/CH4MADDR": {
+    "description": "Channel 4 memory base address register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "Memory base address",
+        "name": "MADDR"
+      }
+    ]
+  },
+  "fieldset/CH4PADDR": {
+    "description": "Channel 4 peripheral base address register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "Peripheral base address",
+        "name": "PADDR"
+      }
+    ]
+  },
+  "fieldset/CH5CNT": {
+    "description": "Channel 5 counter register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Transfer counter",
+        "name": "CNT"
+      }
+    ]
+  },
+  "fieldset/CH5CTL": {
+    "description": "Channel 5 control register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Channel enable",
+        "name": "CHEN"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Enable bit for channel full transfer finish interrupt",
+        "name": "FTFIE"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Enable bit for channel half transfer finish interrupt",
+        "name": "HTFIE"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Enable bit for channel error interrupt",
+        "name": "ERRIE"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "Transfer direction",
+        "name": "DIR"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "Circular mode enable",
+        "name": "CMEN"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "Next address generation algorithm of peripheral",
+        "name": "PNAGA"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Next address generation algorithm of memory",
+        "name": "MNAGA"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 2,
+        "description": "Transfer data size of peripheral",
+        "name": "PWIDTH"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 2,
+        "description": "Transfer data size of memory",
+        "name": "MWIDTH"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 2,
+        "description": "Priority level",
+        "name": "PRIO"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "description": "Memory to Memory Mode",
+        "name": "M2M"
+      }
+    ]
+  },
+  "fieldset/CH5MADDR": {
+    "description": "Channel 5 memory base address register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "Memory base address",
+        "name": "MADDR"
+      }
+    ]
+  },
+  "fieldset/CH5PADDR": {
+    "description": "Channel 5 peripheral base address register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "Peripheral base address",
+        "name": "PADDR"
+      }
+    ]
+  },
+  "fieldset/CH6CNT": {
+    "description": "Channel 6 counter register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Transfer counter",
+        "name": "CNT"
+      }
+    ]
+  },
+  "fieldset/CH6CTL": {
+    "description": "Channel 6 control register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Channel enable",
+        "name": "CHEN"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Enable bit for channel full transfer finish interrupt",
+        "name": "FTFIE"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Enable bit for channel half transfer finish interrupt",
+        "name": "HTFIE"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Enable bit for channel error interrupt",
+        "name": "ERRIE"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "Transfer direction",
+        "name": "DIR"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "Circular mode enable",
+        "name": "CMEN"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "Next address generation algorithm of peripheral",
+        "name": "PNAGA"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Next address generation algorithm of memory",
+        "name": "MNAGA"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 2,
+        "description": "Transfer data size of peripheral",
+        "name": "PWIDTH"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 2,
+        "description": "Transfer data size of memory",
+        "name": "MWIDTH"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 2,
+        "description": "Priority level",
+        "name": "PRIO"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "description": "Memory to Memory Mode",
+        "name": "M2M"
+      }
+    ]
+  },
+  "fieldset/CH6MADDR": {
+    "description": "Channel 6 memory base address register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "Memory base address",
+        "name": "MADDR"
+      }
+    ]
+  },
+  "fieldset/CH6PADDR": {
+    "description": "Channel 6 peripheral base address register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "Peripheral base address",
+        "name": "PADDR"
+      }
+    ]
+  },
+  "fieldset/INTC": {
+    "description": "Interrupt flag clear register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Clear global interrupt flag of channel 0",
+        "name": "GIFC0"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Clear bit for full transfer finish flag of channel 0",
+        "name": "FTFIFC0"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Clear bit for half transfer finish flag of channel 0",
+        "name": "HTFIFC0"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Clear bit for error flag of channel 0",
+        "name": "ERRIFC0"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "Clear global interrupt flag of channel 1",
+        "name": "GIFC1"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "Clear bit for full transfer finish flag of channel 1",
+        "name": "FTFIFC1"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "Clear bit for half transfer finish flag of channel 1",
+        "name": "HTFIFC1"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Clear bit for error flag of channel 1",
+        "name": "ERRIFC1"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "Clear global interrupt flag of channel 2",
+        "name": "GIFC2"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "Clear bit for full transfer finish flag of channel 2",
+        "name": "FTFIFC2"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "Clear bit for half transfer finish flag of channel 2",
+        "name": "HTFIFC2"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "description": "Clear bit for error flag of channel 2",
+        "name": "ERRIFC2"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "description": "Clear global interrupt flag of channel 3",
+        "name": "GIFC3"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "description": "Clear bit for full transfer finish flag of channel 3",
+        "name": "FTFIFC3"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "description": "Clear bit for half transfer finish flag of channel 3",
+        "name": "HTFIFC3"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "Clear bit for error flag of channel 3",
+        "name": "ERRIFC3"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "description": "Clear global interrupt flag of channel 4",
+        "name": "GIFC4"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 1,
+        "description": "Clear bit for full transfer finish flag of channel 4",
+        "name": "FTFIFC4"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 1,
+        "description": "Clear bit for half transfer finish flag of channel 4",
+        "name": "HTFIFC4"
+      },
+      {
+        "bit_offset": 19,
+        "bit_size": 1,
+        "description": "Clear bit for error flag of channel 4",
+        "name": "ERRIFC4"
+      },
+      {
+        "bit_offset": 20,
+        "bit_size": 1,
+        "description": "Clear global interrupt flag of channel 5",
+        "name": "GIFC5"
+      },
+      {
+        "bit_offset": 21,
+        "bit_size": 1,
+        "description": "Clear bit for full transfer finish flag of channel 5",
+        "name": "FTFIFC5"
+      },
+      {
+        "bit_offset": 22,
+        "bit_size": 1,
+        "description": "Clear bit for half transfer finish flag of channel 5",
+        "name": "HTFIFC5"
+      },
+      {
+        "bit_offset": 23,
+        "bit_size": 1,
+        "description": "Clear bit for error flag of channel 5",
+        "name": "ERRIFC5"
+      },
+      {
+        "bit_offset": 24,
+        "bit_size": 1,
+        "description": "Clear global interrupt flag of channel 6",
+        "name": "GIFC6"
+      },
+      {
+        "bit_offset": 25,
+        "bit_size": 1,
+        "description": "Clear bit for full transfer finish flag of channel 6",
+        "name": "FTFIFC6"
+      },
+      {
+        "bit_offset": 26,
+        "bit_size": 1,
+        "description": "Clear bit for half transfer finish flag of channel 6",
+        "name": "HTFIFC6"
+      },
+      {
+        "bit_offset": 27,
+        "bit_size": 1,
+        "description": "Clear bit for error flag of channel 6",
+        "name": "ERRIFC6"
+      }
+    ]
+  },
+  "fieldset/INTF": {
+    "description": "Interrupt flag register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Global interrupt flag of channel 0",
+        "name": "GIF0"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Full Transfer finish flag of channe 0",
+        "name": "FTFIF0"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Half transfer finish flag of channel 0",
+        "name": "HTFIF0"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Error flag of channel 0",
+        "name": "ERRIF0"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "Global interrupt flag of channel 1",
+        "name": "GIF1"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "Full Transfer finish flag of channe 1",
+        "name": "FTFIF1"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "Half transfer finish flag of channel 1",
+        "name": "HTFIF1"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Error flag of channel 1",
+        "name": "ERRIF1"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "Global interrupt flag of channel 2",
+        "name": "GIF2"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "Full Transfer finish flag of channe 2",
+        "name": "FTFIF2"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "Half transfer finish flag of channel 2",
+        "name": "HTFIF2"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "description": "Error flag of channel 2",
+        "name": "ERRIF2"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "description": "Global interrupt flag of channel 3",
+        "name": "GIF3"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "description": "Full Transfer finish flag of channe 3",
+        "name": "FTFIF3"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "description": "Half transfer finish flag of channel 3",
+        "name": "HTFIF3"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "Error flag of channel 3",
+        "name": "ERRIF3"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "description": "Global interrupt flag of channel 4",
+        "name": "GIF4"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 1,
+        "description": "Full Transfer finish flag of channe 4",
+        "name": "FTFIF4"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 1,
+        "description": "Half transfer finish flag of channel 4",
+        "name": "HTFIF4"
+      },
+      {
+        "bit_offset": 19,
+        "bit_size": 1,
+        "description": "Error flag of channel 4",
+        "name": "ERRIF4"
+      },
+      {
+        "bit_offset": 20,
+        "bit_size": 1,
+        "description": "Global interrupt flag of channel 5",
+        "name": "GIF5"
+      },
+      {
+        "bit_offset": 21,
+        "bit_size": 1,
+        "description": "Full Transfer finish flag of channe 5",
+        "name": "FTFIF5"
+      },
+      {
+        "bit_offset": 22,
+        "bit_size": 1,
+        "description": "Half transfer finish flag of channel 5",
+        "name": "HTFIF5"
+      },
+      {
+        "bit_offset": 23,
+        "bit_size": 1,
+        "description": "Error flag of channel 5",
+        "name": "ERRIF5"
+      },
+      {
+        "bit_offset": 24,
+        "bit_size": 1,
+        "description": "Global interrupt flag of channel 6",
+        "name": "GIF6"
+      },
+      {
+        "bit_offset": 25,
+        "bit_size": 1,
+        "description": "Full Transfer finish flag of channe 6",
+        "name": "FTFIF6"
+      },
+      {
+        "bit_offset": 26,
+        "bit_size": 1,
+        "description": "Half transfer finish flag of channel 6",
+        "name": "HTFIF6"
+      },
+      {
+        "bit_offset": 27,
+        "bit_size": 1,
+        "description": "Error flag of channel 6",
+        "name": "ERRIF6"
+      }
+    ]
+  }
+}

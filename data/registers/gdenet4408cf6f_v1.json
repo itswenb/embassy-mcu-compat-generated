@@ -1,0 +1,1578 @@
+{
+  "block/ENET": {
+    "items": [
+      {
+        "byte_offset": 0,
+        "fieldset": "ENET_MAC_CFG",
+        "name": "ENET_MAC_CFG"
+      },
+      {
+        "byte_offset": 4,
+        "fieldset": "ENET_MAC_FRMF",
+        "name": "ENET_MAC_FRMF"
+      },
+      {
+        "byte_offset": 8,
+        "fieldset": "ENET_MAC_HLH",
+        "name": "ENET_MAC_HLH"
+      },
+      {
+        "byte_offset": 12,
+        "fieldset": "ENET_MAC_HLL",
+        "name": "ENET_MAC_HLL"
+      },
+      {
+        "byte_offset": 16,
+        "fieldset": "ENET_MAC_PHY_CTL",
+        "name": "ENET_MAC_PHY_CTL"
+      },
+      {
+        "byte_offset": 20,
+        "fieldset": "ENET_MAC_PHY_DATA",
+        "name": "ENET_MAC_PHY_DATA"
+      },
+      {
+        "byte_offset": 24,
+        "fieldset": "ENET_MAC_FCTL",
+        "name": "ENET_MAC_FCTL"
+      },
+      {
+        "byte_offset": 28,
+        "fieldset": "ENET_MAC_VLT",
+        "name": "ENET_MAC_VLT"
+      },
+      {
+        "byte_offset": 40,
+        "fieldset": "ENET_MAC_RWFF",
+        "name": "ENET_MAC_RWFF"
+      },
+      {
+        "byte_offset": 44,
+        "fieldset": "ENET_MAC_WUM",
+        "name": "ENET_MAC_WUM"
+      },
+      {
+        "byte_offset": 52,
+        "fieldset": "ENET_MAC_DBG",
+        "name": "ENET_MAC_DBG"
+      },
+      {
+        "byte_offset": 56,
+        "fieldset": "ENET_MAC_INTF",
+        "name": "ENET_MAC_INTF"
+      },
+      {
+        "byte_offset": 60,
+        "fieldset": "ENET_MAC_INTMSK",
+        "name": "ENET_MAC_INTMSK"
+      },
+      {
+        "byte_offset": 64,
+        "fieldset": "ENET_MAC_ADDR0H",
+        "name": "ENET_MAC_ADDR0H"
+      },
+      {
+        "byte_offset": 68,
+        "fieldset": "ENET_MAC_ADDR0L",
+        "name": "ENET_MAC_ADDR0L"
+      },
+      {
+        "byte_offset": 72,
+        "fieldset": "ENET_MAC_ADDR1H",
+        "name": "ENET_MAC_ADDR1H"
+      },
+      {
+        "byte_offset": 76,
+        "fieldset": "ENET_MAC_ADDR1L",
+        "name": "ENET_MAC_ADDR1L"
+      },
+      {
+        "byte_offset": 80,
+        "name": "ENET_MAC_ADDT2H"
+      },
+      {
+        "byte_offset": 84,
+        "fieldset": "ENET_MAC_ADDR2L",
+        "name": "ENET_MAC_ADDR2L"
+      },
+      {
+        "byte_offset": 88,
+        "fieldset": "ENET_MAC_ADDR3H",
+        "name": "ENET_MAC_ADDR3H"
+      },
+      {
+        "byte_offset": 92,
+        "fieldset": "ENET_MAC_ADDR3L",
+        "name": "ENET_MAC_ADDR3L"
+      },
+      {
+        "byte_offset": 256,
+        "fieldset": "ENET_MSC_CTL",
+        "name": "ENET_MSC_CTL"
+      },
+      {
+        "byte_offset": 260,
+        "fieldset": "ENET_MSC_RINTF",
+        "name": "ENET_MSC_RINTF"
+      },
+      {
+        "byte_offset": 264,
+        "fieldset": "ENET_MSC_TINTF",
+        "name": "ENET_MSC_TINTF"
+      },
+      {
+        "byte_offset": 268,
+        "fieldset": "ENET_MSC_RINTMSK",
+        "name": "ENET_MSC_RINTMSK"
+      },
+      {
+        "byte_offset": 272,
+        "fieldset": "ENET_MSC_TINTMSK",
+        "name": "ENET_MSC_TINTMSK"
+      },
+      {
+        "byte_offset": 332,
+        "fieldset": "ENET_MSC_SCCNT",
+        "name": "ENET_MSC_SCCNT"
+      },
+      {
+        "byte_offset": 336,
+        "fieldset": "ENET_MSC_MSCCNT",
+        "name": "ENET_MSC_MSCCNT"
+      },
+      {
+        "byte_offset": 360,
+        "fieldset": "ENET_MSC_TGFCNT",
+        "name": "ENET_MSC_TGFCNT"
+      },
+      {
+        "byte_offset": 404,
+        "fieldset": "ENET_MSC_RFCECNT",
+        "name": "ENET_MSC_RFCECNT"
+      },
+      {
+        "byte_offset": 408,
+        "fieldset": "ENET_MSC_RFAECNT",
+        "name": "ENET_MSC_RFAECNT"
+      },
+      {
+        "byte_offset": 452,
+        "fieldset": "ENET_MSC_RGUFCNT",
+        "name": "ENET_MSC_RGUFCNT"
+      },
+      {
+        "byte_offset": 1792,
+        "fieldset": "ENET_PTP_TSCTL",
+        "name": "ENET_PTP_TSCTL"
+      },
+      {
+        "byte_offset": 1796,
+        "fieldset": "ENET_PTP_SSINC",
+        "name": "ENET_PTP_SSINC"
+      },
+      {
+        "byte_offset": 1800,
+        "fieldset": "ENET_PTP_TSH",
+        "name": "ENET_PTP_TSH"
+      },
+      {
+        "byte_offset": 1804,
+        "fieldset": "ENET_PTP_TSL",
+        "name": "ENET_PTP_TSL"
+      },
+      {
+        "byte_offset": 1808,
+        "fieldset": "ENET_PTP_TSUH",
+        "name": "ENET_PTP_TSUH"
+      },
+      {
+        "byte_offset": 1812,
+        "fieldset": "ENET_PTP_TSUL",
+        "name": "ENET_PTP_TSUL"
+      },
+      {
+        "byte_offset": 1816,
+        "fieldset": "ENET_PTP_TSADDEND",
+        "name": "ENET_PTP_TSADDEND"
+      },
+      {
+        "byte_offset": 1820,
+        "fieldset": "ENET_PTP_ETH",
+        "name": "ENET_PTP_ETH"
+      },
+      {
+        "byte_offset": 1824,
+        "fieldset": "ENET_PTP_ETL",
+        "name": "ENET_PTP_ETL"
+      },
+      {
+        "byte_offset": 1832,
+        "fieldset": "ENET_PTP_TSF",
+        "name": "ENET_PTP_TSF"
+      },
+      {
+        "byte_offset": 1836,
+        "fieldset": "ENET_PTP_PPSCTL",
+        "name": "ENET_PTP_PPSCTL"
+      },
+      {
+        "byte_offset": 4096,
+        "fieldset": "ENET_DMA_BCTL",
+        "name": "ENET_DMA_BCTL"
+      },
+      {
+        "byte_offset": 4100,
+        "fieldset": "ENET_DMA_TPEN",
+        "name": "ENET_DMA_TPEN"
+      },
+      {
+        "byte_offset": 4104,
+        "fieldset": "ENET_DMA_RPEN",
+        "name": "ENET_DMA_RPEN"
+      },
+      {
+        "byte_offset": 4108,
+        "fieldset": "ENET_DMA_RDTADDR",
+        "name": "ENET_DMA_RDTADDR"
+      },
+      {
+        "byte_offset": 4112,
+        "fieldset": "ENET_DMA_TDTADDR",
+        "name": "ENET_DMA_TDTADDR"
+      },
+      {
+        "byte_offset": 4116,
+        "fieldset": "ENET_DMA_STAT",
+        "name": "ENET_DMA_STAT"
+      },
+      {
+        "byte_offset": 4120,
+        "fieldset": "ENET_DMA_CTL",
+        "name": "ENET_DMA_CTL"
+      },
+      {
+        "byte_offset": 4124,
+        "fieldset": "ENET_DMA_INTEN",
+        "name": "ENET_DMA_INTEN"
+      },
+      {
+        "byte_offset": 4128,
+        "fieldset": "ENET_DMA_MFBOCNT",
+        "name": "ENET_DMA_MFBOCNT"
+      },
+      {
+        "byte_offset": 4132,
+        "fieldset": "ENET_DMA_RSWDC",
+        "name": "ENET_DMA_RSWDC"
+      },
+      {
+        "byte_offset": 4168,
+        "fieldset": "ENET_DMA_CTDADDR",
+        "name": "ENET_DMA_CTDADDR"
+      },
+      {
+        "byte_offset": 4172,
+        "fieldset": "ENET_DMA_CRDADDR",
+        "name": "ENET_DMA_CRDADDR"
+      },
+      {
+        "byte_offset": 4176,
+        "fieldset": "ENET_DMA_CTBADDR",
+        "name": "ENET_DMA_CTBADDR"
+      },
+      {
+        "byte_offset": 4180,
+        "fieldset": "ENET_DMA_CRBADDR",
+        "name": "ENET_DMA_CRBADDR"
+      },
+      {
+        "byte_offset": 4224,
+        "fieldset": "ENET_MAC_FCTH",
+        "name": "ENET_MAC_FCTH"
+      }
+    ]
+  },
+  "fieldset/ENET_DMA_BCTL": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "ENET_DMA_BCTL_SWR"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "ENET_DMA_BCTL_DAB"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 5,
+        "name": "ENET_DMA_BCTL_DPSL"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "name": "ENET_DMA_BCTL_DFM"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 6,
+        "name": "ENET_DMA_BCTL_PGBL"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 2,
+        "name": "ENET_DMA_BCTL_RTPR"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "name": "ENET_DMA_BCTL_FB"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 6,
+        "name": "ENET_DMA_BCTL_RXDP"
+      },
+      {
+        "bit_offset": 23,
+        "bit_size": 1,
+        "name": "ENET_DMA_BCTL_UIP"
+      },
+      {
+        "bit_offset": 24,
+        "bit_size": 1,
+        "name": "ENET_DMA_BCTL_FPBL"
+      },
+      {
+        "bit_offset": 25,
+        "bit_size": 1,
+        "name": "ENET_DMA_BCTL_AA"
+      },
+      {
+        "bit_offset": 26,
+        "bit_size": 1,
+        "name": "ENET_DMA_BCTL_MB"
+      }
+    ]
+  },
+  "fieldset/ENET_DMA_CRBADDR": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "name": "ENET_DMA_CRBADDR_RBAP"
+      }
+    ]
+  },
+  "fieldset/ENET_DMA_CRDADDR": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "name": "ENET_DMA_CRDADDR_RDAP"
+      }
+    ]
+  },
+  "fieldset/ENET_DMA_CTBADDR": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "name": "ENET_DMA_CTBADDR_TBAP"
+      }
+    ]
+  },
+  "fieldset/ENET_DMA_CTDADDR": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "name": "ENET_DMA_CTDADDR_TDAP"
+      }
+    ]
+  },
+  "fieldset/ENET_DMA_CTL": {
+    "fields": [
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "ENET_DMA_CTL_SRE"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "ENET_DMA_CTL_OSF"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 2,
+        "name": "ENET_DMA_CTL_RTHC"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "name": "ENET_DMA_CTL_FUF"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "name": "ENET_DMA_CTL_FERF"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "name": "ENET_DMA_CTL_STE"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 3,
+        "name": "ENET_DMA_CTL_TTHC"
+      },
+      {
+        "bit_offset": 20,
+        "bit_size": 1,
+        "name": "ENET_DMA_CTL_FTF"
+      },
+      {
+        "bit_offset": 21,
+        "bit_size": 1,
+        "name": "ENET_DMA_CTL_TSFD"
+      },
+      {
+        "bit_offset": 24,
+        "bit_size": 1,
+        "name": "ENET_DMA_CTL_DAFRF"
+      },
+      {
+        "bit_offset": 25,
+        "bit_size": 1,
+        "name": "ENET_DMA_CTL_RSFD"
+      },
+      {
+        "bit_offset": 26,
+        "bit_size": 1,
+        "name": "ENET_DMA_CTL_DTCERFD"
+      }
+    ]
+  },
+  "fieldset/ENET_DMA_INTEN": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "ENET_DMA_INTEN_TIE"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "ENET_DMA_INTEN_TPSIE"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "ENET_DMA_INTEN_TBUIE"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "name": "ENET_DMA_INTEN_TJTIE"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "name": "ENET_DMA_INTEN_ROIE"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "name": "ENET_DMA_INTEN_TUIE"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "name": "ENET_DMA_INTEN_RIE"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "name": "ENET_DMA_INTEN_RBUIE"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "name": "ENET_DMA_INTEN_RPSIE"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "name": "ENET_DMA_INTEN_RWTIE"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "name": "ENET_DMA_INTEN_ETIE"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "name": "ENET_DMA_INTEN_FBEIE"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "name": "ENET_DMA_INTEN_ERIE"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "name": "ENET_DMA_INTEN_AIE"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "name": "ENET_DMA_INTEN_NIE"
+      }
+    ]
+  },
+  "fieldset/ENET_DMA_MFBOCNT": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "name": "ENET_DMA_MFBOCNT_MSFC"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 11,
+        "name": "ENET_DMA_MFBOCNT_MSFA"
+      }
+    ]
+  },
+  "fieldset/ENET_DMA_RDTADDR": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "name": "ENET_DMA_RDTADDR_SRT"
+      }
+    ]
+  },
+  "fieldset/ENET_DMA_RPEN": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "name": "ENET_DMA_RPEN_RPE"
+      }
+    ]
+  },
+  "fieldset/ENET_DMA_RSWDC": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "name": "ENET_DMA_RSWDC_WDCFRS"
+      }
+    ]
+  },
+  "fieldset/ENET_DMA_STAT": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "ENET_DMA_STAT_TS"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "ENET_DMA_STAT_TPS"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "ENET_DMA_STAT_TBU"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "name": "ENET_DMA_STAT_TJT"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "name": "ENET_DMA_STAT_RO"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "name": "ENET_DMA_STAT_TU"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "name": "ENET_DMA_STAT_RS"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "name": "ENET_DMA_STAT_RBU"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "name": "ENET_DMA_STAT_RPS"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "name": "ENET_DMA_STAT_RWT"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "name": "ENET_DMA_STAT_ET"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "name": "ENET_DMA_STAT_FBE"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "name": "ENET_DMA_STAT_ER"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "name": "ENET_DMA_STAT_AI"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "name": "ENET_DMA_STAT_NI"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 3,
+        "name": "ENET_DMA_STAT_RP"
+      },
+      {
+        "bit_offset": 20,
+        "bit_size": 3,
+        "name": "ENET_DMA_STAT_TP"
+      },
+      {
+        "bit_offset": 23,
+        "bit_size": 3,
+        "name": "ENET_DMA_STAT_EB"
+      },
+      {
+        "bit_offset": 27,
+        "bit_size": 1,
+        "name": "ENET_DMA_STAT_MSC"
+      },
+      {
+        "bit_offset": 28,
+        "bit_size": 1,
+        "name": "ENET_DMA_STAT_WUM"
+      },
+      {
+        "bit_offset": 29,
+        "bit_size": 1,
+        "name": "ENET_DMA_STAT_TST"
+      }
+    ]
+  },
+  "fieldset/ENET_DMA_TDTADDR": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "name": "ENET_DMA_TDTADDR_STT"
+      }
+    ]
+  },
+  "fieldset/ENET_DMA_TPEN": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "name": "ENET_DMA_TPEN_TPE"
+      }
+    ]
+  },
+  "fieldset/ENET_MAC_ADDR0H": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "name": "ENET_MAC_ADDR0H_ADDR0H"
+      },
+      {
+        "bit_offset": 31,
+        "bit_size": 1,
+        "name": "ENET_MAC_ADDR0H_MO"
+      }
+    ]
+  },
+  "fieldset/ENET_MAC_ADDR0L": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "name": "ENET_MAC_ADDR0L_ADDR0L"
+      }
+    ]
+  },
+  "fieldset/ENET_MAC_ADDR1H": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "name": "ENET_MAC_ADDR1H_ADDR1H"
+      },
+      {
+        "bit_offset": 24,
+        "bit_size": 6,
+        "name": "ENET_MAC_ADDR1H_MB"
+      },
+      {
+        "bit_offset": 30,
+        "bit_size": 1,
+        "name": "ENET_MAC_ADDR1H_SAF"
+      },
+      {
+        "bit_offset": 31,
+        "bit_size": 1,
+        "name": "ENET_MAC_ADDR1H_AFE"
+      }
+    ]
+  },
+  "fieldset/ENET_MAC_ADDR1L": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "name": "ENET_MAC_ADDR1L_ADDR1L"
+      }
+    ]
+  },
+  "fieldset/ENET_MAC_ADDR2L": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "name": "ENET_MAC_ADDR2L_ADDR2L"
+      }
+    ]
+  },
+  "fieldset/ENET_MAC_ADDR3H": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "name": "ENET_MAC_ADDR3H_ADDR3H"
+      },
+      {
+        "bit_offset": 24,
+        "bit_size": 6,
+        "name": "ENET_MAC_ADDR3H_MB"
+      },
+      {
+        "bit_offset": 30,
+        "bit_size": 1,
+        "name": "ENET_MAC_ADDR3H_SAF"
+      },
+      {
+        "bit_offset": 31,
+        "bit_size": 1,
+        "name": "ENET_MAC_ADDR3H_AFE"
+      }
+    ]
+  },
+  "fieldset/ENET_MAC_ADDR3L": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "name": "ENET_MAC_ADDR3L_ADDR3L"
+      }
+    ]
+  },
+  "fieldset/ENET_MAC_CFG": {
+    "fields": [
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "ENET_MAC_CFG_REN"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "name": "ENET_MAC_CFG_TEN"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "name": "ENET_MAC_CFG_DFC"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 2,
+        "name": "ENET_MAC_CFG_BOL"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "name": "ENET_MAC_CFG_APCD"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "name": "ENET_MAC_CFG_RTD"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "name": "ENET_MAC_CFG_IPFCO"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "name": "ENET_MAC_CFG_DPM"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "name": "ENET_MAC_CFG_LBM"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "name": "ENET_MAC_CFG_ROD"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "name": "ENET_MAC_CFG_SPD"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "name": "ENET_MAC_CFG_CSD"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 3,
+        "name": "ENET_MAC_CFG_IGBS"
+      },
+      {
+        "bit_offset": 22,
+        "bit_size": 1,
+        "name": "ENET_MAC_CFG_JBD"
+      },
+      {
+        "bit_offset": 23,
+        "bit_size": 1,
+        "name": "ENET_MAC_CFG_WDD"
+      },
+      {
+        "bit_offset": 25,
+        "bit_size": 1,
+        "name": "ENET_MAC_CFG_TFCD"
+      }
+    ]
+  },
+  "fieldset/ENET_MAC_DBG": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "ENET_MAC_DBG_MRNI"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 2,
+        "name": "ENET_MAC_DBG_RXAFS"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "name": "ENET_MAC_DBG_RXFW"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 2,
+        "name": "ENET_MAC_DBG_RXFRS"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 2,
+        "name": "ENET_MAC_DBG_RXFS"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "name": "ENET_MAC_DBG_MTNI"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 2,
+        "name": "ENET_MAC_DBG_SOMT"
+      },
+      {
+        "bit_offset": 19,
+        "bit_size": 1,
+        "name": "ENET_MAC_DBG_PCS"
+      },
+      {
+        "bit_offset": 20,
+        "bit_size": 2,
+        "name": "ENET_MAC_DBG_TXFRS"
+      },
+      {
+        "bit_offset": 22,
+        "bit_size": 1,
+        "name": "ENET_MAC_DBG_TXFW"
+      },
+      {
+        "bit_offset": 24,
+        "bit_size": 1,
+        "name": "ENET_MAC_DBG_TXFNE"
+      },
+      {
+        "bit_offset": 25,
+        "bit_size": 1,
+        "name": "ENET_MAC_DBG_TXFF"
+      }
+    ]
+  },
+  "fieldset/ENET_MAC_FCTH": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 3,
+        "name": "ENET_MAC_FCTH_RFA"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 3,
+        "name": "ENET_MAC_FCTH_RFD"
+      }
+    ]
+  },
+  "fieldset/ENET_MAC_FCTL": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "ENET_MAC_FCTL_FLCBBKPA"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "ENET_MAC_FCTL_TFCEN"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "ENET_MAC_FCTL_RFCEN"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "name": "ENET_MAC_FCTL_UPFDT"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 2,
+        "name": "ENET_MAC_FCTL_PLTS"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "name": "ENET_MAC_FCTL_DZQP"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 16,
+        "name": "ENET_MAC_FCTL_PTM"
+      }
+    ]
+  },
+  "fieldset/ENET_MAC_FRMF": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "ENET_MAC_FRMF_PM"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "ENET_MAC_FRMF_HUF"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "ENET_MAC_FRMF_HMF"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "name": "ENET_MAC_FRMF_DAIFLT"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "name": "ENET_MAC_FRMF_MFD"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "name": "ENET_MAC_FRMF_BFRMD"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 2,
+        "name": "ENET_MAC_FRMF_PCFRM"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "name": "ENET_MAC_FRMF_SAIFLT"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "name": "ENET_MAC_FRMF_SAFLT"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "name": "ENET_MAC_FRMF_HPFLT"
+      },
+      {
+        "bit_offset": 31,
+        "bit_size": 1,
+        "name": "ENET_MAC_FRMF_FAR"
+      }
+    ]
+  },
+  "fieldset/ENET_MAC_HLH": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "name": "ENET_MAC_HLH_HLH"
+      }
+    ]
+  },
+  "fieldset/ENET_MAC_HLL": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "name": "ENET_MAC_HLL_HLL"
+      }
+    ]
+  },
+  "fieldset/ENET_MAC_INTF": {
+    "fields": [
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "name": "ENET_MAC_INTF_WUM"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "name": "ENET_MAC_INTF_MSC"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "name": "ENET_MAC_INTF_MSCR"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "name": "ENET_MAC_INTF_MSCT"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "name": "ENET_MAC_INTF_TMST"
+      }
+    ]
+  },
+  "fieldset/ENET_MAC_INTMSK": {
+    "fields": [
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "name": "ENET_MAC_INTMSK_WUMIM"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "name": "ENET_MAC_INTMSK_TMSTIM"
+      }
+    ]
+  },
+  "fieldset/ENET_MAC_PHY_CTL": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "ENET_MAC_PHY_CTL_PB"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "ENET_MAC_PHY_CTL_PW"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 3,
+        "name": "ENET_MAC_PHY_CTL_CLR"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 5,
+        "name": "ENET_MAC_PHY_CTL_PR"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 5,
+        "name": "ENET_MAC_PHY_CTL_PA"
+      }
+    ]
+  },
+  "fieldset/ENET_MAC_PHY_DATA": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "name": "ENET_MAC_PHY_DATA_PD"
+      }
+    ]
+  },
+  "fieldset/ENET_MAC_RWFF": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "name": "ENET_MAC_RWFF_DATA"
+      }
+    ]
+  },
+  "fieldset/ENET_MAC_VLT": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "name": "ENET_MAC_VLT_VLTI"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "name": "ENET_MAC_VLT_VLTC"
+      }
+    ]
+  },
+  "fieldset/ENET_MAC_WUM": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "ENET_MAC_WUM_PWD"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "ENET_MAC_WUM_MPEN"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "ENET_MAC_WUM_WFEN"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "name": "ENET_MAC_WUM_MPKR"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "name": "ENET_MAC_WUM_WUFR"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "name": "ENET_MAC_WUM_GU"
+      },
+      {
+        "bit_offset": 31,
+        "bit_size": 1,
+        "name": "ENET_MAC_WUM_WUFFRPR"
+      }
+    ]
+  },
+  "fieldset/ENET_MSC_CTL": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "ENET_MSC_CTL_CTR"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "ENET_MSC_CTL_CTSR"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "ENET_MSC_CTL_RTOR"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "name": "ENET_MSC_CTL_MCFZ"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "name": "ENET_MSC_CTL_PMC"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "name": "ENET_MSC_CTL_AFHPM"
+      }
+    ]
+  },
+  "fieldset/ENET_MSC_MSCCNT": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "name": "ENET_MSC_MSCCNT_MSCC"
+      }
+    ]
+  },
+  "fieldset/ENET_MSC_RFAECNT": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "name": "ENET_MSC_RFAECNT_RFAER"
+      }
+    ]
+  },
+  "fieldset/ENET_MSC_RFCECNT": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "name": "ENET_MSC_RFCECNT_RFCER"
+      }
+    ]
+  },
+  "fieldset/ENET_MSC_RGUFCNT": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "name": "ENET_MSC_RGUFCNT_RGUF"
+      }
+    ]
+  },
+  "fieldset/ENET_MSC_RINTF": {
+    "fields": [
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "name": "ENET_MSC_RINTF_RFCE"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "name": "ENET_MSC_RINTF_RFAE"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 1,
+        "name": "ENET_MSC_RINTF_RGUF"
+      }
+    ]
+  },
+  "fieldset/ENET_MSC_RINTMSK": {
+    "fields": [
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "name": "ENET_MSC_RINTMSK_RFCEIM"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "name": "ENET_MSC_RINTMSK_RFAEIM"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 1,
+        "name": "ENET_MSC_RINTMSK_RGUFIM"
+      }
+    ]
+  },
+  "fieldset/ENET_MSC_SCCNT": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "name": "ENET_MSC_SCCNT_SCC"
+      }
+    ]
+  },
+  "fieldset/ENET_MSC_TGFCNT": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "name": "ENET_MSC_TGFCNT_TGF"
+      }
+    ]
+  },
+  "fieldset/ENET_MSC_TINTF": {
+    "fields": [
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "name": "ENET_MSC_TINTF_TGFSC"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "name": "ENET_MSC_TINTF_TGFMSC"
+      },
+      {
+        "bit_offset": 21,
+        "bit_size": 1,
+        "name": "ENET_MSC_TINTF_TGF"
+      }
+    ]
+  },
+  "fieldset/ENET_MSC_TINTMSK": {
+    "fields": [
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "name": "ENET_MSC_TINTMSK_TGFSCIM"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "name": "ENET_MSC_TINTMSK_TGFMSCIM"
+      },
+      {
+        "bit_offset": 21,
+        "bit_size": 1,
+        "name": "ENET_MSC_TINTMSK_TGFIM"
+      }
+    ]
+  },
+  "fieldset/ENET_PTP_ETH": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "name": "ENET_PTP_ETH_ETSH"
+      }
+    ]
+  },
+  "fieldset/ENET_PTP_ETL": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "name": "ENET_PTP_ETL_ETSL"
+      }
+    ]
+  },
+  "fieldset/ENET_PTP_PPSCTL": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 4,
+        "name": "ENET_PTP_PPSCTL_PPSOFC"
+      }
+    ]
+  },
+  "fieldset/ENET_PTP_SSINC": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "name": "ENET_PTP_SSINC_STMSSI"
+      }
+    ]
+  },
+  "fieldset/ENET_PTP_TSADDEND": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "name": "ENET_PTP_TSADDEND_TMSA"
+      }
+    ]
+  },
+  "fieldset/ENET_PTP_TSCTL": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "ENET_PTP_TSCTL_TMSEN"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "ENET_PTP_TSCTL_TMSFCU"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "ENET_PTP_TSCTL_TMSSTI"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "name": "ENET_PTP_TSCTL_TMSSTU"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "name": "ENET_PTP_TSCTL_TMSITEN"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "name": "ENET_PTP_TSCTL_TMSARU"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "name": "ENET_PTP_TSCTL_ARFSEN"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "name": "ENET_PTP_TSCTL_SCROM"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "name": "ENET_PTP_TSCTL_PFSV"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "name": "ENET_PTP_TSCTL_ESEN"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "name": "ENET_PTP_TSCTL_IP6SEN"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "name": "ENET_PTP_TSCTL_IP4SEN"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "name": "ENET_PTP_TSCTL_ETMSEN"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "name": "ENET_PTP_TSCTL_MNMSEN"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 2,
+        "name": "ENET_PTP_TSCTL_CKNT"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 1,
+        "name": "ENET_PTP_TSCTL_MAFEN"
+      }
+    ]
+  },
+  "fieldset/ENET_PTP_TSF": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "ENET_PTP_TSF_TSSCO"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "ENET_PTP_TSF_TTM"
+      }
+    ]
+  },
+  "fieldset/ENET_PTP_TSH": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "name": "ENET_PTP_TSH_STMS"
+      }
+    ]
+  },
+  "fieldset/ENET_PTP_TSL": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 31,
+        "name": "ENET_PTP_TSL_STMSS"
+      },
+      {
+        "bit_offset": 31,
+        "bit_size": 1,
+        "name": "ENET_PTP_TSL_STS"
+      }
+    ]
+  },
+  "fieldset/ENET_PTP_TSUH": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "name": "ENET_PTP_TSUH_TMSUS"
+      }
+    ]
+  },
+  "fieldset/ENET_PTP_TSUL": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 31,
+        "name": "ENET_PTP_TSUL_TMSUSS"
+      },
+      {
+        "bit_offset": 31,
+        "bit_size": 1,
+        "name": "ENET_PTP_TSUL_TMSUPNS"
+      }
+    ]
+  }
+}

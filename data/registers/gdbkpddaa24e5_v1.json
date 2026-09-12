@@ -1,0 +1,524 @@
+{
+  "block/BKP": {
+    "items": [
+      {
+        "bit_size": 16,
+        "byte_offset": 4,
+        "name": "BKP_DATA0"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 4,
+        "name": "BKP_DATA0_9_0"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 8,
+        "name": "BKP_DATA0_9_1"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 12,
+        "name": "BKP_DATA0_9_2"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 16,
+        "name": "BKP_DATA0_9_3"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 20,
+        "name": "BKP_DATA0_9_4"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 24,
+        "name": "BKP_DATA0_9_5"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 28,
+        "name": "BKP_DATA0_9_6"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 32,
+        "name": "BKP_DATA0_9_7"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 36,
+        "name": "BKP_DATA0_9_8"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 40,
+        "name": "BKP_DATA0_9_9"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 8,
+        "name": "BKP_DATA1"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 12,
+        "name": "BKP_DATA2"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 16,
+        "name": "BKP_DATA3"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 20,
+        "name": "BKP_DATA4"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 24,
+        "name": "BKP_DATA5"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 28,
+        "name": "BKP_DATA6"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 32,
+        "name": "BKP_DATA7"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 36,
+        "name": "BKP_DATA8"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 40,
+        "name": "BKP_DATA9"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 44,
+        "fieldset": "BKP_OCTL",
+        "name": "BKP_OCTL"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 48,
+        "fieldset": "BKP_TPCTL",
+        "name": "BKP_TPCTL"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 52,
+        "fieldset": "BKP_TPCS",
+        "name": "BKP_TPCS"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 64,
+        "name": "BKP_DATA10"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 64,
+        "name": "BKP_DATA10_41_10"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 68,
+        "name": "BKP_DATA10_41_11"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 72,
+        "name": "BKP_DATA10_41_12"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 76,
+        "name": "BKP_DATA10_41_13"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 80,
+        "name": "BKP_DATA10_41_14"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 84,
+        "name": "BKP_DATA10_41_15"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 88,
+        "name": "BKP_DATA10_41_16"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 92,
+        "name": "BKP_DATA10_41_17"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 96,
+        "name": "BKP_DATA10_41_18"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 100,
+        "name": "BKP_DATA10_41_19"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 104,
+        "name": "BKP_DATA10_41_20"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 108,
+        "name": "BKP_DATA10_41_21"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 112,
+        "name": "BKP_DATA10_41_22"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 116,
+        "name": "BKP_DATA10_41_23"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 120,
+        "name": "BKP_DATA10_41_24"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 124,
+        "name": "BKP_DATA10_41_25"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 128,
+        "name": "BKP_DATA10_41_26"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 132,
+        "name": "BKP_DATA10_41_27"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 136,
+        "name": "BKP_DATA10_41_28"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 140,
+        "name": "BKP_DATA10_41_29"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 144,
+        "name": "BKP_DATA10_41_30"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 148,
+        "name": "BKP_DATA10_41_31"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 152,
+        "name": "BKP_DATA10_41_32"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 156,
+        "name": "BKP_DATA10_41_33"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 160,
+        "name": "BKP_DATA10_41_34"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 164,
+        "name": "BKP_DATA10_41_35"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 168,
+        "name": "BKP_DATA10_41_36"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 172,
+        "name": "BKP_DATA10_41_37"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 176,
+        "name": "BKP_DATA10_41_38"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 180,
+        "name": "BKP_DATA10_41_39"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 184,
+        "name": "BKP_DATA10_41_40"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 188,
+        "name": "BKP_DATA10_41_41"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 68,
+        "name": "BKP_DATA11"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 72,
+        "name": "BKP_DATA12"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 76,
+        "name": "BKP_DATA13"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 80,
+        "name": "BKP_DATA14"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 84,
+        "name": "BKP_DATA15"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 88,
+        "name": "BKP_DATA16"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 92,
+        "name": "BKP_DATA17"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 96,
+        "name": "BKP_DATA18"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 100,
+        "name": "BKP_DATA19"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 104,
+        "name": "BKP_DATA20"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 108,
+        "name": "BKP_DATA21"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 112,
+        "name": "BKP_DATA22"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 116,
+        "name": "BKP_DATA23"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 120,
+        "name": "BKP_DATA24"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 124,
+        "name": "BKP_DATA25"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 128,
+        "name": "BKP_DATA26"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 132,
+        "name": "BKP_DATA27"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 136,
+        "name": "BKP_DATA28"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 140,
+        "name": "BKP_DATA29"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 144,
+        "name": "BKP_DATA30"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 148,
+        "name": "BKP_DATA31"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 152,
+        "name": "BKP_DATA32"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 156,
+        "name": "BKP_DATA33"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 160,
+        "name": "BKP_DATA34"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 164,
+        "name": "BKP_DATA35"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 168,
+        "name": "BKP_DATA36"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 172,
+        "name": "BKP_DATA37"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 176,
+        "name": "BKP_DATA38"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 180,
+        "name": "BKP_DATA39"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 184,
+        "name": "BKP_DATA40"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 188,
+        "name": "BKP_DATA41"
+      }
+    ]
+  },
+  "fieldset/BKP_OCTL": {
+    "bit_size": 16,
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 7,
+        "name": "BKP_OCTL_RCCV"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "name": "BKP_OCTL_COEN"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "name": "BKP_OCTL_ASOEN"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "name": "BKP_OCTL_ROSEL"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "name": "BKP_OCTL_CCOSEL"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "name": "BKP_OCTL_CALDIR"
+      }
+    ]
+  },
+  "fieldset/BKP_TPCS": {
+    "bit_size": 16,
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "BKP_TPCS_TER"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "BKP_TPCS_TIR"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "BKP_TPCS_TPIE"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "name": "BKP_TPCS_TEF"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "name": "BKP_TPCS_TIF"
+      }
+    ]
+  },
+  "fieldset/BKP_TPCTL": {
+    "bit_size": 16,
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "BKP_TPCTL_TPEN"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "BKP_TPCTL_TPAL"
+      }
+    ]
+  }
+}

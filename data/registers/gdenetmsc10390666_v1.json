@@ -1,0 +1,280 @@
+{
+  "block/ENET_MSC": {
+    "description": "Ethernet: MAC statistics counters",
+    "items": [
+      {
+        "byte_offset": 0,
+        "description": "Ethernet MSC control register (MSC_CTL)",
+        "fieldset": "MSC_CTL",
+        "name": "MSC_CTL"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 4,
+        "description": "Ethernet MSC receive interrupt flag register (MSC_RINTF)",
+        "fieldset": "MSC_RINTF",
+        "name": "MSC_RINTF"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 8,
+        "description": "Ethernet MSC transmit interrupt flag register (MSC_TINTF)",
+        "fieldset": "MSC_TINTF",
+        "name": "MSC_TINTF"
+      },
+      {
+        "byte_offset": 12,
+        "description": "Ethernet MSC receive interrupt mask register (MSC_RINTMSK)",
+        "fieldset": "MSC_RINTMSK",
+        "name": "MSC_RINTMSK"
+      },
+      {
+        "byte_offset": 16,
+        "description": "Ethernet MSC transmit interrupt mask register (MSC_TINTMSK)",
+        "fieldset": "MSC_TINTMSK",
+        "name": "MSC_TINTMSK"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 76,
+        "description": "Ethernet MSC transmitted good frames after a single collision counter",
+        "fieldset": "MSC_SCCNT",
+        "name": "MSC_SCCNT"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 80,
+        "description": "Ethernet MSC transmitted good frames after more than a single collision",
+        "fieldset": "MSC_MSCCNT",
+        "name": "MSC_MSCCNT"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 104,
+        "description": "Ethernet MSC transmitted good frames counter register",
+        "fieldset": "MSC_TGFCNT",
+        "name": "MSC_TGFCNT"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 148,
+        "description": "Ethernet MSC received frames with CRC error counter register",
+        "fieldset": "MSC_RFCECNT",
+        "name": "MSC_RFCECNT"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 152,
+        "description": "Ethernet MSC received frames with alignment error counter register",
+        "fieldset": "MSC_RFAECNT",
+        "name": "MSC_RFAECNT"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 196,
+        "description": "MSC received good unicast frames counter register",
+        "fieldset": "MSC_RGUFCNT",
+        "name": "MSC_RGUFCNT"
+      }
+    ]
+  },
+  "fieldset/MSC_CTL": {
+    "description": "Ethernet MSC control register (MSC_CTL)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Counter reset",
+        "name": "CTR"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Counter stop rollover",
+        "name": "CTSR"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Reset on read",
+        "name": "RTOR"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "MSC counter freeze",
+        "name": "MCFZ"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "Preset MSC counter",
+        "name": "PMC"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "Almost full or half preset mode",
+        "name": "AFHPM"
+      }
+    ]
+  },
+  "fieldset/MSC_MSCCNT": {
+    "description": "Ethernet MSC transmitted good frames after more than a single collision",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "Transmitted good frames after more than a single collision counter",
+        "name": "MSCC"
+      }
+    ]
+  },
+  "fieldset/MSC_RFAECNT": {
+    "description": "Ethernet MSC received frames with alignment error counter register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "Received frames with alignment error counter",
+        "name": "RFAER"
+      }
+    ]
+  },
+  "fieldset/MSC_RFCECNT": {
+    "description": "Ethernet MSC received frames with CRC error counter register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "Received frames with CRC error counter",
+        "name": "RFCER"
+      }
+    ]
+  },
+  "fieldset/MSC_RGUFCNT": {
+    "description": "MSC received good unicast frames counter register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "Received good unicast frames counter",
+        "name": "RGUF"
+      }
+    ]
+  },
+  "fieldset/MSC_RINTF": {
+    "description": "Ethernet MSC receive interrupt flag register (MSC_RINTF)",
+    "fields": [
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "Received frames CRC error",
+        "name": "RFCE"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "Received frames alignment error",
+        "name": "RFAE"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 1,
+        "description": "Received Good Unicast Frames",
+        "name": "RGUF"
+      }
+    ]
+  },
+  "fieldset/MSC_RINTMSK": {
+    "description": "Ethernet MSC receive interrupt mask register (MSC_RINTMSK)",
+    "fields": [
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "Received frame CRC error interrupt mask",
+        "name": "RFCEIM"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "Received frames alignment error interrupt mask",
+        "name": "RFAEIM"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 1,
+        "description": "Received good unicast frames interrupt mask",
+        "name": "RGUFIM"
+      }
+    ]
+  },
+  "fieldset/MSC_SCCNT": {
+    "description": "Ethernet MSC transmitted good frames after a single collision counter",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "Transmitted good frames after a single collision counter",
+        "name": "SCC"
+      }
+    ]
+  },
+  "fieldset/MSC_TGFCNT": {
+    "description": "Ethernet MSC transmitted good frames counter register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "Transmitted good frames counter",
+        "name": "TGF"
+      }
+    ]
+  },
+  "fieldset/MSC_TINTF": {
+    "description": "Ethernet MSC transmit interrupt flag register (MSC_TINTF)",
+    "fields": [
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "description": "Transmitted good frames single collision",
+        "name": "TGFSC"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "Transmitted good frames more single collision",
+        "name": "TGFMSC"
+      },
+      {
+        "bit_offset": 21,
+        "bit_size": 1,
+        "description": "Transmitted good frames",
+        "name": "TGF"
+      }
+    ]
+  },
+  "fieldset/MSC_TINTMSK": {
+    "description": "Ethernet MSC transmit interrupt mask register (MSC_TINTMSK)",
+    "fields": [
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "description": "Transmitted good frames single collision interrupt mask",
+        "name": "TGFSCIM"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "Transmitted good frames more single interrupt collision mask",
+        "name": "TGFMSCIM"
+      },
+      {
+        "bit_offset": 21,
+        "bit_size": 1,
+        "description": "Transmitted good frames interrupt mask",
+        "name": "TGFIM"
+      }
+    ]
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "block/DBG": {
+    "items": [
+      {
+        "byte_offset": 0,
+        "fieldset": "DBG_ID",
+        "name": "DBG_ID"
+      },
+      {
+        "byte_offset": 4,
+        "fieldset": "DBG_CTL0",
+        "name": "DBG_CTL0"
+      }
+    ]
+  },
+  "fieldset/DBG_CTL0": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "DBG_CTL0_SLP_HOLD"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "DBG_CTL0_DSLP_HOLD"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "DBG_CTL0_STB_HOLD"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "name": "DBG_CTL0_TRACE_IOEN"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "name": "DBG_CTL0_FWDGT_HOLD"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "name": "DBG_CTL0_WWDGT_HOLD"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "name": "DBG_CTL0_TIMER0_HOLD"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "name": "DBG_CTL0_TIMER1_HOLD"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "name": "DBG_CTL0_TIMER2_HOLD"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "name": "DBG_CTL0_TIMER3_HOLD"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "name": "DBG_CTL0_CAN0_HOLD"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "name": "DBG_CTL0_I2C0_HOLD"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "name": "DBG_CTL0_I2C1_HOLD"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 1,
+        "name": "DBG_CTL0_TIMER7_HOLD"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 1,
+        "name": "DBG_CTL0_TIMER4_HOLD"
+      },
+      {
+        "bit_offset": 19,
+        "bit_size": 1,
+        "name": "DBG_CTL0_TIMER5_HOLD"
+      },
+      {
+        "bit_offset": 20,
+        "bit_size": 1,
+        "name": "DBG_CTL0_TIMER6_HOLD"
+      },
+      {
+        "bit_offset": 21,
+        "bit_size": 1,
+        "name": "DBG_CTL0_CAN1_HOLD"
+      },
+      {
+        "bit_offset": 25,
+        "bit_size": 1,
+        "name": "DBG_CTL0_TIMER11_HOLD"
+      },
+      {
+        "bit_offset": 26,
+        "bit_size": 1,
+        "name": "DBG_CTL0_TIMER12_HOLD"
+      },
+      {
+        "bit_offset": 27,
+        "bit_size": 1,
+        "name": "DBG_CTL0_TIMER13_HOLD"
+      },
+      {
+        "bit_offset": 28,
+        "bit_size": 1,
+        "name": "DBG_CTL0_TIMER8_HOLD"
+      },
+      {
+        "bit_offset": 29,
+        "bit_size": 1,
+        "name": "DBG_CTL0_TIMER9_HOLD"
+      },
+      {
+        "bit_offset": 30,
+        "bit_size": 1,
+        "name": "DBG_CTL0_TIMER10_HOLD"
+      }
+    ]
+  },
+  "fieldset/DBG_ID": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "name": "DBG_ID_ID_CODE"
+      }
+    ]
+  }
+}

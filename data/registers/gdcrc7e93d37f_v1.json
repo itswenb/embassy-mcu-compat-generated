@@ -1,0 +1,99 @@
+{
+  "block/GD_MERGED_8E537DC71839": {
+    "items": [
+      {
+        "byte_offset": 0,
+        "fieldset": "GD_MERGED_8E537DC71839_FW_CRC_DATA",
+        "name": "CRC_DATA"
+      },
+      {
+        "byte_offset": 0,
+        "description": "Data register",
+        "fieldset": "GD_MERGED_8E537DC71839_SVD_DATA",
+        "name": "DATA"
+      },
+      {
+        "byte_offset": 4,
+        "fieldset": "GD_MERGED_8E537DC71839_FW_CRC_FDATA",
+        "name": "CRC_FDATA"
+      },
+      {
+        "byte_offset": 4,
+        "description": "Free data register",
+        "fieldset": "GD_MERGED_8E537DC71839_SVD_FDATA",
+        "name": "FDATA"
+      },
+      {
+        "byte_offset": 8,
+        "fieldset": "GD_MERGED_8E537DC71839_FW_CRC_CTL",
+        "name": "CRC_CTL"
+      },
+      {
+        "byte_offset": 8,
+        "description": "Control register",
+        "fieldset": "GD_MERGED_8E537DC71839_SVD_CTL",
+        "name": "CTL"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_8E537DC71839_FW_CRC_CTL": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "CRC_CTL_RST"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_8E537DC71839_FW_CRC_DATA": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "name": "CRC_DATA_DATA"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_8E537DC71839_FW_CRC_FDATA": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "name": "CRC_FDATA_FDATA"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_8E537DC71839_SVD_CTL": {
+    "description": "Control register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "reset bit",
+        "name": "RST"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_8E537DC71839_SVD_DATA": {
+    "description": "Data register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "CRC calculation result bits",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_8E537DC71839_SVD_FDATA": {
+    "description": "Free data register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "Free Data Register bits",
+        "name": "FDATA"
+      }
+    ]
+  }
+}

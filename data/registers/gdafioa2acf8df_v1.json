@@ -1,0 +1,208 @@
+{
+  "block/AFIO": {
+    "items": [
+      {
+        "byte_offset": 0,
+        "fieldset": "AFIO_EC",
+        "name": "AFIO_EC"
+      },
+      {
+        "byte_offset": 4,
+        "fieldset": "AFIO_PCF0",
+        "name": "AFIO_PCF0"
+      },
+      {
+        "byte_offset": 8,
+        "name": "AFIO_EXTISS0"
+      },
+      {
+        "byte_offset": 12,
+        "name": "AFIO_EXTISS1"
+      },
+      {
+        "byte_offset": 16,
+        "name": "AFIO_EXTISS2"
+      },
+      {
+        "byte_offset": 20,
+        "name": "AFIO_EXTISS3"
+      },
+      {
+        "byte_offset": 28,
+        "fieldset": "AFIO_PCF1",
+        "name": "AFIO_PCF1"
+      },
+      {
+        "byte_offset": 32,
+        "fieldset": "AFIO_CPSCTL",
+        "name": "AFIO_CPSCTL"
+      }
+    ]
+  },
+  "fieldset/AFIO_CPSCTL": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "AFIO_CPSCTL_CPS_EN"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "name": "AFIO_CPSCTL_CPS_RDY"
+      }
+    ]
+  },
+  "fieldset/AFIO_EC": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 4,
+        "name": "AFIO_EC_PIN"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 3,
+        "name": "AFIO_EC_PORT"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "name": "AFIO_EC_EOE"
+      }
+    ]
+  },
+  "fieldset/AFIO_PCF0": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "AFIO_PCF0_SPI0_REMAP"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "AFIO_PCF0_I2C0_REMAP"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "AFIO_PCF0_USART0_REMAP"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "name": "AFIO_PCF0_USART1_REMAP"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 2,
+        "name": "AFIO_PCF0_USART2_REMAP"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 2,
+        "name": "AFIO_PCF0_TIMER0_REMAP"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 2,
+        "name": "AFIO_PCF0_TIMER1_REMAP"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 2,
+        "name": "AFIO_PCF0_TIMER2_REMAP"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "name": "AFIO_PCF0_TIMER3_REMAP"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 2,
+        "name": "AFIO_PCF0_CAN_REMAP"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "name": "AFIO_PCF0_PD01_REMAP"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "name": "AFIO_PCF0_TIMER4CH3_IREMAP"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 1,
+        "name": "AFIO_PCF0_ADC0_ETRGINS_REMAP"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 1,
+        "name": "AFIO_PCF0_ADC0_ETRGROU_REMAP"
+      },
+      {
+        "bit_offset": 19,
+        "bit_size": 1,
+        "name": "AFIO_PCF0_ADC1_ETRGINS_REMAP"
+      },
+      {
+        "bit_offset": 20,
+        "bit_size": 1,
+        "name": "AFIO_PCF0_ADC1_ETRGROU_REMAP"
+      },
+      {
+        "bit_offset": 24,
+        "bit_size": 3,
+        "name": "AFIO_PCF0_SWJ_CFG"
+      },
+      {
+        "bit_offset": 28,
+        "bit_size": 1,
+        "name": "AFIO_PCF0_SPI2_REMAP"
+      }
+    ]
+  },
+  "fieldset/AFIO_PCF1": {
+    "fields": [
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "name": "AFIO_PCF1_TIMER8_REMAP"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "name": "AFIO_PCF1_TIMER9_REMAP"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "name": "AFIO_PCF1_TIMER10_REMAP"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "name": "AFIO_PCF1_TIMER12_REMAP"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "name": "AFIO_PCF1_TIMER13_REMAP"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "name": "AFIO_PCF1_EXMC_NADV"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 2,
+        "name": "AFIO_PCF1_CTC_REMAP"
+      }
+    ]
+  }
+}

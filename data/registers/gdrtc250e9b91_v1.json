@@ -1,0 +1,181 @@
+{
+  "block/RTC": {
+    "items": [
+      {
+        "byte_offset": 0,
+        "fieldset": "RTC_INTEN",
+        "name": "RTC_INTEN"
+      },
+      {
+        "byte_offset": 4,
+        "fieldset": "RTC_CTL",
+        "name": "RTC_CTL"
+      },
+      {
+        "byte_offset": 8,
+        "fieldset": "RTC_PSCH",
+        "name": "RTC_PSCH"
+      },
+      {
+        "byte_offset": 12,
+        "fieldset": "RTC_PSCL",
+        "name": "RTC_PSCL"
+      },
+      {
+        "byte_offset": 16,
+        "fieldset": "RTC_DIVH",
+        "name": "RTC_DIVH"
+      },
+      {
+        "byte_offset": 20,
+        "fieldset": "RTC_DIVL",
+        "name": "RTC_DIVL"
+      },
+      {
+        "byte_offset": 24,
+        "fieldset": "RTC_CNTH",
+        "name": "RTC_CNTH"
+      },
+      {
+        "byte_offset": 28,
+        "fieldset": "RTC_CNTL",
+        "name": "RTC_CNTL"
+      },
+      {
+        "byte_offset": 32,
+        "fieldset": "RTC_ALRMH",
+        "name": "RTC_ALRMH"
+      },
+      {
+        "byte_offset": 36,
+        "fieldset": "RTC_ALRML",
+        "name": "RTC_ALRML"
+      }
+    ]
+  },
+  "fieldset/RTC_ALRMH": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "name": "RTC_ALRMH_ALRM"
+      }
+    ]
+  },
+  "fieldset/RTC_ALRML": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "name": "RTC_ALRML_ALRM"
+      }
+    ]
+  },
+  "fieldset/RTC_CNTH": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "name": "RTC_CNTH_CNT"
+      }
+    ]
+  },
+  "fieldset/RTC_CNTL": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "name": "RTC_CNTL_CNT"
+      }
+    ]
+  },
+  "fieldset/RTC_CTL": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "RTC_CTL_SCIF"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "RTC_CTL_ALRMIF"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "RTC_CTL_OVIF"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "name": "RTC_CTL_RSYNF"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "name": "RTC_CTL_CMF"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "name": "RTC_CTL_LWOFF"
+      }
+    ]
+  },
+  "fieldset/RTC_DIVH": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 4,
+        "name": "RTC_DIVH_DIV"
+      }
+    ]
+  },
+  "fieldset/RTC_DIVL": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "name": "RTC_DIVL_DIV"
+      }
+    ]
+  },
+  "fieldset/RTC_INTEN": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "RTC_INTEN_SCIE"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "RTC_INTEN_ALRMIE"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "RTC_INTEN_OVIE"
+      }
+    ]
+  },
+  "fieldset/RTC_PSCH": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 4,
+        "name": "RTC_PSCH_PSC"
+      }
+    ]
+  },
+  "fieldset/RTC_PSCL": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "name": "RTC_PSCL_PSC"
+      }
+    ]
+  }
+}

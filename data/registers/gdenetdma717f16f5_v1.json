@@ -1,0 +1,592 @@
+{
+  "block/ENET_DMA": {
+    "description": "Ethernet: DMA controller operation",
+    "items": [
+      {
+        "byte_offset": 0,
+        "description": "Ethernet DMA bus control register",
+        "fieldset": "DMA_BCTL",
+        "name": "DMA_BCTL"
+      },
+      {
+        "byte_offset": 4,
+        "description": "Ethernet DMA transmit poll enable register",
+        "fieldset": "DMA_TPEN",
+        "name": "DMA_TPEN"
+      },
+      {
+        "byte_offset": 8,
+        "description": "Ethernet DMA receive poll enable register",
+        "fieldset": "DMA_RPEN",
+        "name": "DMA_RPEN"
+      },
+      {
+        "byte_offset": 12,
+        "description": "Ethernet DMA receive descriptor table address register",
+        "fieldset": "DMA_RDTADDR",
+        "name": "DMA_RDTADDR"
+      },
+      {
+        "byte_offset": 16,
+        "description": "Ethernet DMA transmit descriptor table address register",
+        "fieldset": "DMA_TDTADDR",
+        "name": "DMA_TDTADDR"
+      },
+      {
+        "byte_offset": 20,
+        "description": "Ethernet DMA status register",
+        "fieldset": "DMA_STAT",
+        "name": "DMA_STAT"
+      },
+      {
+        "byte_offset": 24,
+        "description": "Ethernet DMA control register",
+        "fieldset": "DMA_CTL",
+        "name": "DMA_CTL"
+      },
+      {
+        "byte_offset": 28,
+        "description": "Ethernet DMA interrupt enable register",
+        "fieldset": "DMA_INTEN",
+        "name": "DMA_INTEN"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 32,
+        "description": "Ethernet DMA missed frame and buffer overflow counter register",
+        "fieldset": "DMA_MFBOCNT",
+        "name": "DMA_MFBOCNT"
+      },
+      {
+        "byte_offset": 36,
+        "description": "Ethernet DMA receive state watchdog counter register",
+        "fieldset": "DMA_RSWDC",
+        "name": "DMA_RSWDC"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 72,
+        "description": "DMA current transmit descriptor address register",
+        "fieldset": "DMA_CTDADDR",
+        "name": "DMA_CTDADDR"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 76,
+        "description": "Ethernet DMA current receive descriptor address register",
+        "fieldset": "DMA_CRDADDR",
+        "name": "DMA_CRDADDR"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 80,
+        "description": "Ethernet DMA current transmit buffer address register",
+        "fieldset": "DMA_CTBADDR",
+        "name": "DMA_CTBADDR"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 84,
+        "description": "Ethernet DMA current receive buffer address register",
+        "fieldset": "DMA_CRBADDR",
+        "name": "DMA_CRBADDR"
+      }
+    ]
+  },
+  "fieldset/DMA_BCTL": {
+    "description": "Ethernet DMA bus control register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Software reset",
+        "name": "SWR"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "DMA Arbitration",
+        "name": "DAB"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 5,
+        "description": "Descriptor skip length",
+        "name": "DPSL"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Descriptor format mode",
+        "name": "DFM"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 6,
+        "description": "Programmable burst length",
+        "name": "PGBL"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 2,
+        "description": "RxDMA and TxDMA transfer priority ratio",
+        "name": "RTPR"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "description": "Fixed burst",
+        "name": "FB"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 6,
+        "description": "Rx DMA PGBL",
+        "name": "RXDP"
+      },
+      {
+        "bit_offset": 23,
+        "bit_size": 1,
+        "description": "Use independent PGBL",
+        "name": "UIP"
+      },
+      {
+        "bit_offset": 24,
+        "bit_size": 1,
+        "description": "Four times PGBL mode",
+        "name": "FPBL"
+      },
+      {
+        "bit_offset": 25,
+        "bit_size": 1,
+        "description": "Address-aligned",
+        "name": "AA"
+      },
+      {
+        "bit_offset": 26,
+        "bit_size": 1,
+        "description": "Mixed burst",
+        "name": "MB"
+      }
+    ]
+  },
+  "fieldset/DMA_CRBADDR": {
+    "description": "Ethernet DMA current receive buffer address register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "receive buffer address pointer",
+        "name": "RBAP"
+      }
+    ]
+  },
+  "fieldset/DMA_CRDADDR": {
+    "description": "Ethernet DMA current receive descriptor address register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "Receive descriptor address pointer",
+        "name": "RDAP"
+      }
+    ]
+  },
+  "fieldset/DMA_CTBADDR": {
+    "description": "Ethernet DMA current transmit buffer address register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "Transmit buffer address pointer",
+        "name": "TBAP"
+      }
+    ]
+  },
+  "fieldset/DMA_CTDADDR": {
+    "description": "DMA current transmit descriptor address register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "transmit descriptor address pointer",
+        "name": "TDAP"
+      }
+    ]
+  },
+  "fieldset/DMA_CTL": {
+    "description": "Ethernet DMA control register",
+    "fields": [
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Start/stop receive enable",
+        "name": "SRE"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Operate on second frame",
+        "name": "OSF"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 2,
+        "description": "Receive threshold control",
+        "name": "RTHC"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "Forward undersized good frames",
+        "name": "FUF"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Forward error frames",
+        "name": "FERF"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "description": "Start/stop transmission enable",
+        "name": "STE"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 3,
+        "description": "Transmit threshold control",
+        "name": "TTHC"
+      },
+      {
+        "bit_offset": 20,
+        "bit_size": 1,
+        "description": "Flush transmit FIFO",
+        "name": "FTF"
+      },
+      {
+        "bit_offset": 21,
+        "bit_size": 1,
+        "description": "Transmit Store-and-Forward",
+        "name": "TSFD"
+      },
+      {
+        "bit_offset": 24,
+        "bit_size": 1,
+        "description": "Disable flushing of received frames",
+        "name": "DAFRF"
+      },
+      {
+        "bit_offset": 25,
+        "bit_size": 1,
+        "description": "Receive Store-and-Forward",
+        "name": "RSFD"
+      },
+      {
+        "bit_offset": 26,
+        "bit_size": 1,
+        "description": "Dropping of TCP/IP checksum error frames disable",
+        "name": "DTCERFD"
+      }
+    ]
+  },
+  "fieldset/DMA_INTEN": {
+    "description": "Ethernet DMA interrupt enable register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Transmit interrupt enable",
+        "name": "TIE"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Transmit process stopped interrupt enable",
+        "name": "TPSIE"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Transmit buffer unavailable interrupt enable",
+        "name": "TBUIE"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Transmit jabber timeout interrupt enable",
+        "name": "TJTIE"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "Receive overflow interrupt enable",
+        "name": "ROIE"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "Transmit underflow interrupt enable",
+        "name": "TUIE"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "Receive interrupt enable",
+        "name": "RIE"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Receive buffer unavailable interrupt enable",
+        "name": "RBUIE"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "Receive process stopped interrupt enable",
+        "name": "RPSIE"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "receive watchdog timeout interrupt enable",
+        "name": "RWTIE"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "Early transmit interrupt enable",
+        "name": "ETIE"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "description": "Fatal bus error interrupt enable",
+        "name": "FBEIE"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "description": "Early receive interrupt enable",
+        "name": "ERIE"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "Abnormal interrupt summary enable",
+        "name": "AIE"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "description": "Normal interrupt summary enable",
+        "name": "NIE"
+      }
+    ]
+  },
+  "fieldset/DMA_MFBOCNT": {
+    "description": "Ethernet DMA missed frame and buffer overflow counter register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Missed frames by the controller",
+        "name": "MSFC"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 11,
+        "description": "Missed frames by the application",
+        "name": "MSFA"
+      }
+    ]
+  },
+  "fieldset/DMA_RDTADDR": {
+    "description": "Ethernet DMA receive descriptor table address register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "Start address of receive table",
+        "name": "SRT"
+      }
+    ]
+  },
+  "fieldset/DMA_RPEN": {
+    "description": "Ethernet DMA receive poll enable register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "Receive poll enable",
+        "name": "RPE"
+      }
+    ]
+  },
+  "fieldset/DMA_RSWDC": {
+    "description": "Ethernet DMA receive state watchdog counter register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "Watchdog counter for receive status (RS)",
+        "name": "WDCFRS"
+      }
+    ]
+  },
+  "fieldset/DMA_STAT": {
+    "description": "Ethernet DMA status register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Transmit status",
+        "name": "TS"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Transmit process stopped status",
+        "name": "TPS"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Transmit buffer unavailable status",
+        "name": "TBU"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Transmit jabber timeout status",
+        "name": "TJT"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "Receive overflow status",
+        "name": "RO"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "Transmit underflow status",
+        "name": "TU"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "Receive status",
+        "name": "RS"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Receive buffer unavailable status",
+        "name": "RBU"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "Receive process stopped status",
+        "name": "RPS"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "Receive watchdog timeout status",
+        "name": "RWT"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "Early transmit status",
+        "name": "ET"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "description": "Fatal bus error status",
+        "name": "FBE"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "description": "Early receive status",
+        "name": "ER"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "Abnormal interrupt summary",
+        "name": "AI"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "description": "Normal interrupt summary",
+        "name": "NI"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 3,
+        "description": "Receive process state",
+        "name": "RP"
+      },
+      {
+        "bit_offset": 20,
+        "bit_size": 3,
+        "description": "Transmit process state",
+        "name": "TP"
+      },
+      {
+        "bit_offset": 23,
+        "bit_size": 3,
+        "description": "Error bits status",
+        "name": "EB"
+      },
+      {
+        "bit_offset": 27,
+        "bit_size": 1,
+        "description": "MSC status",
+        "name": "MSC"
+      },
+      {
+        "bit_offset": 28,
+        "bit_size": 1,
+        "description": "WUM status",
+        "name": "WUM"
+      },
+      {
+        "bit_offset": 29,
+        "bit_size": 1,
+        "description": "Time stamp trigger status",
+        "name": "TST"
+      }
+    ]
+  },
+  "fieldset/DMA_TDTADDR": {
+    "description": "Ethernet DMA transmit descriptor table address register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "Start address of transmit table",
+        "name": "STT"
+      }
+    ]
+  },
+  "fieldset/DMA_TPEN": {
+    "description": "Ethernet DMA transmit poll enable register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "Transmit poll enable",
+        "name": "TPE"
+      }
+    ]
+  }
+}

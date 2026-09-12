@@ -1,0 +1,945 @@
+{
+  "block/RCU": {
+    "items": [
+      {
+        "byte_offset": 0,
+        "fieldset": "RCU_CTL",
+        "name": "RCU_CTL"
+      },
+      {
+        "byte_offset": 4,
+        "fieldset": "RCU_CFG0",
+        "name": "RCU_CFG0"
+      },
+      {
+        "byte_offset": 8,
+        "fieldset": "RCU_INT",
+        "name": "RCU_INT"
+      },
+      {
+        "byte_offset": 12,
+        "fieldset": "RCU_APB2RST",
+        "name": "RCU_APB2RST"
+      },
+      {
+        "byte_offset": 16,
+        "fieldset": "RCU_APB1RST",
+        "name": "RCU_APB1RST"
+      },
+      {
+        "byte_offset": 20,
+        "fieldset": "RCU_AHBEN",
+        "name": "RCU_AHBEN"
+      },
+      {
+        "byte_offset": 24,
+        "fieldset": "RCU_APB2EN",
+        "name": "RCU_APB2EN"
+      },
+      {
+        "byte_offset": 28,
+        "fieldset": "RCU_APB1EN",
+        "name": "RCU_APB1EN"
+      },
+      {
+        "byte_offset": 32,
+        "fieldset": "RCU_BDCTL",
+        "name": "RCU_BDCTL"
+      },
+      {
+        "byte_offset": 36,
+        "fieldset": "RCU_RSTSCK",
+        "name": "RCU_RSTSCK"
+      },
+      {
+        "byte_offset": 44,
+        "fieldset": "RCU_CFG1",
+        "name": "RCU_CFG1"
+      },
+      {
+        "byte_offset": 52,
+        "fieldset": "RCU_DSV",
+        "name": "RCU_DSV"
+      },
+      {
+        "byte_offset": 192,
+        "fieldset": "RCU_ADDCTL",
+        "name": "RCU_ADDCTL"
+      },
+      {
+        "byte_offset": 204,
+        "fieldset": "RCU_ADDINT",
+        "name": "RCU_ADDINT"
+      },
+      {
+        "byte_offset": 224,
+        "fieldset": "RCU_ADDAPB1RST",
+        "name": "RCU_ADDAPB1RST"
+      },
+      {
+        "byte_offset": 228,
+        "fieldset": "RCU_ADDAPB1EN",
+        "name": "RCU_ADDAPB1EN"
+      }
+    ]
+  },
+  "fieldset/RCU_ADDAPB1EN": {
+    "fields": [
+      {
+        "bit_offset": 27,
+        "bit_size": 1,
+        "name": "RCU_ADDAPB1EN_CTCEN"
+      }
+    ]
+  },
+  "fieldset/RCU_ADDAPB1RST": {
+    "fields": [
+      {
+        "bit_offset": 27,
+        "bit_size": 1,
+        "name": "RCU_ADDAPB1RST_CTCRST"
+      }
+    ]
+  },
+  "fieldset/RCU_ADDCTL": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "RCU_ADDCTL_CK48MSEL"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "name": "RCU_ADDCTL_IRC48MEN"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 1,
+        "name": "RCU_ADDCTL_IRC48MSTB"
+      },
+      {
+        "bit_offset": 24,
+        "bit_size": 8,
+        "name": "RCU_ADDCTL_IRC48MCAL"
+      }
+    ]
+  },
+  "fieldset/RCU_ADDINT": {
+    "fields": [
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "name": "RCU_ADDINT_IRC48MSTBIF"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "name": "RCU_ADDINT_IRC48MSTBIE"
+      },
+      {
+        "bit_offset": 22,
+        "bit_size": 1,
+        "name": "RCU_ADDINT_IRC48MSTBIC"
+      }
+    ]
+  },
+  "fieldset/RCU_AHBEN": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "RCU_AHBEN_DMA0EN"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "RCU_AHBEN_DMA1EN"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "RCU_AHBEN_SRAMSPEN"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "name": "RCU_AHBEN_FMCSPEN"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "name": "RCU_AHBEN_CRCEN"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "name": "RCU_AHBEN_EXMCEN"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "name": "RCU_AHBEN_SDIOEN"
+      }
+    ]
+  },
+  "fieldset/RCU_APB1EN": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "RCU_APB1EN_TIMER1EN"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "RCU_APB1EN_TIMER2EN"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "RCU_APB1EN_TIMER3EN"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "name": "RCU_APB1EN_TIMER4EN"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "name": "RCU_APB1EN_TIMER5EN"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "name": "RCU_APB1EN_TIMER6EN"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "name": "RCU_APB1EN_TIMER11EN"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "name": "RCU_APB1EN_TIMER12EN"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "name": "RCU_APB1EN_TIMER13EN"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "name": "RCU_APB1EN_WWDGTEN"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "name": "RCU_APB1EN_SPI1EN"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "name": "RCU_APB1EN_SPI2EN"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 1,
+        "name": "RCU_APB1EN_USART1EN"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 1,
+        "name": "RCU_APB1EN_USART2EN"
+      },
+      {
+        "bit_offset": 19,
+        "bit_size": 1,
+        "name": "RCU_APB1EN_UART3EN"
+      },
+      {
+        "bit_offset": 20,
+        "bit_size": 1,
+        "name": "RCU_APB1EN_UART4EN"
+      },
+      {
+        "bit_offset": 21,
+        "bit_size": 1,
+        "name": "RCU_APB1EN_I2C0EN"
+      },
+      {
+        "bit_offset": 22,
+        "bit_size": 1,
+        "name": "RCU_APB1EN_I2C1EN"
+      },
+      {
+        "bit_offset": 23,
+        "bit_size": 1,
+        "name": "RCU_APB1EN_USBDEN"
+      },
+      {
+        "bit_offset": 25,
+        "bit_size": 1,
+        "name": "RCU_APB1EN_CAN0EN"
+      },
+      {
+        "bit_offset": 27,
+        "bit_size": 1,
+        "name": "RCU_APB1EN_BKPIEN"
+      },
+      {
+        "bit_offset": 28,
+        "bit_size": 1,
+        "name": "RCU_APB1EN_PMUEN"
+      },
+      {
+        "bit_offset": 29,
+        "bit_size": 1,
+        "name": "RCU_APB1EN_DACEN"
+      }
+    ]
+  },
+  "fieldset/RCU_APB1RST": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "RCU_APB1RST_TIMER1RST"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "RCU_APB1RST_TIMER2RST"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "RCU_APB1RST_TIMER3RST"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "name": "RCU_APB1RST_TIMER4RST"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "name": "RCU_APB1RST_TIMER5RST"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "name": "RCU_APB1RST_TIMER6RST"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "name": "RCU_APB1RST_TIMER11RST"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "name": "RCU_APB1RST_TIMER12RST"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "name": "RCU_APB1RST_TIMER13RST"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "name": "RCU_APB1RST_WWDGTRST"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "name": "RCU_APB1RST_SPI1RST"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "name": "RCU_APB1RST_SPI2RST"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 1,
+        "name": "RCU_APB1RST_USART1RST"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 1,
+        "name": "RCU_APB1RST_USART2RST"
+      },
+      {
+        "bit_offset": 19,
+        "bit_size": 1,
+        "name": "RCU_APB1RST_UART3RST"
+      },
+      {
+        "bit_offset": 20,
+        "bit_size": 1,
+        "name": "RCU_APB1RST_UART4RST"
+      },
+      {
+        "bit_offset": 21,
+        "bit_size": 1,
+        "name": "RCU_APB1RST_I2C0RST"
+      },
+      {
+        "bit_offset": 22,
+        "bit_size": 1,
+        "name": "RCU_APB1RST_I2C1RST"
+      },
+      {
+        "bit_offset": 23,
+        "bit_size": 1,
+        "name": "RCU_APB1RST_USBDRST"
+      },
+      {
+        "bit_offset": 25,
+        "bit_size": 1,
+        "name": "RCU_APB1RST_CAN0RST"
+      },
+      {
+        "bit_offset": 27,
+        "bit_size": 1,
+        "name": "RCU_APB1RST_BKPIRST"
+      },
+      {
+        "bit_offset": 28,
+        "bit_size": 1,
+        "name": "RCU_APB1RST_PMURST"
+      },
+      {
+        "bit_offset": 29,
+        "bit_size": 1,
+        "name": "RCU_APB1RST_DACRST"
+      }
+    ]
+  },
+  "fieldset/RCU_APB2EN": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "RCU_APB2EN_AFEN"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "RCU_APB2EN_PAEN"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "name": "RCU_APB2EN_PBEN"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "name": "RCU_APB2EN_PCEN"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "name": "RCU_APB2EN_PDEN"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "name": "RCU_APB2EN_PEEN"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "name": "RCU_APB2EN_PFEN"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "name": "RCU_APB2EN_PGEN"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "name": "RCU_APB2EN_ADC0EN"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "name": "RCU_APB2EN_ADC1EN"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "name": "RCU_APB2EN_TIMER0EN"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "name": "RCU_APB2EN_SPI0EN"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "name": "RCU_APB2EN_TIMER7EN"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "name": "RCU_APB2EN_USART0EN"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "name": "RCU_APB2EN_ADC2EN"
+      },
+      {
+        "bit_offset": 19,
+        "bit_size": 1,
+        "name": "RCU_APB2EN_TIMER8EN"
+      },
+      {
+        "bit_offset": 20,
+        "bit_size": 1,
+        "name": "RCU_APB2EN_TIMER9EN"
+      },
+      {
+        "bit_offset": 21,
+        "bit_size": 1,
+        "name": "RCU_APB2EN_TIMER10EN"
+      }
+    ]
+  },
+  "fieldset/RCU_APB2RST": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "RCU_APB2RST_AFRST"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "RCU_APB2RST_PARST"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "name": "RCU_APB2RST_PBRST"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "name": "RCU_APB2RST_PCRST"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "name": "RCU_APB2RST_PDRST"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "name": "RCU_APB2RST_PERST"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "name": "RCU_APB2RST_PFRST"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "name": "RCU_APB2RST_PGRST"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "name": "RCU_APB2RST_ADC0RST"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "name": "RCU_APB2RST_ADC1RST"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "name": "RCU_APB2RST_TIMER0RST"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "name": "RCU_APB2RST_SPI0RST"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "name": "RCU_APB2RST_TIMER7RST"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "name": "RCU_APB2RST_USART0RST"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "name": "RCU_APB2RST_ADC2RST"
+      },
+      {
+        "bit_offset": 19,
+        "bit_size": 1,
+        "name": "RCU_APB2RST_TIMER8RST"
+      },
+      {
+        "bit_offset": 20,
+        "bit_size": 1,
+        "name": "RCU_APB2RST_TIMER9RST"
+      },
+      {
+        "bit_offset": 21,
+        "bit_size": 1,
+        "name": "RCU_APB2RST_TIMER10RST"
+      }
+    ]
+  },
+  "fieldset/RCU_BDCTL": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "RCU_BDCTL_LXTALEN"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "RCU_BDCTL_LXTALSTB"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "RCU_BDCTL_LXTALBPS"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 2,
+        "name": "RCU_BDCTL_LXTALDRI"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 2,
+        "name": "RCU_BDCTL_RTCSRC"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "name": "RCU_BDCTL_RTCEN"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "name": "RCU_BDCTL_BKPRST"
+      }
+    ]
+  },
+  "fieldset/RCU_CFG0": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 2,
+        "name": "RCU_CFG0_SCS"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 2,
+        "name": "RCU_CFG0_SCSS"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 4,
+        "name": "RCU_CFG0_AHBPSC"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 3,
+        "name": "RCU_CFG0_APB1PSC"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 3,
+        "name": "RCU_CFG0_APB2PSC"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 2,
+        "name": "RCU_CFG0_ADCPSC"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "name": "RCU_CFG0_PLLSEL"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 1,
+        "name": "RCU_CFG0_PREDV0"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 4,
+        "name": "RCU_CFG0_PLLMF"
+      },
+      {
+        "bit_offset": 22,
+        "bit_size": 2,
+        "name": "RCU_CFG0_USBDPSC"
+      },
+      {
+        "bit_offset": 24,
+        "bit_size": 3,
+        "name": "RCU_CFG0_CKOUT0SEL"
+      },
+      {
+        "bit_offset": 27,
+        "bit_size": 1,
+        "name": "RCU_CFG0_PLLMF_4"
+      },
+      {
+        "bit_offset": 28,
+        "bit_size": 1,
+        "name": "RCU_CFG0_ADCPSC_2"
+      },
+      {
+        "bit_offset": 30,
+        "bit_size": 1,
+        "name": "RCU_CFG0_PLLMF_5"
+      },
+      {
+        "bit_offset": 31,
+        "bit_size": 1,
+        "name": "RCU_CFG0_USBDPSC_2"
+      }
+    ]
+  },
+  "fieldset/RCU_CFG1": {
+    "fields": [
+      {
+        "bit_offset": 29,
+        "bit_size": 1,
+        "name": "RCU_CFG1_ADCPSC_3"
+      },
+      {
+        "bit_offset": 30,
+        "bit_size": 1,
+        "name": "RCU_CFG1_PLLPRESEL"
+      }
+    ]
+  },
+  "fieldset/RCU_CTL": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "RCU_CTL_IRC8MEN"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "RCU_CTL_IRC8MSTB"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 5,
+        "name": "RCU_CTL_IRC8MADJ"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 8,
+        "name": "RCU_CTL_IRC8MCALIB"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "name": "RCU_CTL_HXTALEN"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 1,
+        "name": "RCU_CTL_HXTALSTB"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 1,
+        "name": "RCU_CTL_HXTALBPS"
+      },
+      {
+        "bit_offset": 19,
+        "bit_size": 1,
+        "name": "RCU_CTL_CKMEN"
+      },
+      {
+        "bit_offset": 24,
+        "bit_size": 1,
+        "name": "RCU_CTL_PLLEN"
+      },
+      {
+        "bit_offset": 25,
+        "bit_size": 1,
+        "name": "RCU_CTL_PLLSTB"
+      }
+    ]
+  },
+  "fieldset/RCU_DSV": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 3,
+        "name": "RCU_DSV_DSLPVS"
+      }
+    ]
+  },
+  "fieldset/RCU_INT": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "RCU_INT_IRC40KSTBIF"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "RCU_INT_LXTALSTBIF"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "RCU_INT_IRC8MSTBIF"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "name": "RCU_INT_HXTALSTBIF"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "name": "RCU_INT_PLLSTBIF"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "name": "RCU_INT_CKMIF"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "name": "RCU_INT_IRC40KSTBIE"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "name": "RCU_INT_LXTALSTBIE"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "name": "RCU_INT_IRC8MSTBIE"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "name": "RCU_INT_HXTALSTBIE"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "name": "RCU_INT_PLLSTBIE"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "name": "RCU_INT_IRC40KSTBIC"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 1,
+        "name": "RCU_INT_LXTALSTBIC"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 1,
+        "name": "RCU_INT_IRC8MSTBIC"
+      },
+      {
+        "bit_offset": 19,
+        "bit_size": 1,
+        "name": "RCU_INT_HXTALSTBIC"
+      },
+      {
+        "bit_offset": 20,
+        "bit_size": 1,
+        "name": "RCU_INT_PLLSTBIC"
+      },
+      {
+        "bit_offset": 23,
+        "bit_size": 1,
+        "name": "RCU_INT_CKMIC"
+      }
+    ]
+  },
+  "fieldset/RCU_RSTSCK": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "RCU_RSTSCK_IRC40KEN"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "RCU_RSTSCK_IRC40KSTB"
+      },
+      {
+        "bit_offset": 24,
+        "bit_size": 1,
+        "name": "RCU_RSTSCK_RSTFC"
+      },
+      {
+        "bit_offset": 26,
+        "bit_size": 1,
+        "name": "RCU_RSTSCK_EPRSTF"
+      },
+      {
+        "bit_offset": 27,
+        "bit_size": 1,
+        "name": "RCU_RSTSCK_PORRSTF"
+      },
+      {
+        "bit_offset": 28,
+        "bit_size": 1,
+        "name": "RCU_RSTSCK_SWRSTF"
+      },
+      {
+        "bit_offset": 29,
+        "bit_size": 1,
+        "name": "RCU_RSTSCK_FWDGTRSTF"
+      },
+      {
+        "bit_offset": 30,
+        "bit_size": 1,
+        "name": "RCU_RSTSCK_WWDGTRSTF"
+      },
+      {
+        "bit_offset": 31,
+        "bit_size": 1,
+        "name": "RCU_RSTSCK_LPRSTF"
+      }
+    ]
+  }
+}

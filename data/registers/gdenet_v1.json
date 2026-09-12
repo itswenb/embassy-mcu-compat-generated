@@ -1,0 +1,2331 @@
+{
+  "block/ENET_MAC": {
+    "description": "Ethernet: media access control",
+    "items": [
+      {
+        "byte_offset": 0,
+        "description": "Ethernet MAC configuration register (MAC_CFG)",
+        "fieldset": "MAC_CFG",
+        "name": "MAC_CFG"
+      },
+      {
+        "byte_offset": 4,
+        "description": "Ethernet MAC frame filter register (MAC_FRMF)",
+        "fieldset": "MAC_FRMF",
+        "name": "MAC_FRMF"
+      },
+      {
+        "byte_offset": 8,
+        "description": "Ethernet MAC hash list high register",
+        "fieldset": "MAC_HLH",
+        "name": "MAC_HLH"
+      },
+      {
+        "byte_offset": 12,
+        "description": "Ethernet MAC hash list low register",
+        "fieldset": "MAC_HLL",
+        "name": "MAC_HLL"
+      },
+      {
+        "byte_offset": 16,
+        "description": "Ethernet MAC PHY control register (MAC_PHY_CTL)",
+        "fieldset": "MAC_PHY_CTL",
+        "name": "MAC_PHY_CTL"
+      },
+      {
+        "byte_offset": 20,
+        "description": "Ethernet MAC MII data register (MAC_PHY_DATA)",
+        "fieldset": "MAC_PHY_DATA",
+        "name": "MAC_PHY_DATA"
+      },
+      {
+        "byte_offset": 24,
+        "description": "Ethernet MAC flow control register (MAC_FCTL)",
+        "fieldset": "MAC_FCTL",
+        "name": "MAC_FCTL"
+      },
+      {
+        "byte_offset": 28,
+        "description": "Ethernet MAC VLAN tag register (MAC_VLT)",
+        "fieldset": "MAC_VLT",
+        "name": "MAC_VLT"
+      },
+      {
+        "byte_offset": 40,
+        "description": "Ethernet MAC remote wakeup frame filter register (MAC_RWFF)",
+        "name": "MAC_RWFF"
+      },
+      {
+        "byte_offset": 44,
+        "description": "Ethernet MAC wakeup management register (MAC_WUM)",
+        "fieldset": "MAC_WUM",
+        "name": "MAC_WUM"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 52,
+        "description": "Ethernet MAC debug register (MAC_DBG)",
+        "fieldset": "MAC_DBG",
+        "name": "MAC_DBG"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 56,
+        "description": "Ethernet MAC interrupt flag register (MAC_INTF)",
+        "fieldset": "MAC_INTF",
+        "name": "MAC_INTF"
+      },
+      {
+        "byte_offset": 60,
+        "description": "Ethernet MAC interrupt mask register (MAC_INTMSK)",
+        "fieldset": "MAC_INTMSK",
+        "name": "MAC_INTMSK"
+      },
+      {
+        "byte_offset": 64,
+        "description": "Ethernet MAC address 0 high register (MAC_ADDR0H)",
+        "fieldset": "MAC_ADDR0H",
+        "name": "MAC_ADDR0H"
+      },
+      {
+        "byte_offset": 68,
+        "description": "Ethernet MAC address 0 low register",
+        "fieldset": "MAC_ADDR0L",
+        "name": "MAC_ADDR0L"
+      },
+      {
+        "byte_offset": 72,
+        "description": "Ethernet MAC address 1 high register (MAC_ADDR1H)",
+        "fieldset": "MAC_ADDR1H",
+        "name": "MAC_ADDR1H"
+      },
+      {
+        "byte_offset": 76,
+        "description": "Ethernet MAC address1 low register",
+        "fieldset": "MAC_ADDR1L",
+        "name": "MAC_ADDR1L"
+      },
+      {
+        "byte_offset": 80,
+        "description": "Ethernet MAC address 2 high register (MAC_ADDR2H)",
+        "fieldset": "MAC_ADDR2H",
+        "name": "MAC_ADDR2H"
+      },
+      {
+        "byte_offset": 84,
+        "description": "Ethernet MAC address 2 low register",
+        "fieldset": "MAC_ADDR2L",
+        "name": "MAC_ADDR2L"
+      },
+      {
+        "byte_offset": 88,
+        "description": "Ethernet MAC address 3 high register (MAC_ADDR3H)",
+        "fieldset": "MAC_ADDR3H",
+        "name": "MAC_ADDR3H"
+      },
+      {
+        "byte_offset": 92,
+        "description": "Ethernet MAC address 3 low register",
+        "fieldset": "MAC_ADDR3L",
+        "name": "MAC_ADDR3L"
+      }
+    ]
+  },
+  "fieldset/MAC_ADDR0H": {
+    "description": "Ethernet MAC address 0 high register (MAC_ADDR0H)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "MAC address0 high",
+        "name": "ADDR0H"
+      },
+      {
+        "bit_offset": 31,
+        "bit_size": 1,
+        "description": "Always 1",
+        "name": "MO"
+      }
+    ]
+  },
+  "fieldset/MAC_ADDR0L": {
+    "description": "Ethernet MAC address 0 low register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "MAC address0 low",
+        "name": "ADDR0L"
+      }
+    ]
+  },
+  "fieldset/MAC_ADDR1H": {
+    "description": "Ethernet MAC address 1 high register (MAC_ADDR1H)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "MAC address1 high",
+        "name": "ADDR1H"
+      },
+      {
+        "bit_offset": 24,
+        "bit_size": 6,
+        "description": "Mask byte",
+        "name": "MB"
+      },
+      {
+        "bit_offset": 30,
+        "bit_size": 1,
+        "description": "Source address filter",
+        "name": "SAF"
+      },
+      {
+        "bit_offset": 31,
+        "bit_size": 1,
+        "description": "Address filter enable",
+        "name": "AFE"
+      }
+    ]
+  },
+  "fieldset/MAC_ADDR1L": {
+    "description": "Ethernet MAC address1 low register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "MAC address1 low",
+        "name": "ADDR1L"
+      }
+    ]
+  },
+  "fieldset/MAC_ADDR2H": {
+    "description": "Ethernet MAC address 2 high register (MAC_ADDR2H)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Ethernet MAC address 2 high register",
+        "name": "ADDR2H"
+      },
+      {
+        "bit_offset": 24,
+        "bit_size": 6,
+        "description": "Mask byte",
+        "name": "MB"
+      },
+      {
+        "bit_offset": 30,
+        "bit_size": 1,
+        "description": "Source address filter",
+        "name": "SAF"
+      },
+      {
+        "bit_offset": 31,
+        "bit_size": 1,
+        "description": "Address filter enable",
+        "name": "AFE"
+      }
+    ]
+  },
+  "fieldset/MAC_ADDR2L": {
+    "description": "Ethernet MAC address 2 low register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "MAC address2 low",
+        "name": "ADDR2L"
+      }
+    ]
+  },
+  "fieldset/MAC_ADDR3H": {
+    "description": "Ethernet MAC address 3 high register (MAC_ADDR3H)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "MAC address3 high",
+        "name": "ADDR3H"
+      },
+      {
+        "bit_offset": 24,
+        "bit_size": 6,
+        "description": "Mask byte",
+        "name": "MB"
+      },
+      {
+        "bit_offset": 30,
+        "bit_size": 1,
+        "description": "Source address filter",
+        "name": "SAF"
+      },
+      {
+        "bit_offset": 31,
+        "bit_size": 1,
+        "description": "Address filter enable",
+        "name": "AFE"
+      }
+    ]
+  },
+  "fieldset/MAC_ADDR3L": {
+    "description": "Ethernet MAC address 3 low register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "MAC address3 low",
+        "name": "ADDR3L"
+      }
+    ]
+  },
+  "fieldset/MAC_CFG": {
+    "description": "Ethernet MAC configuration register (MAC_CFG)",
+    "fields": [
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Receiver enable",
+        "name": "REN"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Transmitter enable",
+        "name": "TEN"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "Deferral check",
+        "name": "DFC"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 2,
+        "description": "Back-off limit",
+        "name": "BOL"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Automatic pad/CRC drop",
+        "name": "APCD"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "Retry disable",
+        "name": "RTD"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "IP frame checksum offload",
+        "name": "IPFCO"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "description": "Duplex mode",
+        "name": "DPM"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "description": "Loopback mode",
+        "name": "LBM"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "description": "Receive own disable",
+        "name": "ROD"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "description": "Fast Ethernet speed",
+        "name": "SPD"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "description": "Carrier sense disable",
+        "name": "CSD"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 3,
+        "description": "Inter frame gap bit selection",
+        "name": "IGBS"
+      },
+      {
+        "bit_offset": 22,
+        "bit_size": 1,
+        "description": "Jabber disable",
+        "name": "JBD"
+      },
+      {
+        "bit_offset": 23,
+        "bit_size": 1,
+        "description": "Watchdog disable",
+        "name": "WDD"
+      },
+      {
+        "bit_offset": 25,
+        "bit_size": 1,
+        "description": "Type Frame CRC Dropping",
+        "name": "TFCD"
+      }
+    ]
+  },
+  "fieldset/MAC_DBG": {
+    "description": "Ethernet MAC debug register (MAC_DBG)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "MAC receive state not idle",
+        "name": "MRNI"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 2,
+        "description": "Rx asynchronous FIFO status",
+        "name": "RXAFS"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "RxFIFO is writing",
+        "name": "RXFW"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 2,
+        "description": "RxFIFO read operation status",
+        "name": "RXFRS"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 2,
+        "description": "RxFIFO state",
+        "name": "RXFS"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "description": "MAC transmit state not idle",
+        "name": "MTNI"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 2,
+        "description": "Status of MAC transmitter",
+        "name": "SOMT"
+      },
+      {
+        "bit_offset": 19,
+        "bit_size": 1,
+        "description": "Pause condition status",
+        "name": "PCS"
+      },
+      {
+        "bit_offset": 20,
+        "bit_size": 2,
+        "description": "TxFIFO read operation status",
+        "name": "TXFRS"
+      },
+      {
+        "bit_offset": 22,
+        "bit_size": 1,
+        "description": "TxFIFO is writing",
+        "name": "TXFW"
+      },
+      {
+        "bit_offset": 24,
+        "bit_size": 1,
+        "description": "TxFIFO not empty flag",
+        "name": "TXFNE"
+      },
+      {
+        "bit_offset": 25,
+        "bit_size": 1,
+        "description": "TxFIFO Full flag",
+        "name": "TXFF"
+      }
+    ]
+  },
+  "fieldset/MAC_FCTL": {
+    "description": "Ethernet MAC flow control register (MAC_FCTL)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Flow control busy/back pressure activate",
+        "name": "FLCB_BKPA"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Transmit flow control enable",
+        "name": "TFCEN"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Receive flow control enable",
+        "name": "RFCEN"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Unicast pause frame detect",
+        "name": "UPFDT"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 2,
+        "description": "Pause low threshold",
+        "name": "PLTS"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Disable Zero-quanta pause",
+        "name": "DZQP"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 16,
+        "description": "Pause time",
+        "name": "PTM"
+      }
+    ]
+  },
+  "fieldset/MAC_FRMF": {
+    "description": "Ethernet MAC frame filter register (MAC_FRMF)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Promiscuous mode",
+        "name": "PM"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Hash unicast filter",
+        "name": "HUF"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Hash multicast filter",
+        "name": "HMF"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Destination address inverse filtering",
+        "name": "DAIFLT"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "multicast filter disable",
+        "name": "MFD"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "Broadcast frames disable",
+        "name": "BFRMD"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 2,
+        "description": "Pass control frames",
+        "name": "PCFRM"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "Source address inverse filtering",
+        "name": "SAIFLT"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "Source address filter",
+        "name": "SAFLT"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "Hash or perfect filter",
+        "name": "HPFLT"
+      },
+      {
+        "bit_offset": 31,
+        "bit_size": 1,
+        "description": "Frames all receive",
+        "name": "FAR"
+      }
+    ]
+  },
+  "fieldset/MAC_HLH": {
+    "description": "Ethernet MAC hash list high register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "Hash list high",
+        "name": "HLH"
+      }
+    ]
+  },
+  "fieldset/MAC_HLL": {
+    "description": "Ethernet MAC hash list low register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "Hash list low",
+        "name": "HLL"
+      }
+    ]
+  },
+  "fieldset/MAC_INTF": {
+    "description": "Ethernet MAC interrupt flag register (MAC_INTF)",
+    "fields": [
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "WUM status",
+        "name": "WUM"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "MSC status",
+        "name": "MSC"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "MSC receive status",
+        "name": "MSCR"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "MSC transmit status",
+        "name": "MSCT"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "Time stamp trigger status",
+        "name": "TMST"
+      }
+    ]
+  },
+  "fieldset/MAC_INTMSK": {
+    "description": "Ethernet MAC interrupt mask register (MAC_INTMSK)",
+    "fields": [
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "WUM interrupt mask",
+        "name": "WUMIM"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "Time stamp trigger interrupt mask",
+        "name": "TMSTIM"
+      }
+    ]
+  },
+  "fieldset/MAC_PHY_CTL": {
+    "description": "Ethernet MAC PHY control register (MAC_PHY_CTL)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "PHY busy",
+        "name": "PB"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "PHY write",
+        "name": "PW"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 3,
+        "description": "Clock range",
+        "name": "CLR"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 5,
+        "description": "PHY register",
+        "name": "PR"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 5,
+        "description": "PHY address",
+        "name": "PA"
+      }
+    ]
+  },
+  "fieldset/MAC_PHY_DATA": {
+    "description": "Ethernet MAC MII data register (MAC_PHY_DATA)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "PHY data",
+        "name": "PD"
+      }
+    ]
+  },
+  "fieldset/MAC_VLT": {
+    "description": "Ethernet MAC VLAN tag register (MAC_VLT)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "VLAN tag identifier (for receive frames)",
+        "name": "VLTI"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "description": "12-bit VLAN tag comparison",
+        "name": "VLTC"
+      }
+    ]
+  },
+  "fieldset/MAC_WUM": {
+    "description": "Ethernet MAC wakeup management register (MAC_WUM)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Power down",
+        "name": "PWD"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Magic Packet enable",
+        "name": "MPEN"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Wakeup frame enable",
+        "name": "WFEN"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "Magic packet received",
+        "name": "MPKR"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "Wakeup frame received",
+        "name": "WUFR"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "Global unicast",
+        "name": "GU"
+      },
+      {
+        "bit_offset": 31,
+        "bit_size": 1,
+        "description": "Wakeup frame filter register pointer reset",
+        "name": "WUFFRPR"
+      }
+    ]
+  },
+  "block/ENET_MSC": {
+    "description": "Ethernet: MAC statistics counters",
+    "items": [
+      {
+        "byte_offset": 0,
+        "description": "Ethernet MSC control register (MSC_CTL)",
+        "fieldset": "MSC_CTL",
+        "name": "MSC_CTL"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 4,
+        "description": "Ethernet MSC receive interrupt flag register (MSC_RINTF)",
+        "fieldset": "MSC_RINTF",
+        "name": "MSC_RINTF"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 8,
+        "description": "Ethernet MSC transmit interrupt flag register (MSC_TINTF)",
+        "fieldset": "MSC_TINTF",
+        "name": "MSC_TINTF"
+      },
+      {
+        "byte_offset": 12,
+        "description": "Ethernet MSC receive interrupt mask register (MSC_RINTMSK)",
+        "fieldset": "MSC_RINTMSK",
+        "name": "MSC_RINTMSK"
+      },
+      {
+        "byte_offset": 16,
+        "description": "Ethernet MSC transmit interrupt mask register (MSC_TINTMSK)",
+        "fieldset": "MSC_TINTMSK",
+        "name": "MSC_TINTMSK"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 76,
+        "description": "Ethernet MSC transmitted good frames after a single collision counter",
+        "fieldset": "MSC_SCCNT",
+        "name": "MSC_SCCNT"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 80,
+        "description": "Ethernet MSC transmitted good frames after more than a single collision",
+        "fieldset": "MSC_MSCCNT",
+        "name": "MSC_MSCCNT"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 104,
+        "description": "Ethernet MSC transmitted good frames counter register",
+        "fieldset": "MSC_TGFCNT",
+        "name": "MSC_TGFCNT"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 148,
+        "description": "Ethernet MSC received frames with CRC error counter register",
+        "fieldset": "MSC_RFCECNT",
+        "name": "MSC_RFCECNT"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 152,
+        "description": "Ethernet MSC received frames with alignment error counter register",
+        "fieldset": "MSC_RFAECNT",
+        "name": "MSC_RFAECNT"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 196,
+        "description": "MSC received good unicast frames counter register",
+        "fieldset": "MSC_RGUFCNT",
+        "name": "MSC_RGUFCNT"
+      }
+    ]
+  },
+  "fieldset/MSC_CTL": {
+    "description": "Ethernet MSC control register (MSC_CTL)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Counter reset",
+        "name": "CTR"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Counter stop rollover",
+        "name": "CTSR"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Reset on read",
+        "name": "RTOR"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "MSC counter freeze",
+        "name": "MCFZ"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "Preset MSC counter",
+        "name": "PMC"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "Almost full or half preset mode",
+        "name": "AFHPM"
+      }
+    ]
+  },
+  "fieldset/MSC_MSCCNT": {
+    "description": "Ethernet MSC transmitted good frames after more than a single collision",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "Transmitted good frames after more than a single collision counter",
+        "name": "MSCC"
+      }
+    ]
+  },
+  "fieldset/MSC_RFAECNT": {
+    "description": "Ethernet MSC received frames with alignment error counter register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "Received frames with alignment error counter",
+        "name": "RFAER"
+      }
+    ]
+  },
+  "fieldset/MSC_RFCECNT": {
+    "description": "Ethernet MSC received frames with CRC error counter register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "Received frames with CRC error counter",
+        "name": "RFCER"
+      }
+    ]
+  },
+  "fieldset/MSC_RGUFCNT": {
+    "description": "MSC received good unicast frames counter register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "Received good unicast frames counter",
+        "name": "RGUF"
+      }
+    ]
+  },
+  "fieldset/MSC_RINTF": {
+    "description": "Ethernet MSC receive interrupt flag register (MSC_RINTF)",
+    "fields": [
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "Received frames CRC error",
+        "name": "RFCE"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "Received frames alignment error",
+        "name": "RFAE"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 1,
+        "description": "Received Good Unicast Frames",
+        "name": "RGUF"
+      }
+    ]
+  },
+  "fieldset/MSC_RINTMSK": {
+    "description": "Ethernet MSC receive interrupt mask register (MSC_RINTMSK)",
+    "fields": [
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "Received frame CRC error interrupt mask",
+        "name": "RFCEIM"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "Received frames alignment error interrupt mask",
+        "name": "RFAEIM"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 1,
+        "description": "Received good unicast frames interrupt mask",
+        "name": "RGUFIM"
+      }
+    ]
+  },
+  "fieldset/MSC_SCCNT": {
+    "description": "Ethernet MSC transmitted good frames after a single collision counter",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "Transmitted good frames after a single collision counter",
+        "name": "SCC"
+      }
+    ]
+  },
+  "fieldset/MSC_TGFCNT": {
+    "description": "Ethernet MSC transmitted good frames counter register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "Transmitted good frames counter",
+        "name": "TGF"
+      }
+    ]
+  },
+  "fieldset/MSC_TINTF": {
+    "description": "Ethernet MSC transmit interrupt flag register (MSC_TINTF)",
+    "fields": [
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "description": "Transmitted good frames single collision",
+        "name": "TGFSC"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "Transmitted good frames more single collision",
+        "name": "TGFMSC"
+      },
+      {
+        "bit_offset": 21,
+        "bit_size": 1,
+        "description": "Transmitted good frames",
+        "name": "TGF"
+      }
+    ]
+  },
+  "fieldset/MSC_TINTMSK": {
+    "description": "Ethernet MSC transmit interrupt mask register (MSC_TINTMSK)",
+    "fields": [
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "description": "Transmitted good frames single collision interrupt mask",
+        "name": "TGFSCIM"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "Transmitted good frames more single interrupt collision mask",
+        "name": "TGFMSCIM"
+      },
+      {
+        "bit_offset": 21,
+        "bit_size": 1,
+        "description": "Transmitted good frames interrupt mask",
+        "name": "TGFIM"
+      }
+    ]
+  },
+  "block/ENET_PTP": {
+    "description": "Ethernet: Precision time protocol",
+    "items": [
+      {
+        "byte_offset": 0,
+        "description": "Ethernet PTP time stamp control register (PTP_TSCTL)",
+        "fieldset": "PTP_TSCTL",
+        "name": "PTP_TSCTL"
+      },
+      {
+        "byte_offset": 4,
+        "description": "Ethernet PTP subsecond increment register",
+        "fieldset": "PTP_SSINC",
+        "name": "PTP_SSINC"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 8,
+        "description": "Ethernet PTP time stamp high register",
+        "fieldset": "PTP_TSH",
+        "name": "PTP_TSH"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 12,
+        "description": "Ethernet PTP time stamp low register (PTP_TSL)",
+        "fieldset": "PTP_TSL",
+        "name": "PTP_TSL"
+      },
+      {
+        "byte_offset": 16,
+        "description": "Ethernet PTP time stamp high update register",
+        "fieldset": "PTP_TSUH",
+        "name": "PTP_TSUH"
+      },
+      {
+        "byte_offset": 20,
+        "description": "Ethernet PTP time stamp low update register (PTP_TSUL)",
+        "fieldset": "PTP_TSUL",
+        "name": "PTP_TSUL"
+      },
+      {
+        "byte_offset": 24,
+        "description": "Ethernet PTP time stamp addend register",
+        "fieldset": "PTP_TSADDEND",
+        "name": "PTP_TSADDEND"
+      },
+      {
+        "byte_offset": 28,
+        "description": "Ethernet PTP expected time high register",
+        "fieldset": "PTP_ETH",
+        "name": "PTP_ETH"
+      },
+      {
+        "byte_offset": 32,
+        "description": "Ethernet PTP expected time low register",
+        "fieldset": "PTP_ETL",
+        "name": "PTP_ETL"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 40,
+        "description": "Ethernet PTP time stamp flag register",
+        "fieldset": "PTP_TSF",
+        "name": "PTP_TSF"
+      },
+      {
+        "byte_offset": 44,
+        "description": "Ethernet PTP PPS control register",
+        "fieldset": "PTP_PPSCTL",
+        "name": "PTP_PPSCTL"
+      }
+    ]
+  },
+  "fieldset/PTP_ETH": {
+    "description": "Ethernet PTP expected time high register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "Expected time stamp high",
+        "name": "ETSH"
+      }
+    ]
+  },
+  "fieldset/PTP_ETL": {
+    "description": "Ethernet PTP expected time low register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "Expected time stamp low",
+        "name": "ETSL"
+      }
+    ]
+  },
+  "fieldset/PTP_PPSCTL": {
+    "description": "Ethernet PTP PPS control register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 4,
+        "description": "PPS output frequency configure",
+        "name": "PPSOFC"
+      }
+    ]
+  },
+  "fieldset/PTP_SSINC": {
+    "description": "Ethernet PTP subsecond increment register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "System time subsecond increment",
+        "name": "STMSSI"
+      }
+    ]
+  },
+  "fieldset/PTP_TSADDEND": {
+    "description": "Ethernet PTP time stamp addend register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "Time stamp addend",
+        "name": "TMSA"
+      }
+    ]
+  },
+  "fieldset/PTP_TSCTL": {
+    "description": "Ethernet PTP time stamp control register (PTP_TSCTL)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Time stamp enable",
+        "name": "TMSEN"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Time stamp fine or coarse update",
+        "name": "TMSFCU"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Time stamp system time initialize",
+        "name": "TMSSTI"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Time stamp system time update",
+        "name": "TMSSTU"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "Time stamp interrupt trigger enable",
+        "name": "TMSITEN"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "Time stamp addend register update",
+        "name": "TMSARU"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "All received frames snapshot enable",
+        "name": "ARFSEN"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "Subsecond counter rollover mode",
+        "name": "SCROM"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "PTP frame snooping version",
+        "name": "PFSV"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "description": "Received Ethernet snapshot enable",
+        "name": "ESEN"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "description": "Received IPv6 snapshot enable",
+        "name": "IP6SEN"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "description": "Received IPv4 snapshot enable",
+        "name": "IP4SEN"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "description": "Received event type message snapshot enable",
+        "name": "ETMSEN"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "Received master node message snapshot enable",
+        "name": "MNMSEN"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 2,
+        "description": "Clock node type for time stamp",
+        "name": "CKNT"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 1,
+        "description": "MAC address filter enable for PTP frame",
+        "name": "MAFEN"
+      }
+    ]
+  },
+  "fieldset/PTP_TSF": {
+    "description": "Ethernet PTP time stamp flag register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Timestamp second counter overflow",
+        "name": "TSSCO"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Target time match",
+        "name": "TTM"
+      }
+    ]
+  },
+  "fieldset/PTP_TSH": {
+    "description": "Ethernet PTP time stamp high register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "System time second",
+        "name": "STMS"
+      }
+    ]
+  },
+  "fieldset/PTP_TSL": {
+    "description": "Ethernet PTP time stamp low register (PTP_TSL)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 31,
+        "description": "System time subseconds",
+        "name": "STMSS"
+      },
+      {
+        "bit_offset": 31,
+        "bit_size": 1,
+        "description": "System time sign",
+        "name": "STS"
+      }
+    ]
+  },
+  "fieldset/PTP_TSUH": {
+    "description": "Ethernet PTP time stamp high update register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "Time stamp update second",
+        "name": "TMSUS"
+      }
+    ]
+  },
+  "fieldset/PTP_TSUL": {
+    "description": "Ethernet PTP time stamp low update register (PTP_TSUL)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 31,
+        "description": "Time stamp update subseconds",
+        "name": "TMSUSS"
+      },
+      {
+        "bit_offset": 31,
+        "bit_size": 1,
+        "description": "Time stamp update positive or negative sign",
+        "name": "TMSUPNS"
+      }
+    ]
+  },
+  "block/ENET_DMA": {
+    "description": "Ethernet: DMA controller operation",
+    "items": [
+      {
+        "byte_offset": 0,
+        "description": "Ethernet DMA bus control register",
+        "fieldset": "DMA_BCTL",
+        "name": "DMA_BCTL"
+      },
+      {
+        "byte_offset": 4,
+        "description": "Ethernet DMA transmit poll enable register",
+        "fieldset": "DMA_TPEN",
+        "name": "DMA_TPEN"
+      },
+      {
+        "byte_offset": 8,
+        "description": "Ethernet DMA receive poll enable register",
+        "fieldset": "DMA_RPEN",
+        "name": "DMA_RPEN"
+      },
+      {
+        "byte_offset": 12,
+        "description": "Ethernet DMA receive descriptor table address register",
+        "fieldset": "DMA_RDTADDR",
+        "name": "DMA_RDTADDR"
+      },
+      {
+        "byte_offset": 16,
+        "description": "Ethernet DMA transmit descriptor table address register",
+        "fieldset": "DMA_TDTADDR",
+        "name": "DMA_TDTADDR"
+      },
+      {
+        "byte_offset": 20,
+        "description": "Ethernet DMA status register",
+        "fieldset": "DMA_STAT",
+        "name": "DMA_STAT"
+      },
+      {
+        "byte_offset": 24,
+        "description": "Ethernet DMA control register",
+        "fieldset": "DMA_CTL",
+        "name": "DMA_CTL"
+      },
+      {
+        "byte_offset": 28,
+        "description": "Ethernet DMA interrupt enable register",
+        "fieldset": "DMA_INTEN",
+        "name": "DMA_INTEN"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 32,
+        "description": "Ethernet DMA missed frame and buffer overflow counter register",
+        "fieldset": "DMA_MFBOCNT",
+        "name": "DMA_MFBOCNT"
+      },
+      {
+        "byte_offset": 36,
+        "description": "Ethernet DMA receive state watchdog counter register",
+        "fieldset": "DMA_RSWDC",
+        "name": "DMA_RSWDC"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 72,
+        "description": "DMA current transmit descriptor address register",
+        "fieldset": "DMA_CTDADDR",
+        "name": "DMA_CTDADDR"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 76,
+        "description": "Ethernet DMA current receive descriptor address register",
+        "fieldset": "DMA_CRDADDR",
+        "name": "DMA_CRDADDR"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 80,
+        "description": "Ethernet DMA current transmit buffer address register",
+        "fieldset": "DMA_CTBADDR",
+        "name": "DMA_CTBADDR"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 84,
+        "description": "Ethernet DMA current receive buffer address register",
+        "fieldset": "DMA_CRBADDR",
+        "name": "DMA_CRBADDR"
+      }
+    ]
+  },
+  "fieldset/DMA_BCTL": {
+    "description": "Ethernet DMA bus control register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Software reset",
+        "name": "SWR"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "DMA Arbitration",
+        "name": "DAB"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 5,
+        "description": "Descriptor skip length",
+        "name": "DPSL"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Descriptor format mode",
+        "name": "DFM"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 6,
+        "description": "Programmable burst length",
+        "name": "PGBL"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 2,
+        "description": "RxDMA and TxDMA transfer priority ratio",
+        "name": "RTPR"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "description": "Fixed burst",
+        "name": "FB"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 6,
+        "description": "Rx DMA PGBL",
+        "name": "RXDP"
+      },
+      {
+        "bit_offset": 23,
+        "bit_size": 1,
+        "description": "Use independent PGBL",
+        "name": "UIP"
+      },
+      {
+        "bit_offset": 24,
+        "bit_size": 1,
+        "description": "Four times PGBL mode",
+        "name": "FPBL"
+      },
+      {
+        "bit_offset": 25,
+        "bit_size": 1,
+        "description": "Address-aligned",
+        "name": "AA"
+      },
+      {
+        "bit_offset": 26,
+        "bit_size": 1,
+        "description": "Mixed burst",
+        "name": "MB"
+      }
+    ]
+  },
+  "fieldset/DMA_CRBADDR": {
+    "description": "Ethernet DMA current receive buffer address register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "receive buffer address pointer",
+        "name": "RBAP"
+      }
+    ]
+  },
+  "fieldset/DMA_CRDADDR": {
+    "description": "Ethernet DMA current receive descriptor address register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "Receive descriptor address pointer",
+        "name": "RDAP"
+      }
+    ]
+  },
+  "fieldset/DMA_CTBADDR": {
+    "description": "Ethernet DMA current transmit buffer address register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "Transmit buffer address pointer",
+        "name": "TBAP"
+      }
+    ]
+  },
+  "fieldset/DMA_CTDADDR": {
+    "description": "DMA current transmit descriptor address register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "transmit descriptor address pointer",
+        "name": "TDAP"
+      }
+    ]
+  },
+  "fieldset/DMA_CTL": {
+    "description": "Ethernet DMA control register",
+    "fields": [
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Start/stop receive enable",
+        "name": "SRE"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Operate on second frame",
+        "name": "OSF"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 2,
+        "description": "Receive threshold control",
+        "name": "RTHC"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "Forward undersized good frames",
+        "name": "FUF"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Forward error frames",
+        "name": "FERF"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "description": "Start/stop transmission enable",
+        "name": "STE"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 3,
+        "description": "Transmit threshold control",
+        "name": "TTHC"
+      },
+      {
+        "bit_offset": 20,
+        "bit_size": 1,
+        "description": "Flush transmit FIFO",
+        "name": "FTF"
+      },
+      {
+        "bit_offset": 21,
+        "bit_size": 1,
+        "description": "Transmit Store-and-Forward",
+        "name": "TSFD"
+      },
+      {
+        "bit_offset": 24,
+        "bit_size": 1,
+        "description": "Disable flushing of received frames",
+        "name": "DAFRF"
+      },
+      {
+        "bit_offset": 25,
+        "bit_size": 1,
+        "description": "Receive Store-and-Forward",
+        "name": "RSFD"
+      },
+      {
+        "bit_offset": 26,
+        "bit_size": 1,
+        "description": "Dropping of TCP/IP checksum error frames disable",
+        "name": "DTCERFD"
+      }
+    ]
+  },
+  "fieldset/DMA_INTEN": {
+    "description": "Ethernet DMA interrupt enable register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Transmit interrupt enable",
+        "name": "TIE"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Transmit process stopped interrupt enable",
+        "name": "TPSIE"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Transmit buffer unavailable interrupt enable",
+        "name": "TBUIE"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Transmit jabber timeout interrupt enable",
+        "name": "TJTIE"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "Receive overflow interrupt enable",
+        "name": "ROIE"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "Transmit underflow interrupt enable",
+        "name": "TUIE"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "Receive interrupt enable",
+        "name": "RIE"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Receive buffer unavailable interrupt enable",
+        "name": "RBUIE"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "Receive process stopped interrupt enable",
+        "name": "RPSIE"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "receive watchdog timeout interrupt enable",
+        "name": "RWTIE"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "Early transmit interrupt enable",
+        "name": "ETIE"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "description": "Fatal bus error interrupt enable",
+        "name": "FBEIE"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "description": "Early receive interrupt enable",
+        "name": "ERIE"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "Abnormal interrupt summary enable",
+        "name": "AIE"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "description": "Normal interrupt summary enable",
+        "name": "NIE"
+      }
+    ]
+  },
+  "fieldset/DMA_MFBOCNT": {
+    "description": "Ethernet DMA missed frame and buffer overflow counter register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Missed frames by the controller",
+        "name": "MSFC"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 11,
+        "description": "Missed frames by the application",
+        "name": "MSFA"
+      }
+    ]
+  },
+  "fieldset/DMA_RDTADDR": {
+    "description": "Ethernet DMA receive descriptor table address register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "Start address of receive table",
+        "name": "SRT"
+      }
+    ]
+  },
+  "fieldset/DMA_RPEN": {
+    "description": "Ethernet DMA receive poll enable register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "Receive poll enable",
+        "name": "RPE"
+      }
+    ]
+  },
+  "fieldset/DMA_RSWDC": {
+    "description": "Ethernet DMA receive state watchdog counter register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "Watchdog counter for receive status (RS)",
+        "name": "WDCFRS"
+      }
+    ]
+  },
+  "fieldset/DMA_STAT": {
+    "description": "Ethernet DMA status register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Transmit status",
+        "name": "TS"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Transmit process stopped status",
+        "name": "TPS"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Transmit buffer unavailable status",
+        "name": "TBU"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Transmit jabber timeout status",
+        "name": "TJT"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "Receive overflow status",
+        "name": "RO"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "Transmit underflow status",
+        "name": "TU"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "Receive status",
+        "name": "RS"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Receive buffer unavailable status",
+        "name": "RBU"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "Receive process stopped status",
+        "name": "RPS"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "Receive watchdog timeout status",
+        "name": "RWT"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "Early transmit status",
+        "name": "ET"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "description": "Fatal bus error status",
+        "name": "FBE"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "description": "Early receive status",
+        "name": "ER"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "Abnormal interrupt summary",
+        "name": "AI"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "description": "Normal interrupt summary",
+        "name": "NI"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 3,
+        "description": "Receive process state",
+        "name": "RP"
+      },
+      {
+        "bit_offset": 20,
+        "bit_size": 3,
+        "description": "Transmit process state",
+        "name": "TP"
+      },
+      {
+        "bit_offset": 23,
+        "bit_size": 3,
+        "description": "Error bits status",
+        "name": "EB"
+      },
+      {
+        "bit_offset": 27,
+        "bit_size": 1,
+        "description": "MSC status",
+        "name": "MSC"
+      },
+      {
+        "bit_offset": 28,
+        "bit_size": 1,
+        "description": "WUM status",
+        "name": "WUM"
+      },
+      {
+        "bit_offset": 29,
+        "bit_size": 1,
+        "description": "Time stamp trigger status",
+        "name": "TST"
+      }
+    ]
+  },
+  "fieldset/DMA_TDTADDR": {
+    "description": "Ethernet DMA transmit descriptor table address register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "Start address of transmit table",
+        "name": "STT"
+      }
+    ]
+  },
+  "fieldset/DMA_TPEN": {
+    "description": "Ethernet DMA transmit poll enable register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "Transmit poll enable",
+        "name": "TPE"
+      }
+    ]
+  },
+  "block/ENET_MAC_FCTH": {
+    "description": "MAC flow control threshold register",
+    "items": [
+      {
+        "byte_offset": 0,
+        "description": "Ethernet MAC flow control threshold register",
+        "fieldset": "MAC_FCTH",
+        "name": "MAC_FCTH"
+      }
+    ]
+  },
+  "fieldset/MAC_FCTH": {
+    "description": "Ethernet MAC flow control threshold register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 3,
+        "description": "Threshold of active flow control",
+        "name": "RFA"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 3,
+        "description": "Threshold of deactive flow control",
+        "name": "RFD"
+      }
+    ]
+  },
+  "block/ENET": {
+    "description": "GD32F30x ENET，保留完整原生寄存器",
+    "items": [
+      {
+        "byte_offset": 0,
+        "description": "Ethernet MAC configuration register (MAC_CFG)",
+        "fieldset": "MAC_CFG",
+        "name": "MAC_CFG"
+      },
+      {
+        "byte_offset": 4,
+        "description": "Ethernet MAC frame filter register (MAC_FRMF)",
+        "fieldset": "MAC_FRMF",
+        "name": "MAC_FRMF"
+      },
+      {
+        "byte_offset": 8,
+        "description": "Ethernet MAC hash list high register",
+        "fieldset": "MAC_HLH",
+        "name": "MAC_HLH"
+      },
+      {
+        "byte_offset": 12,
+        "description": "Ethernet MAC hash list low register",
+        "fieldset": "MAC_HLL",
+        "name": "MAC_HLL"
+      },
+      {
+        "byte_offset": 16,
+        "description": "Ethernet MAC PHY control register (MAC_PHY_CTL)",
+        "fieldset": "MAC_PHY_CTL",
+        "name": "MAC_PHY_CTL"
+      },
+      {
+        "byte_offset": 20,
+        "description": "Ethernet MAC MII data register (MAC_PHY_DATA)",
+        "fieldset": "MAC_PHY_DATA",
+        "name": "MAC_PHY_DATA"
+      },
+      {
+        "byte_offset": 24,
+        "description": "Ethernet MAC flow control register (MAC_FCTL)",
+        "fieldset": "MAC_FCTL",
+        "name": "MAC_FCTL"
+      },
+      {
+        "byte_offset": 28,
+        "description": "Ethernet MAC VLAN tag register (MAC_VLT)",
+        "fieldset": "MAC_VLT",
+        "name": "MAC_VLT"
+      },
+      {
+        "byte_offset": 40,
+        "description": "Ethernet MAC remote wakeup frame filter register (MAC_RWFF)",
+        "name": "MAC_RWFF"
+      },
+      {
+        "byte_offset": 44,
+        "description": "Ethernet MAC wakeup management register (MAC_WUM)",
+        "fieldset": "MAC_WUM",
+        "name": "MAC_WUM"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 52,
+        "description": "Ethernet MAC debug register (MAC_DBG)",
+        "fieldset": "MAC_DBG",
+        "name": "MAC_DBG"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 56,
+        "description": "Ethernet MAC interrupt flag register (MAC_INTF)",
+        "fieldset": "MAC_INTF",
+        "name": "MAC_INTF"
+      },
+      {
+        "byte_offset": 60,
+        "description": "Ethernet MAC interrupt mask register (MAC_INTMSK)",
+        "fieldset": "MAC_INTMSK",
+        "name": "MAC_INTMSK"
+      },
+      {
+        "byte_offset": 64,
+        "description": "Ethernet MAC address 0 high register (MAC_ADDR0H)",
+        "fieldset": "MAC_ADDR0H",
+        "name": "MAC_ADDR0H"
+      },
+      {
+        "byte_offset": 68,
+        "description": "Ethernet MAC address 0 low register",
+        "fieldset": "MAC_ADDR0L",
+        "name": "MAC_ADDR0L"
+      },
+      {
+        "byte_offset": 72,
+        "description": "Ethernet MAC address 1 high register (MAC_ADDR1H)",
+        "fieldset": "MAC_ADDR1H",
+        "name": "MAC_ADDR1H"
+      },
+      {
+        "byte_offset": 76,
+        "description": "Ethernet MAC address1 low register",
+        "fieldset": "MAC_ADDR1L",
+        "name": "MAC_ADDR1L"
+      },
+      {
+        "byte_offset": 80,
+        "description": "Ethernet MAC address 2 high register (MAC_ADDR2H)",
+        "fieldset": "MAC_ADDR2H",
+        "name": "MAC_ADDR2H"
+      },
+      {
+        "byte_offset": 84,
+        "description": "Ethernet MAC address 2 low register",
+        "fieldset": "MAC_ADDR2L",
+        "name": "MAC_ADDR2L"
+      },
+      {
+        "byte_offset": 88,
+        "description": "Ethernet MAC address 3 high register (MAC_ADDR3H)",
+        "fieldset": "MAC_ADDR3H",
+        "name": "MAC_ADDR3H"
+      },
+      {
+        "byte_offset": 92,
+        "description": "Ethernet MAC address 3 low register",
+        "fieldset": "MAC_ADDR3L",
+        "name": "MAC_ADDR3L"
+      },
+      {
+        "byte_offset": 256,
+        "description": "Ethernet MSC control register (MSC_CTL)",
+        "fieldset": "MSC_CTL",
+        "name": "MSC_CTL"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 260,
+        "description": "Ethernet MSC receive interrupt flag register (MSC_RINTF)",
+        "fieldset": "MSC_RINTF",
+        "name": "MSC_RINTF"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 264,
+        "description": "Ethernet MSC transmit interrupt flag register (MSC_TINTF)",
+        "fieldset": "MSC_TINTF",
+        "name": "MSC_TINTF"
+      },
+      {
+        "byte_offset": 268,
+        "description": "Ethernet MSC receive interrupt mask register (MSC_RINTMSK)",
+        "fieldset": "MSC_RINTMSK",
+        "name": "MSC_RINTMSK"
+      },
+      {
+        "byte_offset": 272,
+        "description": "Ethernet MSC transmit interrupt mask register (MSC_TINTMSK)",
+        "fieldset": "MSC_TINTMSK",
+        "name": "MSC_TINTMSK"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 332,
+        "description": "Ethernet MSC transmitted good frames after a single collision counter",
+        "fieldset": "MSC_SCCNT",
+        "name": "MSC_SCCNT"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 336,
+        "description": "Ethernet MSC transmitted good frames after more than a single collision",
+        "fieldset": "MSC_MSCCNT",
+        "name": "MSC_MSCCNT"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 360,
+        "description": "Ethernet MSC transmitted good frames counter register",
+        "fieldset": "MSC_TGFCNT",
+        "name": "MSC_TGFCNT"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 404,
+        "description": "Ethernet MSC received frames with CRC error counter register",
+        "fieldset": "MSC_RFCECNT",
+        "name": "MSC_RFCECNT"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 408,
+        "description": "Ethernet MSC received frames with alignment error counter register",
+        "fieldset": "MSC_RFAECNT",
+        "name": "MSC_RFAECNT"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 452,
+        "description": "MSC received good unicast frames counter register",
+        "fieldset": "MSC_RGUFCNT",
+        "name": "MSC_RGUFCNT"
+      },
+      {
+        "byte_offset": 1792,
+        "description": "Ethernet PTP time stamp control register (PTP_TSCTL)",
+        "fieldset": "PTP_TSCTL",
+        "name": "PTP_TSCTL"
+      },
+      {
+        "byte_offset": 1796,
+        "description": "Ethernet PTP subsecond increment register",
+        "fieldset": "PTP_SSINC",
+        "name": "PTP_SSINC"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 1800,
+        "description": "Ethernet PTP time stamp high register",
+        "fieldset": "PTP_TSH",
+        "name": "PTP_TSH"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 1804,
+        "description": "Ethernet PTP time stamp low register (PTP_TSL)",
+        "fieldset": "PTP_TSL",
+        "name": "PTP_TSL"
+      },
+      {
+        "byte_offset": 1808,
+        "description": "Ethernet PTP time stamp high update register",
+        "fieldset": "PTP_TSUH",
+        "name": "PTP_TSUH"
+      },
+      {
+        "byte_offset": 1812,
+        "description": "Ethernet PTP time stamp low update register (PTP_TSUL)",
+        "fieldset": "PTP_TSUL",
+        "name": "PTP_TSUL"
+      },
+      {
+        "byte_offset": 1816,
+        "description": "Ethernet PTP time stamp addend register",
+        "fieldset": "PTP_TSADDEND",
+        "name": "PTP_TSADDEND"
+      },
+      {
+        "byte_offset": 1820,
+        "description": "Ethernet PTP expected time high register",
+        "fieldset": "PTP_ETH",
+        "name": "PTP_ETH"
+      },
+      {
+        "byte_offset": 1824,
+        "description": "Ethernet PTP expected time low register",
+        "fieldset": "PTP_ETL",
+        "name": "PTP_ETL"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 1832,
+        "description": "Ethernet PTP time stamp flag register",
+        "fieldset": "PTP_TSF",
+        "name": "PTP_TSF"
+      },
+      {
+        "byte_offset": 1836,
+        "description": "Ethernet PTP PPS control register",
+        "fieldset": "PTP_PPSCTL",
+        "name": "PTP_PPSCTL"
+      },
+      {
+        "byte_offset": 4096,
+        "description": "Ethernet DMA bus control register",
+        "fieldset": "DMA_BCTL",
+        "name": "DMA_BCTL"
+      },
+      {
+        "byte_offset": 4100,
+        "description": "Ethernet DMA transmit poll enable register",
+        "fieldset": "DMA_TPEN",
+        "name": "DMA_TPEN"
+      },
+      {
+        "byte_offset": 4104,
+        "description": "Ethernet DMA receive poll enable register",
+        "fieldset": "DMA_RPEN",
+        "name": "DMA_RPEN"
+      },
+      {
+        "byte_offset": 4108,
+        "description": "Ethernet DMA receive descriptor table address register",
+        "fieldset": "DMA_RDTADDR",
+        "name": "DMA_RDTADDR"
+      },
+      {
+        "byte_offset": 4112,
+        "description": "Ethernet DMA transmit descriptor table address register",
+        "fieldset": "DMA_TDTADDR",
+        "name": "DMA_TDTADDR"
+      },
+      {
+        "byte_offset": 4116,
+        "description": "Ethernet DMA status register",
+        "fieldset": "DMA_STAT",
+        "name": "DMA_STAT"
+      },
+      {
+        "byte_offset": 4120,
+        "description": "Ethernet DMA control register",
+        "fieldset": "DMA_CTL",
+        "name": "DMA_CTL"
+      },
+      {
+        "byte_offset": 4124,
+        "description": "Ethernet DMA interrupt enable register",
+        "fieldset": "DMA_INTEN",
+        "name": "DMA_INTEN"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 4128,
+        "description": "Ethernet DMA missed frame and buffer overflow counter register",
+        "fieldset": "DMA_MFBOCNT",
+        "name": "DMA_MFBOCNT"
+      },
+      {
+        "byte_offset": 4132,
+        "description": "Ethernet DMA receive state watchdog counter register",
+        "fieldset": "DMA_RSWDC",
+        "name": "DMA_RSWDC"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 4168,
+        "description": "DMA current transmit descriptor address register",
+        "fieldset": "DMA_CTDADDR",
+        "name": "DMA_CTDADDR"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 4172,
+        "description": "Ethernet DMA current receive descriptor address register",
+        "fieldset": "DMA_CRDADDR",
+        "name": "DMA_CRDADDR"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 4176,
+        "description": "Ethernet DMA current transmit buffer address register",
+        "fieldset": "DMA_CTBADDR",
+        "name": "DMA_CTBADDR"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 4180,
+        "description": "Ethernet DMA current receive buffer address register",
+        "fieldset": "DMA_CRBADDR",
+        "name": "DMA_CRBADDR"
+      },
+      {
+        "byte_offset": 4224,
+        "description": "Ethernet MAC flow control threshold register",
+        "fieldset": "MAC_FCTH",
+        "name": "MAC_FCTH"
+      }
+    ]
+  }
+}

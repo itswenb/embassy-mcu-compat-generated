@@ -1,0 +1,870 @@
+{
+  "block/USBD": {
+    "description": "Universal serial bus full-speed device interface",
+    "items": [
+      {
+        "byte_offset": 0,
+        "description": "endpoint 0 register",
+        "fieldset": "EP0CS",
+        "name": "EP0CS"
+      },
+      {
+        "byte_offset": 4,
+        "description": "endpoint 1 register",
+        "fieldset": "EP1CS",
+        "name": "EP1CS"
+      },
+      {
+        "byte_offset": 8,
+        "description": "endpoint 2 register",
+        "fieldset": "EP2CS",
+        "name": "EP2CS"
+      },
+      {
+        "byte_offset": 12,
+        "description": "endpoint 3 register",
+        "fieldset": "EP3CS",
+        "name": "EP3CS"
+      },
+      {
+        "byte_offset": 16,
+        "description": "endpoint 4 register",
+        "fieldset": "EP4CS",
+        "name": "EP4CS"
+      },
+      {
+        "byte_offset": 20,
+        "description": "endpoint 5 register",
+        "fieldset": "EP5CS",
+        "name": "EP5CS"
+      },
+      {
+        "byte_offset": 24,
+        "description": "endpoint 6 register",
+        "fieldset": "EP6CS",
+        "name": "EP6CS"
+      },
+      {
+        "byte_offset": 28,
+        "description": "endpoint 7 register",
+        "fieldset": "EP7CS",
+        "name": "EP7CS"
+      },
+      {
+        "byte_offset": 64,
+        "description": "control register",
+        "fieldset": "CTL",
+        "name": "CTL"
+      },
+      {
+        "byte_offset": 68,
+        "description": "interrupt flag register",
+        "fieldset": "INTF",
+        "name": "INTF"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 72,
+        "description": "Status register",
+        "fieldset": "STAT",
+        "name": "STAT"
+      },
+      {
+        "byte_offset": 76,
+        "description": "device address register",
+        "fieldset": "ADDR",
+        "name": "ADDR"
+      },
+      {
+        "byte_offset": 80,
+        "description": "Buffer address register",
+        "fieldset": "BADDR",
+        "name": "BADDR"
+      },
+      {
+        "byte_offset": 84,
+        "description": "USB LPM control and status register",
+        "fieldset": "LPMCS",
+        "name": "LPMCS"
+      }
+    ]
+  },
+  "fieldset/ADDR": {
+    "description": "device address register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 7,
+        "description": "Device address",
+        "name": "USBDAR"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "USB device enable",
+        "name": "USBEN"
+      }
+    ]
+  },
+  "fieldset/BADDR": {
+    "description": "Buffer address register",
+    "fields": [
+      {
+        "bit_offset": 3,
+        "bit_size": 13,
+        "description": "Buffer address",
+        "name": "BAR"
+      }
+    ]
+  },
+  "fieldset/CTL": {
+    "description": "control register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Set reset",
+        "name": "SETRST"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Close state",
+        "name": "CLOSE"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Low-power mode",
+        "name": "LOWM"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Set suspend",
+        "name": "SETSPS"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "Resume request",
+        "name": "RSREQ"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "LPM L1 resume request",
+        "name": "L1RSREQ"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "LPM L1 state request interrupt enable",
+        "name": "L1REQIE"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "Expected start of frame interrupt enable",
+        "name": "ESOFIE"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "Start of frame interrupt mask",
+        "name": "SOFIE"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "USB reset interrupt mask",
+        "name": "RSTIE"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "description": "Suspend mode interrupt mask",
+        "name": "SPSIE"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "description": "Wakeup interrupt enable",
+        "name": "WKUPIE"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "description": "Error interrupt mask",
+        "name": "ERRIE"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "description": "Packet memory area over / underrun interrupt enable",
+        "name": "PMOUIE"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "Successful transfer interrupt enable",
+        "name": "STIE"
+      }
+    ]
+  },
+  "fieldset/EP0CS": {
+    "description": "endpoint 0 register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 4,
+        "description": "Endpoint address",
+        "name": "EP_AR"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 2,
+        "description": "Status bits, for transmission transfers",
+        "name": "TX_STA"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "Data PID Toggle, for transmission transfers",
+        "name": "TX_DTG"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Correct Transfer for transmission",
+        "name": "TX_ST"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "Endpoint kind",
+        "name": "EP_KCTL"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 2,
+        "description": "Endpoint type",
+        "name": "EP_CTL"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "description": "Setup transaction completed",
+        "name": "SETUP"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 2,
+        "description": "Status bits, for reception transfers",
+        "name": "RX_STA"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "description": "Data Toggle, for reception transfers",
+        "name": "RX_DTG"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "Correct transfer for reception",
+        "name": "RX_ST"
+      }
+    ]
+  },
+  "fieldset/EP1CS": {
+    "description": "endpoint 1 register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 4,
+        "description": "Endpoint address",
+        "name": "EP_AR"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 2,
+        "description": "Status bits, for transmission transfers",
+        "name": "TX_STA"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "Data Toggle, for transmission transfers",
+        "name": "TX_DTG"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Correct Transfer for transmission",
+        "name": "TX_ST"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "Endpoint kind",
+        "name": "EP_KCTL"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 2,
+        "description": "Endpoint type",
+        "name": "EP_CTL"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "description": "Setup transaction completed",
+        "name": "SETUP"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 2,
+        "description": "Status bits, for reception transfers",
+        "name": "RX_STA"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "description": "Data Toggle, for reception transfers",
+        "name": "RX_DTG"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "Correct transfer for reception",
+        "name": "RX_ST"
+      }
+    ]
+  },
+  "fieldset/EP2CS": {
+    "description": "endpoint 2 register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 4,
+        "description": "Endpoint address",
+        "name": "EP_AR"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 2,
+        "description": "Status bits, for transmission transfers",
+        "name": "TX_STA"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "Data Toggle, for transmission transfers",
+        "name": "TX_DTG"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Correct Transfer for transmission",
+        "name": "TX_ST"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "Endpoint kind",
+        "name": "EP_KCTL"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 2,
+        "description": "Endpoint type",
+        "name": "EP_CTL"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "description": "Setup transaction completed",
+        "name": "SETUP"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 2,
+        "description": "Status bits, for reception transfers",
+        "name": "RX_STA"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "description": "Data Toggle, for reception transfers",
+        "name": "RX_DTG"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "Correct transfer for reception",
+        "name": "RX_ST"
+      }
+    ]
+  },
+  "fieldset/EP3CS": {
+    "description": "endpoint 3 register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 4,
+        "description": "Endpoint address",
+        "name": "EP_AR"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 2,
+        "description": "Status bits, for transmission transfers",
+        "name": "TX_STA"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "Data Toggle, for transmission transfers",
+        "name": "TX_DTG"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Correct Transfer for transmission",
+        "name": "TX_ST"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "Endpoint kind",
+        "name": "EP_KCTL"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 2,
+        "description": "Endpoint type",
+        "name": "EP_CTL"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "description": "Setup transaction completed",
+        "name": "SETUP"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 2,
+        "description": "Status bits, for reception transfers",
+        "name": "RX_STA"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "description": "Data Toggle, for reception transfers",
+        "name": "RX_DTG"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "Correct transfer for reception",
+        "name": "RX_ST"
+      }
+    ]
+  },
+  "fieldset/EP4CS": {
+    "description": "endpoint 4 register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 4,
+        "description": "Endpoint address",
+        "name": "EP_AR"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 2,
+        "description": "Status bits, for transmission transfers",
+        "name": "TX_STA"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "Data Toggle, for transmission transfers",
+        "name": "TX_DTG"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Correct Transfer for transmission",
+        "name": "TX_ST"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "Endpoint kind",
+        "name": "EP_KCTL"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 2,
+        "description": "Endpoint type",
+        "name": "EP_CTL"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "description": "Setup transaction completed",
+        "name": "SETUP"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 2,
+        "description": "Status bits, for reception transfers",
+        "name": "RX_STA"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "description": "Data Toggle, for reception transfers",
+        "name": "RX_DTG"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "Correct transfer for reception",
+        "name": "RX_ST"
+      }
+    ]
+  },
+  "fieldset/EP5CS": {
+    "description": "endpoint 5 register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 4,
+        "description": "Endpoint address",
+        "name": "EP_AR"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 2,
+        "description": "Status bits, for transmission transfers",
+        "name": "TX_STA"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "Data Toggle, for transmission transfers",
+        "name": "TX_DTG"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Correct Transfer for transmission",
+        "name": "TX_ST"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "Endpoint kind",
+        "name": "EP_KCTL"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 2,
+        "description": "Endpoint type",
+        "name": "EP_CTL"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "description": "Setup transaction completed",
+        "name": "SETUP"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 2,
+        "description": "Status bits, for reception transfers",
+        "name": "RX_STA"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "description": "Data Toggle, for reception transfers",
+        "name": "RX_DTG"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "Correct transfer for reception",
+        "name": "RX_ST"
+      }
+    ]
+  },
+  "fieldset/EP6CS": {
+    "description": "endpoint 6 register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 4,
+        "description": "Endpoint address",
+        "name": "EP_AR"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 2,
+        "description": "Status bits, for transmission transfers",
+        "name": "TX_STA"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "Data Toggle, for transmission transfers",
+        "name": "TX_DTG"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Correct Transfer for transmission",
+        "name": "TX_ST"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "Endpoint kind",
+        "name": "EP_KCTL"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 2,
+        "description": "Endpoint type",
+        "name": "EP_CTL"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "description": "Setup transaction completed",
+        "name": "SETUP"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 2,
+        "description": "Status bits, for reception transfers",
+        "name": "RX_STA"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "description": "Data Toggle, for reception transfers",
+        "name": "RX_DTG"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "Correct transfer for reception",
+        "name": "RX_ST"
+      }
+    ]
+  },
+  "fieldset/EP7CS": {
+    "description": "endpoint 7 register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 4,
+        "description": "Endpoint address",
+        "name": "EP_AR"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 2,
+        "description": "Status bits, for transmission transfers",
+        "name": "TX_STA"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "Data Toggle, for transmission transfers",
+        "name": "TX_DTG"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Correct Transfer for transmission",
+        "name": "TX_ST"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "Endpoint kind",
+        "name": "EP_KCTL"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 2,
+        "description": "Endpoint type",
+        "name": "EP_CTL"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "description": "Setup transaction completed",
+        "name": "SETUP"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 2,
+        "description": "Status bits, for reception transfers",
+        "name": "RX_STA"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "description": "Data Toggle, for reception transfers",
+        "name": "RX_DTG"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "Correct transfer for reception",
+        "name": "RX_ST"
+      }
+    ]
+  },
+  "fieldset/INTF": {
+    "description": "interrupt flag register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 4,
+        "description": "Endpoint Identifier",
+        "name": "EPNUM"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "Direction of transaction",
+        "name": "DIR"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "LPM L1 transaction is successful",
+        "name": "L1REQ"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "Expected start of frame interrupt flag",
+        "name": "ESOFIF"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "start of frame interrupt flag",
+        "name": "SOFIF"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "reset interrupt flag",
+        "name": "RSTIF"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "description": "Suspend mode interrupt flag",
+        "name": "SPSIF"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "description": "Wakeup interrupt flag",
+        "name": "WKUPIF"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "description": "Error interrupt flag",
+        "name": "ERRIF"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "description": "Packet memory area over / underrun interrupt flag",
+        "name": "PMOUIF"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "Successful transfer interrupt flag",
+        "name": "STIF"
+      }
+    ]
+  },
+  "fieldset/LPMCS": {
+    "description": "USB LPM control and status register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "LPM support enable",
+        "name": "LPMEN"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "LPM token acknowledge enable",
+        "name": "LPMACK"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "bRemoteWake value",
+        "name": "REMWK"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 4,
+        "description": "bLinkState value",
+        "name": "BLSTAT"
+      }
+    ]
+  },
+  "fieldset/STAT": {
+    "description": "Status register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 11,
+        "description": "Frame number counter",
+        "name": "FCNT"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 2,
+        "description": "Lost SOF number",
+        "name": "SOFLN"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "description": "Locked the USB",
+        "name": "LOCK"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "description": "Receive data - line status",
+        "name": "RX_DM"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "Receive data + line status",
+        "name": "RX_DP"
+      }
+    ]
+  }
+}

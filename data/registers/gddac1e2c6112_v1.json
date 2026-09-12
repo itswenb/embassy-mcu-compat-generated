@@ -1,0 +1,333 @@
+{
+  "block/DAC": {
+    "description": "Digital-to-analog converter",
+    "items": [
+      {
+        "byte_offset": 0,
+        "description": "control register",
+        "fieldset": "CTL",
+        "name": "CTL"
+      },
+      {
+        "access": "Write",
+        "byte_offset": 4,
+        "description": "software trigger register",
+        "fieldset": "SWT",
+        "name": "SWT"
+      },
+      {
+        "byte_offset": 8,
+        "description": "DACx_OUT0 12-bit right-aligned data holding register",
+        "fieldset": "OUT0_R12DH",
+        "name": "OUT0_R12DH"
+      },
+      {
+        "byte_offset": 12,
+        "description": "DACx_OUT0 12-bit left-aligned data holding register",
+        "fieldset": "DOUT0_L12DH",
+        "name": "DOUT0_L12DH"
+      },
+      {
+        "byte_offset": 16,
+        "description": "DACx_OUT0 8-bit right-aligned data holding register",
+        "fieldset": "OUT0_R8DH",
+        "name": "OUT0_R8DH"
+      },
+      {
+        "byte_offset": 20,
+        "description": "DACx_OUT1 12-bit right-aligned data holding register",
+        "fieldset": "OUT1_R12DH",
+        "name": "OUT1_R12DH"
+      },
+      {
+        "byte_offset": 24,
+        "description": "DACx_OUT1 12-bit left-aligned data holding register",
+        "fieldset": "OUT1_L12DH",
+        "name": "OUT1_L12DH"
+      },
+      {
+        "byte_offset": 28,
+        "description": "DACx_OUT1 8-bit right-aligned data holding register (DAC_OUT1_R8DH)",
+        "fieldset": "OUT1_R8DH",
+        "name": "OUT1_R8DH"
+      },
+      {
+        "byte_offset": 32,
+        "description": "DAC concurrent mode 12-bit right-aligned data holding register",
+        "fieldset": "DACC_R12DH",
+        "name": "DACC_R12DH"
+      },
+      {
+        "byte_offset": 36,
+        "description": "DAC concurrent mode 12-bit left aligned data holding register",
+        "fieldset": "DACC_L12DH",
+        "name": "DACC_L12DH"
+      },
+      {
+        "byte_offset": 40,
+        "description": "DAC concurrent mode 8-bit right aligned data holding register",
+        "fieldset": "DACC_R8DH",
+        "name": "DACC_R8DH"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 44,
+        "description": "DAC0 data output register",
+        "fieldset": "DAC0_DO",
+        "name": "DAC0_DO"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 48,
+        "description": "DAC1 data output register",
+        "fieldset": "DAC1_DO",
+        "name": "DAC1_DO"
+      }
+    ]
+  },
+  "fieldset/CTL": {
+    "description": "control register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "DAC0 enable",
+        "name": "DEN0"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "DAC0 output buffer turn off",
+        "name": "DBOFF0"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "DAC0 trigger enable",
+        "name": "DTEN0"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 3,
+        "description": "DAC0 trigger selection",
+        "name": "DTSEL0"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 2,
+        "description": "DAC0 noise wave mode",
+        "name": "DWM0"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 4,
+        "description": "DAC0 noise wave bit width",
+        "name": "DWBW0"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "description": "DAC0 DMA enable",
+        "name": "DDMAEN0"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "description": "DAC1 enable",
+        "name": "DEN1"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 1,
+        "description": "DAC1 output buffer turn off",
+        "name": "DBOFF1"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 1,
+        "description": "DAC1 trigger enable",
+        "name": "DTEN1"
+      },
+      {
+        "bit_offset": 19,
+        "bit_size": 3,
+        "description": "DAC1 trigger selection",
+        "name": "DTSEL1"
+      },
+      {
+        "bit_offset": 22,
+        "bit_size": 2,
+        "description": "DAC1 noise wave mode",
+        "name": "DWM1"
+      },
+      {
+        "bit_offset": 24,
+        "bit_size": 4,
+        "description": "DAC1 noise wave bit width",
+        "name": "DWBW1"
+      },
+      {
+        "bit_offset": 28,
+        "bit_size": 1,
+        "description": "DAC1 DMA enable",
+        "name": "DDMAEN1"
+      }
+    ]
+  },
+  "fieldset/DAC0_DO": {
+    "description": "DAC0 data output register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 12,
+        "description": "DAC0 data output",
+        "name": "DAC0_DO"
+      }
+    ]
+  },
+  "fieldset/DAC1_DO": {
+    "description": "DAC1 data output register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 12,
+        "description": "DAC1 data output",
+        "name": "DAC1_DO"
+      }
+    ]
+  },
+  "fieldset/DACC_L12DH": {
+    "description": "DAC concurrent mode 12-bit left aligned data holding register",
+    "fields": [
+      {
+        "bit_offset": 4,
+        "bit_size": 12,
+        "description": "DAC0 12-bit left-aligned data",
+        "name": "DAC0_DH"
+      },
+      {
+        "bit_offset": 20,
+        "bit_size": 12,
+        "description": "DAC1 12-bit left-aligned data",
+        "name": "DAC1_DH"
+      }
+    ]
+  },
+  "fieldset/DACC_R12DH": {
+    "description": "DAC concurrent mode 12-bit right-aligned data holding register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 12,
+        "description": "DAC0 12-bit right-aligned data",
+        "name": "DAC0_DH"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 12,
+        "description": "DAC1 12-bit right-aligned data",
+        "name": "DAC1_DH"
+      }
+    ]
+  },
+  "fieldset/DACC_R8DH": {
+    "description": "DAC concurrent mode 8-bit right aligned data holding register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "DAC0 8-bit right-aligned data",
+        "name": "DAC0_DH"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 8,
+        "description": "DAC1 8-bit right-aligned data",
+        "name": "DAC1_DH"
+      }
+    ]
+  },
+  "fieldset/DOUT0_L12DH": {
+    "description": "DACx_OUT0 12-bit left-aligned data holding register",
+    "fields": [
+      {
+        "bit_offset": 4,
+        "bit_size": 12,
+        "description": "DACx_OUT0 12-bit left-aligned data",
+        "name": "OUT0_DH"
+      }
+    ]
+  },
+  "fieldset/OUT0_R12DH": {
+    "description": "DACx_OUT0 12-bit right-aligned data holding register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 12,
+        "description": "DACx_OUT0 12-bit right-aligned data",
+        "name": "OUT0_DH"
+      }
+    ]
+  },
+  "fieldset/OUT0_R8DH": {
+    "description": "DACx_OUT0 8-bit right-aligned data holding register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "DACx_OUT0 8-bit right-aligned data",
+        "name": "OUT0_DH"
+      }
+    ]
+  },
+  "fieldset/OUT1_L12DH": {
+    "description": "DACx_OUT1 12-bit left-aligned data holding register",
+    "fields": [
+      {
+        "bit_offset": 4,
+        "bit_size": 12,
+        "description": "DACx_OUT1 12-bit left-aligned data",
+        "name": "OUT1_DH"
+      }
+    ]
+  },
+  "fieldset/OUT1_R12DH": {
+    "description": "DACx_OUT1 12-bit right-aligned data holding register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 12,
+        "description": "DACx_OUT1 12-bit right-aligned data",
+        "name": "OUT1_DH"
+      }
+    ]
+  },
+  "fieldset/OUT1_R8DH": {
+    "description": "DACx_OUT1 8-bit right-aligned data holding register (DAC_OUT1_R8DH)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "DACx_OUT1 8-bit right-aligned data",
+        "name": "DAC1_DH"
+      }
+    ]
+  },
+  "fieldset/SWT": {
+    "description": "software trigger register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "DAC0 software trigger",
+        "name": "SWTR0"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "DAC1 software trigger",
+        "name": "SWTR1"
+      }
+    ]
+  }
+}

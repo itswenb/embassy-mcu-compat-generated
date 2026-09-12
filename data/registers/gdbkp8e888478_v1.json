@@ -1,0 +1,1349 @@
+{
+  "block/GD_MERGED_E93FCD514B35": {
+    "items": [
+      {
+        "bit_size": 16,
+        "byte_offset": 4,
+        "name": "BKP_DATA0"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 4,
+        "name": "BKP_DATA0_9_0"
+      },
+      {
+        "byte_offset": 4,
+        "description": "Backup data register 0",
+        "fieldset": "GD_MERGED_E93FCD514B35_SVD_DATA0",
+        "name": "DATA0"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 8,
+        "name": "BKP_DATA0_9_1"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 8,
+        "name": "BKP_DATA1"
+      },
+      {
+        "byte_offset": 8,
+        "description": "Backup data register 1",
+        "fieldset": "GD_MERGED_E93FCD514B35_SVD_DATA1",
+        "name": "DATA1"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 12,
+        "name": "BKP_DATA0_9_2"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 12,
+        "name": "BKP_DATA2"
+      },
+      {
+        "byte_offset": 12,
+        "description": "Backup data register 2",
+        "fieldset": "GD_MERGED_E93FCD514B35_SVD_DATA2",
+        "name": "DATA2"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 16,
+        "name": "BKP_DATA0_9_3"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 16,
+        "name": "BKP_DATA3"
+      },
+      {
+        "byte_offset": 16,
+        "description": "Backup data register 3",
+        "fieldset": "GD_MERGED_E93FCD514B35_SVD_DATA3",
+        "name": "DATA3"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 20,
+        "name": "BKP_DATA0_9_4"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 20,
+        "name": "BKP_DATA4"
+      },
+      {
+        "byte_offset": 20,
+        "description": "Backup data register 4",
+        "fieldset": "GD_MERGED_E93FCD514B35_SVD_DATA4",
+        "name": "DATA4"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 24,
+        "name": "BKP_DATA0_9_5"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 24,
+        "name": "BKP_DATA5"
+      },
+      {
+        "byte_offset": 24,
+        "description": "Backup data register 5",
+        "fieldset": "GD_MERGED_E93FCD514B35_SVD_DATA5",
+        "name": "DATA5"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 28,
+        "name": "BKP_DATA0_9_6"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 28,
+        "name": "BKP_DATA6"
+      },
+      {
+        "byte_offset": 28,
+        "description": "Backup data register 6",
+        "fieldset": "GD_MERGED_E93FCD514B35_SVD_DATA6",
+        "name": "DATA6"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 32,
+        "name": "BKP_DATA0_9_7"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 32,
+        "name": "BKP_DATA7"
+      },
+      {
+        "byte_offset": 32,
+        "description": "Backup data register 7",
+        "fieldset": "GD_MERGED_E93FCD514B35_SVD_DATA7",
+        "name": "DATA7"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 36,
+        "name": "BKP_DATA0_9_8"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 36,
+        "name": "BKP_DATA8"
+      },
+      {
+        "byte_offset": 36,
+        "description": "Backup data register 8",
+        "fieldset": "GD_MERGED_E93FCD514B35_SVD_DATA8",
+        "name": "DATA8"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 40,
+        "name": "BKP_DATA0_9_9"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 40,
+        "name": "BKP_DATA9"
+      },
+      {
+        "byte_offset": 40,
+        "description": "Backup data register 9",
+        "fieldset": "GD_MERGED_E93FCD514B35_SVD_DATA9",
+        "name": "DATA9"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 44,
+        "fieldset": "GD_MERGED_E93FCD514B35_FW_BKP_OCTL",
+        "name": "BKP_OCTL"
+      },
+      {
+        "byte_offset": 44,
+        "description": "RTC signal output control register",
+        "fieldset": "GD_MERGED_E93FCD514B35_SVD_OCTL",
+        "name": "OCTL"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 48,
+        "fieldset": "GD_MERGED_E93FCD514B35_FW_BKP_TPCTL",
+        "name": "BKP_TPCTL"
+      },
+      {
+        "byte_offset": 48,
+        "description": "Tamper pin control register",
+        "fieldset": "GD_MERGED_E93FCD514B35_SVD_TPCTL",
+        "name": "TPCTL"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 52,
+        "fieldset": "GD_MERGED_E93FCD514B35_FW_BKP_TPCS",
+        "name": "BKP_TPCS"
+      },
+      {
+        "byte_offset": 52,
+        "description": "Tamper control and status register",
+        "fieldset": "GD_MERGED_E93FCD514B35_SVD_TPCS",
+        "name": "TPCS"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 64,
+        "name": "BKP_DATA10"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 64,
+        "name": "BKP_DATA10_41_10"
+      },
+      {
+        "byte_offset": 64,
+        "description": "Backup data register 10",
+        "fieldset": "GD_MERGED_E93FCD514B35_SVD_DATA10",
+        "name": "DATA10"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 68,
+        "name": "BKP_DATA10_41_11"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 68,
+        "name": "BKP_DATA11"
+      },
+      {
+        "byte_offset": 68,
+        "description": "Backup data register 11",
+        "fieldset": "GD_MERGED_E93FCD514B35_SVD_DATA11",
+        "name": "DATA11"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 72,
+        "name": "BKP_DATA10_41_12"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 72,
+        "name": "BKP_DATA12"
+      },
+      {
+        "byte_offset": 72,
+        "description": "Backup data register 12",
+        "fieldset": "GD_MERGED_E93FCD514B35_SVD_DATA12",
+        "name": "DATA12"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 76,
+        "name": "BKP_DATA10_41_13"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 76,
+        "name": "BKP_DATA13"
+      },
+      {
+        "byte_offset": 76,
+        "description": "Backup data register 13",
+        "fieldset": "GD_MERGED_E93FCD514B35_SVD_DATA13",
+        "name": "DATA13"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 80,
+        "name": "BKP_DATA10_41_14"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 80,
+        "name": "BKP_DATA14"
+      },
+      {
+        "byte_offset": 80,
+        "description": "Backup data register 14",
+        "fieldset": "GD_MERGED_E93FCD514B35_SVD_DATA14",
+        "name": "DATA14"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 84,
+        "name": "BKP_DATA10_41_15"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 84,
+        "name": "BKP_DATA15"
+      },
+      {
+        "byte_offset": 84,
+        "description": "Backup data register 15",
+        "fieldset": "GD_MERGED_E93FCD514B35_SVD_DATA15",
+        "name": "DATA15"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 88,
+        "name": "BKP_DATA10_41_16"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 88,
+        "name": "BKP_DATA16"
+      },
+      {
+        "byte_offset": 88,
+        "description": "Backup data register 16",
+        "fieldset": "GD_MERGED_E93FCD514B35_SVD_DATA16",
+        "name": "DATA16"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 92,
+        "name": "BKP_DATA10_41_17"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 92,
+        "name": "BKP_DATA17"
+      },
+      {
+        "byte_offset": 92,
+        "description": "Backup data register 17",
+        "fieldset": "GD_MERGED_E93FCD514B35_SVD_DATA17",
+        "name": "DATA17"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 96,
+        "name": "BKP_DATA10_41_18"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 96,
+        "name": "BKP_DATA18"
+      },
+      {
+        "byte_offset": 96,
+        "description": "Backup data register 18",
+        "fieldset": "GD_MERGED_E93FCD514B35_SVD_DATA18",
+        "name": "DATA18"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 100,
+        "name": "BKP_DATA10_41_19"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 100,
+        "name": "BKP_DATA19"
+      },
+      {
+        "byte_offset": 100,
+        "description": "Backup data register 19",
+        "fieldset": "GD_MERGED_E93FCD514B35_SVD_DATA19",
+        "name": "DATA19"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 104,
+        "name": "BKP_DATA10_41_20"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 104,
+        "name": "BKP_DATA20"
+      },
+      {
+        "byte_offset": 104,
+        "description": "Backup data register 20",
+        "fieldset": "GD_MERGED_E93FCD514B35_SVD_DATA20",
+        "name": "DATA20"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 108,
+        "name": "BKP_DATA10_41_21"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 108,
+        "name": "BKP_DATA21"
+      },
+      {
+        "byte_offset": 108,
+        "description": "Backup data register 21",
+        "fieldset": "GD_MERGED_E93FCD514B35_SVD_DATA21",
+        "name": "DATA21"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 112,
+        "name": "BKP_DATA10_41_22"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 112,
+        "name": "BKP_DATA22"
+      },
+      {
+        "byte_offset": 112,
+        "description": "Backup data register 22",
+        "fieldset": "GD_MERGED_E93FCD514B35_SVD_DATA22",
+        "name": "DATA22"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 116,
+        "name": "BKP_DATA10_41_23"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 116,
+        "name": "BKP_DATA23"
+      },
+      {
+        "byte_offset": 116,
+        "description": "Backup data register 23",
+        "fieldset": "GD_MERGED_E93FCD514B35_SVD_DATA23",
+        "name": "DATA23"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 120,
+        "name": "BKP_DATA10_41_24"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 120,
+        "name": "BKP_DATA24"
+      },
+      {
+        "byte_offset": 120,
+        "description": "Backup data register 24",
+        "fieldset": "GD_MERGED_E93FCD514B35_SVD_DATA24",
+        "name": "DATA24"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 124,
+        "name": "BKP_DATA10_41_25"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 124,
+        "name": "BKP_DATA25"
+      },
+      {
+        "byte_offset": 124,
+        "description": "Backup data register 25",
+        "fieldset": "GD_MERGED_E93FCD514B35_SVD_DATA25",
+        "name": "DATA25"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 128,
+        "name": "BKP_DATA10_41_26"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 128,
+        "name": "BKP_DATA26"
+      },
+      {
+        "byte_offset": 128,
+        "description": "Backup data register 26",
+        "fieldset": "GD_MERGED_E93FCD514B35_SVD_DATA26",
+        "name": "DATA26"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 132,
+        "name": "BKP_DATA10_41_27"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 132,
+        "name": "BKP_DATA27"
+      },
+      {
+        "byte_offset": 132,
+        "description": "Backup data register 27",
+        "fieldset": "GD_MERGED_E93FCD514B35_SVD_DATA27",
+        "name": "DATA27"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 136,
+        "name": "BKP_DATA10_41_28"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 136,
+        "name": "BKP_DATA28"
+      },
+      {
+        "byte_offset": 136,
+        "description": "Backup data register 28",
+        "fieldset": "GD_MERGED_E93FCD514B35_SVD_DATA28",
+        "name": "DATA28"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 140,
+        "name": "BKP_DATA10_41_29"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 140,
+        "name": "BKP_DATA29"
+      },
+      {
+        "byte_offset": 140,
+        "description": "Backup data register 29",
+        "fieldset": "GD_MERGED_E93FCD514B35_SVD_DATA29",
+        "name": "DATA29"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 144,
+        "name": "BKP_DATA10_41_30"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 144,
+        "name": "BKP_DATA30"
+      },
+      {
+        "byte_offset": 144,
+        "description": "Backup data register 30",
+        "fieldset": "GD_MERGED_E93FCD514B35_SVD_DATA30",
+        "name": "DATA30"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 148,
+        "name": "BKP_DATA10_41_31"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 148,
+        "name": "BKP_DATA31"
+      },
+      {
+        "byte_offset": 148,
+        "description": "Backup data register 31",
+        "fieldset": "GD_MERGED_E93FCD514B35_SVD_DATA31",
+        "name": "DATA31"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 152,
+        "name": "BKP_DATA10_41_32"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 152,
+        "name": "BKP_DATA32"
+      },
+      {
+        "byte_offset": 152,
+        "description": "Backup data register 32",
+        "fieldset": "GD_MERGED_E93FCD514B35_SVD_DATA32",
+        "name": "DATA32"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 156,
+        "name": "BKP_DATA10_41_33"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 156,
+        "name": "BKP_DATA33"
+      },
+      {
+        "byte_offset": 156,
+        "description": "Backup data register 33",
+        "fieldset": "GD_MERGED_E93FCD514B35_SVD_DATA33",
+        "name": "DATA33"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 160,
+        "name": "BKP_DATA10_41_34"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 160,
+        "name": "BKP_DATA34"
+      },
+      {
+        "byte_offset": 160,
+        "description": "Backup data register 34",
+        "fieldset": "GD_MERGED_E93FCD514B35_SVD_DATA34",
+        "name": "DATA34"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 164,
+        "name": "BKP_DATA10_41_35"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 164,
+        "name": "BKP_DATA35"
+      },
+      {
+        "byte_offset": 164,
+        "description": "Backup data register 35",
+        "fieldset": "GD_MERGED_E93FCD514B35_SVD_DATA35",
+        "name": "DATA35"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 168,
+        "name": "BKP_DATA10_41_36"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 168,
+        "name": "BKP_DATA36"
+      },
+      {
+        "byte_offset": 168,
+        "description": "Backup data register 36",
+        "fieldset": "GD_MERGED_E93FCD514B35_SVD_DATA36",
+        "name": "DATA36"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 172,
+        "name": "BKP_DATA10_41_37"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 172,
+        "name": "BKP_DATA37"
+      },
+      {
+        "byte_offset": 172,
+        "description": "Backup data register 37",
+        "fieldset": "GD_MERGED_E93FCD514B35_SVD_DATA37",
+        "name": "DATA37"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 176,
+        "name": "BKP_DATA10_41_38"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 176,
+        "name": "BKP_DATA38"
+      },
+      {
+        "byte_offset": 176,
+        "description": "Backup data register 38",
+        "fieldset": "GD_MERGED_E93FCD514B35_SVD_DATA38",
+        "name": "DATA38"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 180,
+        "name": "BKP_DATA10_41_39"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 180,
+        "name": "BKP_DATA39"
+      },
+      {
+        "byte_offset": 180,
+        "description": "Backup data register 39",
+        "fieldset": "GD_MERGED_E93FCD514B35_SVD_DATA39",
+        "name": "DATA39"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 184,
+        "name": "BKP_DATA10_41_40"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 184,
+        "name": "BKP_DATA40"
+      },
+      {
+        "byte_offset": 184,
+        "description": "Backup data register 40",
+        "fieldset": "GD_MERGED_E93FCD514B35_SVD_DATA40",
+        "name": "DATA40"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 188,
+        "name": "BKP_DATA10_41_41"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 188,
+        "name": "BKP_DATA41"
+      },
+      {
+        "byte_offset": 188,
+        "description": "Backup data register 41",
+        "fieldset": "GD_MERGED_E93FCD514B35_SVD_DATA41",
+        "name": "DATA41"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_E93FCD514B35_FW_BKP_OCTL": {
+    "bit_size": 16,
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 7,
+        "name": "BKP_OCTL_RCCV"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "name": "BKP_OCTL_COEN"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "name": "BKP_OCTL_ASOEN"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "name": "BKP_OCTL_ROSEL"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "name": "BKP_OCTL_CCOSEL"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "name": "BKP_OCTL_CALDIR"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_E93FCD514B35_FW_BKP_TPCS": {
+    "bit_size": 16,
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "BKP_TPCS_TER"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "BKP_TPCS_TIR"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "BKP_TPCS_TPIE"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "name": "BKP_TPCS_TEF"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "name": "BKP_TPCS_TIF"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_E93FCD514B35_FW_BKP_TPCTL": {
+    "bit_size": 16,
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "BKP_TPCTL_TPEN"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "BKP_TPCTL_TPAL"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_E93FCD514B35_SVD_DATA0": {
+    "description": "Backup data register 0",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_E93FCD514B35_SVD_DATA1": {
+    "description": "Backup data register 1",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_E93FCD514B35_SVD_DATA10": {
+    "description": "Backup data register 10",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_E93FCD514B35_SVD_DATA11": {
+    "description": "Backup data register 11",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_E93FCD514B35_SVD_DATA12": {
+    "description": "Backup data register 12",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_E93FCD514B35_SVD_DATA13": {
+    "description": "Backup data register 13",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_E93FCD514B35_SVD_DATA14": {
+    "description": "Backup data register 14",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_E93FCD514B35_SVD_DATA15": {
+    "description": "Backup data register 15",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_E93FCD514B35_SVD_DATA16": {
+    "description": "Backup data register 16",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_E93FCD514B35_SVD_DATA17": {
+    "description": "Backup data register 17",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_E93FCD514B35_SVD_DATA18": {
+    "description": "Backup data register 18",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_E93FCD514B35_SVD_DATA19": {
+    "description": "Backup data register 19",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_E93FCD514B35_SVD_DATA2": {
+    "description": "Backup data register 2",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_E93FCD514B35_SVD_DATA20": {
+    "description": "Backup data register 20",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_E93FCD514B35_SVD_DATA21": {
+    "description": "Backup data register 21",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_E93FCD514B35_SVD_DATA22": {
+    "description": "Backup data register 22",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_E93FCD514B35_SVD_DATA23": {
+    "description": "Backup data register 23",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_E93FCD514B35_SVD_DATA24": {
+    "description": "Backup data register 24",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_E93FCD514B35_SVD_DATA25": {
+    "description": "Backup data register 25",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_E93FCD514B35_SVD_DATA26": {
+    "description": "Backup data register 26",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_E93FCD514B35_SVD_DATA27": {
+    "description": "Backup data register 27",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_E93FCD514B35_SVD_DATA28": {
+    "description": "Backup data register 28",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_E93FCD514B35_SVD_DATA29": {
+    "description": "Backup data register 29",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_E93FCD514B35_SVD_DATA3": {
+    "description": "Backup data register 3",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_E93FCD514B35_SVD_DATA30": {
+    "description": "Backup data register 30",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_E93FCD514B35_SVD_DATA31": {
+    "description": "Backup data register 31",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_E93FCD514B35_SVD_DATA32": {
+    "description": "Backup data register 32",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_E93FCD514B35_SVD_DATA33": {
+    "description": "Backup data register 33",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_E93FCD514B35_SVD_DATA34": {
+    "description": "Backup data register 34",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_E93FCD514B35_SVD_DATA35": {
+    "description": "Backup data register 35",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_E93FCD514B35_SVD_DATA36": {
+    "description": "Backup data register 36",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_E93FCD514B35_SVD_DATA37": {
+    "description": "Backup data register 37",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_E93FCD514B35_SVD_DATA38": {
+    "description": "Backup data register 38",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_E93FCD514B35_SVD_DATA39": {
+    "description": "Backup data register 39",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_E93FCD514B35_SVD_DATA4": {
+    "description": "Backup data register 4",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_E93FCD514B35_SVD_DATA40": {
+    "description": "Backup data register 40",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_E93FCD514B35_SVD_DATA41": {
+    "description": "Backup data register 41",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_E93FCD514B35_SVD_DATA5": {
+    "description": "Backup data register 5",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_E93FCD514B35_SVD_DATA6": {
+    "description": "Backup data register 6",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_E93FCD514B35_SVD_DATA7": {
+    "description": "Backup data register 7",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_E93FCD514B35_SVD_DATA8": {
+    "description": "Backup data register 8",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_E93FCD514B35_SVD_DATA9": {
+    "description": "Backup data register 9",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_E93FCD514B35_SVD_OCTL": {
+    "description": "RTC signal output control register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 7,
+        "description": "RTC clock calibration value",
+        "name": "RCCV"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "RTC clock calibration output enable",
+        "name": "COEN"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "RTC alarm or second signal output enable",
+        "name": "ASOEN"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "RTC output selection",
+        "name": "ROSEL"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "description": "RTC clock output selection",
+        "name": "CCOSEL"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "RTC clock calibration direction",
+        "name": "CALDIR"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_E93FCD514B35_SVD_TPCS": {
+    "description": "Tamper control and status register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Tamper event reset",
+        "name": "TER"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Tamper interrupt reset",
+        "name": "TIR"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Tamper interrupt enable",
+        "name": "TPIE"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "Tamper event flag",
+        "name": "TEF"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "Tamper interrupt flag",
+        "name": "TIF"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_E93FCD514B35_SVD_TPCTL": {
+    "description": "Tamper pin control register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "TAMPER detection enable",
+        "name": "TPEN"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "TAMPER pin active level",
+        "name": "TPAL"
+      }
+    ]
+  }
+}

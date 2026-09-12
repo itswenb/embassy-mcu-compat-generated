@@ -1,0 +1,327 @@
+{
+  "block/FMC": {
+    "items": [
+      {
+        "byte_offset": 0,
+        "fieldset": "FMC_WS",
+        "name": "FMC_WS"
+      },
+      {
+        "byte_offset": 4,
+        "fieldset": "FMC_KEY0",
+        "name": "FMC_KEY0"
+      },
+      {
+        "byte_offset": 8,
+        "fieldset": "FMC_OBKEY",
+        "name": "FMC_OBKEY"
+      },
+      {
+        "byte_offset": 12,
+        "fieldset": "FMC_STAT0",
+        "name": "FMC_STAT0"
+      },
+      {
+        "byte_offset": 16,
+        "fieldset": "FMC_CTL0",
+        "name": "FMC_CTL0"
+      },
+      {
+        "byte_offset": 20,
+        "fieldset": "FMC_ADDR0",
+        "name": "FMC_ADDR0"
+      },
+      {
+        "byte_offset": 28,
+        "fieldset": "FMC_OBSTAT",
+        "name": "FMC_OBSTAT"
+      },
+      {
+        "byte_offset": 32,
+        "fieldset": "FMC_WP",
+        "name": "FMC_WP"
+      },
+      {
+        "byte_offset": 68,
+        "fieldset": "FMC_KEY1",
+        "name": "FMC_KEY1"
+      },
+      {
+        "byte_offset": 76,
+        "fieldset": "FMC_STAT1",
+        "name": "FMC_STAT1"
+      },
+      {
+        "byte_offset": 80,
+        "fieldset": "FMC_CTL1",
+        "name": "FMC_CTL1"
+      },
+      {
+        "byte_offset": 84,
+        "fieldset": "FMC_ADDR1",
+        "name": "FMC_ADDR1"
+      },
+      {
+        "byte_offset": 252,
+        "fieldset": "FMC_WSEN",
+        "name": "FMC_WSEN"
+      },
+      {
+        "byte_offset": 256,
+        "fieldset": "FMC_PID",
+        "name": "FMC_PID"
+      }
+    ]
+  },
+  "fieldset/FMC_ADDR0": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "name": "FMC_ADDR0_ADDR"
+      }
+    ]
+  },
+  "fieldset/FMC_ADDR1": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "name": "FMC_ADDR1_ADDR"
+      }
+    ]
+  },
+  "fieldset/FMC_CTL0": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "FMC_CTL0_PG"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "FMC_CTL0_PER"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "FMC_CTL0_MER"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "name": "FMC_CTL0_OBPG"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "name": "FMC_CTL0_OBER"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "name": "FMC_CTL0_START"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "name": "FMC_CTL0_LK"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "name": "FMC_CTL0_OBWEN"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "name": "FMC_CTL0_ERRIE"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "name": "FMC_CTL0_ENDIE"
+      }
+    ]
+  },
+  "fieldset/FMC_CTL1": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "FMC_CTL1_PG"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "FMC_CTL1_PER"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "FMC_CTL1_MER"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "name": "FMC_CTL1_START"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "name": "FMC_CTL1_LK"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "name": "FMC_CTL1_ERRIE"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "name": "FMC_CTL1_ENDIE"
+      }
+    ]
+  },
+  "fieldset/FMC_KEY0": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "name": "FMC_KEY0_KEY"
+      }
+    ]
+  },
+  "fieldset/FMC_KEY1": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "name": "FMC_KEY1_KEY"
+      }
+    ]
+  },
+  "fieldset/FMC_OBKEY": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "name": "FMC_OBKEY_OBKEY"
+      }
+    ]
+  },
+  "fieldset/FMC_OBSTAT": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "FMC_OBSTAT_OBERR"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "FMC_OBSTAT_SPC"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 8,
+        "name": "FMC_OBSTAT_USER"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 16,
+        "name": "FMC_OBSTAT_DATA"
+      }
+    ]
+  },
+  "fieldset/FMC_PID": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "name": "FMC_PID_PID"
+      }
+    ]
+  },
+  "fieldset/FMC_STAT0": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "FMC_STAT0_BUSY"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "FMC_STAT0_PGERR"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "name": "FMC_STAT0_WPERR"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "name": "FMC_STAT0_ENDF"
+      }
+    ]
+  },
+  "fieldset/FMC_STAT1": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "FMC_STAT1_BUSY"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "FMC_STAT1_PGERR"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "name": "FMC_STAT1_WPERR"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "name": "FMC_STAT1_ENDF"
+      }
+    ]
+  },
+  "fieldset/FMC_WP": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "name": "FMC_WP_WP"
+      }
+    ]
+  },
+  "fieldset/FMC_WS": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 3,
+        "name": "FMC_WS_WSCNT"
+      }
+    ]
+  },
+  "fieldset/FMC_WSEN": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "FMC_WSEN_WSEN"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "FMC_WSEN_BPEN"
+      }
+    ]
+  }
+}

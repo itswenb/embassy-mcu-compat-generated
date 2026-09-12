@@ -1,0 +1,58 @@
+{
+  "block/CRC": {
+    "description": "cyclic redundancy check calculation unit",
+    "items": [
+      {
+        "byte_offset": 0,
+        "description": "Data register",
+        "fieldset": "DATA",
+        "name": "DATA"
+      },
+      {
+        "byte_offset": 4,
+        "description": "Free data register",
+        "fieldset": "FDATA",
+        "name": "FDATA"
+      },
+      {
+        "byte_offset": 8,
+        "description": "Control register",
+        "fieldset": "CTL",
+        "name": "CTL"
+      }
+    ]
+  },
+  "fieldset/CTL": {
+    "description": "Control register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "reset bit",
+        "name": "RST"
+      }
+    ]
+  },
+  "fieldset/DATA": {
+    "description": "Data register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "CRC calculation result bits",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/FDATA": {
+    "description": "Free data register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "Free Data Register bits",
+        "name": "FDATA"
+      }
+    ]
+  }
+}

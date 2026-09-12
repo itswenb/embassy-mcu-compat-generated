@@ -1,0 +1,83 @@
+{
+  "block/FWDGT": {
+    "description": "free watchdog timer",
+    "items": [
+      {
+        "access": "Write",
+        "byte_offset": 0,
+        "description": "Control register",
+        "fieldset": "CTL",
+        "name": "CTL"
+      },
+      {
+        "byte_offset": 4,
+        "description": "Prescaler register",
+        "fieldset": "PSC",
+        "name": "PSC"
+      },
+      {
+        "byte_offset": 8,
+        "description": "Reload register",
+        "fieldset": "RLD",
+        "name": "RLD"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 12,
+        "description": "Status register",
+        "fieldset": "STAT",
+        "name": "STAT"
+      }
+    ]
+  },
+  "fieldset/CTL": {
+    "description": "Control register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Key value",
+        "name": "CMD"
+      }
+    ]
+  },
+  "fieldset/PSC": {
+    "description": "Prescaler register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 3,
+        "description": "Free watchdog timer prescaler selection",
+        "name": "PSC"
+      }
+    ]
+  },
+  "fieldset/RLD": {
+    "description": "Reload register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 12,
+        "description": "Free watchdog timer counter reload value",
+        "name": "RLD"
+      }
+    ]
+  },
+  "fieldset/STAT": {
+    "description": "Status register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Free watchdog timer prescaler value update",
+        "name": "PUD"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Free watchdog timer counter reload value update",
+        "name": "RUD"
+      }
+    ]
+  }
+}

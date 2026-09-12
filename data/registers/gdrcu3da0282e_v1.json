@@ -1,0 +1,2075 @@
+{
+  "block/GD_MERGED_41FC62B0A4F9": {
+    "items": [
+      {
+        "byte_offset": 0,
+        "description": "Control register",
+        "fieldset": "GD_MERGED_41FC62B0A4F9_SVD_CTL",
+        "name": "CTL"
+      },
+      {
+        "byte_offset": 0,
+        "fieldset": "GD_MERGED_41FC62B0A4F9_FW_RCU_CTL",
+        "name": "RCU_CTL"
+      },
+      {
+        "byte_offset": 4,
+        "description": "Clock configuration register 0 (RCU_CFG0)",
+        "fieldset": "GD_MERGED_41FC62B0A4F9_SVD_CFG0",
+        "name": "CFG0"
+      },
+      {
+        "byte_offset": 4,
+        "fieldset": "GD_MERGED_41FC62B0A4F9_FW_RCU_CFG0",
+        "name": "RCU_CFG0"
+      },
+      {
+        "byte_offset": 8,
+        "description": "Clock interrupt register (RCU_INT)",
+        "fieldset": "GD_MERGED_41FC62B0A4F9_SVD_INT",
+        "name": "INT"
+      },
+      {
+        "byte_offset": 8,
+        "fieldset": "GD_MERGED_41FC62B0A4F9_FW_RCU_INT",
+        "name": "RCU_INT"
+      },
+      {
+        "byte_offset": 12,
+        "description": "APB2 reset register (RCU_APB2RST)",
+        "fieldset": "GD_MERGED_41FC62B0A4F9_SVD_APB2RST",
+        "name": "APB2RST"
+      },
+      {
+        "byte_offset": 12,
+        "fieldset": "GD_MERGED_41FC62B0A4F9_FW_RCU_APB2RST",
+        "name": "RCU_APB2RST"
+      },
+      {
+        "byte_offset": 16,
+        "description": "APB1 reset register (RCU_APB1RST)",
+        "fieldset": "GD_MERGED_41FC62B0A4F9_SVD_APB1RST",
+        "name": "APB1RST"
+      },
+      {
+        "byte_offset": 16,
+        "fieldset": "GD_MERGED_41FC62B0A4F9_FW_RCU_APB1RST",
+        "name": "RCU_APB1RST"
+      },
+      {
+        "byte_offset": 20,
+        "description": "AHB enable register",
+        "fieldset": "GD_MERGED_41FC62B0A4F9_SVD_AHBEN",
+        "name": "AHBEN"
+      },
+      {
+        "byte_offset": 20,
+        "fieldset": "GD_MERGED_41FC62B0A4F9_FW_RCU_AHBEN",
+        "name": "RCU_AHBEN"
+      },
+      {
+        "byte_offset": 24,
+        "description": "APB2 clock enable register (RCU_APB2EN)",
+        "fieldset": "GD_MERGED_41FC62B0A4F9_SVD_APB2EN",
+        "name": "APB2EN"
+      },
+      {
+        "byte_offset": 24,
+        "fieldset": "GD_MERGED_41FC62B0A4F9_FW_RCU_APB2EN",
+        "name": "RCU_APB2EN"
+      },
+      {
+        "byte_offset": 28,
+        "description": "APB1 clock enable register (RCU_APB1EN)",
+        "fieldset": "GD_MERGED_41FC62B0A4F9_SVD_APB1EN",
+        "name": "APB1EN"
+      },
+      {
+        "byte_offset": 28,
+        "fieldset": "GD_MERGED_41FC62B0A4F9_FW_RCU_APB1EN",
+        "name": "RCU_APB1EN"
+      },
+      {
+        "byte_offset": 32,
+        "description": "Backup domain control register (RCU_BDCTL)",
+        "fieldset": "GD_MERGED_41FC62B0A4F9_SVD_BDCTL",
+        "name": "BDCTL"
+      },
+      {
+        "byte_offset": 32,
+        "fieldset": "GD_MERGED_41FC62B0A4F9_FW_RCU_BDCTL",
+        "name": "RCU_BDCTL"
+      },
+      {
+        "byte_offset": 36,
+        "fieldset": "GD_MERGED_41FC62B0A4F9_FW_RCU_RSTSCK",
+        "name": "RCU_RSTSCK"
+      },
+      {
+        "byte_offset": 36,
+        "description": "Reset source /clock register (RCU_RSTSCK)",
+        "fieldset": "GD_MERGED_41FC62B0A4F9_SVD_RSTSCK",
+        "name": "RSTSCK"
+      },
+      {
+        "byte_offset": 44,
+        "description": "Clock Configuration register 1",
+        "fieldset": "GD_MERGED_41FC62B0A4F9_SVD_CFG1",
+        "name": "CFG1"
+      },
+      {
+        "byte_offset": 44,
+        "fieldset": "GD_MERGED_41FC62B0A4F9_FW_RCU_CFG1",
+        "name": "RCU_CFG1"
+      },
+      {
+        "byte_offset": 52,
+        "description": "Deep sleep mode Voltage register",
+        "fieldset": "GD_MERGED_41FC62B0A4F9_SVD_DSV",
+        "name": "DSV"
+      },
+      {
+        "byte_offset": 52,
+        "fieldset": "GD_MERGED_41FC62B0A4F9_FW_RCU_DSV",
+        "name": "RCU_DSV"
+      },
+      {
+        "byte_offset": 192,
+        "description": "Additional clock control register",
+        "fieldset": "GD_MERGED_41FC62B0A4F9_SVD_ADDCTL",
+        "name": "ADDCTL"
+      },
+      {
+        "byte_offset": 192,
+        "fieldset": "GD_MERGED_41FC62B0A4F9_FW_RCU_ADDCTL",
+        "name": "RCU_ADDCTL"
+      },
+      {
+        "byte_offset": 204,
+        "description": "Additional clock interrupt register",
+        "fieldset": "GD_MERGED_41FC62B0A4F9_SVD_ADDINT",
+        "name": "ADDINT"
+      },
+      {
+        "byte_offset": 204,
+        "fieldset": "GD_MERGED_41FC62B0A4F9_FW_RCU_ADDINT",
+        "name": "RCU_ADDINT"
+      },
+      {
+        "byte_offset": 224,
+        "description": "APB1 additional reset register",
+        "fieldset": "GD_MERGED_41FC62B0A4F9_SVD_ADDAPB1RST",
+        "name": "ADDAPB1RST"
+      },
+      {
+        "byte_offset": 224,
+        "fieldset": "GD_MERGED_41FC62B0A4F9_FW_RCU_ADDAPB1RST",
+        "name": "RCU_ADDAPB1RST"
+      },
+      {
+        "byte_offset": 228,
+        "description": "APB1 additional enable register",
+        "fieldset": "GD_MERGED_41FC62B0A4F9_SVD_ADDAPB1EN",
+        "name": "ADDAPB1EN"
+      },
+      {
+        "byte_offset": 228,
+        "fieldset": "GD_MERGED_41FC62B0A4F9_FW_RCU_ADDAPB1EN",
+        "name": "RCU_ADDAPB1EN"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_41FC62B0A4F9_FW_RCU_ADDAPB1EN": {
+    "fields": [
+      {
+        "bit_offset": 27,
+        "bit_size": 1,
+        "name": "RCU_ADDAPB1EN_CTCEN"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_41FC62B0A4F9_FW_RCU_ADDAPB1RST": {
+    "fields": [
+      {
+        "bit_offset": 27,
+        "bit_size": 1,
+        "name": "RCU_ADDAPB1RST_CTCRST"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_41FC62B0A4F9_FW_RCU_ADDCTL": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "RCU_ADDCTL_CK48MSEL"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "name": "RCU_ADDCTL_IRC48MEN"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 1,
+        "name": "RCU_ADDCTL_IRC48MSTB"
+      },
+      {
+        "bit_offset": 24,
+        "bit_size": 8,
+        "name": "RCU_ADDCTL_IRC48MCAL"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_41FC62B0A4F9_FW_RCU_ADDINT": {
+    "fields": [
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "name": "RCU_ADDINT_IRC48MSTBIF"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "name": "RCU_ADDINT_IRC48MSTBIE"
+      },
+      {
+        "bit_offset": 22,
+        "bit_size": 1,
+        "name": "RCU_ADDINT_IRC48MSTBIC"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_41FC62B0A4F9_FW_RCU_AHBEN": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "RCU_AHBEN_DMA0EN"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "RCU_AHBEN_DMA1EN"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "RCU_AHBEN_SRAMSPEN"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "name": "RCU_AHBEN_FMCSPEN"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "name": "RCU_AHBEN_CRCEN"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "name": "RCU_AHBEN_EXMCEN"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "name": "RCU_AHBEN_SDIOEN"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_41FC62B0A4F9_FW_RCU_APB1EN": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "RCU_APB1EN_TIMER1EN"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "RCU_APB1EN_TIMER2EN"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "RCU_APB1EN_TIMER3EN"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "name": "RCU_APB1EN_TIMER4EN"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "name": "RCU_APB1EN_TIMER5EN"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "name": "RCU_APB1EN_TIMER6EN"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "name": "RCU_APB1EN_TIMER11EN"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "name": "RCU_APB1EN_TIMER12EN"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "name": "RCU_APB1EN_TIMER13EN"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "name": "RCU_APB1EN_WWDGTEN"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "name": "RCU_APB1EN_SPI1EN"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "name": "RCU_APB1EN_SPI2EN"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 1,
+        "name": "RCU_APB1EN_USART1EN"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 1,
+        "name": "RCU_APB1EN_USART2EN"
+      },
+      {
+        "bit_offset": 19,
+        "bit_size": 1,
+        "name": "RCU_APB1EN_UART3EN"
+      },
+      {
+        "bit_offset": 20,
+        "bit_size": 1,
+        "name": "RCU_APB1EN_UART4EN"
+      },
+      {
+        "bit_offset": 21,
+        "bit_size": 1,
+        "name": "RCU_APB1EN_I2C0EN"
+      },
+      {
+        "bit_offset": 22,
+        "bit_size": 1,
+        "name": "RCU_APB1EN_I2C1EN"
+      },
+      {
+        "bit_offset": 23,
+        "bit_size": 1,
+        "name": "RCU_APB1EN_USBDEN"
+      },
+      {
+        "bit_offset": 25,
+        "bit_size": 1,
+        "name": "RCU_APB1EN_CAN0EN"
+      },
+      {
+        "bit_offset": 27,
+        "bit_size": 1,
+        "name": "RCU_APB1EN_BKPIEN"
+      },
+      {
+        "bit_offset": 28,
+        "bit_size": 1,
+        "name": "RCU_APB1EN_PMUEN"
+      },
+      {
+        "bit_offset": 29,
+        "bit_size": 1,
+        "name": "RCU_APB1EN_DACEN"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_41FC62B0A4F9_FW_RCU_APB1RST": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "RCU_APB1RST_TIMER1RST"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "RCU_APB1RST_TIMER2RST"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "RCU_APB1RST_TIMER3RST"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "name": "RCU_APB1RST_TIMER4RST"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "name": "RCU_APB1RST_TIMER5RST"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "name": "RCU_APB1RST_TIMER6RST"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "name": "RCU_APB1RST_TIMER11RST"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "name": "RCU_APB1RST_TIMER12RST"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "name": "RCU_APB1RST_TIMER13RST"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "name": "RCU_APB1RST_WWDGTRST"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "name": "RCU_APB1RST_SPI1RST"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "name": "RCU_APB1RST_SPI2RST"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 1,
+        "name": "RCU_APB1RST_USART1RST"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 1,
+        "name": "RCU_APB1RST_USART2RST"
+      },
+      {
+        "bit_offset": 19,
+        "bit_size": 1,
+        "name": "RCU_APB1RST_UART3RST"
+      },
+      {
+        "bit_offset": 20,
+        "bit_size": 1,
+        "name": "RCU_APB1RST_UART4RST"
+      },
+      {
+        "bit_offset": 21,
+        "bit_size": 1,
+        "name": "RCU_APB1RST_I2C0RST"
+      },
+      {
+        "bit_offset": 22,
+        "bit_size": 1,
+        "name": "RCU_APB1RST_I2C1RST"
+      },
+      {
+        "bit_offset": 23,
+        "bit_size": 1,
+        "name": "RCU_APB1RST_USBDRST"
+      },
+      {
+        "bit_offset": 25,
+        "bit_size": 1,
+        "name": "RCU_APB1RST_CAN0RST"
+      },
+      {
+        "bit_offset": 27,
+        "bit_size": 1,
+        "name": "RCU_APB1RST_BKPIRST"
+      },
+      {
+        "bit_offset": 28,
+        "bit_size": 1,
+        "name": "RCU_APB1RST_PMURST"
+      },
+      {
+        "bit_offset": 29,
+        "bit_size": 1,
+        "name": "RCU_APB1RST_DACRST"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_41FC62B0A4F9_FW_RCU_APB2EN": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "RCU_APB2EN_AFEN"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "RCU_APB2EN_PAEN"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "name": "RCU_APB2EN_PBEN"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "name": "RCU_APB2EN_PCEN"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "name": "RCU_APB2EN_PDEN"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "name": "RCU_APB2EN_PEEN"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "name": "RCU_APB2EN_PFEN"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "name": "RCU_APB2EN_PGEN"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "name": "RCU_APB2EN_ADC0EN"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "name": "RCU_APB2EN_ADC1EN"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "name": "RCU_APB2EN_TIMER0EN"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "name": "RCU_APB2EN_SPI0EN"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "name": "RCU_APB2EN_TIMER7EN"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "name": "RCU_APB2EN_USART0EN"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "name": "RCU_APB2EN_ADC2EN"
+      },
+      {
+        "bit_offset": 19,
+        "bit_size": 1,
+        "name": "RCU_APB2EN_TIMER8EN"
+      },
+      {
+        "bit_offset": 20,
+        "bit_size": 1,
+        "name": "RCU_APB2EN_TIMER9EN"
+      },
+      {
+        "bit_offset": 21,
+        "bit_size": 1,
+        "name": "RCU_APB2EN_TIMER10EN"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_41FC62B0A4F9_FW_RCU_APB2RST": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "RCU_APB2RST_AFRST"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "RCU_APB2RST_PARST"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "name": "RCU_APB2RST_PBRST"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "name": "RCU_APB2RST_PCRST"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "name": "RCU_APB2RST_PDRST"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "name": "RCU_APB2RST_PERST"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "name": "RCU_APB2RST_PFRST"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "name": "RCU_APB2RST_PGRST"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "name": "RCU_APB2RST_ADC0RST"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "name": "RCU_APB2RST_ADC1RST"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "name": "RCU_APB2RST_TIMER0RST"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "name": "RCU_APB2RST_SPI0RST"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "name": "RCU_APB2RST_TIMER7RST"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "name": "RCU_APB2RST_USART0RST"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "name": "RCU_APB2RST_ADC2RST"
+      },
+      {
+        "bit_offset": 19,
+        "bit_size": 1,
+        "name": "RCU_APB2RST_TIMER8RST"
+      },
+      {
+        "bit_offset": 20,
+        "bit_size": 1,
+        "name": "RCU_APB2RST_TIMER9RST"
+      },
+      {
+        "bit_offset": 21,
+        "bit_size": 1,
+        "name": "RCU_APB2RST_TIMER10RST"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_41FC62B0A4F9_FW_RCU_BDCTL": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "RCU_BDCTL_LXTALEN"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "RCU_BDCTL_LXTALSTB"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "RCU_BDCTL_LXTALBPS"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 2,
+        "name": "RCU_BDCTL_LXTALDRI"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 2,
+        "name": "RCU_BDCTL_RTCSRC"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "name": "RCU_BDCTL_RTCEN"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "name": "RCU_BDCTL_BKPRST"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_41FC62B0A4F9_FW_RCU_CFG0": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 2,
+        "name": "RCU_CFG0_SCS"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 2,
+        "name": "RCU_CFG0_SCSS"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 4,
+        "name": "RCU_CFG0_AHBPSC"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 3,
+        "name": "RCU_CFG0_APB1PSC"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 3,
+        "name": "RCU_CFG0_APB2PSC"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 2,
+        "name": "RCU_CFG0_ADCPSC"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "name": "RCU_CFG0_PLLSEL"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 1,
+        "name": "RCU_CFG0_PREDV0"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 4,
+        "name": "RCU_CFG0_PLLMF"
+      },
+      {
+        "bit_offset": 22,
+        "bit_size": 2,
+        "name": "RCU_CFG0_USBDPSC"
+      },
+      {
+        "bit_offset": 24,
+        "bit_size": 3,
+        "name": "RCU_CFG0_CKOUT0SEL"
+      },
+      {
+        "bit_offset": 27,
+        "bit_size": 1,
+        "name": "RCU_CFG0_PLLMF_4"
+      },
+      {
+        "bit_offset": 28,
+        "bit_size": 1,
+        "name": "RCU_CFG0_ADCPSC_2"
+      },
+      {
+        "bit_offset": 30,
+        "bit_size": 1,
+        "name": "RCU_CFG0_PLLMF_5"
+      },
+      {
+        "bit_offset": 31,
+        "bit_size": 1,
+        "name": "RCU_CFG0_USBDPSC_2"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_41FC62B0A4F9_FW_RCU_CFG1": {
+    "fields": [
+      {
+        "bit_offset": 29,
+        "bit_size": 1,
+        "name": "RCU_CFG1_ADCPSC_3"
+      },
+      {
+        "bit_offset": 30,
+        "bit_size": 1,
+        "name": "RCU_CFG1_PLLPRESEL"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_41FC62B0A4F9_FW_RCU_CTL": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "RCU_CTL_IRC8MEN"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "RCU_CTL_IRC8MSTB"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 5,
+        "name": "RCU_CTL_IRC8MADJ"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 8,
+        "name": "RCU_CTL_IRC8MCALIB"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "name": "RCU_CTL_HXTALEN"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 1,
+        "name": "RCU_CTL_HXTALSTB"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 1,
+        "name": "RCU_CTL_HXTALBPS"
+      },
+      {
+        "bit_offset": 19,
+        "bit_size": 1,
+        "name": "RCU_CTL_CKMEN"
+      },
+      {
+        "bit_offset": 24,
+        "bit_size": 1,
+        "name": "RCU_CTL_PLLEN"
+      },
+      {
+        "bit_offset": 25,
+        "bit_size": 1,
+        "name": "RCU_CTL_PLLSTB"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_41FC62B0A4F9_FW_RCU_DSV": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 3,
+        "name": "RCU_DSV_DSLPVS"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_41FC62B0A4F9_FW_RCU_INT": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "RCU_INT_IRC40KSTBIF"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "RCU_INT_LXTALSTBIF"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "RCU_INT_IRC8MSTBIF"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "name": "RCU_INT_HXTALSTBIF"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "name": "RCU_INT_PLLSTBIF"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "name": "RCU_INT_CKMIF"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "name": "RCU_INT_IRC40KSTBIE"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "name": "RCU_INT_LXTALSTBIE"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "name": "RCU_INT_IRC8MSTBIE"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "name": "RCU_INT_HXTALSTBIE"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "name": "RCU_INT_PLLSTBIE"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "name": "RCU_INT_IRC40KSTBIC"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 1,
+        "name": "RCU_INT_LXTALSTBIC"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 1,
+        "name": "RCU_INT_IRC8MSTBIC"
+      },
+      {
+        "bit_offset": 19,
+        "bit_size": 1,
+        "name": "RCU_INT_HXTALSTBIC"
+      },
+      {
+        "bit_offset": 20,
+        "bit_size": 1,
+        "name": "RCU_INT_PLLSTBIC"
+      },
+      {
+        "bit_offset": 23,
+        "bit_size": 1,
+        "name": "RCU_INT_CKMIC"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_41FC62B0A4F9_FW_RCU_RSTSCK": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "RCU_RSTSCK_IRC40KEN"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "RCU_RSTSCK_IRC40KSTB"
+      },
+      {
+        "bit_offset": 24,
+        "bit_size": 1,
+        "name": "RCU_RSTSCK_RSTFC"
+      },
+      {
+        "bit_offset": 26,
+        "bit_size": 1,
+        "name": "RCU_RSTSCK_EPRSTF"
+      },
+      {
+        "bit_offset": 27,
+        "bit_size": 1,
+        "name": "RCU_RSTSCK_PORRSTF"
+      },
+      {
+        "bit_offset": 28,
+        "bit_size": 1,
+        "name": "RCU_RSTSCK_SWRSTF"
+      },
+      {
+        "bit_offset": 29,
+        "bit_size": 1,
+        "name": "RCU_RSTSCK_FWDGTRSTF"
+      },
+      {
+        "bit_offset": 30,
+        "bit_size": 1,
+        "name": "RCU_RSTSCK_WWDGTRSTF"
+      },
+      {
+        "bit_offset": 31,
+        "bit_size": 1,
+        "name": "RCU_RSTSCK_LPRSTF"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_41FC62B0A4F9_SVD_ADDAPB1EN": {
+    "description": "APB1 additional enable register",
+    "fields": [
+      {
+        "bit_offset": 27,
+        "bit_size": 1,
+        "description": "CTC clock enable",
+        "name": "CTCEN"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_41FC62B0A4F9_SVD_ADDAPB1RST": {
+    "description": "APB1 additional reset register",
+    "fields": [
+      {
+        "bit_offset": 27,
+        "bit_size": 1,
+        "description": "CTC reset",
+        "name": "CTCRST"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_41FC62B0A4F9_SVD_ADDCTL": {
+    "description": "Additional clock control register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "48MHz clock selection",
+        "name": "CK48MSEL"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "description": "Internal 48MHz RC oscillator enable",
+        "name": "IRC48MEN"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 1,
+        "description": "Internal 48MHz RC oscillator clock stabilization Flag",
+        "name": "IRC48MSTB"
+      },
+      {
+        "bit_offset": 24,
+        "bit_size": 8,
+        "description": "Internal 48MHz RC oscillator calibration value register",
+        "name": "IRC48MCALIB"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_41FC62B0A4F9_SVD_ADDINT": {
+    "description": "Additional clock interrupt register",
+    "fields": [
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "IRC48M stabilization interrupt flag",
+        "name": "IRC48MSTBIF"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "description": "Internal 48 MHz RC oscillator Stabilization Interrupt Enable",
+        "name": "IRC48MSTBIE"
+      },
+      {
+        "bit_offset": 22,
+        "bit_size": 1,
+        "description": "Internal 48 MHz RC oscillator Stabilization Interrupt Clear",
+        "name": "IRC48MSTBIC"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_41FC62B0A4F9_SVD_AHBEN": {
+    "description": "AHB enable register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "DMA0 clock enable",
+        "name": "DMA0EN"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "DMA1 clock enable",
+        "name": "DMA1EN"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "SRAM interface clock enable when sleep mode",
+        "name": "SRAMSPEN"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "FMC clock enable when sleep mode",
+        "name": "FMCSPEN"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "CRC clock enable",
+        "name": "CRCEN"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "EXMC clock enable",
+        "name": "EXMCEN"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "SDIO clock enable",
+        "name": "SDIOEN"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_41FC62B0A4F9_SVD_APB1EN": {
+    "description": "APB1 clock enable register (RCU_APB1EN)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "TIMER1 timer clock enable",
+        "name": "TIMER1EN"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "TIMER2 timer clock enable",
+        "name": "TIMER2EN"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "TIMER3 timer clock enable",
+        "name": "TIMER3EN"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "TIMER4 timer clock enable",
+        "name": "TIMER4EN"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "TIMER5 timer clock enable",
+        "name": "TIMER5EN"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "TIMER6 timer clock enable",
+        "name": "TIMER6EN"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "TIMER11 timer clock enable",
+        "name": "TIMER11EN"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "TIMER12 timer clock enable",
+        "name": "TIMER12EN"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "TIMER13 timer clock enable",
+        "name": "TIMER13EN"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "description": "Window watchdog timer clock enable",
+        "name": "WWDGTEN"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "description": "SPI1 clock enable",
+        "name": "SPI1EN"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "SPI2 clock enable",
+        "name": "SPI2EN"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 1,
+        "description": "USART1 clock enable",
+        "name": "USART1EN"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 1,
+        "description": "USART2 clock enable",
+        "name": "USART2EN"
+      },
+      {
+        "bit_offset": 19,
+        "bit_size": 1,
+        "description": "UART3 clock enable",
+        "name": "UART3EN"
+      },
+      {
+        "bit_offset": 20,
+        "bit_size": 1,
+        "description": "UART4 clock enable",
+        "name": "UART4EN"
+      },
+      {
+        "bit_offset": 21,
+        "bit_size": 1,
+        "description": "I2C0 clock enable",
+        "name": "I2C0EN"
+      },
+      {
+        "bit_offset": 22,
+        "bit_size": 1,
+        "description": "I2C1 clock enable",
+        "name": "I2C1EN"
+      },
+      {
+        "bit_offset": 23,
+        "bit_size": 1,
+        "description": "USBD clock enable",
+        "name": "USBDEN"
+      },
+      {
+        "bit_offset": 25,
+        "bit_size": 1,
+        "description": "CAN0 clock enable",
+        "name": "CAN0EN"
+      },
+      {
+        "bit_offset": 27,
+        "bit_size": 1,
+        "description": "Backup interface clock enable",
+        "name": "BKPIEN"
+      },
+      {
+        "bit_offset": 28,
+        "bit_size": 1,
+        "description": "Power control clock enable",
+        "name": "PMUEN"
+      },
+      {
+        "bit_offset": 29,
+        "bit_size": 1,
+        "description": "DAC clock enable",
+        "name": "DACEN"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_41FC62B0A4F9_SVD_APB1RST": {
+    "description": "APB1 reset register (RCU_APB1RST)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "TIMER1 timer reset",
+        "name": "TIMER1RST"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "TIMER2 timer reset",
+        "name": "TIMER2RST"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "TIMER3 timer reset",
+        "name": "TIMER3RST"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "TIMER4 timer reset",
+        "name": "TIMER4RST"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "TIMER5 timer reset",
+        "name": "TIMER5RST"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "TIMER6 timer reset",
+        "name": "TIMER6RST"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "TIMER11 timer reset",
+        "name": "TIMER11RST"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "TIMER12 timer reset",
+        "name": "TIMER12RST"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "TIMER13 timer reset",
+        "name": "TIMER13RST"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "description": "Window watchdog timer reset",
+        "name": "WWDGTRST"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "description": "SPI1 reset",
+        "name": "SPI1RST"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "SPI2 reset",
+        "name": "SPI2RST"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 1,
+        "description": "USART1 reset",
+        "name": "USART1RST"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 1,
+        "description": "USART2 reset",
+        "name": "USART2RST"
+      },
+      {
+        "bit_offset": 19,
+        "bit_size": 1,
+        "description": "UART3 reset",
+        "name": "UART3RST"
+      },
+      {
+        "bit_offset": 20,
+        "bit_size": 1,
+        "description": "UART4 reset",
+        "name": "UART4RST"
+      },
+      {
+        "bit_offset": 21,
+        "bit_size": 1,
+        "description": "I2C0 reset",
+        "name": "I2C0RST"
+      },
+      {
+        "bit_offset": 22,
+        "bit_size": 1,
+        "description": "I2C1 reset",
+        "name": "I2C1RST"
+      },
+      {
+        "bit_offset": 23,
+        "bit_size": 1,
+        "description": "USBD reset",
+        "name": "USBDRST"
+      },
+      {
+        "bit_offset": 25,
+        "bit_size": 1,
+        "description": "CAN0 reset",
+        "name": "CAN0RST"
+      },
+      {
+        "bit_offset": 27,
+        "bit_size": 1,
+        "description": "Backup interface reset",
+        "name": "BKPIRST"
+      },
+      {
+        "bit_offset": 28,
+        "bit_size": 1,
+        "description": "Power control reset",
+        "name": "PMURST"
+      },
+      {
+        "bit_offset": 29,
+        "bit_size": 1,
+        "description": "DAC reset",
+        "name": "DACRST"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_41FC62B0A4F9_SVD_APB2EN": {
+    "description": "APB2 clock enable register (RCU_APB2EN)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Alternate function IO clock enable",
+        "name": "AFEN"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "GPIO port A clock enable",
+        "name": "PAEN"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "GPIO port B clock enable",
+        "name": "PBEN"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "GPIO port C clock enable",
+        "name": "PCEN"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "GPIO port D clock enable",
+        "name": "PDEN"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "GPIO port E clock enable",
+        "name": "PEEN"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "GPIO port F clock enable",
+        "name": "PFEN"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "GPIO port G clock enable",
+        "name": "PGEN"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "ADC0 clock enable",
+        "name": "ADC0EN"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "ADC1 clock enable",
+        "name": "ADC1EN"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "description": "TIMER0 clock enable",
+        "name": "TIMER0EN"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "description": "SPI0 clock enable",
+        "name": "SPI0EN"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "description": "TIMER7 clock enable",
+        "name": "TIMER7EN"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "description": "USART0 clock enable",
+        "name": "USART0EN"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "ADC2 clock enable",
+        "name": "ADC2EN"
+      },
+      {
+        "bit_offset": 19,
+        "bit_size": 1,
+        "description": "TIMER8 clock enable",
+        "name": "TIMER8EN"
+      },
+      {
+        "bit_offset": 20,
+        "bit_size": 1,
+        "description": "TIMER9 clock enable",
+        "name": "TIMER9EN"
+      },
+      {
+        "bit_offset": 21,
+        "bit_size": 1,
+        "description": "TIMER10 clock enable",
+        "name": "TIMER10EN"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_41FC62B0A4F9_SVD_APB2RST": {
+    "description": "APB2 reset register (RCU_APB2RST)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Alternate function I/O reset",
+        "name": "AFRST"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "GPIO port A reset",
+        "name": "PARST"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "GPIO port B reset",
+        "name": "PBRST"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "GPIO port C reset",
+        "name": "PCRST"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "GPIO port D reset",
+        "name": "PDRST"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "GPIO port E reset",
+        "name": "PERST"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "GPIO portF reset",
+        "name": "PFRST"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "GPIO port G reset",
+        "name": "PGRST"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "ADC0 reset",
+        "name": "ADC0RST"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "ADC1 reset",
+        "name": "ADC1RST"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "description": "Timer 0 reset",
+        "name": "TIMER0RST"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "description": "SPI0 reset",
+        "name": "SPI0RST"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "description": "Timer 7 reset",
+        "name": "TIMER7RST"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "description": "USART0 Reset",
+        "name": "USART0RST"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "ADC2 reset",
+        "name": "ADC2RST"
+      },
+      {
+        "bit_offset": 19,
+        "bit_size": 1,
+        "description": "Timer 8 reset",
+        "name": "TIMER8RST"
+      },
+      {
+        "bit_offset": 20,
+        "bit_size": 1,
+        "description": "Timer 9 reset",
+        "name": "TIMER9RST"
+      },
+      {
+        "bit_offset": 21,
+        "bit_size": 1,
+        "description": "Timer 10 reset",
+        "name": "TIMER10RST"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_41FC62B0A4F9_SVD_BDCTL": {
+    "description": "Backup domain control register (RCU_BDCTL)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "LXTAL enable",
+        "name": "LXTALEN"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "External low-speed oscillator stabilization",
+        "name": "LXTALSTB"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "LXTAL bypass mode enable",
+        "name": "LXTALBPS"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 2,
+        "description": "LXTAL drive capability",
+        "name": "LXTALDRI"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 2,
+        "description": "RTC clock entry selection",
+        "name": "RTCSRC"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "RTC clock enable",
+        "name": "RTCEN"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "description": "Backup domain reset",
+        "name": "BKPRST"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_41FC62B0A4F9_SVD_CFG0": {
+    "description": "Clock configuration register 0 (RCU_CFG0)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 2,
+        "description": "System clock switch",
+        "name": "SCS"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 2,
+        "description": "System clock switch status",
+        "name": "SCSS"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 4,
+        "description": "AHB prescaler selection",
+        "name": "AHBPSC"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 3,
+        "description": "APB1 prescaler selection",
+        "name": "APB1PSC"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 3,
+        "description": "APB2 prescaler selection",
+        "name": "APB2PSC"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 2,
+        "description": "ADC clock prescaler selection",
+        "name": "ADCPSC_1_0"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "description": "PLL Clock Source Selection",
+        "name": "PLLSEL"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 1,
+        "description": "PREDV0 division factor",
+        "name": "PREDV0"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 4,
+        "description": "The PLL clock multiplication factor",
+        "name": "PLLMF_3_0"
+      },
+      {
+        "bit_offset": 22,
+        "bit_size": 2,
+        "description": "USBD clock prescaler selection",
+        "name": "USBDPSC_1_0"
+      },
+      {
+        "bit_offset": 24,
+        "bit_size": 3,
+        "description": "CKOUT0 Clock Source Selection",
+        "name": "CKOUT0SEL"
+      },
+      {
+        "bit_offset": 27,
+        "bit_size": 1,
+        "description": "Bit 4 of PLLMF",
+        "name": "PLLMF_4"
+      },
+      {
+        "bit_offset": 28,
+        "bit_size": 1,
+        "description": "Bit 2 of ADCPSC",
+        "name": "ADCPSC_2"
+      },
+      {
+        "bit_offset": 30,
+        "bit_size": 1,
+        "description": "Bit 5 of PLLMF",
+        "name": "PLLMF_5"
+      },
+      {
+        "bit_offset": 31,
+        "bit_size": 1,
+        "description": "Bit 2 of USBDPSC",
+        "name": "USBDPSC_2"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_41FC62B0A4F9_SVD_CFG1": {
+    "description": "Clock Configuration register 1",
+    "fields": [
+      {
+        "bit_offset": 29,
+        "bit_size": 1,
+        "description": "Bit 3 of ADCPSC",
+        "name": "ADCPSC_3"
+      },
+      {
+        "bit_offset": 30,
+        "bit_size": 1,
+        "description": "PLL Clock Source Selection",
+        "name": "PLLPRESEL"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_41FC62B0A4F9_SVD_CTL": {
+    "description": "Control register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Internal 8MHz RC oscillator Enable",
+        "name": "IRC8MEN"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "IRC8M Internal 8MHz RC Oscillator stabilization Flag",
+        "name": "IRC8MSTB"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 5,
+        "description": "Internal 8MHz RC Oscillator clock trim adjust value",
+        "name": "IRC8MADJ"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 8,
+        "description": "Internal 8MHz RC Oscillator calibration value register",
+        "name": "IRC8MCALIB"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "description": "External High Speed oscillator Enable",
+        "name": "HXTALEN"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 1,
+        "description": "External crystal oscillator (HXTAL) clock stabilization flag",
+        "name": "HXTALSTB"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 1,
+        "description": "External crystal oscillator (HXTAL) clock bypass mode enable",
+        "name": "HXTALBPS"
+      },
+      {
+        "bit_offset": 19,
+        "bit_size": 1,
+        "description": "HXTAL Clock Monitor Enable",
+        "name": "CKMEN"
+      },
+      {
+        "bit_offset": 24,
+        "bit_size": 1,
+        "description": "PLL enable",
+        "name": "PLLEN"
+      },
+      {
+        "bit_offset": 25,
+        "bit_size": 1,
+        "description": "PLL Clock Stabilization Flag",
+        "name": "PLLSTB"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_41FC62B0A4F9_SVD_DSV": {
+    "description": "Deep sleep mode Voltage register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 3,
+        "description": "Deep-sleep mode voltage select",
+        "name": "DSLPVS"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_41FC62B0A4F9_SVD_INT": {
+    "description": "Clock interrupt register (RCU_INT)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "IRC40K stabilization interrupt flag",
+        "name": "IRC40KSTBIF"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "LXTAL stabilization interrupt flag",
+        "name": "LXTALSTBIF"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "IRC8M stabilization interrupt flag",
+        "name": "IRC8MSTBIF"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "HXTAL stabilization interrupt flag",
+        "name": "HXTALSTBIF"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "PLL stabilization interrupt flag",
+        "name": "PLLSTBIF"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "HXTAL Clock Stuck Interrupt Flag",
+        "name": "CKMIF"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "IRC40K Stabilization interrupt enable",
+        "name": "IRC40KSTBIE"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "LXTAL Stabilization Interrupt Enable",
+        "name": "LXTALSTBIE"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "IRC8M Stabilization Interrupt Enable",
+        "name": "IRC8MSTBIE"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "description": "HXTAL Stabilization Interrupt Enable",
+        "name": "HXTALSTBIE"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "description": "PLL Stabilization Interrupt Enable",
+        "name": "PLLSTBIE"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "description": "IRC40K Stabilization Interrupt Clear",
+        "name": "IRC40KSTBIC"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 1,
+        "description": "LXTAL Stabilization Interrupt Clear",
+        "name": "LXTALSTBIC"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 1,
+        "description": "IRC8M Stabilization Interrupt Clear",
+        "name": "IRC8MSTBIC"
+      },
+      {
+        "bit_offset": 19,
+        "bit_size": 1,
+        "description": "HXTAL Stabilization Interrupt Clear",
+        "name": "HXTALSTBIC"
+      },
+      {
+        "bit_offset": 20,
+        "bit_size": 1,
+        "description": "PLL stabilization Interrupt Clear",
+        "name": "PLLSTBIC"
+      },
+      {
+        "bit_offset": 23,
+        "bit_size": 1,
+        "description": "HXTAL Clock Stuck Interrupt Clear",
+        "name": "CKMIC"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_41FC62B0A4F9_SVD_RSTSCK": {
+    "description": "Reset source /clock register (RCU_RSTSCK)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "IRC40K enable",
+        "name": "IRC40KEN"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "IRC40K stabilization",
+        "name": "IRC40KSTB"
+      },
+      {
+        "bit_offset": 24,
+        "bit_size": 1,
+        "description": "Reset flag clear",
+        "name": "RSTFC"
+      },
+      {
+        "bit_offset": 26,
+        "bit_size": 1,
+        "description": "External PIN reset flag",
+        "name": "EPRSTF"
+      },
+      {
+        "bit_offset": 27,
+        "bit_size": 1,
+        "description": "Power reset flag",
+        "name": "PORRSTF"
+      },
+      {
+        "bit_offset": 28,
+        "bit_size": 1,
+        "description": "Software reset flag",
+        "name": "SWRSTF"
+      },
+      {
+        "bit_offset": 29,
+        "bit_size": 1,
+        "description": "Free Watchdog timer reset flag",
+        "name": "FWDGTRSTF"
+      },
+      {
+        "bit_offset": 30,
+        "bit_size": 1,
+        "description": "Window watchdog timer reset flag",
+        "name": "WWDGTRSTF"
+      },
+      {
+        "bit_offset": 31,
+        "bit_size": 1,
+        "description": "Low-power reset flag",
+        "name": "LPRSTF"
+      }
+    ]
+  }
+}

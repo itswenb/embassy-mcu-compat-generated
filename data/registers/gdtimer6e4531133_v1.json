@@ -1,0 +1,535 @@
+{
+  "block/GD_MERGED_B996034DF974": {
+    "items": [
+      {
+        "byte_offset": 0,
+        "description": "control register 0",
+        "fieldset": "GD_MERGED_B996034DF974_SVD_CTL0",
+        "name": "CTL0"
+      },
+      {
+        "byte_offset": 0,
+        "fieldset": "GD_MERGED_B996034DF974_FW_TIMER_CTL0",
+        "name": "TIMER_CTL0"
+      },
+      {
+        "byte_offset": 4,
+        "description": "control register 1",
+        "fieldset": "GD_MERGED_B996034DF974_SVD_CTL1",
+        "name": "CTL1"
+      },
+      {
+        "byte_offset": 4,
+        "fieldset": "GD_MERGED_B996034DF974_FW_TIMER_CTL1",
+        "name": "TIMER_CTL1"
+      },
+      {
+        "byte_offset": 12,
+        "description": "DMA/Interrupt enable register",
+        "fieldset": "GD_MERGED_B996034DF974_SVD_DMAINTEN",
+        "name": "DMAINTEN"
+      },
+      {
+        "byte_offset": 12,
+        "fieldset": "GD_MERGED_B996034DF974_FW_TIMER_DMAINTEN",
+        "name": "TIMER_DMAINTEN"
+      },
+      {
+        "byte_offset": 16,
+        "description": "Interrupt flag register",
+        "fieldset": "GD_MERGED_B996034DF974_SVD_INTF",
+        "name": "INTF"
+      },
+      {
+        "byte_offset": 16,
+        "fieldset": "GD_MERGED_B996034DF974_FW_TIMER_INTF",
+        "name": "TIMER_INTF"
+      },
+      {
+        "access": "Write",
+        "byte_offset": 20,
+        "description": "event generation register",
+        "fieldset": "GD_MERGED_B996034DF974_SVD_SWEVG",
+        "name": "SWEVG"
+      },
+      {
+        "byte_offset": 20,
+        "fieldset": "GD_MERGED_B996034DF974_FW_TIMER_SWEVG",
+        "name": "TIMER_SWEVG"
+      },
+      {
+        "byte_offset": 36,
+        "description": "Counter register",
+        "fieldset": "GD_MERGED_B996034DF974_SVD_CNT",
+        "name": "CNT"
+      },
+      {
+        "byte_offset": 36,
+        "fieldset": "GD_MERGED_B996034DF974_FW_TIMER_CNT",
+        "name": "TIMER_CNT"
+      },
+      {
+        "byte_offset": 40,
+        "description": "Prescaler register",
+        "fieldset": "GD_MERGED_B996034DF974_SVD_PSC",
+        "name": "PSC"
+      },
+      {
+        "byte_offset": 40,
+        "fieldset": "GD_MERGED_B996034DF974_FW_TIMER_PSC",
+        "name": "TIMER_PSC"
+      },
+      {
+        "byte_offset": 44,
+        "description": "Counter auto reload register",
+        "fieldset": "GD_MERGED_B996034DF974_SVD_CAR",
+        "name": "CAR"
+      },
+      {
+        "byte_offset": 44,
+        "fieldset": "GD_MERGED_B996034DF974_FW_TIMER_CAR",
+        "name": "TIMER_CAR"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_B996034DF974_FW_TIMER_CAR": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "name": "TIMER_CAR_CARL"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_B996034DF974_FW_TIMER_CNT": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "name": "TIMER_CNT_CNT"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_B996034DF974_FW_TIMER_CTL0": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "TIMER_CTL0_CEN"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "TIMER_CTL0_UPDIS"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "TIMER_CTL0_UPS"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "name": "TIMER_CTL0_SPM"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "name": "TIMER_CTL0_DIR"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 2,
+        "name": "TIMER_CTL0_CAM"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "name": "TIMER_CTL0_ARSE"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 2,
+        "name": "TIMER_CTL0_CKDIV"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_B996034DF974_FW_TIMER_CTL1": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "TIMER_CTL1_CCSE"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "TIMER_CTL1_CCUC"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "name": "TIMER_CTL1_DMAS"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 3,
+        "name": "TIMER_CTL1_MMC"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "name": "TIMER_CTL1_TI0S"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "name": "TIMER_CTL1_ISO0"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "name": "TIMER_CTL1_ISO0N"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "name": "TIMER_CTL1_ISO1"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "name": "TIMER_CTL1_ISO1N"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "name": "TIMER_CTL1_ISO2"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "name": "TIMER_CTL1_ISO2N"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "name": "TIMER_CTL1_ISO3"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_B996034DF974_FW_TIMER_DMAINTEN": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "TIMER_DMAINTEN_UPIE"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "TIMER_DMAINTEN_CH0IE"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "TIMER_DMAINTEN_CH1IE"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "name": "TIMER_DMAINTEN_CH2IE"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "name": "TIMER_DMAINTEN_CH3IE"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "name": "TIMER_DMAINTEN_CMTIE"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "name": "TIMER_DMAINTEN_TRGIE"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "name": "TIMER_DMAINTEN_BRKIE"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "name": "TIMER_DMAINTEN_UPDEN"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "name": "TIMER_DMAINTEN_CH0DEN"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "name": "TIMER_DMAINTEN_CH1DEN"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "name": "TIMER_DMAINTEN_CH2DEN"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "name": "TIMER_DMAINTEN_CH3DEN"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "name": "TIMER_DMAINTEN_CMTDEN"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "name": "TIMER_DMAINTEN_TRGDEN"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_B996034DF974_FW_TIMER_INTF": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "TIMER_INTF_UPIF"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "TIMER_INTF_CH0IF"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "TIMER_INTF_CH1IF"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "name": "TIMER_INTF_CH2IF"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "name": "TIMER_INTF_CH3IF"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "name": "TIMER_INTF_CMTIF"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "name": "TIMER_INTF_TRGIF"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "name": "TIMER_INTF_BRKIF"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "name": "TIMER_INTF_CH0OF"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "name": "TIMER_INTF_CH1OF"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "name": "TIMER_INTF_CH2OF"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "name": "TIMER_INTF_CH3OF"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_B996034DF974_FW_TIMER_PSC": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "name": "TIMER_PSC_PSC"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_B996034DF974_FW_TIMER_SWEVG": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "TIMER_SWEVG_UPG"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "TIMER_SWEVG_CH0G"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "TIMER_SWEVG_CH1G"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "name": "TIMER_SWEVG_CH2G"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "name": "TIMER_SWEVG_CH3G"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "name": "TIMER_SWEVG_CMTG"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "name": "TIMER_SWEVG_TRGG"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "name": "TIMER_SWEVG_BRKG"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_B996034DF974_SVD_CAR": {
+    "description": "Counter auto reload register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Counter auto reload value",
+        "name": "CARL"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_B996034DF974_SVD_CNT": {
+    "description": "Counter register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Low counter value",
+        "name": "CNT"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_B996034DF974_SVD_CTL0": {
+    "description": "control register 0",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Counter enable",
+        "name": "CEN"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Update disable",
+        "name": "UPDIS"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Update source",
+        "name": "UPS"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Single pulse mode",
+        "name": "SPM"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Auto-reload shadow enable",
+        "name": "ARSE"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_B996034DF974_SVD_CTL1": {
+    "description": "control register 1",
+    "fields": [
+      {
+        "bit_offset": 4,
+        "bit_size": 3,
+        "description": "Master mode control",
+        "name": "MMC"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_B996034DF974_SVD_DMAINTEN": {
+    "description": "DMA/Interrupt enable register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Update interrupt enable",
+        "name": "UPIE"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "Update DMA request enable",
+        "name": "UPDEN"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_B996034DF974_SVD_INTF": {
+    "description": "Interrupt flag register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Update interrupt flag",
+        "name": "UPIF"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_B996034DF974_SVD_PSC": {
+    "description": "Prescaler register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Prescaler value of the counter clock",
+        "name": "PSC"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_B996034DF974_SVD_SWEVG": {
+    "description": "event generation register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Update generation",
+        "name": "UPG"
+      }
+    ]
+  }
+}

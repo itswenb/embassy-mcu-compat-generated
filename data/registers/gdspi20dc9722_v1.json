@@ -1,0 +1,341 @@
+{
+  "block/SPI": {
+    "items": [
+      {
+        "byte_offset": 0,
+        "fieldset": "SPI_CTL0",
+        "name": "SPI_CTL0"
+      },
+      {
+        "byte_offset": 4,
+        "fieldset": "SPI_CTL1",
+        "name": "SPI_CTL1"
+      },
+      {
+        "byte_offset": 8,
+        "fieldset": "SPI_STAT",
+        "name": "SPI_STAT"
+      },
+      {
+        "byte_offset": 12,
+        "fieldset": "SPI_DATA",
+        "name": "SPI_DATA"
+      },
+      {
+        "byte_offset": 16,
+        "fieldset": "SPI_CRCPOLY",
+        "name": "SPI_CRCPOLY"
+      },
+      {
+        "byte_offset": 20,
+        "fieldset": "SPI_RCRC",
+        "name": "SPI_RCRC"
+      },
+      {
+        "byte_offset": 24,
+        "fieldset": "SPI_TCRC",
+        "name": "SPI_TCRC"
+      },
+      {
+        "byte_offset": 28,
+        "fieldset": "SPI_I2SCTL",
+        "name": "SPI_I2SCTL"
+      },
+      {
+        "byte_offset": 32,
+        "fieldset": "SPI_I2SPSC",
+        "name": "SPI_I2SPSC"
+      },
+      {
+        "byte_offset": 128,
+        "fieldset": "SPI_QCTL",
+        "name": "SPI_QCTL"
+      }
+    ]
+  },
+  "fieldset/SPI_CRCPOLY": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "name": "SPI_CRCPOLY_CPR"
+      }
+    ]
+  },
+  "fieldset/SPI_CTL0": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "SPI_CTL0_CKPH"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "SPI_CTL0_CKPL"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "SPI_CTL0_MSTMOD"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 3,
+        "name": "SPI_CTL0_PSC"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "name": "SPI_CTL0_SPIEN"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "name": "SPI_CTL0_LF"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "name": "SPI_CTL0_SWNSS"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "name": "SPI_CTL0_SWNSSEN"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "name": "SPI_CTL0_RO"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "name": "SPI_CTL0_FF16"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "name": "SPI_CTL0_CRCNT"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "name": "SPI_CTL0_CRCEN"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "name": "SPI_CTL0_BDOEN"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "name": "SPI_CTL0_BDEN"
+      }
+    ]
+  },
+  "fieldset/SPI_CTL1": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "SPI_CTL1_DMAREN"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "SPI_CTL1_DMATEN"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "SPI_CTL1_NSSDRV"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "name": "SPI_CTL1_NSSP"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "name": "SPI_CTL1_TMOD"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "name": "SPI_CTL1_ERRIE"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "name": "SPI_CTL1_RBNEIE"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "name": "SPI_CTL1_TBEIE"
+      }
+    ]
+  },
+  "fieldset/SPI_DATA": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "name": "SPI_DATA_DATA"
+      }
+    ]
+  },
+  "fieldset/SPI_I2SCTL": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "SPI_I2SCTL_CHLEN"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 2,
+        "name": "SPI_I2SCTL_DTLEN"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "name": "SPI_I2SCTL_CKPL"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 2,
+        "name": "SPI_I2SCTL_I2SSTD"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "name": "SPI_I2SCTL_PCMSMOD"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 2,
+        "name": "SPI_I2SCTL_I2SOPMOD"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "name": "SPI_I2SCTL_I2SEN"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "name": "SPI_I2SCTL_I2SSEL"
+      }
+    ]
+  },
+  "fieldset/SPI_I2SPSC": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "name": "SPI_I2SPSC_DIV"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "name": "SPI_I2SPSC_OF"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "name": "SPI_I2SPSC_MCKOEN"
+      }
+    ]
+  },
+  "fieldset/SPI_QCTL": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "SPI_QCTL_QMOD"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "SPI_QCTL_QRD"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "SPI_QCTL_IO23_DRV"
+      }
+    ]
+  },
+  "fieldset/SPI_RCRC": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "name": "SPI_RCRC_RCR"
+      }
+    ]
+  },
+  "fieldset/SPI_STAT": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "SPI_STAT_RBNE"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "SPI_STAT_TBE"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "SPI_STAT_I2SCH"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "name": "SPI_STAT_TXURERR"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "name": "SPI_STAT_CRCERR"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "name": "SPI_STAT_CONFERR"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "name": "SPI_STAT_RXORERR"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "name": "SPI_STAT_TRANS"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "name": "SPI_STAT_FERR"
+      }
+    ]
+  },
+  "fieldset/SPI_TCRC": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "name": "SPI_TCRC_TCR"
+      }
+    ]
+  }
+}

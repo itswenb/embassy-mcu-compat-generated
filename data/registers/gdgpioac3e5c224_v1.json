@@ -1,0 +1,968 @@
+{
+  "block/GPIOA": {
+    "description": "General-purpose I/Os",
+    "items": [
+      {
+        "byte_offset": 0,
+        "description": "port control register 0",
+        "fieldset": "CTL0",
+        "name": "CTL0"
+      },
+      {
+        "byte_offset": 4,
+        "description": "port control register 1",
+        "fieldset": "CTL1",
+        "name": "CTL1"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 8,
+        "description": "Port input status register",
+        "fieldset": "ISTAT",
+        "name": "ISTAT"
+      },
+      {
+        "byte_offset": 12,
+        "description": "Port output control register",
+        "fieldset": "OCTL",
+        "name": "OCTL"
+      },
+      {
+        "access": "Write",
+        "byte_offset": 16,
+        "description": "Port bit operate register",
+        "fieldset": "BOP",
+        "name": "BOP"
+      },
+      {
+        "access": "Write",
+        "byte_offset": 20,
+        "description": "Port bit clear register",
+        "fieldset": "BC",
+        "name": "BC"
+      },
+      {
+        "byte_offset": 24,
+        "description": "GPIO port configuration lock register",
+        "fieldset": "LOCK",
+        "name": "LOCK"
+      },
+      {
+        "byte_offset": 60,
+        "description": "Port bit speed register",
+        "fieldset": "SPD",
+        "name": "SPD"
+      }
+    ]
+  },
+  "fieldset/BC": {
+    "description": "Port bit clear register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Port 0 Clear bit",
+        "name": "CR0"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Port 1 Clear bit",
+        "name": "CR1"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Port 2 Clear bit",
+        "name": "CR2"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Port 3 Clear bit",
+        "name": "CR3"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "Port 4 Clear bit",
+        "name": "CR4"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "Port 5 Clear bit",
+        "name": "CR5"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "Port 6 Clear bit",
+        "name": "CR6"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Port 7 Clear bit",
+        "name": "CR7"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "Port 8 Clear bit",
+        "name": "CR8"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "Port 9 Clear bit",
+        "name": "CR9"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "Port 10 Clear bit",
+        "name": "CR10"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "description": "Port 11 Clear bit",
+        "name": "CR11"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "description": "Port 12 Clear bit",
+        "name": "CR12"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "description": "Port 13 Clear bit",
+        "name": "CR13"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "description": "Port 14 Clear bit",
+        "name": "CR14"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "Port 15 Clear bit",
+        "name": "CR15"
+      }
+    ]
+  },
+  "fieldset/BOP": {
+    "description": "Port bit operate register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Port 0 Set bit",
+        "name": "BOP0"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Port 1 Set bit",
+        "name": "BOP1"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Port 2 Set bit",
+        "name": "BOP2"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Port 3 Set bit",
+        "name": "BOP3"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "Port 4 Set bit",
+        "name": "BOP4"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "Port 5 Set bit",
+        "name": "BOP5"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "Port 6 Set bit",
+        "name": "BOP6"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Port 7 Set bit",
+        "name": "BOP7"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "Port 8 Set bit",
+        "name": "BOP8"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "Port 9 Set bit",
+        "name": "BOP9"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "Port 10 Set bit",
+        "name": "BOP10"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "description": "Port 11 Set bit",
+        "name": "BOP11"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "description": "Port 12 Set bit",
+        "name": "BOP12"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "description": "Port 13 Set bit",
+        "name": "BOP13"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "description": "Port 14 Set bit",
+        "name": "BOP14"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "Port 15 Set bit",
+        "name": "BOP15"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "description": "Port 0 Clear bit",
+        "name": "CR0"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 1,
+        "description": "Port 1 Clear bit",
+        "name": "CR1"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 1,
+        "description": "Port 2 Clear bit",
+        "name": "CR2"
+      },
+      {
+        "bit_offset": 19,
+        "bit_size": 1,
+        "description": "Port 3 Clear bit",
+        "name": "CR3"
+      },
+      {
+        "bit_offset": 20,
+        "bit_size": 1,
+        "description": "Port 4 Clear bit",
+        "name": "CR4"
+      },
+      {
+        "bit_offset": 21,
+        "bit_size": 1,
+        "description": "Port 5 Clear bit",
+        "name": "CR5"
+      },
+      {
+        "bit_offset": 22,
+        "bit_size": 1,
+        "description": "Port 6 Clear bit",
+        "name": "CR6"
+      },
+      {
+        "bit_offset": 23,
+        "bit_size": 1,
+        "description": "Port 7 Clear bit",
+        "name": "CR7"
+      },
+      {
+        "bit_offset": 24,
+        "bit_size": 1,
+        "description": "Port 8 Clear bit",
+        "name": "CR8"
+      },
+      {
+        "bit_offset": 25,
+        "bit_size": 1,
+        "description": "Port 9 Clear bit",
+        "name": "CR9"
+      },
+      {
+        "bit_offset": 26,
+        "bit_size": 1,
+        "description": "Port 10 Clear bit",
+        "name": "CR10"
+      },
+      {
+        "bit_offset": 27,
+        "bit_size": 1,
+        "description": "Port 11 Clear bit",
+        "name": "CR11"
+      },
+      {
+        "bit_offset": 28,
+        "bit_size": 1,
+        "description": "Port 12 Clear bit",
+        "name": "CR12"
+      },
+      {
+        "bit_offset": 29,
+        "bit_size": 1,
+        "description": "Port 13 Clear bit",
+        "name": "CR13"
+      },
+      {
+        "bit_offset": 30,
+        "bit_size": 1,
+        "description": "Port 14 Clear bit",
+        "name": "CR14"
+      },
+      {
+        "bit_offset": 31,
+        "bit_size": 1,
+        "description": "Port 15 Clear bit",
+        "name": "CR15"
+      }
+    ]
+  },
+  "fieldset/CTL0": {
+    "description": "port control register 0",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 2,
+        "description": "Port x mode bits (x = 0)",
+        "name": "MD0"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 2,
+        "description": "Port x configuration bits (x = 0)",
+        "name": "CTL0"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 2,
+        "description": "Port x mode bits (x = 1)",
+        "name": "MD1"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 2,
+        "description": "Port x configuration bits (x = 1)",
+        "name": "CTL1"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 2,
+        "description": "Port x mode bits (x = 2 )",
+        "name": "MD2"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 2,
+        "description": "Port x configuration bits (x = 2)",
+        "name": "CTL2"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 2,
+        "description": "Port x mode bits (x = 3 )",
+        "name": "MD3"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 2,
+        "description": "Port x configuration bits (x = 3)",
+        "name": "CTL3"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 2,
+        "description": "Port x mode bits (x = 4)",
+        "name": "MD4"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 2,
+        "description": "Port x configuration bits (x = 4)",
+        "name": "CTL4"
+      },
+      {
+        "bit_offset": 20,
+        "bit_size": 2,
+        "description": "Port x mode bits (x = 5)",
+        "name": "MD5"
+      },
+      {
+        "bit_offset": 22,
+        "bit_size": 2,
+        "description": "Port x configuration bits (x = 5)",
+        "name": "CTL5"
+      },
+      {
+        "bit_offset": 24,
+        "bit_size": 2,
+        "description": "Port x mode bits (x = 6)",
+        "name": "MD6"
+      },
+      {
+        "bit_offset": 26,
+        "bit_size": 2,
+        "description": "Port x configuration bits (x = 6)",
+        "name": "CTL6"
+      },
+      {
+        "bit_offset": 28,
+        "bit_size": 2,
+        "description": "Port x mode bits (x = 7)",
+        "name": "MD7"
+      },
+      {
+        "bit_offset": 30,
+        "bit_size": 2,
+        "description": "Port x configuration bits (x = 7)",
+        "name": "CTL7"
+      }
+    ]
+  },
+  "fieldset/CTL1": {
+    "description": "port control register 1",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 2,
+        "description": "Port x mode bits (x = 8)",
+        "name": "MD8"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 2,
+        "description": "Port x configuration bits (x = 8)",
+        "name": "CTL8"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 2,
+        "description": "Port x mode bits (x = 9)",
+        "name": "MD9"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 2,
+        "description": "Port x configuration bits (x = 9)",
+        "name": "CTL9"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 2,
+        "description": "Port x mode bits (x = 10 )",
+        "name": "MD10"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 2,
+        "description": "Port x configuration bits (x = 10)",
+        "name": "CTL10"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 2,
+        "description": "Port x mode bits (x = 11 )",
+        "name": "MD11"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 2,
+        "description": "Port x configuration bits (x = 11)",
+        "name": "CTL11"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 2,
+        "description": "Port x mode bits (x = 12)",
+        "name": "MD12"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 2,
+        "description": "Port x configuration bits (x = 12)",
+        "name": "CTL12"
+      },
+      {
+        "bit_offset": 20,
+        "bit_size": 2,
+        "description": "Port x mode bits (x = 13)",
+        "name": "MD13"
+      },
+      {
+        "bit_offset": 22,
+        "bit_size": 2,
+        "description": "Port x configuration bits (x = 13)",
+        "name": "CTL13"
+      },
+      {
+        "bit_offset": 24,
+        "bit_size": 2,
+        "description": "Port x mode bits (x = 14)",
+        "name": "MD14"
+      },
+      {
+        "bit_offset": 26,
+        "bit_size": 2,
+        "description": "Port x configuration bits (x = 14)",
+        "name": "CTL14"
+      },
+      {
+        "bit_offset": 28,
+        "bit_size": 2,
+        "description": "Port x mode bits (x = 15)",
+        "name": "MD15"
+      },
+      {
+        "bit_offset": 30,
+        "bit_size": 2,
+        "description": "Port x configuration bits (x = 15)",
+        "name": "CTL15"
+      }
+    ]
+  },
+  "fieldset/ISTAT": {
+    "description": "Port input status register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Port input status",
+        "name": "ISTAT0"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Port input status",
+        "name": "ISTAT1"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Port input status",
+        "name": "ISTAT2"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Port input status",
+        "name": "ISTAT3"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "Port input status",
+        "name": "ISTAT4"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "Port input status",
+        "name": "ISTAT5"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "Port input status",
+        "name": "ISTAT6"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Port input status",
+        "name": "ISTAT7"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "Port input status",
+        "name": "ISTAT8"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "Port input status",
+        "name": "ISTAT9"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "Port input status",
+        "name": "ISTAT10"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "description": "Port input status",
+        "name": "ISTAT11"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "description": "Port input status",
+        "name": "ISTAT12"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "description": "Port input status",
+        "name": "ISTAT13"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "description": "Port input status",
+        "name": "ISTAT14"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "Port input status",
+        "name": "ISTAT15"
+      }
+    ]
+  },
+  "fieldset/LOCK": {
+    "description": "GPIO port configuration lock register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Port Lock bit 0",
+        "name": "LK0"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Port Lock bit 1",
+        "name": "LK1"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Port Lock bit 2",
+        "name": "LK2"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Port Lock bit 3",
+        "name": "LK3"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "Port Lock bit 4",
+        "name": "LK4"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "Port Lock bit 5",
+        "name": "LK5"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "Port Lock bit 6",
+        "name": "LK6"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Port Lock bit 7",
+        "name": "LK7"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "Port Lock bit 8",
+        "name": "LK8"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "Port Lock bit 9",
+        "name": "LK9"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "Port Lock bit 10",
+        "name": "LK10"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "description": "Port Lock bit 11",
+        "name": "LK11"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "description": "Port Lock bit 12",
+        "name": "LK12"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "description": "Port Lock bit 13",
+        "name": "LK13"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "description": "Port Lock bit 14",
+        "name": "LK14"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "Port Lock bit 15",
+        "name": "LK15"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "description": "Lock sequence key",
+        "name": "LKK"
+      }
+    ]
+  },
+  "fieldset/OCTL": {
+    "description": "Port output control register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Port output control",
+        "name": "OCTL0"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Port output control",
+        "name": "OCTL1"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Port output control",
+        "name": "OCTL2"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Port output control",
+        "name": "OCTL3"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "Port output control",
+        "name": "OCTL4"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "Port output control",
+        "name": "OCTL5"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "Port output control",
+        "name": "OCTL6"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Port output control",
+        "name": "OCTL7"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "Port output control",
+        "name": "OCTL8"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "Port output control",
+        "name": "OCTL9"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "Port output control",
+        "name": "OCTL10"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "description": "Port output control",
+        "name": "OCTL11"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "description": "Port output control",
+        "name": "OCTL12"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "description": "Port output control",
+        "name": "OCTL13"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "description": "Port output control",
+        "name": "OCTL14"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "Port output control",
+        "name": "OCTL15"
+      }
+    ]
+  },
+  "fieldset/SPD": {
+    "description": "Port bit speed register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Port 0 output max speed bits",
+        "name": "SPD0"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Port 1 output max speed bits",
+        "name": "SPD1"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Port 2 output max speed bits",
+        "name": "SPD2"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Port 3 output max speed bits",
+        "name": "SPD3"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "Port 4 output max speed bits",
+        "name": "SPD4"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "Port 5 output max speed bits",
+        "name": "SPD5"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "Port 6 output max speed bits",
+        "name": "SPD6"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Port 7 output max speed bits",
+        "name": "SPD7"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "Port 8 output max speed bits",
+        "name": "SPD8"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "Port 9 output max speed bits",
+        "name": "SPD9"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "Port 10 output max speed bits",
+        "name": "SPD10"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "description": "Port 11 output max speed bits",
+        "name": "SPD11"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "description": "Port 12 output max speed bits",
+        "name": "SPD12"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "description": "Port 13 output max speed bits",
+        "name": "SPD13"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "description": "Port 14 output max speed bits",
+        "name": "SPD14"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "Port 15 output max speed bits",
+        "name": "SPD15"
+      }
+    ]
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "block/OB": {
+    "items": [
+      {
+        "bit_size": 16,
+        "byte_offset": 0,
+        "name": "OB_SPC"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 2,
+        "name": "OB_USER"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 4,
+        "name": "OB_DATA1"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 6,
+        "name": "OB_DATA2"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 8,
+        "name": "OB_WP0"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 10,
+        "name": "OB_WP1"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 12,
+        "name": "OB_WP2"
+      },
+      {
+        "bit_size": 16,
+        "byte_offset": 14,
+        "name": "OB_WP3"
+      }
+    ]
+  }
+}

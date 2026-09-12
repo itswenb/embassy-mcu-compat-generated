@@ -1,0 +1,172 @@
+{
+  "block/CTC": {
+    "items": [
+      {
+        "byte_offset": 0,
+        "fieldset": "CTC_CTL0",
+        "name": "CTC_CTL0"
+      },
+      {
+        "byte_offset": 4,
+        "fieldset": "CTC_CTL1",
+        "name": "CTC_CTL1"
+      },
+      {
+        "byte_offset": 8,
+        "fieldset": "CTC_STAT",
+        "name": "CTC_STAT"
+      },
+      {
+        "byte_offset": 12,
+        "fieldset": "CTC_INTC",
+        "name": "CTC_INTC"
+      }
+    ]
+  },
+  "fieldset/CTC_CTL0": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "CTC_CTL0_CKOKIE"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "CTC_CTL0_CKWARNIE"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "CTC_CTL0_ERRIE"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "name": "CTC_CTL0_EREFIE"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "name": "CTC_CTL0_CNTEN"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "name": "CTC_CTL0_AUTOTRIM"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "name": "CTC_CTL0_SWREFPUL"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 6,
+        "name": "CTC_CTL0_TRIMVALUE"
+      }
+    ]
+  },
+  "fieldset/CTC_CTL1": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "name": "CTC_CTL1_RLVALUE"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 8,
+        "name": "CTC_CTL1_CKLIM"
+      },
+      {
+        "bit_offset": 24,
+        "bit_size": 3,
+        "name": "CTC_CTL1_REFPSC"
+      },
+      {
+        "bit_offset": 28,
+        "bit_size": 2,
+        "name": "CTC_CTL1_REFSEL"
+      },
+      {
+        "bit_offset": 31,
+        "bit_size": 1,
+        "name": "CTC_CTL1_REFPOL"
+      }
+    ]
+  },
+  "fieldset/CTC_INTC": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "CTC_INTC_CKOKIC"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "CTC_INTC_CKWARNIC"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "CTC_INTC_ERRIC"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "name": "CTC_INTC_EREFIC"
+      }
+    ]
+  },
+  "fieldset/CTC_STAT": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "CTC_STAT_CKOKIF"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "CTC_STAT_CKWARNIF"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "CTC_STAT_ERRIF"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "name": "CTC_STAT_EREFIF"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "name": "CTC_STAT_CKERR"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "name": "CTC_STAT_REFMISS"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "name": "CTC_STAT_TRIMERR"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "name": "CTC_STAT_REFDIR"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 16,
+        "name": "CTC_STAT_REFCAP"
+      }
+    ]
+  }
+}

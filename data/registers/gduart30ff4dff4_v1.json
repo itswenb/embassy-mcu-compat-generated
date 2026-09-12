@@ -1,0 +1,673 @@
+{
+  "block/GD_MERGED_5830DC39A4B2": {
+    "items": [
+      {
+        "access": "Read",
+        "byte_offset": 0,
+        "description": "Status register 0",
+        "fieldset": "GD_MERGED_5830DC39A4B2_SVD_STAT0",
+        "name": "STAT0"
+      },
+      {
+        "byte_offset": 0,
+        "fieldset": "GD_MERGED_5830DC39A4B2_FW_USART_STAT0",
+        "name": "USART_STAT0"
+      },
+      {
+        "byte_offset": 4,
+        "description": "Data register",
+        "fieldset": "GD_MERGED_5830DC39A4B2_SVD_DATA",
+        "name": "DATA"
+      },
+      {
+        "byte_offset": 4,
+        "fieldset": "GD_MERGED_5830DC39A4B2_FW_USART_DATA",
+        "name": "USART_DATA"
+      },
+      {
+        "byte_offset": 8,
+        "description": "Baud rate register",
+        "fieldset": "GD_MERGED_5830DC39A4B2_SVD_BAUD",
+        "name": "BAUD"
+      },
+      {
+        "byte_offset": 8,
+        "fieldset": "GD_MERGED_5830DC39A4B2_FW_USART_BAUD",
+        "name": "USART_BAUD"
+      },
+      {
+        "byte_offset": 12,
+        "description": "Control register 0",
+        "fieldset": "GD_MERGED_5830DC39A4B2_SVD_CTL0",
+        "name": "CTL0"
+      },
+      {
+        "byte_offset": 12,
+        "fieldset": "GD_MERGED_5830DC39A4B2_FW_USART_CTL0",
+        "name": "USART_CTL0"
+      },
+      {
+        "byte_offset": 16,
+        "description": "Control register 1",
+        "fieldset": "GD_MERGED_5830DC39A4B2_SVD_CTL1",
+        "name": "CTL1"
+      },
+      {
+        "byte_offset": 16,
+        "fieldset": "GD_MERGED_5830DC39A4B2_FW_USART_CTL1",
+        "name": "USART_CTL1"
+      },
+      {
+        "byte_offset": 20,
+        "description": "Control register 2",
+        "fieldset": "GD_MERGED_5830DC39A4B2_SVD_CTL2",
+        "name": "CTL2"
+      },
+      {
+        "byte_offset": 20,
+        "fieldset": "GD_MERGED_5830DC39A4B2_FW_USART_CTL2",
+        "name": "USART_CTL2"
+      },
+      {
+        "byte_offset": 28,
+        "description": "Guard time and prescaler register",
+        "fieldset": "GD_MERGED_5830DC39A4B2_SVD_GP",
+        "name": "GP"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_5830DC39A4B2_FW_USART_BAUD": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 4,
+        "name": "USART_BAUD_FRADIV"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 12,
+        "name": "USART_BAUD_INTDIV"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_5830DC39A4B2_FW_USART_CTL0": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "USART_CTL0_SBKCMD"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "USART_CTL0_RWU"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "USART_CTL0_REN"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "name": "USART_CTL0_TEN"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "name": "USART_CTL0_IDLEIE"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "name": "USART_CTL0_RBNEIE"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "name": "USART_CTL0_TCIE"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "name": "USART_CTL0_TBEIE"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "name": "USART_CTL0_PERRIE"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "name": "USART_CTL0_PM"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "name": "USART_CTL0_PCEN"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "name": "USART_CTL0_WM"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "name": "USART_CTL0_WL"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "name": "USART_CTL0_UEN"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_5830DC39A4B2_FW_USART_CTL1": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 4,
+        "name": "USART_CTL1_ADDR"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "name": "USART_CTL1_LBLEN"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "name": "USART_CTL1_LBDIE"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "name": "USART_CTL1_CLEN"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "name": "USART_CTL1_CPH"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "name": "USART_CTL1_CPL"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "name": "USART_CTL1_CKEN"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 2,
+        "name": "USART_CTL1_STB"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "name": "USART_CTL1_LMEN"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_5830DC39A4B2_FW_USART_CTL2": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "USART_CTL2_ERRIE"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "USART_CTL2_IREN"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "USART_CTL2_IRLP"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "name": "USART_CTL2_HDEN"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "name": "USART_CTL2_NKEN"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "name": "USART_CTL2_SCEN"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "name": "USART_CTL2_DENR"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "name": "USART_CTL2_DENT"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "name": "USART_CTL2_RTSEN"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "name": "USART_CTL2_CTSEN"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "name": "USART_CTL2_CTSIE"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_5830DC39A4B2_FW_USART_DATA": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 9,
+        "name": "USART_DATA_DATA"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_5830DC39A4B2_FW_USART_STAT0": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "USART_STAT0_PERR"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "USART_STAT0_FERR"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "USART_STAT0_NERR"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "name": "USART_STAT0_ORERR"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "name": "USART_STAT0_IDLEF"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "name": "USART_STAT0_RBNE"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "name": "USART_STAT0_TC"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "name": "USART_STAT0_TBE"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "name": "USART_STAT0_LBDF"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "name": "USART_STAT0_CTSF"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_5830DC39A4B2_SVD_BAUD": {
+    "description": "Baud rate register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 4,
+        "description": "Fraction part of baud-rate divider",
+        "name": "FRADIV"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 12,
+        "description": "Integer part of baud-rate divider",
+        "name": "INTDIV"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_5830DC39A4B2_SVD_CTL0": {
+    "description": "Control register 0",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Send break command",
+        "name": "SBKCMD"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Receiver wakeup from mute mode",
+        "name": "RWU"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Receiver enable",
+        "name": "REN"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Transmitter enable",
+        "name": "TEN"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "IDLE line detected interrupt enable",
+        "name": "IDLEIE"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "Read data buffer not empty interrupt and overrun error interrupt enable",
+        "name": "RBNEIE"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "Transmission complete interrupt enable",
+        "name": "TCIE"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Transmitter buffer empty interrupt enable",
+        "name": "TBEIE"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "Parity error interrupt enable",
+        "name": "PERRIE"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "Parity mode",
+        "name": "PM"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "Parity check function enable",
+        "name": "PCEN"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "description": "Wakeup method in mute mode",
+        "name": "WM"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "description": "Word length",
+        "name": "WL"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "description": "USART enable",
+        "name": "UEN"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_5830DC39A4B2_SVD_CTL1": {
+    "description": "Control register 1",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 4,
+        "description": "Address of the USART",
+        "name": "ADDR"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "LIN break frame length",
+        "name": "LBLEN"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "LIN break detection interrupt enable",
+        "name": "LBDIE"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "CK Length",
+        "name": "CLEN"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "Clock phase",
+        "name": "CPH"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "Clock polarity",
+        "name": "CPL"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "description": "CK pin enable",
+        "name": "CKEN"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 2,
+        "description": "STOP bits length",
+        "name": "STB"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "description": "LIN mode enable",
+        "name": "LMEN"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_5830DC39A4B2_SVD_CTL2": {
+    "description": "Control register 2",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Error interrupt enable",
+        "name": "ERRIE"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "IrDA mode enable",
+        "name": "IREN"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "IrDA low-power",
+        "name": "IRLP"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Half-duplex selection",
+        "name": "HDEN"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "Smartcard NACK enable",
+        "name": "NKEN"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "Smartcard mode enable",
+        "name": "SCEN"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "DMA request enable for reception",
+        "name": "DENR"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "DMA request enable for transmission",
+        "name": "DENT"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "RTS enable",
+        "name": "RTSEN"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "CTS enable",
+        "name": "CTSEN"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "CTS interrupt enable",
+        "name": "CTSIE"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "description": "One sample bit method enable",
+        "name": "OSB"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_5830DC39A4B2_SVD_DATA": {
+    "description": "Data register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 9,
+        "description": "Transmit or read data value",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_5830DC39A4B2_SVD_GP": {
+    "description": "Guard time and prescaler register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "Prescaler value",
+        "name": "PSC"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 8,
+        "description": "Guard time value in Smartcard mode",
+        "name": "GUAT"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_5830DC39A4B2_SVD_STAT0": {
+    "description": "Status register 0",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Parity error flag",
+        "name": "PERR"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Frame error flag",
+        "name": "FERR"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Noise error flag",
+        "name": "NERR"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Overrun error",
+        "name": "ORERR"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "IDLE frame detected flag",
+        "name": "IDLEF"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "Read data buffer not empty",
+        "name": "RBNE"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "Transmission complete",
+        "name": "TC"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Transmit data buffer empty",
+        "name": "TBE"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "LIN break detection flag",
+        "name": "LBDF"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "CTS change flag",
+        "name": "CTSF"
+      }
+    ]
+  }
+}

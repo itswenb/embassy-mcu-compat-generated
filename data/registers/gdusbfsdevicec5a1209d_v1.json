@@ -1,0 +1,1631 @@
+{
+  "block/USBFS_DEVICE": {
+    "description": "USB on the go full speed device",
+    "items": [
+      {
+        "byte_offset": 0,
+        "description": "device configuration register (DCFG)",
+        "fieldset": "DCFG",
+        "name": "DCFG"
+      },
+      {
+        "byte_offset": 4,
+        "description": "device control register (DCTL)",
+        "fieldset": "DCTL",
+        "name": "DCTL"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 8,
+        "description": "device status register (DSTAT)",
+        "fieldset": "DSTAT",
+        "name": "DSTAT"
+      },
+      {
+        "byte_offset": 16,
+        "description": "device IN endpoint common interrupt mask register (DIEPINTEN)",
+        "fieldset": "DIEPINTEN",
+        "name": "DIEPINTEN"
+      },
+      {
+        "byte_offset": 20,
+        "description": "device OUT endpoint common interrupt enable register (DOEPINTEN)",
+        "fieldset": "DOEPINTEN",
+        "name": "DOEPINTEN"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 24,
+        "description": "device all endpoints interrupt register (DAEPINT)",
+        "fieldset": "DAEPINT",
+        "name": "DAEPINT"
+      },
+      {
+        "byte_offset": 28,
+        "description": "Device all endpoints interrupt enable register (DAEPINTEN)",
+        "fieldset": "DAEPINTEN",
+        "name": "DAEPINTEN"
+      },
+      {
+        "byte_offset": 40,
+        "description": "device VBUS discharge time register",
+        "fieldset": "DVBUSDT",
+        "name": "DVBUSDT"
+      },
+      {
+        "byte_offset": 44,
+        "description": "device VBUS pulsing time register",
+        "fieldset": "DVBUSPT",
+        "name": "DVBUSPT"
+      },
+      {
+        "byte_offset": 52,
+        "description": "device IN endpoint FIFO empty interrupt enable register",
+        "fieldset": "DIEPFEINTEN",
+        "name": "DIEPFEINTEN"
+      },
+      {
+        "byte_offset": 256,
+        "description": "device IN endpoint 0 control register (DIEP0CTL)",
+        "fieldset": "DIEP0CTL",
+        "name": "DIEP0CTL"
+      },
+      {
+        "byte_offset": 264,
+        "description": "device endpoint-0 interrupt register",
+        "fieldset": "DIEP0INTF",
+        "name": "DIEP0INTF"
+      },
+      {
+        "byte_offset": 272,
+        "description": "device IN endpoint-0 transfer length register",
+        "fieldset": "DIEP0LEN",
+        "name": "DIEP0LEN"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 280,
+        "description": "device IN endpoint 0 transmit FIFO status register",
+        "fieldset": "DIEP0TFSTAT",
+        "name": "DIEP0TFSTAT"
+      },
+      {
+        "byte_offset": 288,
+        "description": "device in endpoint-1 control register",
+        "fieldset": "DIEP1CTL",
+        "name": "DIEP1CTL"
+      },
+      {
+        "byte_offset": 296,
+        "description": "device endpoint-1 interrupt register",
+        "fieldset": "DIEP1INTF",
+        "name": "DIEP1INTF"
+      },
+      {
+        "byte_offset": 304,
+        "description": "device IN endpoint-1 transfer length register",
+        "fieldset": "DIEP1LEN",
+        "name": "DIEP1LEN"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 312,
+        "description": "device IN endpoint 1 transmit FIFO status register",
+        "fieldset": "DIEP1TFSTAT",
+        "name": "DIEP1TFSTAT"
+      },
+      {
+        "byte_offset": 320,
+        "description": "device endpoint-2 control register",
+        "fieldset": "DIEP2CTL",
+        "name": "DIEP2CTL"
+      },
+      {
+        "byte_offset": 328,
+        "description": "device endpoint-2 interrupt register",
+        "fieldset": "DIEP2INTF",
+        "name": "DIEP2INTF"
+      },
+      {
+        "byte_offset": 336,
+        "description": "device IN endpoint-2 transfer length register",
+        "fieldset": "DIEP2LEN",
+        "name": "DIEP2LEN"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 344,
+        "description": "device IN endpoint 2 transmit FIFO status register",
+        "fieldset": "DIEP2TFSTAT",
+        "name": "DIEP2TFSTAT"
+      },
+      {
+        "byte_offset": 352,
+        "description": "device endpoint-3 control register",
+        "fieldset": "DIEP3CTL",
+        "name": "DIEP3CTL"
+      },
+      {
+        "byte_offset": 360,
+        "description": "device endpoint-3 interrupt register",
+        "fieldset": "DIEP3INTF",
+        "name": "DIEP3INTF"
+      },
+      {
+        "byte_offset": 368,
+        "description": "device IN endpoint-3 transfer length register",
+        "fieldset": "DIEP3LEN",
+        "name": "DIEP3LEN"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 376,
+        "description": "device IN endpoint 3 transmit FIFO status register",
+        "fieldset": "DIEP3TFSTAT",
+        "name": "DIEP3TFSTAT"
+      },
+      {
+        "byte_offset": 768,
+        "description": "device endpoint-0 control register",
+        "fieldset": "DOEP0CTL",
+        "name": "DOEP0CTL"
+      },
+      {
+        "byte_offset": 776,
+        "description": "device out endpoint-0 interrupt flag register",
+        "fieldset": "DOEP0INTF",
+        "name": "DOEP0INTF"
+      },
+      {
+        "byte_offset": 784,
+        "description": "device OUT endpoint-0 transfer length register",
+        "fieldset": "DOEP0LEN",
+        "name": "DOEP0LEN"
+      },
+      {
+        "byte_offset": 800,
+        "description": "device endpoint-1 control register",
+        "fieldset": "DOEP1CTL",
+        "name": "DOEP1CTL"
+      },
+      {
+        "byte_offset": 808,
+        "description": "device out endpoint-1 interrupt flag register",
+        "fieldset": "DOEP1INTF",
+        "name": "DOEP1INTF"
+      },
+      {
+        "byte_offset": 816,
+        "description": "device OUT endpoint-1 transfer length register",
+        "fieldset": "DOEP1LEN",
+        "name": "DOEP1LEN"
+      },
+      {
+        "byte_offset": 832,
+        "description": "device endpoint-2 control register",
+        "fieldset": "DOEP2CTL",
+        "name": "DOEP2CTL"
+      },
+      {
+        "byte_offset": 840,
+        "description": "device out endpoint-2 interrupt flag register",
+        "fieldset": "DOEP2INTF",
+        "name": "DOEP2INTF"
+      },
+      {
+        "byte_offset": 848,
+        "description": "device OUT endpoint-2 transfer length register",
+        "fieldset": "DOEP2LEN",
+        "name": "DOEP2LEN"
+      },
+      {
+        "byte_offset": 864,
+        "description": "device endpoint-3 control register",
+        "fieldset": "DOEP3CTL",
+        "name": "DOEP3CTL"
+      },
+      {
+        "byte_offset": 872,
+        "description": "device out endpoint-3 interrupt flag register",
+        "fieldset": "DOEP3INTF",
+        "name": "DOEP3INTF"
+      },
+      {
+        "byte_offset": 880,
+        "description": "device OUT endpoint-3 transfer length register",
+        "fieldset": "DOEP3LEN",
+        "name": "DOEP3LEN"
+      }
+    ]
+  },
+  "fieldset/DAEPINT": {
+    "description": "device all endpoints interrupt register (DAEPINT)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 4,
+        "description": "Device all IN endpoint interrupt bits",
+        "name": "IEPITB"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 4,
+        "description": "Device all OUT endpoint interrupt bits",
+        "name": "OEPITB"
+      }
+    ]
+  },
+  "fieldset/DAEPINTEN": {
+    "description": "Device all endpoints interrupt enable register (DAEPINTEN)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 4,
+        "description": "IN EP interrupt interrupt enable bits",
+        "name": "IEPIE"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 4,
+        "description": "OUT endpoint interrupt enable bits",
+        "name": "OEPIE"
+      }
+    ]
+  },
+  "fieldset/DCFG": {
+    "description": "device configuration register (DCFG)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 2,
+        "description": "Device speed",
+        "name": "DS"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Non-zero-length status OUT handshake",
+        "name": "NZLSOH"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 7,
+        "description": "Device address",
+        "name": "DAR"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 2,
+        "description": "end of periodic frame time",
+        "name": "EOPFT"
+      }
+    ]
+  },
+  "fieldset/DCTL": {
+    "description": "device control register (DCTL)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Remote wakeup",
+        "name": "RWKUP"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Soft disconnect",
+        "name": "SD"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Global IN NAK status",
+        "name": "GINS"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Global OUT NAK status",
+        "name": "GONS"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Set global IN NAK",
+        "name": "SGINAK"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "Clear global IN NAK",
+        "name": "CGINAK"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "Set global OUT NAK",
+        "name": "SGONAK"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "Clear global OUT NAK",
+        "name": "CGONAK"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "description": "Power-on initialization flag",
+        "name": "POIF"
+      }
+    ]
+  },
+  "fieldset/DIEP0CTL": {
+    "description": "device IN endpoint 0 control register (DIEP0CTL)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 2,
+        "description": "Maximum packet length",
+        "name": "MPL"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "endpoint active",
+        "name": "EPACT"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 1,
+        "description": "NAK status",
+        "name": "NAKS"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 2,
+        "description": "Endpoint type",
+        "name": "EPTYPE"
+      },
+      {
+        "bit_offset": 21,
+        "bit_size": 1,
+        "description": "STALL handshake",
+        "name": "STALL"
+      },
+      {
+        "bit_offset": 22,
+        "bit_size": 4,
+        "description": "TxFIFO number",
+        "name": "TXFNUM"
+      },
+      {
+        "bit_offset": 26,
+        "bit_size": 1,
+        "description": "Clear NAK",
+        "name": "CNAK"
+      },
+      {
+        "bit_offset": 27,
+        "bit_size": 1,
+        "description": "Set NAK",
+        "name": "SNAK"
+      },
+      {
+        "bit_offset": 30,
+        "bit_size": 1,
+        "description": "Endpoint disable",
+        "name": "EPD"
+      },
+      {
+        "bit_offset": 31,
+        "bit_size": 1,
+        "description": "Endpoint enable",
+        "name": "EPEN"
+      }
+    ]
+  },
+  "fieldset/DIEP0INTF": {
+    "description": "device endpoint-0 interrupt register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Transfer finished",
+        "name": "TF"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Endpoint finished",
+        "name": "EPDIS"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Control in timeout interrupt",
+        "name": "CITO"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "Endpoint Tx FIFO underrun",
+        "name": "EPTXFUD"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "IN endpoint NAK effective",
+        "name": "IEPNE"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Transmit FIFO empty",
+        "name": "TXFE"
+      }
+    ]
+  },
+  "fieldset/DIEP0LEN": {
+    "description": "device IN endpoint-0 transfer length register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 7,
+        "description": "Transfer length",
+        "name": "TLEN"
+      },
+      {
+        "bit_offset": 19,
+        "bit_size": 2,
+        "description": "Packet count",
+        "name": "PCNT"
+      }
+    ]
+  },
+  "fieldset/DIEP0TFSTAT": {
+    "description": "device IN endpoint 0 transmit FIFO status register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "IN endpoint TxFIFO space remaining",
+        "name": "IEPTFS"
+      }
+    ]
+  },
+  "fieldset/DIEP1CTL": {
+    "description": "device in endpoint-1 control register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 11,
+        "description": "maximum packet length",
+        "name": "MPL"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "Endpoint active",
+        "name": "EPACT"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "description": "EOFRM/DPID",
+        "name": "EOFRM_DPID"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 1,
+        "description": "NAK status",
+        "name": "NAKS"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 2,
+        "description": "Endpoint type",
+        "name": "EPTYPE"
+      },
+      {
+        "bit_offset": 21,
+        "bit_size": 1,
+        "description": "STALL handshake",
+        "name": "STALL"
+      },
+      {
+        "bit_offset": 22,
+        "bit_size": 4,
+        "description": "Tx FIFO number",
+        "name": "TXFNUM"
+      },
+      {
+        "bit_offset": 26,
+        "bit_size": 1,
+        "description": "Clear NAK",
+        "name": "CNAK"
+      },
+      {
+        "bit_offset": 27,
+        "bit_size": 1,
+        "description": "Set NAK",
+        "name": "SNAK"
+      },
+      {
+        "bit_offset": 28,
+        "bit_size": 1,
+        "description": "SD0PID/SEVNFRM",
+        "name": "SD0PID_SEVENFRM"
+      },
+      {
+        "bit_offset": 29,
+        "bit_size": 1,
+        "description": "Set DATA1 PID/Set odd frame",
+        "name": "SD1PID_SODDFRM"
+      },
+      {
+        "bit_offset": 30,
+        "bit_size": 1,
+        "description": "Endpoint disable",
+        "name": "EPD"
+      },
+      {
+        "bit_offset": 31,
+        "bit_size": 1,
+        "description": "Endpoint enable",
+        "name": "EPEN"
+      }
+    ]
+  },
+  "fieldset/DIEP1INTF": {
+    "description": "device endpoint-1 interrupt register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Transfer finished",
+        "name": "TF"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Endpoint finished",
+        "name": "EPDIS"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Control in timeout interrupt",
+        "name": "CITO"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "Endpoint Tx FIFO underrun",
+        "name": "EPTXFUD"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "IN endpoint NAK effective",
+        "name": "IEPNE"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Transmit FIFO empty",
+        "name": "TXFE"
+      }
+    ]
+  },
+  "fieldset/DIEP1LEN": {
+    "description": "device IN endpoint-1 transfer length register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 19,
+        "description": "Transfer length",
+        "name": "TLEN"
+      },
+      {
+        "bit_offset": 19,
+        "bit_size": 10,
+        "description": "Packet count",
+        "name": "PCNT"
+      }
+    ]
+  },
+  "fieldset/DIEP1TFSTAT": {
+    "description": "device IN endpoint 1 transmit FIFO status register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "IN endpoint TxFIFO space remaining",
+        "name": "IEPTFS"
+      }
+    ]
+  },
+  "fieldset/DIEP2CTL": {
+    "description": "device endpoint-2 control register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 11,
+        "description": "maximum packet length",
+        "name": "MPL"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "Endpoint active",
+        "name": "EPACT"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "description": "EOFRM/DPID",
+        "name": "EOFRM_DPID"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 1,
+        "description": "NAK status",
+        "name": "NAKS"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 2,
+        "description": "Endpoint type",
+        "name": "EPTYPE"
+      },
+      {
+        "bit_offset": 21,
+        "bit_size": 1,
+        "description": "STALL handshake",
+        "name": "STALL"
+      },
+      {
+        "bit_offset": 22,
+        "bit_size": 4,
+        "description": "Tx FIFO number",
+        "name": "TXFNUM"
+      },
+      {
+        "bit_offset": 26,
+        "bit_size": 1,
+        "description": "Clear NAK",
+        "name": "CNAK"
+      },
+      {
+        "bit_offset": 27,
+        "bit_size": 1,
+        "description": "Set NAK",
+        "name": "SNAK"
+      },
+      {
+        "bit_offset": 28,
+        "bit_size": 1,
+        "description": "SD0PID/SEVNFRM",
+        "name": "SD0PID_SEVENFRM"
+      },
+      {
+        "bit_offset": 29,
+        "bit_size": 1,
+        "description": "Set DATA1 PID/Set odd frame",
+        "name": "SD1PID_SODDFRM"
+      },
+      {
+        "bit_offset": 30,
+        "bit_size": 1,
+        "description": "Endpoint disable",
+        "name": "EPD"
+      },
+      {
+        "bit_offset": 31,
+        "bit_size": 1,
+        "description": "Endpoint enable",
+        "name": "EPEN"
+      }
+    ]
+  },
+  "fieldset/DIEP2INTF": {
+    "description": "device endpoint-2 interrupt register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Transfer finished",
+        "name": "TF"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Endpoint finished",
+        "name": "EPDIS"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Control in timeout interrupt",
+        "name": "CITO"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "Endpoint Tx FIFO underrun",
+        "name": "EPTXFUD"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "IN endpoint NAK effective",
+        "name": "IEPNE"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Transmit FIFO empty",
+        "name": "TXFE"
+      }
+    ]
+  },
+  "fieldset/DIEP2LEN": {
+    "description": "device IN endpoint-2 transfer length register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 19,
+        "description": "Transfer length",
+        "name": "TLEN"
+      },
+      {
+        "bit_offset": 19,
+        "bit_size": 10,
+        "description": "Packet count",
+        "name": "PCNT"
+      }
+    ]
+  },
+  "fieldset/DIEP2TFSTAT": {
+    "description": "device IN endpoint 2 transmit FIFO status register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "IN endpoint TxFIFO space remaining",
+        "name": "IEPTFS"
+      }
+    ]
+  },
+  "fieldset/DIEP3CTL": {
+    "description": "device endpoint-3 control register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 11,
+        "description": "maximum packet length",
+        "name": "MPL"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "Endpoint active",
+        "name": "EPACT"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "description": "EOFRM/DPID",
+        "name": "EOFRM_DPID"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 1,
+        "description": "NAK status",
+        "name": "NAKS"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 2,
+        "description": "Endpoint type",
+        "name": "EPTYPE"
+      },
+      {
+        "bit_offset": 21,
+        "bit_size": 1,
+        "description": "STALL handshake",
+        "name": "STALL"
+      },
+      {
+        "bit_offset": 22,
+        "bit_size": 4,
+        "description": "Tx FIFO number",
+        "name": "TXFNUM"
+      },
+      {
+        "bit_offset": 26,
+        "bit_size": 1,
+        "description": "Clear NAK",
+        "name": "CNAK"
+      },
+      {
+        "bit_offset": 27,
+        "bit_size": 1,
+        "description": "Set NAK",
+        "name": "SNAK"
+      },
+      {
+        "bit_offset": 28,
+        "bit_size": 1,
+        "description": "SD0PID/SEVNFRM",
+        "name": "SD0PID_SEVENFRM"
+      },
+      {
+        "bit_offset": 29,
+        "bit_size": 1,
+        "description": "Set DATA1 PID/Set odd frame",
+        "name": "SD1PID_SODDFRM"
+      },
+      {
+        "bit_offset": 30,
+        "bit_size": 1,
+        "description": "Endpoint disable",
+        "name": "EPD"
+      },
+      {
+        "bit_offset": 31,
+        "bit_size": 1,
+        "description": "Endpoint enable",
+        "name": "EPEN"
+      }
+    ]
+  },
+  "fieldset/DIEP3INTF": {
+    "description": "device endpoint-3 interrupt register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Transfer finished",
+        "name": "TF"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Endpoint finished",
+        "name": "EPDIS"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Control in timeout interrupt",
+        "name": "CITO"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "Endpoint Tx FIFO underrun",
+        "name": "EPTXFUD"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "IN endpoint NAK effective",
+        "name": "IEPNE"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Transmit FIFO empty",
+        "name": "TXFE"
+      }
+    ]
+  },
+  "fieldset/DIEP3LEN": {
+    "description": "device IN endpoint-3 transfer length register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 19,
+        "description": "Transfer length",
+        "name": "TLEN"
+      },
+      {
+        "bit_offset": 19,
+        "bit_size": 10,
+        "description": "Packet count",
+        "name": "PCNT"
+      }
+    ]
+  },
+  "fieldset/DIEP3TFSTAT": {
+    "description": "device IN endpoint 3 transmit FIFO status register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "IN endpoint TxFIFO space remaining",
+        "name": "IEPTFS"
+      }
+    ]
+  },
+  "fieldset/DIEPFEINTEN": {
+    "description": "device IN endpoint FIFO empty interrupt enable register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 4,
+        "description": "IN EP Tx FIFO empty interrupt enable bits",
+        "name": "IEPTXFEIE"
+      }
+    ]
+  },
+  "fieldset/DIEPINTEN": {
+    "description": "device IN endpoint common interrupt mask register (DIEPINTEN)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Transfer finished interrupt enable",
+        "name": "TFEN"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Endpoint disabled interrupt enable",
+        "name": "EPDISEN"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Control IN timeout condition interrupt enable (Non-isochronous endpoints)",
+        "name": "CITOEN"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "Endpoint Tx FIFO underrun interrupt enable bit",
+        "name": "EPTXFUDEN"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "IN endpoint NAK effective interrupt enable",
+        "name": "IEPNEEN"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Trabsmit FIFO empty interrupt enable",
+        "name": "TXFEEN"
+      }
+    ]
+  },
+  "fieldset/DOEP0CTL": {
+    "description": "device endpoint-0 control register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 2,
+        "description": "Maximum packet length",
+        "name": "MPL"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "Endpoint active",
+        "name": "EPACT"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 1,
+        "description": "NAK status",
+        "name": "NAKS"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 2,
+        "description": "Endpoint type",
+        "name": "EPTYPE"
+      },
+      {
+        "bit_offset": 20,
+        "bit_size": 1,
+        "description": "Snoop mode",
+        "name": "SNOOP"
+      },
+      {
+        "bit_offset": 21,
+        "bit_size": 1,
+        "description": "STALL handshake",
+        "name": "STALL"
+      },
+      {
+        "bit_offset": 26,
+        "bit_size": 1,
+        "description": "Clear NAK",
+        "name": "CNAK"
+      },
+      {
+        "bit_offset": 27,
+        "bit_size": 1,
+        "description": "Set NAK",
+        "name": "SNAK"
+      },
+      {
+        "bit_offset": 30,
+        "bit_size": 1,
+        "description": "Endpoint disable",
+        "name": "EPD"
+      },
+      {
+        "bit_offset": 31,
+        "bit_size": 1,
+        "description": "Endpoint enable",
+        "name": "EPEN"
+      }
+    ]
+  },
+  "fieldset/DOEP0INTF": {
+    "description": "device out endpoint-0 interrupt flag register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Transfer finished",
+        "name": "TF"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Endpoint disabled",
+        "name": "EPDIS"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Setup phase finished",
+        "name": "STPF"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "Endpoint Rx FIFO overrun",
+        "name": "EPRXFOVR"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "Back-to-back SETUP packets",
+        "name": "BTBSTP"
+      }
+    ]
+  },
+  "fieldset/DOEP0LEN": {
+    "description": "device OUT endpoint-0 transfer length register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 7,
+        "description": "Transfer length",
+        "name": "TLEN"
+      },
+      {
+        "bit_offset": 19,
+        "bit_size": 1,
+        "description": "Packet count",
+        "name": "PCNT"
+      },
+      {
+        "bit_offset": 29,
+        "bit_size": 2,
+        "description": "SETUP packet count",
+        "name": "STPCNT"
+      }
+    ]
+  },
+  "fieldset/DOEP1CTL": {
+    "description": "device endpoint-1 control register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 11,
+        "description": "maximum packet length",
+        "name": "MPL"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "Endpoint active",
+        "name": "EPACT"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "description": "EOFRM/DPID",
+        "name": "EOFRM_DPID"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 1,
+        "description": "NAK status",
+        "name": "NAKS"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 2,
+        "description": "Endpoint type",
+        "name": "EPTYPE"
+      },
+      {
+        "bit_offset": 20,
+        "bit_size": 1,
+        "description": "Snoop mode",
+        "name": "SNOOP"
+      },
+      {
+        "bit_offset": 21,
+        "bit_size": 1,
+        "description": "STALL handshake",
+        "name": "STALL"
+      },
+      {
+        "bit_offset": 26,
+        "bit_size": 1,
+        "description": "Clear NAK",
+        "name": "CNAK"
+      },
+      {
+        "bit_offset": 27,
+        "bit_size": 1,
+        "description": "Set NAK",
+        "name": "SNAK"
+      },
+      {
+        "bit_offset": 28,
+        "bit_size": 1,
+        "description": "SD0PID/SEVENFRM",
+        "name": "SD0PID_SEVENFRM"
+      },
+      {
+        "bit_offset": 29,
+        "bit_size": 1,
+        "description": "SD1PID/SODDFRM",
+        "name": "SD1PID_SODDFRM"
+      },
+      {
+        "bit_offset": 30,
+        "bit_size": 1,
+        "description": "Endpoint disable",
+        "name": "EPD"
+      },
+      {
+        "bit_offset": 31,
+        "bit_size": 1,
+        "description": "Endpoint enable",
+        "name": "EPEN"
+      }
+    ]
+  },
+  "fieldset/DOEP1INTF": {
+    "description": "device out endpoint-1 interrupt flag register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Transfer finished",
+        "name": "TF"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Endpoint disabled",
+        "name": "EPDIS"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Setup phase finished",
+        "name": "STPF"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "Endpoint Rx FIFO overrun",
+        "name": "EPRXFOVR"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "Back-to-back SETUP packets",
+        "name": "BTBSTP"
+      }
+    ]
+  },
+  "fieldset/DOEP1LEN": {
+    "description": "device OUT endpoint-1 transfer length register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 19,
+        "description": "Transfer length",
+        "name": "TLEN"
+      },
+      {
+        "bit_offset": 19,
+        "bit_size": 10,
+        "description": "Packet count",
+        "name": "PCNT"
+      },
+      {
+        "bit_offset": 29,
+        "bit_size": 2,
+        "description": "SETUP packet count/Received data PID",
+        "name": "STPCNT_RXDPID"
+      }
+    ]
+  },
+  "fieldset/DOEP2CTL": {
+    "description": "device endpoint-2 control register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 11,
+        "description": "maximum packet length",
+        "name": "MPL"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "Endpoint active",
+        "name": "EPACT"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "description": "EOFRM/DPID",
+        "name": "EOFRM_DPID"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 1,
+        "description": "NAK status",
+        "name": "NAKS"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 2,
+        "description": "Endpoint type",
+        "name": "EPTYPE"
+      },
+      {
+        "bit_offset": 20,
+        "bit_size": 1,
+        "description": "Snoop mode",
+        "name": "SNOOP"
+      },
+      {
+        "bit_offset": 21,
+        "bit_size": 1,
+        "description": "STALL handshake",
+        "name": "STALL"
+      },
+      {
+        "bit_offset": 26,
+        "bit_size": 1,
+        "description": "Clear NAK",
+        "name": "CNAK"
+      },
+      {
+        "bit_offset": 27,
+        "bit_size": 1,
+        "description": "Set NAK",
+        "name": "SNAK"
+      },
+      {
+        "bit_offset": 28,
+        "bit_size": 1,
+        "description": "SD0PID/SEVENFRM",
+        "name": "SD0PID_SEVENFRM"
+      },
+      {
+        "bit_offset": 29,
+        "bit_size": 1,
+        "description": "SD1PID/SODDFRM",
+        "name": "SD1PID_SODDFRM"
+      },
+      {
+        "bit_offset": 30,
+        "bit_size": 1,
+        "description": "Endpoint disable",
+        "name": "EPD"
+      },
+      {
+        "bit_offset": 31,
+        "bit_size": 1,
+        "description": "Endpoint enable",
+        "name": "EPEN"
+      }
+    ]
+  },
+  "fieldset/DOEP2INTF": {
+    "description": "device out endpoint-2 interrupt flag register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Transfer finished",
+        "name": "TF"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Endpoint disabled",
+        "name": "EPDIS"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Setup phase finished",
+        "name": "STPF"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "Endpoint Rx FIFO overrun",
+        "name": "EPRXFOVR"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "Back-to-back SETUP packets",
+        "name": "BTBSTP"
+      }
+    ]
+  },
+  "fieldset/DOEP2LEN": {
+    "description": "device OUT endpoint-2 transfer length register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 19,
+        "description": "Transfer length",
+        "name": "TLEN"
+      },
+      {
+        "bit_offset": 19,
+        "bit_size": 10,
+        "description": "Packet count",
+        "name": "PCNT"
+      },
+      {
+        "bit_offset": 29,
+        "bit_size": 2,
+        "description": "SETUP packet count/Received data PID",
+        "name": "STPCNT_RXDPID"
+      }
+    ]
+  },
+  "fieldset/DOEP3CTL": {
+    "description": "device endpoint-3 control register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 11,
+        "description": "maximum packet length",
+        "name": "MPL"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "Endpoint active",
+        "name": "EPACT"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "description": "EOFRM/DPID",
+        "name": "EOFRM_DPID"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 1,
+        "description": "NAK status",
+        "name": "NAKS"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 2,
+        "description": "Endpoint type",
+        "name": "EPTYPE"
+      },
+      {
+        "bit_offset": 20,
+        "bit_size": 1,
+        "description": "Snoop mode",
+        "name": "SNOOP"
+      },
+      {
+        "bit_offset": 21,
+        "bit_size": 1,
+        "description": "STALL handshake",
+        "name": "STALL"
+      },
+      {
+        "bit_offset": 26,
+        "bit_size": 1,
+        "description": "Clear NAK",
+        "name": "CNAK"
+      },
+      {
+        "bit_offset": 27,
+        "bit_size": 1,
+        "description": "Set NAK",
+        "name": "SNAK"
+      },
+      {
+        "bit_offset": 28,
+        "bit_size": 1,
+        "description": "SD0PID/SEVENFRM",
+        "name": "SD0PID_SEVENFRM"
+      },
+      {
+        "bit_offset": 29,
+        "bit_size": 1,
+        "description": "SD1PID/SODDFRM",
+        "name": "SD1PID_SODDFRM"
+      },
+      {
+        "bit_offset": 30,
+        "bit_size": 1,
+        "description": "Endpoint disable",
+        "name": "EPD"
+      },
+      {
+        "bit_offset": 31,
+        "bit_size": 1,
+        "description": "Endpoint enable",
+        "name": "EPEN"
+      }
+    ]
+  },
+  "fieldset/DOEP3INTF": {
+    "description": "device out endpoint-3 interrupt flag register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Transfer finished",
+        "name": "TF"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Endpoint disabled",
+        "name": "EPDIS"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Setup phase finished",
+        "name": "STPF"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "Endpoint Rx FIFO overrun",
+        "name": "EPRXFOVR"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "Back-to-back SETUP packets",
+        "name": "BTBSTP"
+      }
+    ]
+  },
+  "fieldset/DOEP3LEN": {
+    "description": "device OUT endpoint-3 transfer length register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 19,
+        "description": "Transfer length",
+        "name": "TLEN"
+      },
+      {
+        "bit_offset": 19,
+        "bit_size": 10,
+        "description": "Packet count",
+        "name": "PCNT"
+      },
+      {
+        "bit_offset": 29,
+        "bit_size": 2,
+        "description": "SETUP packet count/Received data PID",
+        "name": "STPCNT_RXDPID"
+      }
+    ]
+  },
+  "fieldset/DOEPINTEN": {
+    "description": "device OUT endpoint common interrupt enable register (DOEPINTEN)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Transfer finished interrupt enable",
+        "name": "TFEN"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Endpoint disabled interrupt enable",
+        "name": "EPDISEN"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "SETUP phase finished interrupt enable",
+        "name": "STPFEN"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "Endpoint Rx FIFO overrun interrupt enable",
+        "name": "EPRXFOVREN"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "Back-to-back SETUP packets interrupt enable",
+        "name": "BTBSTPEN"
+      }
+    ]
+  },
+  "fieldset/DSTAT": {
+    "description": "device status register (DSTAT)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Suspend status",
+        "name": "SPST"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 2,
+        "description": "Enumerated speed",
+        "name": "ES"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 14,
+        "description": "Frame number of the received SOF",
+        "name": "FNRSOF"
+      }
+    ]
+  },
+  "fieldset/DVBUSDT": {
+    "description": "device VBUS discharge time register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Device VBUS discharge time",
+        "name": "DVBUSDT"
+      }
+    ]
+  },
+  "fieldset/DVBUSPT": {
+    "description": "device VBUS pulsing time register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 12,
+        "description": "Device VBUS pulsing time",
+        "name": "DVBUSPT"
+      }
+    ]
+  }
+}

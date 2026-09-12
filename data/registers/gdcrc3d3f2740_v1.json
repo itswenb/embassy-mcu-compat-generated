@@ -1,0 +1,48 @@
+{
+  "block/CRC": {
+    "items": [
+      {
+        "byte_offset": 0,
+        "fieldset": "CRC_DATA",
+        "name": "CRC_DATA"
+      },
+      {
+        "byte_offset": 4,
+        "fieldset": "CRC_FDATA",
+        "name": "CRC_FDATA"
+      },
+      {
+        "byte_offset": 8,
+        "fieldset": "CRC_CTL",
+        "name": "CRC_CTL"
+      }
+    ]
+  },
+  "fieldset/CRC_CTL": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "CRC_CTL_RST"
+      }
+    ]
+  },
+  "fieldset/CRC_DATA": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "name": "CRC_DATA_DATA"
+      }
+    ]
+  },
+  "fieldset/CRC_FDATA": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "name": "CRC_FDATA_FDATA"
+      }
+    ]
+  }
+}

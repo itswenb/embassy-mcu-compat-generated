@@ -1,0 +1,143 @@
+{
+  "block/GD_MERGED_0BFD2B0913F8": {
+    "items": [
+      {
+        "access": "Write",
+        "byte_offset": 0,
+        "description": "Control register",
+        "fieldset": "GD_MERGED_0BFD2B0913F8_SVD_CTL",
+        "name": "CTL"
+      },
+      {
+        "byte_offset": 0,
+        "fieldset": "GD_MERGED_0BFD2B0913F8_FW_FWDGT_CTL",
+        "name": "FWDGT_CTL"
+      },
+      {
+        "byte_offset": 4,
+        "fieldset": "GD_MERGED_0BFD2B0913F8_FW_FWDGT_PSC",
+        "name": "FWDGT_PSC"
+      },
+      {
+        "byte_offset": 4,
+        "description": "Prescaler register",
+        "fieldset": "GD_MERGED_0BFD2B0913F8_SVD_PSC",
+        "name": "PSC"
+      },
+      {
+        "byte_offset": 8,
+        "fieldset": "GD_MERGED_0BFD2B0913F8_FW_FWDGT_RLD",
+        "name": "FWDGT_RLD"
+      },
+      {
+        "byte_offset": 8,
+        "description": "Reload register",
+        "fieldset": "GD_MERGED_0BFD2B0913F8_SVD_RLD",
+        "name": "RLD"
+      },
+      {
+        "byte_offset": 12,
+        "fieldset": "GD_MERGED_0BFD2B0913F8_FW_FWDGT_STAT",
+        "name": "FWDGT_STAT"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 12,
+        "description": "Status register",
+        "fieldset": "GD_MERGED_0BFD2B0913F8_SVD_STAT",
+        "name": "STAT"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_0BFD2B0913F8_FW_FWDGT_CTL": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "name": "FWDGT_CTL_CMD"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_0BFD2B0913F8_FW_FWDGT_PSC": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 3,
+        "name": "FWDGT_PSC_PSC"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_0BFD2B0913F8_FW_FWDGT_RLD": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 12,
+        "name": "FWDGT_RLD_RLD"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_0BFD2B0913F8_FW_FWDGT_STAT": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "FWDGT_STAT_PUD"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "FWDGT_STAT_RUD"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_0BFD2B0913F8_SVD_CTL": {
+    "description": "Control register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Key value",
+        "name": "CMD"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_0BFD2B0913F8_SVD_PSC": {
+    "description": "Prescaler register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 3,
+        "description": "Free watchdog timer prescaler selection",
+        "name": "PSC"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_0BFD2B0913F8_SVD_RLD": {
+    "description": "Reload register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 12,
+        "description": "Free watchdog timer counter reload value",
+        "name": "RLD"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_0BFD2B0913F8_SVD_STAT": {
+    "description": "Status register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Free watchdog timer prescaler value update",
+        "name": "PUD"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Free watchdog timer counter reload value update",
+        "name": "RUD"
+      }
+    ]
+  }
+}

@@ -1,0 +1,1402 @@
+{
+  "block/EXMC": {
+    "description": "External memory controller",
+    "items": [
+      {
+        "byte_offset": 0,
+        "description": "SRAM/NOR flash control register 0",
+        "fieldset": "SNCTL0",
+        "name": "SNCTL0"
+      },
+      {
+        "byte_offset": 4,
+        "description": "SRAM/NOR flash timing configuration register 0",
+        "fieldset": "SNTCFG0",
+        "name": "SNTCFG0"
+      },
+      {
+        "byte_offset": 8,
+        "description": "SRAM/NOR flash control register 1",
+        "fieldset": "SNCTL1",
+        "name": "SNCTL1"
+      },
+      {
+        "byte_offset": 12,
+        "description": "SRAM/NOR flash timing configuration register 1",
+        "fieldset": "SNTCFG1",
+        "name": "SNTCFG1"
+      },
+      {
+        "byte_offset": 16,
+        "description": "SRAM/NOR flash control register 2",
+        "fieldset": "SNCTL2",
+        "name": "SNCTL2"
+      },
+      {
+        "byte_offset": 20,
+        "description": "SRAM/NOR flash timing configuration register 2",
+        "fieldset": "SNTCFG2",
+        "name": "SNTCFG2"
+      },
+      {
+        "byte_offset": 24,
+        "description": "SRAM/NOR flash control register 3",
+        "fieldset": "SNCTL3",
+        "name": "SNCTL3"
+      },
+      {
+        "byte_offset": 28,
+        "description": "SRAM/NOR flash timing configuration register 3",
+        "fieldset": "SNTCFG3",
+        "name": "SNTCFG3"
+      },
+      {
+        "byte_offset": 96,
+        "description": "NAND flash/PC card control register 1",
+        "fieldset": "NPCTL1",
+        "name": "NPCTL1"
+      },
+      {
+        "byte_offset": 100,
+        "description": "NAND flash/PC card interrupt enable register 1",
+        "fieldset": "NPINTEN1",
+        "name": "NPINTEN1"
+      },
+      {
+        "byte_offset": 104,
+        "description": "NAND flash/PC card common space timing \t configuration register 1",
+        "fieldset": "NPCTCFG1",
+        "name": "NPCTCFG1"
+      },
+      {
+        "byte_offset": 108,
+        "description": "NAND flash/PC card attribute space timing \t configuration register 1",
+        "fieldset": "NPATCFG1",
+        "name": "NPATCFG1"
+      },
+      {
+        "byte_offset": 116,
+        "description": "NAND flash ECC register 1",
+        "fieldset": "NECC1",
+        "name": "NECC1"
+      },
+      {
+        "byte_offset": 128,
+        "description": "NAND flash/PC card control register 2",
+        "fieldset": "NPCTL2",
+        "name": "NPCTL2"
+      },
+      {
+        "byte_offset": 132,
+        "description": "NAND flash/PC card interrupt enable register 2",
+        "fieldset": "NPINTEN2",
+        "name": "NPINTEN2"
+      },
+      {
+        "byte_offset": 136,
+        "description": "NAND flash/PC card common space timing \t configuration register 2",
+        "fieldset": "NPCTCFG2",
+        "name": "NPCTCFG2"
+      },
+      {
+        "byte_offset": 140,
+        "description": "NAND flash/PC card attribute space timing \t configuration register 2",
+        "fieldset": "NPATCFG2",
+        "name": "NPATCFG2"
+      },
+      {
+        "byte_offset": 148,
+        "description": "NAND flash ECC register 2",
+        "fieldset": "NECC2",
+        "name": "NECC2"
+      },
+      {
+        "byte_offset": 160,
+        "description": "NAND flash/PC card control register 3",
+        "fieldset": "NPCTL3",
+        "name": "NPCTL3"
+      },
+      {
+        "byte_offset": 164,
+        "description": "NAND flash/PC card interrupt enable register 3",
+        "fieldset": "NPINTEN3",
+        "name": "NPINTEN3"
+      },
+      {
+        "byte_offset": 168,
+        "description": "NAND flash/PC card common space timing \t configuration register 3",
+        "fieldset": "NPCTCFG3",
+        "name": "NPCTCFG3"
+      },
+      {
+        "byte_offset": 172,
+        "description": "NAND flash/PC card attribute space timing \t configuration register 3",
+        "fieldset": "NPATCFG3",
+        "name": "NPATCFG3"
+      },
+      {
+        "byte_offset": 176,
+        "description": "PC card I/O space timing configuration \t register",
+        "fieldset": "PIOTCFG3",
+        "name": "PIOTCFG3"
+      },
+      {
+        "byte_offset": 260,
+        "description": "SRAM/NOR flash write timing configuration \t register 0",
+        "fieldset": "SNWTCFG0",
+        "name": "SNWTCFG0"
+      },
+      {
+        "byte_offset": 268,
+        "description": "SRAM/NOR flash write timing configuration \t register 1",
+        "fieldset": "SNWTCFG1",
+        "name": "SNWTCFG1"
+      },
+      {
+        "byte_offset": 276,
+        "description": "SRAM/NOR flash write timing configuration \t register 2",
+        "fieldset": "SNWTCFG2",
+        "name": "SNWTCFG2"
+      },
+      {
+        "byte_offset": 284,
+        "description": "SRAM/NOR flash write timing configuration \t register 3",
+        "fieldset": "SNWTCFG3",
+        "name": "SNWTCFG3"
+      }
+    ]
+  },
+  "fieldset/NECC1": {
+    "description": "NAND flash ECC register 1",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "ECC result",
+        "name": "ECC"
+      }
+    ]
+  },
+  "fieldset/NECC2": {
+    "description": "NAND flash ECC register 2",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "ECC result",
+        "name": "ECC"
+      }
+    ]
+  },
+  "fieldset/NPATCFG1": {
+    "description": "NAND flash/PC card attribute space timing \t configuration register 1",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "Attribute memory setup time",
+        "name": "ATTSET"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 8,
+        "description": "Attribute memory wait time",
+        "name": "ATTWAIT"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 8,
+        "description": "Attribute memory hold time",
+        "name": "ATTHLD"
+      },
+      {
+        "bit_offset": 24,
+        "bit_size": 8,
+        "description": "Attribute memory data bus HiZ time",
+        "name": "ATTHIZ"
+      }
+    ]
+  },
+  "fieldset/NPATCFG2": {
+    "description": "NAND flash/PC card attribute space timing \t configuration register 2",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "Attribute memory setup time",
+        "name": "ATTSET"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 8,
+        "description": "Attribute memory wait time",
+        "name": "ATTWAIT"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 8,
+        "description": "Attribute memory hold time",
+        "name": "ATTHLD"
+      },
+      {
+        "bit_offset": 24,
+        "bit_size": 8,
+        "description": "Attribute memory data bus HiZ time",
+        "name": "ATTHIZ"
+      }
+    ]
+  },
+  "fieldset/NPATCFG3": {
+    "description": "NAND flash/PC card attribute space timing \t configuration register 3",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "Attribute memory setup time",
+        "name": "ATTSET"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 8,
+        "description": "Attribute memory wait time",
+        "name": "ATTWAIT"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 8,
+        "description": "Attribute memory hold time",
+        "name": "ATTHLD"
+      },
+      {
+        "bit_offset": 24,
+        "bit_size": 8,
+        "description": "Attribute memory data bus HiZ time",
+        "name": "ATTHIZ"
+      }
+    ]
+  },
+  "fieldset/NPCTCFG1": {
+    "description": "NAND flash/PC card common space timing \t configuration register 1",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "Common memory setup time",
+        "name": "COMSET"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 8,
+        "description": "Common memory wait time",
+        "name": "COMWAIT"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 8,
+        "description": "Common memory hold time",
+        "name": "COMHLD"
+      },
+      {
+        "bit_offset": 24,
+        "bit_size": 8,
+        "description": "Common memory data bus HiZ time",
+        "name": "COMHIZ"
+      }
+    ]
+  },
+  "fieldset/NPCTCFG2": {
+    "description": "NAND flash/PC card common space timing \t configuration register 2",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "Common memory setup time",
+        "name": "COMSET"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 8,
+        "description": "Common memory wait time",
+        "name": "COMWAIT"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 8,
+        "description": "Common memory hold time",
+        "name": "COMHLD"
+      },
+      {
+        "bit_offset": 24,
+        "bit_size": 8,
+        "description": "Common memory data bus HiZ time",
+        "name": "COMHIZ"
+      }
+    ]
+  },
+  "fieldset/NPCTCFG3": {
+    "description": "NAND flash/PC card common space timing \t configuration register 3",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "Common memory setup time",
+        "name": "COMSET"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 8,
+        "description": "Common memory wait time",
+        "name": "COMWAIT"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 8,
+        "description": "Common memory hold time",
+        "name": "COMHLD"
+      },
+      {
+        "bit_offset": 24,
+        "bit_size": 8,
+        "description": "Common memory data bus HiZ time",
+        "name": "COMHIZ"
+      }
+    ]
+  },
+  "fieldset/NPCTL1": {
+    "description": "NAND flash/PC card control register 1",
+    "fields": [
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Wait feature enable",
+        "name": "NDWTEN"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "NAND bank enable",
+        "name": "NDBKEN"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "NAND bank memory type",
+        "name": "NDTP"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 2,
+        "description": "NAND bank memory data bus width",
+        "name": "NDW"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "ECC enable",
+        "name": "ECCEN"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 4,
+        "description": "CLE to RE delay",
+        "name": "CTR"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 4,
+        "description": "ALE to RE delay",
+        "name": "ATR"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 3,
+        "description": "ECC size",
+        "name": "ECCSZ"
+      }
+    ]
+  },
+  "fieldset/NPCTL2": {
+    "description": "NAND flash/PC card control register 2",
+    "fields": [
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Wait feature enable",
+        "name": "NDWTEN"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "NAND bank enable",
+        "name": "NDBKEN"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "NAND bank memory type",
+        "name": "NDTP"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 2,
+        "description": "NAND bank memory data bus width",
+        "name": "NDW"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "ECC enable",
+        "name": "ECCEN"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 4,
+        "description": "CLE to RE delay",
+        "name": "CTR"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 4,
+        "description": "ALE to RE delay",
+        "name": "ATR"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 3,
+        "description": "ECC size",
+        "name": "ECCSZ"
+      }
+    ]
+  },
+  "fieldset/NPCTL3": {
+    "description": "NAND flash/PC card control register 3",
+    "fields": [
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Wait feature enable",
+        "name": "NDWTEN"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "NAND bank enable",
+        "name": "NDBKEN"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "NAND bank memory type",
+        "name": "NDTP"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 2,
+        "description": "NAND bank memory data bus width",
+        "name": "NDW"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "ECC enable",
+        "name": "ECCEN"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 4,
+        "description": "CLE to RE delay",
+        "name": "CTR"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 4,
+        "description": "ALE to RE delay",
+        "name": "ATR"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 3,
+        "description": "ECC size",
+        "name": "ECCSZ"
+      }
+    ]
+  },
+  "fieldset/NPINTEN1": {
+    "description": "NAND flash/PC card interrupt enable register 1",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Interrupt rising edge status",
+        "name": "INTRS"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Interrupt high-level status",
+        "name": "INTHS"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Interrupt falling edge status",
+        "name": "INTFS"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Interrupt rising edge detection enable bit",
+        "name": "INTREN"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "Interrupt high-level detection enable",
+        "name": "INTHEN"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "Interrupt falling edge detection enable",
+        "name": "INTFEN"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "FIFO empty flag",
+        "name": "FFEPT"
+      }
+    ]
+  },
+  "fieldset/NPINTEN2": {
+    "description": "NAND flash/PC card interrupt enable register 2",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Interrupt rising edge status",
+        "name": "INTRS"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Interrupt high-level status",
+        "name": "INTHS"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Interrupt falling edge status",
+        "name": "INTFS"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Interrupt rising edge detection enable bit",
+        "name": "INTREN"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "Interrupt high-level detection enable",
+        "name": "INTHEN"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "Interrupt falling edge detection enable",
+        "name": "INTFEN"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "FIFO empty flag",
+        "name": "FFEPT"
+      }
+    ]
+  },
+  "fieldset/NPINTEN3": {
+    "description": "NAND flash/PC card interrupt enable register 3",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Interrupt rising edge status",
+        "name": "INTRS"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Interrupt high-level status",
+        "name": "INTHS"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Interrupt falling edge status",
+        "name": "INTFS"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Interrupt rising edge detection enable bit",
+        "name": "INTREN"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "Interrupt high-level detection enable",
+        "name": "INTHEN"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "Interrupt falling edge detection enable",
+        "name": "INTFEN"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "FIFO empty flag",
+        "name": "FFEPT"
+      }
+    ]
+  },
+  "fieldset/PIOTCFG3": {
+    "description": "PC card I/O space timing configuration \t register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "IO space setup time",
+        "name": "IOSET"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 8,
+        "description": "IO space wait time",
+        "name": "IOWAIT"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 8,
+        "description": "IO space hold time",
+        "name": "IOHLD"
+      },
+      {
+        "bit_offset": 24,
+        "bit_size": 8,
+        "description": "IO space data bus HiZ time",
+        "name": "IOHIZ"
+      }
+    ]
+  },
+  "fieldset/SNCTL0": {
+    "description": "SRAM/NOR flash control register 0",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "NOR bank enable",
+        "name": "NRBKEN"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "NOR bank memory address/data multiplexing",
+        "name": "NRMUX"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 2,
+        "description": "NOR bank memory type",
+        "name": "NRTP"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 2,
+        "description": "NOR bank memory data bus width",
+        "name": "NRW"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "NOR Flash access enable",
+        "name": "NREN"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "Synchronous burst enable",
+        "name": "SBRSTEN"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "NWAIT signal polarity",
+        "name": "NRWTPOL"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "Wrapped burst mode enable",
+        "name": "WRAPEN"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "description": "NWAIT signal configuration, only work in \t synchronous mode",
+        "name": "NRWTCFG"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "description": "Write enable",
+        "name": "WREN"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "description": "NWAIT signal enable",
+        "name": "NRWTEN"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "description": "Extended mode enable",
+        "name": "EXMODEN"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "Asynchronous wait",
+        "name": "ASYNCWAIT"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 3,
+        "description": "CRAM page size",
+        "name": "CPS"
+      },
+      {
+        "bit_offset": 19,
+        "bit_size": 1,
+        "description": "Synchronous write",
+        "name": "SYNCWR"
+      }
+    ]
+  },
+  "fieldset/SNCTL1": {
+    "description": "SRAM/NOR flash control register 1",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "NOR bank enable",
+        "name": "NRBKEN"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "NOR bank memory address/data multiplexing",
+        "name": "NRMUX"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 2,
+        "description": "NOR bank memory type",
+        "name": "NRTP"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 2,
+        "description": "NOR bank memory data bus width",
+        "name": "NRW"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "NOR Flash access enable",
+        "name": "NREN"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "Synchronous burst enable",
+        "name": "SBRSTEN"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "NWAIT signal polarity",
+        "name": "NRWTPOL"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "Wrapped burst mode enable",
+        "name": "WRAPEN"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "description": "NWAIT signal configuration, only work in \t synchronous mode",
+        "name": "NRWTCFG"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "description": "Write enable",
+        "name": "WREN"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "description": "NWAIT signal enable",
+        "name": "NRWTEN"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "description": "Extended mode enable",
+        "name": "EXMODEN"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "Asynchronous wait",
+        "name": "ASYNCWAIT"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 3,
+        "description": "CRAM page size",
+        "name": "CPS"
+      },
+      {
+        "bit_offset": 19,
+        "bit_size": 1,
+        "description": "Synchronous write",
+        "name": "SYNCWR"
+      }
+    ]
+  },
+  "fieldset/SNCTL2": {
+    "description": "SRAM/NOR flash control register 2",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "NOR bank enable",
+        "name": "NRBKEN"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "NOR bank memory address/data multiplexing",
+        "name": "NRMUX"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 2,
+        "description": "NOR bank memory type",
+        "name": "NRTP"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 2,
+        "description": "NOR bank memory data bus width",
+        "name": "NRW"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "NOR Flash access enable",
+        "name": "NREN"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "Synchronous burst enable",
+        "name": "SBRSTEN"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "NWAIT signal polarity",
+        "name": "NRWTPOL"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "Wrapped burst mode enable",
+        "name": "WRAPEN"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "description": "NWAIT signal configuration, only work in \t synchronous mode",
+        "name": "NRWTCFG"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "description": "Write enable",
+        "name": "WREN"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "description": "NWAIT signal enable",
+        "name": "NRWTEN"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "description": "Extended mode enable",
+        "name": "EXMODEN"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "Asynchronous wait",
+        "name": "ASYNCWAIT"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 3,
+        "description": "CRAM page size",
+        "name": "CPS"
+      },
+      {
+        "bit_offset": 19,
+        "bit_size": 1,
+        "description": "Synchronous write",
+        "name": "SYNCWR"
+      }
+    ]
+  },
+  "fieldset/SNCTL3": {
+    "description": "SRAM/NOR flash control register 3",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "NOR bank enable",
+        "name": "NRBKEN"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "NOR bank memory address/data multiplexing",
+        "name": "NRMUX"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 2,
+        "description": "NOR bank memory type",
+        "name": "NRTP"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 2,
+        "description": "NOR bank memory data bus width",
+        "name": "NRW"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "NOR Flash access enable",
+        "name": "NREN"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "Synchronous burst enable",
+        "name": "SBRSTEN"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "NWAIT signal polarity",
+        "name": "NRWTPOL"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "Wrapped burst mode enable",
+        "name": "WRAPEN"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "description": "NWAIT signal configuration, only work in \t synchronous mode",
+        "name": "NRWTCFG"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "description": "Write enable",
+        "name": "WREN"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "description": "NWAIT signal enable",
+        "name": "NRWTEN"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "description": "Extended mode enable",
+        "name": "EXMODEN"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "Asynchronous wait",
+        "name": "ASYNCWAIT"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 3,
+        "description": "CRAM page size",
+        "name": "CPS"
+      },
+      {
+        "bit_offset": 19,
+        "bit_size": 1,
+        "description": "Synchronous write",
+        "name": "SYNCWR"
+      }
+    ]
+  },
+  "fieldset/SNTCFG0": {
+    "description": "SRAM/NOR flash timing configuration register 0",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 4,
+        "description": "Address setup time",
+        "name": "ASET"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 4,
+        "description": "Address hold time",
+        "name": "AHLD"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 8,
+        "description": "Data setup time",
+        "name": "DSET"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 4,
+        "description": "Bus latency",
+        "name": "BUSLAT"
+      },
+      {
+        "bit_offset": 20,
+        "bit_size": 4,
+        "description": "Synchronous clock divide ratio",
+        "name": "CKDIV"
+      },
+      {
+        "bit_offset": 24,
+        "bit_size": 4,
+        "description": "Data latency for NOR Flash",
+        "name": "DLAT"
+      },
+      {
+        "bit_offset": 28,
+        "bit_size": 2,
+        "description": "Asynchronous access mode",
+        "name": "ASYNCMOD"
+      }
+    ]
+  },
+  "fieldset/SNTCFG1": {
+    "description": "SRAM/NOR flash timing configuration register 1",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 4,
+        "description": "Address setup time",
+        "name": "ASET"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 4,
+        "description": "Address hold time",
+        "name": "AHLD"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 8,
+        "description": "Data setup time",
+        "name": "DSET"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 4,
+        "description": "Bus latency",
+        "name": "BUSLAT"
+      },
+      {
+        "bit_offset": 20,
+        "bit_size": 4,
+        "description": "Synchronous clock divide ratio",
+        "name": "CKDIV"
+      },
+      {
+        "bit_offset": 24,
+        "bit_size": 4,
+        "description": "Data latency for NOR Flash",
+        "name": "DLAT"
+      },
+      {
+        "bit_offset": 28,
+        "bit_size": 2,
+        "description": "Asynchronous access mode",
+        "name": "ASYNCMOD"
+      }
+    ]
+  },
+  "fieldset/SNTCFG2": {
+    "description": "SRAM/NOR flash timing configuration register 2",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 4,
+        "description": "Address setup time",
+        "name": "ASET"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 4,
+        "description": "Address hold time",
+        "name": "AHLD"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 8,
+        "description": "Data setup time",
+        "name": "DSET"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 4,
+        "description": "Bus latency",
+        "name": "BUSLAT"
+      },
+      {
+        "bit_offset": 20,
+        "bit_size": 4,
+        "description": "Synchronous clock divide ratio",
+        "name": "CKDIV"
+      },
+      {
+        "bit_offset": 24,
+        "bit_size": 4,
+        "description": "Data latency for NOR Flash",
+        "name": "DLAT"
+      },
+      {
+        "bit_offset": 28,
+        "bit_size": 2,
+        "description": "Asynchronous access mode",
+        "name": "ASYNCMOD"
+      }
+    ]
+  },
+  "fieldset/SNTCFG3": {
+    "description": "SRAM/NOR flash timing configuration register 3",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 4,
+        "description": "Address setup time",
+        "name": "ASET"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 4,
+        "description": "Address hold time",
+        "name": "AHLD"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 8,
+        "description": "Data setup time",
+        "name": "DSET"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 4,
+        "description": "Bus latency",
+        "name": "BUSLAT"
+      },
+      {
+        "bit_offset": 20,
+        "bit_size": 4,
+        "description": "Synchronous clock divide ratio",
+        "name": "CKDIV"
+      },
+      {
+        "bit_offset": 24,
+        "bit_size": 4,
+        "description": "Data latency for NOR Flash",
+        "name": "DLAT"
+      },
+      {
+        "bit_offset": 28,
+        "bit_size": 2,
+        "description": "Asynchronous access mode",
+        "name": "ASYNCMOD"
+      }
+    ]
+  },
+  "fieldset/SNWTCFG0": {
+    "description": "SRAM/NOR flash write timing configuration \t register 0",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 4,
+        "description": "Address setup time",
+        "name": "WASET"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 4,
+        "description": "Address hold time",
+        "name": "WAHLD"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 8,
+        "description": "Data setup time",
+        "name": "WDSET"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 4,
+        "description": "Bus latency",
+        "name": "WBUSLAT"
+      },
+      {
+        "bit_offset": 28,
+        "bit_size": 2,
+        "description": "Asynchronous access mode",
+        "name": "WASYNCMOD"
+      }
+    ]
+  },
+  "fieldset/SNWTCFG1": {
+    "description": "SRAM/NOR flash write timing configuration \t register 1",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 4,
+        "description": "Address setup time",
+        "name": "WASET"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 4,
+        "description": "Address hold time",
+        "name": "WAHLD"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 8,
+        "description": "Data setup time",
+        "name": "WDSET"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 4,
+        "description": "Bus latency",
+        "name": "WBUSLAT"
+      },
+      {
+        "bit_offset": 28,
+        "bit_size": 2,
+        "description": "Asynchronous access mode",
+        "name": "WASYNCMOD"
+      }
+    ]
+  },
+  "fieldset/SNWTCFG2": {
+    "description": "SRAM/NOR flash write timing configuration \t register 2",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 4,
+        "description": "Address setup time",
+        "name": "WASET"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 4,
+        "description": "Address hold time",
+        "name": "WAHLD"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 8,
+        "description": "Data setup time",
+        "name": "WDSET"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 4,
+        "description": "Bus latency",
+        "name": "WBUSLAT"
+      },
+      {
+        "bit_offset": 28,
+        "bit_size": 2,
+        "description": "Asynchronous access mode",
+        "name": "WASYNCMOD"
+      }
+    ]
+  },
+  "fieldset/SNWTCFG3": {
+    "description": "SRAM/NOR flash write timing configuration \t register 3",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 4,
+        "description": "Address setup time",
+        "name": "WASET"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 4,
+        "description": "Address hold time",
+        "name": "WAHLD"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 8,
+        "description": "Data setup time",
+        "name": "WDSET"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 4,
+        "description": "Bus latency",
+        "name": "WBUSLAT"
+      },
+      {
+        "bit_offset": 28,
+        "bit_size": 2,
+        "description": "Asynchronous access mode",
+        "name": "WASYNCMOD"
+      }
+    ]
+  }
+}

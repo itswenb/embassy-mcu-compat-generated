@@ -1,0 +1,397 @@
+{
+  "block/GD_MERGED_207892AB5BE8": {
+    "items": [
+      {
+        "byte_offset": 0,
+        "description": "RTC interrupt enable register",
+        "fieldset": "GD_MERGED_207892AB5BE8_SVD_INTEN",
+        "name": "INTEN"
+      },
+      {
+        "byte_offset": 0,
+        "fieldset": "GD_MERGED_207892AB5BE8_FW_RTC_INTEN",
+        "name": "RTC_INTEN"
+      },
+      {
+        "byte_offset": 4,
+        "description": "control register",
+        "fieldset": "GD_MERGED_207892AB5BE8_SVD_CTL",
+        "name": "CTL"
+      },
+      {
+        "byte_offset": 4,
+        "fieldset": "GD_MERGED_207892AB5BE8_FW_RTC_CTL",
+        "name": "RTC_CTL"
+      },
+      {
+        "byte_offset": 8,
+        "description": "RTC prescaler high register",
+        "fieldset": "GD_MERGED_207892AB5BE8_SVD_PSCH",
+        "name": "PSCH"
+      },
+      {
+        "byte_offset": 8,
+        "fieldset": "GD_MERGED_207892AB5BE8_FW_RTC_PSCH",
+        "name": "RTC_PSCH"
+      },
+      {
+        "byte_offset": 12,
+        "description": "RTC prescaler low register",
+        "fieldset": "GD_MERGED_207892AB5BE8_SVD_PSCL",
+        "name": "PSCL"
+      },
+      {
+        "byte_offset": 12,
+        "fieldset": "GD_MERGED_207892AB5BE8_FW_RTC_PSCL",
+        "name": "RTC_PSCL"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 16,
+        "description": "RTC divider high register",
+        "fieldset": "GD_MERGED_207892AB5BE8_SVD_DIVH",
+        "name": "DIVH"
+      },
+      {
+        "byte_offset": 16,
+        "fieldset": "GD_MERGED_207892AB5BE8_FW_RTC_DIVH",
+        "name": "RTC_DIVH"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 20,
+        "description": "RTC divider low register",
+        "fieldset": "GD_MERGED_207892AB5BE8_SVD_DIVL",
+        "name": "DIVL"
+      },
+      {
+        "byte_offset": 20,
+        "fieldset": "GD_MERGED_207892AB5BE8_FW_RTC_DIVL",
+        "name": "RTC_DIVL"
+      },
+      {
+        "byte_offset": 24,
+        "description": "RTC counter high register",
+        "fieldset": "GD_MERGED_207892AB5BE8_SVD_CNTH",
+        "name": "CNTH"
+      },
+      {
+        "byte_offset": 24,
+        "fieldset": "GD_MERGED_207892AB5BE8_FW_RTC_CNTH",
+        "name": "RTC_CNTH"
+      },
+      {
+        "byte_offset": 28,
+        "description": "RTC counter low register",
+        "fieldset": "GD_MERGED_207892AB5BE8_SVD_CNTL",
+        "name": "CNTL"
+      },
+      {
+        "byte_offset": 28,
+        "fieldset": "GD_MERGED_207892AB5BE8_FW_RTC_CNTL",
+        "name": "RTC_CNTL"
+      },
+      {
+        "access": "Write",
+        "byte_offset": 32,
+        "description": "Alarm high register",
+        "fieldset": "GD_MERGED_207892AB5BE8_SVD_ALRMH",
+        "name": "ALRMH"
+      },
+      {
+        "byte_offset": 32,
+        "fieldset": "GD_MERGED_207892AB5BE8_FW_RTC_ALRMH",
+        "name": "RTC_ALRMH"
+      },
+      {
+        "access": "Write",
+        "byte_offset": 36,
+        "description": "RTC alarm low register",
+        "fieldset": "GD_MERGED_207892AB5BE8_SVD_ALRML",
+        "name": "ALRML"
+      },
+      {
+        "byte_offset": 36,
+        "fieldset": "GD_MERGED_207892AB5BE8_FW_RTC_ALRML",
+        "name": "RTC_ALRML"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_207892AB5BE8_FW_RTC_ALRMH": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "name": "RTC_ALRMH_ALRM"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_207892AB5BE8_FW_RTC_ALRML": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "name": "RTC_ALRML_ALRM"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_207892AB5BE8_FW_RTC_CNTH": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "name": "RTC_CNTH_CNT"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_207892AB5BE8_FW_RTC_CNTL": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "name": "RTC_CNTL_CNT"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_207892AB5BE8_FW_RTC_CTL": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "RTC_CTL_SCIF"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "RTC_CTL_ALRMIF"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "RTC_CTL_OVIF"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "name": "RTC_CTL_RSYNF"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "name": "RTC_CTL_CMF"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "name": "RTC_CTL_LWOFF"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_207892AB5BE8_FW_RTC_DIVH": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 4,
+        "name": "RTC_DIVH_DIV"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_207892AB5BE8_FW_RTC_DIVL": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "name": "RTC_DIVL_DIV"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_207892AB5BE8_FW_RTC_INTEN": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "RTC_INTEN_SCIE"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "RTC_INTEN_ALRMIE"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "RTC_INTEN_OVIE"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_207892AB5BE8_FW_RTC_PSCH": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 4,
+        "name": "RTC_PSCH_PSC"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_207892AB5BE8_FW_RTC_PSCL": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "name": "RTC_PSCL_PSC"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_207892AB5BE8_SVD_ALRMH": {
+    "description": "Alarm high register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Alarm value high",
+        "name": "ALRM"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_207892AB5BE8_SVD_ALRML": {
+    "description": "RTC alarm low register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "alarm value low",
+        "name": "ALRM"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_207892AB5BE8_SVD_CNTH": {
+    "description": "RTC counter high register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "RTC counter value high",
+        "name": "CNT"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_207892AB5BE8_SVD_CNTL": {
+    "description": "RTC counter low register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "RTC conuter value low",
+        "name": "CNT"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_207892AB5BE8_SVD_CTL": {
+    "description": "control register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Sencond interrupt flag",
+        "name": "SCIF"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Alarm interrupt flag",
+        "name": "ALRMIF"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Overflow interrupt flag",
+        "name": "OVIF"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Registers synchronized flag",
+        "name": "RSYNF"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "Configuration mode flag",
+        "name": "CMF"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "Last write operation finished flag",
+        "name": "LWOFF"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_207892AB5BE8_SVD_DIVH": {
+    "description": "RTC divider high register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 4,
+        "description": "RTC divider value high",
+        "name": "DIV"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_207892AB5BE8_SVD_DIVL": {
+    "description": "RTC divider low register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "RTC divider value low",
+        "name": "DIV"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_207892AB5BE8_SVD_INTEN": {
+    "description": "RTC interrupt enable register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Second interrupt",
+        "name": "SCIE"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Alarm interrupt enable",
+        "name": "ALRMIE"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Overflow interrupt enable",
+        "name": "OVIE"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_207892AB5BE8_SVD_PSCH": {
+    "description": "RTC prescaler high register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 4,
+        "description": "RTC prescaler value high",
+        "name": "PSC"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_207892AB5BE8_SVD_PSCL": {
+    "description": "RTC prescaler low register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "RTC prescaler value low",
+        "name": "PSC"
+      }
+    ]
+  }
+}

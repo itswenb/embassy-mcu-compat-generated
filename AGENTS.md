@@ -1,9 +1,10 @@
-# 批次交付仓库
+# 统一生成仓库
 
-- 本仓库只接收已验收系列批次，解析与适配在相邻 embassy-mcu-compat 工具库进行。
-- 操作前先读取工具库 AGENTS.md 和 batches/<系列>/ 档案；简体中文，命令使用 rtk，编辑使用 apply_patch。
-- 不恢复历史全厂商混合根包、原生 PAC 或实验候选作为正式交付。
-- 未支持设备保留在状态清单，不删除型号掩盖失败；每次只更新指定批次与 README。
-- GitHub 自动更新保持关闭；不得发布原始厂商源码，不修改上游 Embassy/stm32-data。
-- 验证只使用 embassy-mcu-compat-validation，不使用 imu-matrix-new。
-- 用户于2026-09-08限定授权相邻本地 Embassy 的 Flash bank 修复；需要该修复的用法须显式 Cargo patch 到本地路径并标注修改版依赖，不宣称未修改官方 HAL 已支持。不因本地专项通过提前发布整个批次。
+- 目录固定为 `data/{chips,registers}` 和统一的 `mcu-metapac/`；不是按系列拆包，也不把Cargo包放仓库根。
+- 只保留GD及后续明确支持的兼容MCU数据，不复制ST全型号数据；必要的上游共享定义和许可声明保留。
+- Cargo包名 `stm32-metapac` 是官方Embassy patch的依赖契约，不代表目录名或ST支持范围。修改此契约须先说明对上游依赖的影响。
+- 当前仅开放GD32F30x理论集成，硬件未验证；其他系列保留待支持状态，不伪造支持。
+- 仅交付生成数据、源码、构建入口、用户说明、支持清单和许可信息。报告、候选标记、日志、生成过程清单留在工具库或验证库。
+- 发布文件不得含本机绝对路径。禁止复制厂商原始源码，控制缓存，不重复整包和日志副本。
+- 简体中文；Shell命令使用rtk，编辑使用apply_patch。保留用户修改，不改上游Embassy/stm32-data。
+- 只在embassy-mcu-compat-validation验证，不操作imu-matrix-new、不自动烧录。GitHub自动更新保持关闭。

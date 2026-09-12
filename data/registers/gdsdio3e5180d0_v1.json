@@ -1,0 +1,808 @@
+{
+  "block/SDIO": {
+    "description": "Secure digital input/output interface",
+    "items": [
+      {
+        "byte_offset": 0,
+        "description": "Power control register",
+        "fieldset": "PWRCTL",
+        "name": "PWRCTL"
+      },
+      {
+        "byte_offset": 4,
+        "description": "Clock control register",
+        "fieldset": "CLKCTL",
+        "name": "CLKCTL"
+      },
+      {
+        "byte_offset": 8,
+        "description": "Command argument register",
+        "fieldset": "CMDAGMT",
+        "name": "CMDAGMT"
+      },
+      {
+        "byte_offset": 12,
+        "description": "Command control register",
+        "fieldset": "CMDCTL",
+        "name": "CMDCTL"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 16,
+        "description": "Command index response register",
+        "fieldset": "RSPCMDIDX",
+        "name": "RSPCMDIDX"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 20,
+        "description": "Response register 0",
+        "fieldset": "RESP0",
+        "name": "RESP0"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 24,
+        "description": "Response register 1",
+        "fieldset": "RESP1",
+        "name": "RESP1"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 28,
+        "description": "Response register 2",
+        "fieldset": "RESP2",
+        "name": "RESP2"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 32,
+        "description": "Response register 3",
+        "fieldset": "RESP3",
+        "name": "RESP3"
+      },
+      {
+        "byte_offset": 36,
+        "description": "Data timeout register",
+        "fieldset": "DATATO",
+        "name": "DATATO"
+      },
+      {
+        "byte_offset": 40,
+        "description": "Data length register",
+        "fieldset": "DATALEN",
+        "name": "DATALEN"
+      },
+      {
+        "byte_offset": 44,
+        "description": "Data control register",
+        "fieldset": "DATACTL",
+        "name": "DATACTL"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 48,
+        "description": "Data counter register",
+        "fieldset": "DATACNT",
+        "name": "DATACNT"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 52,
+        "description": "Status register",
+        "fieldset": "STAT",
+        "name": "STAT"
+      },
+      {
+        "access": "Write",
+        "byte_offset": 56,
+        "description": "Interrupt clear register",
+        "fieldset": "INTC",
+        "name": "INTC"
+      },
+      {
+        "byte_offset": 60,
+        "description": "Interrupt enable register",
+        "fieldset": "INTEN",
+        "name": "INTEN"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 72,
+        "description": "FIFO counter register",
+        "fieldset": "FIFOCNT",
+        "name": "FIFOCNT"
+      },
+      {
+        "byte_offset": 128,
+        "description": "FIFO data register",
+        "fieldset": "FIFO",
+        "name": "FIFO"
+      }
+    ]
+  },
+  "fieldset/CLKCTL": {
+    "description": "Clock control register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "Clock division",
+        "name": "DIV_0_7"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "SDIO_CLK clock output enable bit",
+        "name": "CLKEN"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "SDIO_CLK clock dynamic switch on/off for power saving",
+        "name": "CLKPWRSAV"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "Clock bypass enable bit",
+        "name": "CLKBYP"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 2,
+        "description": "SDIO card bus mode control bit",
+        "name": "BUSMODE"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "description": "SDIO_CLK clock edge selection bit",
+        "name": "CLKEDGE"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "description": "Hardware Clock Control enable bit",
+        "name": "HWCLKEN"
+      },
+      {
+        "bit_offset": 31,
+        "bit_size": 1,
+        "description": "MSB of Clock division",
+        "name": "DIV_8"
+      }
+    ]
+  },
+  "fieldset/CMDAGMT": {
+    "description": "Command argument register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "SDIO card command argument",
+        "name": "CMDAGMT"
+      }
+    ]
+  },
+  "fieldset/CMDCTL": {
+    "description": "Command control register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 6,
+        "description": "Command index",
+        "name": "CMDIDX"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 2,
+        "description": "Command response type bits",
+        "name": "CMDRESP"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "Interrupt wait instead of timeout",
+        "name": "INTWAIT"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "Waits for ends of data transfer",
+        "name": "WAITDEND"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "Command state machine (CSM) enable bit",
+        "name": "CSMEN"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "description": "SD I/O suspend command(SD I/O only)",
+        "name": "SUSPEND"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "description": "CMD completion signal enabled (CE-ATA only)",
+        "name": "ENCMDC"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "description": "No CE-ATA Interrupt (CE-ATA only)",
+        "name": "NINTEN"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "description": "CE-ATA command enable(CE-ATA only)",
+        "name": "ATAEN"
+      }
+    ]
+  },
+  "fieldset/DATACNT": {
+    "description": "Data counter register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 25,
+        "description": "Data count value",
+        "name": "DATACNT"
+      }
+    ]
+  },
+  "fieldset/DATACTL": {
+    "description": "Data control register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Data transfer enabled bit",
+        "name": "DATAEN"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Data transfer direction",
+        "name": "DATADIR"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Data transfer mode",
+        "name": "TRANSMOD"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "DMA enable bit",
+        "name": "DMAEN"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 4,
+        "description": "Data block size",
+        "name": "BLKSZ"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "Read wait mode enabled",
+        "name": "RWEN"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "Read wait stop",
+        "name": "RWSTOP"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "Read wait type",
+        "name": "RWTYPE"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "description": "SD I/O specific function enable",
+        "name": "IOEN"
+      }
+    ]
+  },
+  "fieldset/DATALEN": {
+    "description": "Data length register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 25,
+        "description": "Data transfer length",
+        "name": "DATALEN"
+      }
+    ]
+  },
+  "fieldset/DATATO": {
+    "description": "Data timeout register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "Data timeout period",
+        "name": "DATATO"
+      }
+    ]
+  },
+  "fieldset/FIFO": {
+    "description": "FIFO data register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "Receive FIFO data or transmit FIFO data",
+        "name": "FIFODT"
+      }
+    ]
+  },
+  "fieldset/FIFOCNT": {
+    "description": "FIFO counter register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 24,
+        "description": "FIFO counter",
+        "name": "FIFOCNT"
+      }
+    ]
+  },
+  "fieldset/INTC": {
+    "description": "Interrupt clear register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "CCRCERR flag clear bit",
+        "name": "CCRCERRC"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "DTCRCERR flag clear bit",
+        "name": "DTCRCERRC"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "CMDTMOUT flag clear bit",
+        "name": "CMDTMOUTC"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "DTTMOUT flag clear bit",
+        "name": "DTTMOUTC"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "TXURE flag clear bit",
+        "name": "TXUREC"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "RXORE flag clear bit",
+        "name": "RXOREC"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "CMDRECV flag clear bit",
+        "name": "CMDRECVC"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "CMDSEND flag clear bit",
+        "name": "CMDSENDC"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "DTEND flag clear bit",
+        "name": "DTENDC"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "STBITE flag clear bit",
+        "name": "STBITEC"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "DTBLKEND flag clear bit",
+        "name": "DTBLKENDC"
+      },
+      {
+        "bit_offset": 22,
+        "bit_size": 1,
+        "description": "SDIOINT flag clear bit",
+        "name": "SDIOINTC"
+      },
+      {
+        "bit_offset": 23,
+        "bit_size": 1,
+        "description": "ATAEND flag clear bit",
+        "name": "ATAENDC"
+      }
+    ]
+  },
+  "fieldset/INTEN": {
+    "description": "Interrupt enable register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Command response CRC fail interrupt enable",
+        "name": "CCRCERRIE"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Data CRC fail interrupt enable",
+        "name": "DTCRCERRIE"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Command response timeout interrupt enable",
+        "name": "CMDTMOUTIE"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Data timeout interrupt enable",
+        "name": "DTTMOUTIE"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "Transmit FIFO underrun error interrupt enable",
+        "name": "TXUREIE"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "Received FIFO overrun error interrupt enable",
+        "name": "RXOREIE"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "Command response received interrupt enable",
+        "name": "CMDRECVIE"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Command sent interrupt enable",
+        "name": "CMDSENDIE"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "Data end interrupt enable",
+        "name": "DTENDIE"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "Start bit error interrupt enable",
+        "name": "STBITEIE"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "Data block end interrupt enable",
+        "name": "DTBLKENDIE"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "description": "Command transmission interrupt enable",
+        "name": "CMDRUNIE"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "description": "Data transmission interrupt enable",
+        "name": "TXRUNIE"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "description": "Data reception interrupt enable",
+        "name": "RXRUNIE"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "description": "Transmit FIFO half empty interrupt enable",
+        "name": "TFHIE"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "Receive FIFO half full interrupt enable",
+        "name": "RFHIE"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "description": "Transmit FIFO full interrupt enable",
+        "name": "TFFIE"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 1,
+        "description": "Receive FIFO full interrupt enable",
+        "name": "RFFIE"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 1,
+        "description": "Transmit FIFO empty interrupt enable",
+        "name": "TFEIE"
+      },
+      {
+        "bit_offset": 19,
+        "bit_size": 1,
+        "description": "Receive FIFO empty interrupt enable",
+        "name": "RFEIE"
+      },
+      {
+        "bit_offset": 20,
+        "bit_size": 1,
+        "description": "Data valid in transmit FIFO interrupt enable",
+        "name": "TXDTVALIE"
+      },
+      {
+        "bit_offset": 21,
+        "bit_size": 1,
+        "description": "Data valid in receive FIFO interrupt enable",
+        "name": "RXDTVALIE"
+      },
+      {
+        "bit_offset": 22,
+        "bit_size": 1,
+        "description": "SD I/O interrupt received interrupt enable",
+        "name": "SDIOINTIE"
+      },
+      {
+        "bit_offset": 23,
+        "bit_size": 1,
+        "description": "CE-ATA command completion signal received \t interrupt enable",
+        "name": "ATAENDIE"
+      }
+    ]
+  },
+  "fieldset/PWRCTL": {
+    "description": "Power control register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 2,
+        "description": "SDIO power control bits",
+        "name": "PWRCTL"
+      }
+    ]
+  },
+  "fieldset/RESP0": {
+    "description": "Response register 0",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "Card state",
+        "name": "RESP0"
+      }
+    ]
+  },
+  "fieldset/RESP1": {
+    "description": "Response register 1",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "Card state",
+        "name": "RESP1"
+      }
+    ]
+  },
+  "fieldset/RESP2": {
+    "description": "Response register 2",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "Card state",
+        "name": "RESP2"
+      }
+    ]
+  },
+  "fieldset/RESP3": {
+    "description": "Response register 3",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "Response register 3",
+        "name": "RESP3"
+      }
+    ]
+  },
+  "fieldset/RSPCMDIDX": {
+    "description": "Command index response register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 6,
+        "description": "Last response command index",
+        "name": "RSPCMDIDX"
+      }
+    ]
+  },
+  "fieldset/STAT": {
+    "description": "Status register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Command response received",
+        "name": "CCRCERR"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Data block sent/received",
+        "name": "DTCRCERR"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Command response timeout",
+        "name": "CMDTMOUT"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Data timeout",
+        "name": "DTTMOUT"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "Transmit FIFO underrun error occurs",
+        "name": "TXURE"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "Received FIFO overrun error occurs",
+        "name": "RXORE"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "Command response received",
+        "name": "CMDRECV"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Command sent",
+        "name": "CMDSEND"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "Data end",
+        "name": "DTEND"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "Start bit error in the bus",
+        "name": "STBITE"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "Data block sent/received",
+        "name": "DTBLKEND"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "description": "Command transmission in progress",
+        "name": "CMDRUN"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "description": "Data transmission in progress",
+        "name": "TXRUN"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "description": "Data reception in progress",
+        "name": "RXRUN"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "description": "Transmit FIFO is half empty",
+        "name": "TFH"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "Receive FIFO is half full",
+        "name": "RFH"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "description": "Transmit FIFO is full",
+        "name": "TFF"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 1,
+        "description": "Receive FIFO is full",
+        "name": "RFF"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 1,
+        "description": "Transmit FIFO is empty",
+        "name": "TFE"
+      },
+      {
+        "bit_offset": 19,
+        "bit_size": 1,
+        "description": "Receive FIFO is empty",
+        "name": "RFE"
+      },
+      {
+        "bit_offset": 20,
+        "bit_size": 1,
+        "description": "Data is valid in transmit FIFO",
+        "name": "TXDTVAL"
+      },
+      {
+        "bit_offset": 21,
+        "bit_size": 1,
+        "description": "Data is valid in receive FIFO",
+        "name": "RXDTVAL"
+      },
+      {
+        "bit_offset": 22,
+        "bit_size": 1,
+        "description": "SD I/O interrupt received",
+        "name": "SDIOINT"
+      },
+      {
+        "bit_offset": 23,
+        "bit_size": 1,
+        "description": "CE-ATA command completion signal received",
+        "name": "ATAEND"
+      }
+    ]
+  }
+}

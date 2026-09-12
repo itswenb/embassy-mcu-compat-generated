@@ -1,0 +1,593 @@
+{
+  "block/SDIO": {
+    "items": [
+      {
+        "byte_offset": 0,
+        "fieldset": "SDIO_PWRCTL",
+        "name": "SDIO_PWRCTL"
+      },
+      {
+        "byte_offset": 4,
+        "fieldset": "SDIO_CLKCTL",
+        "name": "SDIO_CLKCTL"
+      },
+      {
+        "byte_offset": 8,
+        "fieldset": "SDIO_CMDAGMT",
+        "name": "SDIO_CMDAGMT"
+      },
+      {
+        "byte_offset": 12,
+        "fieldset": "SDIO_CMDCTL",
+        "name": "SDIO_CMDCTL"
+      },
+      {
+        "byte_offset": 16,
+        "name": "SDIO_RSPCMDIDX"
+      },
+      {
+        "byte_offset": 20,
+        "name": "SDIO_RESP0"
+      },
+      {
+        "byte_offset": 24,
+        "name": "SDIO_RESP1"
+      },
+      {
+        "byte_offset": 28,
+        "name": "SDIO_RESP2"
+      },
+      {
+        "byte_offset": 32,
+        "name": "SDIO_RESP3"
+      },
+      {
+        "byte_offset": 36,
+        "fieldset": "SDIO_DATATO",
+        "name": "SDIO_DATATO"
+      },
+      {
+        "byte_offset": 40,
+        "fieldset": "SDIO_DATALEN",
+        "name": "SDIO_DATALEN"
+      },
+      {
+        "byte_offset": 44,
+        "fieldset": "SDIO_DATACTL",
+        "name": "SDIO_DATACTL"
+      },
+      {
+        "byte_offset": 48,
+        "name": "SDIO_DATACNT"
+      },
+      {
+        "byte_offset": 52,
+        "fieldset": "SDIO_STAT",
+        "name": "SDIO_STAT"
+      },
+      {
+        "byte_offset": 56,
+        "fieldset": "SDIO_INTC",
+        "name": "SDIO_INTC"
+      },
+      {
+        "byte_offset": 60,
+        "fieldset": "SDIO_INTEN",
+        "name": "SDIO_INTEN"
+      },
+      {
+        "byte_offset": 72,
+        "name": "SDIO_FIFOCNT"
+      },
+      {
+        "byte_offset": 128,
+        "fieldset": "SDIO_FIFO",
+        "name": "SDIO_FIFO"
+      }
+    ]
+  },
+  "fieldset/SDIO_CLKCTL": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "name": "SDIO_CLKCTL_DIV"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "name": "SDIO_CLKCTL_CLKEN"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "name": "SDIO_CLKCTL_CLKPWRSAV"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "name": "SDIO_CLKCTL_CLKBYP"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 2,
+        "name": "SDIO_CLKCTL_BUSMODE"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "name": "SDIO_CLKCTL_CLKEDGE"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "name": "SDIO_CLKCTL_HWCLKEN"
+      },
+      {
+        "bit_offset": 31,
+        "bit_size": 1,
+        "name": "SDIO_CLKCTL_DIV8"
+      }
+    ]
+  },
+  "fieldset/SDIO_CMDAGMT": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "name": "SDIO_CMDAGMT_CMDAGMT"
+      }
+    ]
+  },
+  "fieldset/SDIO_CMDCTL": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 6,
+        "name": "SDIO_CMDCTL_CMDIDX"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 2,
+        "name": "SDIO_CMDCTL_CMDRESP"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "name": "SDIO_CMDCTL_INTWAIT"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "name": "SDIO_CMDCTL_WAITDEND"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "name": "SDIO_CMDCTL_CSMEN"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "name": "SDIO_CMDCTL_SUSPEND"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "name": "SDIO_CMDCTL_ENCMDC"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "name": "SDIO_CMDCTL_NINTEN"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "name": "SDIO_CMDCTL_ATAEN"
+      }
+    ]
+  },
+  "fieldset/SDIO_DATACTL": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "SDIO_DATACTL_DATAEN"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "SDIO_DATACTL_DATADIR"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "SDIO_DATACTL_TRANSMOD"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "name": "SDIO_DATACTL_DMAEN"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 4,
+        "name": "SDIO_DATACTL_BLKSZ"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "name": "SDIO_DATACTL_RWEN"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "name": "SDIO_DATACTL_RWSTOP"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "name": "SDIO_DATACTL_RWTYPE"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "name": "SDIO_DATACTL_IOEN"
+      }
+    ]
+  },
+  "fieldset/SDIO_DATALEN": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 25,
+        "name": "SDIO_DATALEN_DATALEN"
+      }
+    ]
+  },
+  "fieldset/SDIO_DATATO": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "name": "SDIO_DATATO_DATATO"
+      }
+    ]
+  },
+  "fieldset/SDIO_FIFO": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "name": "SDIO_FIFO_FIFODT"
+      }
+    ]
+  },
+  "fieldset/SDIO_INTC": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "SDIO_INTC_CCRCERRC"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "SDIO_INTC_DTCRCERRC"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "SDIO_INTC_CMDTMOUTC"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "name": "SDIO_INTC_DTTMOUTC"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "name": "SDIO_INTC_TXUREC"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "name": "SDIO_INTC_RXOREC"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "name": "SDIO_INTC_CMDRECVC"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "name": "SDIO_INTC_CMDSENDC"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "name": "SDIO_INTC_DTENDC"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "name": "SDIO_INTC_STBITEC"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "name": "SDIO_INTC_DTBLKENDC"
+      },
+      {
+        "bit_offset": 22,
+        "bit_size": 1,
+        "name": "SDIO_INTC_SDIOINTC"
+      },
+      {
+        "bit_offset": 23,
+        "bit_size": 1,
+        "name": "SDIO_INTC_ATAENDC"
+      }
+    ]
+  },
+  "fieldset/SDIO_INTEN": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "SDIO_INTEN_CCRCERRIE"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "SDIO_INTEN_DTCRCERRIE"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "SDIO_INTEN_CMDTMOUTIE"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "name": "SDIO_INTEN_DTTMOUTIE"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "name": "SDIO_INTEN_TXUREIE"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "name": "SDIO_INTEN_RXOREIE"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "name": "SDIO_INTEN_CMDRECVIE"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "name": "SDIO_INTEN_CMDSENDIE"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "name": "SDIO_INTEN_DTENDIE"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "name": "SDIO_INTEN_STBITEIE"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "name": "SDIO_INTEN_DTBLKENDIE"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "name": "SDIO_INTEN_CMDRUNIE"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "name": "SDIO_INTEN_TXRUNIE"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "name": "SDIO_INTEN_RXRUNIE"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "name": "SDIO_INTEN_TFHIE"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "name": "SDIO_INTEN_RFHIE"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "name": "SDIO_INTEN_TFFIE"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 1,
+        "name": "SDIO_INTEN_RFFIE"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 1,
+        "name": "SDIO_INTEN_TFEIE"
+      },
+      {
+        "bit_offset": 19,
+        "bit_size": 1,
+        "name": "SDIO_INTEN_RFEIE"
+      },
+      {
+        "bit_offset": 20,
+        "bit_size": 1,
+        "name": "SDIO_INTEN_TXDTVALIE"
+      },
+      {
+        "bit_offset": 21,
+        "bit_size": 1,
+        "name": "SDIO_INTEN_RXDTVALIE"
+      },
+      {
+        "bit_offset": 22,
+        "bit_size": 1,
+        "name": "SDIO_INTEN_SDIOINTIE"
+      },
+      {
+        "bit_offset": 23,
+        "bit_size": 1,
+        "name": "SDIO_INTEN_ATAENDIE"
+      }
+    ]
+  },
+  "fieldset/SDIO_PWRCTL": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 2,
+        "name": "SDIO_PWRCTL_PWRCTL"
+      }
+    ]
+  },
+  "fieldset/SDIO_STAT": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "SDIO_STAT_CCRCERR"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "SDIO_STAT_DTCRCERR"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "SDIO_STAT_CMDTMOUT"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "name": "SDIO_STAT_DTTMOUT"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "name": "SDIO_STAT_TXURE"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "name": "SDIO_STAT_RXORE"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "name": "SDIO_STAT_CMDRECV"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "name": "SDIO_STAT_CMDSEND"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "name": "SDIO_STAT_DTEND"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "name": "SDIO_STAT_STBITE"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "name": "SDIO_STAT_DTBLKEND"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "name": "SDIO_STAT_CMDRUN"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "name": "SDIO_STAT_TXRUN"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "name": "SDIO_STAT_RXRUN"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "name": "SDIO_STAT_TFH"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "name": "SDIO_STAT_RFH"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "name": "SDIO_STAT_TFF"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 1,
+        "name": "SDIO_STAT_RFF"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 1,
+        "name": "SDIO_STAT_TFE"
+      },
+      {
+        "bit_offset": 19,
+        "bit_size": 1,
+        "name": "SDIO_STAT_RFE"
+      },
+      {
+        "bit_offset": 20,
+        "bit_size": 1,
+        "name": "SDIO_STAT_TXDTVAL"
+      },
+      {
+        "bit_offset": 21,
+        "bit_size": 1,
+        "name": "SDIO_STAT_RXDTVAL"
+      },
+      {
+        "bit_offset": 22,
+        "bit_size": 1,
+        "name": "SDIO_STAT_SDIOINT"
+      },
+      {
+        "bit_offset": 23,
+        "bit_size": 1,
+        "name": "SDIO_STAT_ATAEND"
+      }
+    ]
+  }
+}

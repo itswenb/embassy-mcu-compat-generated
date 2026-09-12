@@ -1,0 +1,403 @@
+{
+  "block/FMC": {
+    "description": "FMC",
+    "items": [
+      {
+        "byte_offset": 0,
+        "description": "wait state counter register",
+        "fieldset": "WS",
+        "name": "WS"
+      },
+      {
+        "access": "Write",
+        "byte_offset": 4,
+        "description": "Unlock key register",
+        "fieldset": "KEY",
+        "name": "KEY"
+      },
+      {
+        "access": "Write",
+        "byte_offset": 8,
+        "description": "Option byte unlock key register",
+        "fieldset": "OBKEY",
+        "name": "OBKEY"
+      },
+      {
+        "byte_offset": 12,
+        "description": "Status register 0",
+        "fieldset": "STAT0",
+        "name": "STAT0"
+      },
+      {
+        "byte_offset": 16,
+        "description": "Control register 0",
+        "fieldset": "CTL0",
+        "name": "CTL0"
+      },
+      {
+        "access": "Write",
+        "byte_offset": 20,
+        "description": "Address register 0",
+        "fieldset": "ADDR0",
+        "name": "ADDR0"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 28,
+        "description": "Option byte status register",
+        "fieldset": "OBSTAT",
+        "name": "OBSTAT"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 32,
+        "description": "Erase/Program Protection register",
+        "fieldset": "WPR",
+        "name": "WPR"
+      },
+      {
+        "access": "Write",
+        "byte_offset": 68,
+        "description": "Unlock key register 1",
+        "fieldset": "KEY1",
+        "name": "KEY1"
+      },
+      {
+        "byte_offset": 76,
+        "description": "Status register 1",
+        "fieldset": "STAT1",
+        "name": "STAT1"
+      },
+      {
+        "byte_offset": 80,
+        "description": "Control register 1",
+        "fieldset": "CTL1",
+        "name": "CTL1"
+      },
+      {
+        "access": "Write",
+        "byte_offset": 84,
+        "description": "Address register 1",
+        "fieldset": "ADDR1",
+        "name": "ADDR1"
+      },
+      {
+        "byte_offset": 252,
+        "description": "Wait state enable register",
+        "fieldset": "WSEN",
+        "name": "WSEN"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 256,
+        "description": "Product ID register",
+        "fieldset": "PID",
+        "name": "PID"
+      }
+    ]
+  },
+  "fieldset/ADDR0": {
+    "description": "Address register 0",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "Flash erase/program command address bits",
+        "name": "ADDR"
+      }
+    ]
+  },
+  "fieldset/ADDR1": {
+    "description": "Address register 1",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "Flash erase/program command address bits",
+        "name": "ADDR"
+      }
+    ]
+  },
+  "fieldset/CTL0": {
+    "description": "Control register 0",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Main flash program for bank0 command bit",
+        "name": "PG"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Main flash page erase for bank0 command bit",
+        "name": "PER"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Main flash mass erase for bank0 command bit",
+        "name": "MER"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "Option bytes program command bit",
+        "name": "OBPG"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "Option bytes erase command bit",
+        "name": "OBER"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "Send erase command to FMC bit",
+        "name": "START"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "FMC_CTL0 lock bit",
+        "name": "LK"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "Option byte erase/program enable bit",
+        "name": "OBWEN"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "Error interrupt enable bit",
+        "name": "ERRIE"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "description": "End of operation interrupt enable bit",
+        "name": "ENDIE"
+      }
+    ]
+  },
+  "fieldset/CTL1": {
+    "description": "Control register 1",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Main flash program for bank0 command bit",
+        "name": "PG"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Main flash page erase for bank0 command bit",
+        "name": "PER"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Main flash mass erase for bank0 command bit",
+        "name": "MER"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "Send erase command to FMC bit",
+        "name": "START"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "FMC_CTL0 lock bit",
+        "name": "LK"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "Error interrupt enable bit",
+        "name": "ERRIE"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "description": "End of operation interrupt enable bit",
+        "name": "ENDIE"
+      }
+    ]
+  },
+  "fieldset/KEY": {
+    "description": "Unlock key register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "FMC_CTL unlock register",
+        "name": "KEY"
+      }
+    ]
+  },
+  "fieldset/KEY1": {
+    "description": "Unlock key register 1",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "FMC_CTL unlock register",
+        "name": "KEY"
+      }
+    ]
+  },
+  "fieldset/OBKEY": {
+    "description": "Option byte unlock key register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "FMC_ OBCTL0 option byte operation unlock register",
+        "name": "OBKEY"
+      }
+    ]
+  },
+  "fieldset/OBSTAT": {
+    "description": "Option byte status register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Option bytes read error bit",
+        "name": "OBERR"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Option bytes security protection code",
+        "name": "SPC"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 8,
+        "description": "Store USER of option bytes block after system reset",
+        "name": "USER"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 16,
+        "description": "Store DATA[15:0] of option bytes block after system reset",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/PID": {
+    "description": "Product ID register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "Product reserved ID code register",
+        "name": "PID"
+      }
+    ]
+  },
+  "fieldset/STAT0": {
+    "description": "Status register 0",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "The flash is busy bit",
+        "name": "BUSY"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Program error flag bit",
+        "name": "PGERR"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "Erase/Program protection error flag bit",
+        "name": "WPERR"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "End of operation flag bit",
+        "name": "ENDF"
+      }
+    ]
+  },
+  "fieldset/STAT1": {
+    "description": "Status register 1",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "The flash is busy bit",
+        "name": "BUSY"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Program error flag bit",
+        "name": "PGERR"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "Erase/Program protection error flag bit",
+        "name": "WPERR"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "End of operation flag bit",
+        "name": "ENDF"
+      }
+    ]
+  },
+  "fieldset/WPR": {
+    "description": "Erase/Program Protection register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "Store WP[31:0] of option bytes block after system reset",
+        "name": "WP"
+      }
+    ]
+  },
+  "fieldset/WS": {
+    "description": "wait state counter register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 3,
+        "description": "wait state counter register",
+        "name": "WSCNT"
+      }
+    ]
+  },
+  "fieldset/WSEN": {
+    "description": "Wait state enable register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "FMC wait state enable register",
+        "name": "WSEN"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "FMC bit program enable register",
+        "name": "BPEN"
+      }
+    ]
+  }
+}

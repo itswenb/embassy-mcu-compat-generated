@@ -1,0 +1,1848 @@
+{
+  "block/GD_MERGED_8C07478B0386": {
+    "items": [
+      {
+        "byte_offset": 0,
+        "description": "control register 0",
+        "fieldset": "GD_MERGED_8C07478B0386_SVD_CTL0",
+        "name": "CTL0"
+      },
+      {
+        "byte_offset": 0,
+        "fieldset": "GD_MERGED_8C07478B0386_FW_TIMER_CTL0",
+        "name": "TIMER_CTL0"
+      },
+      {
+        "byte_offset": 4,
+        "description": "control register 1",
+        "fieldset": "GD_MERGED_8C07478B0386_SVD_CTL1",
+        "name": "CTL1"
+      },
+      {
+        "byte_offset": 4,
+        "fieldset": "GD_MERGED_8C07478B0386_FW_TIMER_CTL1",
+        "name": "TIMER_CTL1"
+      },
+      {
+        "byte_offset": 8,
+        "description": "slave mode configuration register",
+        "fieldset": "GD_MERGED_8C07478B0386_SVD_SMCFG",
+        "name": "SMCFG"
+      },
+      {
+        "byte_offset": 8,
+        "fieldset": "GD_MERGED_8C07478B0386_FW_TIMER_SMCFG",
+        "name": "TIMER_SMCFG"
+      },
+      {
+        "byte_offset": 12,
+        "description": "DMA/Interrupt enable register",
+        "fieldset": "GD_MERGED_8C07478B0386_SVD_DMAINTEN",
+        "name": "DMAINTEN"
+      },
+      {
+        "byte_offset": 12,
+        "fieldset": "GD_MERGED_8C07478B0386_FW_TIMER_DMAINTEN",
+        "name": "TIMER_DMAINTEN"
+      },
+      {
+        "byte_offset": 16,
+        "description": "Interrupt flag register",
+        "fieldset": "GD_MERGED_8C07478B0386_SVD_INTF",
+        "name": "INTF"
+      },
+      {
+        "byte_offset": 16,
+        "fieldset": "GD_MERGED_8C07478B0386_FW_TIMER_INTF",
+        "name": "TIMER_INTF"
+      },
+      {
+        "access": "Write",
+        "byte_offset": 20,
+        "description": "Software event generation register",
+        "fieldset": "GD_MERGED_8C07478B0386_SVD_SWEVG",
+        "name": "SWEVG"
+      },
+      {
+        "byte_offset": 20,
+        "fieldset": "GD_MERGED_8C07478B0386_FW_TIMER_SWEVG",
+        "name": "TIMER_SWEVG"
+      },
+      {
+        "byte_offset": 24,
+        "description": "Channel control register 0 (input mode)",
+        "fieldset": "GD_MERGED_8C07478B0386_SVD_CHCTL0_Input",
+        "name": "CHCTL0_Input"
+      },
+      {
+        "byte_offset": 24,
+        "description": "Channel control register 0 (output mode)",
+        "fieldset": "GD_MERGED_8C07478B0386_SVD_CHCTL0_Output",
+        "name": "CHCTL0_Output"
+      },
+      {
+        "byte_offset": 24,
+        "fieldset": "GD_MERGED_8C07478B0386_FW_TIMER_CHCTL0",
+        "name": "TIMER_CHCTL0"
+      },
+      {
+        "byte_offset": 28,
+        "description": "Channel control register 1 (input mode)",
+        "fieldset": "GD_MERGED_8C07478B0386_SVD_CHCTL1_Input",
+        "name": "CHCTL1_Input"
+      },
+      {
+        "byte_offset": 28,
+        "description": "Channel control register 1 (output mode)",
+        "fieldset": "GD_MERGED_8C07478B0386_SVD_CHCTL1_Output",
+        "name": "CHCTL1_Output"
+      },
+      {
+        "byte_offset": 28,
+        "fieldset": "GD_MERGED_8C07478B0386_FW_TIMER_CHCTL1",
+        "name": "TIMER_CHCTL1"
+      },
+      {
+        "byte_offset": 32,
+        "description": "Channel control register 2",
+        "fieldset": "GD_MERGED_8C07478B0386_SVD_CHCTL2",
+        "name": "CHCTL2"
+      },
+      {
+        "byte_offset": 32,
+        "fieldset": "GD_MERGED_8C07478B0386_FW_TIMER_CHCTL2",
+        "name": "TIMER_CHCTL2"
+      },
+      {
+        "byte_offset": 36,
+        "description": "counter",
+        "fieldset": "GD_MERGED_8C07478B0386_SVD_CNT",
+        "name": "CNT"
+      },
+      {
+        "byte_offset": 36,
+        "fieldset": "GD_MERGED_8C07478B0386_FW_TIMER_CNT",
+        "name": "TIMER_CNT"
+      },
+      {
+        "byte_offset": 40,
+        "description": "prescaler",
+        "fieldset": "GD_MERGED_8C07478B0386_SVD_PSC",
+        "name": "PSC"
+      },
+      {
+        "byte_offset": 40,
+        "fieldset": "GD_MERGED_8C07478B0386_FW_TIMER_PSC",
+        "name": "TIMER_PSC"
+      },
+      {
+        "byte_offset": 44,
+        "description": "Counter auto reload register",
+        "fieldset": "GD_MERGED_8C07478B0386_SVD_CAR",
+        "name": "CAR"
+      },
+      {
+        "byte_offset": 44,
+        "fieldset": "GD_MERGED_8C07478B0386_FW_TIMER_CAR",
+        "name": "TIMER_CAR"
+      },
+      {
+        "byte_offset": 48,
+        "description": "Counter repetition register",
+        "fieldset": "GD_MERGED_8C07478B0386_SVD_CREP",
+        "name": "CREP"
+      },
+      {
+        "byte_offset": 48,
+        "fieldset": "GD_MERGED_8C07478B0386_FW_TIMER_CREP",
+        "name": "TIMER_CREP"
+      },
+      {
+        "byte_offset": 52,
+        "description": "Channel 0 capture/compare value register",
+        "fieldset": "GD_MERGED_8C07478B0386_SVD_CH0CV",
+        "name": "CH0CV"
+      },
+      {
+        "byte_offset": 52,
+        "fieldset": "GD_MERGED_8C07478B0386_FW_TIMER_CH0CV",
+        "name": "TIMER_CH0CV"
+      },
+      {
+        "byte_offset": 56,
+        "description": "Channel 1 capture/compare value register",
+        "fieldset": "GD_MERGED_8C07478B0386_SVD_CH1CV",
+        "name": "CH1CV"
+      },
+      {
+        "byte_offset": 56,
+        "fieldset": "GD_MERGED_8C07478B0386_FW_TIMER_CH1CV",
+        "name": "TIMER_CH1CV"
+      },
+      {
+        "byte_offset": 60,
+        "description": "Channel 2 capture/compare value register",
+        "fieldset": "GD_MERGED_8C07478B0386_SVD_CH2CV",
+        "name": "CH2CV"
+      },
+      {
+        "byte_offset": 60,
+        "fieldset": "GD_MERGED_8C07478B0386_FW_TIMER_CH2CV",
+        "name": "TIMER_CH2CV"
+      },
+      {
+        "byte_offset": 64,
+        "description": "Channel 3 capture/compare value register",
+        "fieldset": "GD_MERGED_8C07478B0386_SVD_CH3CV",
+        "name": "CH3CV"
+      },
+      {
+        "byte_offset": 64,
+        "fieldset": "GD_MERGED_8C07478B0386_FW_TIMER_CH3CV",
+        "name": "TIMER_CH3CV"
+      },
+      {
+        "byte_offset": 68,
+        "description": "channel complementary protection register",
+        "fieldset": "GD_MERGED_8C07478B0386_SVD_CCHP",
+        "name": "CCHP"
+      },
+      {
+        "byte_offset": 68,
+        "fieldset": "GD_MERGED_8C07478B0386_FW_TIMER_CCHP",
+        "name": "TIMER_CCHP"
+      },
+      {
+        "byte_offset": 72,
+        "description": "DMA configuration register",
+        "fieldset": "GD_MERGED_8C07478B0386_SVD_DMACFG",
+        "name": "DMACFG"
+      },
+      {
+        "byte_offset": 72,
+        "fieldset": "GD_MERGED_8C07478B0386_FW_TIMER_DMACFG",
+        "name": "TIMER_DMACFG"
+      },
+      {
+        "byte_offset": 76,
+        "description": "DMA transfer buffer register",
+        "fieldset": "GD_MERGED_8C07478B0386_SVD_DMATB",
+        "name": "DMATB"
+      },
+      {
+        "byte_offset": 76,
+        "fieldset": "GD_MERGED_8C07478B0386_FW_TIMER_DMATB",
+        "name": "TIMER_DMATB"
+      },
+      {
+        "byte_offset": 252,
+        "description": "Configuration register",
+        "fieldset": "GD_MERGED_8C07478B0386_SVD_CFG",
+        "name": "CFG"
+      },
+      {
+        "byte_offset": 252,
+        "fieldset": "GD_MERGED_8C07478B0386_FW_TIMER_CFG",
+        "name": "TIMER_CFG"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_8C07478B0386_FW_TIMER_CAR": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "name": "TIMER_CAR_CARL"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_8C07478B0386_FW_TIMER_CCHP": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "name": "TIMER_CCHP_DTCFG"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 2,
+        "name": "TIMER_CCHP_PROT"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "name": "TIMER_CCHP_IOS"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "name": "TIMER_CCHP_ROS"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "name": "TIMER_CCHP_BRKEN"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "name": "TIMER_CCHP_BRKP"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "name": "TIMER_CCHP_OAEN"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "name": "TIMER_CCHP_POEN"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_8C07478B0386_FW_TIMER_CFG": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "TIMER_CFG_OUTSEL"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "TIMER_CFG_CHVSEL"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_8C07478B0386_FW_TIMER_CH0CV": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "name": "TIMER_CH0CV_CH0VAL"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_8C07478B0386_FW_TIMER_CH1CV": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "name": "TIMER_CH1CV_CH1VAL"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_8C07478B0386_FW_TIMER_CH2CV": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "name": "TIMER_CH2CV_CH2VAL"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_8C07478B0386_FW_TIMER_CH3CV": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "name": "TIMER_CH3CV_CH3VAL"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_8C07478B0386_FW_TIMER_CHCTL0": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 2,
+        "name": "TIMER_CHCTL0_CH0MS"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 2,
+        "name": "TIMER_CHCTL0_CH0CAPPSC"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "TIMER_CHCTL0_CH0COMFEN"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "name": "TIMER_CHCTL0_CH0COMSEN"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 4,
+        "name": "TIMER_CHCTL0_CH0CAPFLT"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 3,
+        "name": "TIMER_CHCTL0_CH0COMCTL"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "name": "TIMER_CHCTL0_CH0COMCEN"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 2,
+        "name": "TIMER_CHCTL0_CH1MS"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 2,
+        "name": "TIMER_CHCTL0_CH1CAPPSC"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "name": "TIMER_CHCTL0_CH1COMFEN"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "name": "TIMER_CHCTL0_CH1COMSEN"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 4,
+        "name": "TIMER_CHCTL0_CH1CAPFLT"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 3,
+        "name": "TIMER_CHCTL0_CH1COMCTL"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "name": "TIMER_CHCTL0_CH1COMCEN"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_8C07478B0386_FW_TIMER_CHCTL1": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 2,
+        "name": "TIMER_CHCTL1_CH2MS"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 2,
+        "name": "TIMER_CHCTL1_CH2CAPPSC"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "TIMER_CHCTL1_CH2COMFEN"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "name": "TIMER_CHCTL1_CH2COMSEN"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 4,
+        "name": "TIMER_CHCTL1_CH2CAPFLT"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 3,
+        "name": "TIMER_CHCTL1_CH2COMCTL"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "name": "TIMER_CHCTL1_CH2COMCEN"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 2,
+        "name": "TIMER_CHCTL1_CH3MS"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 2,
+        "name": "TIMER_CHCTL1_CH3CAPPSC"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "name": "TIMER_CHCTL1_CH3COMFEN"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "name": "TIMER_CHCTL1_CH3COMSEN"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 4,
+        "name": "TIMER_CHCTL1_CH3CAPFLT"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 3,
+        "name": "TIMER_CHCTL1_CH3COMCTL"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "name": "TIMER_CHCTL1_CH3COMCEN"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_8C07478B0386_FW_TIMER_CHCTL2": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "TIMER_CHCTL2_CH0EN"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "TIMER_CHCTL2_CH0P"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "TIMER_CHCTL2_CH0NEN"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "name": "TIMER_CHCTL2_CH0NP"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "name": "TIMER_CHCTL2_CH1EN"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "name": "TIMER_CHCTL2_CH1P"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "name": "TIMER_CHCTL2_CH1NEN"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "name": "TIMER_CHCTL2_CH1NP"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "name": "TIMER_CHCTL2_CH2EN"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "name": "TIMER_CHCTL2_CH2P"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "name": "TIMER_CHCTL2_CH2NEN"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "name": "TIMER_CHCTL2_CH2NP"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "name": "TIMER_CHCTL2_CH3EN"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "name": "TIMER_CHCTL2_CH3P"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_8C07478B0386_FW_TIMER_CNT": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "name": "TIMER_CNT_CNT"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_8C07478B0386_FW_TIMER_CREP": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "name": "TIMER_CREP_CREP"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_8C07478B0386_FW_TIMER_CTL0": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "TIMER_CTL0_CEN"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "TIMER_CTL0_UPDIS"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "TIMER_CTL0_UPS"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "name": "TIMER_CTL0_SPM"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "name": "TIMER_CTL0_DIR"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 2,
+        "name": "TIMER_CTL0_CAM"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "name": "TIMER_CTL0_ARSE"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 2,
+        "name": "TIMER_CTL0_CKDIV"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_8C07478B0386_FW_TIMER_CTL1": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "TIMER_CTL1_CCSE"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "TIMER_CTL1_CCUC"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "name": "TIMER_CTL1_DMAS"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 3,
+        "name": "TIMER_CTL1_MMC"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "name": "TIMER_CTL1_TI0S"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "name": "TIMER_CTL1_ISO0"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "name": "TIMER_CTL1_ISO0N"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "name": "TIMER_CTL1_ISO1"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "name": "TIMER_CTL1_ISO1N"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "name": "TIMER_CTL1_ISO2"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "name": "TIMER_CTL1_ISO2N"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "name": "TIMER_CTL1_ISO3"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_8C07478B0386_FW_TIMER_DMACFG": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 5,
+        "name": "TIMER_DMACFG_DMATA"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 5,
+        "name": "TIMER_DMACFG_DMATC"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_8C07478B0386_FW_TIMER_DMAINTEN": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "TIMER_DMAINTEN_UPIE"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "TIMER_DMAINTEN_CH0IE"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "TIMER_DMAINTEN_CH1IE"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "name": "TIMER_DMAINTEN_CH2IE"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "name": "TIMER_DMAINTEN_CH3IE"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "name": "TIMER_DMAINTEN_CMTIE"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "name": "TIMER_DMAINTEN_TRGIE"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "name": "TIMER_DMAINTEN_BRKIE"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "name": "TIMER_DMAINTEN_UPDEN"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "name": "TIMER_DMAINTEN_CH0DEN"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "name": "TIMER_DMAINTEN_CH1DEN"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "name": "TIMER_DMAINTEN_CH2DEN"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "name": "TIMER_DMAINTEN_CH3DEN"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "name": "TIMER_DMAINTEN_CMTDEN"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "name": "TIMER_DMAINTEN_TRGDEN"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_8C07478B0386_FW_TIMER_DMATB": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "name": "TIMER_DMATB_DMATB"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_8C07478B0386_FW_TIMER_INTF": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "TIMER_INTF_UPIF"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "TIMER_INTF_CH0IF"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "TIMER_INTF_CH1IF"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "name": "TIMER_INTF_CH2IF"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "name": "TIMER_INTF_CH3IF"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "name": "TIMER_INTF_CMTIF"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "name": "TIMER_INTF_TRGIF"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "name": "TIMER_INTF_BRKIF"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "name": "TIMER_INTF_CH0OF"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "name": "TIMER_INTF_CH1OF"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "name": "TIMER_INTF_CH2OF"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "name": "TIMER_INTF_CH3OF"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_8C07478B0386_FW_TIMER_PSC": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "name": "TIMER_PSC_PSC"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_8C07478B0386_FW_TIMER_SMCFG": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 3,
+        "name": "TIMER_SMCFG_SMC"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 3,
+        "name": "TIMER_SMCFG_TRGS"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "name": "TIMER_SMCFG_MSM"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 4,
+        "name": "TIMER_SMCFG_ETFC"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 2,
+        "name": "TIMER_SMCFG_ETPSC"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "name": "TIMER_SMCFG_SMC1"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "name": "TIMER_SMCFG_ETP"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_8C07478B0386_FW_TIMER_SWEVG": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "TIMER_SWEVG_UPG"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "TIMER_SWEVG_CH0G"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "TIMER_SWEVG_CH1G"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "name": "TIMER_SWEVG_CH2G"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "name": "TIMER_SWEVG_CH3G"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "name": "TIMER_SWEVG_CMTG"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "name": "TIMER_SWEVG_TRGG"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "name": "TIMER_SWEVG_BRKG"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_8C07478B0386_SVD_CAR": {
+    "description": "Counter auto reload register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Counter auto reload value",
+        "name": "CARL"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_8C07478B0386_SVD_CCHP": {
+    "description": "channel complementary protection register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "Dead time configure",
+        "name": "DTCFG"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 2,
+        "description": "Complementary register protect control",
+        "name": "PROT"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "Idle mode off-state configure",
+        "name": "IOS"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "description": "Run mode off-state configure",
+        "name": "ROS"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "description": "Break enable",
+        "name": "BRKEN"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "description": "Break polarity",
+        "name": "BRKP"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "description": "Output automatic enable",
+        "name": "OAEN"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "Primary output enable",
+        "name": "POEN"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_8C07478B0386_SVD_CFG": {
+    "description": "Configuration register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "The output value selection",
+        "name": "OUTSEL"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Write CHxVAL register selection",
+        "name": "CHVSEL"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_8C07478B0386_SVD_CH0CV": {
+    "description": "Channel 0 capture/compare value register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Capture or compare value of channel0",
+        "name": "CH0VAL"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_8C07478B0386_SVD_CH1CV": {
+    "description": "Channel 1 capture/compare value register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Capture or compare value of channel1",
+        "name": "CH1VAL"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_8C07478B0386_SVD_CH2CV": {
+    "description": "Channel 2 capture/compare value register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Capture or compare value of channel 2",
+        "name": "CH2VAL"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_8C07478B0386_SVD_CH3CV": {
+    "description": "Channel 3 capture/compare value register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Capture or compare value of channel 3",
+        "name": "CH3VAL"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_8C07478B0386_SVD_CHCTL0_Input": {
+    "description": "Channel control register 0 (input mode)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 2,
+        "description": "Channel 0 mode selection",
+        "name": "CH0MS"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 2,
+        "description": "Channel 0 input capture prescaler",
+        "name": "CH0CAPPSC"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 4,
+        "description": "Channel 0 input capture filter control",
+        "name": "CH0CAPFLT"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 2,
+        "description": "Channel 1 mode selection",
+        "name": "CH1MS"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 2,
+        "description": "Channel 1 input capture prescaler",
+        "name": "CH1CAPPSC"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 4,
+        "description": "Channel 1 input capture filter control",
+        "name": "CH1CAPFLT"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_8C07478B0386_SVD_CHCTL0_Output": {
+    "description": "Channel control register 0 (output mode)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 2,
+        "description": "Channel 0 I/O mode selection",
+        "name": "CH0MS"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Channel 0 output compare fast enable",
+        "name": "CH0COMFEN"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Channel 0 compare output shadow enable",
+        "name": "CH0COMSEN"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 3,
+        "description": "Channel 0 compare output control",
+        "name": "CH0COMCTL"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Channel 0 output compare clear enable",
+        "name": "CH0COMCEN"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 2,
+        "description": "Channel 1 mode selection",
+        "name": "CH1MS"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "Channel 1 output compare fast enable",
+        "name": "CH1COMFEN"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "description": "Channel 1 output compare shadow enable",
+        "name": "CH1COMSEN"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 3,
+        "description": "Channel 1 compare output control",
+        "name": "CH1COMCTL"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "Channel 1 output compare clear enable",
+        "name": "CH1COMCEN"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_8C07478B0386_SVD_CHCTL1_Input": {
+    "description": "Channel control register 1 (input mode)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 2,
+        "description": "Channel 2 mode selection",
+        "name": "CH2MS"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 2,
+        "description": "Channel 2 input capture prescaler",
+        "name": "CH2CAPPSC"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 4,
+        "description": "Channel 2 input capture filter control",
+        "name": "CH2CAPFLT"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 2,
+        "description": "Channel 3 mode selection",
+        "name": "CH3MS"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 2,
+        "description": "Channel 3 input capture prescaler",
+        "name": "CH3CAPPSC"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 4,
+        "description": "Channel 3 input capture filter control",
+        "name": "CH3CAPFLT"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_8C07478B0386_SVD_CHCTL1_Output": {
+    "description": "Channel control register 1 (output mode)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 2,
+        "description": "Channel 2 I/O mode selection",
+        "name": "CH2MS"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Channel 2 output compare fast enable",
+        "name": "CH2COMFEN"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Channel 2 compare output shadow enable",
+        "name": "CH2COMSEN"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 3,
+        "description": "Channel 2 compare output control",
+        "name": "CH2COMCTL"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Channel 2 output compare clear enable",
+        "name": "CH2COMCEN"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 2,
+        "description": "Channel 3 mode selection",
+        "name": "CH3MS"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "Channel 3 output compare fast enable",
+        "name": "CH3COMFEN"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "description": "Channel 3 output compare shadow enable",
+        "name": "CH3COMSEN"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 3,
+        "description": "Channel 3 compare output control",
+        "name": "CH3COMCTL"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "Channel 3 output compare clear enable",
+        "name": "CH3COMCEN"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_8C07478B0386_SVD_CHCTL2": {
+    "description": "Channel control register 2",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Channel 0 capture/compare function enable",
+        "name": "CH0EN"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Channel 0 capture/compare function polarity",
+        "name": "CH0P"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Channel 0 complementary output enable",
+        "name": "CH0NEN"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Channel 0 complementary output polarity",
+        "name": "CH0NP"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "Channel 1 capture/compare function enable",
+        "name": "CH1EN"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "Channel 1 capture/compare function polarity",
+        "name": "CH1P"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "Channel 1 complementary output enable",
+        "name": "CH1NEN"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Channel 1 complementary output polarity",
+        "name": "CH1NP"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "Channel 2 capture/compare function enable",
+        "name": "CH2EN"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "Channel 2 capture/compare function polarity",
+        "name": "CH2P"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "Channel 2 complementary output enable",
+        "name": "CH2NEN"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "description": "Channel 2 complementary output polarity",
+        "name": "CH2NP"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "description": "Channel 3 capture/compare function enable",
+        "name": "CH3EN"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "description": "Channel 3 capture/compare function polarity",
+        "name": "CH3P"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_8C07478B0386_SVD_CNT": {
+    "description": "counter",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "current counter value",
+        "name": "CNT"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_8C07478B0386_SVD_CREP": {
+    "description": "Counter repetition register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "Counter repetition value",
+        "name": "CREP"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_8C07478B0386_SVD_CTL0": {
+    "description": "control register 0",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Counter enable",
+        "name": "CEN"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Update disable",
+        "name": "UPDIS"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Update source",
+        "name": "UPS"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Single pulse mode",
+        "name": "SPM"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "Direction",
+        "name": "DIR"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 2,
+        "description": "Counter aligns mode selection",
+        "name": "CAM"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Auto-reload shadow enable",
+        "name": "ARSE"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 2,
+        "description": "Clock division",
+        "name": "CKDIV"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_8C07478B0386_SVD_CTL1": {
+    "description": "control register 1",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Commutation control shadow enable",
+        "name": "CCSE"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Commutation control shadow register update control",
+        "name": "CCUC"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "DMA request source selection",
+        "name": "DMAS"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 3,
+        "description": "Master mode control",
+        "name": "MMC"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Channel 0 trigger input selection",
+        "name": "TI0S"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "Idle state of channel 0 output",
+        "name": "ISO0"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "Idle state of channel 0 complementary output",
+        "name": "ISO0N"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "Idle state of channel 1 output",
+        "name": "ISO1"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "description": "Idle state of channel 1 complementary output",
+        "name": "ISO1N"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "description": "Idle state of channel 2 output",
+        "name": "ISO2"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "description": "Idle state of channel 2 complementary output",
+        "name": "ISO2N"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "description": "Idle state of channel 3 output",
+        "name": "ISO3"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_8C07478B0386_SVD_DMACFG": {
+    "description": "DMA configuration register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 5,
+        "description": "DMA transfer access start address",
+        "name": "DMATA"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 5,
+        "description": "DMA transfer count",
+        "name": "DMATC"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_8C07478B0386_SVD_DMAINTEN": {
+    "description": "DMA/Interrupt enable register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Update interrupt enable",
+        "name": "UPIE"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Channel 0 capture/compare interrupt enable",
+        "name": "CH0IE"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Channel 1 capture/compare interrupt enable",
+        "name": "CH1IE"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Channel 2 capture/compare interrupt enable",
+        "name": "CH2IE"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "Channel 3 capture/compare interrupt enable",
+        "name": "CH3IE"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "commutation interrupt enable",
+        "name": "CMTIE"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "Trigger interrupt enable",
+        "name": "TRGIE"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Break interrupt enable",
+        "name": "BRKIE"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "Update DMA request enable",
+        "name": "UPDEN"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "Channel 0 capture/compare DMA request enable",
+        "name": "CH0DEN"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "Channel 1 capture/compare DMA request enable",
+        "name": "CH1DEN"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "description": "Channel 2 capture/compare DMA request enable",
+        "name": "CH2DEN"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "description": "Channel 3 capture/compare DMA request enable",
+        "name": "CH3DEN"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "description": "Commutation DMA request enable",
+        "name": "CMTDEN"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "description": "Trigger DMA request enable",
+        "name": "TRGDEN"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_8C07478B0386_SVD_DMATB": {
+    "description": "DMA transfer buffer register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "DMA transfer buffer",
+        "name": "DMATB"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_8C07478B0386_SVD_INTF": {
+    "description": "Interrupt flag register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Update interrupt flag",
+        "name": "UPIF"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Channel 0 capture/compare interrupt flag",
+        "name": "CH0IF"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Channel 1 capture/compare interrupt flag",
+        "name": "CH1IF"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Channel 2 capture/compare interrupt flag",
+        "name": "CH2IF"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "Channel 3 capture/compare interrupt flag",
+        "name": "CH3IF"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "Channel commutation interrupt flag",
+        "name": "CMTIF"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "Trigger interrupt flag",
+        "name": "TRGIF"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Break interrupt flag",
+        "name": "BRKIF"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "Channel 0 over capture flag",
+        "name": "CH0OF"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "Channel 1 over capture flag",
+        "name": "CH1OF"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "description": "Channel 2 over capture flag",
+        "name": "CH2OF"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "description": "Channel 3 over capture flag",
+        "name": "CH3OF"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_8C07478B0386_SVD_PSC": {
+    "description": "prescaler",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Prescaler value of the counter clock",
+        "name": "PSC"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_8C07478B0386_SVD_SMCFG": {
+    "description": "slave mode configuration register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 3,
+        "description": "Slave mode selection",
+        "name": "SMC"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 3,
+        "description": "Trigger selection",
+        "name": "TRGS"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Master/Slave mode",
+        "name": "MSM"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 4,
+        "description": "External trigger filter control",
+        "name": "ETFC"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 2,
+        "description": "External trigger prescaler",
+        "name": "ETPSC"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "description": "Part of SMC for enable External clock mode1",
+        "name": "SMC1"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "External trigger polarity",
+        "name": "ETP"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_8C07478B0386_SVD_SWEVG": {
+    "description": "Software event generation register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Update event generation",
+        "name": "UPG"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Channel 0 capture or compare event generation",
+        "name": "CH0G"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Channel 1 capture or compare event generation",
+        "name": "CH1G"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Channel 2 capture or compare event generation",
+        "name": "CH2G"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "Channel 3 capture or compare event generation",
+        "name": "CH3G"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "Channel commutation event generation",
+        "name": "CMTG"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "Trigger event generation",
+        "name": "TRGG"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Break event generation",
+        "name": "BRKG"
+      }
+    ]
+  }
+}

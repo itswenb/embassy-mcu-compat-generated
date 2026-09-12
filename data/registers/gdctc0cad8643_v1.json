@@ -1,0 +1,209 @@
+{
+  "block/CTC": {
+    "description": "Clock trim controller",
+    "items": [
+      {
+        "byte_offset": 0,
+        "description": "Control register 0",
+        "fieldset": "CTL0",
+        "name": "CTL0"
+      },
+      {
+        "byte_offset": 4,
+        "description": "Control register 1",
+        "fieldset": "CTL1",
+        "name": "CTL1"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 8,
+        "description": "Status register",
+        "fieldset": "STAT",
+        "name": "STAT"
+      },
+      {
+        "access": "Write",
+        "byte_offset": 12,
+        "description": "Interrupt clear register",
+        "fieldset": "INTC",
+        "name": "INTC"
+      }
+    ]
+  },
+  "fieldset/CTL0": {
+    "description": "Control register 0",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Clock trim ok interrupt enable",
+        "name": "CKOKIE"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Clock trim warning interrupt enable",
+        "name": "CKWARNIE"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Error interrupt enable",
+        "name": "ERRIE"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "EREFIF interrupt enable",
+        "name": "EREFIE"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "CTC counter enable",
+        "name": "CNTEN"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "Hardware automatically trim mode",
+        "name": "AUTOTRIM"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Software reference source sync pulse",
+        "name": "SWREFPUL"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 6,
+        "description": "IRC48M trim value",
+        "name": "TRIMVALUE"
+      }
+    ]
+  },
+  "fieldset/CTL1": {
+    "description": "Control register 1",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "CTC counter reload value",
+        "name": "RLVALUE"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 8,
+        "description": "Clock trim base limit value",
+        "name": "CKLIM"
+      },
+      {
+        "bit_offset": 24,
+        "bit_size": 3,
+        "description": "Reference signal source prescaler",
+        "name": "REFPSC"
+      },
+      {
+        "bit_offset": 28,
+        "bit_size": 2,
+        "description": "Reference signal source selection",
+        "name": "REFSEL"
+      },
+      {
+        "bit_offset": 31,
+        "bit_size": 1,
+        "description": "Reference signal source polarity",
+        "name": "REFPOL"
+      }
+    ]
+  },
+  "fieldset/INTC": {
+    "description": "Interrupt clear register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "CKOKIF interrupt clear bit",
+        "name": "CKOKIC"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "CKWARNIF interrupt clear bit",
+        "name": "CKWARNIC"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "ERRIF interrupt clear bit",
+        "name": "ERRIC"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "EREFIF interrupt clear bit",
+        "name": "EREFIC"
+      }
+    ]
+  },
+  "fieldset/STAT": {
+    "description": "Status register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Clock trim OK interrupt flag",
+        "name": "CKOKIF"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Clock trim warning interrupt flag",
+        "name": "CKWARNIF"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Error interrupt flag",
+        "name": "ERRIF"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Expect reference interrupt flag",
+        "name": "EREFIF"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "Clock trim error bit",
+        "name": "CKERR"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "Reference sync pulse miss",
+        "name": "REFMISS"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "Trim value error bit",
+        "name": "TRIMERR"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "CTC trim counter direction when reference sync pulse",
+        "name": "REFDIR"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 16,
+        "description": "CTC counter capture when reference sync pulse",
+        "name": "REFCAP"
+      }
+    ]
+  }
+}

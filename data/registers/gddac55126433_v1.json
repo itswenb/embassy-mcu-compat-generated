@@ -1,0 +1,168 @@
+{
+  "block/DAC": {
+    "items": [
+      {
+        "byte_offset": 0,
+        "fieldset": "DAC_CTL0",
+        "name": "DAC_CTL0"
+      },
+      {
+        "byte_offset": 4,
+        "fieldset": "DAC_SWT",
+        "name": "DAC_SWT"
+      },
+      {
+        "byte_offset": 8,
+        "name": "DAC_OUT0_R12DH"
+      },
+      {
+        "byte_offset": 12,
+        "name": "DAC_OUT0_L12DH"
+      },
+      {
+        "byte_offset": 16,
+        "name": "DAC_OUT0_R8DH"
+      },
+      {
+        "byte_offset": 20,
+        "name": "DAC_OUT1_R12DH"
+      },
+      {
+        "byte_offset": 24,
+        "name": "DAC_OUT1_L12DH"
+      },
+      {
+        "byte_offset": 28,
+        "name": "DAC_OUT1_R8DH"
+      },
+      {
+        "byte_offset": 32,
+        "name": "DACC_R12DH"
+      },
+      {
+        "byte_offset": 36,
+        "name": "DACC_L12DH"
+      },
+      {
+        "byte_offset": 40,
+        "name": "DACC_R8DH"
+      },
+      {
+        "byte_offset": 44,
+        "fieldset": "DAC_OUT0_DO",
+        "name": "DAC_OUT0_DO"
+      },
+      {
+        "byte_offset": 48,
+        "fieldset": "DAC_OUT1_DO",
+        "name": "DAC_OUT1_DO"
+      }
+    ]
+  },
+  "fieldset/DAC_CTL0": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "DAC_CTL0_DEN0"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "DAC_CTL0_DBOFF0"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "DAC_CTL0_DTEN0"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 3,
+        "name": "DAC_CTL0_DTSEL0"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 2,
+        "name": "DAC_CTL0_DWM0"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 4,
+        "name": "DAC_CTL0_DWBW0"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "name": "DAC_CTL0_DDMAEN0"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "name": "DAC_CTL0_DEN1"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 1,
+        "name": "DAC_CTL0_DBOFF1"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 1,
+        "name": "DAC_CTL0_DTEN1"
+      },
+      {
+        "bit_offset": 19,
+        "bit_size": 3,
+        "name": "DAC_CTL0_DTSEL1"
+      },
+      {
+        "bit_offset": 22,
+        "bit_size": 2,
+        "name": "DAC_CTL0_DWM1"
+      },
+      {
+        "bit_offset": 24,
+        "bit_size": 4,
+        "name": "DAC_CTL0_DWBW1"
+      },
+      {
+        "bit_offset": 28,
+        "bit_size": 1,
+        "name": "DAC_CTL0_DDMAEN1"
+      }
+    ]
+  },
+  "fieldset/DAC_OUT0_DO": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 12,
+        "name": "DAC_OUT0_DO_BITS"
+      }
+    ]
+  },
+  "fieldset/DAC_OUT1_DO": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 12,
+        "name": "DAC_OUT1_DO_BITS"
+      }
+    ]
+  },
+  "fieldset/DAC_SWT": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "DAC_SWT_SWTR0"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "DAC_SWT_SWTR1"
+      }
+    ]
+  }
+}

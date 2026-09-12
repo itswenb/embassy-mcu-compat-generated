@@ -1,0 +1,832 @@
+{
+  "block/BKP": {
+    "description": "Backup registers",
+    "items": [
+      {
+        "byte_offset": 4,
+        "description": "Backup data register 0",
+        "fieldset": "DATA0",
+        "name": "DATA0"
+      },
+      {
+        "byte_offset": 8,
+        "description": "Backup data register 1",
+        "fieldset": "DATA1",
+        "name": "DATA1"
+      },
+      {
+        "byte_offset": 12,
+        "description": "Backup data register 2",
+        "fieldset": "DATA2",
+        "name": "DATA2"
+      },
+      {
+        "byte_offset": 16,
+        "description": "Backup data register 3",
+        "fieldset": "DATA3",
+        "name": "DATA3"
+      },
+      {
+        "byte_offset": 20,
+        "description": "Backup data register 4",
+        "fieldset": "DATA4",
+        "name": "DATA4"
+      },
+      {
+        "byte_offset": 24,
+        "description": "Backup data register 5",
+        "fieldset": "DATA5",
+        "name": "DATA5"
+      },
+      {
+        "byte_offset": 28,
+        "description": "Backup data register 6",
+        "fieldset": "DATA6",
+        "name": "DATA6"
+      },
+      {
+        "byte_offset": 32,
+        "description": "Backup data register 7",
+        "fieldset": "DATA7",
+        "name": "DATA7"
+      },
+      {
+        "byte_offset": 36,
+        "description": "Backup data register 8",
+        "fieldset": "DATA8",
+        "name": "DATA8"
+      },
+      {
+        "byte_offset": 40,
+        "description": "Backup data register 9",
+        "fieldset": "DATA9",
+        "name": "DATA9"
+      },
+      {
+        "byte_offset": 44,
+        "description": "RTC signal output control register",
+        "fieldset": "OCTL",
+        "name": "OCTL"
+      },
+      {
+        "byte_offset": 48,
+        "description": "Tamper pin control register",
+        "fieldset": "TPCTL",
+        "name": "TPCTL"
+      },
+      {
+        "byte_offset": 52,
+        "description": "Tamper control and status register",
+        "fieldset": "TPCS",
+        "name": "TPCS"
+      },
+      {
+        "byte_offset": 64,
+        "description": "Backup data register 10",
+        "fieldset": "DATA10",
+        "name": "DATA10"
+      },
+      {
+        "byte_offset": 68,
+        "description": "Backup data register 11",
+        "fieldset": "DATA11",
+        "name": "DATA11"
+      },
+      {
+        "byte_offset": 72,
+        "description": "Backup data register 12",
+        "fieldset": "DATA12",
+        "name": "DATA12"
+      },
+      {
+        "byte_offset": 76,
+        "description": "Backup data register 13",
+        "fieldset": "DATA13",
+        "name": "DATA13"
+      },
+      {
+        "byte_offset": 80,
+        "description": "Backup data register 14",
+        "fieldset": "DATA14",
+        "name": "DATA14"
+      },
+      {
+        "byte_offset": 84,
+        "description": "Backup data register 15",
+        "fieldset": "DATA15",
+        "name": "DATA15"
+      },
+      {
+        "byte_offset": 88,
+        "description": "Backup data register 16",
+        "fieldset": "DATA16",
+        "name": "DATA16"
+      },
+      {
+        "byte_offset": 92,
+        "description": "Backup data register 17",
+        "fieldset": "DATA17",
+        "name": "DATA17"
+      },
+      {
+        "byte_offset": 96,
+        "description": "Backup data register 18",
+        "fieldset": "DATA18",
+        "name": "DATA18"
+      },
+      {
+        "byte_offset": 100,
+        "description": "Backup data register 19",
+        "fieldset": "DATA19",
+        "name": "DATA19"
+      },
+      {
+        "byte_offset": 104,
+        "description": "Backup data register 20",
+        "fieldset": "DATA20",
+        "name": "DATA20"
+      },
+      {
+        "byte_offset": 108,
+        "description": "Backup data register 21",
+        "fieldset": "DATA21",
+        "name": "DATA21"
+      },
+      {
+        "byte_offset": 112,
+        "description": "Backup data register 22",
+        "fieldset": "DATA22",
+        "name": "DATA22"
+      },
+      {
+        "byte_offset": 116,
+        "description": "Backup data register 23",
+        "fieldset": "DATA23",
+        "name": "DATA23"
+      },
+      {
+        "byte_offset": 120,
+        "description": "Backup data register 24",
+        "fieldset": "DATA24",
+        "name": "DATA24"
+      },
+      {
+        "byte_offset": 124,
+        "description": "Backup data register 25",
+        "fieldset": "DATA25",
+        "name": "DATA25"
+      },
+      {
+        "byte_offset": 128,
+        "description": "Backup data register 26",
+        "fieldset": "DATA26",
+        "name": "DATA26"
+      },
+      {
+        "byte_offset": 132,
+        "description": "Backup data register 27",
+        "fieldset": "DATA27",
+        "name": "DATA27"
+      },
+      {
+        "byte_offset": 136,
+        "description": "Backup data register 28",
+        "fieldset": "DATA28",
+        "name": "DATA28"
+      },
+      {
+        "byte_offset": 140,
+        "description": "Backup data register 29",
+        "fieldset": "DATA29",
+        "name": "DATA29"
+      },
+      {
+        "byte_offset": 144,
+        "description": "Backup data register 30",
+        "fieldset": "DATA30",
+        "name": "DATA30"
+      },
+      {
+        "byte_offset": 148,
+        "description": "Backup data register 31",
+        "fieldset": "DATA31",
+        "name": "DATA31"
+      },
+      {
+        "byte_offset": 152,
+        "description": "Backup data register 32",
+        "fieldset": "DATA32",
+        "name": "DATA32"
+      },
+      {
+        "byte_offset": 156,
+        "description": "Backup data register 33",
+        "fieldset": "DATA33",
+        "name": "DATA33"
+      },
+      {
+        "byte_offset": 160,
+        "description": "Backup data register 34",
+        "fieldset": "DATA34",
+        "name": "DATA34"
+      },
+      {
+        "byte_offset": 164,
+        "description": "Backup data register 35",
+        "fieldset": "DATA35",
+        "name": "DATA35"
+      },
+      {
+        "byte_offset": 168,
+        "description": "Backup data register 36",
+        "fieldset": "DATA36",
+        "name": "DATA36"
+      },
+      {
+        "byte_offset": 172,
+        "description": "Backup data register 37",
+        "fieldset": "DATA37",
+        "name": "DATA37"
+      },
+      {
+        "byte_offset": 176,
+        "description": "Backup data register 38",
+        "fieldset": "DATA38",
+        "name": "DATA38"
+      },
+      {
+        "byte_offset": 180,
+        "description": "Backup data register 39",
+        "fieldset": "DATA39",
+        "name": "DATA39"
+      },
+      {
+        "byte_offset": 184,
+        "description": "Backup data register 40",
+        "fieldset": "DATA40",
+        "name": "DATA40"
+      },
+      {
+        "byte_offset": 188,
+        "description": "Backup data register 41",
+        "fieldset": "DATA41",
+        "name": "DATA41"
+      }
+    ]
+  },
+  "fieldset/DATA0": {
+    "description": "Backup data register 0",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/DATA1": {
+    "description": "Backup data register 1",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/DATA10": {
+    "description": "Backup data register 10",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/DATA11": {
+    "description": "Backup data register 11",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/DATA12": {
+    "description": "Backup data register 12",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/DATA13": {
+    "description": "Backup data register 13",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/DATA14": {
+    "description": "Backup data register 14",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/DATA15": {
+    "description": "Backup data register 15",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/DATA16": {
+    "description": "Backup data register 16",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/DATA17": {
+    "description": "Backup data register 17",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/DATA18": {
+    "description": "Backup data register 18",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/DATA19": {
+    "description": "Backup data register 19",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/DATA2": {
+    "description": "Backup data register 2",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/DATA20": {
+    "description": "Backup data register 20",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/DATA21": {
+    "description": "Backup data register 21",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/DATA22": {
+    "description": "Backup data register 22",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/DATA23": {
+    "description": "Backup data register 23",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/DATA24": {
+    "description": "Backup data register 24",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/DATA25": {
+    "description": "Backup data register 25",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/DATA26": {
+    "description": "Backup data register 26",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/DATA27": {
+    "description": "Backup data register 27",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/DATA28": {
+    "description": "Backup data register 28",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/DATA29": {
+    "description": "Backup data register 29",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/DATA3": {
+    "description": "Backup data register 3",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/DATA30": {
+    "description": "Backup data register 30",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/DATA31": {
+    "description": "Backup data register 31",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/DATA32": {
+    "description": "Backup data register 32",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/DATA33": {
+    "description": "Backup data register 33",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/DATA34": {
+    "description": "Backup data register 34",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/DATA35": {
+    "description": "Backup data register 35",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/DATA36": {
+    "description": "Backup data register 36",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/DATA37": {
+    "description": "Backup data register 37",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/DATA38": {
+    "description": "Backup data register 38",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/DATA39": {
+    "description": "Backup data register 39",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/DATA4": {
+    "description": "Backup data register 4",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/DATA40": {
+    "description": "Backup data register 40",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/DATA41": {
+    "description": "Backup data register 41",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/DATA5": {
+    "description": "Backup data register 5",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/DATA6": {
+    "description": "Backup data register 6",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/DATA7": {
+    "description": "Backup data register 7",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/DATA8": {
+    "description": "Backup data register 8",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/DATA9": {
+    "description": "Backup data register 9",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Backup data",
+        "name": "DATA"
+      }
+    ]
+  },
+  "fieldset/OCTL": {
+    "description": "RTC signal output control register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 7,
+        "description": "RTC clock calibration value",
+        "name": "RCCV"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "RTC clock calibration output enable",
+        "name": "COEN"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "RTC alarm or second signal output enable",
+        "name": "ASOEN"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "RTC output selection",
+        "name": "ROSEL"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "description": "RTC clock output selection",
+        "name": "CCOSEL"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "RTC clock calibration direction",
+        "name": "CALDIR"
+      }
+    ]
+  },
+  "fieldset/TPCS": {
+    "description": "Tamper control and status register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Tamper event reset",
+        "name": "TER"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Tamper interrupt reset",
+        "name": "TIR"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Tamper interrupt enable",
+        "name": "TPIE"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "Tamper event flag",
+        "name": "TEF"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "Tamper interrupt flag",
+        "name": "TIF"
+      }
+    ]
+  },
+  "fieldset/TPCTL": {
+    "description": "Tamper pin control register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "TAMPER detection enable",
+        "name": "TPEN"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "TAMPER pin active level",
+        "name": "TPAL"
+      }
+    ]
+  }
+}

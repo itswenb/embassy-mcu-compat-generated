@@ -1,0 +1,762 @@
+{
+  "block/ENET_MAC": {
+    "description": "Ethernet: media access control",
+    "items": [
+      {
+        "byte_offset": 0,
+        "description": "Ethernet MAC configuration register (MAC_CFG)",
+        "fieldset": "MAC_CFG",
+        "name": "MAC_CFG"
+      },
+      {
+        "byte_offset": 4,
+        "description": "Ethernet MAC frame filter register (MAC_FRMF)",
+        "fieldset": "MAC_FRMF",
+        "name": "MAC_FRMF"
+      },
+      {
+        "byte_offset": 8,
+        "description": "Ethernet MAC hash list high register",
+        "fieldset": "MAC_HLH",
+        "name": "MAC_HLH"
+      },
+      {
+        "byte_offset": 12,
+        "description": "Ethernet MAC hash list low register",
+        "fieldset": "MAC_HLL",
+        "name": "MAC_HLL"
+      },
+      {
+        "byte_offset": 16,
+        "description": "Ethernet MAC PHY control register (MAC_PHY_CTL)",
+        "fieldset": "MAC_PHY_CTL",
+        "name": "MAC_PHY_CTL"
+      },
+      {
+        "byte_offset": 20,
+        "description": "Ethernet MAC MII data register (MAC_PHY_DATA)",
+        "fieldset": "MAC_PHY_DATA",
+        "name": "MAC_PHY_DATA"
+      },
+      {
+        "byte_offset": 24,
+        "description": "Ethernet MAC flow control register (MAC_FCTL)",
+        "fieldset": "MAC_FCTL",
+        "name": "MAC_FCTL"
+      },
+      {
+        "byte_offset": 28,
+        "description": "Ethernet MAC VLAN tag register (MAC_VLT)",
+        "fieldset": "MAC_VLT",
+        "name": "MAC_VLT"
+      },
+      {
+        "byte_offset": 40,
+        "description": "Ethernet MAC remote wakeup frame filter register (MAC_RWFF)",
+        "name": "MAC_RWFF"
+      },
+      {
+        "byte_offset": 44,
+        "description": "Ethernet MAC wakeup management register (MAC_WUM)",
+        "fieldset": "MAC_WUM",
+        "name": "MAC_WUM"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 52,
+        "description": "Ethernet MAC debug register (MAC_DBG)",
+        "fieldset": "MAC_DBG",
+        "name": "MAC_DBG"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 56,
+        "description": "Ethernet MAC interrupt flag register (MAC_INTF)",
+        "fieldset": "MAC_INTF",
+        "name": "MAC_INTF"
+      },
+      {
+        "byte_offset": 60,
+        "description": "Ethernet MAC interrupt mask register (MAC_INTMSK)",
+        "fieldset": "MAC_INTMSK",
+        "name": "MAC_INTMSK"
+      },
+      {
+        "byte_offset": 64,
+        "description": "Ethernet MAC address 0 high register (MAC_ADDR0H)",
+        "fieldset": "MAC_ADDR0H",
+        "name": "MAC_ADDR0H"
+      },
+      {
+        "byte_offset": 68,
+        "description": "Ethernet MAC address 0 low register",
+        "fieldset": "MAC_ADDR0L",
+        "name": "MAC_ADDR0L"
+      },
+      {
+        "byte_offset": 72,
+        "description": "Ethernet MAC address 1 high register (MAC_ADDR1H)",
+        "fieldset": "MAC_ADDR1H",
+        "name": "MAC_ADDR1H"
+      },
+      {
+        "byte_offset": 76,
+        "description": "Ethernet MAC address1 low register",
+        "fieldset": "MAC_ADDR1L",
+        "name": "MAC_ADDR1L"
+      },
+      {
+        "byte_offset": 80,
+        "description": "Ethernet MAC address 2 high register (MAC_ADDR2H)",
+        "fieldset": "MAC_ADDR2H",
+        "name": "MAC_ADDR2H"
+      },
+      {
+        "byte_offset": 84,
+        "description": "Ethernet MAC address 2 low register",
+        "fieldset": "MAC_ADDR2L",
+        "name": "MAC_ADDR2L"
+      },
+      {
+        "byte_offset": 88,
+        "description": "Ethernet MAC address 3 high register (MAC_ADDR3H)",
+        "fieldset": "MAC_ADDR3H",
+        "name": "MAC_ADDR3H"
+      },
+      {
+        "byte_offset": 92,
+        "description": "Ethernet MAC address 3 low register",
+        "fieldset": "MAC_ADDR3L",
+        "name": "MAC_ADDR3L"
+      }
+    ]
+  },
+  "fieldset/MAC_ADDR0H": {
+    "description": "Ethernet MAC address 0 high register (MAC_ADDR0H)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "MAC address0 high",
+        "name": "ADDR0H"
+      },
+      {
+        "bit_offset": 31,
+        "bit_size": 1,
+        "description": "Always 1",
+        "name": "MO"
+      }
+    ]
+  },
+  "fieldset/MAC_ADDR0L": {
+    "description": "Ethernet MAC address 0 low register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "MAC address0 low",
+        "name": "ADDR0L"
+      }
+    ]
+  },
+  "fieldset/MAC_ADDR1H": {
+    "description": "Ethernet MAC address 1 high register (MAC_ADDR1H)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "MAC address1 high",
+        "name": "ADDR1H"
+      },
+      {
+        "bit_offset": 24,
+        "bit_size": 6,
+        "description": "Mask byte",
+        "name": "MB"
+      },
+      {
+        "bit_offset": 30,
+        "bit_size": 1,
+        "description": "Source address filter",
+        "name": "SAF"
+      },
+      {
+        "bit_offset": 31,
+        "bit_size": 1,
+        "description": "Address filter enable",
+        "name": "AFE"
+      }
+    ]
+  },
+  "fieldset/MAC_ADDR1L": {
+    "description": "Ethernet MAC address1 low register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "MAC address1 low",
+        "name": "ADDR1L"
+      }
+    ]
+  },
+  "fieldset/MAC_ADDR2H": {
+    "description": "Ethernet MAC address 2 high register (MAC_ADDR2H)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Ethernet MAC address 2 high register",
+        "name": "ADDR2H"
+      },
+      {
+        "bit_offset": 24,
+        "bit_size": 6,
+        "description": "Mask byte",
+        "name": "MB"
+      },
+      {
+        "bit_offset": 30,
+        "bit_size": 1,
+        "description": "Source address filter",
+        "name": "SAF"
+      },
+      {
+        "bit_offset": 31,
+        "bit_size": 1,
+        "description": "Address filter enable",
+        "name": "AFE"
+      }
+    ]
+  },
+  "fieldset/MAC_ADDR2L": {
+    "description": "Ethernet MAC address 2 low register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "MAC address2 low",
+        "name": "ADDR2L"
+      }
+    ]
+  },
+  "fieldset/MAC_ADDR3H": {
+    "description": "Ethernet MAC address 3 high register (MAC_ADDR3H)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "MAC address3 high",
+        "name": "ADDR3H"
+      },
+      {
+        "bit_offset": 24,
+        "bit_size": 6,
+        "description": "Mask byte",
+        "name": "MB"
+      },
+      {
+        "bit_offset": 30,
+        "bit_size": 1,
+        "description": "Source address filter",
+        "name": "SAF"
+      },
+      {
+        "bit_offset": 31,
+        "bit_size": 1,
+        "description": "Address filter enable",
+        "name": "AFE"
+      }
+    ]
+  },
+  "fieldset/MAC_ADDR3L": {
+    "description": "Ethernet MAC address 3 low register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "MAC address3 low",
+        "name": "ADDR3L"
+      }
+    ]
+  },
+  "fieldset/MAC_CFG": {
+    "description": "Ethernet MAC configuration register (MAC_CFG)",
+    "fields": [
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Receiver enable",
+        "name": "REN"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Transmitter enable",
+        "name": "TEN"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "Deferral check",
+        "name": "DFC"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 2,
+        "description": "Back-off limit",
+        "name": "BOL"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Automatic pad/CRC drop",
+        "name": "APCD"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "Retry disable",
+        "name": "RTD"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "IP frame checksum offload",
+        "name": "IPFCO"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "description": "Duplex mode",
+        "name": "DPM"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "description": "Loopback mode",
+        "name": "LBM"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "description": "Receive own disable",
+        "name": "ROD"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "description": "Fast Ethernet speed",
+        "name": "SPD"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "description": "Carrier sense disable",
+        "name": "CSD"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 3,
+        "description": "Inter frame gap bit selection",
+        "name": "IGBS"
+      },
+      {
+        "bit_offset": 22,
+        "bit_size": 1,
+        "description": "Jabber disable",
+        "name": "JBD"
+      },
+      {
+        "bit_offset": 23,
+        "bit_size": 1,
+        "description": "Watchdog disable",
+        "name": "WDD"
+      },
+      {
+        "bit_offset": 25,
+        "bit_size": 1,
+        "description": "Type Frame CRC Dropping",
+        "name": "TFCD"
+      }
+    ]
+  },
+  "fieldset/MAC_DBG": {
+    "description": "Ethernet MAC debug register (MAC_DBG)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "MAC receive state not idle",
+        "name": "MRNI"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 2,
+        "description": "Rx asynchronous FIFO status",
+        "name": "RXAFS"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "RxFIFO is writing",
+        "name": "RXFW"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 2,
+        "description": "RxFIFO read operation status",
+        "name": "RXFRS"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 2,
+        "description": "RxFIFO state",
+        "name": "RXFS"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "description": "MAC transmit state not idle",
+        "name": "MTNI"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 2,
+        "description": "Status of MAC transmitter",
+        "name": "SOMT"
+      },
+      {
+        "bit_offset": 19,
+        "bit_size": 1,
+        "description": "Pause condition status",
+        "name": "PCS"
+      },
+      {
+        "bit_offset": 20,
+        "bit_size": 2,
+        "description": "TxFIFO read operation status",
+        "name": "TXFRS"
+      },
+      {
+        "bit_offset": 22,
+        "bit_size": 1,
+        "description": "TxFIFO is writing",
+        "name": "TXFW"
+      },
+      {
+        "bit_offset": 24,
+        "bit_size": 1,
+        "description": "TxFIFO not empty flag",
+        "name": "TXFNE"
+      },
+      {
+        "bit_offset": 25,
+        "bit_size": 1,
+        "description": "TxFIFO Full flag",
+        "name": "TXFF"
+      }
+    ]
+  },
+  "fieldset/MAC_FCTL": {
+    "description": "Ethernet MAC flow control register (MAC_FCTL)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Flow control busy/back pressure activate",
+        "name": "FLCB_BKPA"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Transmit flow control enable",
+        "name": "TFCEN"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Receive flow control enable",
+        "name": "RFCEN"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Unicast pause frame detect",
+        "name": "UPFDT"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 2,
+        "description": "Pause low threshold",
+        "name": "PLTS"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Disable Zero-quanta pause",
+        "name": "DZQP"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 16,
+        "description": "Pause time",
+        "name": "PTM"
+      }
+    ]
+  },
+  "fieldset/MAC_FRMF": {
+    "description": "Ethernet MAC frame filter register (MAC_FRMF)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Promiscuous mode",
+        "name": "PM"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Hash unicast filter",
+        "name": "HUF"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Hash multicast filter",
+        "name": "HMF"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Destination address inverse filtering",
+        "name": "DAIFLT"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "multicast filter disable",
+        "name": "MFD"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "Broadcast frames disable",
+        "name": "BFRMD"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 2,
+        "description": "Pass control frames",
+        "name": "PCFRM"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "Source address inverse filtering",
+        "name": "SAIFLT"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "Source address filter",
+        "name": "SAFLT"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "Hash or perfect filter",
+        "name": "HPFLT"
+      },
+      {
+        "bit_offset": 31,
+        "bit_size": 1,
+        "description": "Frames all receive",
+        "name": "FAR"
+      }
+    ]
+  },
+  "fieldset/MAC_HLH": {
+    "description": "Ethernet MAC hash list high register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "Hash list high",
+        "name": "HLH"
+      }
+    ]
+  },
+  "fieldset/MAC_HLL": {
+    "description": "Ethernet MAC hash list low register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "Hash list low",
+        "name": "HLL"
+      }
+    ]
+  },
+  "fieldset/MAC_INTF": {
+    "description": "Ethernet MAC interrupt flag register (MAC_INTF)",
+    "fields": [
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "WUM status",
+        "name": "WUM"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "MSC status",
+        "name": "MSC"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "MSC receive status",
+        "name": "MSCR"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "MSC transmit status",
+        "name": "MSCT"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "Time stamp trigger status",
+        "name": "TMST"
+      }
+    ]
+  },
+  "fieldset/MAC_INTMSK": {
+    "description": "Ethernet MAC interrupt mask register (MAC_INTMSK)",
+    "fields": [
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "WUM interrupt mask",
+        "name": "WUMIM"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "Time stamp trigger interrupt mask",
+        "name": "TMSTIM"
+      }
+    ]
+  },
+  "fieldset/MAC_PHY_CTL": {
+    "description": "Ethernet MAC PHY control register (MAC_PHY_CTL)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "PHY busy",
+        "name": "PB"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "PHY write",
+        "name": "PW"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 3,
+        "description": "Clock range",
+        "name": "CLR"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 5,
+        "description": "PHY register",
+        "name": "PR"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 5,
+        "description": "PHY address",
+        "name": "PA"
+      }
+    ]
+  },
+  "fieldset/MAC_PHY_DATA": {
+    "description": "Ethernet MAC MII data register (MAC_PHY_DATA)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "PHY data",
+        "name": "PD"
+      }
+    ]
+  },
+  "fieldset/MAC_VLT": {
+    "description": "Ethernet MAC VLAN tag register (MAC_VLT)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "VLAN tag identifier (for receive frames)",
+        "name": "VLTI"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "description": "12-bit VLAN tag comparison",
+        "name": "VLTC"
+      }
+    ]
+  },
+  "fieldset/MAC_WUM": {
+    "description": "Ethernet MAC wakeup management register (MAC_WUM)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Power down",
+        "name": "PWD"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Magic Packet enable",
+        "name": "MPEN"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Wakeup frame enable",
+        "name": "WFEN"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "Magic packet received",
+        "name": "MPKR"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "Wakeup frame received",
+        "name": "WUFR"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "Global unicast",
+        "name": "GU"
+      },
+      {
+        "bit_offset": 31,
+        "bit_size": 1,
+        "description": "Wakeup frame filter register pointer reset",
+        "name": "WUFFRPR"
+      }
+    ]
+  }
+}

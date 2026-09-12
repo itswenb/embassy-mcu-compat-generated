@@ -1,0 +1,365 @@
+{
+  "block/AFIO": {
+    "description": "Alternate-function I/Os",
+    "items": [
+      {
+        "byte_offset": 0,
+        "description": "Event control register",
+        "fieldset": "EC",
+        "name": "EC"
+      },
+      {
+        "byte_offset": 4,
+        "description": "AFIO port configuration register 0",
+        "fieldset": "PCF0",
+        "name": "PCF0"
+      },
+      {
+        "byte_offset": 8,
+        "description": "EXTI sources selection register 0",
+        "fieldset": "EXTISS0",
+        "name": "EXTISS0"
+      },
+      {
+        "byte_offset": 12,
+        "description": "EXTI sources selection register 1",
+        "fieldset": "EXTISS1",
+        "name": "EXTISS1"
+      },
+      {
+        "byte_offset": 16,
+        "description": "EXTI sources selection register 2",
+        "fieldset": "EXTISS2",
+        "name": "EXTISS2"
+      },
+      {
+        "byte_offset": 20,
+        "description": "EXTI sources selection register 3",
+        "fieldset": "EXTISS3",
+        "name": "EXTISS3"
+      },
+      {
+        "byte_offset": 28,
+        "description": "AFIO port configuration register 1",
+        "fieldset": "PCF1",
+        "name": "PCF1"
+      },
+      {
+        "byte_offset": 32,
+        "description": "IO compensation control register",
+        "fieldset": "CPSCTL",
+        "name": "CPSCTL"
+      }
+    ]
+  },
+  "fieldset/CPSCTL": {
+    "description": "IO compensation control register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "I/O compensation cell enable",
+        "name": "CPS_EN"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "I/O compensation cell is really or not",
+        "name": "CPS_RDY"
+      }
+    ]
+  },
+  "fieldset/EC": {
+    "description": "Event control register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 4,
+        "description": "Event output pin selection",
+        "name": "PIN"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 3,
+        "description": "Event output port selection",
+        "name": "PORT"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Event output enable",
+        "name": "EOE"
+      }
+    ]
+  },
+  "fieldset/EXTISS0": {
+    "description": "EXTI sources selection register 0",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 4,
+        "description": "EXTI 0 sources selection",
+        "name": "EXTI0_SS"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 4,
+        "description": "EXTI 1 sources selection",
+        "name": "EXTI1_SS"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 4,
+        "description": "EXTI 2 sources selection",
+        "name": "EXTI2_SS"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 4,
+        "description": "EXTI 3 sources selection",
+        "name": "EXTI3_SS"
+      }
+    ]
+  },
+  "fieldset/EXTISS1": {
+    "description": "EXTI sources selection register 1",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 4,
+        "description": "EXTI 4 sources selection",
+        "name": "EXTI4_SS"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 4,
+        "description": "EXTI 5 sources selection",
+        "name": "EXTI5_SS"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 4,
+        "description": "EXTI 6 sources selection",
+        "name": "EXTI6_SS"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 4,
+        "description": "EXTI 7 sources selection",
+        "name": "EXTI7_SS"
+      }
+    ]
+  },
+  "fieldset/EXTISS2": {
+    "description": "EXTI sources selection register 2",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 4,
+        "description": "EXTI 8 sources selection",
+        "name": "EXTI8_SS"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 4,
+        "description": "EXTI 9 sources selection",
+        "name": "EXTI9_SS"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 4,
+        "description": "EXTI 10 sources selection",
+        "name": "EXTI10_SS"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 4,
+        "description": "EXTI 11 sources selection",
+        "name": "EXTI11_SS"
+      }
+    ]
+  },
+  "fieldset/EXTISS3": {
+    "description": "EXTI sources selection register 3",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 4,
+        "description": "EXTI 12 sources selection",
+        "name": "EXTI12_SS"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 4,
+        "description": "EXTI 13 sources selection",
+        "name": "EXTI13_SS"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 4,
+        "description": "EXTI 14 sources selection",
+        "name": "EXTI14_SS"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 4,
+        "description": "EXTI 15 sources selection",
+        "name": "EXTI15_SS"
+      }
+    ]
+  },
+  "fieldset/PCF0": {
+    "description": "AFIO port configuration register 0",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "SPI0 remapping",
+        "name": "SPI0_REMAP"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "I2C0 remapping",
+        "name": "I2C0_REMAP"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "USART0 remapping",
+        "name": "USART0_REMAP"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "USART1 remapping",
+        "name": "USART1_REMAP"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 2,
+        "description": "USART2 remapping",
+        "name": "USART2_REMAP"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 2,
+        "description": "TIMER0 remapping",
+        "name": "TIMER0_REMAP"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 2,
+        "description": "TIMER1 remapping",
+        "name": "TIMER1_REMAP"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 2,
+        "description": "TIMER2 remapping",
+        "name": "TIMER2_REMAP"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "description": "TIMER3 remapping",
+        "name": "TIMER3_REMAP"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 2,
+        "description": "CAN interface remapping",
+        "name": "CAN_REMAP"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "Port D0/Port D1 mapping on OSC_IN/OSC_OUT",
+        "name": "PD01_REMAP"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "description": "TIMER4 channel3 internal remapping",
+        "name": "TIMER4CH3_IREMAP"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 1,
+        "description": "ADC 0 external trigger injected conversion remapping",
+        "name": "ADC0_ETRGINJ_REMAP"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 1,
+        "description": "ADC 0 external trigger regular conversion remapping",
+        "name": "ADC0_ETRGREG_REMAP"
+      },
+      {
+        "bit_offset": 19,
+        "bit_size": 1,
+        "description": "ADC 1 external trigger injected conversion remapping",
+        "name": "ADC1_ETRGINJ_REMAP"
+      },
+      {
+        "bit_offset": 20,
+        "bit_size": 1,
+        "description": "ADC 1 external trigger regular conversion remapping",
+        "name": "ADC1_ETRGREG_REMAP"
+      },
+      {
+        "bit_offset": 24,
+        "bit_size": 3,
+        "description": "Serial wire JTAG configuration",
+        "name": "SWJ_CFG"
+      }
+    ]
+  },
+  "fieldset/PCF1": {
+    "description": "AFIO port configuration register 1",
+    "fields": [
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "TIMER8 remapping",
+        "name": "TIMER8_REMAP"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "TIMER9 remapping",
+        "name": "TIMER9_REMAP"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "TIMER10 remapping",
+        "name": "TIMER10_REMAP"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "TIMER12 remapping",
+        "name": "TIMER12_REMAP"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "TIMER13 remapping",
+        "name": "TIMER13_REMAP"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "FSMC_NADV connect/disconnect",
+        "name": "FSMC_NADV"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 2,
+        "description": "CTC remapping",
+        "name": "CTC_REMAP"
+      }
+    ]
+  }
+}

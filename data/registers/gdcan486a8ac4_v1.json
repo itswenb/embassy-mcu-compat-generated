@@ -1,0 +1,1303 @@
+{
+  "block/CAN": {
+    "items": [
+      {
+        "byte_offset": 0,
+        "fieldset": "CAN_CTL",
+        "name": "CAN_CTL"
+      },
+      {
+        "byte_offset": 4,
+        "fieldset": "CAN_STAT",
+        "name": "CAN_STAT"
+      },
+      {
+        "byte_offset": 8,
+        "fieldset": "CAN_TSTAT",
+        "name": "CAN_TSTAT"
+      },
+      {
+        "byte_offset": 12,
+        "fieldset": "CAN_RFIFO0",
+        "name": "CAN_RFIFO0"
+      },
+      {
+        "byte_offset": 16,
+        "fieldset": "CAN_RFIFO1",
+        "name": "CAN_RFIFO1"
+      },
+      {
+        "byte_offset": 20,
+        "fieldset": "CAN_INTEN",
+        "name": "CAN_INTEN"
+      },
+      {
+        "byte_offset": 24,
+        "fieldset": "CAN_ERR",
+        "name": "CAN_ERR"
+      },
+      {
+        "byte_offset": 28,
+        "fieldset": "CAN_BT",
+        "name": "CAN_BT"
+      },
+      {
+        "byte_offset": 384,
+        "fieldset": "CAN_TMI",
+        "name": "CAN_TMI_0"
+      },
+      {
+        "byte_offset": 400,
+        "fieldset": "CAN_TMI",
+        "name": "CAN_TMI_1"
+      },
+      {
+        "byte_offset": 416,
+        "fieldset": "CAN_TMI",
+        "name": "CAN_TMI_2"
+      },
+      {
+        "byte_offset": 384,
+        "name": "CAN_TMI0"
+      },
+      {
+        "byte_offset": 388,
+        "fieldset": "CAN_TMP",
+        "name": "CAN_TMP_0"
+      },
+      {
+        "byte_offset": 404,
+        "fieldset": "CAN_TMP",
+        "name": "CAN_TMP_1"
+      },
+      {
+        "byte_offset": 420,
+        "fieldset": "CAN_TMP",
+        "name": "CAN_TMP_2"
+      },
+      {
+        "byte_offset": 388,
+        "name": "CAN_TMP0"
+      },
+      {
+        "byte_offset": 392,
+        "fieldset": "CAN_TMDATA0",
+        "name": "CAN_TMDATA0_0"
+      },
+      {
+        "byte_offset": 408,
+        "fieldset": "CAN_TMDATA0",
+        "name": "CAN_TMDATA0_1"
+      },
+      {
+        "byte_offset": 424,
+        "fieldset": "CAN_TMDATA0",
+        "name": "CAN_TMDATA0_2"
+      },
+      {
+        "byte_offset": 392,
+        "name": "CAN_TMDATA00"
+      },
+      {
+        "byte_offset": 396,
+        "fieldset": "CAN_TMDATA1",
+        "name": "CAN_TMDATA1_0"
+      },
+      {
+        "byte_offset": 412,
+        "fieldset": "CAN_TMDATA1",
+        "name": "CAN_TMDATA1_1"
+      },
+      {
+        "byte_offset": 428,
+        "fieldset": "CAN_TMDATA1",
+        "name": "CAN_TMDATA1_2"
+      },
+      {
+        "byte_offset": 396,
+        "name": "CAN_TMDATA10"
+      },
+      {
+        "byte_offset": 400,
+        "name": "CAN_TMI1"
+      },
+      {
+        "byte_offset": 404,
+        "name": "CAN_TMP1"
+      },
+      {
+        "byte_offset": 408,
+        "name": "CAN_TMDATA01"
+      },
+      {
+        "byte_offset": 412,
+        "name": "CAN_TMDATA11"
+      },
+      {
+        "byte_offset": 416,
+        "name": "CAN_TMI2"
+      },
+      {
+        "byte_offset": 420,
+        "name": "CAN_TMP2"
+      },
+      {
+        "byte_offset": 424,
+        "name": "CAN_TMDATA02"
+      },
+      {
+        "byte_offset": 428,
+        "name": "CAN_TMDATA12"
+      },
+      {
+        "byte_offset": 432,
+        "fieldset": "CAN_RFIFOMI",
+        "name": "CAN_RFIFOMI_0"
+      },
+      {
+        "byte_offset": 448,
+        "fieldset": "CAN_RFIFOMI",
+        "name": "CAN_RFIFOMI_1"
+      },
+      {
+        "byte_offset": 432,
+        "name": "CAN_RFIFOMI0"
+      },
+      {
+        "byte_offset": 436,
+        "fieldset": "CAN_RFIFOMP",
+        "name": "CAN_RFIFOMP_0"
+      },
+      {
+        "byte_offset": 452,
+        "fieldset": "CAN_RFIFOMP",
+        "name": "CAN_RFIFOMP_1"
+      },
+      {
+        "byte_offset": 436,
+        "name": "CAN_RFIFOMP0"
+      },
+      {
+        "byte_offset": 440,
+        "fieldset": "CAN_RFIFOMDATA0",
+        "name": "CAN_RFIFOMDATA0_0"
+      },
+      {
+        "byte_offset": 456,
+        "fieldset": "CAN_RFIFOMDATA0",
+        "name": "CAN_RFIFOMDATA0_1"
+      },
+      {
+        "byte_offset": 440,
+        "name": "CAN_RFIFOMDATA00"
+      },
+      {
+        "byte_offset": 444,
+        "fieldset": "CAN_RFIFOMDATA1",
+        "name": "CAN_RFIFOMDATA1_0"
+      },
+      {
+        "byte_offset": 460,
+        "fieldset": "CAN_RFIFOMDATA1",
+        "name": "CAN_RFIFOMDATA1_1"
+      },
+      {
+        "byte_offset": 444,
+        "name": "CAN_RFIFOMDATA10"
+      },
+      {
+        "byte_offset": 448,
+        "name": "CAN_RFIFOMI1"
+      },
+      {
+        "byte_offset": 452,
+        "name": "CAN_RFIFOMP1"
+      },
+      {
+        "byte_offset": 456,
+        "name": "CAN_RFIFOMDATA01"
+      },
+      {
+        "byte_offset": 460,
+        "name": "CAN_RFIFOMDATA11"
+      },
+      {
+        "byte_offset": 512,
+        "fieldset": "CAN_FCTL",
+        "name": "CAN_FCTL"
+      },
+      {
+        "byte_offset": 516,
+        "name": "CAN_FMCFG"
+      },
+      {
+        "byte_offset": 524,
+        "name": "CAN_FSCFG"
+      },
+      {
+        "byte_offset": 532,
+        "name": "CAN_FAFIFO"
+      },
+      {
+        "byte_offset": 540,
+        "name": "CAN_FW"
+      },
+      {
+        "byte_offset": 576,
+        "name": "CAN_F0DATA0"
+      },
+      {
+        "byte_offset": 576,
+        "name": "CAN_FDATA0_0"
+      },
+      {
+        "byte_offset": 584,
+        "name": "CAN_FDATA0_1"
+      },
+      {
+        "byte_offset": 592,
+        "name": "CAN_FDATA0_2"
+      },
+      {
+        "byte_offset": 600,
+        "name": "CAN_FDATA0_3"
+      },
+      {
+        "byte_offset": 608,
+        "name": "CAN_FDATA0_4"
+      },
+      {
+        "byte_offset": 616,
+        "name": "CAN_FDATA0_5"
+      },
+      {
+        "byte_offset": 624,
+        "name": "CAN_FDATA0_6"
+      },
+      {
+        "byte_offset": 632,
+        "name": "CAN_FDATA0_7"
+      },
+      {
+        "byte_offset": 640,
+        "name": "CAN_FDATA0_8"
+      },
+      {
+        "byte_offset": 648,
+        "name": "CAN_FDATA0_9"
+      },
+      {
+        "byte_offset": 656,
+        "name": "CAN_FDATA0_10"
+      },
+      {
+        "byte_offset": 664,
+        "name": "CAN_FDATA0_11"
+      },
+      {
+        "byte_offset": 672,
+        "name": "CAN_FDATA0_12"
+      },
+      {
+        "byte_offset": 680,
+        "name": "CAN_FDATA0_13"
+      },
+      {
+        "byte_offset": 688,
+        "name": "CAN_FDATA0_14"
+      },
+      {
+        "byte_offset": 696,
+        "name": "CAN_FDATA0_15"
+      },
+      {
+        "byte_offset": 704,
+        "name": "CAN_FDATA0_16"
+      },
+      {
+        "byte_offset": 712,
+        "name": "CAN_FDATA0_17"
+      },
+      {
+        "byte_offset": 720,
+        "name": "CAN_FDATA0_18"
+      },
+      {
+        "byte_offset": 728,
+        "name": "CAN_FDATA0_19"
+      },
+      {
+        "byte_offset": 736,
+        "name": "CAN_FDATA0_20"
+      },
+      {
+        "byte_offset": 744,
+        "name": "CAN_FDATA0_21"
+      },
+      {
+        "byte_offset": 752,
+        "name": "CAN_FDATA0_22"
+      },
+      {
+        "byte_offset": 760,
+        "name": "CAN_FDATA0_23"
+      },
+      {
+        "byte_offset": 768,
+        "name": "CAN_FDATA0_24"
+      },
+      {
+        "byte_offset": 776,
+        "name": "CAN_FDATA0_25"
+      },
+      {
+        "byte_offset": 784,
+        "name": "CAN_FDATA0_26"
+      },
+      {
+        "byte_offset": 792,
+        "name": "CAN_FDATA0_27"
+      },
+      {
+        "byte_offset": 580,
+        "name": "CAN_F0DATA1"
+      },
+      {
+        "byte_offset": 580,
+        "name": "CAN_FDATA1_0"
+      },
+      {
+        "byte_offset": 588,
+        "name": "CAN_FDATA1_1"
+      },
+      {
+        "byte_offset": 596,
+        "name": "CAN_FDATA1_2"
+      },
+      {
+        "byte_offset": 604,
+        "name": "CAN_FDATA1_3"
+      },
+      {
+        "byte_offset": 612,
+        "name": "CAN_FDATA1_4"
+      },
+      {
+        "byte_offset": 620,
+        "name": "CAN_FDATA1_5"
+      },
+      {
+        "byte_offset": 628,
+        "name": "CAN_FDATA1_6"
+      },
+      {
+        "byte_offset": 636,
+        "name": "CAN_FDATA1_7"
+      },
+      {
+        "byte_offset": 644,
+        "name": "CAN_FDATA1_8"
+      },
+      {
+        "byte_offset": 652,
+        "name": "CAN_FDATA1_9"
+      },
+      {
+        "byte_offset": 660,
+        "name": "CAN_FDATA1_10"
+      },
+      {
+        "byte_offset": 668,
+        "name": "CAN_FDATA1_11"
+      },
+      {
+        "byte_offset": 676,
+        "name": "CAN_FDATA1_12"
+      },
+      {
+        "byte_offset": 684,
+        "name": "CAN_FDATA1_13"
+      },
+      {
+        "byte_offset": 692,
+        "name": "CAN_FDATA1_14"
+      },
+      {
+        "byte_offset": 700,
+        "name": "CAN_FDATA1_15"
+      },
+      {
+        "byte_offset": 708,
+        "name": "CAN_FDATA1_16"
+      },
+      {
+        "byte_offset": 716,
+        "name": "CAN_FDATA1_17"
+      },
+      {
+        "byte_offset": 724,
+        "name": "CAN_FDATA1_18"
+      },
+      {
+        "byte_offset": 732,
+        "name": "CAN_FDATA1_19"
+      },
+      {
+        "byte_offset": 740,
+        "name": "CAN_FDATA1_20"
+      },
+      {
+        "byte_offset": 748,
+        "name": "CAN_FDATA1_21"
+      },
+      {
+        "byte_offset": 756,
+        "name": "CAN_FDATA1_22"
+      },
+      {
+        "byte_offset": 764,
+        "name": "CAN_FDATA1_23"
+      },
+      {
+        "byte_offset": 772,
+        "name": "CAN_FDATA1_24"
+      },
+      {
+        "byte_offset": 780,
+        "name": "CAN_FDATA1_25"
+      },
+      {
+        "byte_offset": 788,
+        "name": "CAN_FDATA1_26"
+      },
+      {
+        "byte_offset": 796,
+        "name": "CAN_FDATA1_27"
+      },
+      {
+        "byte_offset": 584,
+        "name": "CAN_F1DATA0"
+      },
+      {
+        "byte_offset": 588,
+        "name": "CAN_F1DATA1"
+      },
+      {
+        "byte_offset": 592,
+        "name": "CAN_F2DATA0"
+      },
+      {
+        "byte_offset": 596,
+        "name": "CAN_F2DATA1"
+      },
+      {
+        "byte_offset": 600,
+        "name": "CAN_F3DATA0"
+      },
+      {
+        "byte_offset": 604,
+        "name": "CAN_F3DATA1"
+      },
+      {
+        "byte_offset": 608,
+        "name": "CAN_F4DATA0"
+      },
+      {
+        "byte_offset": 612,
+        "name": "CAN_F4DATA1"
+      },
+      {
+        "byte_offset": 616,
+        "name": "CAN_F5DATA0"
+      },
+      {
+        "byte_offset": 620,
+        "name": "CAN_F5DATA1"
+      },
+      {
+        "byte_offset": 624,
+        "name": "CAN_F6DATA0"
+      },
+      {
+        "byte_offset": 628,
+        "name": "CAN_F6DATA1"
+      },
+      {
+        "byte_offset": 632,
+        "name": "CAN_F7DATA0"
+      },
+      {
+        "byte_offset": 636,
+        "name": "CAN_F7DATA1"
+      },
+      {
+        "byte_offset": 640,
+        "name": "CAN_F8DATA0"
+      },
+      {
+        "byte_offset": 644,
+        "name": "CAN_F8DATA1"
+      },
+      {
+        "byte_offset": 648,
+        "name": "CAN_F9DATA0"
+      },
+      {
+        "byte_offset": 652,
+        "name": "CAN_F9DATA1"
+      },
+      {
+        "byte_offset": 656,
+        "name": "CAN_F10DATA0"
+      },
+      {
+        "byte_offset": 660,
+        "name": "CAN_F10DATA1"
+      },
+      {
+        "byte_offset": 664,
+        "name": "CAN_F11DATA0"
+      },
+      {
+        "byte_offset": 668,
+        "name": "CAN_F11DATA1"
+      },
+      {
+        "byte_offset": 672,
+        "name": "CAN_F12DATA0"
+      },
+      {
+        "byte_offset": 676,
+        "name": "CAN_F12DATA1"
+      },
+      {
+        "byte_offset": 680,
+        "name": "CAN_F13DATA0"
+      },
+      {
+        "byte_offset": 684,
+        "name": "CAN_F13DATA1"
+      },
+      {
+        "byte_offset": 688,
+        "name": "CAN_F14DATA0"
+      },
+      {
+        "byte_offset": 692,
+        "name": "CAN_F14DATA1"
+      },
+      {
+        "byte_offset": 696,
+        "name": "CAN_F15DATA0"
+      },
+      {
+        "byte_offset": 700,
+        "name": "CAN_F15DATA1"
+      },
+      {
+        "byte_offset": 704,
+        "name": "CAN_F16DATA0"
+      },
+      {
+        "byte_offset": 708,
+        "name": "CAN_F16DATA1"
+      },
+      {
+        "byte_offset": 712,
+        "name": "CAN_F17DATA0"
+      },
+      {
+        "byte_offset": 716,
+        "name": "CAN_F17DATA1"
+      },
+      {
+        "byte_offset": 720,
+        "name": "CAN_F18DATA0"
+      },
+      {
+        "byte_offset": 724,
+        "name": "CAN_F18DATA1"
+      },
+      {
+        "byte_offset": 728,
+        "name": "CAN_F19DATA0"
+      },
+      {
+        "byte_offset": 732,
+        "name": "CAN_F19DATA1"
+      },
+      {
+        "byte_offset": 736,
+        "name": "CAN_F20DATA0"
+      },
+      {
+        "byte_offset": 740,
+        "name": "CAN_F20DATA1"
+      },
+      {
+        "byte_offset": 744,
+        "name": "CAN_F21DATA0"
+      },
+      {
+        "byte_offset": 748,
+        "name": "CAN_F21DATA1"
+      },
+      {
+        "byte_offset": 752,
+        "name": "CAN_F22DATA0"
+      },
+      {
+        "byte_offset": 756,
+        "name": "CAN_F22DATA1"
+      },
+      {
+        "byte_offset": 760,
+        "name": "CAN_F23DATA0"
+      },
+      {
+        "byte_offset": 764,
+        "name": "CAN_F23DATA1"
+      },
+      {
+        "byte_offset": 768,
+        "name": "CAN_F24DATA0"
+      },
+      {
+        "byte_offset": 772,
+        "name": "CAN_F24DATA1"
+      },
+      {
+        "byte_offset": 776,
+        "name": "CAN_F25DATA0"
+      },
+      {
+        "byte_offset": 780,
+        "name": "CAN_F25DATA1"
+      },
+      {
+        "byte_offset": 784,
+        "name": "CAN_F26DATA0"
+      },
+      {
+        "byte_offset": 788,
+        "name": "CAN_F26DATA1"
+      },
+      {
+        "byte_offset": 792,
+        "name": "CAN_F27DATA0"
+      },
+      {
+        "byte_offset": 796,
+        "name": "CAN_F27DATA1"
+      }
+    ]
+  },
+  "fieldset/CAN_BT": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 10,
+        "name": "CAN_BT_BAUDPSC"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 4,
+        "name": "CAN_BT_BS1"
+      },
+      {
+        "bit_offset": 20,
+        "bit_size": 3,
+        "name": "CAN_BT_BS2"
+      },
+      {
+        "bit_offset": 24,
+        "bit_size": 2,
+        "name": "CAN_BT_SJW"
+      },
+      {
+        "bit_offset": 30,
+        "bit_size": 1,
+        "name": "CAN_BT_LCMOD"
+      },
+      {
+        "bit_offset": 31,
+        "bit_size": 1,
+        "name": "CAN_BT_SCMOD"
+      }
+    ]
+  },
+  "fieldset/CAN_CTL": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "CAN_CTL_IWMOD"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "CAN_CTL_SLPWMOD"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "CAN_CTL_TFO"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "name": "CAN_CTL_RFOD"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "name": "CAN_CTL_ARD"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "name": "CAN_CTL_AWU"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "name": "CAN_CTL_ABOR"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "name": "CAN_CTL_TTC"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "name": "CAN_CTL_SWRST"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "name": "CAN_CTL_DFZ"
+      }
+    ]
+  },
+  "fieldset/CAN_ERR": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "CAN_ERR_WERR"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "CAN_ERR_PERR"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "CAN_ERR_BOERR"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 3,
+        "name": "CAN_ERR_ERRN"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 8,
+        "name": "CAN_ERR_TECNT"
+      },
+      {
+        "bit_offset": 24,
+        "bit_size": 8,
+        "name": "CAN_ERR_RECNT"
+      }
+    ]
+  },
+  "fieldset/CAN_FCTL": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "CAN_FCTL_FLD"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 6,
+        "name": "CAN_FCTL_HBC1F"
+      }
+    ]
+  },
+  "fieldset/CAN_INTEN": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "CAN_INTEN_TMEIE"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "CAN_INTEN_RFNEIE0"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "CAN_INTEN_RFFIE0"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "name": "CAN_INTEN_RFOIE0"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "name": "CAN_INTEN_RFNEIE1"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "name": "CAN_INTEN_RFFIE1"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "name": "CAN_INTEN_RFOIE1"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "name": "CAN_INTEN_WERRIE"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "name": "CAN_INTEN_PERRIE"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "name": "CAN_INTEN_BOIE"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "name": "CAN_INTEN_ERRNIE"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "name": "CAN_INTEN_ERRIE"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "name": "CAN_INTEN_WIE"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 1,
+        "name": "CAN_INTEN_SLPWIE"
+      }
+    ]
+  },
+  "fieldset/CAN_RFIFO0": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 2,
+        "name": "CAN_RFIFO0_RFL0"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "name": "CAN_RFIFO0_RFF0"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "name": "CAN_RFIFO0_RFO0"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "name": "CAN_RFIFO0_RFD0"
+      }
+    ]
+  },
+  "fieldset/CAN_RFIFO1": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 2,
+        "name": "CAN_RFIFO1_RFL1"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "name": "CAN_RFIFO1_RFF1"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "name": "CAN_RFIFO1_RFO1"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "name": "CAN_RFIFO1_RFD1"
+      }
+    ]
+  },
+  "fieldset/CAN_RFIFOMDATA0": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "name": "CAN_RFIFOMDATA0_DB0"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 8,
+        "name": "CAN_RFIFOMDATA0_DB1"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 8,
+        "name": "CAN_RFIFOMDATA0_DB2"
+      },
+      {
+        "bit_offset": 24,
+        "bit_size": 8,
+        "name": "CAN_RFIFOMDATA0_DB3"
+      }
+    ]
+  },
+  "fieldset/CAN_RFIFOMDATA1": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "name": "CAN_RFIFOMDATA1_DB4"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 8,
+        "name": "CAN_RFIFOMDATA1_DB5"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 8,
+        "name": "CAN_RFIFOMDATA1_DB6"
+      },
+      {
+        "bit_offset": 24,
+        "bit_size": 8,
+        "name": "CAN_RFIFOMDATA1_DB7"
+      }
+    ]
+  },
+  "fieldset/CAN_RFIFOMI": {
+    "fields": [
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "CAN_RFIFOMI_FT"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "CAN_RFIFOMI_FF"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 29,
+        "name": "CAN_RFIFOMI_EFID"
+      },
+      {
+        "bit_offset": 21,
+        "bit_size": 11,
+        "name": "CAN_RFIFOMI_SFID"
+      }
+    ]
+  },
+  "fieldset/CAN_RFIFOMP": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 4,
+        "name": "CAN_RFIFOMP_DLENC"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 8,
+        "name": "CAN_RFIFOMP_FI"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 16,
+        "name": "CAN_RFIFOMP_TS"
+      }
+    ]
+  },
+  "fieldset/CAN_STAT": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "CAN_STAT_IWS"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "CAN_STAT_SLPWS"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "CAN_STAT_ERRIF"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "name": "CAN_STAT_WUIF"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "name": "CAN_STAT_SLPIF"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "name": "CAN_STAT_TS"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "name": "CAN_STAT_RS"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "name": "CAN_STAT_LASTRX"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "name": "CAN_STAT_RXL"
+      }
+    ]
+  },
+  "fieldset/CAN_TMDATA0": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "name": "CAN_TMDATA0_DB0"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 8,
+        "name": "CAN_TMDATA0_DB1"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 8,
+        "name": "CAN_TMDATA0_DB2"
+      },
+      {
+        "bit_offset": 24,
+        "bit_size": 8,
+        "name": "CAN_TMDATA0_DB3"
+      }
+    ]
+  },
+  "fieldset/CAN_TMDATA1": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "name": "CAN_TMDATA1_DB4"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 8,
+        "name": "CAN_TMDATA1_DB5"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 8,
+        "name": "CAN_TMDATA1_DB6"
+      },
+      {
+        "bit_offset": 24,
+        "bit_size": 8,
+        "name": "CAN_TMDATA1_DB7"
+      }
+    ]
+  },
+  "fieldset/CAN_TMI": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "CAN_TMI_TEN"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "CAN_TMI_FT"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "CAN_TMI_FF"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 29,
+        "name": "CAN_TMI_EFID"
+      },
+      {
+        "bit_offset": 21,
+        "bit_size": 11,
+        "name": "CAN_TMI_SFID"
+      }
+    ]
+  },
+  "fieldset/CAN_TMP": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 4,
+        "name": "CAN_TMP_DLENC"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "name": "CAN_TMP_TSEN"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 16,
+        "name": "CAN_TMP_TS"
+      }
+    ]
+  },
+  "fieldset/CAN_TSTAT": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "CAN_TSTAT_MTF0"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "CAN_TSTAT_MTFNERR0"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "CAN_TSTAT_MAL0"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "name": "CAN_TSTAT_MTE0"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "name": "CAN_TSTAT_MST0"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "name": "CAN_TSTAT_MTF1"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "name": "CAN_TSTAT_MTFNERR1"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "name": "CAN_TSTAT_MAL1"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "name": "CAN_TSTAT_MTE1"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "name": "CAN_TSTAT_MST1"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "name": "CAN_TSTAT_MTF2"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 1,
+        "name": "CAN_TSTAT_MTFNERR2"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 1,
+        "name": "CAN_TSTAT_MAL2"
+      },
+      {
+        "bit_offset": 19,
+        "bit_size": 1,
+        "name": "CAN_TSTAT_MTE2"
+      },
+      {
+        "bit_offset": 23,
+        "bit_size": 1,
+        "name": "CAN_TSTAT_MST2"
+      },
+      {
+        "bit_offset": 24,
+        "bit_size": 2,
+        "name": "CAN_TSTAT_NUM"
+      },
+      {
+        "bit_offset": 26,
+        "bit_size": 1,
+        "name": "CAN_TSTAT_TME0"
+      },
+      {
+        "bit_offset": 27,
+        "bit_size": 1,
+        "name": "CAN_TSTAT_TME1"
+      },
+      {
+        "bit_offset": 28,
+        "bit_size": 1,
+        "name": "CAN_TSTAT_TME2"
+      },
+      {
+        "bit_offset": 29,
+        "bit_size": 1,
+        "name": "CAN_TSTAT_TMLS0"
+      },
+      {
+        "bit_offset": 30,
+        "bit_size": 1,
+        "name": "CAN_TSTAT_TMLS1"
+      },
+      {
+        "bit_offset": 31,
+        "bit_size": 1,
+        "name": "CAN_TSTAT_TMLS2"
+      }
+    ]
+  }
+}

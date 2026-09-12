@@ -1,0 +1,67 @@
+{
+  "block/FWDGT": {
+    "items": [
+      {
+        "byte_offset": 0,
+        "fieldset": "FWDGT_CTL",
+        "name": "FWDGT_CTL"
+      },
+      {
+        "byte_offset": 4,
+        "fieldset": "FWDGT_PSC",
+        "name": "FWDGT_PSC"
+      },
+      {
+        "byte_offset": 8,
+        "fieldset": "FWDGT_RLD",
+        "name": "FWDGT_RLD"
+      },
+      {
+        "byte_offset": 12,
+        "fieldset": "FWDGT_STAT",
+        "name": "FWDGT_STAT"
+      }
+    ]
+  },
+  "fieldset/FWDGT_CTL": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "name": "FWDGT_CTL_CMD"
+      }
+    ]
+  },
+  "fieldset/FWDGT_PSC": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 3,
+        "name": "FWDGT_PSC_PSC"
+      }
+    ]
+  },
+  "fieldset/FWDGT_RLD": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 12,
+        "name": "FWDGT_RLD_RLD"
+      }
+    ]
+  },
+  "fieldset/FWDGT_STAT": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "FWDGT_STAT_PUD"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "FWDGT_STAT_RUD"
+      }
+    ]
+  }
+}

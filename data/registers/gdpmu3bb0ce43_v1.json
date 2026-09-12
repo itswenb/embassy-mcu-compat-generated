@@ -1,0 +1,155 @@
+{
+  "block/PMU": {
+    "description": "Power management unit",
+    "items": [
+      {
+        "byte_offset": 0,
+        "description": "power control register",
+        "fieldset": "CTL",
+        "name": "CTL"
+      },
+      {
+        "byte_offset": 4,
+        "description": "power control/status register",
+        "fieldset": "CS",
+        "name": "CS"
+      }
+    ]
+  },
+  "fieldset/CS": {
+    "description": "power control/status register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Wakeup flag",
+        "name": "WUF"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Standby flag",
+        "name": "STBF"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Low Voltage Detector Status Flag",
+        "name": "LVDF"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "Enable WKUP pin",
+        "name": "WUPEN"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "description": "LDO voltage select ready flag",
+        "name": "LDOVSRF"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "description": "High-driver ready flag",
+        "name": "HDRF"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 1,
+        "description": "High-driver switch ready flag",
+        "name": "HDSRF"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 2,
+        "description": "Low-driver mode ready flag",
+        "name": "LDRF"
+      }
+    ]
+  },
+  "fieldset/CTL": {
+    "description": "power control register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "LDO Low Power Mode",
+        "name": "LDOLP"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Standby Mode",
+        "name": "STBMOD"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Wakeup Flag Reset",
+        "name": "WURST"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Standby Flag Reset",
+        "name": "STBRST"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "Low Voltage Detector Enable",
+        "name": "LVDEN"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 3,
+        "description": "Low Voltage Detector Threshold",
+        "name": "LVDT"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "Backup Domain Write Enable",
+        "name": "BKPWEN"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "Low-driver mode when use low power LDO.",
+        "name": "LDLP"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "description": "Low-driver mode when use normal power LDO",
+        "name": "LDNP"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 2,
+        "description": "LDO output voltage select",
+        "name": "LDOVS"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "description": "High-driver mode enable",
+        "name": "HDEN"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 1,
+        "description": "High-driver mode switch",
+        "name": "HDS"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 2,
+        "description": "Low-driver mode enable in Deep-sleep mode",
+        "name": "LDEN"
+      }
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "block/ENET_MAC_FCTH": {
+    "description": "MAC flow control threshold register",
+    "items": [
+      {
+        "byte_offset": 0,
+        "description": "Ethernet MAC flow control threshold register",
+        "fieldset": "MAC_FCTH",
+        "name": "MAC_FCTH"
+      }
+    ]
+  },
+  "fieldset/MAC_FCTH": {
+    "description": "Ethernet MAC flow control threshold register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 3,
+        "description": "Threshold of active flow control",
+        "name": "RFA"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 3,
+        "description": "Threshold of deactive flow control",
+        "name": "RFD"
+      }
+    ]
+  }
+}

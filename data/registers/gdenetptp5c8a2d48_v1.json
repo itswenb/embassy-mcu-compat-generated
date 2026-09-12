@@ -1,0 +1,305 @@
+{
+  "block/ENET_PTP": {
+    "description": "Ethernet: Precision time protocol",
+    "items": [
+      {
+        "byte_offset": 0,
+        "description": "Ethernet PTP time stamp control register (PTP_TSCTL)",
+        "fieldset": "PTP_TSCTL",
+        "name": "PTP_TSCTL"
+      },
+      {
+        "byte_offset": 4,
+        "description": "Ethernet PTP subsecond increment register",
+        "fieldset": "PTP_SSINC",
+        "name": "PTP_SSINC"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 8,
+        "description": "Ethernet PTP time stamp high register",
+        "fieldset": "PTP_TSH",
+        "name": "PTP_TSH"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 12,
+        "description": "Ethernet PTP time stamp low register (PTP_TSL)",
+        "fieldset": "PTP_TSL",
+        "name": "PTP_TSL"
+      },
+      {
+        "byte_offset": 16,
+        "description": "Ethernet PTP time stamp high update register",
+        "fieldset": "PTP_TSUH",
+        "name": "PTP_TSUH"
+      },
+      {
+        "byte_offset": 20,
+        "description": "Ethernet PTP time stamp low update register (PTP_TSUL)",
+        "fieldset": "PTP_TSUL",
+        "name": "PTP_TSUL"
+      },
+      {
+        "byte_offset": 24,
+        "description": "Ethernet PTP time stamp addend register",
+        "fieldset": "PTP_TSADDEND",
+        "name": "PTP_TSADDEND"
+      },
+      {
+        "byte_offset": 28,
+        "description": "Ethernet PTP expected time high register",
+        "fieldset": "PTP_ETH",
+        "name": "PTP_ETH"
+      },
+      {
+        "byte_offset": 32,
+        "description": "Ethernet PTP expected time low register",
+        "fieldset": "PTP_ETL",
+        "name": "PTP_ETL"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 40,
+        "description": "Ethernet PTP time stamp flag register",
+        "fieldset": "PTP_TSF",
+        "name": "PTP_TSF"
+      },
+      {
+        "byte_offset": 44,
+        "description": "Ethernet PTP PPS control register",
+        "fieldset": "PTP_PPSCTL",
+        "name": "PTP_PPSCTL"
+      }
+    ]
+  },
+  "fieldset/PTP_ETH": {
+    "description": "Ethernet PTP expected time high register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "Expected time stamp high",
+        "name": "ETSH"
+      }
+    ]
+  },
+  "fieldset/PTP_ETL": {
+    "description": "Ethernet PTP expected time low register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "Expected time stamp low",
+        "name": "ETSL"
+      }
+    ]
+  },
+  "fieldset/PTP_PPSCTL": {
+    "description": "Ethernet PTP PPS control register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 4,
+        "description": "PPS output frequency configure",
+        "name": "PPSOFC"
+      }
+    ]
+  },
+  "fieldset/PTP_SSINC": {
+    "description": "Ethernet PTP subsecond increment register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "System time subsecond increment",
+        "name": "STMSSI"
+      }
+    ]
+  },
+  "fieldset/PTP_TSADDEND": {
+    "description": "Ethernet PTP time stamp addend register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "Time stamp addend",
+        "name": "TMSA"
+      }
+    ]
+  },
+  "fieldset/PTP_TSCTL": {
+    "description": "Ethernet PTP time stamp control register (PTP_TSCTL)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Time stamp enable",
+        "name": "TMSEN"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Time stamp fine or coarse update",
+        "name": "TMSFCU"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Time stamp system time initialize",
+        "name": "TMSSTI"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Time stamp system time update",
+        "name": "TMSSTU"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "Time stamp interrupt trigger enable",
+        "name": "TMSITEN"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "Time stamp addend register update",
+        "name": "TMSARU"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "All received frames snapshot enable",
+        "name": "ARFSEN"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "Subsecond counter rollover mode",
+        "name": "SCROM"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "PTP frame snooping version",
+        "name": "PFSV"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "description": "Received Ethernet snapshot enable",
+        "name": "ESEN"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "description": "Received IPv6 snapshot enable",
+        "name": "IP6SEN"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "description": "Received IPv4 snapshot enable",
+        "name": "IP4SEN"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "description": "Received event type message snapshot enable",
+        "name": "ETMSEN"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "Received master node message snapshot enable",
+        "name": "MNMSEN"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 2,
+        "description": "Clock node type for time stamp",
+        "name": "CKNT"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 1,
+        "description": "MAC address filter enable for PTP frame",
+        "name": "MAFEN"
+      }
+    ]
+  },
+  "fieldset/PTP_TSF": {
+    "description": "Ethernet PTP time stamp flag register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Timestamp second counter overflow",
+        "name": "TSSCO"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Target time match",
+        "name": "TTM"
+      }
+    ]
+  },
+  "fieldset/PTP_TSH": {
+    "description": "Ethernet PTP time stamp high register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "System time second",
+        "name": "STMS"
+      }
+    ]
+  },
+  "fieldset/PTP_TSL": {
+    "description": "Ethernet PTP time stamp low register (PTP_TSL)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 31,
+        "description": "System time subseconds",
+        "name": "STMSS"
+      },
+      {
+        "bit_offset": 31,
+        "bit_size": 1,
+        "description": "System time sign",
+        "name": "STS"
+      }
+    ]
+  },
+  "fieldset/PTP_TSUH": {
+    "description": "Ethernet PTP time stamp high update register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "Time stamp update second",
+        "name": "TMSUS"
+      }
+    ]
+  },
+  "fieldset/PTP_TSUL": {
+    "description": "Ethernet PTP time stamp low update register (PTP_TSUL)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 31,
+        "description": "Time stamp update subseconds",
+        "name": "TMSUSS"
+      },
+      {
+        "bit_offset": 31,
+        "bit_size": 1,
+        "description": "Time stamp update positive or negative sign",
+        "name": "TMSUPNS"
+      }
+    ]
+  }
+}

@@ -1,0 +1,951 @@
+{
+  "block/USBFS_GLOBAL": {
+    "description": "USB full speed global registers",
+    "items": [
+      {
+        "byte_offset": 0,
+        "description": "Global OTG control and status register (USBFS_GOTGCS)",
+        "fieldset": "GOTGCS",
+        "name": "GOTGCS"
+      },
+      {
+        "byte_offset": 4,
+        "description": "Global OTG interrupt flag register (USBFS_GOTGINTF)",
+        "fieldset": "GOTGINTF",
+        "name": "GOTGINTF"
+      },
+      {
+        "byte_offset": 8,
+        "description": "Global AHB control and status register (USBFS_GAHBCS)",
+        "fieldset": "GAHBCS",
+        "name": "GAHBCS"
+      },
+      {
+        "byte_offset": 12,
+        "description": "Global USB control and status register (OTG_FS_GUSBCSR)",
+        "fieldset": "GUSBCS",
+        "name": "GUSBCS"
+      },
+      {
+        "byte_offset": 16,
+        "description": "Global reset control register (USBFS_GRSTCTL)",
+        "fieldset": "GRSTCTL",
+        "name": "GRSTCTL"
+      },
+      {
+        "byte_offset": 20,
+        "description": "Global interrupt flag register (USBFS_GINTF)",
+        "fieldset": "GINTF",
+        "name": "GINTF"
+      },
+      {
+        "byte_offset": 24,
+        "description": "Global interrupt enable register (USBFS_GINTEN)",
+        "fieldset": "GINTEN",
+        "name": "GINTEN"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 28,
+        "description": "Global Receive status read(Device mode)",
+        "fieldset": "GRSTATR_Device",
+        "name": "GRSTATR_Device"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 28,
+        "description": "Global Receive status read(Host mode)",
+        "fieldset": "GRSTATR_Host",
+        "name": "GRSTATR_Host"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 32,
+        "description": "Global Receive status pop(Device mode)",
+        "fieldset": "GRSTATP_Device",
+        "name": "GRSTATP_Device"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 32,
+        "description": "Global Receive status pop(Host mode)",
+        "fieldset": "GRSTATP_Host",
+        "name": "GRSTATP_Host"
+      },
+      {
+        "byte_offset": 36,
+        "description": "Global Receive FIFO size register (USBFS_GRFLEN)",
+        "fieldset": "GRFLEN",
+        "name": "GRFLEN"
+      },
+      {
+        "byte_offset": 40,
+        "description": "Device IN endpoint 0 transmit FIFO length (Device mode)",
+        "fieldset": "DIEP0TFLEN",
+        "name": "DIEP0TFLEN"
+      },
+      {
+        "byte_offset": 40,
+        "description": "Host non-periodic transmit FIFO length register (Host mode)",
+        "fieldset": "HNPTFLEN",
+        "name": "HNPTFLEN"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 44,
+        "description": "Host non-periodic transmit FIFO/queue status register (HNPTFQSTAT)",
+        "fieldset": "HNPTFQSTAT",
+        "name": "HNPTFQSTAT"
+      },
+      {
+        "byte_offset": 56,
+        "description": "Global core configuration register (USBFS_GCCFG)",
+        "fieldset": "GCCFG",
+        "name": "GCCFG"
+      },
+      {
+        "byte_offset": 60,
+        "description": "core ID register",
+        "fieldset": "CID",
+        "name": "CID"
+      },
+      {
+        "byte_offset": 256,
+        "description": "Host periodic transmit FIFO length register (HPTFLEN)",
+        "fieldset": "HPTFLEN",
+        "name": "HPTFLEN"
+      },
+      {
+        "byte_offset": 260,
+        "description": "device IN endpoint transmit FIFO size register (DIEP1TFLEN)",
+        "fieldset": "DIEP1TFLEN",
+        "name": "DIEP1TFLEN"
+      },
+      {
+        "byte_offset": 264,
+        "description": "device IN endpoint transmit FIFO size register (DIEP2TFLEN)",
+        "fieldset": "DIEP2TFLEN",
+        "name": "DIEP2TFLEN"
+      },
+      {
+        "byte_offset": 268,
+        "description": "device IN endpoint transmit FIFO size register (FS_DIEP3TXFLEN)",
+        "fieldset": "DIEP3TFLEN",
+        "name": "DIEP3TFLEN"
+      }
+    ]
+  },
+  "fieldset/CID": {
+    "description": "core ID register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 32,
+        "description": "Core ID",
+        "name": "CID"
+      }
+    ]
+  },
+  "fieldset/DIEP0TFLEN": {
+    "description": "Device IN endpoint 0 transmit FIFO length (Device mode)",
+    "fields": [
+      {
+        "bit_offset": 16,
+        "bit_size": 16,
+        "description": "in endpoint 0 Tx FIFO depth",
+        "name": "IEP0TXFD"
+      },
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "in endpoint 0 Tx RAM start address",
+        "name": "IEP0TXRSAR"
+      }
+    ]
+  },
+  "fieldset/DIEP1TFLEN": {
+    "description": "device IN endpoint transmit FIFO size register (DIEP1TFLEN)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "IN endpoint FIFO transmit RAM start address",
+        "name": "IEPTXRSAR"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 16,
+        "description": "IN endpoint TxFIFO depth",
+        "name": "IEPTXFD"
+      }
+    ]
+  },
+  "fieldset/DIEP2TFLEN": {
+    "description": "device IN endpoint transmit FIFO size register (DIEP2TFLEN)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "IN endpoint FIFO transmit RAM start address",
+        "name": "IEPTXRSAR"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 16,
+        "description": "IN endpoint TxFIFO depth",
+        "name": "IEPTXFD"
+      }
+    ]
+  },
+  "fieldset/DIEP3TFLEN": {
+    "description": "device IN endpoint transmit FIFO size register (FS_DIEP3TXFLEN)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "IN endpoint FIFO4 transmit RAM start address",
+        "name": "IEPTXRSAR"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 16,
+        "description": "IN endpoint TxFIFO depth",
+        "name": "IEPTXFD"
+      }
+    ]
+  },
+  "fieldset/GAHBCS": {
+    "description": "Global AHB control and status register (USBFS_GAHBCS)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Global interrupt enable",
+        "name": "GINTEN"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Tx FIFO threshold",
+        "name": "TXFTH"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "Periodic Tx FIFO threshold",
+        "name": "PTXFTH"
+      }
+    ]
+  },
+  "fieldset/GCCFG": {
+    "description": "Global core configuration register (USBFS_GCCFG)",
+    "fields": [
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "description": "Power on",
+        "name": "PWRON"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 1,
+        "description": "The VBUS A-device Comparer enable",
+        "name": "VBUSACEN"
+      },
+      {
+        "bit_offset": 19,
+        "bit_size": 1,
+        "description": "The VBUS B-device Comparer enable",
+        "name": "VBUSBCEN"
+      },
+      {
+        "bit_offset": 20,
+        "bit_size": 1,
+        "description": "SOF output enable",
+        "name": "SOFOEN"
+      },
+      {
+        "bit_offset": 21,
+        "bit_size": 1,
+        "description": "VBUS ignored",
+        "name": "VBUSIG"
+      }
+    ]
+  },
+  "fieldset/GINTEN": {
+    "description": "Global interrupt enable register (USBFS_GINTEN)",
+    "fields": [
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Mode fault interrupt enable",
+        "name": "MFIE"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "OTG interrupt enable",
+        "name": "OTGIE"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Start of frame interrupt enable",
+        "name": "SOFIE"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "Receive FIFO non-empty interrupt enable",
+        "name": "RXFNEIE"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "Non-periodic TxFIFO empty interrupt enable",
+        "name": "NPTXFEIE"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "Global non-periodic IN NAK effective interrupt enable",
+        "name": "GNPINAKIE"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Global OUT NAK effective interrupt enable",
+        "name": "GONAKIE"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "Early suspend interrupt enable",
+        "name": "ESPIE"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "description": "USB suspend interrupt enable",
+        "name": "SPIE"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "description": "USB reset interrupt enable",
+        "name": "RSTIE"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "description": "Enumeration finish interrupt enable",
+        "name": "ENUMFIE"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "description": "Isochronous OUT packet dropped interrupt enable",
+        "name": "ISOOPDIE"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "End of periodic frame interrupt enable",
+        "name": "EOPFIE"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 1,
+        "description": "IN endpoints interrupt enable",
+        "name": "IEPIE"
+      },
+      {
+        "bit_offset": 19,
+        "bit_size": 1,
+        "description": "OUT endpoints interrupt enable",
+        "name": "OEPIE"
+      },
+      {
+        "bit_offset": 20,
+        "bit_size": 1,
+        "description": "isochronous IN transfer not complete interrupt enable",
+        "name": "ISOINCIE"
+      },
+      {
+        "bit_offset": 21,
+        "bit_size": 1,
+        "description": "periodic transfer not compelete Interrupt enable(Host mode)/isochronous OUT transfer not complete interrupt enable(Device mode)",
+        "name": "PXNCIE_ISOONCIE"
+      },
+      {
+        "bit_offset": 24,
+        "bit_size": 1,
+        "description": "Host port interrupt enable",
+        "name": "HPIE"
+      },
+      {
+        "bit_offset": 25,
+        "bit_size": 1,
+        "description": "Host channels interrupt enable",
+        "name": "HCIE"
+      },
+      {
+        "bit_offset": 26,
+        "bit_size": 1,
+        "description": "Periodic TxFIFO empty interrupt enable",
+        "name": "PTXFEIE"
+      },
+      {
+        "bit_offset": 28,
+        "bit_size": 1,
+        "description": "ID pin status change interrupt enable",
+        "name": "IDPSCIE"
+      },
+      {
+        "bit_offset": 29,
+        "bit_size": 1,
+        "description": "Disconnect interrupt enable",
+        "name": "DISCIE"
+      },
+      {
+        "bit_offset": 30,
+        "bit_size": 1,
+        "description": "Session interrupt enable",
+        "name": "SESIE"
+      },
+      {
+        "bit_offset": 31,
+        "bit_size": 1,
+        "description": "Wakeup interrupt enable",
+        "name": "WKUPIE"
+      }
+    ]
+  },
+  "fieldset/GINTF": {
+    "description": "Global interrupt flag register (USBFS_GINTF)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Current operation mode",
+        "name": "COPM"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Mode fault interrupt flag",
+        "name": "MFIF"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "OTG interrupt flag",
+        "name": "OTGIF"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Start of frame",
+        "name": "SOF"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "RxFIFO non-empty interrupt flag",
+        "name": "RXFNEIF"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "Non-periodic TxFIFO empty interrupt flag",
+        "name": "NPTXFEIF"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "Global Non-Periodic IN NAK effective",
+        "name": "GNPINAK"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Global OUT NAK effective",
+        "name": "GONAK"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "Early suspend",
+        "name": "ESP"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "description": "USB suspend",
+        "name": "SP"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "description": "USB reset",
+        "name": "RST"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "description": "Enumeration finished",
+        "name": "ENUMF"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "description": "Isochronous OUT packet dropped interrupt",
+        "name": "ISOOPDIF"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "End of periodic frame interrupt flag",
+        "name": "EOPFIF"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 1,
+        "description": "IN endpoint interrupt flag",
+        "name": "IEPIF"
+      },
+      {
+        "bit_offset": 19,
+        "bit_size": 1,
+        "description": "OUT endpoint interrupt flag",
+        "name": "OEPIF"
+      },
+      {
+        "bit_offset": 20,
+        "bit_size": 1,
+        "description": "Isochronous IN transfer Not Complete Interrupt Flag",
+        "name": "ISOINCIF"
+      },
+      {
+        "bit_offset": 21,
+        "bit_size": 1,
+        "description": "periodic transfer not complete interrupt flag(Host mode)/isochronous OUT transfer not complete interrupt flag(Device mode)",
+        "name": "PXNCIF_ISOONCIF"
+      },
+      {
+        "bit_offset": 24,
+        "bit_size": 1,
+        "description": "Host port interrupt flag",
+        "name": "HPIF"
+      },
+      {
+        "bit_offset": 25,
+        "bit_size": 1,
+        "description": "Host channels interrupt flag",
+        "name": "HCIF"
+      },
+      {
+        "bit_offset": 26,
+        "bit_size": 1,
+        "description": "Periodic TxFIFO empty interrupt flag",
+        "name": "PTXFEIF"
+      },
+      {
+        "bit_offset": 28,
+        "bit_size": 1,
+        "description": "ID pin status change",
+        "name": "IDPSC"
+      },
+      {
+        "bit_offset": 29,
+        "bit_size": 1,
+        "description": "Disconnect interrupt flag",
+        "name": "DISCIF"
+      },
+      {
+        "bit_offset": 30,
+        "bit_size": 1,
+        "description": "Session interrupt flag",
+        "name": "SESIF"
+      },
+      {
+        "bit_offset": 31,
+        "bit_size": 1,
+        "description": "Wakeup interrupt flag",
+        "name": "WKUPIF"
+      }
+    ]
+  },
+  "fieldset/GOTGCS": {
+    "description": "Global OTG control and status register (USBFS_GOTGCS)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "SRP success",
+        "name": "SRPS"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "SRP request",
+        "name": "SRPREQ"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "Host success",
+        "name": "HNPS"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "HNP request",
+        "name": "HNPREQ"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "Host HNP enable",
+        "name": "HHNPEN"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "description": "Device HNP enabled",
+        "name": "DHNPEN"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "description": "ID pin status",
+        "name": "IDPS"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 1,
+        "description": "Debounce interval",
+        "name": "DI"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 1,
+        "description": "A-session valid",
+        "name": "ASV"
+      },
+      {
+        "bit_offset": 19,
+        "bit_size": 1,
+        "description": "B-session valid",
+        "name": "BSV"
+      }
+    ]
+  },
+  "fieldset/GOTGINTF": {
+    "description": "Global OTG interrupt flag register (USBFS_GOTGINTF)",
+    "fields": [
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Session end",
+        "name": "SESEND"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "Session request success status change",
+        "name": "SRPEND"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "HNP end",
+        "name": "HNPEND"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 1,
+        "description": "Host negotiation request detected",
+        "name": "HNPDET"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 1,
+        "description": "A-device timeout",
+        "name": "ADTO"
+      },
+      {
+        "bit_offset": 19,
+        "bit_size": 1,
+        "description": "Debounce finish",
+        "name": "DF"
+      }
+    ]
+  },
+  "fieldset/GRFLEN": {
+    "description": "Global Receive FIFO size register (USBFS_GRFLEN)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Rx FIFO depth",
+        "name": "RXFD"
+      }
+    ]
+  },
+  "fieldset/GRSTATP_Device": {
+    "description": "Global Receive status pop(Device mode)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 4,
+        "description": "Endpoint number",
+        "name": "EPNUM"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 11,
+        "description": "Byte count",
+        "name": "BCOUNT"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 2,
+        "description": "Data PID",
+        "name": "DPID"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 4,
+        "description": "Recieve packet status",
+        "name": "RPCKST"
+      }
+    ]
+  },
+  "fieldset/GRSTATP_Host": {
+    "description": "Global Receive status pop(Host mode)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 4,
+        "description": "Channel number",
+        "name": "CNUM"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 11,
+        "description": "Byte count",
+        "name": "BCOUNT"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 2,
+        "description": "Data PID",
+        "name": "DPID"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 4,
+        "description": "Reivece packet status",
+        "name": "RPCKST"
+      }
+    ]
+  },
+  "fieldset/GRSTATR_Device": {
+    "description": "Global Receive status read(Device mode)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 4,
+        "description": "Endpoint number",
+        "name": "EPNUM"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 11,
+        "description": "Byte count",
+        "name": "BCOUNT"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 2,
+        "description": "Data PID",
+        "name": "DPID"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 4,
+        "description": "Recieve packet status",
+        "name": "RPCKST"
+      }
+    ]
+  },
+  "fieldset/GRSTATR_Host": {
+    "description": "Global Receive status read(Host mode)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 4,
+        "description": "Channel number",
+        "name": "CNUM"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 11,
+        "description": "Byte count",
+        "name": "BCOUNT"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 2,
+        "description": "Data PID",
+        "name": "DPID"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 4,
+        "description": "Reivece packet status",
+        "name": "RPCKST"
+      }
+    ]
+  },
+  "fieldset/GRSTCTL": {
+    "description": "Global reset control register (USBFS_GRSTCTL)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Core soft reset",
+        "name": "CSRST"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "HCLK soft reset",
+        "name": "HCSRST"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Host frame counter reset",
+        "name": "HFCRST"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "RxFIFO flush",
+        "name": "RXFF"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "TxFIFO flush",
+        "name": "TXFF"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 5,
+        "description": "TxFIFO number",
+        "name": "TXFNUM"
+      }
+    ]
+  },
+  "fieldset/GUSBCS": {
+    "description": "Global USB control and status register (OTG_FS_GUSBCSR)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 3,
+        "description": "Timeout calibration",
+        "name": "TOC"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "SRP capability enable",
+        "name": "SRPCEN"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "HNP capability enable",
+        "name": "HNPCEN"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 4,
+        "description": "USB turnaround time",
+        "name": "UTT"
+      },
+      {
+        "bit_offset": 29,
+        "bit_size": 1,
+        "description": "Force host mode",
+        "name": "FHM"
+      },
+      {
+        "bit_offset": 30,
+        "bit_size": 1,
+        "description": "Force device mode",
+        "name": "FDM"
+      }
+    ]
+  },
+  "fieldset/HNPTFLEN": {
+    "description": "Host non-periodic transmit FIFO length register (Host mode)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "host non-periodic transmit Tx RAM start address",
+        "name": "HNPTXRSAR"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 16,
+        "description": "host non-periodic TxFIFO depth",
+        "name": "HNPTXFD"
+      }
+    ]
+  },
+  "fieldset/HNPTFQSTAT": {
+    "description": "Host non-periodic transmit FIFO/queue status register (HNPTFQSTAT)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Non-periodic TxFIFO space",
+        "name": "NPTXFS"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 8,
+        "description": "Non-periodic transmit request queue space",
+        "name": "NPTXRQS"
+      },
+      {
+        "bit_offset": 24,
+        "bit_size": 7,
+        "description": "Top of the non-periodic transmit request queue",
+        "name": "NPTXRQTOP"
+      }
+    ]
+  },
+  "fieldset/HPTFLEN": {
+    "description": "Host periodic transmit FIFO length register (HPTFLEN)",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Host periodic TxFIFO start address",
+        "name": "HPTXFSAR"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 16,
+        "description": "Host periodic TxFIFO depth",
+        "name": "HPTXFD"
+      }
+    ]
+  }
+}

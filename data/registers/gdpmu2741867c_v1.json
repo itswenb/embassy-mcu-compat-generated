@@ -1,0 +1,277 @@
+{
+  "block/GD_MERGED_5666562F8079": {
+    "items": [
+      {
+        "byte_offset": 0,
+        "description": "power control register",
+        "fieldset": "GD_MERGED_5666562F8079_SVD_CTL",
+        "name": "CTL"
+      },
+      {
+        "byte_offset": 0,
+        "fieldset": "GD_MERGED_5666562F8079_FW_PMU_CTL",
+        "name": "PMU_CTL"
+      },
+      {
+        "byte_offset": 4,
+        "description": "power control/status register",
+        "fieldset": "GD_MERGED_5666562F8079_SVD_CS",
+        "name": "CS"
+      },
+      {
+        "byte_offset": 4,
+        "fieldset": "GD_MERGED_5666562F8079_FW_PMU_CS",
+        "name": "PMU_CS"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_5666562F8079_FW_PMU_CS": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "PMU_CS_WUF"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "PMU_CS_STBF"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "PMU_CS_LVDF"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "name": "PMU_CS_WUPEN"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "name": "PMU_CS_LDOVSRF"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "name": "PMU_CS_HDRF"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 1,
+        "name": "PMU_CS_HDSRF"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 2,
+        "name": "PMU_CS_LDRF"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_5666562F8079_FW_PMU_CTL": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "PMU_CTL_LDOLP"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "PMU_CTL_STBMOD"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "PMU_CTL_WURST"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "name": "PMU_CTL_STBRST"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "name": "PMU_CTL_LVDEN"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 3,
+        "name": "PMU_CTL_LVDT"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "name": "PMU_CTL_BKPWEN"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "name": "PMU_CTL_LDLP"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "name": "PMU_CTL_LDNP"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 2,
+        "name": "PMU_CTL_LDOVS"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "name": "PMU_CTL_HDEN"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 1,
+        "name": "PMU_CTL_HDS"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 2,
+        "name": "PMU_CTL_LDEN"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_5666562F8079_SVD_CS": {
+    "description": "power control/status register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Wakeup flag",
+        "name": "WUF"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Standby flag",
+        "name": "STBF"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Low Voltage Detector Status Flag",
+        "name": "LVDF"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "Enable WKUP pin",
+        "name": "WUPEN"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "description": "LDO voltage select ready flag",
+        "name": "LDOVSRF"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "description": "High-driver ready flag",
+        "name": "HDRF"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 1,
+        "description": "High-driver switch ready flag",
+        "name": "HDSRF"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 2,
+        "description": "Low-driver mode ready flag",
+        "name": "LDRF"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_5666562F8079_SVD_CTL": {
+    "description": "power control register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "LDO Low Power Mode",
+        "name": "LDOLP"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Standby Mode",
+        "name": "STBMOD"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Wakeup Flag Reset",
+        "name": "WURST"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Standby Flag Reset",
+        "name": "STBRST"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "Low Voltage Detector Enable",
+        "name": "LVDEN"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 3,
+        "description": "Low Voltage Detector Threshold",
+        "name": "LVDT"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "Backup Domain Write Enable",
+        "name": "BKPWEN"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "Low-driver mode when use low power LDO.",
+        "name": "LDLP"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "description": "Low-driver mode when use normal power LDO",
+        "name": "LDNP"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 2,
+        "description": "LDO output voltage select",
+        "name": "LDOVS"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "description": "High-driver mode enable",
+        "name": "HDEN"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 1,
+        "description": "High-driver mode switch",
+        "name": "HDS"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 2,
+        "description": "Low-driver mode enable in Deep-sleep mode",
+        "name": "LDEN"
+      }
+    ]
+  }
+}

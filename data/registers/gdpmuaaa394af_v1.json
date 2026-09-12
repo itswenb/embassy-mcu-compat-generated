@@ -1,0 +1,129 @@
+{
+  "block/PMU": {
+    "items": [
+      {
+        "byte_offset": 0,
+        "fieldset": "PMU_CTL",
+        "name": "PMU_CTL"
+      },
+      {
+        "byte_offset": 4,
+        "fieldset": "PMU_CS",
+        "name": "PMU_CS"
+      }
+    ]
+  },
+  "fieldset/PMU_CS": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "PMU_CS_WUF"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "PMU_CS_STBF"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "PMU_CS_LVDF"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "name": "PMU_CS_WUPEN"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "name": "PMU_CS_LDOVSRF"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "name": "PMU_CS_HDRF"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 1,
+        "name": "PMU_CS_HDSRF"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 2,
+        "name": "PMU_CS_LDRF"
+      }
+    ]
+  },
+  "fieldset/PMU_CTL": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "PMU_CTL_LDOLP"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "PMU_CTL_STBMOD"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "PMU_CTL_WURST"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "name": "PMU_CTL_STBRST"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "name": "PMU_CTL_LVDEN"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 3,
+        "name": "PMU_CTL_LVDT"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "name": "PMU_CTL_BKPWEN"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "name": "PMU_CTL_LDLP"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "name": "PMU_CTL_LDNP"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 2,
+        "name": "PMU_CTL_LDOVS"
+      },
+      {
+        "bit_offset": 16,
+        "bit_size": 1,
+        "name": "PMU_CTL_HDEN"
+      },
+      {
+        "bit_offset": 17,
+        "bit_size": 1,
+        "name": "PMU_CTL_HDS"
+      },
+      {
+        "bit_offset": 18,
+        "bit_size": 2,
+        "name": "PMU_CTL_LDEN"
+      }
+    ]
+  }
+}

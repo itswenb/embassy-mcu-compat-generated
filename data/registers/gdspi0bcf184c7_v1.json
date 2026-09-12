@@ -1,0 +1,747 @@
+{
+  "block/GD_MERGED_755BDF3AB841": {
+    "items": [
+      {
+        "byte_offset": 0,
+        "description": "control register 0",
+        "fieldset": "GD_MERGED_755BDF3AB841_SVD_CTL0",
+        "name": "CTL0"
+      },
+      {
+        "byte_offset": 0,
+        "fieldset": "GD_MERGED_755BDF3AB841_FW_SPI_CTL0",
+        "name": "SPI_CTL0"
+      },
+      {
+        "byte_offset": 4,
+        "description": "control register 1",
+        "fieldset": "GD_MERGED_755BDF3AB841_SVD_CTL1",
+        "name": "CTL1"
+      },
+      {
+        "byte_offset": 4,
+        "fieldset": "GD_MERGED_755BDF3AB841_FW_SPI_CTL1",
+        "name": "SPI_CTL1"
+      },
+      {
+        "byte_offset": 8,
+        "fieldset": "GD_MERGED_755BDF3AB841_FW_SPI_STAT",
+        "name": "SPI_STAT"
+      },
+      {
+        "byte_offset": 8,
+        "description": "status register",
+        "fieldset": "GD_MERGED_755BDF3AB841_SVD_STAT",
+        "name": "STAT"
+      },
+      {
+        "byte_offset": 12,
+        "description": "data register",
+        "fieldset": "GD_MERGED_755BDF3AB841_SVD_DATA",
+        "name": "DATA"
+      },
+      {
+        "byte_offset": 12,
+        "fieldset": "GD_MERGED_755BDF3AB841_FW_SPI_DATA",
+        "name": "SPI_DATA"
+      },
+      {
+        "byte_offset": 16,
+        "description": "CRC polynomial register",
+        "fieldset": "GD_MERGED_755BDF3AB841_SVD_CRCPOLY",
+        "name": "CRCPOLY"
+      },
+      {
+        "byte_offset": 16,
+        "fieldset": "GD_MERGED_755BDF3AB841_FW_SPI_CRCPOLY",
+        "name": "SPI_CRCPOLY"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 20,
+        "description": "RX CRC register",
+        "fieldset": "GD_MERGED_755BDF3AB841_SVD_RCRC",
+        "name": "RCRC"
+      },
+      {
+        "byte_offset": 20,
+        "fieldset": "GD_MERGED_755BDF3AB841_FW_SPI_RCRC",
+        "name": "SPI_RCRC"
+      },
+      {
+        "byte_offset": 24,
+        "fieldset": "GD_MERGED_755BDF3AB841_FW_SPI_TCRC",
+        "name": "SPI_TCRC"
+      },
+      {
+        "access": "Read",
+        "byte_offset": 24,
+        "description": "TX CRC register",
+        "fieldset": "GD_MERGED_755BDF3AB841_SVD_TCRC",
+        "name": "TCRC"
+      },
+      {
+        "byte_offset": 28,
+        "description": "I2S control register",
+        "fieldset": "GD_MERGED_755BDF3AB841_SVD_I2SCTL",
+        "name": "I2SCTL"
+      },
+      {
+        "byte_offset": 28,
+        "fieldset": "GD_MERGED_755BDF3AB841_FW_SPI_I2SCTL",
+        "name": "SPI_I2SCTL"
+      },
+      {
+        "byte_offset": 32,
+        "description": "I2S prescaler register",
+        "fieldset": "GD_MERGED_755BDF3AB841_SVD_I2SPSC",
+        "name": "I2SPSC"
+      },
+      {
+        "byte_offset": 32,
+        "fieldset": "GD_MERGED_755BDF3AB841_FW_SPI_I2SPSC",
+        "name": "SPI_I2SPSC"
+      },
+      {
+        "byte_offset": 128,
+        "description": "Quad-SPI mode control register",
+        "fieldset": "GD_MERGED_755BDF3AB841_SVD_QCTL",
+        "name": "QCTL"
+      },
+      {
+        "byte_offset": 128,
+        "fieldset": "GD_MERGED_755BDF3AB841_FW_SPI_QCTL",
+        "name": "SPI_QCTL"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_755BDF3AB841_FW_SPI_CRCPOLY": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "name": "SPI_CRCPOLY_CPR"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_755BDF3AB841_FW_SPI_CTL0": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "SPI_CTL0_CKPH"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "SPI_CTL0_CKPL"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "SPI_CTL0_MSTMOD"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 3,
+        "name": "SPI_CTL0_PSC"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "name": "SPI_CTL0_SPIEN"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "name": "SPI_CTL0_LF"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "name": "SPI_CTL0_SWNSS"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "name": "SPI_CTL0_SWNSSEN"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "name": "SPI_CTL0_RO"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "name": "SPI_CTL0_FF16"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "name": "SPI_CTL0_CRCNT"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "name": "SPI_CTL0_CRCEN"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "name": "SPI_CTL0_BDOEN"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "name": "SPI_CTL0_BDEN"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_755BDF3AB841_FW_SPI_CTL1": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "SPI_CTL1_DMAREN"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "SPI_CTL1_DMATEN"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "SPI_CTL1_NSSDRV"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "name": "SPI_CTL1_NSSP"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "name": "SPI_CTL1_TMOD"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "name": "SPI_CTL1_ERRIE"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "name": "SPI_CTL1_RBNEIE"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "name": "SPI_CTL1_TBEIE"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_755BDF3AB841_FW_SPI_DATA": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "name": "SPI_DATA_DATA"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_755BDF3AB841_FW_SPI_I2SCTL": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "SPI_I2SCTL_CHLEN"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 2,
+        "name": "SPI_I2SCTL_DTLEN"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "name": "SPI_I2SCTL_CKPL"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 2,
+        "name": "SPI_I2SCTL_I2SSTD"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "name": "SPI_I2SCTL_PCMSMOD"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 2,
+        "name": "SPI_I2SCTL_I2SOPMOD"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "name": "SPI_I2SCTL_I2SEN"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "name": "SPI_I2SCTL_I2SSEL"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_755BDF3AB841_FW_SPI_I2SPSC": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "name": "SPI_I2SPSC_DIV"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "name": "SPI_I2SPSC_OF"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "name": "SPI_I2SPSC_MCKOEN"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_755BDF3AB841_FW_SPI_QCTL": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "SPI_QCTL_QMOD"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "SPI_QCTL_QRD"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "SPI_QCTL_IO23_DRV"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_755BDF3AB841_FW_SPI_RCRC": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "name": "SPI_RCRC_RCR"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_755BDF3AB841_FW_SPI_STAT": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "name": "SPI_STAT_RBNE"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "name": "SPI_STAT_TBE"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "name": "SPI_STAT_I2SCH"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "name": "SPI_STAT_TXURERR"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "name": "SPI_STAT_CRCERR"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "name": "SPI_STAT_CONFERR"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "name": "SPI_STAT_RXORERR"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "name": "SPI_STAT_TRANS"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "name": "SPI_STAT_FERR"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_755BDF3AB841_FW_SPI_TCRC": {
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "name": "SPI_TCRC_TCR"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_755BDF3AB841_SVD_CRCPOLY": {
+    "description": "CRC polynomial register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "CRC polynomial register",
+        "name": "CPR"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_755BDF3AB841_SVD_CTL0": {
+    "description": "control register 0",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Clock Phase Selection",
+        "name": "CKPH"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Clock polarity Selection",
+        "name": "CKPL"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Master Mode Enable",
+        "name": "MSTMOD"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 3,
+        "description": "Master Clock Prescaler Selection",
+        "name": "PSC"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "SPI enable",
+        "name": "SPIEN"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "LSB First Mode",
+        "name": "LF"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "NSS Pin Selection In NSS Software Mode",
+        "name": "SWNSS"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "NSS Software Mode Selection",
+        "name": "SWNSSEN"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "Receive only",
+        "name": "RO"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "description": "Data frame format",
+        "name": "FF16"
+      },
+      {
+        "bit_offset": 12,
+        "bit_size": 1,
+        "description": "CRC Next Transfer",
+        "name": "CRCNT"
+      },
+      {
+        "bit_offset": 13,
+        "bit_size": 1,
+        "description": "CRC Calculation Enable",
+        "name": "CRCEN"
+      },
+      {
+        "bit_offset": 14,
+        "bit_size": 1,
+        "description": "Bidirectional Transmit output enable",
+        "name": "BDOEN"
+      },
+      {
+        "bit_offset": 15,
+        "bit_size": 1,
+        "description": "Bidirectional enable",
+        "name": "BDEN"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_755BDF3AB841_SVD_CTL1": {
+    "description": "control register 1",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Rx buffer DMA enable",
+        "name": "DMAREN"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Transmit Buffer DMA Enable",
+        "name": "DMATEN"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Drive NSS Output",
+        "name": "NSSDRV"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "SPI NSS pulse mode Enable",
+        "name": "NSSP"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "SPI TI Mode Enable",
+        "name": "TMOD"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "Error interrupt enable",
+        "name": "ERRIE"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "RX buffer not empty interrupt enable",
+        "name": "RBNEIE"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Tx buffer empty interrupt enable",
+        "name": "TBEIE"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_755BDF3AB841_SVD_DATA": {
+    "description": "data register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Data transfer register",
+        "name": "SPI_DATA"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_755BDF3AB841_SVD_I2SCTL": {
+    "description": "I2S control register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Channel length (number of bits per audio channel)",
+        "name": "CHLEN"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 2,
+        "description": "Data length",
+        "name": "DTLEN"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Idle state clock polarity",
+        "name": "CKPL"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 2,
+        "description": "I2S standard selection",
+        "name": "I2SSTD"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "PCM frame synchronization mode",
+        "name": "PCMSMOD"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 2,
+        "description": "I2S operation mode",
+        "name": "I2SOPMOD"
+      },
+      {
+        "bit_offset": 10,
+        "bit_size": 1,
+        "description": "I2S Enable",
+        "name": "I2SEN"
+      },
+      {
+        "bit_offset": 11,
+        "bit_size": 1,
+        "description": "I2S mode selection",
+        "name": "I2SSEL"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_755BDF3AB841_SVD_I2SPSC": {
+    "description": "I2S prescaler register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 8,
+        "description": "Dividing factor for the prescaler",
+        "name": "DIV"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "Odd factor for the prescaler",
+        "name": "OF"
+      },
+      {
+        "bit_offset": 9,
+        "bit_size": 1,
+        "description": "I2S_MCK output enable",
+        "name": "MCKOEN"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_755BDF3AB841_SVD_QCTL": {
+    "description": "Quad-SPI mode control register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Quad-SPI mode enable",
+        "name": "QMOD"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Quad-SPI mode read select",
+        "name": "QRD"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "Drive IO2 and IO3 enable",
+        "name": "IO23_DRV"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_755BDF3AB841_SVD_RCRC": {
+    "description": "RX CRC register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "RX CRC register",
+        "name": "RCR"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_755BDF3AB841_SVD_STAT": {
+    "description": "status register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 1,
+        "description": "Receive Buffer Not Empty",
+        "name": "RBNE"
+      },
+      {
+        "bit_offset": 1,
+        "bit_size": 1,
+        "description": "Transmit Buffer Empty",
+        "name": "TBE"
+      },
+      {
+        "bit_offset": 2,
+        "bit_size": 1,
+        "description": "I2S channel side",
+        "name": "I2SCH"
+      },
+      {
+        "bit_offset": 3,
+        "bit_size": 1,
+        "description": "Transmission underrun error bit",
+        "name": "TXURERR"
+      },
+      {
+        "bit_offset": 4,
+        "bit_size": 1,
+        "description": "SPI CRC Error Bit",
+        "name": "CRCERR"
+      },
+      {
+        "bit_offset": 5,
+        "bit_size": 1,
+        "description": "SPI Configuration error",
+        "name": "CONFERR"
+      },
+      {
+        "bit_offset": 6,
+        "bit_size": 1,
+        "description": "Reception Overrun Error Bit",
+        "name": "RXORERR"
+      },
+      {
+        "bit_offset": 7,
+        "bit_size": 1,
+        "description": "Transmitting On-going Bit",
+        "name": "TRANS"
+      },
+      {
+        "bit_offset": 8,
+        "bit_size": 1,
+        "description": "Format Error",
+        "name": "FERR"
+      }
+    ]
+  },
+  "fieldset/GD_MERGED_755BDF3AB841_SVD_TCRC": {
+    "description": "TX CRC register",
+    "fields": [
+      {
+        "bit_offset": 0,
+        "bit_size": 16,
+        "description": "Tx CRC register",
+        "name": "TCR"
+      }
+    ]
+  }
+}
