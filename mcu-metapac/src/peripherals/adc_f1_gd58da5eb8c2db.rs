@@ -43,6 +43,13 @@ impl Adc {
     pub const fn smpr2(self) -> crate::common::Reg<regs::Smpr2, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x10usize) as _) }
     }
+    #[doc = "sample time register array (SMPR2, then SMPR1)"]
+    #[inline(always)]
+    pub const fn smpr(self, n: usize) -> crate::common::Reg<regs::Smpr, crate::common::RW> {
+        assert!(n < 2usize);
+        let offset = if n == 0 { 0x10usize } else { 0x0cusize };
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(offset) as _) }
+    }
     #[doc = "injected channel data offset register x"]
     #[inline(always)]
     pub const fn jofr(self, n: usize) -> crate::common::Reg<regs::Jofr, crate::common::RW> {
@@ -873,6 +880,8 @@ pub mod regs {
                 .finish()
         }
     }
+    /// Canonical Embassy F1 sample-time register view.
+    pub type Smpr = Smpr2;
     #[cfg(feature = "defmt")]
     impl defmt::Format for Smpr2 {
         fn format(&self, f: defmt::Formatter) {
