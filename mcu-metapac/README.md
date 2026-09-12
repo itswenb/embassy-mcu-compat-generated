@@ -19,13 +19,13 @@ stm32-metapac = { path = "../embassy-mcu-compat-generated/mcu-metapac" }
 stm32-metapac = { path = "../embassy-mcu-compat-generated/mcu-metapac" }
 ```
 
-相对路径以应用 Cargo.toml 所在目录为准。保留应用已有依赖、链接配置和 Cargo.lock。构建必须指定真实型号及下表对应的兼容 feature，例如：
+相对路径以应用 Cargo.toml 所在目录为准。保留应用已有依赖、链接配置和 Cargo.lock。构建必须指定真实型号及任意已声明的 Embassy STM32 feature，例如：
 
 ```sh
 EMBASSY_MCU_COMPAT_CHIP=gd32f307vg CARGO_ENCODED_RUSTFLAGS=-Clink-arg=-Tlink.x cargo build --release --locked --target thumbv7em-none-eabihf --features embassy-stm32/stm32f103vf
 ```
 
-已有链接参数的工程应合并 `-Tlink.x`，不要覆盖原有配置。不能省略真实型号环境变量或把兼容 STM32 profile 当作实际芯片来烧录。用 `cargo metadata --locked --format-version 1` 核对实际解析到本包及上述官方提交。
+已有链接参数的工程应合并 `-Tlink.x`，不要覆盖原有配置。STM32 feature 只用于 Embassy 的依赖和条件编译，真实芯片由 `EMBASSY_MCU_COMPAT_CHIP` 决定；不能省略真实型号环境变量。用 `cargo metadata --locked --format-version 1` 核对实际解析到本包及上述官方提交。
 
 ## 设备与兼容profile
 

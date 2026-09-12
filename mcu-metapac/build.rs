@@ -58,11 +58,9 @@ fn select_chip(profile: &str, requested: Option<&str>) -> Result<String, String>
             "未知 {COMPAT_ENV}={requested}；可用真实型号：{available}"
         ));
     };
-    if !expected_profile.eq_ignore_ascii_case(profile) {
-        return Err(format!(
-            "{COMPAT_ENV}={requested} 要求 STM32 profile {expected_profile}，当前启用 {profile}"
-        ));
-    }
+    // Embassy feature 只用于依赖选择；真实兼容芯片只由
+    // EMBASSY_MCU_COMPAT_CHIP 选择，不因名称不同于 compat.rs 中的规范 profile 拒绝构建。
+    let _ = (profile, expected_profile);
     Ok(chip.to_ascii_lowercase())
 }
 
@@ -130,9 +128,11 @@ mod tests {
     }
 
     #[test]
-    fn wrong_profile_is_rejected() {
-        let error = select_chip("stm32f103cb", Some("gd32f103c8")).unwrap_err();
-        assert!(error.contains("stm32f103c8"));
+    fn embassy_feature_does_not_override_real_chip_selection() {
+        assert_eq!(
+            select_chip("stm32f103cb", Some("gd32f103c8")).unwrap(),
+            "gd32f103c8"
+        );
     }
 
     #[test]
